@@ -1,0 +1,13 @@
+# Day1 one-shot runbook
+
+The current report ends BLOCKED before EOD and missing actual CAPTURE/REVIEW/FORWARD evidence. Do not execute simulated fixtures as real grants. Keep private archive paths unmoved.
+
+1. Run `python -B -m day1_reveal check` in the repo. Any changed hash: stop and retain evidence. Never regenerate v1 or edit the old Freeze Receipt.
+2. After actual Oct8 close, obtain actual open/EOD observed originals under the frozen H-A witness contract. Calendar planning or the wall clock alone is insufficient.
+3. Follow existing `docs/wave-h/One-Shot-Activation-Runbook.md`: Owner CAPTURE signature before secret/network access; independent Human original review/signature; Snapshot B; separate head-bound Owner FORWARD; exactly one actual NO_DECISION store append. These signatures are sequential because later subjects depend on captured bytes and store head. No automatic collection/append here.
+4. Read the new research journal's head with `python -B -m day1_reveal head <absolute-journal>`. Its current 0-byte pending file is not an outcome or forward day. Keep mode0600 and its original canonical path. Append each of the three D1 symbols with `python -B -m day1_reveal append <journal> <actual-G-store> <signed-Snapshot-B> <symbol> --expected-head <head>`. Read the changed head between appends. The adapter rejects incomplete actual G, pre-EOD, duplicate, stale, changed originals or truncated journal. Each row reopens original evidence and full three-signature chain. No new native contract or days created.
+5. Stop after three accepted D1 research rows or any blocker. Day2, D5/D10 execution and v2 research require another Owner instruction; target dates in v1 remain immutable.
+
+Optional public prediction acknowledgment: review each `attestations/*.body.json` and sign its exact bytes independently on the signer's own device. These are POST_OPEN/LATE_ATTESTATION statements without capture/review/forward/trading permission. Do not send passwords/private keys. Return only public signature64bytes, exact body and public key reference. `python -B -m day1_reveal verify-attestation <body> <signature> <role>` checks it against the installed public roots. No actual signature has been produced by this implementation; no claim about independently trusted signing time is made.
+
+Use the bundled Python runtime if the normal interpreter lacks project dependencies. Offline test entry: `node day1_reveal/check.mjs`; then `node wave_hb/check.mjs --new-only` for the frozen relevant G guards. This local check depends on unmodified prior private archives; it is not a portable remote-CI proof.

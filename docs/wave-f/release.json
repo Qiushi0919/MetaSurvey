@@ -1,0 +1,106 @@
+{
+  "version": "1.0.0-wave-f-preparation",
+  "productionGate": false,
+  "formal_backtest_authorized": false,
+  "actual_forward_days": 0,
+  "source_admission": "BLOCKED",
+  "code_pins": [
+    {
+      "path": "docs/adr/ADR-032-predeclared-research-candidates.md",
+      "sha256": "sha256:2ccd25e70ddcc8495c83c5e4c6c4fe45311a85777520a016130d1575ce9cef7c"
+    },
+    {
+      "path": "docs/authorizations/P1B-WAVE-F-20261006.md",
+      "sha256": "sha256:a03dc2cf14d88d46276df24beee130e352d3be3c2e0441562c5601796ab7bae4"
+    },
+    {
+      "path": "docs/wave-f/Frozen-StrategySpec-v1.json",
+      "sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da"
+    },
+    {
+      "path": "docs/wave-f/Interface-Freeze.md",
+      "sha256": "sha256:4a74c7aca67d7bb79d617d04f2e4f30b9d82a4c2dbd49636d542151b77583ee9"
+    },
+    {
+      "path": "docs/wave-f/Owner-Policy-Decision-Sheet.md",
+      "sha256": "sha256:78614c1f70d6bd4a56081db969dcf57d2fe64d7eaa815f6ba57cbc168048215b"
+    },
+    {
+      "path": "docs/wave-f/Snapshot-B-Runbook.md",
+      "sha256": "sha256:481ce1d40c51c310c879cb8b6a7c53090b76104a085b3c674d45696acb376889"
+    },
+    {
+      "path": "docs/wave-f/baseline-pins.json",
+      "sha256": "sha256:8651408bd65e8d1ee5e827414e0baf7a092cb110f0a928301950be55631ff8dc"
+    },
+    {
+      "path": "wave_f/__init__.py",
+      "sha256": "sha256:0418ba5134d40370ef88583d980bdee3cd3955f180caca2f2e6cbc01f1e28bf3"
+    },
+    {
+      "path": "wave_f/activation.py",
+      "sha256": "sha256:d4dae055f2408779f3266e52daca288aa3cac482bf92a0ed34ba7a376a44b9be"
+    },
+    {
+      "path": "wave_f/backtest.py",
+      "sha256": "sha256:2e12711a89ce40398e76dd85c57c5dd4e3b43b8534e4f95a163be02bc4fafd0e"
+    },
+    {
+      "path": "wave_f/check.mjs",
+      "sha256": "sha256:87ee012d6375b1304223d53bf3dd593339c8fe3c8eeb36b296521c725480a631"
+    },
+    {
+      "path": "wave_f/common.py",
+      "sha256": "sha256:771b64e4d0bb958ada20fae3f905d51fb7e9099d43fc32ae683f4f05f2be554f"
+    },
+    {
+      "path": "wave_f/core.py",
+      "sha256": "sha256:033dbb39580948c4bf19d3beb2708c6716aa162a3e2133f92643965efdceaf56"
+    },
+    {
+      "path": "wave_f/display.mjs",
+      "sha256": "sha256:0602f24f1776a4eec883300f0de71c5b7cd6bb1cf0ac87767426962b5ce84c75"
+    },
+    {
+      "path": "wave_f/pit.py",
+      "sha256": "sha256:971627042c954efe8fda1d8b9d196f832261517416dffe43b3c8a57c89bdd8f7"
+    },
+    {
+      "path": "wave_f/run.py",
+      "sha256": "sha256:1516d34ec00c038d00765dcedf388b1c341c32d22deb24e3d17291cf3c66fcfe"
+    },
+    {
+      "path": "wave_f/strategy.py",
+      "sha256": "sha256:11e22abcb2b5aa4f86e3850d1f958cb70d944481aa04bbb60f9a398ebe4643b6"
+    },
+    {
+      "path": "wave_f/tests/boundaries.test.mjs",
+      "sha256": "sha256:64a680f50d24b7d284ba2a18bb0ea694ba110fb1c7718042f2019091e6df0535"
+    },
+    {
+      "path": "wave_f/tests/test_activation.py",
+      "sha256": "sha256:aeb087d69fb653ca016974670eddf42e81b4b91743591053a19459fcb3577b75"
+    },
+    {
+      "path": "wave_f/tests/test_backtest.py",
+      "sha256": "sha256:a8baa30a933d18aa08cddf60b2754ec3d09c79fbb681b62d6994c246eca3dd98"
+    },
+    {
+      "path": "wave_f/tests/test_integrity.py",
+      "sha256": "sha256:2af596bff906093bf68012acfbc26c6e6e60c03a10550d144a0d271478665bff"
+    },
+    {
+      "path": "wave_f/tests/test_pit.py",
+      "sha256": "sha256:3f28f77b7a8ccd1c5d20159e3014569254878177f3ce10e3e053454ecfb50159"
+    },
+    {
+      "path": "wave_f/tests/test_strategy.py",
+      "sha256": "sha256:c624321c9dfaaa7cb8d4803382e6a7dcf8658d3b4e655fc9f13313cef38569c7"
+    }
+  ],
+  "preregistration_ref": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/baseline/Strategy-Preregistration.json",
+    "sha256": "sha256:006dce5dbe4ebdedfa5434d0e23a1728b0442dc6c86b07a74103f61974530dda",
+    "bytes": 418
+  }
+}

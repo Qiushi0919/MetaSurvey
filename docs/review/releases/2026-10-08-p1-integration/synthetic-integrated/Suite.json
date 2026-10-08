@@ -1,0 +1,13 @@
+{
+  "tests_run": 123,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "passed": true,
+  "scope": "FIXED_ROOT_P1_SYNTHETIC_SUITE_ONLY",
+  "temporary_path_constants_redirected_only": true,
+  "actual_network_forbidden": true,
+  "network_attempts_blocked": 0,
+  "actual_db_mutations": 0,
+  "productionGate": false
+}

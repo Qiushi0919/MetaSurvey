@@ -1,0 +1,176 @@
+{
+  "version": "1.0.1",
+  "kind": "CORE40MethodsProposal",
+  "status": "PROPOSAL_ONLY_OWNER_APPROVAL_PENDING",
+  "methods_id": "CORE40_METHODS_PROPOSAL_1.0.1",
+  "applied_to_active_strategy": false,
+  "validated_strategy": false,
+  "productionGate": false,
+  "actual_authority": false,
+  "frozen_strategy_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/wave-f/Frozen-StrategySpec-v1.json",
+    "bytes": 11343,
+    "sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da"
+  },
+  "authoritative_methods_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/core40-method-proposal/Methods-v1.md",
+    "bytes": 32704,
+    "sha256": "sha256:353dd74b69df824c8953b1b726eed9d187da7a092a2ea9a002a16b8f1a7bd8ce"
+  },
+  "all_values_are_unapproved_research_proposals": true,
+  "units": {
+    "rates": "ANNUAL_RATIO_DECIMAL_STRING",
+    "returns": "BPS_DECIMAL_STRING",
+    "money": "CNY_ANALYTICAL_DECIMAL_LEDGER_INTEGER_MINOR_SEPARATE",
+    "shares": "INTEGER",
+    "calculation_precision": 50,
+    "calculation_rounding": "HALF_EVEN_NOT_LEDGER_CHANGE",
+    "time_comparison": "INTEGER_EPOCH_NANOSECONDS_EXPLICIT_OFFSET_0_TO_9_FRACTIONAL_DIGITS"
+  },
+  "parameters": {
+    "wacc": {
+      "beta_window_weeks": 104,
+      "minimum_beta_pairs": 78,
+      "beta_shrink_raw_weight": "2/3",
+      "beta_shrink_target": "1",
+      "rf_maturity_years": 10,
+      "rf_max_age_sessions": 5,
+      "credit_max_age_sessions": 20,
+      "erp_max_age_months": 18,
+      "balance_period_max_age_days": 220,
+      "ERP_basis": "DATED_CHINA_TOTAL_ERP_NO_DUPLICATE_COUNTRY_PREMIUM",
+      "tax_shield": "DATED_VERIFIED_INPUT_NOT_25_PERCENT_DEFAULT",
+      "capital_scope": "CONSOLIDATED_PARENT_PLUS_NCI_PLUS_DEBT",
+      "nci_value_and_cost": "EXPLICIT_PER_NONZERO_NCI_ENTITY_NO_PARENT_KE_OR_ZERO_FALLBACK",
+      "unlisted_nci": "NOT_COMPUTABLE_UNTIL_SEPARATE_VALUE_AND_COST_METHOD_APPROVED",
+      "beta_week": "LAST_ACTUAL_SESSION_OF_COMPLETED_ISO_WEEK",
+      "rf_week_basis": "ACT_365_COMPOUND"
+    },
+    "cycle": {
+      "complete_visible_years": 5,
+      "statistic": "MEDIAN_EBITDA_MARGIN_INCLUDING_LOSSES",
+      "scale": "CURRENT_VISIBLE_TTM_REVENUE"
+    },
+    "valuation": {
+      "actual_session_window": 1260,
+      "valid_observations_required": 1260,
+      "rank": "WEAK_COUNT_LE_CURRENT_OVER_N",
+      "includes_current_completed_session": true,
+      "gate_max": "0.6",
+      "reference_multiple": "MEDIAN_SAME_PIT_WINDOW",
+      "fair_gap_is_horizon_return": false
+    },
+    "scenarios": {
+      "label_protocol": "EX_EDGE_SHADOW_LABEL_PROPOSAL_V1",
+      "label_requires_separate_owner_approval": true,
+      "group": "FAMILY_BY_PREDECLARED_HISTORICAL_INDUSTRY",
+      "down_lt_bps": "-200",
+      "flat_inclusive_lower": "-200",
+      "flat_inclusive_upper": "200",
+      "up_gt_bps": "200",
+      "dirichlet_alpha": "1",
+      "minimum_mature_shadow_labels": 100,
+      "minimum_each_scenario_labels": 10,
+      "minimum_distinct_time_blocks": 16,
+      "shadow_count_is_actual_complete_strategy_trade_count": false,
+      "applicability": "SAME_FAMILY_INDUSTRY_VERSION_NONEDGE_ALL_TIMING_ECONOMIC_UNIT_AND_COHORT_SCOPE_PROVEN",
+      "outside_domain": "PROBABILITY_MU_U_EDGE_FINAL_UNSET_RESEARCH_PRIORITY_SEPARATE"
+    },
+    "uncertainty": {
+      "bootstrap": "MOVING_TIME_BLOCKS_ALL_CONTEMPORANEOUS_SYMBOLS_WITHOUT_IID_ASSUMPTION",
+      "draws": 2000,
+      "seed": 20261008,
+      "block_length_sessions": "MAX_40_AND_INCLUDED_LABEL_MAX_SPAN",
+      "lower_quantile": "0.05",
+      "quantile_method": "NEAREST_RANK_CEIL_P_TIMES_B",
+      "bad_draw": "FAIL_CALIBRATION_NO_DROP",
+      "formula": "MAX_0_MU_MINUS_LCB_PLUS_MAX_0_OUT_OF_TIME_OVERPREDICTION",
+      "session_axis": "ALL_ACTUAL_SESSIONS_EMPTY_ROWS_PRESERVED",
+      "event_assignment": "DECISION_ANCHOR_NOT_EXIT",
+      "joint_sampling": "ONE_SHARED_START_SEQUENCE_ACROSS_SYMBOLS_AND_FAMILIES",
+      "sampling": "UNIFORM_NONCIRCULAR_STARTS_REPLACEMENT_CEIL_T_OVER_L_CONCAT_CROP_T",
+      "rng": "PYTHON_RANDOM_RANDOM_RANDRANGE_RUNTIME_HASH_PINNED",
+      "minimum_fit_occupied_blocks": 16,
+      "minimum_validation_occupied_blocks": 4
+    },
+    "calibration": {
+      "minimum_display_bucket_labels": 50,
+      "absolute_reliability_error_max": "0.10",
+      "realized_frequency_confidence": "TIME_BLOCK_95_PERCENT",
+      "grade_probability_minimum": "EXISTING_50_INDEPENDENT_COMPLETE_OOS_PAPER_TRADES_PER_GRADE",
+      "fit_bootstrap_real_data_run_this_round": false,
+      "validation_folds": 4,
+      "fold_months": 3,
+      "fold_boundaries": "CALENDAR_MONTHS_MAP_CEIL_ACTUAL_SESSION_LEFT_CLOSED_RIGHT_OPEN",
+      "prediction_freeze": "PREVIOUS_ACTUAL_EOD_PROVEN_CUTOFF",
+      "fit_maturity": "LABEL_END_AND_AVAILABLE_LE_FREEZE",
+      "purge_sessions": 40,
+      "embargo_sessions": 40,
+      "bins": [
+        "0",
+        ".1",
+        ".2",
+        ".3",
+        ".4",
+        ".5",
+        ".6",
+        ".7",
+        ".8",
+        ".9",
+        "1"
+      ],
+      "bin_endpoints": "LEFT_CLOSED_RIGHT_OPEN_LAST_INCLUDES_1",
+      "empty_bucket": "EMPTY_NO_FAKE_FREQUENCY",
+      "sparse_nonempty_bucket": "INCONCLUSIVE_NO_MERGE",
+      "bad_bucket_draw": "NOT_COMPUTABLE_NO_DRAW_DROP",
+      "frequency_quantiles": [
+        ".025",
+        ".975"
+      ]
+    },
+    "edge": {
+      "min_net_bps": "400",
+      "min_net_to_cost": "5",
+      "zero_cost_denominator": "NOT_COMPUTABLE_NOT_INFINITY",
+      "base_and_pessimistic_both_pass": "NEW_OWNER_DECISION_PENDING",
+      "incremental_net_strict_gt": "0"
+    },
+    "scores": {
+      "raw_weights": {
+        "F": ".25",
+        "S": ".20",
+        "C": ".15",
+        "T": ".15",
+        "V": ".10",
+        "L": ".10",
+        "E": ".05"
+      },
+      "research_dimensions": "FSCVE",
+      "research_weight_sum": ".75",
+      "risk_deduction_weight": ".20",
+      "cost_penalty_cap": "15",
+      "cost_penalty_denominator_min_bps": "50",
+      "final_boundaries": [
+        "55",
+        "68",
+        "78",
+        "85"
+      ],
+      "S_min_research": "85",
+      "S_min_fundamental": "80",
+      "S_min_timing": "80",
+      "S_min_evidence": "80",
+      "S_requires_full_timing_and_common_and_calibrated_edge": true,
+      "unknown_grade": "UNSET_REQUIRED_NOT_X",
+      "S_action": "REQUEST_HUMAN_REVIEW_ONLY",
+      "research_priority_boundaries": [
+        "68",
+        "80"
+      ],
+      "actionability_requires_model_applicability": true
+    }
+  },
+  "actual_account_policy": "UNCHANGED_UNSET_REQUIRED",
+  "new_method_activation": "NEW_VERSION_AFTER_OWNER_CONFIRMATION_AND_COMPATIBILITY_REVIEW",
+  "formulas_canonical_in_document_not_active_config": true
+}

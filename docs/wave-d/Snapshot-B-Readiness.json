@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "ready": false,
+  "state": "PENDING_ACTUAL_FRESH_OBSERVATION_AND_SEPARATE_AUTHORIZATION",
+  "holiday_notice": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+  "closed_dates": [
+    "2026-10-06",
+    "2026-10-07"
+  ],
+  "candidate_reopening": "2026-10-08",
+  "new_retrieval_is_new_trading_day": false,
+  "minimum_requirements": [
+    "Explicit Owner authorization for bounded fresh observations; no automatic source calls or schedules.",
+    "Actual exchange reopening/session and actual post-market data availability observed; append originals under new retrieval, keep October5/6 immutable.",
+    "Exact three securities; fresh raw/valuation/status, full scopes/date/schema/unit checks and clock lineage.",
+    "Formal Snapshot B additionally requires purpose-specific admitted provider/license/transport/data lineage, independent of local engineering PASS.",
+    "No historical as-of/model/cloud/Card/Signal/order/broker/production authorization inferred."
+  ],
+  "formal_snapshot_B_ready": false,
+  "provider_identity_verified": false,
+  "license_verified": false,
+  "transport_integrity_verified": false,
+  "historical_visibility_proven": false,
+  "scheduled_automation_created": false,
+  "new_forward_paper_days": 0,
+  "productionGate": false
+}

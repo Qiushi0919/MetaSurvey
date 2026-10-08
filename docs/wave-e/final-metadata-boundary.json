@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "code_candidate": "abc11d8f869ccf108dfce2658a17fdeffde13dcd",
+  "old_immutable_unchanged": 613,
+  "frozen_code_contract_rules_unchanged": 27,
+  "new_files_credential_pattern_scanned": 48,
+  "literal_credential_pattern_matches": 0,
+  "token_readback_for_matching": false,
+  "scope": "LABELLED_PATTERNS_ONLY_NOT_UNIVERSAL",
+  "final_changes": "DELIVERY_METADATA_AND3NAVIGATION_ONLY_NO_BUSINESS_CODE_CHANGE",
+  "productionGate": false
+}

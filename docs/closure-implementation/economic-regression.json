@@ -1,0 +1,305 @@
+{
+  "run_id": "CLOSURE-ECONOMIC-20261005085129166",
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "source_tree_hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5",
+  "scope": "SYNTHETIC_TEST_ONLY",
+  "baseline_report_sha256": "sha256:916eb603e08f8948fb3b0664015964a477ec45a10b99866c660036e5249fae46",
+  "all_economic_components_equal": true,
+  "result_identity_changes_with_code_version": true,
+  "verification_driver": {
+    "scope": "REPORT_ONLY_EXTERNAL_VERIFIER",
+    "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/economic-evidence-driver.mjs",
+    "sha256": "sha256:f7d6c236881019480ec4c3de5fff1ef00033dffa5601832597e28a944c9a5779"
+  },
+  "runs": [
+    {
+      "profileName": "LOW_FRICTION",
+      "edge_enabled": false,
+      "current_economic_result_hash": "sha256:2b2b5d641bdf40010c3fc7dbc5ee63135264eb428785aafdd523bc6a2b091630",
+      "old_economic_result_hash": "sha256:f9557bafa14b1d465d25e31301509e5c9d7c9f796b6d684562eb1a4c8d4312aa",
+      "equal_economic_components": {
+        "signals": true,
+        "cost_breakdown": true,
+        "trade_count": true,
+        "round_trip_count": true,
+        "rejections": true,
+        "prefriction_fills": true
+      },
+      "base_accounting_equal": null,
+      "cost_breakdown": {
+        "gross_pnl_cents": "60000",
+        "commission_cents": "252",
+        "proportional_commission_cents": "252",
+        "minimum_commission_effect_cents": "0",
+        "stamp_tax_cents": "198",
+        "exchange_fee_cents": "12",
+        "other_fee_cents": "12",
+        "slippage_cents": "63",
+        "total_friction_cents": "537",
+        "net_pnl_cents": "59463",
+        "minimum_commission_effect_is_subset": true,
+        "friction_to_gross_profit_ratio": "0.00895",
+        "friction_per_trade_cents": "89.5",
+        "friction_per_round_trip_cents": "179",
+        "friction_per_strategy": {
+          "CORE_40": "537",
+          "EVENT_3": "0"
+        }
+      },
+      "trade_count": 6,
+      "round_trip_count": 3,
+      "rejections": [],
+      "reconciled": true
+    },
+    {
+      "profileName": "LOW_FRICTION",
+      "edge_enabled": true,
+      "current_economic_result_hash": "sha256:50ec1aefca8043b347f87050b77e2749ffe11ea8ec3bbd6afe2a5c76db86c0cf",
+      "old_economic_result_hash": "sha256:d31de6648738ce79a948cd5858f42fbeaaa7047eb0e0fa64ef9391f27cbe2c70",
+      "equal_economic_components": {
+        "signals": true,
+        "cost_breakdown": true,
+        "trade_count": true,
+        "round_trip_count": true,
+        "rejections": true,
+        "prefriction_fills": true
+      },
+      "base_accounting_equal": null,
+      "cost_breakdown": {
+        "gross_pnl_cents": "60000",
+        "commission_cents": "252",
+        "proportional_commission_cents": "252",
+        "minimum_commission_effect_cents": "0",
+        "stamp_tax_cents": "198",
+        "exchange_fee_cents": "12",
+        "other_fee_cents": "12",
+        "slippage_cents": "63",
+        "total_friction_cents": "537",
+        "net_pnl_cents": "59463",
+        "minimum_commission_effect_is_subset": true,
+        "friction_to_gross_profit_ratio": "0.00895",
+        "friction_per_trade_cents": "89.5",
+        "friction_per_round_trip_cents": "179",
+        "friction_per_strategy": {
+          "CORE_40": "537",
+          "EVENT_3": "0"
+        }
+      },
+      "trade_count": 6,
+      "round_trip_count": 3,
+      "rejections": [],
+      "reconciled": true
+    },
+    {
+      "profileName": "BASE_FRICTION",
+      "edge_enabled": false,
+      "current_economic_result_hash": "sha256:c8b1cb48964887df324a368ed778270ac3e71ceda4d2c71cc0192bc35a6a316e",
+      "old_economic_result_hash": "sha256:b59d2cd0c6b89f3abfdbc5348763665cbb3b1dc3ced7d4e5785ba3e6ab152b4c",
+      "equal_economic_components": {
+        "signals": true,
+        "cost_breakdown": true,
+        "trade_count": true,
+        "round_trip_count": true,
+        "rejections": true,
+        "prefriction_fills": true
+      },
+      "base_accounting_equal": {
+        "order_sequence": true,
+        "fill_sequence": true,
+        "ledger_entries": true,
+        "daily_nav": true,
+        "cost_breakdown": true,
+        "path_metrics": true,
+        "ledger_chain_hash": true
+      },
+      "cost_breakdown": {
+        "gross_pnl_cents": "60000",
+        "commission_cents": "1008",
+        "proportional_commission_cents": "1008",
+        "minimum_commission_effect_cents": "0",
+        "stamp_tax_cents": "594",
+        "exchange_fee_cents": "51",
+        "other_fee_cents": "39",
+        "slippage_cents": "378",
+        "total_friction_cents": "2070",
+        "net_pnl_cents": "57930",
+        "minimum_commission_effect_is_subset": true,
+        "friction_to_gross_profit_ratio": "0.0345",
+        "friction_per_trade_cents": "345",
+        "friction_per_round_trip_cents": "690",
+        "friction_per_strategy": {
+          "CORE_40": "2070",
+          "EVENT_3": "0"
+        }
+      },
+      "trade_count": 6,
+      "round_trip_count": 3,
+      "rejections": [],
+      "reconciled": true
+    },
+    {
+      "profileName": "BASE_FRICTION",
+      "edge_enabled": true,
+      "current_economic_result_hash": "sha256:6782e1c0cf900971b2ee431c1de115ba8ca19f2d6bd17d3fb50167c61c70d1d2",
+      "old_economic_result_hash": "sha256:ff53a8b6957a8d784c0b524aa0b8f0cc462693a7dd192c4f29b63b296e8efc48",
+      "equal_economic_components": {
+        "signals": true,
+        "cost_breakdown": true,
+        "trade_count": true,
+        "round_trip_count": true,
+        "rejections": true,
+        "prefriction_fills": true
+      },
+      "base_accounting_equal": null,
+      "cost_breakdown": {
+        "gross_pnl_cents": "40000",
+        "commission_cents": "672",
+        "proportional_commission_cents": "672",
+        "minimum_commission_effect_cents": "0",
+        "stamp_tax_cents": "396",
+        "exchange_fee_cents": "34",
+        "other_fee_cents": "26",
+        "slippage_cents": "252",
+        "total_friction_cents": "1380",
+        "net_pnl_cents": "38620",
+        "minimum_commission_effect_is_subset": true,
+        "friction_to_gross_profit_ratio": "0.0345",
+        "friction_per_trade_cents": "345",
+        "friction_per_round_trip_cents": "690",
+        "friction_per_strategy": {
+          "CORE_40": "1380",
+          "EVENT_3": "0"
+        }
+      },
+      "trade_count": 4,
+      "round_trip_count": 2,
+      "rejections": [
+        {
+          "signal_id": "R1",
+          "accepted": false,
+          "reason_codes": [
+            "REJECT_INSUFFICIENT_INCREMENTAL_EDGE",
+            "REJECT_INSUFFICIENT_NET_EDGE",
+            "REJECT_INSUFFICIENT_EDGE_COST_RATIO"
+          ],
+          "incremental_expected_benefit_cents": "400",
+          "incremental_transaction_cost_cents": "690",
+          "incremental_net_edge_cents": "-290",
+          "edge_cost_ratio": "0.5797101449",
+          "scope": "SYNTHETIC_EXPERIMENTAL",
+          "production_enabled": false
+        }
+      ],
+      "reconciled": true
+    },
+    {
+      "profileName": "HIGH_FRICTION",
+      "edge_enabled": false,
+      "current_economic_result_hash": "sha256:728be53bf7773a8fddcd1379e84fa309e2cc4b28c67e5ae02fb65c626a0c4a5f",
+      "old_economic_result_hash": "sha256:e56bbdd68f775788175f3b32c3ec02f39c43e1e09564c503626dfdb0a0a20d23",
+      "equal_economic_components": {
+        "signals": true,
+        "cost_breakdown": true,
+        "trade_count": true,
+        "round_trip_count": true,
+        "rejections": true,
+        "prefriction_fills": true
+      },
+      "base_accounting_equal": null,
+      "cost_breakdown": {
+        "gross_pnl_cents": "60000",
+        "commission_cents": "4200",
+        "proportional_commission_cents": "3150",
+        "minimum_commission_effect_cents": "1050",
+        "stamp_tax_cents": "1320",
+        "exchange_fee_cents": "252",
+        "other_fee_cents": "126",
+        "slippage_cents": "1890",
+        "total_friction_cents": "7788",
+        "net_pnl_cents": "52212",
+        "minimum_commission_effect_is_subset": true,
+        "friction_to_gross_profit_ratio": "0.1298",
+        "friction_per_trade_cents": "1298",
+        "friction_per_round_trip_cents": "2596",
+        "friction_per_strategy": {
+          "CORE_40": "7788",
+          "EVENT_3": "0"
+        }
+      },
+      "trade_count": 6,
+      "round_trip_count": 3,
+      "rejections": [],
+      "reconciled": true
+    },
+    {
+      "profileName": "HIGH_FRICTION",
+      "edge_enabled": true,
+      "current_economic_result_hash": "sha256:3b3904c7ad2937712a7c970315acbada03b881ecfe6a75e7d3df76193a167a59",
+      "old_economic_result_hash": "sha256:c4b6883a41974d201693a1e66c744cad779a24f815de5d8288ae8f1c0a138b2f",
+      "equal_economic_components": {
+        "signals": true,
+        "cost_breakdown": true,
+        "trade_count": true,
+        "round_trip_count": true,
+        "rejections": true,
+        "prefriction_fills": true
+      },
+      "base_accounting_equal": null,
+      "cost_breakdown": {
+        "gross_pnl_cents": "20000",
+        "commission_cents": "1400",
+        "proportional_commission_cents": "1050",
+        "minimum_commission_effect_cents": "350",
+        "stamp_tax_cents": "440",
+        "exchange_fee_cents": "84",
+        "other_fee_cents": "42",
+        "slippage_cents": "630",
+        "total_friction_cents": "2596",
+        "net_pnl_cents": "17404",
+        "minimum_commission_effect_is_subset": true,
+        "friction_to_gross_profit_ratio": "0.1298",
+        "friction_per_trade_cents": "1298",
+        "friction_per_round_trip_cents": "2596",
+        "friction_per_strategy": {
+          "CORE_40": "2596",
+          "EVENT_3": "0"
+        }
+      },
+      "trade_count": 2,
+      "round_trip_count": 1,
+      "rejections": [
+        {
+          "signal_id": "R1",
+          "accepted": false,
+          "reason_codes": [
+            "REJECT_INSUFFICIENT_INCREMENTAL_EDGE",
+            "REJECT_INSUFFICIENT_NET_EDGE",
+            "REJECT_INSUFFICIENT_EDGE_COST_RATIO"
+          ],
+          "incremental_expected_benefit_cents": "400",
+          "incremental_transaction_cost_cents": "2596",
+          "incremental_net_edge_cents": "-2196",
+          "edge_cost_ratio": "0.1540832049",
+          "scope": "SYNTHETIC_EXPERIMENTAL",
+          "production_enabled": false
+        },
+        {
+          "signal_id": "R2",
+          "accepted": false,
+          "reason_codes": [
+            "REJECT_INSUFFICIENT_INCREMENTAL_EDGE",
+            "REJECT_INSUFFICIENT_NET_EDGE",
+            "REJECT_INSUFFICIENT_EDGE_COST_RATIO"
+          ],
+          "incremental_expected_benefit_cents": "1800",
+          "incremental_transaction_cost_cents": "2596",
+          "incremental_net_edge_cents": "-796",
+          "edge_cost_ratio": "0.6933744222",
+          "scope": "SYNTHETIC_EXPERIMENTAL",
+          "production_enabled": false
+        }
+      ],
+      "reconciled": true
+    }
+  ]
+}

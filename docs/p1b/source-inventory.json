@@ -1,0 +1,736 @@
+{
+  "version": "1.0.0",
+  "inventory_kind": "ACTUAL_CURATED_METADATA_READ_ONLY_NOT_DATA_ADMISSION",
+  "recorded_at": "2026-10-05T10:22:08.462Z",
+  "database": {
+    "reference": "History/炒股/程序/data/stocks.db",
+    "opened": true,
+    "read_mode": "SQLITE_URI_MODE_RO_IMMUTABLE_QUERY_ONLY",
+    "wal_included": false,
+    "not_current_live_database_proof": true,
+    "tables": [
+      {
+        "table": "hk_daily",
+        "columns": [
+          {
+            "name": "code",
+            "type": "TEXT"
+          },
+          {
+            "name": "trade_date",
+            "type": "TEXT"
+          },
+          {
+            "name": "adjustment",
+            "type": "TEXT"
+          },
+          {
+            "name": "open",
+            "type": "REAL"
+          },
+          {
+            "name": "close",
+            "type": "REAL"
+          },
+          {
+            "name": "high",
+            "type": "REAL"
+          },
+          {
+            "name": "low",
+            "type": "REAL"
+          },
+          {
+            "name": "volume",
+            "type": "REAL"
+          },
+          {
+            "name": "amount",
+            "type": "REAL"
+          },
+          {
+            "name": "amplitude",
+            "type": "REAL"
+          },
+          {
+            "name": "pct_change",
+            "type": "REAL"
+          },
+          {
+            "name": "change",
+            "type": "REAL"
+          },
+          {
+            "name": "turnover",
+            "type": "REAL"
+          }
+        ],
+        "count": 3904281,
+        "date_bounds": {
+          "trade_date": [
+            "2016-08-19",
+            "2026-08-19"
+          ]
+        }
+      },
+      {
+        "table": "hk_daily_runs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "mode",
+            "type": "TEXT"
+          },
+          {
+            "name": "provider",
+            "type": "TEXT"
+          },
+          {
+            "name": "adjustment",
+            "type": "TEXT"
+          },
+          {
+            "name": "requested_start",
+            "type": "TEXT"
+          },
+          {
+            "name": "requested_end",
+            "type": "TEXT"
+          },
+          {
+            "name": "started_at",
+            "type": "TEXT"
+          },
+          {
+            "name": "finished_at",
+            "type": "TEXT"
+          },
+          {
+            "name": "total",
+            "type": "INTEGER"
+          },
+          {
+            "name": "success",
+            "type": "INTEGER"
+          },
+          {
+            "name": "empty",
+            "type": "INTEGER"
+          },
+          {
+            "name": "failed",
+            "type": "INTEGER"
+          },
+          {
+            "name": "skipped",
+            "type": "INTEGER"
+          },
+          {
+            "name": "rows_written",
+            "type": "INTEGER"
+          },
+          {
+            "name": "status",
+            "type": "TEXT"
+          },
+          {
+            "name": "message",
+            "type": "TEXT"
+          }
+        ],
+        "count": 6,
+        "date_bounds": {}
+      },
+      {
+        "table": "hk_daily_sync",
+        "columns": [
+          {
+            "name": "code",
+            "type": "TEXT"
+          },
+          {
+            "name": "adjustment",
+            "type": "TEXT"
+          },
+          {
+            "name": "provider",
+            "type": "TEXT"
+          },
+          {
+            "name": "status",
+            "type": "TEXT"
+          },
+          {
+            "name": "requested_start",
+            "type": "TEXT"
+          },
+          {
+            "name": "requested_end",
+            "type": "TEXT"
+          },
+          {
+            "name": "min_trade_date",
+            "type": "TEXT"
+          },
+          {
+            "name": "max_trade_date",
+            "type": "TEXT"
+          },
+          {
+            "name": "row_count",
+            "type": "INTEGER"
+          },
+          {
+            "name": "last_attempt_at",
+            "type": "TEXT"
+          },
+          {
+            "name": "last_success_at",
+            "type": "TEXT"
+          },
+          {
+            "name": "error",
+            "type": "TEXT"
+          }
+        ],
+        "count": 2020,
+        "date_bounds": {}
+      },
+      {
+        "table": "stock_info",
+        "columns": [
+          {
+            "name": "code",
+            "type": "TEXT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "market",
+            "type": "TEXT"
+          },
+          {
+            "name": "stock_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "last_update",
+            "type": "DATE"
+          }
+        ],
+        "count": 15549,
+        "date_bounds": {}
+      },
+      {
+        "table": "update_log",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "update_time",
+            "type": "DATETIME"
+          },
+          {
+            "name": "update_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "stocks_updated",
+            "type": "INTEGER"
+          },
+          {
+            "name": "status",
+            "type": "TEXT"
+          },
+          {
+            "name": "message",
+            "type": "TEXT"
+          }
+        ],
+        "count": null,
+        "exclusion": "NO_SENSITIVE_OR_RUNTIME_CONTENT_READ"
+      }
+    ],
+    "before_fingerprint": {
+      "main": {
+        "present": true,
+        "byte_length": 325189632,
+        "raw_sha256": "sha256:e1952caf6772e40c76ca6d6bec0c2976de819b8d34f78c5601b168056f0dfac3"
+      },
+      "-wal": {
+        "present": true,
+        "byte_length": 0,
+        "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "-shm": {
+        "present": true,
+        "byte_length": 32768,
+        "raw_sha256": "sha256:fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+      }
+    },
+    "after_fingerprint": {
+      "main": {
+        "present": true,
+        "byte_length": 325189632,
+        "raw_sha256": "sha256:e1952caf6772e40c76ca6d6bec0c2976de819b8d34f78c5601b168056f0dfac3"
+      },
+      "-wal": {
+        "present": true,
+        "byte_length": 0,
+        "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "-shm": {
+        "present": true,
+        "byte_length": 32768,
+        "raw_sha256": "sha256:fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+      }
+    },
+    "fingerprints_unchanged": true,
+    "known_limitations": [
+      "immutable read ignores uncheckpointed WAL rows",
+      "schema/counts and date aggregates only; no account/order/row payload",
+      "counts certify the main-file snapshot only; ingestion provider/clock/license not thereby proven"
+    ]
+  },
+  "parquet_metadata": {
+    "reference": "History/炒股/程序/data/kline",
+    "file_count": 8975,
+    "filename_prefix_counts": {
+      "bj": 292,
+      "hk": 2020,
+      "sh": 2862,
+      "sz": 3324,
+      "us": 477
+    },
+    "content_verified": false,
+    "license_and_clocks_verified": false
+  },
+  "legacy_manifest_metadata": [
+    {
+      "reference": "模拟交易实验/historical-validation-100d/calendar_spec.json",
+      "present": true,
+      "byte_length": 1673,
+      "raw_sha256": "sha256:fcee6d9773103706ba9dd57a0573088da22c33c4bcf08c93ed85e7b7ba5df211"
+    },
+    {
+      "reference": "模拟交易实验/historical-validation-100d/source_manifest_v2.json",
+      "present": true,
+      "byte_length": 1084,
+      "raw_sha256": "sha256:65ad754a953c789fbb4602aec2fd70563111c43c81612aa418fa662125a6c76a"
+    },
+    {
+      "reference": "模拟交易实验/historical-validation-100d/smoke_primary_sources.json",
+      "present": true,
+      "byte_length": 1269,
+      "raw_sha256": "sha256:49097e7b357bf3f16d17205fa1c8547473c4a265e227578c09789446bb0bb765"
+    },
+    {
+      "reference": "模拟交易实验/historical-validation-100d/smoke_price_sources.json",
+      "present": true,
+      "byte_length": 843,
+      "raw_sha256": "sha256:845981aa46581dfcb4c0cb1a9434161b5f5b460d304b6303c6ee5c98b764924d"
+    },
+    {
+      "reference": "模拟交易实验/historical-validation-100d/broad_market_sources.json",
+      "present": true,
+      "byte_length": 715,
+      "raw_sha256": "sha256:3a0d6377ae0603a2c25d1a501c65f9def34ab37c455f4bb78b46d03447581627"
+    }
+  ],
+  "calendar_metadata": {
+    "reference": "History/炒股/程序/data/akshare/trading_calendar_cn.json",
+    "present": true,
+    "byte_length": 158410,
+    "raw_sha256": "sha256:04c8cf20d93941354e08023021809207aa8ebe3df8929783fb333ca4d09ed98a"
+  },
+  "new_capture_manifest_sha256": "sha256:c468e3e095aec4e6f1ce2fa8fd3c5d8b2b59329b546950d595170a6d0f734221",
+  "sources": [
+    {
+      "source_id": "legacy:stock-info-main-snapshot",
+      "provider": "LEGACY_AGGREGATOR_PROVENANCE_UNVERIFIED",
+      "data_type": "A_SECURITY_MASTER_STATUS",
+      "original_reference": "History/炒股/程序/data/stocks.db#stock_info",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": {
+        "row_count": 15549,
+        "history": "CURRENT_FLAT_SNAPSHOT_ONLY"
+      },
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "code/name/market/stock_type/last_update; no status effective-time/revision/PIT history",
+        "row count does not establish a point-in-time A-share universe"
+      ]
+    },
+    {
+      "source_id": "legacy:akshare-calendar-file",
+      "provider": "AKSHARE_LABEL_IN_LEGACY_PATH_NO_ORIGINAL_CAPTURE",
+      "data_type": "B_TRADING_CALENDAR",
+      "original_reference": "History/炒股/程序/data/akshare/trading_calendar_cn.json",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "LOCAL_FILE_UPDATED_AT_ASSERTION_ONLY:2026-09-03T18:46:08+08:00",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": {
+        "date_count": 8797,
+        "from": "1990-12-19",
+        "to": "2026-12-31"
+      },
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "no original source bytes, license, per-date clock, exchange-specific coverage",
+        "future dates in file do not prove historical source visibility"
+      ]
+    },
+    {
+      "source_id": "legacy:sse-calendar-spec",
+      "provider": "SSE_OFFICIAL_URLS_IN_LEGACY_MANIFEST",
+      "data_type": "B_TRADING_CALENDAR",
+      "original_reference": "模拟交易实验/historical-validation-100d/calendar_spec.json",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": "UNKNOWN",
+      "authority_level": "OFFICIAL_REFERENCE_LEAD_NOT_ADMITTED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "source URLs and DATE_ONLY declarations only; not admitted captures",
+        "old specification/weekday arithmetic does not establish historical availability"
+      ]
+    },
+    {
+      "source_id": "legacy:kline-cache",
+      "provider": "LEGACY_TENCENT_OR_AGGREGATOR_CODE_INDICATES_QFQ_FALLBACK_RAW",
+      "data_type": "C_EOD_PRICE",
+      "original_reference": "History/炒股/程序/data/kline",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": {
+        "file_count": 8975,
+        "filename_prefix_counts": {
+          "bj": 292,
+          "hk": 2020,
+          "sh": 2862,
+          "sz": 3324,
+          "us": 477
+        },
+        "rows_and_dates": "NOT_VERIFIED"
+      },
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "cache filename is not official symbol/status provenance",
+        "qfq→day fallback in legacy fetcher; adjustment version lineage not retained",
+        "no original byte chain, per-bar published/available/retrieved clock, license; not raw historical bars admission"
+      ]
+    },
+    {
+      "source_id": "legacy:hk-daily-main-snapshot",
+      "provider": "LEGACY_AKSHARE_TENCENT_CODE_REFERENCES_NOT_ROW_PROOF",
+      "data_type": "C_EOD_PRICE_HK_OUTSIDE_A_SHARE_SCOPE",
+      "original_reference": "History/炒股/程序/data/stocks.db#hk_daily",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": {
+        "row_count": 3904281,
+        "date_bounds": {
+          "trade_date": [
+            "2016-08-19",
+            "2026-08-19"
+          ]
+        },
+        "scope": "HK_ONLY_NOT_A_SHARE_ADMISSION"
+      },
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "REAL prices in old mutable cache do not imply admitted source",
+        "raw/qfq/hfq enum not a versioned corporate-action lineage",
+        "read-only main-file counts exclude WAL; IEEE REAL legacy prices are not canonical new money"
+      ]
+    },
+    {
+      "source_id": "legacy:tencent-smoke-price-leads",
+      "provider": "TENCENT_PUBLIC_ENDPOINT_LEADS",
+      "data_type": "C_EOD_PRICE",
+      "original_reference": "模拟交易实验/historical-validation-100d/smoke_price_sources.json",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": "UNKNOWN",
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "public endpoint access is not license",
+        "URL dates are requested coverage, not byte-verified coverage",
+        "historical observation time/adjustment metadata absent"
+      ]
+    },
+    {
+      "source_id": "missing:corporate-action-revision-feed",
+      "provider": "NOT_FOUND_IN_CURATED_INVENTORY",
+      "data_type": "D_CORPORATE_ACTION",
+      "original_reference": null,
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": "UNKNOWN",
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "no independently verified official action/entitlement/factor stream",
+        "qfq/hfq caches cannot establish corporate-action PIT"
+      ]
+    },
+    {
+      "source_id": "legacy:financial-disclosure-leads",
+      "provider": "CNINFO_AND_ISSUER_URLS_IN_MANIFEST",
+      "data_type": "E_FINANCIAL_STATEMENTS_REVISIONS",
+      "original_reference": "模拟交易实验/historical-validation-100d/source_manifest_v2.json",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": "UNKNOWN",
+      "authority_level": "DISCLOSURE_LEADS_ONLY",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "expected PDF hashes and DATE_ONLY claims remain legacy assertions here",
+        "no real revision parser/available-clock/terms/revision lineage admission"
+      ]
+    },
+    {
+      "source_id": "legacy:announcement-policy-leads",
+      "provider": "SSE_NBS_MOF_ISSUER_URLS_IN_MANIFEST",
+      "data_type": "F_ANNOUNCEMENTS_DISCLOSURES",
+      "original_reference": "模拟交易实验/historical-validation-100d/broad_market_sources.json",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": "UNKNOWN",
+      "authority_level": "OFFICIAL_URL_LEADS_NOT_ADMITTED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "URL/citation is not trusted evidence",
+        "no full original-source time/license checks in this inventory"
+      ]
+    },
+    {
+      "source_id": "missing:industry-membership-history",
+      "provider": "NOT_FOUND_IN_CURATED_INVENTORY",
+      "data_type": "G_INDUSTRY_SECTOR_MEMBERSHIP",
+      "original_reference": null,
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "UNKNOWN_NOT_AUTHORIZED",
+      "retrieved_at_semantics": "UNKNOWN_NO_BYTE_LINKED_SOURCE_CAPTURE",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN_NOT_INFERRED_FROM_MTIME",
+      "coverage": "UNKNOWN",
+      "authority_level": "UNVERIFIED",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "current sector tags/research descriptions cannot establish historical membership",
+        "no effective-dated membership revisions admitted"
+      ]
+    },
+    {
+      "source_id": "official:sse-dayk",
+      "provider": "OFFICIAL_REFERENCE",
+      "data_type": "C_EOD_PRICE",
+      "original_reference": "https://yunhq.sse.com.cn:32042/v1/sh1/dayk/600000?begin=-3&end=-1&period=day",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "NOT_AUTHORIZED",
+      "retrieved_at_semantics": "ACTUAL_OLD_CAPTURE:2026-10-05T06:09:58.788Z",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "authority_level": "RAW_PUBLIC_CAPTURE_ONLY",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "old frozen terms UNVERIFIED; cannot promote original object",
+        "new narrowly reviewed calendar source does not relicense this source/data class"
+      ],
+      "raw_sha256": "sha256:050d31343e76ee4544f59d3042c955381a3f54dd1fe79ec4bac8b3109e3de80f"
+    },
+    {
+      "source_id": "official:sse-holiday",
+      "provider": "OFFICIAL_REFERENCE",
+      "data_type": "B_REFERENCE_DOCUMENT",
+      "original_reference": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "NOT_AUTHORIZED",
+      "retrieved_at_semantics": "ACTUAL_OLD_CAPTURE:2026-10-05T06:09:59.054Z",
+      "published_at_semantics": "2026-09-17",
+      "available_at_semantics": "RETRIEVAL_ONLY_NO_HISTORICAL_PROOF",
+      "coverage": "UNKNOWN",
+      "authority_level": "RAW_PUBLIC_CAPTURE_ONLY",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "old frozen terms UNVERIFIED; cannot promote original object",
+        "new narrowly reviewed calendar source does not relicense this source/data class"
+      ],
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc"
+    },
+    {
+      "source_id": "official:szse-holiday",
+      "provider": "OFFICIAL_REFERENCE",
+      "data_type": "B_REFERENCE_DOCUMENT",
+      "original_reference": "https://investor.szse.cn/disclosure/notice/general/t20260917_622911.html",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "NOT_AUTHORIZED",
+      "retrieved_at_semantics": "ACTUAL_OLD_CAPTURE:2026-10-05T06:09:59.201Z",
+      "published_at_semantics": "2026-09-17",
+      "available_at_semantics": "RETRIEVAL_ONLY_NO_HISTORICAL_PROOF",
+      "coverage": "UNKNOWN",
+      "authority_level": "RAW_PUBLIC_CAPTURE_ONLY",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "old frozen terms UNVERIFIED; cannot promote original object",
+        "new narrowly reviewed calendar source does not relicense this source/data class"
+      ],
+      "raw_sha256": "sha256:7b0c4264d27f4ba14a1904ab31cb3b2b870e4e68d6b8d8c0f6cf4254c1a045a4"
+    },
+    {
+      "source_id": "official:sse-session",
+      "provider": "OFFICIAL_REFERENCE",
+      "data_type": "B_REFERENCE_DOCUMENT",
+      "original_reference": "https://one.sse.com.cn/onething/gptz/",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "NOT_AUTHORIZED",
+      "retrieved_at_semantics": "ACTUAL_OLD_CAPTURE:2026-10-05T06:09:59.554Z",
+      "published_at_semantics": "UNKNOWN",
+      "available_at_semantics": "RETRIEVAL_ONLY_NO_HISTORICAL_PROOF",
+      "coverage": "UNKNOWN",
+      "authority_level": "RAW_PUBLIC_CAPTURE_ONLY",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "old frozen terms UNVERIFIED; cannot promote original object",
+        "new narrowly reviewed calendar source does not relicense this source/data class"
+      ],
+      "raw_sha256": "sha256:f5d95746ec6f8dc7d5c9f057b230ba56eae67dce05dbae06fe62a0bdad98f0db"
+    },
+    {
+      "source_id": "official:szse-session",
+      "provider": "OFFICIAL_REFERENCE",
+      "data_type": "B_REFERENCE_DOCUMENT",
+      "original_reference": "https://investor.szse.cn/knowledge/stock/deal/t20191204_572383.html",
+      "license_terms_status": "UNKNOWN",
+      "redistribution_status": "NOT_AUTHORIZED",
+      "retrieved_at_semantics": "ACTUAL_OLD_CAPTURE:2026-10-05T06:09:59.601Z",
+      "published_at_semantics": "2019-12-04",
+      "available_at_semantics": "RETRIEVAL_ONLY_NO_HISTORICAL_PROOF",
+      "coverage": "UNKNOWN",
+      "authority_level": "RAW_PUBLIC_CAPTURE_ONLY",
+      "pit_suitability": "BLOCKED_NO_HISTORICAL_AVAILABILITY_PROOF",
+      "allowed_purposes": [],
+      "admission": "BLOCKED",
+      "known_limitations": [
+        "old frozen terms UNVERIFIED; cannot promote original object",
+        "new narrowly reviewed calendar source does not relicense this source/data class"
+      ],
+      "raw_sha256": "sha256:5346f053ed5770f8ee603546686ff5c732698ca127bda369ac458fd236e360b5"
+    },
+    {
+      "source_id": "official:sse-calendar-reference",
+      "provider": "SSE",
+      "data_type": "B_CALENDAR_REFERENCE",
+      "original_reference": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "license_terms_status": "VERIFIED_FOR_NARROW_LOCAL_REFERENCE",
+      "redistribution_status": "NOT_AUTHORIZED",
+      "retrieved_at_semantics": "ACTUAL_NEW_TLS_CAPTURE:2026-10-05T10:08:22.746222+00:00",
+      "published_at_semantics": "BODY_DATE_ONLY_2026-09-17_INTRADAY_UNKNOWN",
+      "available_at_semantics": "ACTUAL_RETRIEVAL_ONLY_NOT_HISTORICAL",
+      "coverage": {
+        "exchange": "SSE",
+        "symbols": [],
+        "from": "2026-09-20",
+        "to": "2026-10-10",
+        "complete_trading_calendar": false,
+        "stock_coverage": false
+      },
+      "authority_level": "OFFICIAL_ANNOUNCEMENT_BYTES_FOR_LIMITED_REFERENCE",
+      "pit_suitability": "OBSERVED_AT_RETRIEVAL_ONLY",
+      "allowed_purposes": [
+        "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE"
+      ],
+      "admission": "CANDIDATE_REQUIRES_APPROVED_POLICY_AND_ACTUAL_RECEIPT",
+      "known_limitations": [
+        "terms support noncommercial local browse/download; model/cloud/redistribution/trading disabled",
+        "finite explicit calendar facts only; other days unknown",
+        "retrieved after article; no historical-cutoff availability proof",
+        "not a stock/price/financial slice; no real research pilot readiness claim"
+      ],
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69"
+    }
+  ],
+  "excluded": [
+    "ALL_CODEX_MODEL_STATE_MEMORY_GOALS_QUEUE_LOGS_DATABASES",
+    "CREDENTIAL_FILES_AND_DATABASES",
+    "ACCOUNT_STATE_AND_PERSONAL_WORKBOOKS",
+    "V5_RUNTIME_EXECUTION_AND_WRITABLE_LEGACY_IMPORT",
+    "RECURSIVE_CONTENT_SCAN_OF_LEGACY_RUNS"
+  ],
+  "limitations": [
+    "curated known locations, not exhaustive workspace certification",
+    "no old model/collector/V5 program executed",
+    "local cache coverage and counts do not confer license or PIT trust",
+    "runtime and raw evidence remain outside Git; only this metadata manifest is saved"
+  ]
+}

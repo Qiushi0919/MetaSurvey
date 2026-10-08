@@ -1,0 +1,29 @@
+{
+  "kind": "PublicPublicationPolicy",
+  "version": "1.0.0",
+  "local_only_paths": [
+    "tests/fixtures/p1a-data/public-capture.json",
+    "tests/fixtures/p1a-data/sse-dayk.json",
+    "tests/fixtures/p1a-data/sse-holiday.html",
+    "tests/fixtures/p1a-data/szse-holiday.html",
+    "tests/fixtures/p1a-data/sse-session.html",
+    "tests/fixtures/p1a-data/szse-session.html"
+  ],
+  "synthetic_secret_sentinels": [
+    {
+      "path": "real-slice/scripts/attacks.mjs",
+      "value_sha256": "755977f96f16b7457a6edcdc215c9d99e6a072bb3d7a18c1ad6efdbe75288665",
+      "required_context": "packet('secret_token_leakage'",
+      "reason": "EXPLICIT_SYNTHETIC_SECRET_REJECTION_ATTACK_NOT_A_CREDENTIAL"
+    },
+    {
+      "path": "tests/staging.test.mjs",
+      "value_sha256": "ef1e19fb38e9d29f0ad13c0331fc96b055ada0abe378461a8dfc88e3ffdf4ffb",
+      "required_context": "payload={api_key:",
+      "reason": "EXPLICIT_SYNTHETIC_SENSITIVE_FIXTURE_REJECTION_NOT_A_CREDENTIAL"
+    }
+  ],
+  "unknown_raw_publication": "BLOCK",
+  "existing_source_git_history": "LOCAL_ONLY_DO_NOT_PUSH",
+  "productionGate": false
+}

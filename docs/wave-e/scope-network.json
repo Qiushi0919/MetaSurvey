@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "source_handoff_unchanged": true,
+  "confirmed_migration_baseline_unchanged": true,
+  "public_captured_GET_requests": 22,
+  "public_pages": 10,
+  "SSE_origin_GETs": 6,
+  "SSE_explicit_same_path_static_GETs": 6,
+  "verified_SSE_bodies": 0,
+  "authenticated_requests": 0,
+  "credential_lookups": 0,
+  "token_readback_for_audit": 0,
+  "model_calls": 0,
+  "broker_calls": 0,
+  "cloud_uploads": 0,
+  "remote_pushes": 0,
+  "deployment": false,
+  "automation_created": false,
+  "actual_Snapshot_B": false,
+  "actual_forward_paper_days": 0,
+  "browser_discovery": {
+    "search_queries": 3,
+    "official_primary_documents_only": true,
+    "underlying_transport_count": "NOT_EXPOSED_BY_SEARCH_TOOL_NOT_INCLUDED_IN22_CAPTURED_GETS"
+  },
+  "dependency_install": "OFFLINE_IGNORE_SCRIPTS_LOCAL_CACHE_NO_REGISTRY_REQUEST",
+  "productionGate": false
+}

@@ -1,0 +1,11 @@
+# Owner — Historical PIT / conditional backtest / audit
+
+Source: the Owner's direct 2026-10-08 message “MetaSurvey 历史回测 Owner 状态报告”. Latest authorization supersedes the prior STOP only for this bounded historical work; the formal handoff remains primary.
+
+P0-PIT: three engineering securities only, per-day price/calendar/status/action cutoff and 20×3 closure matrix; preserve raw originals, hash, literal retrieval clocks, available_at and revisions; no current/latest backfill. Existing V5/old databases/runs/ledgers remain read-only. Current vendor data remain quarantined and Provider/License blocks remain binding. Bounded credential-free official public original reads are evidence preparation, not source/license admission. No new authenticated vendor download, Token lookup, private signing or secret needed here.
+
+P0-BT is conditional on PIT and all existing economic/evaluation prerequisites. The Owner adopts the frozen walk-forward headline: initial36m expanding training,12m validation,6m sealed test,6m step,purge/embargo40 actual sessions,1260 target sessions and100 complete trades. No parameter search or winners/failures discarded. Exact cutoff/anchor/window boundary implementation, actual dated account/cost/slippage/risk/benchmark/calibration policies not supplied remain UNSET_REQUIRED. Their frozen proposal values are not automatic Owner business defaults. Price/status/action/calendar alone cannot satisfy the common financial/catalyst/industry/Edge gates of both full CORE_40 families.
+
+P0-AUDIT: each run has manifest/hash and retained blocked/failed attempts; actual trade ledger and gross/net/fees/turnover/MDD/benchmark excess/MAE/MFE only after real admissible execution. Missing is NULL/PENDING, not zero-profit. Historical exposed sample cannot be relabelled untouched OOS.
+
+Preserve all940 predecessor files and old forward prediction/source/receipt/Gates. New historical_pit/, contracts/historical-pit/, docs/historical-pit/, ADR-038 and new private epoch only. No sub-agent delegation requested for this bounded phase. No real Signal/Approval/Order/broker/money/cloud/model, automatic future reveal, tuning, universe expansion or scheduling. Keep forward v1 D1/D5/D10 frozen; historical work does not satisfy its actual EOD/signature gate. Deliver PIT progress/conditional BT blockers/report and stop; no automatic next phase.

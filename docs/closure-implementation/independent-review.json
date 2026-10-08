@@ -1,0 +1,686 @@
+{
+  "reviewer": "NEW Independent Reviewer W4 /root/closure_w4_reviewer",
+  "review_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER",
+  "candidate_head": "b9a4ed6283733ca0c6e55fbaf5e86dd948ceb356",
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "source_tree_hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5",
+  "attacks": [
+    {
+      "id": "A01",
+      "title": "synthetic → OBSERVED relabel",
+      "result": "PASS",
+      "evidence": {
+        "old_verifier": "ACCEPTED",
+        "new_admission": "CLOSURE_SYNTHETIC_SCOPE_ESCALATION"
+      },
+      "reason": [
+        "CLOSURE_SYNTHETIC_SCOPE_ESCALATION"
+      ]
+    },
+    {
+      "id": "A02",
+      "title": "synthetic → REAL_RESEARCH escalation",
+      "result": "PASS",
+      "evidence": {
+        "scope": "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+        "purpose": "CLOSURE_PURPOSE_MISMATCH"
+      },
+      "reason": [
+        "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+        "CLOSURE_PURPOSE_MISMATCH"
+      ]
+    },
+    {
+      "id": "A03",
+      "title": "quarantined export",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_DATA_QUARANTINED"
+      },
+      "reason": [
+        "CLOSURE_DATA_QUARANTINED"
+      ]
+    },
+    {
+      "id": "A04",
+      "title": "future-data export",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_FUTURE_DATA"
+      },
+      "reason": [
+        "CLOSURE_FUTURE_DATA"
+      ]
+    },
+    {
+      "id": "A05",
+      "title": "available_at spoof with coherent new hashes",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_SOURCE_LINEAGE_INCOMPLETE"
+      },
+      "reason": [
+        "CLOSURE_SOURCE_LINEAGE_INCOMPLETE"
+      ]
+    },
+    {
+      "id": "A06",
+      "title": "source byte mutation after admission",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_SOURCE_LINEAGE_INCOMPLETE",
+        "original_bytes_reads": 1
+      },
+      "reason": [
+        "CLOSURE_SOURCE_LINEAGE_INCOMPLETE"
+      ]
+    },
+    {
+      "id": "A07",
+      "title": "receipt reuse across snapshot/version/code epoch",
+      "result": "PASS",
+      "evidence": {
+        "snapshot": "CLOSURE_RECEIPT_INVALIDATED",
+        "version": "CLOSURE_RECEIPT_UNKNOWN",
+        "policy_epoch": "CLOSURE_POLICY_UNTRUSTED"
+      },
+      "reason": [
+        "CLOSURE_RECEIPT_INVALIDATED",
+        "CLOSURE_RECEIPT_UNKNOWN",
+        "CLOSURE_POLICY_UNTRUSTED"
+      ]
+    },
+    {
+      "id": "A08",
+      "title": "receipt/policy revocation and old export reuse",
+      "result": "PASS",
+      "evidence": {
+        "reasons": [
+          "CLOSURE_RECEIPT_REVOKED",
+          "CLOSURE_POLICY_REVOKED"
+        ],
+        "rejected_artifact_bytes": 0
+      },
+      "reason": [
+        "CLOSURE_RECEIPT_REVOKED",
+        "CLOSURE_POLICY_REVOKED"
+      ]
+    },
+    {
+      "id": "A09",
+      "title": "receipt purpose mismatch",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_PURPOSE_MISMATCH"
+      },
+      "reason": [
+        "CLOSURE_PURPOSE_MISMATCH"
+      ]
+    },
+    {
+      "id": "A10",
+      "title": "coverage mismatch",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_COVERAGE_INCOMPLETE"
+      },
+      "reason": [
+        "CLOSURE_COVERAGE_INCOMPLETE"
+      ]
+    },
+    {
+      "id": "A11",
+      "title": "stale data and receipt expiry",
+      "result": "PASS",
+      "evidence": {
+        "stale": "CLOSURE_STALE_DATA",
+        "expiry": "CLOSURE_RECEIPT_EXPIRED"
+      },
+      "reason": [
+        "CLOSURE_STALE_DATA",
+        "CLOSURE_RECEIPT_EXPIRED"
+      ]
+    },
+    {
+      "id": "A12",
+      "title": "namespace crossover",
+      "result": "PASS",
+      "evidence": {
+        "receipt": "CLOSURE_NAMESPACE_MISMATCH",
+        "import": "CLOSURE_NAMESPACE_MISMATCH"
+      },
+      "reason": [
+        "CLOSURE_NAMESPACE_MISMATCH"
+      ]
+    },
+    {
+      "id": "A13",
+      "title": "future MAE/MFE payload and metadata leakage",
+      "result": "PASS",
+      "evidence": {
+        "reasons": [
+          "CLOSURE_OUTCOME_LEAKAGE",
+          "CLOSURE_OUTCOME_LEAKAGE",
+          "CLOSURE_OUTCOME_LEAKAGE",
+          "CLOSURE_OUTCOME_LEAKAGE"
+        ]
+      },
+      "reason": [
+        "CLOSURE_OUTCOME_LEAKAGE"
+      ]
+    },
+    {
+      "id": "A14",
+      "title": "arbitrary all-signed payload injection",
+      "result": "PASS",
+      "evidence": {
+        "source_projection": "CLOSURE_HASH_MISMATCH",
+        "result_extra": "CLOSURE_IMPORT_INVALID"
+      },
+      "reason": [
+        "CLOSURE_HASH_MISMATCH",
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "id": "A15",
+      "title": "raw path leakage",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_SECRET_OR_PATH_LEAKAGE",
+        "rejected_bytes": 0
+      },
+      "reason": [
+        "CLOSURE_SECRET_OR_PATH_LEAKAGE"
+      ]
+    },
+    {
+      "id": "A16",
+      "title": "secret leakage",
+      "result": "PASS",
+      "evidence": {
+        "reason": "CLOSURE_SECRET_OR_PATH_LEAKAGE"
+      },
+      "reason": [
+        "CLOSURE_SECRET_OR_PATH_LEAKAGE"
+      ]
+    },
+    {
+      "id": "A17",
+      "title": "LLM fake HUMAN approval",
+      "result": "PASS",
+      "evidence": {
+        "claim": "CLOSURE_LLM_EXECUTION_INJECTION",
+        "object": "CLOSURE_IMPORT_INVALID"
+      },
+      "reason": [
+        "CLOSURE_LLM_EXECUTION_INJECTION",
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "id": "A18",
+      "title": "LLM OrderIntent injection",
+      "result": "PASS",
+      "evidence": {
+        "claim": "CLOSURE_LLM_EXECUTION_INJECTION",
+        "object": "CLOSURE_IMPORT_INVALID"
+      },
+      "reason": [
+        "CLOSURE_LLM_EXECUTION_INJECTION",
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "id": "A19",
+      "title": "unknown real-cost/account suitability",
+      "result": "PASS",
+      "evidence": {
+        "missing_fixture_cost": "CLOSURE_COST_REQUIRED_FIRST",
+        "real_account_suitability": "BLOCKED",
+        "real_net_edge": "UNSET_REQUIRED",
+        "real_sizing": "UNSET_REQUIRED"
+      },
+      "reason": [
+        "CLOSURE_COST_REQUIRED_FIRST"
+      ]
+    },
+    {
+      "id": "A20",
+      "title": "Candidate before actual Cost Engine",
+      "result": "PASS",
+      "evidence": {
+        "actual_estimate_hash": "sha256:42ac05cf850f5d346b1addee87d9430cbcb5c00e84d8c33c9f3f2fb1f9d662f3",
+        "ordered_events": [
+          "IMPORT_COST_ESTIMATED",
+          "ACCOUNT_READ:account_id",
+          "ACCOUNT_READ:auto_execute",
+          "ACCOUNT_READ:broker_capability_verified",
+          "ACCOUNT_READ:broker_costs",
+          "ACCOUNT_READ:business_timezone",
+          "ACCOUNT_READ:content_hash",
+          "ACCOUNT_READ:contract_name",
+          "ACCOUNT_READ:contract_version",
+          "ACCOUNT_READ:cost_reconciliation_passed",
+          "ACCOUNT_READ:currency",
+          "ACCOUNT_READ:execution_mode",
+          "ACCOUNT_READ:invalidation",
+          "ACCOUNT_READ:kill_switch_test_passed",
+          "ACCOUNT_READ:mode",
+          "ACCOUNT_READ:notes",
+          "ACCOUNT_READ:object_id",
+          "ACCOUNT_READ:object_version",
+          "ACCOUNT_READ:paper_acceptance_passed",
+          "ACCOUNT_READ:profile_kind",
+          "ACCOUNT_READ:program_trading_compliance_checked",
+          "ACCOUNT_READ:provenance",
+          "ACCOUNT_READ:reason_codes",
+          "ACCOUNT_READ:recorded_at",
+          "ACCOUNT_READ:settings",
+          "ACCOUNT_READ:trace_id",
+          "ACCOUNT_READ:user_risk_policy_version",
+          "IMPORT_ACCEPTED"
+        ],
+        "transitions_denied": [
+          "CandidateTradeable",
+          "CandidateEligibility",
+          "Signal",
+          "Approval",
+          "OrderIntent",
+          "Fill"
+        ]
+      },
+      "reason": [
+        "COST_BEFORE_ACCOUNT_READ_AND_NON_EXECUTABLE_TRANSITION"
+      ]
+    },
+    {
+      "id": "A21",
+      "title": "productionGate bypass",
+      "result": "PASS",
+      "evidence": {
+        "packet": "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+        "model_claim": "CLOSURE_IMPORT_INVALID",
+        "p0_gate": {
+          "allowed": false,
+          "reason_codes": [
+            "PRODUCTION_DISABLED_P0",
+            "UNSET_REQUIRED_CONFIG",
+            "SYNTHETIC_FIXTURE_ONLY"
+          ],
+          "missing_paths": [
+            "/account_id",
+            "/settings/capital_cents",
+            "/settings/target_order_cents",
+            "/settings/max_positions",
+            "/settings/max_single_trade_loss_bps",
+            "/settings/max_sector_exposure_bps",
+            "/settings/daily_loss_limit_cents",
+            "/settings/max_portfolio_drawdown_bps",
+            "/settings/margin_allowed",
+            "/settings/monthly_trade_frequency",
+            "/settings/strategy_budget_cents/CORE_40",
+            "/settings/strategy_budget_cents/EVENT_3",
+            "/broker_costs/broker_id",
+            "/broker_costs/commission_rate",
+            "/broker_costs/minimum_commission_cents",
+            "/broker_costs/commission_scope",
+            "/broker_costs/exchange_fee_rate",
+            "/broker_costs/exchange_fee_included",
+            "/broker_costs/other_fee_rate",
+            "/broker_costs/other_fee_included",
+            "/broker_costs/stamp_tax_sell_rate",
+            "/broker_costs/statutory_rate_source",
+            "/broker_costs/statutory_rate_verified_at",
+            "/broker_costs/effective_from",
+            "/broker_costs/effective_to",
+            "/broker_costs/slippage_base_bps",
+            "/broker_costs/slippage_stress_bps",
+            "/broker_costs/rounding_mode",
+            "/broker_costs/configuration_source",
+            "/user_risk_policy_version"
+          ]
+        }
+      },
+      "reason": [
+        "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+        "CLOSURE_IMPORT_INVALID",
+        "PRODUCTION_DISABLED_P0",
+        "UNSET_REQUIRED_CONFIG",
+        "SYNTHETIC_FIXTURE_ONLY"
+      ]
+    },
+    {
+      "id": "A22",
+      "title": "broker capability/DB/raw/credential discovery and actual native OS isolation",
+      "result": "PASS",
+      "evidence": {
+        "mechanism": "MACOS_SANDBOX_EXEC_AND_NODE_PERMISSION",
+        "node_and_os_probes": {
+          "capability": {
+            "environment_keys": [
+              "TZ"
+            ],
+            "global_broker_present": false,
+            "global_db_present": false,
+            "regular_file_descriptor_count": 0
+          },
+          "execution": [
+            {
+              "denied": true,
+              "index": 0
+            },
+            {
+              "denied": true,
+              "index": 1
+            }
+          ],
+          "network": {
+            "denied": true
+          },
+          "reads": [
+            {
+              "denied": true,
+              "index": 0
+            },
+            {
+              "denied": true,
+              "index": 1
+            },
+            {
+              "denied": true,
+              "index": 2
+            },
+            {
+              "denied": true,
+              "index": 3
+            },
+            {
+              "denied": true,
+              "index": 4
+            },
+            {
+              "denied": true,
+              "index": 5
+            }
+          ],
+          "write": {
+            "denied": true
+          }
+        },
+        "os_without_node_permissions": {
+          "capability": {
+            "environment_keys": [
+              "TZ"
+            ],
+            "global_broker_present": false,
+            "global_db_present": false,
+            "regular_file_descriptor_count": 0
+          },
+          "execution": [
+            {
+              "denied": true,
+              "index": 0
+            },
+            {
+              "denied": true,
+              "index": 1
+            }
+          ],
+          "network": {
+            "denied": true
+          },
+          "reads": [
+            {
+              "denied": true,
+              "index": 0
+            },
+            {
+              "denied": true,
+              "index": 1
+            },
+            {
+              "denied": true,
+              "index": 2
+            },
+            {
+              "denied": true,
+              "index": 3
+            },
+            {
+              "denied": true,
+              "index": 4
+            },
+            {
+              "denied": true,
+              "index": 5
+            }
+          ],
+          "write": {
+            "denied": true
+          }
+        },
+        "actual_broker_paths_canaries": true,
+        "draft_non_tradeable": true
+      },
+      "reason": [
+        "ACTUAL_NATIVE_OS_PERMISSION_DENIAL"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "priority": "P1",
+      "title": "Export lacks final live receipt recheck",
+      "file": "src/closure/export.mjs",
+      "evidence": "revocation-race.mjs and revocation-race.log",
+      "result": "RESOLVED",
+      "observed": "Receipt revoked after genuine initial verification but before first filesystem write still writes one file and records EXPORT_ACCEPTED",
+      "impact": "Invalid admission export acceptance; consumer/import still refuse revoked packet, no execution bypass",
+      "required_fix": "Recheck live admission at final export use/acceptance boundary and remove only new artifact on rejection; regression test",
+      "fix_commit": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+      "scope": "Single process, same DB handle; publication, registration and revocation share an ordered final-use queue.",
+      "before_evidence": "pre-fix-revocation-race.log: EXPORT_ACCEPTED, one file, accepted audit despite pre-write revocation.",
+      "after_evidence": "revocation-race.log: CLOSURE_RECEIPT_REVOKED, zero files, EXPORT_REJECTED only; reviewer-publication-tests.log 4/4 PASS.",
+      "history_preserved": true
+    }
+  ],
+  "positive_e2e": true,
+  "execution_counts_before": {
+    "p1a_paper.fills": "0",
+    "p1a_paper.ledger": "0",
+    "p1a_paper.orders": "0",
+    "public.approvals": "0",
+    "public.fills_real": "0",
+    "public.fills_sim": "0",
+    "public.ledger_real": "0",
+    "public.ledger_sim": "0",
+    "public.order_claims_real": "0",
+    "public.order_claims_sim": "0",
+    "public.order_drafts": "0",
+    "public.orderbook_l2": "0",
+    "public.orders_real": "0",
+    "public.orders_sim": "0",
+    "public.positions_real": "0",
+    "public.positions_sim": "0",
+    "public.research_cards": "0",
+    "public.signal_events": "0"
+  },
+  "execution_counts_after": {
+    "p1a_paper.fills": "0",
+    "p1a_paper.ledger": "0",
+    "p1a_paper.orders": "0",
+    "public.approvals": "0",
+    "public.fills_real": "0",
+    "public.fills_sim": "0",
+    "public.ledger_real": "0",
+    "public.ledger_sim": "0",
+    "public.order_claims_real": "0",
+    "public.order_claims_sim": "0",
+    "public.order_drafts": "0",
+    "public.orderbook_l2": "0",
+    "public.orders_real": "0",
+    "public.orders_sim": "0",
+    "public.positions_real": "0",
+    "public.positions_sim": "0",
+    "public.research_cards": "0",
+    "public.signal_events": "0"
+  },
+  "active_provenance": {
+    "actual_committed": true,
+    "files": 140,
+    "hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5"
+  },
+  "preservation": {
+    "frozen_paths_verified": 43,
+    "old_test_change": "one exact schema version assertion 5 to 6 only; no safety assertion softened"
+  },
+  "real_data_admission_gate": "BLOCKED",
+  "production_enabled": false,
+  "p1b_authorized": false,
+  "conclusion": "PASS",
+  "limitations": [
+    "All conclusions apply only to approved synthetic fixture MANUAL_EXPORT/PAPER scope. All real sources remain BLOCKED; no real source authority/license/clock was fabricated.",
+    "Positive OS isolation was actually tested on macOS. Unsupported platform fail-closed was verified by platform-branch emulation and code; no claim of native Linux positive isolation.",
+    "Publication/revocation ordering is single process and same DB handle. Multi-process/server RBAC/DB-owner access and revocation of already-read bytes require future topology-specific Gate.",
+    "The public known synthetic signing seed authenticates fixture integrity only; approved policy hashes, stored receipts and exact data projection are also required. It is not production issuer authentication.",
+    "No actual model/Research Agent/AI selection/EVENT strategy/GUI/real credential/real account/broker call/production execution/V5 restoration was introduced or exercised. P1-B still requires explicit APPROVE_P1B."
+  ],
+  "supplemental": {
+    "candidate_code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+    "deterministic_replay_hash": "sha256:6165915a189c9222235027035d706360477455d0502aec9db85014029b575572",
+    "identity_hashes": {
+      "receipt": "sha256:97442c909f4b54db4f0958d4657cda46f112c34fcbd9f2d08fb27c04748b8929",
+      "packet": "sha256:ea911bf36daa45df2c1498acd687b15963307e84f795ad99ff34566e91491217",
+      "draft": "sha256:0aed1556f3e3095a685b19f6418c7a11ef68a1b5cba41bbf74d55fe1d7ecf90e"
+    },
+    "execution_table_count": 22,
+    "p1a_paper_tables": [
+      "p1a_paper.accounts",
+      "p1a_paper.fills",
+      "p1a_paper.ledger",
+      "p1a_paper.lot_reservations",
+      "p1a_paper.lots",
+      "p1a_paper.orders",
+      "p1a_paper.requests"
+    ],
+    "execution_state_unchanged": true,
+    "unsupported_fail_closed": {
+      "reason": "CLOSURE_ISOLATION_UNAVAILABLE",
+      "parent_verifier_called": false,
+      "nature": "platform-branch emulation only; does not claim native Linux positive test"
+    },
+    "schema": {
+      "schemaVersion": 6,
+      "tables": [
+        "audit",
+        "policies",
+        "receipts",
+        "revocations"
+      ],
+      "existing_row_delete_and_all_truncate": [
+        "TRUNCATE audit:DENIED",
+        "TRUNCATE policies:DENIED",
+        "DELETE policies:DENIED",
+        "TRUNCATE receipts:DENIED",
+        "DELETE receipts:DENIED",
+        "TRUNCATE revocations:DENIED"
+      ]
+    }
+  },
+  "counts": {
+    "attacks": 22,
+    "pass": 22,
+    "fail": 0,
+    "findings_open": 0,
+    "findings_resolved": 1,
+    "publication_regressions": 4
+  },
+  "final_clean": {
+    "checkout": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-clean",
+    "candidate_head": "b9a4ed6283733ca0c6e55fbaf5e86dd948ceb356",
+    "tests": 258,
+    "pass": 257,
+    "fail": 0,
+    "skip": 1,
+    "skip_scope": "Optional external legacy integration only; existing synthetic and golden tests passed.",
+    "dependencies": "Fresh install with separate empty npm cache; final install/check logs inspected.",
+    "code_pin_checked": true
+  },
+  "environment": {
+    "node": "24.19.0",
+    "platform": "macOS darwin arm64",
+    "git": "/opt/homebrew/bin/git",
+    "consumer": "Native sandbox-exec plus Node permission, with same native profile separately tested without Node permission."
+  },
+  "commands": [
+    "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/attack-script.mjs",
+    "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/revocation-race.mjs",
+    "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/supplemental-review.mjs",
+    "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test tests/closure-publication.test.mjs (cwd /Users/qiushi/投资研究/ashare-trading-v1)"
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/attack-script.mjs",
+      "sha256": "sha256:2dc3b5fd77018a746708104edca86b9688781c478f349b12d8e2778cd72fc4e8",
+      "bytes": 21185
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/attack-script.log",
+      "sha256": "sha256:35111934f8042e1490c8b3b7c678b153644bb232521e0b5a7426da7f1f8a9a26",
+      "bytes": 5697
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/revocation-race.mjs",
+      "sha256": "sha256:8e10fe3a75b5aad5c26b62526fb7f2ac7de205af7f1f73458b18deb2f971635a",
+      "bytes": 1206
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/pre-fix-revocation-race.log",
+      "sha256": "sha256:6065f875be6965fb9123c1aae28d2cf0cd987880b4a92dc06554d723a16b99b2",
+      "bytes": 118
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/revocation-race.log",
+      "sha256": "sha256:46fbdfc2604ad5667146ef3a91b6cf3c44335c1a6bee7bc08e2e648b1ebfe35f",
+      "bytes": 126
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-publication-tests.log",
+      "sha256": "sha256:ece8282b55f574dc2144bca234b8691c5eb696b2d3fd8fcaff25da634c4fd0fb",
+      "bytes": 623
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/supplemental-review.mjs",
+      "sha256": "sha256:26f3d0a634e648146f0fde32e571b15c89a7718d636618e828399dab304cbd36",
+      "bytes": 3343
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/supplemental-review.json",
+      "sha256": "sha256:0a4dad2dd3031bf0775af9f0e44e00a2747598b1d58e890de5136e2fc71692ef",
+      "bytes": 1348
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/supplemental-review.log",
+      "sha256": "sha256:0a4dad2dd3031bf0775af9f0e44e00a2747598b1d58e890de5136e2fc71692ef",
+      "bytes": 1348
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-check.log",
+      "sha256": "sha256:b4898bdbf500feac27adbf7ea421b80de25516596bd6742babc55a1b8f7b83d3",
+      "bytes": 29213
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-install.log",
+      "sha256": "sha256:99d4e3babaf4fb540598c80e2806b1507022f58cc8f05c3e3a2dcff2bbb75171",
+      "bytes": 347
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/pre-fix-independent-review.json",
+      "sha256": "sha256:edffc47c564d7ede7affacea53cd5b2eacf3bff502b2c6b87430c654de1001cf",
+      "bytes": 13468
+    }
+  ],
+  "review_mode": "Read-only: implementation, schemas, business rules and repository tests were not edited by reviewer. Independent attack and evidence scripts reside externally."
+}

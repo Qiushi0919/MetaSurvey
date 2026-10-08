@@ -1,0 +1,32 @@
+{
+  "fixture_id": "p0-synthetic-economics-001",
+  "provenance": "SYNTHETIC_NOT_PRODUCTION",
+  "purpose": "Arbitrary fee and cash boundary examples. These values are not an account profile, broker schedule, statutory rate assertion or production defaults.",
+  "trade_date": "2026-10-05",
+  "cost_config": {
+    "version": "synthetic-cost-001",
+    "provenance": "SYNTHETIC_NOT_PRODUCTION",
+    "effective_from": "2026-01-01",
+    "effective_to": "2027-01-01",
+    "currency": "CNY",
+    "commission_rate": "0.001",
+    "minimum_commission_cents": "137",
+    "commission_scope": "PER_ORDER",
+    "exchange_fee_rate": "0.0000211",
+    "exchange_fee_included": false,
+    "stamp_tax_sell_rate": "0.0004",
+    "other_fee_rate": "0.0000037",
+    "other_fee_included": false,
+    "rounding_mode": "HALF_UP",
+    "slippage_treatment": "INCLUDED_IN_EXECUTION_PRICE"
+  },
+  "affordability": {
+    "price": "12.25",
+    "lot_size": 100,
+    "budget_cents": "122640",
+    "max_quantity": 10000,
+    "expected_quantity": 100
+  },
+  "trading_calendar": ["2026-09-28", "2026-09-29", "2026-09-30", "2026-10-08", "2026-10-09"],
+  "calendar_note": "Synthetic test calendar supplied explicitly; not a verified exchange calendar. Gaps deliberately exercise session-based T+1."
+}

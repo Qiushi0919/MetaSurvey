@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0-wave-c-sandbox",
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false,
+  "code_pins": [
+    {
+      "path": "contracts/wave-c/RealResearchSandboxAssessment.schema.json",
+      "sha256": "sha256:cdc6d271159f298220a0e98ebed9ad13de71999b99ba375cf896ba4fcf540b15"
+    },
+    {
+      "path": "contracts/wave-c/RealResearchSandboxInput.schema.json",
+      "sha256": "sha256:0bb85c85ebf47072008b2bd11454bdee6ffc168b851be91bddb4f369bbeb2b52"
+    },
+    {
+      "path": "contracts/wave-c/RealResearchSandboxReport.schema.json",
+      "sha256": "sha256:27d355b58123688170b498a19d7f38985f320eb1a5f9c97218149ff2a066c1a9"
+    },
+    {
+      "path": "docs/adr/ADR-023-current-observed-real-research-sandbox.md",
+      "sha256": "sha256:3d29c3c7b4f80589262a98614a00969398c65065dbcf9ae2fccff17d14e11fb9"
+    },
+    {
+      "path": "docs/adr/ADR-024-experimental-quality-timing-coordinates.md",
+      "sha256": "sha256:02bcc9805a26a530c9947ded8f5c6f5b618e4eb85fd7453b39562e9a2d76e61b"
+    },
+    {
+      "path": "docs/authorizations/P1B-WAVE-C-20261006.md",
+      "sha256": "sha256:46a6f7550027ca3e35202d4b0b81bec9a30354b7b0d0c503a321db6a1c7af792"
+    },
+    {
+      "path": "docs/wave-c/Interface-Freeze.md",
+      "sha256": "sha256:d2707f657f0f421c8e659c5303eac156e4ecaa2ed3cb16c7c977812c7349dfd9"
+    },
+    {
+      "path": "docs/wave-c/Provider-Resolution.md",
+      "sha256": "sha256:6d074242380908031aaf0af0a27c78e9d848f906235512f12dfdab3fc679c84d"
+    },
+    {
+      "path": "docs/wave-c/provider-resolution.json",
+      "sha256": "sha256:a9525e63e4ab14fba5bfe1f4bf6e7a9bde4837f9211b231a5153ba6bccc84dbf"
+    },
+    {
+      "path": "docs/wave-c/rules.json",
+      "sha256": "sha256:9f28d8771a4077b50b5f77199c7afcfb3a7421201ad8ee85d79b186cfffe9ba2"
+    },
+    {
+      "path": "wave_c/check.mjs",
+      "sha256": "sha256:a3daee77c3d6983a4940796c65111b120e72b30c1c83847965f5ef13d3df6cb7"
+    },
+    {
+      "path": "wave_c/contracts.mjs",
+      "sha256": "sha256:d1223843692c7a7ee8a2d35576eb6456587d9a149c537be30637fee94214e085"
+    },
+    {
+      "path": "wave_c/core.py",
+      "sha256": "sha256:653d1e9a3a95435dbf8ebcd2bd12aad43fcbceb3703d126f8b7cc0f2bf5d41f4"
+    },
+    {
+      "path": "wave_c/formal-producer.mjs",
+      "sha256": "sha256:c904b0bf909971496a65dc8e962cce10967f9933be4c2e954bb96ffaab1699fe"
+    },
+    {
+      "path": "wave_c/math.py",
+      "sha256": "sha256:2f3ac48d248738475182fb103c7a866069a47c7e1162d8409190af4506966573"
+    },
+    {
+      "path": "wave_c/report.py",
+      "sha256": "sha256:906b7d088e0e2c1800779cefefecf70254e2c4e0d12a8985b2cb379c6993dfe4"
+    },
+    {
+      "path": "wave_c/research.py",
+      "sha256": "sha256:b9f0b946c115872d47d025daacb41be505514b68284cd6864e962430c7d22b8b"
+    },
+    {
+      "path": "wave_c/run.py",
+      "sha256": "sha256:aa00b30b3164cb4e81ae2e44c050631006fd08905db59b87e158774a500a07fc"
+    },
+    {
+      "path": "wave_c/tests/boundaries.test.mjs",
+      "sha256": "sha256:a1241bb411e8efe1363c2c72bc35e49504ad0c8fe202a9743b5b9ed873627fe6"
+    },
+    {
+      "path": "wave_c/tests/test_research.py",
+      "sha256": "sha256:01d21634d1a5901168ecc82d0f0966b11895ae9e90da0bcffcc6a7203b2888ce"
+    },
+    {
+      "path": "wave_c/verify.py",
+      "sha256": "sha256:b01d2c96feaa5cb09f8411c4b50291af298cea749453c6e3eefd1f632979a62e"
+    }
+  ]
+}

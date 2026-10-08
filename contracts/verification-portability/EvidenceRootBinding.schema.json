@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:verification-portability:EvidenceRootBinding:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "scope",
+    "historical_baseline_commit",
+    "canonical_repository_root",
+    "private_archive_root",
+    "historical_gate",
+    "bindings",
+    "frozen_dependencies",
+    "admitted_policy_count",
+    "historical_visibility_proven",
+    "production_enabled",
+    "new_migrations"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "EvidenceRootBinding"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "scope": {
+      "const": "OFFLINE_CHECKOUT_RELOCATION_WITH_UNMOVED_PRIVATE_EVIDENCE"
+    },
+    "historical_baseline_commit": {
+      "const": "e3e2a6b958898b26cfe49a38f7b7070b721f2c6a"
+    },
+    "canonical_repository_root": {
+      "const": "/Users/qiushi/投资研究/ashare-trading-v1"
+    },
+    "private_archive_root": {
+      "const": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005"
+    },
+    "historical_gate": {
+      "const": {
+        "relative_path": "docs/tushare-admission/Gate.json",
+        "sha256": "sha256:21dc8fc52d223aef7422b8158931bbc15fac9572af6c660f943da9ad611365cf",
+        "content_hash": "sha256:22dbf54abe48d2ceb5c160800332bfd0b4c6d1b1db36c3bbc45ab4b48ba13a8f"
+      }
+    },
+    "bindings": {
+      "const": [
+        {
+          "canonical_path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/authorizations/TUSHARE15000-local-admission-20261005.md",
+          "root_kind": "REPOSITORY_DOCUMENT",
+          "relative_path": "docs/authorizations/TUSHARE15000-local-admission-20261005.md",
+          "sha256": "sha256:40e36e6a4a56509fafecf72a0c7168fc18c1996834737d26c8f38844a29139d3"
+        },
+        {
+          "canonical_path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/terms/public-document-captures.json",
+          "root_kind": "PRIVATE_ARCHIVE_DOCUMENT",
+          "relative_path": "terms/public-document-captures.json",
+          "sha256": "sha256:90a5b1f441dccc9e2421ff0f3633890ec4a894c122b10d8623bb6faa684a4af1"
+        },
+        {
+          "canonical_path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/credential-blocked-initial.json",
+          "root_kind": "PRIVATE_ARCHIVE_DOCUMENT",
+          "relative_path": "data/credential-blocked-initial.json",
+          "sha256": "sha256:e513402eb7287136baa1b94168c134a774d6d03779d925a56f1230dfdd5f4d23"
+        },
+        {
+          "canonical_path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/authorizations/TUSHARE-monthly-gateway-probe-20261005.md",
+          "root_kind": "REPOSITORY_DOCUMENT",
+          "relative_path": "docs/authorizations/TUSHARE-monthly-gateway-probe-20261005.md",
+          "sha256": "sha256:cad82664f0ae694da60e19cf7e00eea2390257d2ac8f5488762dfd30139baee1"
+        },
+        {
+          "canonical_path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/transport-rotation-blocked-final-candidate.json",
+          "root_kind": "PRIVATE_ARCHIVE_DOCUMENT",
+          "relative_path": "data/transport-rotation-blocked-final-candidate.json",
+          "sha256": "sha256:67e221dd6c05b93cf0b10238fd2cbd288f23c563eea434cd8349950be2bc88a7"
+        },
+        {
+          "canonical_path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/owner-phaseA-preflight-final.json",
+          "root_kind": "PRIVATE_ARCHIVE_DOCUMENT",
+          "relative_path": "data/owner-phaseA-preflight-final.json",
+          "sha256": "sha256:08c57731d63409c59de206af75e87dbb6ea246bb06a29f2841c79ea74a55aa15"
+        },
+        {
+          "canonical_path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/owner-phaseA-preflight-encoding-final.json",
+          "root_kind": "PRIVATE_ARCHIVE_DOCUMENT",
+          "relative_path": "data/owner-phaseA-preflight-encoding-final.json",
+          "sha256": "sha256:f460e34c83bc73664e7e372ca367d5bb3915720b0f79be1c75fa57550636879a"
+        }
+      ]
+    },
+    "frozen_dependencies": {
+      "const": [
+        {
+          "path": "tushare-admission/parent/verify.mjs",
+          "sha256": "sha256:48ce0d4d9c72aa29f6ce0106e8a05061168ae5dd1bd9f5303a0e99660e919bca"
+        },
+        {
+          "path": "tushare-admission/parent/contracts.test.mjs",
+          "sha256": "sha256:e49c21a64e92c4c52b10e8564260271b49b56abb3674c8a1d263f26ef70123cf"
+        },
+        {
+          "path": "contracts/release.tushare-admission.json",
+          "sha256": "sha256:a011685f0f911b0b48009239eb9891ef9614355038bbf7ada898012809231b97"
+        },
+        {
+          "path": "contracts/tushare-admission/AdmissionVerification.schema.json",
+          "sha256": "sha256:a136eddc29f53fed8b0c7e4417bd7f67964aaeee68768ed822b15cd9fe9e0bb2"
+        },
+        {
+          "path": "contracts/tushare-admission/reason-codes.v1.json",
+          "sha256": "sha256:cf0f246a34cd6e8635663c7ba85dd436fa01b33731dba65e7395293bc0f63721"
+        },
+        {
+          "path": "src/contracts/validate.mjs",
+          "sha256": "sha256:db2c1325ead728ffb6aa82b03ef9e8daac8024bd39387f9ef864c3e36e5e3bd6"
+        }
+      ]
+    },
+    "admitted_policy_count": {
+      "const": 0
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "new_migrations": {
+      "const": []
+    }
+  }
+}

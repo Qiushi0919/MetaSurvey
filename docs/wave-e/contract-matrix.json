@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "contracts": [
+    {
+      "name": "HistoricalBacktestReadiness",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_PROPERTIES",
+      "optional": [],
+      "purpose": "READINESS_OR_DIAGNOSTIC_DISPLAY_ONLY",
+      "authority": "NONE_FROM_JSON_SHAPE"
+    },
+    {
+      "name": "DiagnosticBacktestResult",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_PROPERTIES",
+      "optional": [],
+      "purpose": "READINESS_OR_DIAGNOSTIC_DISPLAY_ONLY",
+      "authority": "NONE_FROM_JSON_SHAPE"
+    },
+    {
+      "name": "SnapshotBPreflight",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_PROPERTIES",
+      "optional": [],
+      "purpose": "READINESS_OR_DIAGNOSTIC_DISPLAY_ONLY",
+      "authority": "NONE_FROM_JSON_SHAPE"
+    },
+    {
+      "name": "ForwardPaperReadiness",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_PROPERTIES",
+      "optional": [],
+      "purpose": "READINESS_OR_DIAGNOSTIC_DISPLAY_ONLY",
+      "authority": "NONE_FROM_JSON_SHAPE"
+    }
+  ],
+  "native_contracts_changed": false,
+  "productionGate": false
+}

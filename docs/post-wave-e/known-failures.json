@@ -1,0 +1,105 @@
+{
+  "version": "1.0.0",
+  "inherited_failures": "UNCHANGED docs/wave-e/known-failures.json and all earlier references",
+  "current_epochs": [
+    {
+      "name": "baseline-harness-G1",
+      "result": "FAIL",
+      "kind": "CHECKPOINT_LAYOUT_COMPARATOR",
+      "full_original_log_available": false,
+      "summary_ref": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/baseline-harness-G1.json",
+      "fixed": "Use git_path identity plus SHA, not absolute-path record equality"
+    },
+    {
+      "name": "producer-G1",
+      "result": "FAIL",
+      "kind": "INTERNAL_TUPLE_REJECTED_BY_STRICT_JSON",
+      "log": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/producer-G1.log",
+      "fixed": "Internal source/context pairs converted to JSON arrays; strict no-float/no-tuple guard preserved",
+      "artifact_written": false
+    },
+    {
+      "name": "new-only-G1",
+      "result": "FAIL",
+      "kind": "OBSERVATION_ORDINAL_MULTISET_SCHEMA_ASSUMPTION",
+      "log": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/new-only-G1.log",
+      "fixed": "Preserve request/capture identities and all repeated observations; ordinal list is not an identity key",
+      "quarantined_artifact_epoch": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/results/PREPARATION-G1",
+      "final_artifact_epoch": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/results/PREPARATION-G2",
+      "gate_rules_relaxed": false
+    }
+  ],
+  "source_snapshots": [
+    {
+      "epoch": "producer-G1-source",
+      "expected_files": 35,
+      "matching_files": 35,
+      "exact_whole_snapshot": true
+    },
+    {
+      "epoch": "new-only-G1-source",
+      "expected_files": 35,
+      "matching_files": 35,
+      "exact_whole_snapshot": true
+    }
+  ],
+  "metadata_inspection_error": {
+    "kind": "Wrong historical readiness filename during inspection",
+    "original_full_log_available": false,
+    "source_mutation": false
+  },
+  "actual_open_gaps": [
+    "PROVIDER_LICENSE_TRANSPORT",
+    "HISTORICAL_VISIBILITY",
+    "STATUS_UNIVERSE_HISTORY",
+    "FINANCIAL_FIRST_VISIBILITY_REVISIONS_UNITS",
+    "5_ACTION_AMBIGUITIES",
+    "8_PRE_CLOSE_DELTAS",
+    "ACTION_TOLERANCE_ROUNDING_UNSET",
+    "30_ACTUAL_ACCOUNT_SETTINGS_UNSET",
+    "OWNER_STRATEGY_EVALUATION_UNSET",
+    "SNAPSHOT_B_PENDING",
+    "ACTUAL_PAPER_DAYS_0",
+    "OPTIONAL_EXTERNAL_V5_SKIP_AND_LEGACY_CLI_HASH_MISMATCH"
+  ],
+  "critical_false_acceptance_observed_before_review": false,
+  "productionGate": false,
+  "final_artifact_epoch": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/results/PREPARATION-G3",
+  "independent_R1": {
+    "state": "REMEDIATION_REQUIRED_NOT_PASS",
+    "candidate": "039542bdf2eda3bceba62383080a8e70d174d6aa",
+    "original_context_pins": 951,
+    "evidence_ref": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R1/evidence.json",
+    "findings": [
+      {
+        "kind": "REFERENCED_ORIGINALS_INDIRECTLY_BOUND",
+        "financial_raw_hashes_found_by_reviewer": 18,
+        "financial_paths_with_same_byte_aliases": 21,
+        "root_expanded_missing_raw_hashes": 35,
+        "root_added_physical_paths": 44,
+        "fixed": "293adopted paths +94request identities/85raw hashes mapped to94originals, all rechecked"
+      },
+      {
+        "kind": "REDACTED_INTAKE_DUPLICATE_KEY_AND_BEARER",
+        "repro": "SYNTHETIC_ONLY_NO_ACTUAL_CREDENTIAL",
+        "fixed": "Reject duplicate decoded JSON keys and Bearer markers before raw retention"
+      }
+    ],
+    "native_G1": "HARNESS_RESEAL_REINSERTED_CONTENT_HASH; exact script/log preserved",
+    "python_G1": "REAL_DIRECT_ORIGINAL_SCOPE_FINDING, not merely harness error",
+    "python_G2": "SMOKE_FILENAME_DISCOVERY_HARNESS_ERROR; exact script/log preserved",
+    "native_G2_assertions": 1028,
+    "repeat_assertions_not_added_to_final_R2": true,
+    "uncontrolled_source_mutation": false,
+    "actual_secret_disclosure": false,
+    "actual_live_admission": false
+  },
+  "independent_R2": {
+    "status": "PASS_WITH_CONDITIONS",
+    "candidate": "95476b67255863efd7fc5fb9ee34c84766e7d68a",
+    "assertions": 14986,
+    "R1_findings_closed": true,
+    "no_failed_R2_epoch": true,
+    "critical_false_acceptance": false
+  }
+}

@@ -1,0 +1,9 @@
+# ADR-014：非执行回包与操作系统隔离
+
+Status: ACCEPTED_ENGINEERING_SCOPE_ONLY，2026-10-05；D03。
+
+消费者只读sanitized MANUAL_EXPORT artifact和parent信任公钥。实际OS sandbox deny默认文件/网络/子进程访问；仅授予运行Node必要路径及专属staging。没有隔离器fail-closed，不使用普通子进程冒充权限证据。parent执行前后重验receipt防撤销/变更；离线文件本身不代表永久许可。已读取的byte不可追溯撤回，新的use必须经过parent facade。
+
+导入result严格描述性字段，source refs只能来自packet。实际Cost Engine显式fixture估算先于suitability；不能产生真实费用/edge/sizing或REAL_ACCOUNT_SUITABLE。ResearchDraft全NON_TRADEABLE、can_produce_order=false，策略namespace贯穿packet/receipt/draft，不转换execution状态，不持有broker能力。模型自报批准/交易对象不构成人类授权。
+
+回归及独立22攻击决定本轮工程验收。PASS不授权P1B、模型调用或真实交易；等待APPROVE_P1B。

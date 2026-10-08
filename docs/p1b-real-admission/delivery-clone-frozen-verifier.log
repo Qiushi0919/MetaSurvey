@@ -1,0 +1,16 @@
+exit_code=1
+stdout:
+
+stderr:
+file:///Users/qiushi/%E6%8A%95%E8%B5%84%E7%A0%94%E7%A9%B6/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-checkout/tushare-admission/parent/verify.mjs:27
+    if(!authorizations.includes(p)&&!p.startsWith(archive+path.sep))throw new Error('DIAGNOSTIC_EVIDENCE_PATH_UNAPPROVED');
+                                                                          ^
+
+Error: DIAGNOSTIC_EVIDENCE_PATH_UNAPPROVED
+    at verifyAdmissionVerification (file:///Users/qiushi/%E6%8A%95%E8%B5%84%E7%A0%94%E7%A9%B6/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-checkout/tushare-admission/parent/verify.mjs:27:75)
+    at file:///Users/qiushi/%E6%8A%95%E8%B5%84%E7%A0%94%E7%A9%B6/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-checkout/tushare-admission/parent/verify.mjs:40:11
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0

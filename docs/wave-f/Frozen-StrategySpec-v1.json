@@ -1,0 +1,209 @@
+{
+  "version": "1.0.0",
+  "state": "FROZEN_RESEARCH_CANDIDATE_NOT_OWNER_POLICY",
+  "frozen_at": "2026-10-06T15:17:20.619122+00:00",
+  "objective": "Test whether A-share research and screening generates stable reproducible risk-adjusted excess return after verified dated costs against a frozen benchmark. No profit guarantee or evidence claimed.",
+  "namespace": "RESEARCH_CANDIDATE_ONLY:CORE_40",
+  "candidate_universe": {
+    "type": "FIXED_ENGINEERING_THREE_SYMBOL_PILOT",
+    "symbols": [
+      "603993.SH",
+      "600312.SH",
+      "603228.SH"
+    ],
+    "historical_universe_admitted": false,
+    "selection_bias": "OWNER_PRESELECTED_CONTEMPORARY_SURVIVOR_SAMPLE; not whole-market edge evidence; membership/listing must be PIT",
+    "expand_policy": "NEW_OWNER_AUTHORIZATION_AND_NEW_PREREGISTRATION"
+  },
+  "metric_definitions": {
+    "Quality": {
+      "rule": "TTM revenue growth >0 AND TTM gross margin change >=0 AND ROIC > versioned contemporaneous cost-of-capital estimate",
+      "unit": "RATIO; BOOLEAN",
+      "window": "LATEST_FOUR_COMPLETE_PIT_VISIBLE_QUARTERS; prior comparable four quarters",
+      "missing": "NO_DECISION"
+    },
+    "Growth": {
+      "rule": "sum(revenue,last4)/sum(revenue,previous4)-1 >0; denominator >0",
+      "unit": "RATIO",
+      "missing": "NO_DECISION"
+    },
+    "Financial Quality": {
+      "rule": "TTM net income >0; TTM operating cash flow / TTM net income >=0.8; contemporaneous net debt / TTM EBITDA <=3; EBITDA>0",
+      "unit": "RATIO",
+      "missing": "NO_DECISION"
+    },
+    "Valuation": {
+      "rule": "positive chosen multiple percentile <=0.6 within trailing1260 actual sessions; weak rank count(x<=current)/N, require1260 valid PIT observations",
+      "unit": "RATIO",
+      "sector_policy": {
+        "603993.SH": "EV_EBITDA_WITH_NORMALIZED_CYCLE_EARNINGS_EVIDENCE",
+        "600312.SH": "POSITIVE_PE_TTM",
+        "603228.SH": "POSITIVE_PE_TTM"
+      },
+      "sector_assignment": "PREDECLARED_THREE_SYMBOL_RESEARCH_ROLE_NOT_HISTORICAL_INDUSTRY_ADMISSION",
+      "required_valuation_estimation_policy": "UNSET_REQUIRED",
+      "missing": "NO_DECISION"
+    },
+    "Catalyst": {
+      "rule": "verified issuer/exchange structured event of ORDER_AWARD,CAPACITY_COMMISSIONING,POSITIVE_PROFIT_GUIDANCE published and available within last60 actual sessions, not rescinded/expired; expiry expires60 sessions after publication, exact intraday precision required",
+      "unit": "BOOLEAN",
+      "coding": "VERSIONED_HUMAN_EVIDENCE_CODING; no LLM approval",
+      "missing": "NO_DECISION"
+    },
+    "Risk": {
+      "rule": "NO hard negative, UNKNOWN status, integrity conflict, thesis invalidation or missing critical evidence; historical tradability policy must pass independently",
+      "unit": "BOOLEAN",
+      "missing": "NO_DECISION"
+    },
+    "Evidence Quality": {
+      "rule": "every required feature has PIT exact available/retrieved/source hash/version/units and full window; reconstruction labelled separately; issuer official evidence cannot be vendor substitute",
+      "unit": "BOOLEAN",
+      "missing": "NO_DECISION"
+    },
+    "Timing": {
+      "rule": "FAMILY_SPECIFIC_BELOW; all feature windows end at decision cutoff; MA arithmetic means, slope MA60(t)-MA60(t-20); ATR20 mean true range of20 sessions using raw comparable action-reconciled prices; prior highs exclude today; RS20 stock total return minus contemporaneous sector total return",
+      "unit": "PRICE,RATIO,ATR_MULTIPLE",
+      "missing": "NO_DECISION"
+    },
+    "Edge": {
+      "rule": "predeclared scenario expected gross return minus dated round-trip fees/slippage and uncertainty buffer >=400bps; net edge / round-trip cost >=5; zero-cost denominator cannot imply infinite pass",
+      "unit": "BPS,RATIO",
+      "calibration_policy": "UNSET_REQUIRED",
+      "missing": "NO_DECISION"
+    }
+  },
+  "families": [
+    {
+      "family_id": "CORE40_Q_PULLBACK_V1",
+      "origin": "FORMAL_HANDOFF_CORE_PULLBACK_EXAMPLE; thresholds frozen as proposal only",
+      "entry_rule": "ALL_COMMON_GATES AND close>MA60 AND MA60(t)-MA60(t-20)>0 AND sectorRS20>0.03 AND 0<=abs(close-MA20)/ATR20<1 AND mean(volume,last3)/mean(volume,last20)<0.8 AND close>max(high,previous3 sessions)",
+      "entry_execution": "NEXT_EXCHANGE_OPEN_SESSION_AFTER_EOD_DECISION, subject to actual tradeability; never same bar",
+      "timing_features": [
+        "close_above_ma60",
+        "ma60_slope_20",
+        "sector_rs20",
+        "distance_ma20_atr",
+        "volume3_to_volume20",
+        "close_above_previous3_high"
+      ]
+    },
+    {
+      "family_id": "CORE40_Q_BREAKOUT_V1",
+      "origin": "FORMAL_HANDOFF_CORE_BREAKOUT_EXAMPLE; thresholds frozen as proposal only",
+      "entry_rule": "ALL_COMMON_GATES AND close/max(high,previous60 sessions)-1>0.005 AND volume/mean(volume,previous20 sessions)>=1.5 AND sectorRS20>0 AND 0<=close/breakout_reference-1<=0.03",
+      "entry_execution": "NEXT_EXCHANGE_OPEN_SESSION_AFTER_EOD_DECISION, subject to actual tradeability; never same bar",
+      "timing_features": [
+        "breakout60_ratio",
+        "volume_to_volume20",
+        "sector_rs20",
+        "extension_from_breakout"
+      ]
+    }
+  ],
+  "family_count": 2,
+  "maximum_families": 3,
+  "model_selection": "NO WINNER SELECTION AFTER REVEAL; both declared families incl failures retained; third requires new pre-reveal registration, no retroactive addition",
+  "exit_rule": {
+    "research_proposal": "earliest next exchange session after thesis/hard-risk invalidation or close<=entry_price-2*ATR20(entry); otherwise close<MA20 after20 held sessions or time exit after40 sessions; T+1 and halt/limit may delay actual hypothetical sale",
+    "hard_risk_while_untradeable": "RECORD_BLOCKED_EXIT_AND_EXPOSURE; never invent stop fill",
+    "owner_stop_policy": "UNSET_REQUIRED"
+  },
+  "allow_flat_rule": {
+    "proposal": true,
+    "rule": "no qualifying complete candidate => cash; missing prerequisites => NO_DECISION",
+    "owner_policy": "UNSET_REQUIRED"
+  },
+  "rebalance_frequency": {
+    "proposal": "EOD decision daily; research evidence re-evaluate every20 sessions or material event; no mandatory daily trade",
+    "owner_policy": "UNSET_REQUIRED"
+  },
+  "position_rule": {
+    "proposal": "max3positions; target20% equity each, total<=60%; quantity floored to verified lot, fees inclusive; no averaging down; exits before lexical-symbol entries shared cash",
+    "maximum_exposure_proposal": "0.6",
+    "per_symbol_limit_proposal": "0.2",
+    "owner_position_limit": "UNSET_REQUIRED",
+    "owner_maximum_exposure": "UNSET_REQUIRED",
+    "owner_industry_limit": "UNSET_REQUIRED",
+    "owner_initial_cash_minor": "UNSET_REQUIRED"
+  },
+  "kill_conditions": {
+    "research_proposal": "drawdown>=0.10 disables new entries; no automatic liquidation; data/status/ledger/source/cost integrity failure immediately NO_NEW_ENTRIES",
+    "owner_daily_loss": "UNSET_REQUIRED",
+    "owner_drawdown": "UNSET_REQUIRED",
+    "owner_trade_risk": "UNSET_REQUIRED"
+  },
+  "evaluation": {
+    "benchmark_proposal": "CSI300 TOTAL_RETURN licensed versioned series; index identifier and total-return action/tax methodology must be proved, not price-only proxy",
+    "benchmark_owner_selection": "UNSET_REQUIRED",
+    "diagnostic_control_proposal": "equal_weight_three_symbol_total_return_with_cash, exact pilot; selection biased, not market benchmark",
+    "retrospective_split": {
+      "minimum_history": "5 years; target1260 actual sessions, handoff minimum",
+      "IS": [
+        "2021-10-08",
+        "2023-12-29"
+      ],
+      "validation": [
+        "2024-01-02",
+        "2024-12-31"
+      ],
+      "retrospective_check": [
+        "2025-01-02",
+        "2026-09-30"
+      ],
+      "OOS_claim": "NONE; all retrospective data potentially exposed, including prior WaveE observed three-stock results; cannot label these unseen OOS",
+      "boundaries": "dates only partition sessions; not midnight publication clocks"
+    },
+    "future_OOS_proposal": {
+      "first_possible_session": "2026-10-08",
+      "end_rule": "at least126 actual sessions plus minimum independent completed trades; insufficient => INCONCLUSIVE",
+      "actual_start": "NOT_OBSERVED",
+      "activation": "SEPARATE_HUMAN_AUTHORIZATION_AND_ACTUAL_SESSION_EOD_REVIEW"
+    },
+    "walk_forward_protocol": "expanding36month IS +12month validation +next6month sealed test, move6months; purge40 actual sessions at label boundaries, embargo40 sessions; no tuning in this preregistered two-family evaluation, all windows reported and retrospective exposure labelled",
+    "minimum_observations_proposal": 1260,
+    "minimum_complete_trades_proposal": 100,
+    "minimum_complete_OOS_trades_per_family_proposal": 50,
+    "grade_probability_calibration": "at least50 independent complete OOS/Paper trades per grade; otherwise exploratory, no 85score probability claim",
+    "transaction_cost_treatment": "verified dated commission/minimum/tax/exchange fee inclusion/other fees plus separately specified BASE and PESSIMISTIC slippage/partial fill; UNKNOWN blocks economic evaluation; optimistic sensitivity not primary",
+    "owner_cost_policy": "UNSET_REQUIRED",
+    "multiple_testing_policy": "two fixed confirmatory families, report both failures/successes; family-wise alpha0.05 Bonferroni per family0.025; no winner selection, no undisclosed variants; dependence-aware block bootstrap plan requires pre-reveal implementation review, no iid-trade p-values",
+    "success_criteria_proposal": [
+      "all data/policy/replay/source/fee gates pass",
+      "sufficient independent unseen OOS samples; exposed retrospective cannot fulfill",
+      "fee-inclusive OOS excess return >0 in BASE and PESSIMISTIC, simultaneous confidence lower bound >0 under frozen multiplicity protocol",
+      "OOS max drawdown <=0.10 and no integrity violation",
+      "same preregistered method evaluated across all declared windows; do not discard failed windows"
+    ],
+    "failure_criteria": [
+      "any critical integrity failure => FAIL",
+      "negative excess or breached drawdown with enough unseen observations => FAILURE",
+      "missing data/policy/sample or unimplemented statistical protocol => INCONCLUSIVE/BLOCKED; neverPASS"
+    ],
+    "owner_success_acceptance": "UNSET_REQUIRED"
+  },
+  "required_research_policy_decisions": {
+    "family_selection": "UNSET_REQUIRED",
+    "cost_of_capital_estimation": "UNSET_REQUIRED",
+    "normalized_cycle_earnings_method": "UNSET_REQUIRED",
+    "scenario_probabilities_and_uncertainty_buffer": "UNSET_REQUIRED",
+    "benchmark_identifier_and_total_return_method": "UNSET_REQUIRED",
+    "simulation_capital_cost_slippage": "UNSET_REQUIRED",
+    "risk_and_position_proposal_acceptance": "UNSET_REQUIRED",
+    "OOS_calendar_sample_multiplicity_acceptance": "UNSET_REQUIRED"
+  },
+  "fairness": {
+    "prior_wave_e_results_are_exposed": true,
+    "wave_e_ma20_ma60_not_final_owner_strategy": true,
+    "optimization_performed": false,
+    "actual_new_performance_reveals": 0,
+    "hidden_parameter_mutation_invalidates": true,
+    "freeze_before_any_new_reveal": true,
+    "all_failures_retained": true
+  },
+  "actual_account_parameters": "30_UNSET_REQUIRED",
+  "historical_visibility_proven": false,
+  "formal_backtest_authorized": false,
+  "actual_forward_days": 0,
+  "productionGate": false,
+  "live_authority": false
+}

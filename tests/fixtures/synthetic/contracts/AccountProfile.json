@@ -1,0 +1,79 @@
+{
+  "contract_name": "AccountProfile",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-AccountProfile",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:d48f29d951a4cc48b940304d10ce2cd783cacb68629b18235390cf1b29ccce13",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "profile_kind": "UNCONFIGURED",
+  "currency": "CNY",
+  "settings": {
+    "capital_cents": "UNSET_REQUIRED",
+    "target_order_cents": "UNSET_REQUIRED",
+    "max_positions": "UNSET_REQUIRED",
+    "max_single_trade_loss_bps": "UNSET_REQUIRED",
+    "max_sector_exposure_bps": "UNSET_REQUIRED",
+    "daily_loss_limit_cents": "UNSET_REQUIRED",
+    "max_portfolio_drawdown_bps": "UNSET_REQUIRED",
+    "margin_allowed": "UNSET_REQUIRED",
+    "monthly_trade_frequency": "UNSET_REQUIRED",
+    "strategy_budget_cents": {
+      "CORE_40": "UNSET_REQUIRED",
+      "EVENT_3": "UNSET_REQUIRED"
+    }
+  },
+  "broker_costs": {
+    "broker_id": "UNSET_REQUIRED",
+    "commission_rate": "UNSET_REQUIRED",
+    "minimum_commission_cents": "UNSET_REQUIRED",
+    "commission_scope": "UNSET_REQUIRED",
+    "exchange_fee_rate": "UNSET_REQUIRED",
+    "exchange_fee_included": "UNSET_REQUIRED",
+    "other_fee_rate": "UNSET_REQUIRED",
+    "other_fee_included": "UNSET_REQUIRED",
+    "stamp_tax_sell_rate": "UNSET_REQUIRED",
+    "statutory_rate_source": "UNSET_REQUIRED",
+    "statutory_rate_verified_at": "UNSET_REQUIRED",
+    "effective_from": "UNSET_REQUIRED",
+    "effective_to": "UNSET_REQUIRED",
+    "slippage_base_bps": "UNSET_REQUIRED",
+    "slippage_stress_bps": "UNSET_REQUIRED",
+    "rounding_mode": "UNSET_REQUIRED",
+    "configuration_source": "UNSET_REQUIRED"
+  },
+  "user_risk_policy_version": "UNSET_REQUIRED",
+  "broker_capability_verified": false,
+  "cost_reconciliation_passed": false,
+  "program_trading_compliance_checked": false,
+  "paper_acceptance_passed": false,
+  "kill_switch_test_passed": false,
+  "execution_mode": "HUMAN_CONFIRM",
+  "auto_execute": false
+}

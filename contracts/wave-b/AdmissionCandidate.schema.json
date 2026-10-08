@@ -1,0 +1,820 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "kind",
+    "fixture",
+    "namespace",
+    "provider_id",
+    "source_classification",
+    "state",
+    "source_admission",
+    "historical_visibility_proven",
+    "productionGate",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "input_identity",
+    "code_hash",
+    "rule_version",
+    "body",
+    "content_hash"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0-candidate-diagnostic"
+    },
+    "kind": {
+      "const": "REAL_DATA_ADMISSION_CANDIDATE"
+    },
+    "fixture": {
+      "type": "boolean"
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "provider_id": {
+      "const": "TUSHARE_MONTHLY_GATEWAY"
+    },
+    "source_classification": {
+      "const": "OWNER_PROVIDED_MONTHLY_GATEWAY"
+    },
+    "state": {
+      "const": "QUARANTINED"
+    },
+    "source_admission": {
+      "const": "BLOCKED"
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "input_identity": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "rule_version": {
+      "const": "1.0.0-candidate-diagnostic"
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coverage_matrix_v2",
+        "api_access_matrix",
+        "conditions_delta",
+        "component_hashes",
+        "component_code_hashes",
+        "supplier_evidence",
+        "entitlement_state",
+        "authorization_scope",
+        "units",
+        "counts",
+        "gates",
+        "unknown_account_parameters",
+        "real_net_edge",
+        "real_sizing",
+        "real_probability",
+        "C30",
+        "real_snapshot_B_ready",
+        "owner_admission_recommendation",
+        "next_phase_authorized"
+      ],
+      "properties": {
+        "coverage_matrix_v2": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "prefixItems": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "SECURITY_STATUS"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "CALENDAR_RULES"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "RAW_BARS"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "CORPORATE_ACTIONS"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "ADJUSTMENT_VERSIONS"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "FINANCIAL_REVISIONS"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "ANNOUNCEMENTS"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "engineering_state",
+                "evidence_count",
+                "gap",
+                "candidate_state",
+                "business_admission",
+                "historical_visibility_proven"
+              ],
+              "properties": {
+                "category": {
+                  "const": "INDUSTRY_MEMBERSHIP"
+                },
+                "engineering_state": {
+                  "enum": [
+                    "READY",
+                    "PARTIAL",
+                    "AMBIGUOUS",
+                    "UNKNOWN",
+                    "BLOCKED"
+                  ]
+                },
+                "evidence_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "gap": {
+                  "type": "string"
+                },
+                "candidate_state": {
+                  "const": "CANDIDATE_FOR_OWNER_REVIEW"
+                },
+                "business_admission": {
+                  "const": "BLOCKED"
+                },
+                "historical_visibility_proven": {
+                  "const": false
+                }
+              }
+            }
+          ],
+          "items": false
+        },
+        "api_access_matrix": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "api",
+              "request_count",
+              "new_request_count",
+              "physical_typed_row_count",
+              "new_typed_row_count",
+              "blocked_response_count",
+              "empty_response_count",
+              "technical_access_observed_new_requests",
+              "entitlement_inventory_verified",
+              "license_verified",
+              "product_identity_verified",
+              "independent_permissions_required"
+            ],
+            "properties": {
+              "api": {
+                "type": "string"
+              },
+              "request_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "new_request_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "physical_typed_row_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "new_typed_row_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "blocked_response_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "empty_response_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "technical_access_observed_new_requests": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "entitlement_inventory_verified": {
+                "const": false
+              },
+              "license_verified": {
+                "const": false
+              },
+              "product_identity_verified": {
+                "const": false
+              },
+              "independent_permissions_required": {
+                "const": "UNKNOWN_NO_PURCHASE_DECISION"
+              }
+            }
+          },
+          "minItems": 10,
+          "maxItems": 10
+        },
+        "conditions_delta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "baseline_hash",
+            "closed_ids",
+            "conditions"
+          ],
+          "properties": {
+            "baseline_hash": {
+              "type": "string"
+            },
+            "closed_ids": {
+              "const": []
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "subject",
+                  "baseline_status_preserved",
+                  "this_phase_closure",
+                  "engineering_progress",
+                  "remaining"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "subject": {
+                    "type": "string"
+                  },
+                  "baseline_status_preserved": {
+                    "type": "string"
+                  },
+                  "this_phase_closure": {
+                    "const": "NOT_CLOSED"
+                  },
+                  "engineering_progress": {
+                    "type": "string"
+                  },
+                  "remaining": {
+                    "type": "string"
+                  }
+                }
+              },
+              "minItems": 11,
+              "maxItems": 11
+            }
+          }
+        },
+        "component_hashes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "action",
+            "financial",
+            "industry"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "action": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "financial": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "industry": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          }
+        },
+        "component_code_hashes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "action",
+            "financial",
+            "industry"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "action": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "financial": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "industry": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          }
+        },
+        "supplier_evidence": {
+          "const": "ABSENT_BY_EXPLICIT_OWNER_REPLY"
+        },
+        "entitlement_state": {
+          "const": "TECHNICAL_ACCESS_ONLY_NOT_VERIFIED_PRODUCT_OR_ACCOUNT_TIER"
+        },
+        "authorization_scope": {
+          "const": {
+            "symbols": [
+              "603993.SH",
+              "600312.SH",
+              "603228.SH"
+            ],
+            "start": "20250601",
+            "end": "20261005",
+            "namespace": "CORE_40"
+          }
+        },
+        "units": {
+          "const": {
+            "raw_price": "PROVIDER_CNY_UNVERIFIED",
+            "raw_price_basis": "UNADJUSTED_DOCUMENTED_GATEWAY_UNVERIFIED",
+            "vol": "HAND_DOCUMENTATION_ONLY",
+            "amount": "THOUSAND_CNY_DOCUMENTATION_ONLY",
+            "independent_numeric_verification": false,
+            "prices_or_units_calibrated": false
+          }
+        },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_policies",
+            "admitted_source_observations",
+            "admitted_clock_evidence",
+            "real_snapshots",
+            "real_receipts",
+            "real_packets",
+            "real_assessments",
+            "real_cards",
+            "real_candidates",
+            "real_signals",
+            "real_approvals",
+            "real_orders",
+            "model_calls",
+            "broker_calls",
+            "execution_writes"
+          ],
+          "properties": {
+            "source_policies": {
+              "const": 0
+            },
+            "admitted_source_observations": {
+              "const": 0
+            },
+            "admitted_clock_evidence": {
+              "const": 0
+            },
+            "real_snapshots": {
+              "const": 0
+            },
+            "real_receipts": {
+              "const": 0
+            },
+            "real_packets": {
+              "const": 0
+            },
+            "real_assessments": {
+              "const": 0
+            },
+            "real_cards": {
+              "const": 0
+            },
+            "real_candidates": {
+              "const": 0
+            },
+            "real_signals": {
+              "const": 0
+            },
+            "real_approvals": {
+              "const": 0
+            },
+            "real_orders": {
+              "const": 0
+            },
+            "model_calls": {
+              "const": 0
+            },
+            "broker_calls": {
+              "const": 0
+            },
+            "execution_writes": {
+              "const": 0
+            }
+          }
+        },
+        "gates": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "REAL_DATA_ADMISSION_GATE",
+            "LOCAL_REAL_RESEARCH_GATE",
+            "P1B_RESEARCH_PILOT_GATE",
+            "CLOUD_RESEARCH_EXPORT_GATE",
+            "HISTORICAL_BACKTEST_GATE",
+            "PRODUCTION_DATA_GATE",
+            "REDISTRIBUTION_GATE",
+            "CLOUD_MODEL_GATE",
+            "SIGNAL_ORDER_GATE",
+            "BROKER_GATE"
+          ],
+          "properties": {
+            "REAL_DATA_ADMISSION_GATE": {
+              "const": "BLOCKED"
+            },
+            "LOCAL_REAL_RESEARCH_GATE": {
+              "const": "BLOCKED"
+            },
+            "P1B_RESEARCH_PILOT_GATE": {
+              "const": "BLOCKED"
+            },
+            "CLOUD_RESEARCH_EXPORT_GATE": {
+              "const": "BLOCKED"
+            },
+            "HISTORICAL_BACKTEST_GATE": {
+              "const": "BLOCKED"
+            },
+            "PRODUCTION_DATA_GATE": {
+              "const": "BLOCKED"
+            },
+            "REDISTRIBUTION_GATE": {
+              "const": "BLOCKED"
+            },
+            "CLOUD_MODEL_GATE": {
+              "const": "BLOCKED"
+            },
+            "SIGNAL_ORDER_GATE": {
+              "const": "BLOCKED"
+            },
+            "BROKER_GATE": {
+              "const": "BLOCKED"
+            }
+          }
+        },
+        "unknown_account_parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "count",
+            "state"
+          ],
+          "properties": {
+            "count": {
+              "const": 30
+            },
+            "state": {
+              "const": "UNSET_REQUIRED"
+            }
+          }
+        },
+        "real_net_edge": {
+          "const": "UNSET_REQUIRED"
+        },
+        "real_sizing": {
+          "const": "UNSET_REQUIRED"
+        },
+        "real_probability": {
+          "const": "UNSET_REQUIRED"
+        },
+        "C30": {
+          "const": "AT_LEAST_20_ACTUAL_FORWARD_PAPER_TRADING_DAYS_REMAINS_UNSATISFIED"
+        },
+        "real_snapshot_B_ready": {
+          "const": false
+        },
+        "owner_admission_recommendation": {
+          "const": "NOT_READY"
+        },
+        "next_phase_authorized": {
+          "const": false
+        }
+      }
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:wave-b:diagnostic:AdmissionCandidate:1.0.0"
+}

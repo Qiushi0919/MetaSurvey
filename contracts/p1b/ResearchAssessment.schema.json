@@ -1,0 +1,359 @@
+{
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "ResearchAssessment"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "scope": {
+      "const": "SYNTHETIC_SEMANTIC_TEST_ONLY"
+    },
+    "strategy_id": {
+      "const": "CORE_40"
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "company_quality": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "sector_quality": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "catalyst": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "evidence_quality": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "valuation": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "timing": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "risk": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "cost": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "account_suitability": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "tradeability": {
+          "enum": [
+            "PASS",
+            "GAP",
+            "UNSET_REQUIRED",
+            "NOT_APPLICABLE"
+          ]
+        }
+      },
+      "required": [
+        "company_quality",
+        "sector_quality",
+        "catalyst",
+        "evidence_quality",
+        "valuation",
+        "timing",
+        "risk",
+        "cost",
+        "account_suitability",
+        "tradeability"
+      ],
+      "additionalProperties": false
+    },
+    "research_grade": {
+      "enum": [
+        "HIGH",
+        "MIXED",
+        "OBSERVE_ONLY",
+        "UNSET_REQUIRED"
+      ]
+    },
+    "actionability_grade": {
+      "enum": [
+        "S",
+        "A",
+        "B",
+        "C",
+        "X",
+        "UNSET_REQUIRED"
+      ]
+    },
+    "grade_meaning": {
+      "const": "PROVISIONAL_ACTIONABILITY_TEMPLATE_NOT_RECOMMENDATION"
+    },
+    "next_action": {
+      "enum": [
+        "REQUEST_REVIEW",
+        "WATCH",
+        "NO_ACTIVE_TRADE",
+        "RESEARCH_ONLY",
+        "BLOCKED",
+        "UNKNOWN"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "P1B_SOURCE_UNAPPROVED",
+          "P1B_LICENSE_UNKNOWN",
+          "P1B_TERMS_UNVERIFIED",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_SCOPE_MISMATCH",
+          "P1B_SOURCE_HASH_MISMATCH",
+          "P1B_SOURCE_FACT_MISMATCH",
+          "P1B_FUTURE_DATA",
+          "P1B_HISTORICAL_CLOCK_UNPROVEN",
+          "P1B_RECEIPT_UNKNOWN",
+          "P1B_RECEIPT_REVOKED",
+          "P1B_POLICY_REVOKED",
+          "P1B_HASH_MISMATCH",
+          "P1B_SIGNATURE_INVALID",
+          "P1B_PROJECTION_MISMATCH",
+          "P1B_ARBITRARY_PAYLOAD",
+          "P1B_SECRET_OR_PATH",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_GRADE_UNCALIBRATED",
+          "P1B_HARD_BLOCK",
+          "P1B_TIMING_UNSATISFIED",
+          "P1B_EDGE_UNSET",
+          "P1B_UNKNOWN_REAL_ACCOUNT",
+          "P1B_NON_EXECUTABLE",
+          "P1B_REAL_STOCK_PILOT_BLOCKED",
+          "P1B_EXPERIMENTAL_SCORE_ONLY",
+          "P1B_CALENDAR_COVERAGE",
+          "P1B_CODE_EPOCH_MISMATCH",
+          "P1B_POINT_IN_TIME_ONLY",
+          "P1B_SEMANTICS_SCOPE"
+        ]
+      },
+      "maxItems": 1000,
+      "uniqueItems": true
+    },
+    "hard_block_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "object_version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "object_id",
+          "object_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 1000,
+      "uniqueItems": true
+    },
+    "research_card_ref": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "object_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "object_version": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "content_hash": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "object_id",
+            "object_version",
+            "content_hash"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "real_account_suitability": {
+      "const": "BLOCKED"
+    },
+    "real_net_edge": {
+      "const": "UNSET_REQUIRED"
+    },
+    "real_sizing": {
+      "const": "UNSET_REQUIRED"
+    },
+    "calibrated": {
+      "const": false
+    },
+    "probability_claim": {
+      "const": "UNSET_REQUIRED"
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "production_enabled": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "trace_id",
+    "scope",
+    "strategy_id",
+    "dimensions",
+    "research_grade",
+    "actionability_grade",
+    "grade_meaning",
+    "next_action",
+    "reasons",
+    "hard_block_refs",
+    "research_card_ref",
+    "real_account_suitability",
+    "real_net_edge",
+    "real_sizing",
+    "calibrated",
+    "probability_claim",
+    "can_produce_order",
+    "production_enabled"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1b:ResearchAssessment:1.0.0",
+  "title": "ResearchAssessment",
+  "x-contract": {
+    "version": "1.0.0",
+    "money": "Integer-cent decimal strings / BigInt; price/rate Decimal; no production values/defaults.",
+    "timezone": "Offset timestamps; Asia/Shanghai business; UTC storage; DATE_ONLY never promoted to intraday.",
+    "hash": "Canonical JSON SHA256 excluding only top-level content_hash/proof. Snapshot v1 uses original protocol.",
+    "reason_codes": [
+      "P1B_SOURCE_UNAPPROVED",
+      "P1B_LICENSE_UNKNOWN",
+      "P1B_TERMS_UNVERIFIED",
+      "P1B_PERMISSION_SCOPE",
+      "P1B_SCOPE_MISMATCH",
+      "P1B_SOURCE_HASH_MISMATCH",
+      "P1B_SOURCE_FACT_MISMATCH",
+      "P1B_FUTURE_DATA",
+      "P1B_HISTORICAL_CLOCK_UNPROVEN",
+      "P1B_RECEIPT_UNKNOWN",
+      "P1B_RECEIPT_REVOKED",
+      "P1B_POLICY_REVOKED",
+      "P1B_HASH_MISMATCH",
+      "P1B_SIGNATURE_INVALID",
+      "P1B_PROJECTION_MISMATCH",
+      "P1B_ARBITRARY_PAYLOAD",
+      "P1B_SECRET_OR_PATH",
+      "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+      "P1B_GRADE_UNCALIBRATED",
+      "P1B_HARD_BLOCK",
+      "P1B_TIMING_UNSATISFIED",
+      "P1B_EDGE_UNSET",
+      "P1B_UNKNOWN_REAL_ACCOUNT",
+      "P1B_NON_EXECUTABLE",
+      "P1B_REAL_STOCK_PILOT_BLOCKED",
+      "P1B_EXPERIMENTAL_SCORE_ONLY",
+      "P1B_CALENDAR_COVERAGE",
+      "P1B_CODE_EPOCH_MISMATCH",
+      "P1B_POINT_IN_TIME_ONLY",
+      "P1B_SEMANTICS_SCOPE"
+    ],
+    "required_optional": "All declared fields required; null is explicitly unknown.",
+    "invalidation": [
+      "changed source bytes/terms/projection",
+      "different purpose/coverage/namespace/cutoff/code epoch",
+      "revocation",
+      "attempted cloud/stock/trading scope upgrade"
+    ],
+    "production_enabled": false
+  }
+}

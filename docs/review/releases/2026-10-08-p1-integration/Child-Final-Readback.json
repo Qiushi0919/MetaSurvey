@@ -1,0 +1,12 @@
+{
+  "scope": "ROOT_READBACK_OF_FINAL_CHILD_SEAL_ONLY",
+  "at": "2026-10-08T12:19:56.124696+00:00",
+  "child_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "checked_reference_rows": 209,
+  "unique_paths": 176,
+  "state": "MATCH",
+  "child_clean": true,
+  "root_baseline": 972,
+  "db_mutations": 0,
+  "productionGate": false
+}

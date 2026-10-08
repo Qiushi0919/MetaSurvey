@@ -1,0 +1,301 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:metasurvey:day1-reveal:Day1RevealOutcome:1.0.0",
+  "title": "Day1RevealOutcome independent research journal, not native ForwardOutcome",
+  "type": "object",
+  "required": [
+    "version",
+    "kind",
+    "namespace",
+    "symbol",
+    "horizon",
+    "target_session",
+    "prediction_sha256",
+    "base_close_verified",
+    "target_close",
+    "target_day_low",
+    "target_day_high",
+    "realized_return",
+    "direction_hit",
+    "range_hit",
+    "center_forecast_error",
+    "MAE",
+    "MFE",
+    "units",
+    "mae_mfe_convention",
+    "capture_signature_verified",
+    "independent_review_signature_verified",
+    "forward_signature_verified",
+    "scored_at",
+    "snapshot_ref",
+    "base_raw_ref",
+    "outcome_raw_ref",
+    "clock_ref",
+    "actual_store_path",
+    "actual_store_record_hash",
+    "actual_store_head",
+    "forward_expected_head",
+    "actual_forward_days",
+    "actual_forward_days_increment",
+    "source_admission",
+    "action_reconciliation",
+    "metric_scope",
+    "productionGate",
+    "actual_authority",
+    "reason_codes",
+    "sequence",
+    "previous_hash",
+    "expected_head",
+    "outcome_sha256"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "kind": {
+      "const": "Day1RevealOutcome"
+    },
+    "namespace": {
+      "const": "FORWARD_RESEARCH_ONLY:CORE_40:DAY1_REVEAL"
+    },
+    "symbol": {
+      "enum": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "horizon": {
+      "const": 1
+    },
+    "target_session": {
+      "const": "2026-10-08"
+    },
+    "prediction_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "base_close_verified": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "target_close": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "target_day_low": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "target_day_high": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "realized_return": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "direction_hit": {
+      "type": "boolean"
+    },
+    "range_hit": {
+      "type": "boolean"
+    },
+    "center_forecast_error": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "MAE": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "MFE": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+      "maxLength": 110
+    },
+    "units": {
+      "const": {
+        "prices": "CNY_PER_SHARE",
+        "returns": "PERCENT",
+        "error": "PERCENTAGE_POINTS"
+      }
+    },
+    "mae_mfe_convention": {
+      "const": "MAE_MIN_0_AND_LOW_RETURN_MFE_MAX_0_AND_HIGH_RETURN"
+    },
+    "capture_signature_verified": {
+      "const": true
+    },
+    "independent_review_signature_verified": {
+      "const": true
+    },
+    "forward_signature_verified": {
+      "const": true
+    },
+    "scored_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "base_raw_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "outcome_raw_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "clock_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "actual_store_path": {
+      "type": "string",
+      "pattern": "^/"
+    },
+    "actual_store_record_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "actual_store_head": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "forward_expected_head": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "actual_forward_days": {
+      "const": 1
+    },
+    "actual_forward_days_increment": {
+      "const": 0
+    },
+    "source_admission": {
+      "const": "BLOCKED"
+    },
+    "action_reconciliation": {
+      "const": "UNKNOWN"
+    },
+    "metric_scope": {
+      "const": "CURRENT_REVIEWED_RAW_PRICE_NOT_EXECUTION_PNL"
+    },
+    "productionGate": {
+      "const": false
+    },
+    "actual_authority": {
+      "const": false
+    },
+    "reason_codes": {
+      "const": [
+        "SOURCE_PROVIDER_LICENSE_ACTIONS_UNRESOLVED",
+        "NO_EXECUTION_OR_PROFIT_AUTHORITY"
+      ]
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "previous_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "expected_head": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "outcome_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}

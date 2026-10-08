@@ -1,0 +1,119 @@
+{
+  "version": "2.0.0-wave-d-local-loop",
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false,
+  "code_pins": [
+    {
+      "path": "contracts/wave-d/RealResearchSandboxAssessment.schema.json",
+      "sha256": "sha256:e13593debcd069c183bfaaf9cf3918bb6c0c2dec92bbff4c72a0f4d52752108a"
+    },
+    {
+      "path": "contracts/wave-d/RealResearchSandboxInput.schema.json",
+      "sha256": "sha256:5d7dfc4c3bac378d641fb46520aff11e2a93b64d5dbf01cbd1f7dff526697d72"
+    },
+    {
+      "path": "contracts/wave-d/RealResearchSandboxReport.schema.json",
+      "sha256": "sha256:08904f8f22e5b3bcf33a84dd7f111784df5994f8f05e98b4af37cd1c3d0f6d01"
+    },
+    {
+      "path": "contracts/wave-d/ResearchComparison.schema.json",
+      "sha256": "sha256:414fb6de787b3a96d37f634808a8549727841e6f4745d05e3f8047efcbac6d0b"
+    },
+    {
+      "path": "docs/adr/ADR-025-three-stock-current-observed-research-loop.md",
+      "sha256": "sha256:7c8e4d6e3b29047ba8ca7ad9e9ddf1ae0becc1a21ba00d5c6534bb80cf5e6ec3"
+    },
+    {
+      "path": "docs/authorizations/P1B-WAVE-D-20261006.md",
+      "sha256": "sha256:cddbb923616ef20249574acf8c7cf09215b75d53e203688adb7a94c5000361f1"
+    },
+    {
+      "path": "docs/wave-d/Interface-Freeze.md",
+      "sha256": "sha256:57ea73c561d61f3992fbac531cdc41bd4482ba81e83cedcb92c208eb87b29024"
+    },
+    {
+      "path": "docs/wave-d/capture-ref.json",
+      "sha256": "sha256:6007d1e540add130e8f41e7d73349fa0e20c38f73b27d647b4c80bbf90a1d68d"
+    },
+    {
+      "path": "docs/wave-d/full-statements-ref.json",
+      "sha256": "sha256:6a598f0fe855aaeb3821a918f33f828ebb12f73826e05f3c736ec8bb86cafd82"
+    },
+    {
+      "path": "docs/wave-d/public-ref.json",
+      "sha256": "sha256:dc469b54792d6814132bfc7c6b0e657fc828216af468b5bc2ca4ea1a4dc24c68"
+    },
+    {
+      "path": "docs/wave-d/rules.json",
+      "sha256": "sha256:cad0e91099a87a0a539df8939ecd78eca896e184062dc2a93fc4383084fc541d"
+    },
+    {
+      "path": "docs/wave-d/sse-enrich-ref.json",
+      "sha256": "sha256:d6b4a0082ee38bb38de8994be7670cb596d8ee311fc657c5523d9d673e94a4c4"
+    },
+    {
+      "path": "wave_d/check.mjs",
+      "sha256": "sha256:b7ada3b9a2a8956da551cfa3846a6ee457ee773e1ec7d5382457650f9db205f9"
+    },
+    {
+      "path": "wave_d/contracts.mjs",
+      "sha256": "sha256:28034a23fe1222dd0df70caec5573f23931e490d55edd24f718de60cf61d2434"
+    },
+    {
+      "path": "wave_d/core.py",
+      "sha256": "sha256:5b4a52d421be1396865bb3d46c16cb0b9b18ea419ad5325375da076a087e0019"
+    },
+    {
+      "path": "wave_d/financial.py",
+      "sha256": "sha256:0264d892b8c67faa2b992df6daf7758f634016cd5bc6156022f720c6ce4eca0c"
+    },
+    {
+      "path": "wave_d/full_statements.py",
+      "sha256": "sha256:a0ab35e2353fa7d04f05590f76927ca84b2009898d7c97cadee1b43e559e6c23"
+    },
+    {
+      "path": "wave_d/probe.py",
+      "sha256": "sha256:0be5f068addbf87664e5f44ec41ab7fc1a6e41e17c7721837b0c173787fff1ba"
+    },
+    {
+      "path": "wave_d/public_enrich.py",
+      "sha256": "sha256:db8b07ceb5e435d8f5865acc49cdfb3d38c296ef6016180e9440c50dbbe4c7c8"
+    },
+    {
+      "path": "wave_d/public_probe.py",
+      "sha256": "sha256:298dc3675afdaddebf09c5aad7f118d6e82b802f0bdb4b68f0bb7df5ddc58e6e"
+    },
+    {
+      "path": "wave_d/report.py",
+      "sha256": "sha256:bd7894772c7e4375fd3c9e806c5e3dbb9d5b0b050aa8ab06396c9acf840166f7"
+    },
+    {
+      "path": "wave_d/research.py",
+      "sha256": "sha256:6aa6259d7ff51a4839dba37658e6f78f99d478b1cd589eb3847614c179a00586"
+    },
+    {
+      "path": "wave_d/run.py",
+      "sha256": "sha256:76087bf7fadce75512eea539b70c4ed5070b30974e653c457326d67c488402e9"
+    },
+    {
+      "path": "wave_d/status_action.py",
+      "sha256": "sha256:5f87ef477a8a77f1b4c3d963f4f85ee21db38b8114dcfe01c3e61ed2e8c90035"
+    },
+    {
+      "path": "wave_d/tests/boundaries.test.mjs",
+      "sha256": "sha256:aac40f6b43d02aa28f6b9a1df4801e408e5e5fc72774274aebb8124dd4e5c342"
+    },
+    {
+      "path": "wave_d/tests/test_boundaries.py",
+      "sha256": "sha256:ef68a439d2757d857c0f8886f7f6e17aef8219fcaa5935165455c4b6d24666b7"
+    },
+    {
+      "path": "wave_d/tests/test_financial.py",
+      "sha256": "sha256:faa5a860cd4c00e77a274a65ca567278872bb7c271e28c69725438dcc86d4ee6"
+    },
+    {
+      "path": "wave_d/verify.py",
+      "sha256": "sha256:8c66237f58287949f98ccd7026b3aba4497e54740ee2ceeaf8e3100c965a6550"
+    }
+  ]
+}

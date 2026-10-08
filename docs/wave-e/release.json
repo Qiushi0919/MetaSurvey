@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0-wave-e-readiness",
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false,
+  "code_pins": [
+    {
+      "path": "contracts/wave-e/DiagnosticBacktestResult.schema.json",
+      "sha256": "sha256:94611e507f0657ab237f1488cea18e98e5dbf511df9e2e7cf5509d4ff791e4cd"
+    },
+    {
+      "path": "contracts/wave-e/ForwardPaperReadiness.schema.json",
+      "sha256": "sha256:78860b2586a2d48f3321d8d845d95f84354859495c4d2cbd463e77df99ef239f"
+    },
+    {
+      "path": "contracts/wave-e/HistoricalBacktestReadiness.schema.json",
+      "sha256": "sha256:213b21309a0ec46c015d9a97e7b65841c2f1d160d067b6889e00b1674c767df1"
+    },
+    {
+      "path": "contracts/wave-e/SnapshotBPreflight.schema.json",
+      "sha256": "sha256:c06aa95fa190d1ebe6c2be9ca4268d19a1f2b7308a73bc207c309c3467c2871f"
+    },
+    {
+      "path": "docs/adr/ADR-026-diagnostic-backtest-readiness.md",
+      "sha256": "sha256:0ae4490e049079b2b82d712aa002f0dafeef548b9cfa7f695a3bc2d3443fdd29"
+    },
+    {
+      "path": "docs/adr/ADR-027-price-treatment-and-action-sensitivity.md",
+      "sha256": "sha256:a9e2102faf481dc5b8de943b83a4389224a670c884059bdf7fe77a0cddaa0ed5"
+    },
+    {
+      "path": "docs/adr/ADR-028-forward-readiness-no-live-authority.md",
+      "sha256": "sha256:38e68f5e2e09114a93648e5d947c0e25127927fde1906acb46c8282f19202f1e"
+    },
+    {
+      "path": "docs/authorizations/P1B-WAVE-E-20261006.md",
+      "sha256": "sha256:2cbc5e6d9b659c713584b90de19e095b1d8f12739cb0f1d19aa24679379908c5"
+    },
+    {
+      "path": "docs/wave-e/Interface-Freeze.md",
+      "sha256": "sha256:0fbd822b7b563edbd0c94213dc38ed113500a932cc1e6b5bb9e3c3118852e892"
+    },
+    {
+      "path": "docs/wave-e/baseline-acceptance.json",
+      "sha256": "sha256:497c85ea30ab010563ee03d59c8d3d849f719de740152a42b956619dd1d41064"
+    },
+    {
+      "path": "docs/wave-e/baseline-pins.json",
+      "sha256": "sha256:e599d33a09cc88061478701f21531c8c94ec17369c837f28e73900e14c6212c5"
+    },
+    {
+      "path": "docs/wave-e/contract-matrix.json",
+      "sha256": "sha256:53d591d6df45d718670100d15d5b32015bce99e3e6958fbb7664a49b36fe966c"
+    },
+    {
+      "path": "docs/wave-e/public-ref.json",
+      "sha256": "sha256:699f24cada54e8b4828f6e85959717adbb9f80d5264bbd75005f1473a6f04d8d"
+    },
+    {
+      "path": "docs/wave-e/rules.json",
+      "sha256": "sha256:6f3f491bca2f9de0ed7d9a47f94c8ab4ba9abe067e3a836189747202c8214869"
+    },
+    {
+      "path": "wave_e/check.mjs",
+      "sha256": "sha256:6f2d2b23c7b67ef8ef87f309a780f4a9adcdb50a00faca65e2e2a4679249527a"
+    },
+    {
+      "path": "wave_e/contracts.mjs",
+      "sha256": "sha256:88c03f2fa9027f6c1a19d61c5701af9974be50b2ea2de1dd41fcd1fc251b38f4"
+    },
+    {
+      "path": "wave_e/core.py",
+      "sha256": "sha256:f9e89747577a3a955f441a3be2bcfb45324b5a4b5824051b01365a47d3c5c38c"
+    },
+    {
+      "path": "wave_e/engine.py",
+      "sha256": "sha256:899b9d31e905fbecc148dc8dadf463f942d403ecd347337ce9475f8420c4443b"
+    },
+    {
+      "path": "wave_e/forward.py",
+      "sha256": "sha256:c7a524f64ae1c9d4ac8c0b54b38b9eb96ee89c62fa4483fd3b7d6e5635b44778"
+    },
+    {
+      "path": "wave_e/public.py",
+      "sha256": "sha256:94787953a0a5c2d50bd9caeeb2e360d0933aa74b10038de0a6d7abc8bafcfab6"
+    },
+    {
+      "path": "wave_e/research.py",
+      "sha256": "sha256:e3466ee0c11b12c198803f756bbd82d54430e6c6b33e5446e66e1615230f8935"
+    },
+    {
+      "path": "wave_e/run.py",
+      "sha256": "sha256:eddb7ef37a9dc338a0ef6e895a5f4d7d2a99fc2e5c7c75f456fa68946ed2190c"
+    },
+    {
+      "path": "wave_e/tests/boundaries.test.mjs",
+      "sha256": "sha256:96c27be235be0dec6ae135e74452da7f6751d616f9b12fef84617d8810761fb7"
+    },
+    {
+      "path": "wave_e/tests/test_boundaries.py",
+      "sha256": "sha256:0459fea143c76ee582876eb46a0fdbca2c466da258b5a6a3ea3fdba94ac5968f"
+    },
+    {
+      "path": "wave_e/tests/test_engine.py",
+      "sha256": "sha256:858ab84abb5cc0075d2ad516eb81a98c14482bf71b16d9f890d414300bec3e4d"
+    },
+    {
+      "path": "wave_e/tests/test_forward.py",
+      "sha256": "sha256:5b6038a741fdd4dabf3344155f7f6a266d60303d28fb90f9942c58f288abe7ff"
+    },
+    {
+      "path": "wave_e/verify.py",
+      "sha256": "sha256:8c66237f58287949f98ccd7026b3aba4497e54740ee2ceeaf8e3100c965a6550"
+    }
+  ]
+}

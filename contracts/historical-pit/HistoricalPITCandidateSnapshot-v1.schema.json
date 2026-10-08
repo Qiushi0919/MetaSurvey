@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:metasurvey:historical-pit:HistoricalPITCandidateSnapshot:1.0.0",
+  "title": "HistoricalPITCandidateSnapshot audit metadata, not admitted native contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "namespace",
+    "kind",
+    "symbol",
+    "logical_session_date",
+    "decision_time",
+    "cutoff_state",
+    "mode",
+    "decision",
+    "visible_records",
+    "visible_records_hash",
+    "domains",
+    "reason_codes",
+    "historical_visibility_proven",
+    "formal_admission",
+    "observed_at_the_time",
+    "productionGate",
+    "safe_to_trade",
+    "snapshot_sha256"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "namespace": {
+      "const": "HISTORICAL_PIT_PREPARATION:CORE_40"
+    },
+    "kind": {
+      "const": "HistoricalPITCandidateSnapshot"
+    },
+    "symbol": {
+      "enum": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "logical_session_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "decision_time": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "\\+08:00$"
+        }
+      ]
+    },
+    "cutoff_state": {
+      "enum": [
+        "UNSET_REQUIRED",
+        "EXPLICIT_TIME_INPUT_NOT_OWNER_ATTESTATION"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "OBSERVED_AT_TIME",
+        "HISTORICAL_AVAILABILITY_RECONSTRUCTION"
+      ]
+    },
+    "decision": {
+      "const": "NO_DECISION"
+    },
+    "visible_records": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "visible_records_hash": {
+      "const": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "domains": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "PRICE",
+        "CALENDAR",
+        "STATUS",
+        "ACTION"
+      ],
+      "properties": {
+        "PRICE": {
+          "const": "UNKNOWN"
+        },
+        "CALENDAR": {
+          "const": "UNKNOWN"
+        },
+        "STATUS": {
+          "const": "UNKNOWN"
+        },
+        "ACTION": {
+          "const": "UNKNOWN"
+        }
+      }
+    },
+    "reason_codes": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "DECISION_CUTOFF_UNSET_REQUIRED",
+          "INDEPENDENT_HISTORICAL_PROOF_NOT_ADMITTED",
+          "CURRENT_LATEST_BACKFILL_FORBIDDEN"
+        ]
+      }
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "formal_admission": {
+      "const": "BLOCKED"
+    },
+    "observed_at_the_time": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "safe_to_trade": {
+      "const": false
+    },
+    "snapshot_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision_time": {
+            "type": "null"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "cutoff_state": {
+            "const": "UNSET_REQUIRED"
+          },
+          "reason_codes": {
+            "const": [
+              "DECISION_CUTOFF_UNSET_REQUIRED",
+              "CURRENT_LATEST_BACKFILL_FORBIDDEN"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "cutoff_state": {
+            "const": "EXPLICIT_TIME_INPUT_NOT_OWNER_ATTESTATION"
+          },
+          "reason_codes": {
+            "const": [
+              "INDEPENDENT_HISTORICAL_PROOF_NOT_ADMITTED",
+              "CURRENT_LATEST_BACKFILL_FORBIDDEN"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

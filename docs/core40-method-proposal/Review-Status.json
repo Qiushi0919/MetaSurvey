@@ -1,0 +1,86 @@
+{
+  "version": "1.0.1",
+  "kind": "RootMethodsAndParallelCoordinationReview",
+  "method_proposal_version": "1.0.1",
+  "code_candidate": "f20ef3667ecf5f0340592dc54d09c3922e3ca5b3",
+  "independent_review": "PASS_WITH_CONDITIONS_SOFTWARE_SPECIFICATION_ONLY",
+  "open_software_findings": [],
+  "owner_method_confirmation": "PENDING",
+  "active_method_policy": "UNCHANGED_UNSET_REQUIRED",
+  "old_frozen_strategy_hash": "d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+  "producer_synthetic_tests": {
+    "unique_final": 75,
+    "pass": 75,
+    "fail": 0,
+    "fresh_clone_repeat": 75,
+    "repeat_not_additional_unique": true
+  },
+  "independent_final_difference_tests": {
+    "total": 34,
+    "pass": 34,
+    "fail": 0
+  },
+  "preserved_prior_files": 963,
+  "parallel_review": {
+    "point_in_time": true,
+    "child_head_at_read": "cfbd2092a7ded31803647314410e04d0b6578fc5",
+    "child_owned_changed_paths": 37,
+    "outside_owned_paths": [],
+    "baseline_each_side": 954,
+    "state": "PASS",
+    "child_final_gate_integrated": false
+  },
+  "shared_interfaces": "SEMANTIC_DIRECTION_APPROVED_WITH_CONDITIONS_EXACT_FIELD_CONTRACTS_PENDING",
+  "native_contract_changes": 0,
+  "migration_changes": 0,
+  "active_strategy_changes": 0,
+  "actual_model_fit_runs": 0,
+  "actual_strategy_runs": 0,
+  "actual_forward_day_increment": 0,
+  "last_registered_actual_forward_days": 0,
+  "snapshot_B": "NOT_YET_RUN",
+  "actual_D1": "BLOCKED_NO_ACTUAL_ORIGINALS_AND_SIGNATURE_CHAIN",
+  "market_requests_this_root_batch": 0,
+  "public_method_reference_reads": "THEORY_AND_SOURCE_ENTRY_ONLY_NOT_ADMISSION",
+  "secret_or_private_key_reads": 0,
+  "productionGate": false,
+  "conditions": [
+    {
+      "id": "OWNER_METHOD_SELECTION",
+      "status": "PENDING",
+      "required": "Owner must explicitly choose method proposal v1.0.1 M01–M08 and its new numerical anchors/protocol; reviewer PASS does not select or activate them."
+    },
+    {
+      "id": "NEW_VERSION_AND_INTERFACE_GATE",
+      "status": "PENDING",
+      "required": "Any adoption requires new method and strategy versions, parameter/data/code pins, actual field contracts, preregistration and root integration approval; old d4eb Frozen v1 and Forward remain immutable."
+    },
+    {
+      "id": "ACTUAL_DATA_AND_ACCOUNTING_PIT_BRIDGE",
+      "status": "BLOCKED_UNVERIFIED",
+      "required": "Capital structure/NCI value and cost, dated rf/ERP/credit/tax, comparable flows/TTMs/normalization, 1260 per-cutoff multiples and reporting units/revision/first-visible evidence need actual reviewed adapters; no current/latest backfill or unsupported proxy."
+    },
+    {
+      "id": "LICENSE_AND_SOURCE_SCOPE",
+      "status": "BLOCKED_UNVERIFIED",
+      "required": "Public theoretical references and live ERP discovery do not establish historical vintages, retention/transfer rights or source license. Provider and license gates remain separate."
+    },
+    {
+      "id": "MODEL_FIT_CALIBRATION_IMPLEMENTATION",
+      "status": "NOT_RUN",
+      "required": "Joint bootstrap/label eligibility/folds/calibration/coverage implementation and end-to-end tests remain required after Owner choice. Arithmetic/index examples are not model fit, empirical probability, real sample sufficiency or economic Edge."
+    },
+    {
+      "id": "OOS_AND_STATISTICAL_LIMITS",
+      "status": "BLOCKED_UNVERIFIED",
+      "required": "Exposed retrospective history cannot become untouched OOS. Fit16/validation4 occupied blocks are proposed coverage only; sparse bins/bad draws must fail unchanged. Preserve all failed windows/stocks/families, no post-result tuning."
+    },
+    {
+      "id": "ECONOMIC_AND_EXECUTION_POLICY",
+      "status": "UNSET_REQUIRED",
+      "required": "Hypothetical economic/risk/fill policy must be distinct from actual account fees/capital. Cost inclusion, slippage and money reconciliation need review. Real money/broker/production and actual Forward execution grants remain blocked."
+    }
+  ],
+  "recorded_at": "2026-10-08T12:11:00.058671+00:00",
+  "stop_after_owner_submission": true
+}

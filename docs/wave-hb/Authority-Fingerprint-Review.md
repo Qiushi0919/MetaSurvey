@@ -1,0 +1,7 @@
+# 外部实际公钥候选审查
+
+状态：HOLD_MISSING_PUBLIC_ROOTS。Owner HUMAN_USER 与 Independent Reviewer 的实际 Ed25519公钥和独立来源证明均尚未提供，fingerprint保持UNSET_REQUIRED，没有安装固定actual enrollment项。没有生成实际私钥/公钥，没有实际签名器、自动enrollment或LLM角色替代。
+
+后续只接受公钥及外部来源/身份/保管说明；实际私钥、Token和密码不进入repo、日志、报告或prompt。公钥SHA256 fingerprint用于公开键审查，不是credential fingerprint。不同DER只能证明键不相同，不能单独证明身份、真实人类意图或独立保管。
+
+Candidate仅是格式与缺项报告，即使调用者填写outside-producer/fixture=false也不成为实际信任根。实际安装必须由Owner/operator在producer外完成并独立核验来源及非测试键；H-A冻结合同仍需当前签名Capture、独立Review与另行Human Forward。当前没有actual capability/store/day。

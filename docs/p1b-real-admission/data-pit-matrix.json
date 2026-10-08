@@ -1,0 +1,170 @@
+{
+  "version": "1.0.0",
+  "namespace": "CORE_40",
+  "purpose": "LOCAL_REAL_RESEARCH_ADMISSION_PROBE",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "categories": {
+    "SECURITY_STATUS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 6,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "CALENDAR_RULES": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "TARGET_MET_NOT_ADMITTED",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 504,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "RAW_BARS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "TARGET_MET_NOT_ADMITTED",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 990,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "CORPORATE_ACTIONS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 227,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "ADJUSTMENT_VERSIONS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "TARGET_MET_NOT_ADMITTED",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 990,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "FINANCIAL_REVISIONS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "MIXED",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 63,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "ANNOUNCEMENTS": {
+      "probe_status": "EXISTING_SSE_REFERENCE_ONLY",
+      "entitlement_status": "NOT_PROBED_EXISTING_SSE",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "EXISTING_SSE_NOT_NEW_CAPTURE",
+      "clock_status": "EXISTING_SSE_NOT_NEW_CAPTURE",
+      "coverage_status": "EXISTING_SSE_PARTIAL",
+      "DQ_status": "EXISTING_SSE_PARTIAL",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 0,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED",
+        "SSE_EXISTING_REFERENCE_ONLY_NO_TUSHARE_ANNOUNCEMENT_PROBE"
+      ],
+      "next_action": "Preserve existing SSE reference policy; no silent substitution"
+    },
+    "INDUSTRY_MEMBERSHIP": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "FAIL",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 6,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    }
+  },
+  "cross_cutting": {
+    "C14": "BLOCKED_HISTORICAL",
+    "C19": "UNSET_REQUIRED_HISTORICAL"
+  },
+  "historical_visibility_proven": false
+}

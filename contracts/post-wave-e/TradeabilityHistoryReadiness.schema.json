@@ -1,0 +1,922 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:TradeabilityHistoryReadiness:1.0.0",
+  "title": "TradeabilityHistoryReadiness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "TradeabilityHistoryReadiness"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:TradeabilityHistoryReadiness:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "version",
+        "status",
+        "symbols",
+        "input_hashes",
+        "historical_visibility_proven",
+        "live_authority",
+        "formal_source_admission",
+        "productionGate",
+        "actual_selected_versions",
+        "reason_codes",
+        "coverage"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "TRADEABILITY_HISTORY_READINESS"
+        },
+        "version": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "status": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "symbols": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "603993.SH"
+              },
+              {
+                "type": "string",
+                "const": "600312.SH"
+              },
+              {
+                "type": "string",
+                "const": "603228.SH"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "input_hashes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "uniqueItems": true
+        },
+        "historical_visibility_proven": {
+          "type": "boolean",
+          "const": false
+        },
+        "live_authority": {
+          "type": "boolean",
+          "const": false
+        },
+        "formal_source_admission": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "productionGate": {
+          "type": "boolean",
+          "const": false
+        },
+        "actual_selected_versions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "QUARANTINED_SOURCE_NO_AUTHORITY"
+              },
+              {
+                "type": "string",
+                "const": "HISTORICAL_VISIBILITY_UNPROVEN"
+              },
+              {
+                "type": "string",
+                "const": "STATUS_HISTORY_COVERAGE_INCOMPLETE"
+              },
+              {
+                "type": "string",
+                "const": "CURRENT_STATUS_NOT_HISTORICAL"
+              },
+              {
+                "type": "string",
+                "const": "CURRENT_UNIVERSE_NOT_HISTORICAL"
+              },
+              {
+                "type": "string",
+                "const": "ABSENT_STATUS_IS_UNKNOWN"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "coverage": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "symbol",
+                  "current_security_rows",
+                  "current_membership_rows",
+                  "historical_components",
+                  "excluded_rows",
+                  "status",
+                  "absence_implies_safe",
+                  "current_universe_backfill",
+                  "survivorship_free_universe"
+                ],
+                "properties": {
+                  "symbol": {
+                    "type": "string",
+                    "const": "603993.SH"
+                  },
+                  "current_security_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "current_membership_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "historical_components": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "ST",
+                      "SUSPENSION",
+                      "LIMIT",
+                      "DELIST",
+                      "LISTED",
+                      "UNIVERSE"
+                    ],
+                    "properties": {
+                      "ST": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "SUSPENSION": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "LIMIT": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "DELIST": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "LISTED": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "UNIVERSE": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "excluded_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "status": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "absence_implies_safe": {
+                    "type": "boolean",
+                    "const": false
+                  },
+                  "current_universe_backfill": {
+                    "type": "boolean",
+                    "const": false
+                  },
+                  "survivorship_free_universe": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "symbol",
+                  "current_security_rows",
+                  "current_membership_rows",
+                  "historical_components",
+                  "excluded_rows",
+                  "status",
+                  "absence_implies_safe",
+                  "current_universe_backfill",
+                  "survivorship_free_universe"
+                ],
+                "properties": {
+                  "symbol": {
+                    "type": "string",
+                    "const": "600312.SH"
+                  },
+                  "current_security_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "current_membership_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "historical_components": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "ST",
+                      "SUSPENSION",
+                      "LIMIT",
+                      "DELIST",
+                      "LISTED",
+                      "UNIVERSE"
+                    ],
+                    "properties": {
+                      "ST": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "SUSPENSION": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "LIMIT": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "DELIST": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "LISTED": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "UNIVERSE": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "excluded_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "status": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "absence_implies_safe": {
+                    "type": "boolean",
+                    "const": false
+                  },
+                  "current_universe_backfill": {
+                    "type": "boolean",
+                    "const": false
+                  },
+                  "survivorship_free_universe": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "symbol",
+                  "current_security_rows",
+                  "current_membership_rows",
+                  "historical_components",
+                  "excluded_rows",
+                  "status",
+                  "absence_implies_safe",
+                  "current_universe_backfill",
+                  "survivorship_free_universe"
+                ],
+                "properties": {
+                  "symbol": {
+                    "type": "string",
+                    "const": "603228.SH"
+                  },
+                  "current_security_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "current_membership_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "historical_components": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "ST",
+                      "SUSPENSION",
+                      "LIMIT",
+                      "DELIST",
+                      "LISTED",
+                      "UNIVERSE"
+                    ],
+                    "properties": {
+                      "ST": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "SUSPENSION": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "LIMIT": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "DELIST": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "LISTED": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      },
+                      "UNIVERSE": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "status",
+                          "complete_intervals",
+                          "historical_visibility_proven"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string",
+                            "const": "UNKNOWN"
+                          },
+                          "complete_intervals": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "historical_visibility_proven": {
+                            "type": "boolean",
+                            "const": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "excluded_rows": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "status": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "absence_implies_safe": {
+                    "type": "boolean",
+                    "const": false
+                  },
+                  "current_universe_backfill": {
+                    "type": "boolean",
+                    "const": false
+                  },
+                  "survivorship_free_universe": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              }
+            ]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

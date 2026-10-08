@@ -1,0 +1,581 @@
+{
+  "run_id": "P1B-REAL-REFERENCE-20261005T103100961Z",
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+  "use_at": "2026-10-05T10:31:00.916Z",
+  "scope": "PASS_FOR_SPECIFIC_SCOPE",
+  "source_id": "official:sse-calendar-reference",
+  "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+  "namespace": "CORE_40",
+  "data_type": "CALENDAR_REFERENCE",
+  "coverage": {
+    "exchange": "SSE",
+    "symbols": [],
+    "from": "2026-10-01",
+    "to": "2026-10-08",
+    "data_type": "CALENDAR_REFERENCE"
+  },
+  "repeat_equal": true,
+  "replay_hash": "sha256:d0bc3410052d76cc9bad237c785ef4974209abe0a2cbdc3c87b39167dc0bc45d",
+  "full_file_byte_hash": "sha256:179f703ca10153bdc4bd2d0a1bd76519e509b524b45fffd24ccd8bbeb33783da",
+  "public_key_der": "MCowBQYDK2VwAyEA9Sg5dh0EzY0XAJURph0K7GDa6VD33WsiTDN+6+u/SjY=",
+  "stages": [
+    "ACTUAL_HTTP_TLS_RAW_CAPTURE",
+    "SOURCE_OBSERVATION_FROM_ORIGINAL_BYTES",
+    "NORMALIZED_EXPLICIT_CALENDAR_FACTS",
+    "DQ_PASS",
+    "OBSERVED_SNAPSHOT_V1",
+    "APPROVED_SCOPE_POLICY",
+    "REGISTERED_SIGNED_RECEIPT",
+    "SANITIZED_LOCAL_ONLY_BRAIN_PACKET",
+    "PENDING_SIMULATED_CLOUD_LEAD",
+    "LIVE_VERIFIED_LOCAL_SOURCE_FACTS_RESOLUTION"
+  ],
+  "artifacts": {
+    "observation": {
+      "contract_name": "SourceObservation",
+      "contract_version": "1.1.0",
+      "object_version": 1,
+      "trace_id": "p1b-rd:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "source_id": "official:sse-calendar-reference",
+      "source_version": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "original_uri": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "scope": "OBSERVED",
+      "data_type": "CALENDAR_REFERENCE",
+      "clock": {
+        "published_date": "2026-09-17",
+        "published_at": null,
+        "available_at": "2026-10-05T10:08:22.746222+00:00",
+        "retrieved_at": "2026-10-05T10:08:22.746222+00:00",
+        "publication_precision": "DATE_ONLY",
+        "clock_basis": "RETRIEVAL_OBSERVATION",
+        "historical_availability_proven": false
+      },
+      "calendar": {
+        "closures": [
+          "2026-09-25",
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-01",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-05",
+          "2026-10-06",
+          "2026-10-07"
+        ],
+        "open_dates": [
+          "2026-09-28",
+          "2026-10-08"
+        ],
+        "weekend_closures": [
+          "2026-09-20",
+          "2026-10-10"
+        ],
+        "publication_date": "2026-09-17"
+      },
+      "data_quality_status": "PASS",
+      "object_id": "p1b-observation:f5b3a2da2c7807bbb5b07b6c13fe60f1e61d8b08c7e54de40b269f153d33a92d",
+      "content_hash": "sha256:29aa911999e11d95ccffaa01b528e1e0a9d07d91cadb184cd93b69c58f9f952b"
+    },
+    "policy": {
+      "contract_name": "SourceAdmissionPolicy",
+      "contract_version": "1.1.0",
+      "object_version": 1,
+      "trace_id": "p1b-rd:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "strategy_id": "CORE_40",
+      "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+      "coverage": {
+        "exchange": "SSE",
+        "symbols": [],
+        "from": "2026-10-01",
+        "to": "2026-10-08",
+        "data_type": "CALENDAR_REFERENCE"
+      },
+      "permissions": {
+        "local_download": true,
+        "local_reference": true,
+        "cloud_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "model_research": false,
+        "trading": false
+      },
+      "production_enabled": false,
+      "source_id": "official:sse-calendar-reference",
+      "source_version": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "terms_uri": "https://www.sse.com.cn/home/legal/",
+      "license_type": "SSE_NONCOMMERCIAL_BROWSE_DOWNLOAD_ONLY",
+      "terms_status": "VERIFIED_FOR_NARROW_LOCAL_REFERENCE",
+      "validity": "POINT_IN_TIME_ONLY",
+      "use_at": "2026-10-05T10:31:00.916Z",
+      "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+      "object_id": "p1b-policy:722f71203759e3d32974234be8c40271b7aaf86d36d284547ef89b8632100118",
+      "content_hash": "sha256:73d4f5671a7c7e82734ab0bbd2597ed02866a391bfba43dac0203cf9e1e0531f"
+    },
+    "snapshot": {
+      "contract_name": "SnapshotManifest",
+      "contract_version": "1.0.0",
+      "object_id": "p1b-snapshot:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+      "object_version": 1,
+      "trace_id": "p1b-rd:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "recorded_at": "2026-10-05T10:31:00.916Z",
+      "business_timezone": "Asia/Shanghai",
+      "provenance": {
+        "event_time": "2026-10-05T10:08:22.746222+00:00",
+        "published_at": "2026-09-17",
+        "available_at": "2026-10-05T10:08:22.746222+00:00",
+        "retrieved_at": "2026-10-05T10:08:22.746222+00:00",
+        "publication_precision": "DATE_ONLY",
+        "source_id": "official:sse-calendar-reference",
+        "source_version": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+        "source_hash": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+        "visibility_basis": "OBSERVED_AT_TIME"
+      },
+      "reason_codes": [],
+      "invalidation": {
+        "status": "ACTIVE",
+        "valid_until": null,
+        "invalidated_at": null,
+        "conditions": [
+          "POINT_IN_TIME_ONLY",
+          "SOURCE_OR_TERMS_CHANGED",
+          "POLICY_OR_RECEIPT_REVOKED"
+        ],
+        "reason_code": null
+      },
+      "snapshot_id": "p1b-snapshot:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+      "decision_cutoff": "2026-10-05T10:31:00.916Z",
+      "data_hash": "sha256:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+      "evidence_refs": [
+        {
+          "object_id": "p1b-observation:f5b3a2da2c7807bbb5b07b6c13fe60f1e61d8b08c7e54de40b269f153d33a92d",
+          "object_version": 1,
+          "content_hash": "sha256:29aa911999e11d95ccffaa01b528e1e0a9d07d91cadb184cd93b69c58f9f952b"
+        }
+      ],
+      "rules_hash": "sha256:73d4f5671a7c7e82734ab0bbd2597ed02866a391bfba43dac0203cf9e1e0531f",
+      "scope": "OBSERVED",
+      "excluded_metadata_exported": false,
+      "frozen_at": "2026-10-05T10:31:00.916Z",
+      "content_hash": "sha256:663d7a0996779f2b6779fc735c75564869b71f7ac6d1920821d81f013bc1496d"
+    },
+    "receipt": {
+      "contract_name": "AdmissionReceipt",
+      "contract_version": "1.1.0",
+      "object_version": 1,
+      "trace_id": "p1b-rd:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "strategy_id": "CORE_40",
+      "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+      "coverage": {
+        "exchange": "SSE",
+        "symbols": [],
+        "from": "2026-10-01",
+        "to": "2026-10-08",
+        "data_type": "CALENDAR_REFERENCE"
+      },
+      "permissions": {
+        "local_download": true,
+        "local_reference": true,
+        "cloud_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "model_research": false,
+        "trading": false
+      },
+      "production_enabled": false,
+      "verification": "VERIFIED",
+      "admission": "ADMITTED",
+      "policy_ref": {
+        "object_id": "p1b-policy:722f71203759e3d32974234be8c40271b7aaf86d36d284547ef89b8632100118",
+        "object_version": 1,
+        "content_hash": "sha256:73d4f5671a7c7e82734ab0bbd2597ed02866a391bfba43dac0203cf9e1e0531f"
+      },
+      "snapshot_ref": {
+        "object_id": "p1b-snapshot:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+        "object_version": 1,
+        "content_hash": "sha256:663d7a0996779f2b6779fc735c75564869b71f7ac6d1920821d81f013bc1496d"
+      },
+      "observation_ref": {
+        "object_id": "p1b-observation:f5b3a2da2c7807bbb5b07b6c13fe60f1e61d8b08c7e54de40b269f153d33a92d",
+        "object_version": 1,
+        "content_hash": "sha256:29aa911999e11d95ccffaa01b528e1e0a9d07d91cadb184cd93b69c58f9f952b"
+      },
+      "data_hash": "sha256:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+      "use_at": "2026-10-05T10:31:00.916Z",
+      "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+      "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+      "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15",
+      "proof": {
+        "algorithm": "ED25519",
+        "public_key_der_sha256": "sha256:30dbfdbed363071fdb14f4d2aa2e22a055385637e6f313b20cae3c2c368b0420",
+        "signature": "r+NBxy9O8z/CVd4u+6cA3dS2Vs1ymktvvNRMmafBymAgGHipaZRtc7Svhk5Q15eFObdOqi4OKb73+zJjblNTCQ=="
+      }
+    },
+    "packet": {
+      "contract_name": "BrainPacket",
+      "contract_version": "1.2.0",
+      "object_version": 1,
+      "trace_id": "p1b-rd:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "strategy_id": "CORE_40",
+      "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+      "coverage": {
+        "exchange": "SSE",
+        "symbols": [],
+        "from": "2026-10-01",
+        "to": "2026-10-08",
+        "data_type": "CALENDAR_REFERENCE"
+      },
+      "permissions": {
+        "local_download": true,
+        "local_reference": true,
+        "cloud_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "model_research": false,
+        "trading": false
+      },
+      "production_enabled": false,
+      "transfer_mode": "LOCAL_REVIEW_ONLY",
+      "snapshot_ref": {
+        "object_id": "p1b-snapshot:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+        "object_version": 1,
+        "content_hash": "sha256:663d7a0996779f2b6779fc735c75564869b71f7ac6d1920821d81f013bc1496d"
+      },
+      "receipt_ref": {
+        "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+        "object_version": 1,
+        "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+      },
+      "data_hash": "sha256:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+      "decision_cutoff": "2026-10-05T10:31:00.916Z",
+      "evidence": [
+        {
+          "observation_ref": {
+            "object_id": "p1b-observation:f5b3a2da2c7807bbb5b07b6c13fe60f1e61d8b08c7e54de40b269f153d33a92d",
+            "object_version": 1,
+            "content_hash": "sha256:29aa911999e11d95ccffaa01b528e1e0a9d07d91cadb184cd93b69c58f9f952b"
+          },
+          "source_id": "official:sse-calendar-reference",
+          "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+          "clock": {
+            "published_date": "2026-09-17",
+            "published_at": null,
+            "available_at": "2026-10-05T10:08:22.746222+00:00",
+            "retrieved_at": "2026-10-05T10:08:22.746222+00:00",
+            "publication_precision": "DATE_ONLY",
+            "clock_basis": "RETRIEVAL_OBSERVATION",
+            "historical_availability_proven": false
+          },
+          "calendar": {
+            "closures": [
+              "2026-10-01",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-05",
+              "2026-10-06",
+              "2026-10-07"
+            ],
+            "open_dates": [
+              "2026-10-08"
+            ],
+            "weekend_closures": [],
+            "publication_date": "2026-09-17"
+          },
+          "data_type": "CALENDAR_REFERENCE"
+        }
+      ],
+      "projection_hash": "sha256:125d2482dc3173d17138cccf6bf44978d3f23059992634b4ba8268d108a51a4b",
+      "can_produce_order": false,
+      "contains_account_identity_or_credentials": false,
+      "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+      "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40",
+      "proof": {
+        "algorithm": "ED25519",
+        "public_key_der_sha256": "sha256:30dbfdbed363071fdb14f4d2aa2e22a055385637e6f313b20cae3c2c368b0420",
+        "signature": "47K9TA6igFPMQwL8q5c+o8hRjOY0NqfPaK62F9NUMgeLWhUfpy3G8SazuX8iiparRDaHLkuj4qV9yy5P3QNuCA=="
+      }
+    },
+    "lead": {
+      "contract_name": "DiscoveredEvidence",
+      "contract_version": "1.0.0",
+      "object_id": "discovered:df8fb7f5d53a983611d687cadd088a136c66960edc85a8a8987b67f4146b624a",
+      "object_version": 1,
+      "trace_id": "cloud-lead:df8fb7f5d53a983611d687cadd088a136c66960edc85a8a8987b67f4146b624a",
+      "trust_class": "CLOUD_DISCOVERED_EVIDENCE",
+      "status": "PENDING_VERIFICATION",
+      "original_uri": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "lead": "Simulated external discovery pointer; original claims stay pending until local source verification.",
+      "discovered_at": "2026-10-05T10:31:00.916Z",
+      "origin": "LLM",
+      "admission_ref": null,
+      "usable_for_hard_block": false,
+      "usable_for_grade": false,
+      "usable_for_sizing": false,
+      "can_produce_order": false,
+      "production_enabled": false,
+      "content_hash": "sha256:c708616527f5c6255dd7936dcdd19d56e6db75a5b5f028531310ac25ae9ddc54"
+    },
+    "resolution": {
+      "contract_name": "EvidenceResolution",
+      "contract_version": "1.0.0",
+      "object_id": "resolution:a95cf283be9dd39b1778e60daf1ef89782128689b48f090f490816a6b93aa34b",
+      "object_version": 1,
+      "trace_id": "p1b-local-reference-resolution",
+      "strategy_id": "CORE_40",
+      "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+      "coverage": {
+        "exchange": "SSE",
+        "symbols": [],
+        "from": "2026-10-01",
+        "to": "2026-10-08",
+        "data_type": "CALENDAR_REFERENCE"
+      },
+      "permissions": {
+        "local_download": true,
+        "local_reference": true,
+        "cloud_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "model_research": false,
+        "trading": false
+      },
+      "production_enabled": false,
+      "trust_class": "ADMITTED_LOCAL_EVIDENCE",
+      "status": "ADMITTED_LOCAL_SOURCE_FACTS_ONLY",
+      "lead_ref": {
+        "object_id": "discovered:df8fb7f5d53a983611d687cadd088a136c66960edc85a8a8987b67f4146b624a",
+        "object_version": 1,
+        "content_hash": "sha256:c708616527f5c6255dd7936dcdd19d56e6db75a5b5f028531310ac25ae9ddc54"
+      },
+      "observation_ref": {
+        "object_id": "p1b-observation:f5b3a2da2c7807bbb5b07b6c13fe60f1e61d8b08c7e54de40b269f153d33a92d",
+        "object_version": 1,
+        "content_hash": "sha256:29aa911999e11d95ccffaa01b528e1e0a9d07d91cadb184cd93b69c58f9f952b"
+      },
+      "receipt_ref": {
+        "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+        "object_version": 1,
+        "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+      },
+      "packet_ref": {
+        "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+        "object_version": 1,
+        "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40"
+      },
+      "original_uri": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "lead_claims_admitted": false,
+      "usable_for_hard_block": false,
+      "usable_for_grade": false,
+      "usable_for_sizing": false,
+      "can_produce_order": false,
+      "content_hash": "sha256:2c9d1df1d7f0c68e05dd1b311b082cd327c3d2376318f94ae43dc224cda2cd5e"
+    },
+    "audit": [
+      {
+        "sequence": 1,
+        "action": "POLICY_REGISTERED",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-policy:722f71203759e3d32974234be8c40271b7aaf86d36d284547ef89b8632100118",
+            "object_version": 1,
+            "content_hash": "sha256:73d4f5671a7c7e82734ab0bbd2597ed02866a391bfba43dac0203cf9e1e0531f"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": null,
+        "content_hash": "sha256:eb8764102cb83315316eb5c2dd59663454de906de44a38451d915eb79ee34d51"
+      },
+      {
+        "sequence": 2,
+        "action": "SNAPSHOT_FROZEN",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-snapshot:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+            "object_version": 1,
+            "content_hash": "sha256:663d7a0996779f2b6779fc735c75564869b71f7ac6d1920821d81f013bc1496d"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:eb8764102cb83315316eb5c2dd59663454de906de44a38451d915eb79ee34d51",
+        "content_hash": "sha256:47f04fd9aabd157a9d06fd84e52e39ce32684da7da6e9ab24a1155a293a51c05"
+      },
+      {
+        "sequence": 3,
+        "action": "RECEIPT_ADMITTED",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+            "object_version": 1,
+            "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:47f04fd9aabd157a9d06fd84e52e39ce32684da7da6e9ab24a1155a293a51c05",
+        "content_hash": "sha256:c1710d18af195db503bed7e0dfa16fcb0b499f76aa64ee42fd32d46adf5295f1"
+      },
+      {
+        "sequence": 4,
+        "action": "PACKET_LOCAL_REFERENCE",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+            "object_version": 1,
+            "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40"
+          },
+          {
+            "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+            "object_version": 1,
+            "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:c1710d18af195db503bed7e0dfa16fcb0b499f76aa64ee42fd32d46adf5295f1",
+        "content_hash": "sha256:3bd33abec65d1e2930688315784b7fd87ee192f420746d70851dd246769c4631"
+      },
+      {
+        "sequence": 5,
+        "action": "PACKET_VERIFIED",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+            "object_version": 1,
+            "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40"
+          },
+          {
+            "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+            "object_version": 1,
+            "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:3bd33abec65d1e2930688315784b7fd87ee192f420746d70851dd246769c4631",
+        "content_hash": "sha256:3d08b07ce46949503be30cc3ed3c6e18397058aefcf7dc2556aab9bf9894d097"
+      },
+      {
+        "sequence": 6,
+        "action": "PACKET_VERIFIED",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+            "object_version": 1,
+            "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40"
+          },
+          {
+            "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+            "object_version": 1,
+            "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:3d08b07ce46949503be30cc3ed3c6e18397058aefcf7dc2556aab9bf9894d097",
+        "content_hash": "sha256:49fee9a3838e34524cbde4cf18735a5eb59fad32f1530fb35d3f40584a0f8802"
+      },
+      {
+        "sequence": 7,
+        "action": "PACKET_VERIFIED",
+        "reason_code": "P1B_POINT_IN_TIME_ONLY",
+        "refs": [
+          {
+            "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+            "object_version": 1,
+            "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40"
+          },
+          {
+            "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+            "object_version": 1,
+            "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15"
+          }
+        ],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:49fee9a3838e34524cbde4cf18735a5eb59fad32f1530fb35d3f40584a0f8802",
+        "content_hash": "sha256:f4955146f27fec8113e69c883b6206c6607fc46a470fb58610391b80243713a5"
+      },
+      {
+        "sequence": 8,
+        "action": "assertTransfer_REJECTED",
+        "reason_code": "P1B_PERMISSION_SCOPE",
+        "refs": [],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:f4955146f27fec8113e69c883b6206c6607fc46a470fb58610391b80243713a5",
+        "content_hash": "sha256:e3a9a4e9e511e9e1348c1e470fedc996a1122e8f6406c18874a1f4cc59386717"
+      },
+      {
+        "sequence": 9,
+        "action": "assertTransfer_REJECTED",
+        "reason_code": "P1B_PERMISSION_SCOPE",
+        "refs": [],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:e3a9a4e9e511e9e1348c1e470fedc996a1122e8f6406c18874a1f4cc59386717",
+        "content_hash": "sha256:052d1441fa06a155b11e7bf0fad09815e09b1137d081b2d1b0af2e332afa81e4"
+      },
+      {
+        "sequence": 10,
+        "action": "assertTransfer_REJECTED",
+        "reason_code": "P1B_PERMISSION_SCOPE",
+        "refs": [],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:052d1441fa06a155b11e7bf0fad09815e09b1137d081b2d1b0af2e332afa81e4",
+        "content_hash": "sha256:c905daafd2feec86a092a0cca09084774a4cf04d8449582aafe163d8029e05f5"
+      },
+      {
+        "sequence": 11,
+        "action": "assertTransfer_REJECTED",
+        "reason_code": "P1B_PERMISSION_SCOPE",
+        "refs": [],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:c905daafd2feec86a092a0cca09084774a4cf04d8449582aafe163d8029e05f5",
+        "content_hash": "sha256:d6a5b218f89f9307bce7745e142cc0ba5771b22205c3bb5419f7da7c90efac9b"
+      },
+      {
+        "sequence": 12,
+        "action": "assertTransfer_REJECTED",
+        "reason_code": "P1B_PERMISSION_SCOPE",
+        "refs": [],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:d6a5b218f89f9307bce7745e142cc0ba5771b22205c3bb5419f7da7c90efac9b",
+        "content_hash": "sha256:c1c45b1d4fe9318263d8efbbc75f3aa9ce4a53392881dcaa690964bc5fe8c98f"
+      },
+      {
+        "sequence": 13,
+        "action": "assertTransfer_REJECTED",
+        "reason_code": "P1B_PERMISSION_SCOPE",
+        "refs": [],
+        "code_epoch": "42197c99be5177ad50ac08402bf2203282e51f70:sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8:schema6:packet1.2.0:receipt1.1.0",
+        "previous_hash": "sha256:c1c45b1d4fe9318263d8efbbc75f3aa9ce4a53392881dcaa690964bc5fe8c98f",
+        "content_hash": "sha256:31c6263a017e35193c015a87bca310077139b844039a17a3010b2b4caba8a0fb"
+      }
+    ]
+  },
+  "real_data_admission_gate": "BLOCKED_EXCEPT_EXACT_LOCAL_CALENDAR_REFERENCE",
+  "stock_research_admission": "BLOCKED",
+  "historical_backtest_admission": "BLOCKED",
+  "cloud_export_admission": "BLOCKED",
+  "real_stock_recommendation_authorized": false,
+  "research_pilot_authorized": false,
+  "productionGate": false,
+  "execution_writes": 0,
+  "execution_capabilities": "ABSENT: NO DB/ORDER/BROKER IMPORT OR HANDLE IN NEW MODULES",
+  "limitations": [
+    "No stock-symbol coverage",
+    "Not full trading calendar",
+    "Published date only; historical availability not proven",
+    "Point-in-time reference only",
+    "Current receipt/revocation registry is in-memory and cannot accept artifacts across restarts",
+    "Ephemeral DEV authority; same key/context fixed for deterministic replay, not production issuer identity",
+    "Original cloud claims remain unverified; local resolution admits only captured calendar source facts",
+    "No real model or stock research executed"
+  ]
+}

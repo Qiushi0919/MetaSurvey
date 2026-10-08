@@ -1,0 +1,25 @@
+# W3 PH: Minimal Platform / Non-executable Research Import
+
+Authorization: `P1A-closure-implementation-20261005.md`, D01–D04 approved; W1 freeze `299313cdbca17a308a1e6a2bd1fcfd52d8e69c6e`. This implementation consumes the DA facade and approved BrainPacket 1.1, AdmissionReceipt 1.0 and ResearchDraft 1.0 without changing shared contracts, migration numbering or business rules.
+
+## Import boundary
+
+`importResearchResult` accepts only the frozen descriptive result shape. Packet/receipt refs, namespace, purpose and evidence membership must match the live admitted packet. Unknown fields, execution assertions, future outcome terminology, raw paths and secrets are rejected. Owned JSON copies prevent caller mutation across async checks. The actual `estimateCost` function runs with an explicit synthetic CostProfile in PAPER before the account profile is read or suitability is evaluated. Its exact-cent result hash and profile ref are bound into the Draft; a caller's `cost_ref` cannot replace the invocation.
+
+Every accepted Draft is `NON_TRADEABLE`, `can_produce_order=false`, `tradeable=false` and real account suitability `BLOCKED`. Real net edge, sizing, grade and policy versions remain `UNSET_REQUIRED`. A caller's populated or self-reported verified real account cannot widen fixture scope. `assertDraftTransition` refuses Candidate, Signal, Approval, OrderIntent, Order and Fill. Import only appends permitted 006 audit records; it has no business table writer or broker capability. The final acceptance boundary rechecks the live packet/receipt, including revocation after cost computation.
+
+## Actual consumer isolation
+
+`runIsolatedConsumer` verifies the live packet before copying an export and after the child completes. It reads a bounded regular file with no symlink following and compares its canonical contents to the already verified packet. A new private staging directory holds only four read-only files: signed artifact, trusted public DER, fixed standalone bootstrap and optional synthetic attack probes. The child receives no facade, DB, private signer, account profile, credentials, internal raw paths in ordinary use, or broker transport. Only synthetic adversarial probes deliberately carry target paths, which grant no access and are omitted from returned probe results.
+
+macOS uses `/usr/bin/sandbox-exec` with deny-default. Read permission covers explicit staged files, the Node executable and necessary system runtime libraries. Ancestor paths permit metadata only; the root directory itself is readable for Node startup. The canonical real staging path is used because `/var` aliases `/private/var`. File writes, network access and process fork remain denied. The initial Node executable is allowed, while spawning both `/bin/sh` and another Node is denied. Node's permission model adds a second defense, with no child-process or file-write grants. Caller-supplied sandbox profiles, bootstraps, commands, environments or allowed directories are unavailable.
+
+Fixed attack self-tests repeat the same bootstrap under the identical native sandbox with Node permission defense absent. This distinguishes OS enforcement from Node-only denial. Tests use existing synthetic raw/DB/credential/broker canary files plus real repository files, a listening local TCP server, both shell and Node spawn attempts, and a write to the staged artifact. They inspect the actual environment and regular open descriptors; capability claims are also supported by the fixed transport arguments/bootstrap and unchanged execution-table counts. No actual credential values are used. System files such as `/etc/hosts` may be readable under macOS system behavior; this does not grant user asset directories and is not represented as an arbitrary-files denial guarantee.
+
+Other platforms or a missing native isolator fail with `CLOSURE_ISOLATION_UNAVAILABLE`; there is no unsandboxed fallback. Linux checks the fail-closed path. Positive native isolation evidence is macOS-specific, and does not assert Linux isolation readiness. Future platform/topology expansion requires a new Gate.
+
+## Scoped verification
+
+`tests/closure-platform.test.mjs` covers the actual cost ordering, unknown costs, account assertions, strict LLM imports, namespace/purpose/version/evidence binding, outcome/path/secret denial, every execution transition, public-key pinning, signed artifact mutation, native and secondary isolation, symlink/permission-override denial, final revocation checks and async input mutation. Business approvals, order drafts, simulated/real orders/fills/ledgers and paper account/order/fill/ledger counts are unchanged before and after accepted/rejected operations. Synthetic hypothetical cost dates are explicit test inputs, never production defaults.
+
+PH scoped result: 12 tests PASS on macOS Node 24.19.0. DA dependency fixture/helper is used unchanged. Full repository release/provenance, golden replay, new independent review and Closure Gate remain parent-owned. Real sources and production remain BLOCKED; P1-B requires explicit `APPROVE_P1B`.

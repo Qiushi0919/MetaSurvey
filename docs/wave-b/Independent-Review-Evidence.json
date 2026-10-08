@@ -1,0 +1,158 @@
+{
+  "all_files_mode0600": true,
+  "artifacts": [
+    {
+      "bytes": 3942,
+      "mode": "0o600",
+      "name": "77abd49-G3-interim-summary.json",
+      "sha256": "sha256:6ab2c9f2db7f647918963f872e241ffe9d89df1ea5c2559478e3249db38d2cbc"
+    },
+    {
+      "bytes": 10009,
+      "mode": "0o600",
+      "name": "77abd49-G3-native-exact.log",
+      "sha256": "sha256:8ec72698c2a80fb0452144cbce2ae3278501cb1cd1eeb2636ee19175b2ae5d9f"
+    },
+    {
+      "bytes": 17107,
+      "mode": "0o600",
+      "name": "77abd49-G3-native-matrix.json",
+      "sha256": "sha256:f4ab94d5043a27dc908e05c3e9e67107a16ae9a8202d71d59bb269038f1b51de"
+    },
+    {
+      "bytes": 107054,
+      "mode": "0o600",
+      "name": "77abd49-G3-pins-after.json",
+      "sha256": "sha256:4758a252eb8664b0591ab3d3f13a9ad0dea49d159ec867dc6c91395b726db8e7"
+    },
+    {
+      "bytes": 107054,
+      "mode": "0o600",
+      "name": "77abd49-G3-pins-before.json",
+      "sha256": "sha256:4758a252eb8664b0591ab3d3f13a9ad0dea49d159ec867dc6c91395b726db8e7"
+    },
+    {
+      "bytes": 11504,
+      "mode": "0o600",
+      "name": "77abd49-G3-python-exact.log",
+      "sha256": "sha256:e83cf0fc072ed30c4f70e28a6ffea267dd62aab31ffd7591ce5808bc20b1fbe9"
+    },
+    {
+      "bytes": 23608,
+      "mode": "0o600",
+      "name": "77abd49-G3-python-matrix.json",
+      "sha256": "sha256:a742f911ce1faba694685cc5e845fcc2613696b1e9d197b96c174760787aef5d"
+    },
+    {
+      "bytes": 10037,
+      "mode": "0o600",
+      "name": "77abd49-G3-v2-oracle-native-exact.log",
+      "sha256": "sha256:abaf4edc02e436a81c60731a5f54fc2c61501221ee195194f0398bc6836c9b04"
+    },
+    {
+      "bytes": 16899,
+      "mode": "0o600",
+      "name": "77abd49-G3-v2-oracle-native-matrix.json",
+      "sha256": "sha256:0c0fe8f0eba5dee1d220a33924e4d64525c3be19bfcde09084e6c208001a6a71"
+    },
+    {
+      "bytes": 64801,
+      "mode": "0o600",
+      "name": "Independent-Review-Matrix.json",
+      "sha256": "sha256:bf5db38eb038fed74503cefcaf9d9eb67abbe328c6b4b880c0ec3add26911598"
+    },
+    {
+      "bytes": 8194,
+      "mode": "0o600",
+      "name": "Independent-Review.md",
+      "sha256": "sha256:a9876bb8631f26fdb7c128f80d5e69e5ddb7189169cdb0c9d4344fe0322122ea"
+    },
+    {
+      "bytes": 10027,
+      "mode": "0o600",
+      "name": "a2abc62-G4-native-exact.log",
+      "sha256": "sha256:94e11007797614b10968e3fad432183642e1244261abbd9ff5553bc090a4451f"
+    },
+    {
+      "bytes": 16889,
+      "mode": "0o600",
+      "name": "a2abc62-G4-native-matrix.json",
+      "sha256": "sha256:0ef32a4480bfd24e47de8bf41fa9a12180b8a2434d5261f1fa952506a8a1a2c6"
+    },
+    {
+      "bytes": 21158,
+      "mode": "0o600",
+      "name": "a2abc62-G4-new-regression-exact.log",
+      "sha256": "sha256:19c65a1390302ee6ffa12f2cffb1d575789fa76cea236ba64cdedf3963f0ba5a"
+    },
+    {
+      "bytes": 110378,
+      "mode": "0o600",
+      "name": "a2abc62-G4-pins-after.json",
+      "sha256": "sha256:1cf3cec0d7b191564e8b09a78ea8c990552ebad7d036b908d67d00ce5fab7c91"
+    },
+    {
+      "bytes": 110378,
+      "mode": "0o600",
+      "name": "a2abc62-G4-pins-before.json",
+      "sha256": "sha256:1cf3cec0d7b191564e8b09a78ea8c990552ebad7d036b908d67d00ce5fab7c91"
+    },
+    {
+      "bytes": 110378,
+      "mode": "0o600",
+      "name": "a2abc62-G4-pins-final.json",
+      "sha256": "sha256:d890e296569fdfd73b3588b477a5de992eb483d288f9093a97cb2e50504cac83"
+    },
+    {
+      "bytes": 15070,
+      "mode": "0o600",
+      "name": "a2abc62-G4-python-exact.log",
+      "sha256": "sha256:4b948f75a6dd62c83128dc65011b10588e074e1612a90c32ce280ad35329948c"
+    },
+    {
+      "bytes": 30733,
+      "mode": "0o600",
+      "name": "a2abc62-G4-python-matrix.json",
+      "sha256": "sha256:2aa564baeb325380b3e0c2276b762f3896fe0d05ff14feb938de71e57a2294c0"
+    },
+    {
+      "bytes": 19144,
+      "mode": "0o600",
+      "name": "independent_attacks.py",
+      "sha256": "sha256:ff36cca5d0ee2686033ffcf83fe3088dff0ad067ac7849379a168a4f1f20f3e5"
+    },
+    {
+      "bytes": 23205,
+      "mode": "0o600",
+      "name": "independent_attacks_v2.py",
+      "sha256": "sha256:4eda191cbae192371fa741c50ee9cb3895ee6c6e07b830866865740805bbb5e2"
+    },
+    {
+      "bytes": 13090,
+      "mode": "0o600",
+      "name": "independent_native_attacks.mjs",
+      "sha256": "sha256:9840409be58d595b8cb70d7567930035b5ed2948ae5e916ba0ca94cdafd85db5"
+    },
+    {
+      "bytes": 13086,
+      "mode": "0o600",
+      "name": "independent_native_attacks_v2.mjs",
+      "sha256": "sha256:9321adf59b1145443fc1e637472532dfd34efb62df78781580eeb4449fe1e6a0"
+    },
+    {
+      "bytes": 426,
+      "mode": "0o600",
+      "name": "initial-tooling-failure.json",
+      "sha256": "sha256:7c04a63481a2f74a0d9036421c9bcc157a5fb1b3596a0270434a4c00d1d67e52"
+    },
+    {
+      "bytes": 544,
+      "mode": "0o600",
+      "name": "report-writer-metadata-race-initial.json",
+      "sha256": "sha256:5f361783d66675fc1c1c77702c453bcd26a8eac15f452bfe5ea08a223405ccac"
+    }
+  ],
+  "candidate_commit": "a2abc62d641388dd8298e7e31c8ee916fdb9c546",
+  "excludes_self_hash": true,
+  "release": "1.9.2-wave-b-candidate"
+}

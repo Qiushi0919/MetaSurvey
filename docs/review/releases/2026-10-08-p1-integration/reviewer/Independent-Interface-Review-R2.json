@@ -1,0 +1,267 @@
+{
+  "authority_limits": {
+    "Owner_method_approval": false,
+    "actual_database_mutations": 0,
+    "actual_database_queries": 0,
+    "actual_historical_PIT_proven": false,
+    "actual_market_requests": 0,
+    "credential_reads": 0,
+    "final_native_or_shared_contract_approval": false,
+    "model_fits": 0,
+    "productionGate": false,
+    "provider_license_admitted": false,
+    "strategy_runs": 0,
+    "trading": false,
+    "untouched_OOS_proven": false
+  },
+  "candidate_commit": "37ec2ec9f8f16d406b10f2e2724858fc1a58f375",
+  "candidate_version": "1.0.1-candidate",
+  "changed_paths": [
+    "backtest_5y/clocks.py",
+    "backtest_5y/dto.py",
+    "backtest_5y/maintenance.py",
+    "backtest_5y/pit.py",
+    "backtest_5y/schema_subset.py",
+    "backtest_5y/tests/test_integration.py",
+    "backtest_5y/tests/test_root_regressions.py",
+    "contracts/backtest-5y/AdmittedHistoricalSnapshot.schema.json",
+    "contracts/backtest-5y/AuditableSimulationRun.schema.json",
+    "contracts/backtest-5y/DatedExecutionEconomics.schema.json",
+    "contracts/backtest-5y/HistoricalEvidenceBundle.schema.json",
+    "contracts/backtest-5y/StrategyFeatureDecision.schema.json",
+    "contracts/backtest-5y/WalkForwardWindowPlan.schema.json"
+  ],
+  "closed_findings": [
+    {
+      "evidence_cases": [
+        "C01_NANOSECOND_FUTURE_IS_LATER",
+        "C05_FUTURE_FINANCIAL_ROW_EXCLUDED",
+        "C06_FUTURE_FINANCIAL_TTM_NOT_COMPUTABLE",
+        "C09_NANO_FUTURE_POISON_PAYLOAD_NOT_CONSUMED",
+        "C10_EXACT_CUTOFF_QUARTER_IS_INCLUDED"
+      ],
+      "id": "F01",
+      "observed": "Strict integer epoch-nanosecond source comparison returns eligible_versions=7 and ttm=null for the exact original 1ns future fixture; same-cutoff complete fixture remains included; future poison numeric/unit fields are not consumed.",
+      "prior_priority": "P1",
+      "scope": "Lossless 0–9 fractional digits only; unsupported precision rejected. Parser syntax correctness is not historical visibility evidence.",
+      "state": "CLOSED_FOR_BOUNDED_ROOT_REPAIR"
+    },
+    {
+      "evidence_cases": [
+        "C04_MALFORMED_OFFSET_REJECTED",
+        "M03_MALFORMED_OFFSET_NOT_EXACT",
+        "M04_IMPOSSIBLE_DATE_NOT_DATE_ONLY",
+        "M01_VALID_COMPACT_DATE_ONLY_WITH_SOURCE_LITERAL",
+        "M02_VALID_EXACT_OFFSET_PRESERVED"
+      ],
+      "id": "F02",
+      "observed": "Malformed date/offset classified UNINTERPRETED_SOURCE_LITERAL and exact consumer rejects. Valid compact dates retain source_literal; valid offset/fractions retained; -00:00, range errors and >9 fractional digits rejected.",
+      "prior_priority": "P2",
+      "scope": "No invented historical clocks, timezone or account policy; precision rules are parser representation limits.",
+      "state": "CLOSED_FOR_BOUNDED_ROOT_REPAIR"
+    },
+    {
+      "evidence_cases": [
+        "V01_NUMERIC_FALSE_GATE_REJECTED",
+        "V02_BOOLEAN_ZERO_COUNT_REJECTED",
+        "V03_NONEMPTY_UNRUN_WINDOWS_REJECTED",
+        "V04_REQUIRED_DIAGNOSTIC_LABEL_REJECTED_IF_ABSENT",
+        "V05_NESTED_EXACT_NULL_REJECTED",
+        "S11_UNKNOWN_KEYWORD_HIDDEN_IF",
+        "S12_UNKNOWN_KEYWORD_UNMATCHED_THEN",
+        "S13_UNKNOWN_KEYWORD_UNUSED_DEFS",
+        "S14_NONLOCAL_REF_HIDDEN_IF",
+        "S15_UNKNOWN_KEYWORD_HIDDEN_CONTAINS"
+      ],
+      "id": "F03",
+      "observed": "Type-aware recursive declared constraints reject original False/0 confusion, nonempty unrun windows and missing diagnostic labels. Positive six candidate objects and conservative unknown/unrun states pass.",
+      "prior_priority": "P2",
+      "scope": "Only declared fixed-schema subset; not a general Draft2020-12 implementation or a final positive-business contract. Exact integer counter representation rejects float 0.0 as explicitly documented.",
+      "state": "CLOSED_FOR_DECLARED_SIX_CANDIDATE_SUBSET"
+    }
+  ],
+  "evidence_refs": [
+    {
+      "bytes": 13531,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/Root-Repair-Candidate-R2.json",
+      "sha256": "sha256:a9e9e458a2a210cd842a80079e030689998e528ab3cae112b61540b020807d2d"
+    },
+    {
+      "bytes": 7625,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Independent-Interface-Review-R1.md",
+      "sha256": "sha256:22a129f78fbda0e090d291fbf574dd2ad08e6d457cf3027dba4e3c535ebecda3"
+    },
+    {
+      "bytes": 12424,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Independent-Interface-Review-R1.json",
+      "sha256": "sha256:fea264a5fda5a0980431f0c9e7751d12778ed97bb8f0845a537672beebafb369"
+    },
+    {
+      "bytes": 12681,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Six-DTO-Field-Matrix-R1.json",
+      "sha256": "sha256:fbe56c0ba4a60b570d52ed4e703b85dc1f79a19b1d620ef144a919ff50ff87b3"
+    },
+    {
+      "bytes": 1374378,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Cases-R2.json",
+      "sha256": "sha256:f4493a54937c6a7855b01e71d976c86ae8d8dbd4eb1863a358cebd8e74f675a0"
+    },
+    {
+      "bytes": 1762,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Cases-R2-Harness-Clarification.json",
+      "sha256": "sha256:e3737a5e8c9032e86648dab991338147103bfa9f4ef8763fa81888d7db2c5b6f"
+    }
+  ],
+  "full_shared_contract_freeze": "NOT_APPROVED_CANDIDATE_FIELD_AND_POSITIVE_STATE_REVIEW_PENDING",
+  "harness_clarification": "Optional maintenance._clock(None) means UNKNOWN; strict exact_clock(None) and pit exact_clock(None) reject. Initial aggregate invalidity expectation conflicted with an existing positive UNKNOWN case. No source repair made during clarification.",
+  "heads": {
+    "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/fixed-child-code-clone": "37ec2ec9f8f16d406b10f2e2724858fc1a58f375",
+    "/Users/qiushi/投资研究/ashare-backtest-5y": "4252876e23224df5d29c20492a08da9436dccf4a",
+    "/Users/qiushi/投资研究/ashare-trading-v1": "11fba19fa3b2dde8288fbed470f2319020a60da6"
+  },
+  "kind": "IndependentReadOnlyInterfaceDifferenceReview",
+  "open_code_findings_in_bounded_scope": [],
+  "original_r1_verdict_preserved": "REQUEST_CHANGES_FOR_COMPUTATIONAL_INTEGRATION_AND_FINAL_SHARED_CONTRACT_FREEZE",
+  "original_strategy_sha256": "d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+  "preservation_all_match": true,
+  "preservation_summary": {
+    "Forward4": {
+      "matched": 4,
+      "reference_rows": 4,
+      "unique_paths": 4
+    },
+    "R1_review_evidence4": {
+      "matched": 4,
+      "reference_rows": 4,
+      "unique_paths": 4
+    },
+    "child_final_seal209": {
+      "matched": 209,
+      "reference_rows": 209,
+      "unique_paths": 176
+    },
+    "child_method_addendum3": {
+      "matched": 3,
+      "reference_rows": 3,
+      "unique_paths": 3
+    },
+    "child_old954": {
+      "matched": 954,
+      "reference_rows": 954,
+      "unique_paths": 954
+    },
+    "clone_parent_baseline972": {
+      "matched": 972,
+      "reference_rows": 972,
+      "unique_paths": 972
+    },
+    "parent_baseline972": {
+      "matched": 972,
+      "reference_rows": 972,
+      "unique_paths": 972
+    },
+    "root_candidate40": {
+      "matched": 40,
+      "reference_rows": 40,
+      "unique_paths": 40
+    }
+  },
+  "recorded_at": "2026-10-08T12:49:25.350106+00:00",
+  "remaining_contract_conditions": [
+    "Six versions only advance candidate ID/version to 1.0.1; no native contract/Schema/migration/default fee change",
+    "R1 required metric keys and historical record namespace/security-scope fields remain explicitly deferred; R1 EXACT/null contradiction is now rejected, but other full-field freeze work remains pending",
+    "Money/date rounding/partial-fill/actual profile, window anchor/endpoint/purge/embargo/censoring and lineage/version policies still require reviewed contracts and Owner policy decisions",
+    "No positive PIT/strategy/window/result states issued; registry empty, full family not computable, engine not run, formal windows zero, actual metrics NULL",
+    "Pending methods v1.0.1 are not adopted or approved by this software review; no broad strategy or actual source execution"
+  ],
+  "round": "R2",
+  "schema_differences": [
+    {
+      "name": "AdmittedHistoricalSnapshot.schema.json",
+      "only_id_and_version_changed": true,
+      "version": "1.0.1-candidate"
+    },
+    {
+      "name": "AuditableSimulationRun.schema.json",
+      "only_id_and_version_changed": true,
+      "version": "1.0.1-candidate"
+    },
+    {
+      "name": "DatedExecutionEconomics.schema.json",
+      "only_id_and_version_changed": true,
+      "version": "1.0.1-candidate"
+    },
+    {
+      "name": "HistoricalEvidenceBundle.schema.json",
+      "only_id_and_version_changed": true,
+      "version": "1.0.1-candidate"
+    },
+    {
+      "name": "StrategyFeatureDecision.schema.json",
+      "only_id_and_version_changed": true,
+      "version": "1.0.1-candidate"
+    },
+    {
+      "name": "WalkForwardWindowPlan.schema.json",
+      "only_id_and_version_changed": true,
+      "version": "1.0.1-candidate"
+    }
+  ],
+  "source_pin_count": 40,
+  "subject_clone": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/fixed-child-code-clone",
+  "subject_worktrees_clean": {
+    "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/fixed-child-code-clone": true,
+    "/Users/qiushi/投资研究/ashare-backtest-5y": true
+  },
+  "test_statistics": {
+    "categories": {
+      "CLOCK_INTEGER_ORACLE_AND_INVALID_SOURCE_BOUNDARIES": {
+        "failed": 1,
+        "passed": 33,
+        "total": 34
+      },
+      "R1_COMPUTATION_COUNTEREXAMPLES_AND_CONTROLS": {
+        "failed": 0,
+        "passed": 10,
+        "total": 10
+      },
+      "R1_CONSERVATIVE_DTO_CONSUMER_AND_SCHEMA_REJECTIONS": {
+        "failed": 0,
+        "passed": 36,
+        "total": 36
+      },
+      "R1_METADATA_COUNTEREXAMPLES_AND_CONTROLS": {
+        "failed": 0,
+        "passed": 10,
+        "total": 10
+      },
+      "SCHEMA_DECLARED_SUBSET_ADAPTIVE_NEGATIVES": {
+        "failed": 0,
+        "passed": 15,
+        "total": 15
+      }
+    },
+    "clarification_executed": {
+      "failed": 0,
+      "passed": 3,
+      "total": 3
+    },
+    "count_policy": "Original 105 and later 3 execution counts remain separately reported; do not relabel original 105 as all green or combine producer counts.",
+    "original_counterexamples_reverified": {
+      "failed": 0,
+      "passed": 10,
+      "total": 10
+    },
+    "original_executed": {
+      "failed": 1,
+      "passed": 104,
+      "total": 105
+    },
+    "original_failure_case": "T44_INVALID_LITERAL_REJECTED",
+    "original_failure_is_harness_expectation": true,
+    "original_failure_log_unchanged": true,
+    "producer_123_suite_not_run_by_reviewer": true
+  },
+  "verdict": "PASS_WITH_CONDITIONS_FOR_ROOT_ISOLATED_P1_REPAIR",
+  "version": "1.0.0"
+}

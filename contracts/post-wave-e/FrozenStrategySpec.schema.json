@@ -1,0 +1,1064 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:FrozenStrategySpec:1.0.0",
+  "title": "FrozenStrategySpec",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "FrozenStrategySpec"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:FrozenStrategySpec:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "state",
+        "purpose",
+        "owner_strategy_selected",
+        "diagnostic_ma20_ma60_is_owner_strategy",
+        "optimized_against_wave_e",
+        "parameters",
+        "evaluation_protocol",
+        "invalidation",
+        "live_authority"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "state": {
+          "type": "string",
+          "const": "BLOCKED_UNSET_REQUIREMENTS"
+        },
+        "purpose": {
+          "type": "string",
+          "const": "EVALUATION_REQUIREMENTS_ONLY"
+        },
+        "owner_strategy_selected": {
+          "type": "boolean",
+          "const": false
+        },
+        "diagnostic_ma20_ma60_is_owner_strategy": {
+          "type": "boolean",
+          "const": false
+        },
+        "optimized_against_wave_e": {
+          "type": "boolean",
+          "const": false
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "entry_rule",
+            "exit_rule",
+            "feature_windows",
+            "history_start",
+            "history_end",
+            "history_years",
+            "benchmark",
+            "minimum_excess_return",
+            "maximum_drawdown",
+            "minimum_trade_count",
+            "maximum_trade_frequency",
+            "economic_goal",
+            "account_policy",
+            "cost_policy",
+            "risk_policy",
+            "calendar_policy",
+            "initial_capital",
+            "position_limit",
+            "total_exposure_limit",
+            "kill_policy",
+            "allow_flat",
+            "slippage_policy",
+            "train_validation_test_split",
+            "out_of_sample_protocol",
+            "multiple_testing_policy",
+            "rebalance_frequency",
+            "evaluation_cutoff",
+            "minimum_commission",
+            "commission",
+            "sell_tax"
+          ],
+          "properties": {
+            "entry_rule": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "VERSIONED_RULE"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "exit_rule": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "VERSIONED_RULE"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "feature_windows": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "SESSIONS"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "history_start": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DATE"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "history_end": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DATE"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "history_years": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "YEARS"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "benchmark": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "INDEX_ID_AND_TOTAL_RETURN_TREATMENT"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "minimum_excess_return": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DECIMAL_RATIO"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "maximum_drawdown": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DECIMAL_RATIO"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "minimum_trade_count": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "INTEGER"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "maximum_trade_frequency": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "TRADES_PER_YEAR"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "economic_goal": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "OWNER_DEFINED"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "account_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "VERSION_HASH"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "cost_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DATED_VERSION_HASH"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "risk_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "VERSION_HASH"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "calendar_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DATED_VERSION_HASH"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "initial_capital": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "CNY_MINOR_INTEGER_STRING"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "position_limit": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DECIMAL_RATIO"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "total_exposure_limit": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DECIMAL_RATIO"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "kill_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "VERSION_HASH"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "allow_flat": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "BOOLEAN"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "slippage_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "VERSION_HASH"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "train_validation_test_split": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "CHRONOLOGICAL_DATES"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "out_of_sample_protocol": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "FROZEN_RULE"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "multiple_testing_policy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "FROZEN_RULE"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "rebalance_frequency": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "SESSIONS"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "evaluation_cutoff": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "EXACT_INSTANT"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "minimum_commission": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "CNY_MINOR_INTEGER_STRING"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "commission": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DECIMAL_RATIO"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            },
+            "sell_tax": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "unit",
+                "required"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "unit": {
+                  "type": "string",
+                  "const": "DATED_DECIMAL_RATIO"
+                },
+                "required": {
+                  "type": "boolean",
+                  "const": true
+                }
+              }
+            }
+          }
+        },
+        "evaluation_protocol": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "freeze_before_reveal",
+            "next_observed_open_after_decision",
+            "same_bar_fills",
+            "t_plus_one",
+            "fees_in_affordability",
+            "raw_adjusted_isolated",
+            "no_survivorship_backfill",
+            "historical_pit_required",
+            "terminal_open_positions_explicit",
+            "no_forced_liquidation_default",
+            "diagnostic_profit_is_evidence"
+          ],
+          "properties": {
+            "freeze_before_reveal": {
+              "type": "boolean",
+              "const": true
+            },
+            "next_observed_open_after_decision": {
+              "type": "boolean",
+              "const": true
+            },
+            "same_bar_fills": {
+              "type": "boolean",
+              "const": false
+            },
+            "t_plus_one": {
+              "type": "boolean",
+              "const": true
+            },
+            "fees_in_affordability": {
+              "type": "boolean",
+              "const": true
+            },
+            "raw_adjusted_isolated": {
+              "type": "boolean",
+              "const": true
+            },
+            "no_survivorship_backfill": {
+              "type": "boolean",
+              "const": true
+            },
+            "historical_pit_required": {
+              "type": "boolean",
+              "const": true
+            },
+            "terminal_open_positions_explicit": {
+              "type": "boolean",
+              "const": true
+            },
+            "no_forced_liquidation_default": {
+              "type": "boolean",
+              "const": true
+            },
+            "diagnostic_profit_is_evidence": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        },
+        "invalidation": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "STRATEGY_POLICY_VERSION_CHANGED"
+              },
+              {
+                "type": "string",
+                "const": "EVALUATION_POLICY_VERSION_CHANGED"
+              },
+              {
+                "type": "string",
+                "const": "SOURCE_HISTORY_CLOCK_CHANGED"
+              },
+              {
+                "type": "string",
+                "const": "UNSET_REQUIRED"
+              },
+              {
+                "type": "string",
+                "const": "DIAGNOSTIC_TO_STRATEGY_PROMOTION"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "live_authority": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

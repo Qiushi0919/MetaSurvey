@@ -1,0 +1,123 @@
+{
+  "version": "1.0.0-wave-e-diagnostic",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "decision_cutoff": "2026-10-06T12:37:32.209051Z",
+  "timezone": "Asia/Shanghai",
+  "namespace": "LOCAL_ENGINE_DIAGNOSTIC:CORE_40",
+  "labels": [
+    "NON_PIT_DIAGNOSTIC",
+    "NOT_STRATEGY_EVIDENCE",
+    "NON_TRADEABLE",
+    "LOCAL_ONLY"
+  ],
+  "current_observed_only": true,
+  "historical_visibility_proven": false,
+  "productionGate": false,
+  "actual_account_parameters": "30_UNSET_REQUIRED",
+  "strategy": {
+    "entry": "close(t)>MA20(t)>MA60(t) and close(t)/close(t-20)>1",
+    "exit": "close(t)<MA20(t)",
+    "earliest_fill": "NEXT_OBSERVED_SESSION_OPEN",
+    "maximum_holding_sessions": null,
+    "optimization": false,
+    "financial_features": false,
+    "terminal_liquidation": false
+  },
+  "money": {
+    "unit": "UNVERIFIED_SOURCE_PRICE_DPU",
+    "minor_units_per_dpu": 100,
+    "decimal_precision": 100,
+    "rounding": "HALF_EVEN",
+    "all_policy_parameters": "SYNTHETIC_DIAGNOSTIC_ONLY_NO_ACTUAL_CNY_DEFAULT"
+  },
+  "price_treatments": [
+    "RAW_UNADJUSTED_OBSERVED",
+    "FACTOR_FIRST_ANCHOR_SENSITIVITY_ONLY"
+  ],
+  "factor_rule": "OHLC(t)*factor(t)/factor(first observed day); current-observed revisions, causal anchor, NOT authoritative adjustment/action/PIT/total-return; no dividend cash or shares credited",
+  "action_preservation": {
+    "multi_original_ambiguities": 5,
+    "nonzero_pre_close_deltas": 8,
+    "tolerance": "UNSET_REQUIRED",
+    "rounding_policy": "UNSET_REQUIRED",
+    "cash_entitlement": false
+  },
+  "scenarios": [
+    {
+      "name": "UNKNOWN_BLOCK",
+      "policy": {
+        "commission_bps": "0",
+        "min_commission_minor": "0",
+        "sell_tax_bps": "0",
+        "slippage_bps": "0",
+        "initial_cash_minor": "24000000",
+        "lot_size": 100,
+        "tradeability": "BLOCK_UNKNOWN"
+      }
+    },
+    {
+      "name": "ZERO_COST_HYPOTHETICAL",
+      "policy": {
+        "commission_bps": "0",
+        "min_commission_minor": "0",
+        "sell_tax_bps": "0",
+        "slippage_bps": "0",
+        "initial_cash_minor": "24000000",
+        "lot_size": 100,
+        "tradeability": "ASSUME_TRADEABLE_DIAGNOSTIC_ONLY"
+      }
+    },
+    {
+      "name": "FEE_HYPOTHETICAL",
+      "policy": {
+        "commission_bps": "7.25",
+        "min_commission_minor": "137",
+        "sell_tax_bps": "8.5",
+        "slippage_bps": "3.75",
+        "initial_cash_minor": "24000000",
+        "lot_size": 100,
+        "tradeability": "ASSUME_TRADEABLE_DIAGNOSTIC_ONLY"
+      }
+    },
+    {
+      "name": "STRESS_HYPOTHETICAL",
+      "policy": {
+        "commission_bps": "19.5",
+        "min_commission_minor": "311",
+        "sell_tax_bps": "17.25",
+        "slippage_bps": "12",
+        "initial_cash_minor": "24000000",
+        "lot_size": 100,
+        "tradeability": "ASSUME_TRADEABLE_DIAGNOSTIC_ONLY"
+      }
+    }
+  ],
+  "readiness_domains": [
+    "source_admission",
+    "provider_identity",
+    "license",
+    "transport_integrity",
+    "raw_bar_readiness",
+    "adjustment_readiness",
+    "corporate_action_readiness",
+    "security_status_history",
+    "suspension_history",
+    "limit_tradability_history",
+    "universe_history",
+    "historical_visibility",
+    "financial_publication_timing",
+    "revision_chronology",
+    "industry_history",
+    "transaction_cost_policy",
+    "account_policy",
+    "strategy_parameter_freeze"
+  ],
+  "actual_forward_days": 0,
+  "snapshot_B_run": false,
+  "forward_paper_run": false,
+  "automatic_scheduling": false
+}

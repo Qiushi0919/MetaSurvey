@@ -1,0 +1,712 @@
+{
+  "mapping_version": "1.0.0",
+  "contract_version": "1.0.0",
+  "schemas_are_primary": true,
+  "mappings": [
+    {
+      "contract_name": "SecurityIdentity",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "securities",
+          "security_master"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "DataEnvelope",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "bars_1d",
+          "bars_1m",
+          "announcements",
+          "financials",
+          "news_events",
+          "corp_actions",
+          "sector_membership"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "SnapshotManifest",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "snapshot_manifests",
+          "snapshot_entries"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "FeatureSet",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "features_eod"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "AccountProfile",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "account_profiles",
+          "config_versions"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "CostEstimate",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "cost_estimates"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "ResearchCard",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "research_cards",
+          "card_evidence"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "BrainPacket",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "brain_packets",
+          "brain_reviews"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "CandidateEligibility",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "candidate_eligibility"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "SignalEvent",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "signal_events"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "Approval",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "approvals"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "OrderIntent",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "order_drafts",
+          "orders_sim",
+          "orders_real"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "Fill",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "fills_sim",
+          "fills_real"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "LedgerEntry",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "ledger_sim",
+          "ledger_real"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "BacktestResult",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "backtest_runs",
+          "strategy_metrics"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    },
+    {
+      "contract_name": "AuditEvent",
+      "lossless_storage": {
+        "table": "contract_records",
+        "payload_column": "payload",
+        "status": "IMPLEMENTED_FIXTURE_REGISTRY",
+        "validation": "JSON_SCHEMA_PLUS_SEMANTICS_AND_CANONICAL_CONTENT_HASH",
+        "production_execution": false
+      },
+      "normalized_projection": {
+        "tables": [
+          "audit_log"
+        ],
+        "status": "NOT_IMPLEMENTED_NORMALIZED_PROJECTION",
+        "must_preserve": [
+          "object_id",
+          "object_version",
+          "contract_version",
+          "trace_id",
+          "content_hash",
+          "event_time",
+          "published_at",
+          "available_at",
+          "retrieved_at",
+          "source_id",
+          "source_version",
+          "source_hash"
+        ],
+        "must_not_infer": [
+          "ACCOUNT_PARAMETERS",
+          "FEES",
+          "RISK_LIMITS",
+          "HUMAN_AUTHORITY",
+          "PIT_SOURCE_CLOCKS",
+          "LEGACY_STRATEGY_MAPPING"
+        ]
+      }
+    }
+  ],
+  "field_rules": [
+    {
+      "wire": "content_hash",
+      "normalized": "payload_hash (canonical contract-derived row) / snapshot_manifests.content_hash",
+      "rule": "KEEP_DATASET_DATA_HASH_SEPARATE"
+    },
+    {
+      "wire": "SnapshotManifest.data_hash",
+      "normalized": "snapshot_manifests.data_hash / backtest_runs.data_hash",
+      "rule": "HASH_OF_ORDERED_VISIBLE_DATA_NOT_MANIFEST_HASH"
+    },
+    {
+      "wire": "provenance.publication_precision=SECOND",
+      "normalized": "published_at_precision=SECOND",
+      "rule": "PRESERVE_EXACT_OFFSET_INSTANT"
+    },
+    {
+      "wire": "provenance.publication_precision=DATE_ONLY",
+      "normalized": "published_at_precision=DAY",
+      "rule": "NO_AUTOMATIC_MIDNIGHT_CONVERSION; verified trading calendar and source policy required before normalized projection"
+    },
+    {
+      "wire": "provenance.publication_precision=UNKNOWN",
+      "normalized": "NONE",
+      "rule": "QUARANTINE_ONLY; no NOT_APPLICABLE laundering"
+    },
+    {
+      "wire": "provenance.visibility_basis=OBSERVED_AT_TIME",
+      "normalized": "OBSERVED_AS_OF",
+      "rule": "AVAILABLE_AND_RETRIEVED_MUST_BOTH_PASS"
+    },
+    {
+      "wire": "provenance.visibility_basis=HISTORICAL_AVAILABILITY_RECONSTRUCTION",
+      "normalized": "PUBLIC_AS_OF",
+      "rule": "EXPLICIT_RECONSTRUCTION_TAG_NOT_OBSERVED_FACT"
+    },
+    {
+      "wire": "money cents string",
+      "normalized": "money_cents NUMERIC",
+      "rule": "BIND_DECIMAL_TEXT; never Number/coercion/rounding on ingress"
+    },
+    {
+      "wire": "Approval.decision USER_*",
+      "normalized": "approvals.decision USER_*",
+      "rule": "LLM APPROVE STAYS brain_reviews ONLY"
+    }
+  ],
+  "harness_interfaces": [
+    {
+      "module": "economics",
+      "status": "PURE_FIXTURE_HARNESS_NOT_MODULE_API",
+      "mapping": {
+        "gross_notional_cents": "CostEstimate.notional_cents",
+        "explicit_fees_cents": "CostEstimate.total_cost_cents",
+        "version": "CostEstimate.cost_model_version"
+      },
+      "missing_binding": "Parent adapter must add account/strategy/security/profile/config/version/hash/trace; no P0 normalized adapter exists."
+    },
+    {
+      "module": "ledger",
+      "status": "PURE_FIXTURE_HARNESS_NOT_MODULE_API",
+      "mapping": {
+        "namespace": "strategy_id",
+        "security_id": "SecurityIdentity lookup; no symbol guessing",
+        "gross_notional_cents": "Fill.notional_cents",
+        "execution_price_yuan": "Fill.price",
+        "event_time": "Fill.executed_at"
+      },
+      "extra_required_context": [
+        "trading_calendar",
+        "execution_sequence",
+        "lot_allocations",
+        "opening_snapshot"
+      ],
+      "limitations": [
+        "ONE_COMPLETE_FILL_PER_ORDER",
+        "DEV_PAPER_ONLY",
+        "NO_APPROVAL_OR_TRANSPORT"
+      ]
+    }
+  ]
+}

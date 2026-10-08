@@ -1,0 +1,183 @@
+{
+  "version": "1.0.1",
+  "kind": "UnapprovedMethodDataRequirements",
+  "not_native_contract": true,
+  "adds_frozen_business_gate": false,
+  "source_admission_granted": false,
+  "requirements": [
+    {
+      "method": "M01",
+      "conceptual_fields": [
+        "dated CNY10Y yield/curve maturity",
+        "China total ERP original annual vintage",
+        "stock+market+listed-NCI total-return weekly endpoints",
+        "parent/each subsidiary shares and NCI ownership",
+        "parent/NCI market values, class prices and FX",
+        "consolidated debt/leases and market/book-proxy bridge",
+        "issuer marginal-credit quote and matching treasury maturity",
+        "dated operating tax vs actual applicable interest shield",
+        "TTM operating EBIT reconciliation",
+        "begin/end parent book equity, NCI book equity, excess cash/nonoperating investment"
+      ],
+      "units": "ANNUAL_RATIO/CNY/INTEGER_SHARES/PERCENT_CONVERTED",
+      "all_required": "FOR_METHOD_CALCULATION_NOT_NEW_ACTIVE_POLICY",
+      "evidence": [
+        "event_time",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "source",
+        "source_version",
+        "original_sha256",
+        "revision_id_and_supersedes",
+        "clock_precision_and_first_visible_basis",
+        "license_local_retention_purpose_evidence",
+        "conversion_and_scope_bridge"
+      ],
+      "historical_latest_query_proves_visible": false,
+      "absent_field": "UNSET_REQUIRED_NOT_ZERO",
+      "clock_or_license_absent": "FORMAL_PIT_BLOCKED"
+    },
+    {
+      "method": "M02",
+      "conceptual_fields": [
+        "five completed annual revenues",
+        "operating EBIT and operating D&A scope reconciliation",
+        "comparability/restructuring/accounting/revision originals",
+        "four visible single-quarter revenue flows"
+      ],
+      "units": "CNY_NOT_VENDOR_UNKNOWN_UNITS",
+      "all_required": "FOR_METHOD_CALCULATION_NOT_NEW_ACTIVE_POLICY",
+      "evidence": [
+        "event_time",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "source",
+        "source_version",
+        "original_sha256",
+        "revision_id_and_supersedes",
+        "clock_precision_and_first_visible_basis",
+        "license_local_retention_purpose_evidence",
+        "conversion_and_scope_bridge"
+      ],
+      "historical_latest_query_proves_visible": false,
+      "absent_field": "UNSET_REQUIRED_NOT_ZERO",
+      "clock_or_license_absent": "FORMAL_PIT_BLOCKED"
+    },
+    {
+      "method": "M03",
+      "conceptual_fields": [
+        "1260 per-cutoff raw price+shares+PIT financial inputs",
+        "corporate action/version and total-return bridge",
+        "NCI/preferred/debt/cash/nonoperating value classification",
+        "parent attributable TTM income"
+      ],
+      "units": "CNY_PER_SHARE/CNY/INTEGER_SHARES/POSITIVE_MULTIPLE",
+      "all_required": "FOR_METHOD_CALCULATION_NOT_NEW_ACTIVE_POLICY",
+      "evidence": [
+        "event_time",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "source",
+        "source_version",
+        "original_sha256",
+        "revision_id_and_supersedes",
+        "clock_precision_and_first_visible_basis",
+        "license_local_retention_purpose_evidence",
+        "conversion_and_scope_bridge"
+      ],
+      "historical_latest_query_proves_visible": false,
+      "absent_field": "UNSET_REQUIRED_NOT_ZERO",
+      "clock_or_license_absent": "FORMAL_PIT_BLOCKED"
+    },
+    {
+      "method": "M04_M05",
+      "conceptual_fields": [
+        "official actual calendar+historical status/action",
+        "family nonEdge+Timing features/catalyst originals at anchor",
+        "fixed industry taxonomy/membership and stock-cohort proof",
+        "approved hypothetical entry/exit/risk/position/fill economic policy",
+        "complete shadow gross-reference cashflows including actions",
+        "label decision/end/available/censor originals",
+        "frozen predictions/fit membership/domain and excluded-label records"
+      ],
+      "units": "BPS/INTEGER_SESSION_INDICES/EXACT_OFFSET_TIMESTAMP",
+      "all_required": "FOR_METHOD_CALCULATION_NOT_NEW_ACTIVE_POLICY",
+      "evidence": [
+        "event_time",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "source",
+        "source_version",
+        "original_sha256",
+        "revision_id_and_supersedes",
+        "clock_precision_and_first_visible_basis",
+        "license_local_retention_purpose_evidence",
+        "conversion_and_scope_bridge"
+      ],
+      "historical_latest_query_proves_visible": false,
+      "absent_field": "UNSET_REQUIRED_NOT_ZERO",
+      "clock_or_license_absent": "FORMAL_PIT_BLOCKED"
+    },
+    {
+      "method": "M06",
+      "conceptual_fields": [
+        "approved hypothetical vs actual account/profile versions",
+        "dated fees with tax/minimum-commission aggregation semantics",
+        "planned quantity/price/reference notional",
+        "BASE/PESSIMISTIC scenario fill/slippage/opportunity/cancel models"
+      ],
+      "units": "BPS/CNY_ESTIMATE/INTEGER_MINOR_LEDGER_SEPARATE",
+      "all_required": "FOR_METHOD_CALCULATION_NOT_NEW_ACTIVE_POLICY",
+      "evidence": [
+        "event_time",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "source",
+        "source_version",
+        "original_sha256",
+        "revision_id_and_supersedes",
+        "clock_precision_and_first_visible_basis",
+        "license_local_retention_purpose_evidence",
+        "conversion_and_scope_bridge"
+      ],
+      "historical_latest_query_proves_visible": false,
+      "absent_field": "UNSET_REQUIRED_NOT_ZERO",
+      "clock_or_license_absent": "FORMAL_PIT_BLOCKED"
+    },
+    {
+      "method": "M07",
+      "conceptual_fields": [
+        "quality TTMs and dated WACC",
+        "stock/industry/market total returns",
+        "official catalyst positive or complete negative-search coverage",
+        "20-session turnover CNY, planned buy notional",
+        "60-session historical peak drawdown",
+        "all family Timing and PIT evidence proofs",
+        "applicable calibrated probability and approved plan costs"
+      ],
+      "units": "DECIMAL_SCORE_0_TO_100_NOT_PROBABILITY",
+      "all_required": "FOR_METHOD_CALCULATION_NOT_NEW_ACTIVE_POLICY",
+      "evidence": [
+        "event_time",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "source",
+        "source_version",
+        "original_sha256",
+        "revision_id_and_supersedes",
+        "clock_precision_and_first_visible_basis",
+        "license_local_retention_purpose_evidence",
+        "conversion_and_scope_bridge"
+      ],
+      "historical_latest_query_proves_visible": false,
+      "absent_field": "UNSET_REQUIRED_NOT_ZERO",
+      "clock_or_license_absent": "FORMAL_PIT_BLOCKED"
+    }
+  ]
+}

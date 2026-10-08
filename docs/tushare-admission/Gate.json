@@ -1,0 +1,293 @@
+{
+  "contract_name": "AdmissionVerification",
+  "contract_version": "1.0.0",
+  "object_id": "tushare-15000-bounded-verification:20261005",
+  "object_version": 1,
+  "trace_id": "tushare-owner-15000-20261005",
+  "generated_at": "2026-10-05T14:03:14.124211+00:00",
+  "namespace": "CORE_40",
+  "purpose": "TECHNICAL_READ_ONLY_ENTITLEMENT_DIAGNOSTIC",
+  "stock_scope": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "actual_account_tier": 15000,
+  "account_tier_evidence_basis": "OWNER_ASSERTED",
+  "actual_product_type": "MONTH_CARD_OWNER_ASSERTED",
+  "actual_product_identifier": "UNSET_REQUIRED",
+  "actual_account_identifier": "UNSET_REQUIRED",
+  "actual_expiration": "UNSET_REQUIRED",
+  "source_id": "TUSHARE_MONTHLY_GATEWAY",
+  "endpoint": "http://118.89.117.77:8030/",
+  "source_operator": "UNSET_REQUIRED",
+  "official_relationship_proven": false,
+  "verification_conclusion": "BLOCKED_PROVIDER_PREREQUISITES",
+  "credential_lookup": {
+    "reference_provided": false,
+    "presence": false,
+    "result": "UNSET_REQUIRED",
+    "lookup_from_chat": false,
+    "persisted": false
+  },
+  "category_matrix": {
+    "SECURITY_STATUS": {
+      "category": "SECURITY_STATUS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "stock_basic",
+        "stock_st",
+        "suspend_d"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "CALENDAR_RULES": {
+      "category": "CALENDAR_RULES",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "trade_cal"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "RAW_BARS_1D": {
+      "category": "RAW_BARS_1D",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "daily"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "CORPORATE_ACTIONS": {
+      "category": "CORPORATE_ACTIONS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "dividend"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "ADJUSTMENT_VERSIONS": {
+      "category": "ADJUSTMENT_VERSIONS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "adj_factor"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "FINANCIAL_REVISIONS": {
+      "category": "FINANCIAL_REVISIONS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "income",
+        "balancesheet",
+        "cashflow",
+        "fina_indicator"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "INDUSTRY_MEMBERSHIP": {
+      "category": "INDUSTRY_MEMBERSHIP",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "index_member_all"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    },
+    "ANNOUNCEMENTS": {
+      "category": "ANNOUNCEMENTS",
+      "state": "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+      "api_products": [
+        "anns_d"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ]
+    }
+  },
+  "permissions": {
+    "local_real_research": false,
+    "cloud_research_export": false,
+    "historical_backtest": false,
+    "production_data": false,
+    "redistribution": false,
+    "cloud_model": false,
+    "research_pilot": false,
+    "signal_or_order": false,
+    "broker_or_production": false
+  },
+  "historical_visibility_proven": false,
+  "closed_condition_ids": [],
+  "snapshot_B": "PENDING_ACTUAL_NEW_POST_HOLIDAY_DATA_AND_ADMITTED_LINEAGE",
+  "public_document_captures": 17,
+  "evidence_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/authorizations/TUSHARE15000-local-admission-20261005.md",
+      "sha256": "sha256:40e36e6a4a56509fafecf72a0c7168fc18c1996834737d26c8f38844a29139d3"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/terms/public-document-captures.json",
+      "sha256": "sha256:90a5b1f441dccc9e2421ff0f3633890ec4a894c122b10d8623bb6faa684a4af1"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/credential-blocked-initial.json",
+      "sha256": "sha256:e513402eb7287136baa1b94168c134a774d6d03779d925a56f1230dfdd5f4d23"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/authorizations/TUSHARE-monthly-gateway-probe-20261005.md",
+      "sha256": "sha256:cad82664f0ae694da60e19cf7e00eea2390257d2ac8f5488762dfd30139baee1"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/transport-rotation-blocked-final-candidate.json",
+      "sha256": "sha256:67e221dd6c05b93cf0b10238fd2cbd288f23c563eea434cd8349950be2bc88a7"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/owner-phaseA-preflight-final.json",
+      "sha256": "sha256:08c57731d63409c59de206af75e87dbb6ea246bb06a29f2841c79ea74a55aa15"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/data/owner-phaseA-preflight-encoding-final.json",
+      "sha256": "sha256:f460e34c83bc73664e7e372ca367d5bb3915720b0f79be1c75fa57550636879a"
+    }
+  ],
+  "reason_codes": [
+    "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+    "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+    "SOURCE_OPERATOR_UNVERIFIED",
+    "TERMS_BINDING_UNPROVEN",
+    "RETENTION_UNSET_REQUIRED",
+    "NO_ACTUAL_THREE_STOCK_CAPTURE",
+    "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+    "POST_HOLIDAY_DATA_PENDING",
+    "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+    "NEW_CREDENTIAL_REQUIRED",
+    "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+    "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+    "PHASE_B_DEFERRED_UNTIL_A_PASS",
+    "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+  ],
+  "stop_before_next_phase": true,
+  "credential_rotation": {
+    "status": "UNSET_REQUIRED",
+    "old_credential_permitted": false,
+    "owner_rotation_confirmed": false
+  },
+  "transport_gate": {
+    "state": "PENDING_SUPPLIER_HTTPS_EVIDENCE",
+    "credential_lookup_allowed": false,
+    "authenticated_request_allowed": false,
+    "formal_supplier_endpoint_evidence": null,
+    "owner_http_exception": false,
+    "tls_bypass_allowed": false,
+    "endpoint_substitution_allowed": false
+  },
+  "content_hash": "sha256:22dbf54abe48d2ceb5c160800332bfd0b4c6d1b1db36c3bbc45ab4b48ba13a8f"
+}

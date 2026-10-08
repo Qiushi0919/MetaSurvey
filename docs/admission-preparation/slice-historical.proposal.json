@@ -1,0 +1,116 @@
+{
+  "contract_name": "StockSliceProposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "stock-slice:historical_asof_research_proposed",
+  "state": "OWNER_REVIEW_REQUIRED",
+  "namespace": "CORE_40",
+  "route": "HISTORICAL_ASOF_RESEARCH_PROPOSED",
+  "symbols": "UNSET_REQUIRED",
+  "from": "UNSET_REQUIRED",
+  "to": "UNSET_REQUIRED",
+  "decision_cutoff": "UNSET_REQUIRED",
+  "clock_contract_proposal": "ClockEvidenceProposal1.0.0",
+  "usage_rights": {
+    "local_research": "UNSET_REQUIRED",
+    "cloud_manual_export": "UNSET_REQUIRED",
+    "historical_backtest": "UNSET_REQUIRED",
+    "redistribution": "DENIED"
+  },
+  "datasets": {
+    "SECURITY_STATUS": {
+      "provider_proposal": "OFFICIAL_EXCHANGE_PLUS_ENTITLED_PROVIDER_TO_BE_SELECTED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Official identity+exchange+board; effective status/name/ST/suspension revisions; source original bytes/license; unknown tick/lot not guessed"
+      ]
+    },
+    "CALENDAR_RULES": {
+      "provider_proposal": "OFFICIAL_EXCHANGE_RULES_TO_BE_SCOPED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Exchange-specific actual session dates, board effective rule version; raw official proof; no weekday inference; no borrowing narrow SSE holiday licence"
+      ]
+    },
+    "RAW_BARS_1D": {
+      "provider_proposal": "AUTHORIZED_EOD_DATA_PROVIDER_TO_BE_SELECTED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Immutable unadjusted OHLC per security/session; source decimal text not binary money; volume/amount units; distinguish adjusted pre_close from preceding raw close; per-version clocks/hash/rights"
+      ]
+    },
+    "CORPORATE_ACTIONS": {
+      "provider_proposal": "OFFICIAL_EXCHANGE_ISSUER_OR_CSD_PROOF_TO_BE_SCOPED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Official ex/record/payment/effective dates, entitlement/revision originals and visibility; factor provider alone is not an official action"
+      ]
+    },
+    "ADJUSTMENT_VERSIONS": {
+      "provider_proposal": "LICENSED_FACTOR_PLUS_OFFICIAL_ACTION_RECONCILIATION_TO_BE_SELECTED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Raw never overwritten; separate factor version, asof anchor/visible actions; adjusted math and cash entitlements independently reconciled"
+      ]
+    },
+    "FINANCIAL_REVISIONS": {
+      "provider_proposal": "OFFICIAL_ISSUER_EXCHANGE_CNINFO_PLUS_PIT_PROOF_TO_BE_SCOPED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Issuer/exchange/CNINFO original report/revision bytes and period/version; published_date/time precision versus availability proof; no latest row backfill"
+      ]
+    },
+    "ANNOUNCEMENTS": {
+      "provider_proposal": "OFFICIAL_ISSUER_EXCHANGE_CNINFO_TO_BE_SCOPED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Original immutable bytes/URI/source identity/hash; publication precision; actual capture; permitted export; later corrections retained"
+      ]
+    },
+    "INDUSTRY_MEMBERSHIP": {
+      "provider_proposal": "LICENSED_HISTORICAL_MEMBERSHIP_PROVIDER_TO_BE_SELECTED",
+      "source_identity_status": "UNSET_REQUIRED",
+      "license_status": "UNSET_REQUIRED",
+      "coverage_status": "UNSET_REQUIRED",
+      "pit_status": "UNSET_REQUIRED",
+      "admission": "BLOCKED",
+      "required_evidence": [
+        "Explicit taxonomy/version/in/out/effective intervals; source revision visibility; no current sector membership backfill"
+      ]
+    }
+  },
+  "manual_export_only_if_separately_licensed": true,
+  "real_source_admission": "BLOCKED",
+  "real_research_pilot": "BLOCKED",
+  "real_signal": "BLOCKED",
+  "real_order": "BLOCKED",
+  "actual_account_fields": "UNSET_REQUIRED",
+  "production_enabled": false
+}

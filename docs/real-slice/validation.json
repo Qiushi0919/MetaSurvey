@@ -1,0 +1,47 @@
+{
+  "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+  "checkout_commit": "1512b3a2d123b1bdb52eaef6ca1db6206e197e8b",
+  "source_code_commit": "266a7083ce2c77c31917899ced458951661ddaed",
+  "source_tree_hash": "sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e",
+  "clean_dependency_install": "npm ci --ignore-scripts PASS",
+  "dependency_lock_unchanged": true,
+  "full_check_exit_code": 0,
+  "tests": 348,
+  "pass": 347,
+  "fail": 0,
+  "skipped": 1,
+  "suites": {
+    "old_P0_P1A_Closure": {
+      "tests": 258,
+      "pass": 257,
+      "fail": 0,
+      "skip": 1
+    },
+    "old_P1B": {
+      "tests": 42,
+      "pass": 42,
+      "fail": 0,
+      "skip": 0
+    },
+    "new_real_slice": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skip": 0,
+      "parts": {
+        "DataParserAndBlockedAdapter": 20,
+        "ParentCoreAndSyntheticSnapshot": 14,
+        "CompositionalFixtureChain": 14
+      }
+    }
+  },
+  "log": "/Users/qiushi/投资研究/.p1b-archives/real-stock-slice-20261005/full-check-repaired.log",
+  "log_sha256": "sha256:8ee220840d784a2eebd75fd2fae0b8f9dae86fcebb75a6468d71cc9f4543a193",
+  "skip_reason": "Optional external V5 host assets not supplied; portable14dayledgerbaseline passed unchanged",
+  "old_cli_hash_mismatch": "PRESERVED_LEGACY_COMPATIBILITY_ISSUE_NOT_FORGED_PASS",
+  "model_calls": 0,
+  "broker_calls": 0,
+  "production_execution": false,
+  "remote_CI_executed": false,
+  "initial_failed_candidate_preserved": true
+}

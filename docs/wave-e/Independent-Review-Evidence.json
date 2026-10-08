@@ -1,0 +1,247 @@
+{
+  "version": "1.0.0",
+  "review": {
+    "review_id": "WAVE_E_INDEPENDENT_R1_FINAL",
+    "verdict": "PASS_WITH_CONDITIONS",
+    "candidate_commit": "abc11d8f869ccf108dfce2658a17fdeffde13dcd",
+    "release": "1.0.0-wave-e-readiness",
+    "completed_at": "2026-10-06T13:03:28.164388+00:00",
+    "counts_kind": "ATOMIC_ASSERTIONS_NOT_TEST_CASES",
+    "PASS": 47040,
+    "FAIL": 0,
+    "SKIP": 0,
+    "sections": {
+      "python_G2": 46712,
+      "native": 270,
+      "synthetic_money": 15,
+      "predecessor_official_supplement": 43
+    },
+    "attack_classes": 20,
+    "native_execution_table_write_delta": 0,
+    "active_context_pins": 790,
+    "main_source_evidence_before_after_pins": 888,
+    "supplement_pins": 8,
+    "combined_distinct_source_evidence_pins": 891,
+    "all_source_evidence_identical": true,
+    "actual_price_originals": 20,
+    "raw_column_ordinal_assertions": 8934,
+    "diagnostic_scenarios": 8,
+    "signal_rows_reviewed": 930,
+    "hypothetical_fills_reviewed": 390,
+    "equity_days_reviewed": 2616,
+    "critical_business_false_acceptances": 0,
+    "source_mutations": 0,
+    "network_requests_by_reviewer": 0,
+    "credential_lookups_by_reviewer": 0,
+    "credential_readback_for_matching": false,
+    "new_literal_credential_pattern_matches": 0,
+    "actual_snapshot_b_executed": false,
+    "actual_forward_days": 0,
+    "formal_strategy_evidence": false,
+    "historical_visibility_proven": false,
+    "productionGate": false,
+    "preserved_review_harness_failures": 1
+  },
+  "artifacts": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/adversarial.py",
+      "sha256": "sha256:c3ecff8fde6eb0bd0ab8e49d779d685f54b27d2fe4a4f83627a0dffa4a26d306",
+      "bytes": 28875,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/copied-public-report.json",
+      "sha256": "sha256:c39508f6ec7e35878076bb1466809b9aad9459a4c03bcc78f690c803b95f623f",
+      "bytes": 27088,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/critical-failure.json",
+      "sha256": "sha256:6508d5f16ff344dc9ebf0f1f5220f362dcd6852a228141f52b200efbc796591e",
+      "bytes": 85,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/final-source-pins.json",
+      "sha256": "sha256:29ae91a0712fc5505142a762431fa302ecdbe376e23ad6475e2b3a60588b8fdc",
+      "bytes": 187258,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/gap-public-checks.py",
+      "sha256": "sha256:afa54b24211e72adb3f84bd12083251e16f987edf251c1974348571543c30f5b",
+      "bytes": 3845,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/gap-public-matrix.json",
+      "sha256": "sha256:9825f1ef591ab1b05ccf431e3a5e03a8b4924317718c1ec8a000d3d502548e6f",
+      "bytes": 5595,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/gap-public.log",
+      "sha256": "sha256:b3d3475a5202a791162f134a1defbad5e28561ee1c5751c27815b9e44729c51c",
+      "bytes": 168,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/harness-failure-classification.json",
+      "sha256": "sha256:e3d02f4119e7b7f745de1b6a6e02f386376ff9759c7dd021301fc93c34db1330",
+      "bytes": 1428,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/matrix.json",
+      "sha256": "sha256:182e9725d8f7bb17c7b6ce7b0b94d66187274a52d90c0793dc5ea4203c9520ed",
+      "bytes": 17494,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/native-adversarial.mjs",
+      "sha256": "sha256:24005ebd2fee5b82bbf3bc5fb1343b9e8697121b2e13c20fbd074068cd6d1382",
+      "bytes": 10349,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/native-matrix.json",
+      "sha256": "sha256:38c82b2ec0d509541aff3992dc3aaf4f31a2ccf156da15cf1af91db72548f90c",
+      "bytes": 35694,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/native.log",
+      "sha256": "sha256:6bbd70a4f7ae86ca581311877c2ccf727c1f9278277fc0e8ddd074bf6ea74275",
+      "bytes": 1053,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/adversarial.py",
+      "sha256": "sha256:885149702bdff9e5ae2ebea2cd20753cec6d6558defb678b5f872786b27b8bf7",
+      "bytes": 29985,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/copied-public-report.json",
+      "sha256": "sha256:c39508f6ec7e35878076bb1466809b9aad9459a4c03bcc78f690c803b95f623f",
+      "bytes": 27088,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/python-matrix.json",
+      "sha256": "sha256:2aa4e948f6b6f518cade5a2d558ab2ee3e2f46abf483289c16a4e1ca8f3a4c34",
+      "bytes": 3466850,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/python.log",
+      "sha256": "sha256:20dc671b4e8162e9c6119f189373b74783bfbe998e643f0af077dfa0fdbd1017",
+      "bytes": 1575,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/sources-after.json",
+      "sha256": "sha256:fdd594cf122498550228968c02b4caeebb20813ec2bc909c226e0708c049b3c8",
+      "bytes": 163418,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/sources-before-expanded.json",
+      "sha256": "sha256:cf15bbebc9510c804d311f18bf91ab0a08b93cf80217669adc8e170c136ee444",
+      "bytes": 163451,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/sources-before.json",
+      "sha256": "sha256:d3eadbcb61bd318f1eb3141036d0cef31b210ebe8940da0f246086e44ac1b80c",
+      "bytes": 158266,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/symlink-public-report.json",
+      "kind": "REVIEW_FIXTURE_SYMLINK",
+      "target": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python-G2/copied-public-report.json",
+      "live_authority": false
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python.log",
+      "sha256": "sha256:3d56b02e61778960d0c1da124b8840ecd61ed9a020a2f17221d11bd6ec804dd2",
+      "bytes": 1067,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/report.md",
+      "sha256": "sha256:f44dc3b66e518746f9359839e43002adda602f941974469747f08fcda57254e0",
+      "bytes": 8720,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/sources-before.json",
+      "sha256": "sha256:d3eadbcb61bd318f1eb3141036d0cef31b210ebe8940da0f246086e44ac1b80c",
+      "bytes": 158266,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/symlink-public-report.json",
+      "kind": "REVIEW_FIXTURE_SYMLINK",
+      "target": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/copied-public-report.json",
+      "live_authority": false
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/synthetic-money-matrix.json",
+      "sha256": "sha256:711c338f58753243ffdf47b7575f0464988c018ebf07521a1f56a1ec589e1e70",
+      "bytes": 1384,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/synthetic-money.log",
+      "sha256": "sha256:4b80cb18059f5bf0c06e240a179e89cc82bacdb65bee2a0c9cd79509e14ed2f3",
+      "bytes": 138,
+      "mode": "0600"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/synthetic-money.py",
+      "sha256": "sha256:be94f4c7fd8ab30eb1b8b3e07c313507ac1704fe1fcc821492d992fc2bcc00c4",
+      "bytes": 2941,
+      "mode": "0600"
+    }
+  ],
+  "limitations": [
+    "Only abc11d8 / release1.0.0-wave-e-readiness and fixed local archives reviewed; no universal hostile interpreter, race, broker or external production database security claim.",
+    "Wave E closed live context re-reads790active pins, including immutable Wave D Input seals. Old Wave B raw hashes are indirectly bound by those inputs; each live assert_registered does not re-open all historical Wave B raw. This review additionally checked20daily/factor originals column-by-column/ordinal and before/after.",
+    "JSON schema/hash validates detached DISPLAY shape only; a caller-resealed changed hash can remain DISPLAY-valid. It cannot become a live Python-registry object, formal source receipt, Card/Signal/Approval/Order, real Snapshot B or Paper authority.",
+    "Native execution-state measurement uses two local in-memory synthetic PGlite fixtures after setup/positive nonexecuting packet/import checks. Direct diagnostic attacks yield execution-table delta0. Caller-authored otherwise-valid synthetic fixtures, arbitrary wrapper/interpreter mutation or external database capabilities are not universally certified.",
+    "Credential audit used labelled query/header/assignment patterns and actual public request metadata, without reading/matching a real Token. Zero matches are bounded artifact evidence, not a universal proof of hidden unlabeled secrets or prior chat/session state.",
+    "All financial/price/performance numeric expected and actual values stayed in RAM/private preexisting evidence; review outputs only assertions/counts/status/hashes. Synthetic money values in reproducible scripts are expressly fixture-only.",
+    "Historical PIT/source/provider/license/transport/status/universe/action/dated fees and30real-account settings remain unresolved. Six public announcement bodies still fail decoded PDF identity. No C12–C22 closure or formal strategy evidence is inferred.",
+    "Initial Python G1 stopped due to Reviewer original-discovery scope missing eight declared Wave B factor-change originals. This was a harness failure, not observed incorrect business acceptance. Original script/log/error file unchanged; new G2 corrected only reviewer discovery, no source/rules/contracts/expected business outcomes changed."
+  ],
+  "previous_harness_failure": {
+    "id": "REVIEWER_RAW_DISCOVERY_G1_HARNESS_FAILURE",
+    "classification": "REVIEW_HARNESS_INCOMPLETE_ORIGINAL_DISCOVERY",
+    "exit_code": 1,
+    "failed_assertion": "original_raw_resolves",
+    "omitted_distinct_originals": 8,
+    "business_false_acceptance": false,
+    "business_code_modified": false,
+    "original_evidence_mutated": false,
+    "explanation": "Reviewer G1 indexed legacy admission daily/factor files and active Wave E pins, but omitted eight declared Wave B factor-change originals. No incorrect product behavior or admitted authority was demonstrated. The generic critical-failure filename was an assertion harness label, not a business critical finding. All G1 artifacts preserved unchanged.",
+    "refs": [
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/adversarial.py",
+        "sha256": "sha256:c3ecff8fde6eb0bd0ab8e49d779d685f54b27d2fe4a4f83627a0dffa4a26d306",
+        "bytes": 28875
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/python.log",
+        "sha256": "sha256:3d56b02e61778960d0c1da124b8840ecd61ed9a020a2f17221d11bd6ec804dd2",
+        "bytes": 1067
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/review/R1/critical-failure.json",
+        "sha256": "sha256:6508d5f16ff344dc9ebf0f1f5220f362dcd6852a228141f52b200efbc796591e",
+        "bytes": 85
+      }
+    ]
+  }
+}

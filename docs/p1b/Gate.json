@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "stage": "P1B0_P1B1_DATA_SEMANTICS",
+  "conclusion": "PASS_WITH_CONDITIONS",
+  "acceptance_scope": "B0 synthetic semantics + bounded real SSE calendar local-reference data engineering only",
+  "full_p1b1_stock_historical_research_mvp": "PARTIAL_BLOCKED",
+  "research_pilot_ready": false,
+  "research_pilot_authorized": false,
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "reviewed_candidate": "fb39c13b18854a068b2beb1deaee54cad593a66d",
+  "closure_frozen_baseline": "1b8b4dc5c4b5b8f86741b3b4352e69d605adc691",
+  "schema_version": 6,
+  "release": "1.3.0",
+  "real_data_admission": {
+    "status": "PASS_FOR_SPECIFIC_SCOPE",
+    "source": "official:sse-calendar-reference",
+    "data_type": "CALENDAR_REFERENCE",
+    "coverage": {
+      "exchange": "SSE",
+      "symbols": [],
+      "from": "2026-10-01",
+      "to": "2026-10-08",
+      "data_type": "CALENDAR_REFERENCE"
+    },
+    "namespace": "CORE_40",
+    "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+    "transfer": "LOCAL_REVIEW_ONLY",
+    "use_at": "2026-10-05T10:31:00.916Z",
+    "historical_visibility_proven": false,
+    "stock_coverage_count": 0,
+    "real_stock_historical_admitted_snapshots": 0,
+    "active_persistent_live_receipts": 0
+  },
+  "global_real_stock_research_admission": "BLOCKED",
+  "cloud_export_admission": "BLOCKED",
+  "golden_counts": {
+    "tests": 300,
+    "pass": 299,
+    "fail": 0,
+    "skipped": 1
+  },
+  "old_golden_invariants": 25,
+  "new_tests": 42,
+  "independent_attacks": {
+    "adversarial": 29,
+    "positive": 1,
+    "pass": 30,
+    "fail": 0
+  },
+  "unknown_actual_account_fields": 30,
+  "productionGate": false,
+  "real_broker": "BLOCKED",
+  "real_auto_execution": "BLOCKED",
+  "real_sizing": "UNSET_REQUIRED",
+  "real_net_edge": "UNSET_REQUIRED",
+  "v5": "LEGACY_EXPERIMENT",
+  "llm_is_human_approval": false,
+  "real_model_call": false,
+  "execution_capabilities_in_new_modules": "ABSENT_NO_DB_ORDER_BROKER_HANDLE",
+  "conditions": "conditions.json",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Research semantics",
+      "status": "PASS",
+      "artifact": "Semantics-and-Evidence.md"
+    },
+    {
+      "number": 2,
+      "title": "Quality vs Timing separation",
+      "status": "PASS_SYNTHETIC_TEMPLATE_ONLY",
+      "artifact": "golden-test-matrix.json"
+    },
+    {
+      "number": 3,
+      "title": "S/A/B/C/X precise semantics",
+      "status": "PASS_SYNTHETIC_TEMPLATE_ONLY",
+      "artifact": "Semantics-and-Evidence.md"
+    },
+    {
+      "number": 4,
+      "title": "ResearchCard contract-fit analysis",
+      "status": "PASS_REUSE_PLUS_SIDECAR",
+      "artifact": "Contract-Fit-Analysis.md"
+    },
+    {
+      "number": 5,
+      "title": "evidence trust classes",
+      "status": "PASS",
+      "artifact": "contract-matrix.json"
+    },
+    {
+      "number": 6,
+      "title": "cloud-discovered evidence workflow",
+      "status": "PASS_LOCAL_SOURCE_FACTS_ONLY",
+      "artifact": "real-reference-results.json"
+    },
+    {
+      "number": 7,
+      "title": "source inventory",
+      "status": "PASS_READ_ONLY_METADATA_INVENTORY",
+      "artifact": "source-inventory.json"
+    },
+    {
+      "number": 8,
+      "title": "source/license matrix",
+      "status": "PASS_NARROW_REFERENCE_ONLY",
+      "artifact": "Data-Matrices.md"
+    },
+    {
+      "number": 9,
+      "title": "PIT clock matrix",
+      "status": "PASS_OBSERVATION_REFERENCE_ONLY_WITH_CONDITION",
+      "artifact": "Data-Matrices.md"
+    },
+    {
+      "number": 10,
+      "title": "first real admitted scope",
+      "status": "PASS_FOR_SPECIFIC_SCOPE_NOT_STOCK_RESEARCH",
+      "artifact": "real-reference-results.json"
+    },
+    {
+      "number": 11,
+      "title": "first REAL SnapshotManifest",
+      "status": "PASS_OBSERVED_REFERENCE",
+      "artifact": "artifact-refs.json"
+    },
+    {
+      "number": 12,
+      "title": "first REAL AdmissionReceipt",
+      "status": "PASS_POINT_IN_TIME_DEV_REFERENCE",
+      "artifact": "artifact-refs.json"
+    },
+    {
+      "number": 13,
+      "title": "first REAL sanitized BrainPacket",
+      "status": "PASS_LOCAL_REVIEW_ONLY",
+      "artifact": "artifact-refs.json"
+    },
+    {
+      "number": 14,
+      "title": "rejected source examples",
+      "status": "PASS_REMAIN_BLOCKED",
+      "artifact": "source-inventory.json"
+    },
+    {
+      "number": 15,
+      "title": "future leakage attacks",
+      "status": "PASS",
+      "artifact": "golden-test-matrix.json"
+    },
+    {
+      "number": 16,
+      "title": "industry membership PIT result",
+      "status": "BLOCKED_REAL_SOURCE",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 17,
+      "title": "corporate-action / financial revision result",
+      "status": "BLOCKED_REAL_SOURCE_SYNTHETIC_REGRESSION_PASS",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 18,
+      "title": "remaining C12-C22",
+      "status": "PARTIAL_OR_BLOCKED",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 19,
+      "title": "Golden regression",
+      "status": "PASS_NO_REGRESSION",
+      "artifact": "validation.json"
+    },
+    {
+      "number": 20,
+      "title": "Independent Reviewer result",
+      "status": "PASS_WITH_CONDITIONS",
+      "artifact": "independent-review.json"
+    }
+  ],
+  "stop_rule": "STOP. Await explicit APPROVE_P1B_RESEARCH_PILOT; stock-source licensing/PIT prerequisites must also be independently closed. No next phase automatic.",
+  "human_gate_acceptance": "PENDING_OWNER_REVIEW"
+}

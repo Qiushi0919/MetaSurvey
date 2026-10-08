@@ -1,0 +1,66 @@
+{
+  "version": "0.1.0",
+  "state": "OWNER_PENDING_NOT_EXECUTABLE_POLICY",
+  "source": "docs/authorizations/P1B-WAVE-G-20261007.md advisory small-live section",
+  "adopted_by_owner": false,
+  "parameters": {
+    "pilot_fraction_of_investable_assets": {
+      "suggested_upper_bound": "0.01",
+      "status": "OWNER_PENDING"
+    },
+    "pilot_absolute_cap_cny_cents": "UNSET_REQUIRED",
+    "single_symbol_fraction_of_assets": {
+      "suggested_upper_bound": "0.0033",
+      "status": "OWNER_PENDING"
+    },
+    "single_symbol_fraction_of_pilot": {
+      "suggested_upper_bound": "0.333333333333333333",
+      "interpretation": "at most1/3; displayed decimal not adopted rounding rule",
+      "status": "OWNER_PENDING"
+    },
+    "max_symbols": {
+      "suggestion": 3,
+      "status": "OWNER_PENDING"
+    },
+    "leverage_margin_shorting": {
+      "suggestion": "PROHIBIT",
+      "status": "OWNER_PENDING"
+    },
+    "automatic_order_submission": {
+      "suggestion": "PROHIBIT",
+      "status": "OWNER_PENDING"
+    },
+    "each_order_human_approval": {
+      "suggestion": "REQUIRED",
+      "status": "OWNER_PENDING"
+    },
+    "averaging_down": {
+      "suggestion": "PROHIBIT",
+      "status": "OWNER_PENDING"
+    },
+    "daily_loss_cents": "UNSET_REQUIRED",
+    "maximum_pilot_drawdown": {
+      "suggestion": "0.03",
+      "status": "OWNER_PENDING"
+    },
+    "drawdown_basis_and_recovery": "UNSET_REQUIRED",
+    "broker_fees_tax_slippage_account_cash_positions": "30_UNSET_REQUIRED",
+    "OOS_samples": {
+      "future_actual_sessions_proposal": 126,
+      "independent_complete_trades_per_family_proposal": 50,
+      "status": "OWNER_PENDING"
+    }
+  },
+  "prerequisites": {
+    "provider_source_policy": "BLOCKED",
+    "formal_PIT_backtest": "BLOCKED",
+    "fee_inclusive_independent_validation": "NOT_AVAILABLE",
+    "actual_forward_records": 0,
+    "broker_dry_run": "NOT_AUTHORIZED",
+    "separate_small_live_human_authorization": "NOT_GRANTED"
+  },
+  "execution_allowed": false,
+  "productionGate": false,
+  "native_signal_order_broker": false,
+  "actual_forward_days": 0
+}

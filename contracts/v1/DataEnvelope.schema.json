@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:v1:DataEnvelope",
+  "title": "DataEnvelope",
+  "description": "V1 P0 DataEnvelope; structural engineering contract, no implicit production policy.",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "DataEnvelope"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "object_version": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Version"
+    },
+    "trace_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "content_hash": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Hash"
+    },
+    "recorded_at": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Timestamp"
+    },
+    "business_timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "provenance": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Provenance"
+    },
+    "reason_codes": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/ReasonCodes"
+    },
+    "invalidation": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Invalidation"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "entity_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "data_kind": {
+      "type": "string",
+      "enum": [
+        "BAR_1D",
+        "BAR_1M",
+        "ANNOUNCEMENT",
+        "FINANCIAL",
+        "NEWS",
+        "SECTOR_MEMBERSHIP",
+        "CORPORATE_ACTION",
+        "SECURITY_STATUS",
+        "LEGACY_FIXTURE"
+      ]
+    },
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "uniqueItems": true
+    },
+    "raw_uri": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "raw_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "data_quality": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN"
+      ]
+    },
+    "adjustment": {
+      "type": "string",
+      "enum": [
+        "RAW",
+        "ADJUSTED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "adjustment_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "recorded_at",
+    "business_timezone",
+    "provenance",
+    "reason_codes",
+    "invalidation",
+    "entity_id",
+    "data_kind",
+    "symbols",
+    "raw_uri",
+    "raw_hash",
+    "payload",
+    "payload_hash",
+    "data_quality",
+    "adjustment",
+    "adjustment_version",
+    "source_revision"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "money": "canonical integer-cent string -> BigInt; Decimal prices/rates; no IEEE-754 money",
+    "timezone": "offset required; business Asia/Shanghai, storage UTC",
+    "hash": "SHA-256 of canonical JSON excluding only top-level content_hash",
+    "required_optional": "required array is authoritative; nullable is required but explicitly unknown/not applicable",
+    "reason_codes": "common ReasonCode enum; no arbitrary silent fallback",
+    "invalidated_by": [
+      "DQ failed",
+      "future available_at",
+      "source revision/hash changed"
+    ],
+    "business_policy_defaults": false
+  }
+}

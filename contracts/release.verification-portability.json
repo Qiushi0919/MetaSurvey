@@ -1,0 +1,38 @@
+{
+  "version": "1.7.0-verification",
+  "scope": "OFFLINE_READ_ONLY_CHECKOUT_VERIFICATION",
+  "contract_versions": {
+    "EvidenceRootBinding": "1.0.0"
+  },
+  "schema_version": 6,
+  "new_migrations": [],
+  "admitted_policy_count": 0,
+  "production_enabled": false,
+  "historical_visibility_proven": false,
+  "files": [
+    {
+      "path": "config/verification-portability/evidence-roots.v1.json",
+      "sha256": "sha256:507c739cac43622a4fb47284dfcd1b05853407197faece0b53e29b7c85598755"
+    },
+    {
+      "path": "contracts/verification-portability/EvidenceRootBinding.schema.json",
+      "sha256": "sha256:0cfdc624452305e076cdc1cc3faa8db49faad2266d51c83cf41c050912942635"
+    },
+    {
+      "path": "verification-portability/verify.mjs",
+      "sha256": "sha256:c55f827409a1421f08200013c7d910f917569c8ec9acb79ec3a1eccdf52ca07e"
+    },
+    {
+      "path": "verification-portability/check.mjs",
+      "sha256": "sha256:1bee3a0c77672f98c98c450b7cbb4adbc90d76335d99f5e6aa0931c44fea4726"
+    },
+    {
+      "path": "verification-portability/tests/legacy-compatibility.test.mjs",
+      "sha256": "sha256:dfc4b33d22b64336b2a15da85bb7d77434120a778027eb7fff89ca5a2e896b3b"
+    },
+    {
+      "path": "verification-portability/tests/security.test.mjs",
+      "sha256": "sha256:34e812bae6ebf7c044efbc157ac9a6ce93241a1681fcb04b02a7a54f726f35a3"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:wave-e:DiagnosticBacktestResult:1.0.0",
+  "title": "DiagnosticBacktestResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "source_admission",
+    "formal_source_admission",
+    "reason_codes",
+    "invalidation_conditions",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate",
+    "body"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "DiagnosticBacktestResult"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^wave-e:"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^wave-e:"
+    },
+    "namespace": {
+      "const": "LOCAL_ENGINE_DIAGNOSTIC:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "NON_PIT_DIAGNOSTIC",
+        "NOT_STRATEGY_EVIDENCE",
+        "NON_TRADEABLE",
+        "LOCAL_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "source_admission": {
+      "const": "UNVERIFIED_GATEWAY"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "reason_codes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "NON_PIT_DIAGNOSTIC",
+          "NOT_STRATEGY_EVIDENCE",
+          "NON_TRADEABLE",
+          "LOCAL_ONLY",
+          "UNVERIFIED_GATEWAY",
+          "NO_HISTORICAL_PIT",
+          "UNSET_REQUIRED",
+          "UNKNOWN_STATUS",
+          "NO_EXECUTION_AUTHORITY",
+          "SEPARATE_OWNER_AUTHORIZATION_REQUIRED",
+          "ACTUAL_FRESH_SESSION_REQUIRED",
+          "REAL_FORWARD_NOT_AUTHORIZED",
+          "NO_NATIVE_PROMOTION"
+        ]
+      }
+    },
+    "invalidation_conditions": {
+      "const": [
+        "PREDECESSOR_SOURCE_RAW_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenarios",
+        "lookahead_audit",
+        "ledger_reconciliation",
+        "formal_strategy_evidence",
+        "historical_universe_claim",
+        "cost_is_net_edge",
+        "corporate_action_applied",
+        "adjusted_authority",
+        "monetary_unit",
+        "real_account_settings"
+      ],
+      "properties": {
+        "scenarios": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "price_treatment",
+              "policy_hash",
+              "signals_count",
+              "hypothetical_fills_count",
+              "sessions_count",
+              "output_hash",
+              "tradeability_proven",
+              "financial_features_used"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "pattern": "^(RAW_UNADJUSTED_OBSERVED|FACTOR_FIRST_ANCHOR_SENSITIVITY_ONLY):(UNKNOWN_BLOCK|ZERO_COST_HYPOTHETICAL|FEE_HYPOTHETICAL|STRESS_HYPOTHETICAL)$"
+              },
+              "price_treatment": {
+                "enum": [
+                  "RAW_UNADJUSTED_OBSERVED",
+                  "FACTOR_FIRST_ANCHOR_SENSITIVITY_ONLY"
+                ]
+              },
+              "policy_hash": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              },
+              "signals_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "hypothetical_fills_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sessions_count": {
+                "const": 327
+              },
+              "output_hash": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              },
+              "tradeability_proven": {
+                "const": false
+              },
+              "financial_features_used": {
+                "const": 0
+              }
+            }
+          }
+        },
+        "lookahead_audit": {
+          "const": "PASS"
+        },
+        "ledger_reconciliation": {
+          "const": "PASS"
+        },
+        "formal_strategy_evidence": {
+          "const": false
+        },
+        "historical_universe_claim": {
+          "const": false
+        },
+        "cost_is_net_edge": {
+          "const": false
+        },
+        "corporate_action_applied": {
+          "const": false
+        },
+        "adjusted_authority": {
+          "const": "NONE_FACTOR_SENSITIVITY_ONLY"
+        },
+        "monetary_unit": {
+          "const": "UNVERIFIED_SOURCE_PRICE_DPU"
+        },
+        "real_account_settings": {
+          "const": "UNSET_REQUIRED"
+        }
+      }
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "required": "All listed fields; no optional extra fields",
+    "enum": "Closed purpose/scope/state/reason registries",
+    "unit": "Diagnostic DPU100 integer minor units; no actual CNY numeric parameters here",
+    "money": "No binary floats; synthetic Decimal100 HALF_EVEN only in private diagnostic ledger",
+    "timezone": "Explicit RFC3339 instant plus timezone Asia/Shanghai; DATE_ONLY is not instant",
+    "hash_trace": "SHA256 source/rules/code/schema/predecessor/content plus object/trace/version",
+    "invalidation": "Any source/version/cutoff/path/authority drift; display shape never issuance authority"
+  }
+}

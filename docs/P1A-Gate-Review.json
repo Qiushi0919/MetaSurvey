@@ -1,0 +1,170 @@
+{
+  "review_version": "1.0.0",
+  "phase": "P1A_OFFLINE_ONLY",
+  "technical_conclusion": "PASS_WITH_CONDITIONS",
+  "user_acceptance": "PENDING",
+  "p1b_research": "BLOCKED",
+  "production_execution": "BLOCKED",
+  "continue_automatically": false,
+  "report": "docs/P1A-Gate-Review.md",
+  "report_sha256": "sha256:428cd02624276f16779cd894aa90728cc26e6068c7e293b4b5cdf3b07d7cfe45",
+  "code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "source_tree_hash": "sha256:aa8902654fdec40134b862f9abff91330caadddcff7c8ac82bde494d4abff46a",
+  "checks": {
+    "tests": 210,
+    "pass": 209,
+    "fail": 0,
+    "skip": 1,
+    "skip_reason": "optional external legacy host replay; separate actual read-only replay passed"
+  },
+  "items": [
+    {
+      "number": 1,
+      "title": "P0 baseline freeze evidence — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 2,
+      "title": "Clean environment reproducibility — PASS，平台边界明确",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 3,
+      "title": "Canonical SecurityIdentity — 机制 PASS；真实主数据准入未完成",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 4,
+      "title": "Trading Calendar — 有界官方 reference PASS；历史交易准入仍受限",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 5,
+      "title": "bars_1d Raw→Normalized — 实际 slice PASS，DQ/快照阻断正常",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 6,
+      "title": "Real-source PIT semantics — fail closed PASS；真实历史可交易 PIT 未完成",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 7,
+      "title": "Corporate Actions / adjustment lineage — 机制 PASS；真实 feed/调整数学未完成",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 8,
+      "title": "Financial revision PIT — 机制 PASS；真实财报 parser/sample admission 未完成",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 9,
+      "title": "Snapshot lineage — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 10,
+      "title": "Cost Engine — PASS（独立 synthetic reference）",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 11,
+      "title": "Affordability — PASS，精度限制明确",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 12,
+      "title": "Account reservation — PASS（共享现金/独立持仓）",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 13,
+      "title": "Paper lifecycle — PASS（DEV/PAPER fixture DTO）",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 14,
+      "title": "Ledger reconciliation — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 15,
+      "title": "Experiment A deterministic replay — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 16,
+      "title": "Experiment B friction stress — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 17,
+      "title": "Micro-Ladder rejection — PASS（EXPERIMENTAL）",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 18,
+      "title": "Cost attribution 与实际 Audit chain — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 19,
+      "title": "CORE_40 skeleton — PASS",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 20,
+      "title": "MAE/MFE metrics — PASS（日线近似）",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 21,
+      "title": "UNSET_REQUIRED inventory — PASS，生产继续阻断",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 22,
+      "title": "Independent Reviewer results — PASS_WITH_CONDITIONS recommendation",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 23,
+      "title": "Known failures — 如实保留",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 24,
+      "title": "Remaining technical debt / execution blockers — 明确保留",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    },
+    {
+      "number": 25,
+      "title": "是否建议开放 P1-B Research Intelligence — 本轮继续 BLOCKED",
+      "evidence_scope": "P1A_OFFLINE_ENGINEERING"
+    }
+  ],
+  "conditions": [
+    "Real historical availability, licensing and complete source admission remain unverified; captured public references are quarantined/non-tradeable.",
+    "Actual account/broker/fee/risk values and production Edge policy remain UNSET_REQUIRED.",
+    "External PostgreSQL multi-connection deployment, least privilege and crash-at-commit recovery remain unaccepted.",
+    "Paper SELL conservatively reserves full estimated fees; zero available cash can block closing a full position.",
+    "Daily path metrics are retrospective approximations, not intraday paths.",
+    "Legacy native CLI seal compatibility remains FAIL_KNOWN_COMPATIBILITY; seal and ledger stay unchanged."
+  ],
+  "evidence": [
+    "docs/baselines/P0-freeze-20261005.json",
+    "docs/baselines/P0-clean-reproduction-20261005.json",
+    "docs/baselines/P1A-clean-reproduction-20261005.json",
+    "docs/baselines/P1A-schema-validation.json",
+    "docs/baselines/P1A-legacy-external-replay.json",
+    "docs/baselines/P1A-legacy-native-compatibility.json",
+    "docs/experiments/P1A-results.json",
+    "docs/independent-review-p1a.md"
+  ],
+  "git_checkpoint": {
+    "branch": "p1a/integration",
+    "annotated_tag": "p1a-review-20261005",
+    "meaning": "Technical review delivery; not user authorization; resolve tag for final report commit."
+  }
+}

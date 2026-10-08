@@ -1,0 +1,16 @@
+import fs from 'node:fs';import test from 'node:test';import assert from 'node:assert/strict';
+import {validateDisplay,transitionDisplay,issueActual} from '../display.mjs';
+import {validateContract,contentHash} from '../../src/contracts/validate.mjs';
+const names=['Historical-PIT-Three-Symbol-Matrix','Price-Backtest-Minimum-PIT-Gate','Backtest-Engine-Readiness','Snapshot-B-Activation-Readiness','Forward-Paper-Activation-Readiness'];
+const objects=names.map(n=>JSON.parse(fs.readFileSync(new URL('../../docs/wave-f/'+n+'.json',import.meta.url))));
+const reseal=v=>({...v,content_hash:contentHash(v)});
+test('five current WaveF metadata objects display-valid',()=>{for(const v of objects)assert.equal(validateDisplay(v),v);});
+test('display native transition impossible',()=>{for(const v of objects)for(const t of ['SignalEvent','Approval','OrderIntent','Fill','ResearchCard','BROKER','PRODUCTION','ADMITTED','EVENT_3','RESEARCH_6_18M'])assert.throws(()=>transitionDisplay(v,t));});
+test('old native contracts reject new actual readiness objects',()=>{for(const v of objects)for(const name of ['ResearchCard','CandidateEligibility','SignalEvent','Approval','OrderIntent','Fill','AccountProfile','SnapshotManifest','BacktestResult'])assert.throws(()=>validateContract(name,v));});
+test('caller reseal can only display never activate',()=>{const v=reseal({...objects[0],body:{caller_claim:'profitable'}});validateDisplay(v);assert.throws(()=>issueActual(v));assert.throws(()=>transitionDisplay(v,'OrderIntent'));});
+test('closed flags cannot promote fixture readiness',()=>{for(const v of objects)for(const k of ['productionGate','live_authority','historical_visibility_proven','provider_license_transport_verified','formal_backtest_authorized','snapshot_b_authorized','forward_paper_authorized'])assert.throws(()=>validateDisplay(reseal({...v,[k]:true})));});
+test('synthetic or planned days cannot become actual days',()=>{for(const x of [1,true,'0',-1])assert.throws(()=>validateDisplay(reseal({...objects[0],actual_forward_days:x})));});
+test('exact symbols and namespaces frozen',()=>{for(const x of [{namespace:'CORE_40'},{namespace:'EVENT_3'},{symbols:[...objects[0].symbols].reverse()},{symbols:[...objects[0].symbols,'000001.SZ']}])assert.throws(()=>validateDisplay(reseal({...objects[0],...x})));});
+test('money approval and native extras reject',()=>{for(const x of [{capital:5000},{owner_approved:true},{approval_kind:'HUMAN'},{OrderIntent:{}}])assert.throws(()=>validateDisplay(reseal({...objects[0],...x})));});
+test('version hash and field deletion invalidate',()=>{for(const mutate of [v=>v.version='2.0.0',v=>delete v.context_hash,v=>v.code_hash='bad']){const v=structuredClone(objects[0]);mutate(v);assert.throws(()=>validateDisplay(reseal(v)));}assert.throws(()=>validateDisplay({...objects[0],content_hash:'sha256:'+'0'.repeat(64)}));});
+test('frozen candidate is proposal and no real policy',()=>{const v=JSON.parse(fs.readFileSync(new URL('../../docs/wave-f/Frozen-StrategySpec-v1.json',import.meta.url)));assert.equal(v.family_count,2);assert.equal(v.actual_account_parameters,'30_UNSET_REQUIRED');assert.equal(v.formal_backtest_authorized,false);assert.equal(v.fairness.actual_new_performance_reveals,0);assert.equal(v.evaluation.retrospective_split.OOS_claim.startsWith('NONE'),true);assert.throws(()=>issueActual(v));});

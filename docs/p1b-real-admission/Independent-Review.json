@@ -1,0 +1,338 @@
+{
+  "review_version": "1.0.0",
+  "kind": "P1B_LIMITED_TUSHARE_REAL_PROBE_INDEPENDENT_READONLY_REVIEW",
+  "reviewed_at": "2026-10-05T15:07:42.478195Z",
+  "engineering_gate": "PASS_WITH_CONDITIONS",
+  "engineering_scope": "BOUNDED_LOCAL_QUARANTINE_CAPTURE_AND_MANDATORY_PARENT_REPLAY_ONLY",
+  "REAL_DATA_ADMISSION_GATE": "BLOCKED",
+  "LOCAL_REAL_RESEARCH_GATE": "BLOCKED",
+  "GLOBAL_LOCAL_EXISTING_SSE_GATE": "PARTIAL",
+  "P1B_RESEARCH_PILOT_GATE": "BLOCKED",
+  "productionGate": false,
+  "reviewer_actual_network_requests": 0,
+  "reviewer_actual_credential_lookups": 0,
+  "reviewer_actual_source_receipts_issued": 0,
+  "source_classification": "OWNER_PROVIDED_MONTHLY_GATEWAY",
+  "candidate": {
+    "capture_code_commit": "8f8cc0d8a7b32fcc77479f1f265068ca87e6b684",
+    "verification_code_commit": "42e1e4c457edc8a30316aec560c9d444f2406517",
+    "source_tree_hash": "sha256:4dcc9bd86cc87ef4c7032a124a69ed4d0e62c957b1243c453e388ecde63aaf9a",
+    "source_files": [
+      {
+        "path": "contracts/tushare-real-admission/ProbeGate.schema.json",
+        "sha256": "sha256:c698a8d1671eb28f256f75f3d33d3ec6b049dad799025629389f4ffbdd3fccfd"
+      },
+      {
+        "path": "contracts/tushare-real-admission/reason-codes.v1.json",
+        "sha256": "sha256:3d5258fa3ac4d0954686b1aa120ce65f95eefe1500c1ed7a87c3b500b7a63b67"
+      },
+      {
+        "path": "config/provider/tushare-monthly-gateway.json",
+        "sha256": "sha256:71d86c0590752d2f761e15f6b16026e09a9cc9fbb0a39e0fc9b5602f5396e419"
+      },
+      {
+        "path": "tushare-real-admission/probe.py",
+        "sha256": "sha256:fe632bd17da6663a6fdad702b2d03ff1b2a702927914d333b7302aae0ee9bc26"
+      },
+      {
+        "path": "tushare-real-admission/tests/test_probe.py",
+        "sha256": "sha256:ee46c877f1bfdbb3a04996eb19f9eabfb06839caab43ed7ee94867c39a3443c1"
+      },
+      {
+        "path": "tushare-real-admission/parent/evidence.py",
+        "sha256": "sha256:bf8fcbd5827fd1578499b5a64fe2d5b46ee3d83080318a43826ec3c85d4431a6"
+      },
+      {
+        "path": "tushare-real-admission/parent/verify.mjs",
+        "sha256": "sha256:cfb49c7db3140b5b6ac833fbdebd3efc045e109d4f7985d90c768788e6fe2694"
+      },
+      {
+        "path": "tushare-real-admission/parent/contracts.test.mjs",
+        "sha256": "sha256:ca14bee5fdf67d879f0b958f9a9fdae37e42e0b8b8368fb398aabf0175122269"
+      },
+      {
+        "path": "tushare-real-admission/check.mjs",
+        "sha256": "sha256:fb3d3f00c0c86203637175d8f462e11a08db66b8939182710e969442e8da3f3d"
+      }
+    ],
+    "Gate_ref": {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Gate.json",
+      "sha256": "sha256:9bbaf33c0c69e7dcf8e572110a59684d621b60d8677f235ec463e22276113917"
+    },
+    "Gate_content_hash": "sha256:43d27e322c95bf0161a48beab066e8a6eb967fef0b0a9245330cc3ae50f61b7f",
+    "Owner_Gate_Review_ref": {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Gate-Review.md",
+      "sha256": "sha256:0237ae0da33201d839fc2769159815aac60e68508e7ee2525b59b6b652aaa411"
+    }
+  },
+  "independently_authored_unique_current_checks": {
+    "tests": 906,
+    "pass": 906,
+    "fail": 0
+  },
+  "not_added_to_counts": [
+    "Earlier failed candidates",
+    "Repeated final replays",
+    "21-case SMOKE-only subset repeated in42caseboth-scopesuite",
+    "Data38orparent27implementationunitcases",
+    "Existing398Golden"
+  ],
+  "suites": [
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/probe-attacks-fe632bd17da6.json",
+        "sha256": "sha256:79cd25cc35216ef74cefcc2da8066b569663c0f295394bf0a1419150d39d56ab"
+      },
+      "counts": {
+        "tests": 127,
+        "pass": 127,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/transport-attacks-fe632bd17da6.json",
+        "sha256": "sha256:17451a14780a3ad8d346c8db8e5ceca0fb8500f378c4651ca748b2922b91eb30"
+      },
+      "counts": {
+        "tests": 25,
+        "pass": 25,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/native-reader-attacks-fe632bd17da6.json",
+        "sha256": "sha256:1add0481296d17c3abb40acf2a61970de2b4945cafb280900e8441b3ef2795e9"
+      },
+      "counts": {
+        "tests": 22,
+        "pass": 22,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/frozen-consumer-attacks.json",
+        "sha256": "sha256:2070d537cd289d997c87ac5d252d15bfa5b0e4c0fa1dfd56bd84547b251c0ce2"
+      },
+      "counts": {
+        "tests": 67,
+        "pass": 67,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "sha256": "sha256:3eb0361e73e299591e058a051bbcb54dddbbd4cf609355a9f5071c2e87cc0649"
+      },
+      "counts": {
+        "tests": 506,
+        "pass": 506,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/evidence-attacks-bf8fcbd5827f.json",
+        "sha256": "sha256:648f1d77cbd43d2175fc5e6d5b2e000024e1f6d16324ad0561893a469b6c46e0"
+      },
+      "counts": {
+        "tests": 54,
+        "pass": 54,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/actual-report-attacks-2reports-helperbf8fcbd5827f.json",
+        "sha256": "sha256:3583e26c0b6453d92c833e90d9ee21197d0bb98e49af6bd81a358da1e0baa184"
+      },
+      "counts": {
+        "tests": 42,
+        "pass": 42,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/gate-join-attacks-43d27e322c95.json",
+        "sha256": "sha256:e6452e0e5ca39d942bf9bfecfd38693a60aee409151d3cc69a2a178e308caf1b"
+      },
+      "counts": {
+        "tests": 37,
+        "pass": 37,
+        "fail": 0
+      }
+    },
+    {
+      "artifact": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/metadata-review-final.json",
+        "sha256": "sha256:a96919629dbe32c03723d21e27ec949df0a6e62fcab5dc056b47925f473cd60a"
+      },
+      "counts": {
+        "tests": 26,
+        "pass": 26,
+        "fail": 0
+      }
+    }
+  ],
+  "actual_capture_evidence": {
+    "authenticated_requests_observed": 44,
+    "original_raw_captures": 44,
+    "physical_row_observations_with_overlap": 2786,
+    "unique_raw_bars": 981,
+    "sessions_per_stock": 327,
+    "all_HTTP200_code0": true,
+    "DQ_response_counts": {
+      "PASS": 26,
+      "EMPTY_NOT_COVERAGE": 9,
+      "BLOCKED": 9
+    },
+    "capture_reports": [
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/probe-report.json",
+        "sha256": "sha256:1b0c68a1f64b556d654eec084a37b673f7465d7289e025c1bcc051bffc95951a"
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/probe-report.json",
+        "sha256": "sha256:3fef3e75ebe227e0744fe5fdb70e849b1307eec07d9a18f2feabd578fca071d9"
+      }
+    ],
+    "collector_clocks": "CURRENT_OBSERVED_ONLY",
+    "historical_visibility_proven": false,
+    "new_admitted_SourceObservation_ClockEvidence_policy_Snapshot_Receipt_BrainPacket_Card": 0,
+    "closed_C12_C22_ids": [],
+    "snapshot_b": "PENDING_REAL_DATA_AND_ADMITTED_LINEAGE"
+  },
+  "preservation": {
+    "baseline": "e3e2a6b",
+    "tracked_count": 392,
+    "immutable_unchanged": 389,
+    "allowed_navigation_changes": [
+      "AGENTS.md",
+      "README.md",
+      "docs/source-of-truth.json"
+    ],
+    "forbidden_changes": []
+  },
+  "resolved_findings": [
+    {
+      "finding": "MalformedUTF8base64/hex credential echo leaked to hashable raw in58615candidate",
+      "closure": "fe632 synthetic attacks PASS; discard before digest/persistence",
+      "failed_evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/probe-attacks-58615ef488ff.json",
+        "sha256": "sha256:ad4ca76eea139aa925b1d6480b13d2d825489adec69487993e4cc38d906baa52"
+      }
+    },
+    {
+      "finding": "Own-consistent Gate stats/category claims not joined to raw",
+      "closure": "Strict replay truthjoin;37actualGate attacksPASS",
+      "source_admission_never_inferred": true
+    },
+    {
+      "finding": "Future imp_ann_date omitted by frozen collector",
+      "closure": "Mandatory parent42eguard closes admission boundary; collector frozen gap explicitly remains",
+      "failed_evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/future-implementation-publication.json",
+        "sha256": "sha256:7d3a82b5d03d42ad77b05cb06d5a38d8599e57b9a24324320b0e3cd945b1d004"
+      },
+      "closed_at_boundary": "MANDATORY_PARENT_VERIFICATION_NOT_BARE_COLLECTOR"
+    }
+  ],
+  "known_conditions": [
+    "Supplier identity/authorizedchannel/purchase/product/account/expiry/localpurpose/storage/retention/transfer rights not independently proven",
+    "HTTP transport integrity remains unverified despite Owner exception",
+    "3COVERAGEfinancial responses contain scope-violating20221231;59rows quarantined without filter reinterpretation",
+    "6industry responses have blank out_date;6rows quarantined without null/infinity/PIT guessing",
+    "No complete ST/security/session/corporate-action/revision history; numeric factor/action reconciliation unavailable",
+    "No admitted numeric official secondsource;13calendar/3codes are narrow reference comparison only",
+    "Historyvisibilityfalse,30actualconfigUNSET,allhighergatesBLOCKED",
+    "Earliest58615 full candidate source bytes were not recovered; original attack JSON/harness hash preserved and limitation openly disclosed",
+    "Final clean checkout/deliverycommit proof is parent pending append; current906checks and rawpins complete"
+  ],
+  "harness_correction": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/schema-harness-correction.json",
+    "sha256": "sha256:f1119b68160d7bd42b7ec748834d52ecca19b7043ea71b24e2b658bf6ab0afce"
+  },
+  "historical_G1_zero_requests": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/G1-zero-request-readonly-review.json",
+    "sha256": "sha256:bbf3af35bf140f01c4ecab1483c03d466b7dabdb2d98fd17fd0c0bf679561bb7"
+  },
+  "requirement_matrix_ref": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/Attack-Matrix.json",
+    "sha256": "sha256:c05037a222d407f42e2ecef810d5e9423bd8376fc422176bc0adac2c0109ec3e"
+  },
+  "metadata_documents": [
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Gate.json",
+      "sha256": "sha256:9bbaf33c0c69e7dcf8e572110a59684d621b60d8677f235ec463e22276113917"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/blocked-decisions.json",
+      "sha256": "sha256:c8fc3fd70a1e960e63dff22aff84a1a0117a6db311db85f635e441d6e5f57938"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/clock-matrix.json",
+      "sha256": "sha256:ba909978054e34b82e04eff30248fdfa13a61ea2b0039eefb1d0bd07dec9885e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/code-provenance.json",
+      "sha256": "sha256:a2014a579f5df70745bf4e47fb0bbb0df1a1becde875c9a2767cb76df0ade359"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/conditions.json",
+      "sha256": "sha256:14df691cd492a1a313353db7b05df1006723474e8c80707c7332012f79b48ee9"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/cross-source-comparison.json",
+      "sha256": "sha256:9c17312b4c5463f26601458c87025ae68ed9bceb0299ef57d306ffbad2cb2a86"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/data-pit-matrix.json",
+      "sha256": "sha256:829c024cc6a45d740dae557a3fd7b4172422afef2e4ce96b6cf1084692a0f4b5"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/deterministic-replay.json",
+      "sha256": "sha256:447b658ee705eede6417c767ebee0ab9c84a9c583b377b93620984f8923da3c8"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/dq-results.json",
+      "sha256": "sha256:7614176973c0a2625c26d94c3b36e81532b2c5d9bf4e395157aa23579823f547"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/entitlement-matrix.json",
+      "sha256": "sha256:18fd9e2ad6a39504e67775dd3432191b3004a33439db176840797e93c34dbacd"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/known-failures.json",
+      "sha256": "sha256:3b2d675efd9bbcd7ad492b3d3fb2f4be9b0b11023796101287a502e65cf9c849"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/preservation.json",
+      "sha256": "sha256:a163df06567cc9dd1dfcfed46b7fc49aad25e802d57b0bd3744321491110a78e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/provider-evidence.json",
+      "sha256": "sha256:78b1c45e4618ac4c875f80fb6ef30d75eedd60fba2044b7cc1f45b0a83fee35a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/public-evidence.json",
+      "sha256": "sha256:1f2ee2961317a04cc668238ebbefc505507ef20737e1f2eaf74e2532d1f28f6b"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/raw-inventory.json",
+      "sha256": "sha256:f01a5063798f1ee0fdf66629f9002855b2abe3caf901bf74c724d559d61bbb56"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/three-symbol-coverage.json",
+      "sha256": "sha256:42d9f836b1dd2cf7067840ec16e7a633ff5d14dbf09aa89f89a82da67b789d0f"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/validation.json",
+      "sha256": "sha256:873a2c4cf5a28544e3dc90f44aa63f50f34a21fc89730a0d9724d0c4c7027d1f"
+    }
+  ],
+  "mandated_next_action": "REPORT_AND_STOP_NO_PILOT_NO_BACKTEST_NO_CLOUD_NO_EXECUTION_NO_EXTRA_PERMISSION_PURCHASE"
+}

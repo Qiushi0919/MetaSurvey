@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:PaperReplayOrderIntent",
+  "title": "PaperReplayOrderIntent",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "PaperReplayOrderIntent"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "fixture_scope": {
+      "const": "SYNTHETIC_TEST_ONLY"
+    },
+    "mode": {
+      "enum": [
+        "DEV",
+        "PAPER"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "order_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "client_order_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "strategy": {
+      "enum": [
+        "CORE_40",
+        "EVENT_3"
+      ]
+    },
+    "symbol": {
+      "type": "string",
+      "pattern": "^(SSE|SZSE):[0-9]{6}$"
+    },
+    "side": {
+      "enum": [
+        "BUY",
+        "SELL"
+      ]
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "limit_price": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,13})(\\.[0-9]{1,6})?$",
+      "x-unit": "CNY_PER_SHARE"
+    },
+    "trade_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rule_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "snapshot_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "feature_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "cost_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "cost_profile_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "calendar_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "security_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "market_data_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "fixture_scope",
+    "mode",
+    "account_id",
+    "order_id",
+    "client_order_id",
+    "strategy",
+    "symbol",
+    "side",
+    "quantity",
+    "limit_price",
+    "trade_date",
+    "rule_version",
+    "snapshot_hash",
+    "feature_hash",
+    "cost_version",
+    "cost_profile_hash",
+    "calendar_hash",
+    "security_hash",
+    "market_data_at",
+    "valid_until"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

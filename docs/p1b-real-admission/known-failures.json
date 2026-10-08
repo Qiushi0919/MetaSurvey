@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "resolved_implementation_findings": [
+    "Non-UTF8 encoded secret echo before raw/hash",
+    "Unbound Gate metadata inflated totals/categories",
+    "Native Keychain reader mismatch with CLI ACL",
+    "Future implementation publication omitted by bare collector: mandatory parent verifier now blocks it"
+  ],
+  "preserved_known_runs": {
+    "G1": "KEYCHAIN_LOOKUP_FAILED_ZERO_REQUESTS_OLD_CAPTURE_EPOCH",
+    "G2": "44_AUTHENTICATED_REQUESTS_44_QUARANTINE_ORIGINALS"
+  },
+  "provider_data_quarantine": [
+    {
+      "api": "fina_indicator",
+      "scope": "COVERAGE",
+      "response_count": 3,
+      "physical_rows": 59,
+      "raw_unique_periods_per_stock": 15,
+      "reason": "DATE_SCOPE_MISMATCH",
+      "explanation": "Official doc79 describes report-period start/end. Response contains20221231 before20230101; no reinterpretation as ann_date or scope widening."
+    },
+    {
+      "api": "index_member_all",
+      "response_count": 6,
+      "physical_rows": 6,
+      "reason": "DQ_DATE_INVALID",
+      "explanation": "out_date empty string; no silent null/infinity/historical-PIT normalization."
+    }
+  ],
+  "unresolved_source_evidence": [
+    "Supplier/channel/product/account/order/expiry not independently verified",
+    "HTTP transport integrity unverified despite Owner probe exception",
+    "Supplier local storage/retention/transfer rights unverified",
+    "No admitted numeric official bars/actions cross-source reference",
+    "No historical revision/version first-availability evidence",
+    "Full Security status/ST/session rules/action/revision/industry history incomplete"
+  ],
+  "preservation_limit": "Initial failed58615 candidate exact source bytes not recovered; failure JSON/harness/fullSHA remain.085299/c6f45a/e60/fe632 source snapshots or Git commits preserved. No reconstructed source falsely labelled original.",
+  "non_code_failures_preserved": [
+    "Reviewer content_hash deletion/reseal harness error",
+    "Initial bundled-bin npm executable absent, corrected homebrew npm with bundledNode",
+    "Cross-source metadata builder stale row variable, corrected without original changes"
+  ],
+  "production_unknown_fields": 30,
+  "bare_collector_gap": "Frozen fe632 collector alone does not block future imp_ann_date. CLOSED_AT_MANDATORY_PARENT_VERIFICATION_BOUNDARY42e; check entry and Gate truth-join always invoke stricter parent replay. Raw collector metadata is never an admitted object.",
+  "clean_checkout_portability_issue": {
+    "status": "UNRESOLVED_TECHNICAL_DEBT",
+    "reason": "DIAGNOSTIC_EVIDENCE_PATH_UNAPPROVED",
+    "frozen_validator": "tushare-admission/parent/verify.mjs",
+    "explanation": "Historical Gate embeds canonical absolute authorization/archive references; unchanged legacy allowlist derives paths from clone root. Full aggregate clone entry exits1. Historical Gate, paths, hashes and validator preserved. Canonical baseline398 and clean new65 pass separately; this is not claimed as full clone aggregate PASS.",
+    "evidence": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-validation.json",
+      "sha256": "sha256:cbd63eb240334e61a06557a38d3dab125dbd322cf5642a1be4b1a2b84d6cc468"
+    },
+    "production_or_source_admission_relaxed": false
+  }
+}

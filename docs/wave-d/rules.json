@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0-experimental",
+  "decision_cutoff": "2026-10-06T07:50:49.627682Z",
+  "timezone": "Asia/Shanghai",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "current_observed_only": true,
+  "historical_visibility_proven": false,
+  "productionGate": false,
+  "financial": "consolidated type1/company1 YTD or balance point-in-time; versions conflict blocked; positive matched CFO/consolidated-profit only; no synthesizedTTM",
+  "valuation": "source pe_ttm/pb/ps_ttm/literal 10k units unverified; nocheap-expensive businessrule",
+  "status": "one observed day20260930 complete MAIN/TERMINAL/REPEAT schema/date/rows must match; never empty per-symbol negative",
+  "industry": "new stock_basic current declaration; history UNKNOWN",
+  "announcements": "official SSE metadata separate; recorded301 exact static same-path only; body fact requires valid PDF/identity",
+  "adjustment": "same-provider raw*factor/latestfactor only; independent action proof UNKNOWN;5 ambiguities/8 deltas preserved",
+  "scores": "preserve original WaveC coordinates/cutoff separately, no new total grade/BUYSELL",
+  "actual_account_parameters": "30_UNSET_REQUIRED",
+  "snapshot_B": "PENDING_OCTOBER8_ACTUAL_FRESH_OBSERVATION_SEPARATE_AUTHORIZATION",
+  "scope": "LOCAL_ONLY_NON_TRADEABLE",
+  "full_statements": "9 exact-three-stock requests of full official output fields94/158/97; original full rows private; named research projection from original ordinal"
+}

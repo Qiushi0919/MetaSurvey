@@ -1,0 +1,102 @@
+{
+  "version": "1.8.2-offline",
+  "scope": "OFFLINE_ENGINEERING_DIAGNOSTICS_ONLY",
+  "schema_version": 6,
+  "new_migrations": [],
+  "admitted_policy_count": 0,
+  "historical_visibility_proven": false,
+  "production_enabled": false,
+  "contract_versions": {
+    "AdmissionReadinessDryRun": "1.0.0-diagnostic"
+  },
+  "files": [
+    {
+      "path": "contracts/overnight/AdmissionReadinessDryRun.schema.json",
+      "sha256": "sha256:1586c4706b0b2898b4f4937176a5ad7c813ce2c6e40f49c278378695bb706ef7"
+    },
+    {
+      "path": "overnight/admission/__main__.py",
+      "sha256": "sha256:b9dc2777d7b7f8238b778015a5bc7af9c16ba13915b9d1ace7b239a854d5655e"
+    },
+    {
+      "path": "overnight/admission/dry_run.py",
+      "sha256": "sha256:75ca89ffec4d625c154d9be20058f732a497d296a9b6be6c69d5bee61ce05a1c"
+    },
+    {
+      "path": "overnight/analysis/__main__.py",
+      "sha256": "sha256:49c5b2881869c43bde5c488ca48c7fb60129f5a6b76d26c9ced9b1d15ff92f3c"
+    },
+    {
+      "path": "overnight/analysis/financial.py",
+      "sha256": "sha256:2ea99f7b396da7d604706e14bdf04d329981a6d632c75992865677230fdeb5a9"
+    },
+    {
+      "path": "overnight/analysis/inputs.py",
+      "sha256": "sha256:b1a421a20acb1d060f299aaa11d7156132dafb3d7d54e6c3c7b3829a831f68c7"
+    },
+    {
+      "path": "overnight/analysis/reconcile.py",
+      "sha256": "sha256:321af69d700dc4970010dae216313a0a5113cd1cb0262072627820f0b2415c71"
+    },
+    {
+      "path": "overnight/check.mjs",
+      "sha256": "sha256:cb35fb350f30dfaf831f94bcef6ce65d87b772d5c89a1c3b78cebc51a49fac44"
+    },
+    {
+      "path": "overnight/data/__main__.py",
+      "sha256": "sha256:e906c434f89f7623ff8c3ff5fe0b1ed7e322a4662b2f1e5817cf014e4dec59d7"
+    },
+    {
+      "path": "overnight/data/coverage.py",
+      "sha256": "sha256:100f55e703399ff81a33c7757872639375219f91169fd589872240f3422e6b09"
+    },
+    {
+      "path": "overnight/data/dataset.py",
+      "sha256": "sha256:32445b5e78fde29bde3d91d47368d9a01d0fdc64d12953b5684ddafd9c579562"
+    },
+    {
+      "path": "overnight/fixture/chain.mjs",
+      "sha256": "sha256:2cc972e831cee52de3f06b0114a3d0513f854fb9691d0930247908bb6d71e2aa"
+    },
+    {
+      "path": "overnight/fixture/run.mjs",
+      "sha256": "sha256:5efb26107d76cc12b018a09e6b3bfc01597d480c3644e08bf848f36eb274a140"
+    },
+    {
+      "path": "overnight/tests/fixture-boundary.test.mjs",
+      "sha256": "sha256:9c30bb12869c4cf89d1aac86565867ee1c8ac3d4ca48b82d7d4f1b99a885a92b"
+    },
+    {
+      "path": "overnight/tests/readiness-contract.test.mjs",
+      "sha256": "sha256:9fa0ab5bca52b3650bd73647612a7a2213ad731bb34a028f2910d5ead0a5be52"
+    },
+    {
+      "path": "overnight/tests/test_admission.py",
+      "sha256": "sha256:00929996560db75e6e1d8a3026ef548ae2fef35dae38699b3f56c1c72b868e2e"
+    },
+    {
+      "path": "overnight/tests/test_analysis.py",
+      "sha256": "sha256:890b3601a5b2241d1563fa90b392a4ef9ff09a4cd24b9962fee58fd8947c904a"
+    },
+    {
+      "path": "overnight/tests/test_data.py",
+      "sha256": "sha256:596d9adf29e4ff7f277c90ee79e1571e502703b6b6e7b1639608da3255b7f2df"
+    },
+    {
+      "path": "overnight/tests/test_verification.py",
+      "sha256": "sha256:3fff3903999fcd55ed428ae07b9ad1687b122eb17952327bf4a4de25030445a0"
+    },
+    {
+      "path": "overnight/verify.py",
+      "sha256": "sha256:264ea6eb50f0fc5a9f4c0d054cc39b843354387a36aeee916987585a45895b82"
+    },
+    {
+      "path": "docs/overnight/evidence.json",
+      "sha256": "sha256:79d9ad0a23498516319efc91c4508d23ea497b06bd5b31c93238eb6105f37da9"
+    },
+    {
+      "path": "docs/overnight/baseline-pins.json",
+      "sha256": "sha256:0abd6334b51123b78a9a7eb7b76afae1c40beaa71f23da735a047b64da59c868"
+    }
+  ]
+}

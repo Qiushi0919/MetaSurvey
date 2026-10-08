@@ -1,0 +1,90 @@
+{
+  "w1_version": "1.0.0",
+  "status": "INTERFACES_FROZEN_BEFORE_AGENT_IMPLEMENTATION",
+  "authorization_sha256": "sha256:2372fa8d18cf399c4ce978364561519d514fa720e177cd1e61648251cbdfb51d",
+  "decisions": {
+    "D01": "APPROVED",
+    "D02": "APPROVED",
+    "D03": "APPROVED",
+    "D04": "APPROVED"
+  },
+  "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER",
+  "real_data_admission_gate": "BLOCKED",
+  "p1b_authorized": false,
+  "production_enabled": false,
+  "schemas": [
+    {
+      "path": "contracts/closure/AdmissionReceipt.schema.json",
+      "sha256": "sha256:4820257ad41681478752787091f321e110f06da45e1c79521b16ce9be27a7d02"
+    },
+    {
+      "path": "contracts/closure/BrainPacket.schema.json",
+      "sha256": "sha256:098be18825a7b40f93eee1dc1f0bf867bd64f9b20b16822dee05b76d5230ddb8"
+    },
+    {
+      "path": "contracts/closure/ResearchDraft.schema.json",
+      "sha256": "sha256:0088e5b2d4aab72bf004f20b1eaeb8687bdc9a55b141376a1f5f50c5133b7d6b"
+    },
+    {
+      "path": "contracts/closure/SourceAdmissionPolicy.schema.json",
+      "sha256": "sha256:e62a69946047839e0f7b25875080d48d5c383de8036c69b3dec50f290d062176"
+    }
+  ],
+  "reason_registry_sha256": "sha256:1616597fb7287bd38a584afd2391978f58a189c4da17e29e87bd6b849af821ff",
+  "migration_scope": "006 exact schema: policies, receipts, revocations, export/import audit only; append-only; no draft/order/fill/business state table",
+  "release_plan": "closure1.2.0 and separate active provenance; old releases/config/p1a proof remain original bytes; active new proof covers ALL src/scripts/tests/closure schemas/fixture bytes",
+  "owned_paths": {
+    "DA": [
+      "src/closure/admission.mjs",
+      "src/closure/export.mjs",
+      "tests/closure-admission.test.mjs",
+      "tests/fixtures/closure/data-helpers.mjs",
+      "docs/closure-implementation/data.md"
+    ],
+    "PH": [
+      "src/closure/import.mjs",
+      "src/closure/consumer.mjs",
+      "src/closure/isolation.mjs",
+      "tests/closure-platform.test.mjs",
+      "docs/closure-implementation/platform.md"
+    ],
+    "parent": [
+      "contracts/closure/*",
+      "migrations/006_*",
+      "src/closure/contracts.mjs",
+      "src/closure/store.mjs",
+      "src/closure/fixture.mjs",
+      "tests/closure-e2e.test.mjs",
+      "scripts/*closure*",
+      "src/p1a/code-provenance.mjs",
+      "shared metadata/release/ADR/Gate"
+    ]
+  },
+  "protocol": {
+    "hash": "hashValue(object minus top-level content_hash/proof)",
+    "signature": "ED25519 over UTF8 content_hash; public_key_hash=sha256(DER SPKI)",
+    "packet_projection_hash": "hashValue({snapshot_ref,data_hash,decision_cutoff,feature_version,rules_hash,evidence})",
+    "closure_hash": "hashValue(lineage_bundle.closure_refs)",
+    "issuer": "trusted constructor-injected authority only; fixture-only deterministic test key; no real credential; stored policy+receipt exact refs required",
+    "revocation": "trusted parent checks active policy/receipt at export/read/import; consumer gets only artifact and trusted public key, no DB handle; before+after process execution recheck receipt",
+    "freshness": "explicit per-kind fixture policy from provenance event_time, checked at declared consume time; no production default",
+    "real_input": "all non-SYNTHETIC rejected, including synthetic closure under OBSERVED/RECONSTRUCTED or REAL_RESEARCH request"
+  },
+  "migration_sha256": "sha256:8ecf7fb64fa1ac4c2bcf8821753721daa2705e08ab36d858c48664a94e91fd47",
+  "interface_sha256": "sha256:ab16536ab3b79498e99f5193998da4a2c0e69c19dcd06fcc7ff91bded6cec35b",
+  "shared_api_files": [
+    {
+      "path": "src/closure/contracts.mjs",
+      "sha256": "sha256:5365e34da65f7a7854ba2bfbb8c8394b9dc9e6a581193215d6cc68899b70bbf5"
+    },
+    {
+      "path": "src/closure/store.mjs",
+      "sha256": "sha256:698b2541d43423aaab458d529d586be2320e7903d51e564869323564b8d5f3ec"
+    }
+  ],
+  "validation": {
+    "schemas_loaded": true,
+    "empty_to_latest": 6,
+    "idempotent": true
+  }
+}

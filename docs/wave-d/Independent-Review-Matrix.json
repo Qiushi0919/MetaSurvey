@@ -1,0 +1,3998 @@
+{
+  "cases": [
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-001",
+      "interface": "direct raw fields/items/ordinal",
+      "name": "603993.SH all eligible field literals match original ordinal bytes"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-002",
+      "interface": "actual Assessment refs",
+      "name": "603993.SH feature refs are actual eligible source observations"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-003",
+      "interface": "Input source clocks",
+      "name": "603993.SH actual four clocks never backfill date-only evidence"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-004",
+      "interface": "Input augmentation refs",
+      "name": "603993.SH new observations later than preserved Wave C cutoff"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_coordinates",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-005",
+      "interface": "actual Wave C registered predecessors",
+      "name": "603993.SH old prices/scores and predecessor chain retained exactly"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-006",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603993.SH daily_basic latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-007",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603993.SH income latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-008",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603993.SH balancesheet latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-009",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603993.SH cashflow latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-010",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603993.SH fina_indicator latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-011",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH derived_revenue_yoy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-012",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH derived_consolidated_profit_yoy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-013",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH cash_conversion_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-014",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH cash_after_capex_proxy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-015",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH debt_ratio_pct independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-016",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH receivables_to_revenue_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-017",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603993.SH inventory_to_revenue_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-018",
+      "interface": "actual cash conversion feature",
+      "name": "603993.SH cash denominator is consolidated and explicitly never parent profit"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "valuation_units",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-019",
+      "interface": "actual feature formulas/units",
+      "name": "603993.SH valuation TTM claims source-reported, money units not admitted"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "current_industry_to_history",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-020",
+      "interface": "actual features",
+      "name": "603993.SH current industry is source declaration, history remains unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-021",
+      "interface": "actual status evidence/feature state",
+      "name": "603993.SH terminal-schema failure keeps negative status UNKNOWN"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-022",
+      "interface": "actual announcement chain",
+      "name": "603993.SH announcements are only official index metadata, not body facts"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-023",
+      "interface": "independent raw closes/amounts Decimal",
+      "name": "603993.SH ten retained raw price metrics independently recomputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-024",
+      "interface": "direct raw fields Decimal factor ratio",
+      "name": "603993.SH all327 adjusted closes independently recomputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-025",
+      "interface": "actual adjustment metadata",
+      "name": "603993.SH raw not replaced,5ambiguities8deltas remain unresolved"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "human_report_coverage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-026",
+      "interface": "render_report actual registered object",
+      "name": "603993.SH nine human dimensions plus precise limitations delivered"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "unknown_not_zero",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-027",
+      "interface": "actual features",
+      "name": "603993.SH unknown/conflict values not zero imputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "unknown_not_zero",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-028",
+      "interface": "actual unknown delta",
+      "name": "603993.SH UNKNOWN list exactly tracks all missing or conflicting features"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-029",
+      "interface": "actual Input and predecessor coverage",
+      "name": "603993.SH eight coverage deltas independently counted from eligible rows"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_permission",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-030",
+      "interface": "actual chain",
+      "name": "603993.SH grades/probability/fees/accounts unset, nontradeable"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-031",
+      "interface": "assert_registered",
+      "name": "603993.SH live namespace mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-032",
+      "interface": "assert_registered",
+      "name": "603993.SH live productionGate mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-033",
+      "interface": "assert_registered",
+      "name": "603993.SH live formal_source_admission mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-034",
+      "interface": "assert_registered",
+      "name": "603993.SH live historical_visibility_proven mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-035",
+      "interface": "assert_registered",
+      "name": "603993.SH copy Report blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-036",
+      "interface": "assert_registered",
+      "name": "603993.SH correctly resealed Report blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-037",
+      "interface": "canonical object vs original file",
+      "name": "603993.SH persisted input exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-038",
+      "interface": "canonical object vs original file",
+      "name": "603993.SH persisted assessment exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-039",
+      "interface": "canonical object vs original file",
+      "name": "603993.SH persisted report exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-040",
+      "interface": "registered rendering vs original file",
+      "name": "603993.SH persisted human report exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-041",
+      "interface": "direct raw fields/items/ordinal",
+      "name": "600312.SH all eligible field literals match original ordinal bytes"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-042",
+      "interface": "actual Assessment refs",
+      "name": "600312.SH feature refs are actual eligible source observations"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-043",
+      "interface": "Input source clocks",
+      "name": "600312.SH actual four clocks never backfill date-only evidence"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-044",
+      "interface": "Input augmentation refs",
+      "name": "600312.SH new observations later than preserved Wave C cutoff"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_coordinates",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-045",
+      "interface": "actual Wave C registered predecessors",
+      "name": "600312.SH old prices/scores and predecessor chain retained exactly"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-046",
+      "interface": "independent period groups/raw Decimal",
+      "name": "600312.SH daily_basic latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-047",
+      "interface": "independent period groups/raw Decimal",
+      "name": "600312.SH income latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-048",
+      "interface": "independent period groups/raw Decimal",
+      "name": "600312.SH balancesheet latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-049",
+      "interface": "independent period groups/raw Decimal",
+      "name": "600312.SH cashflow latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-050",
+      "interface": "independent period groups/raw Decimal",
+      "name": "600312.SH fina_indicator latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-051",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH derived_revenue_yoy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-052",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH derived_consolidated_profit_yoy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-053",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH cash_conversion_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-054",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH cash_after_capex_proxy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-055",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH debt_ratio_pct independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-056",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH receivables_to_revenue_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-057",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "600312.SH inventory_to_revenue_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-058",
+      "interface": "actual cash conversion feature",
+      "name": "600312.SH cash denominator is consolidated and explicitly never parent profit"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "valuation_units",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-059",
+      "interface": "actual feature formulas/units",
+      "name": "600312.SH valuation TTM claims source-reported, money units not admitted"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "current_industry_to_history",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-060",
+      "interface": "actual features",
+      "name": "600312.SH current industry is source declaration, history remains unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-061",
+      "interface": "actual status evidence/feature state",
+      "name": "600312.SH terminal-schema failure keeps negative status UNKNOWN"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-062",
+      "interface": "actual announcement chain",
+      "name": "600312.SH announcements are only official index metadata, not body facts"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-063",
+      "interface": "independent raw closes/amounts Decimal",
+      "name": "600312.SH ten retained raw price metrics independently recomputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-064",
+      "interface": "direct raw fields Decimal factor ratio",
+      "name": "600312.SH all327 adjusted closes independently recomputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-065",
+      "interface": "actual adjustment metadata",
+      "name": "600312.SH raw not replaced,5ambiguities8deltas remain unresolved"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "human_report_coverage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-066",
+      "interface": "render_report actual registered object",
+      "name": "600312.SH nine human dimensions plus precise limitations delivered"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "unknown_not_zero",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-067",
+      "interface": "actual features",
+      "name": "600312.SH unknown/conflict values not zero imputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "unknown_not_zero",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-068",
+      "interface": "actual unknown delta",
+      "name": "600312.SH UNKNOWN list exactly tracks all missing or conflicting features"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-069",
+      "interface": "actual Input and predecessor coverage",
+      "name": "600312.SH eight coverage deltas independently counted from eligible rows"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_permission",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-070",
+      "interface": "actual chain",
+      "name": "600312.SH grades/probability/fees/accounts unset, nontradeable"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-071",
+      "interface": "assert_registered",
+      "name": "600312.SH live namespace mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-072",
+      "interface": "assert_registered",
+      "name": "600312.SH live productionGate mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-073",
+      "interface": "assert_registered",
+      "name": "600312.SH live formal_source_admission mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-074",
+      "interface": "assert_registered",
+      "name": "600312.SH live historical_visibility_proven mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-075",
+      "interface": "assert_registered",
+      "name": "600312.SH copy Report blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-076",
+      "interface": "assert_registered",
+      "name": "600312.SH correctly resealed Report blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-077",
+      "interface": "canonical object vs original file",
+      "name": "600312.SH persisted input exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-078",
+      "interface": "canonical object vs original file",
+      "name": "600312.SH persisted assessment exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-079",
+      "interface": "canonical object vs original file",
+      "name": "600312.SH persisted report exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-080",
+      "interface": "registered rendering vs original file",
+      "name": "600312.SH persisted human report exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-081",
+      "interface": "direct raw fields/items/ordinal",
+      "name": "603228.SH all eligible field literals match original ordinal bytes"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-082",
+      "interface": "actual Assessment refs",
+      "name": "603228.SH feature refs are actual eligible source observations"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-083",
+      "interface": "Input source clocks",
+      "name": "603228.SH actual four clocks never backfill date-only evidence"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-084",
+      "interface": "Input augmentation refs",
+      "name": "603228.SH new observations later than preserved Wave C cutoff"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_coordinates",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-085",
+      "interface": "actual Wave C registered predecessors",
+      "name": "603228.SH old prices/scores and predecessor chain retained exactly"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-086",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603228.SH daily_basic latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-087",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603228.SH income latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-088",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603228.SH balancesheet latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-089",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603228.SH cashflow latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-090",
+      "interface": "independent period groups/raw Decimal",
+      "name": "603228.SH fina_indicator latest scope literals independently matched"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-091",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH derived_revenue_yoy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-092",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH derived_consolidated_profit_yoy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-093",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH cash_conversion_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-094",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH cash_after_capex_proxy independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-095",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH debt_ratio_pct independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-096",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH receivables_to_revenue_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-097",
+      "interface": "independent direct raw Decimal arithmetic",
+      "name": "603228.SH inventory_to_revenue_ratio independently recomputed or unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-098",
+      "interface": "actual cash conversion feature",
+      "name": "603228.SH cash denominator is consolidated and explicitly never parent profit"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "valuation_units",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-099",
+      "interface": "actual feature formulas/units",
+      "name": "603228.SH valuation TTM claims source-reported, money units not admitted"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "current_industry_to_history",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-100",
+      "interface": "actual features",
+      "name": "603228.SH current industry is source declaration, history remains unknown"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-101",
+      "interface": "actual status evidence/feature state",
+      "name": "603228.SH terminal-schema failure keeps negative status UNKNOWN"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-102",
+      "interface": "actual announcement chain",
+      "name": "603228.SH announcements are only official index metadata, not body facts"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-103",
+      "interface": "independent raw closes/amounts Decimal",
+      "name": "603228.SH ten retained raw price metrics independently recomputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-104",
+      "interface": "direct raw fields Decimal factor ratio",
+      "name": "603228.SH all327 adjusted closes independently recomputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "raw_adjusted_isolation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-105",
+      "interface": "actual adjustment metadata",
+      "name": "603228.SH raw not replaced,5ambiguities8deltas remain unresolved"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "human_report_coverage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-106",
+      "interface": "render_report actual registered object",
+      "name": "603228.SH nine human dimensions plus precise limitations delivered"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "unknown_not_zero",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-107",
+      "interface": "actual features",
+      "name": "603228.SH unknown/conflict values not zero imputed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "unknown_not_zero",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-108",
+      "interface": "actual unknown delta",
+      "name": "603228.SH UNKNOWN list exactly tracks all missing or conflicting features"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_lineage",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-109",
+      "interface": "actual Input and predecessor coverage",
+      "name": "603228.SH eight coverage deltas independently counted from eligible rows"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_permission",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-110",
+      "interface": "actual chain",
+      "name": "603228.SH grades/probability/fees/accounts unset, nontradeable"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-111",
+      "interface": "assert_registered",
+      "name": "603228.SH live namespace mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-112",
+      "interface": "assert_registered",
+      "name": "603228.SH live productionGate mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-113",
+      "interface": "assert_registered",
+      "name": "603228.SH live formal_source_admission mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-114",
+      "interface": "assert_registered",
+      "name": "603228.SH live historical_visibility_proven mutation blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-115",
+      "interface": "assert_registered",
+      "name": "603228.SH copy Report blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-116",
+      "interface": "assert_registered",
+      "name": "603228.SH correctly resealed Report blocked",
+      "observed_rejections": [
+        "WAVE_D_UNREGISTERED_OR_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-117",
+      "interface": "canonical object vs original file",
+      "name": "603228.SH persisted input exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-118",
+      "interface": "canonical object vs original file",
+      "name": "603228.SH persisted assessment exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-119",
+      "interface": "canonical object vs original file",
+      "name": "603228.SH persisted report exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-120",
+      "interface": "registered rendering vs original file",
+      "name": "603228.SH persisted human report exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-121",
+      "interface": "replay/assert_registered",
+      "name": "ten actual registered objects and three-symbol cohort"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_coordinates",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-122",
+      "interface": "actual Comparison",
+      "name": "comparison no new total rank, BUY/SELL, or score"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-123",
+      "interface": "canonical/render comparison",
+      "name": "persisted comparison json exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-124",
+      "interface": "canonical/render comparison",
+      "name": "persisted comparison md exact replay"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "deterministic_replay",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-125",
+      "interface": "saved proof and private permissions",
+      "name": "deterministic proof and inventory true original paths"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "full_statement_schema",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-126",
+      "interface": "original full raw schema",
+      "name": "actual9 full statements retain all94/158/97 fields"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "full_statement_schema",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-127",
+      "interface": "original full rows direct cells",
+      "name": "actual9 full statements are originals, not manufactured named projection"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-128",
+      "interface": "_mint actual context/upstream",
+      "name": "private mint genuine Input positive control"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-129",
+      "interface": "core.register",
+      "name": "register cannot mint caller score",
+      "observed_rejections": [
+        "WAVE_D_DIRECT_ISSUE_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-130",
+      "interface": "core.derive",
+      "name": "derive cannot mint caller score",
+      "observed_rejections": [
+        "WAVE_D_DIRECT_ISSUE_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-131",
+      "interface": "_mint no caller-body interface",
+      "name": "private Input supplied body forbidden",
+      "observed_rejections": [
+        "TypeError"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-132",
+      "interface": "_mint no caller-body interface",
+      "name": "private Assessment supplied body forbidden",
+      "observed_rejections": [
+        "TypeError"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-133",
+      "interface": "_mint no caller-body interface",
+      "name": "private Report supplied body forbidden",
+      "observed_rejections": [
+        "TypeError"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-134",
+      "interface": "_mint no caller-body interface",
+      "name": "private Comparison supplied body forbidden",
+      "observed_rejections": [
+        "TypeError"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-135",
+      "interface": "_mint fresh context equality",
+      "name": "private context rules forgery blocked",
+      "observed_rejections": [
+        "WAVE_D_CONTEXT_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-136",
+      "interface": "_mint fresh context equality",
+      "name": "private context pins forgery blocked",
+      "observed_rejections": [
+        "WAVE_D_CONTEXT_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-137",
+      "interface": "_mint fresh context equality",
+      "name": "private context official forgery blocked",
+      "observed_rejections": [
+        "WAVE_D_CONTEXT_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-138",
+      "interface": "_mint fresh context equality",
+      "name": "private context code_hash forgery blocked",
+      "observed_rejections": [
+        "WAVE_D_CONTEXT_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-139",
+      "interface": "_mint live _UPSTREAMS identity",
+      "name": "private upstream caller copy blocked",
+      "observed_rejections": [
+        "WAVE_D_UPSTREAM_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-140",
+      "interface": "_mint unregistered upstream",
+      "name": "private injected capture body blocked",
+      "observed_rejections": [
+        "WAVE_D_UPSTREAM_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-141",
+      "interface": "_mint unregistered upstream",
+      "name": "private injected old_reports body blocked",
+      "observed_rejections": [
+        "WAVE_D_UPSTREAM_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-142",
+      "interface": "_mint digest bound registered upstream",
+      "name": "live _UPSTREAMS content mutation cannot mint",
+      "observed_rejections": [
+        "WAVE_D_UPSTREAM_FORGERY"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-143",
+      "interface": "assert_registered",
+      "name": "live upstream mutation invalidates existing Report",
+      "observed_rejections": [
+        "WAVE_D_CONTEXT_OR_UPSTREAM_MUTATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-144",
+      "interface": "_context deepcopy",
+      "name": "returned context mutation cannot alter live authority"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-145",
+      "interface": "assess",
+      "name": "unordered cohort assess blocked",
+      "observed_rejections": [
+        "WAVE_D_COHORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-146",
+      "interface": "reports",
+      "name": "missing cohort report blocked",
+      "observed_rejections": [
+        "WAVE_D_COHORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "producer_authority",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-147",
+      "interface": "comparison",
+      "name": "missing comparison parent blocked",
+      "observed_rejections": [
+        "WAVE_D_COMPARISON_COHORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-148",
+      "interface": "assert_registered no cross-call cache",
+      "name": "pre-mutation raw same context positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-149",
+      "interface": "assert_registered checked_file",
+      "name": "post-positive raw mutation rejects Report",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-150",
+      "interface": "assert_registered parent graph",
+      "name": "post-positive raw mutation rejects Comparison",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-151",
+      "interface": "assert_registered no cross-call cache",
+      "name": "pre-mutation rules same context positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-152",
+      "interface": "assert_registered checked_file",
+      "name": "post-positive rules mutation rejects Report",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-153",
+      "interface": "assert_registered parent graph",
+      "name": "post-positive rules mutation rejects Comparison",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-154",
+      "interface": "assert_registered no cross-call cache",
+      "name": "pre-mutation code same context positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-155",
+      "interface": "assert_registered checked_file",
+      "name": "post-positive code mutation rejects Report",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-156",
+      "interface": "assert_registered parent graph",
+      "name": "post-positive code mutation rejects Comparison",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-157",
+      "interface": "assert_registered no cross-call cache",
+      "name": "pre-mutation schema same context positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-158",
+      "interface": "assert_registered checked_file",
+      "name": "post-positive schema mutation rejects Report",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-159",
+      "interface": "assert_registered parent graph",
+      "name": "post-positive schema mutation rejects Comparison",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-160",
+      "interface": "assert_registered no cross-call cache",
+      "name": "pre-mutation SSE version same context positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-161",
+      "interface": "assert_registered checked_file",
+      "name": "post-positive SSE version mutation rejects Report",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-162",
+      "interface": "assert_registered parent graph",
+      "name": "post-positive SSE version mutation rejects Comparison",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-163",
+      "interface": "assert_registered no cross-call cache",
+      "name": "pre-mutation fullstatement version same context positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-164",
+      "interface": "assert_registered checked_file",
+      "name": "post-positive fullstatement version mutation rejects Report",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_version_invalidation",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-165",
+      "interface": "assert_registered parent graph",
+      "name": "post-positive fullstatement version mutation rejects Comparison",
+      "observed_rejections": [
+        "WAVE_C_DEPENDENCY_INVALIDATED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-166",
+      "interface": "check_ref_clock instant_ns",
+      "name": "nanosecond future retrieval blocked",
+      "observed_rejections": [
+        "WAVE_D_CLOCK_OR_CUTOFF_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "pit_four_clocks",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-167",
+      "interface": "check_ref_clock",
+      "name": "DATE_ONLY midnight backfill blocked",
+      "observed_rejections": [
+        "WAVE_D_CLOCK_OR_CUTOFF_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-168",
+      "interface": "analyze actual pure normalizer",
+      "name": "synthetic ann_date invalid/future literal excluded 20261007"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-169",
+      "interface": "analyze actual pure normalizer",
+      "name": "synthetic end_date invalid/future literal excluded 20261231"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-170",
+      "interface": "analyze actual pure normalizer",
+      "name": "synthetic ann_date invalid/future literal excluded 20260230"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-171",
+      "interface": "complete_set actual archived response",
+      "name": "actual stock_st failed terminal retained UNKNOWN"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-172",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st complete observed-day set positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-173",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st empty cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-174",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st truncated cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-175",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st terminal-nonempty cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-176",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st repeat-change cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-177",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st wrong-day cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-178",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st schema cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-179",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st duplicate cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-180",
+      "interface": "complete_set pure helper",
+      "name": "synthetic stock_st missingpage cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-181",
+      "interface": "complete_set actual archived response",
+      "name": "actual suspend_d failed terminal retained UNKNOWN"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-182",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d complete observed-day set positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-183",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d empty cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-184",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d truncated cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-185",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d terminal-nonempty cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-186",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d repeat-change cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-187",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d wrong-day cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-188",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d schema cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-189",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d duplicate cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "status_completeness",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-190",
+      "interface": "complete_set pure helper",
+      "name": "synthetic suspend_d missingpage cannot negative proof"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-191",
+      "interface": "allowed_target",
+      "name": "official SSE same-path static redirect positive"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-192",
+      "interface": "allowed_target",
+      "name": "SSE redirect host rejected",
+      "observed_rejections": [
+        "SSE_REDIRECT_TARGET_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-193",
+      "interface": "allowed_target",
+      "name": "SSE redirect path rejected",
+      "observed_rejections": [
+        "SSE_REDIRECT_TARGET_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-194",
+      "interface": "allowed_target",
+      "name": "SSE redirect query rejected",
+      "observed_rejections": [
+        "SSE_REDIRECT_TARGET_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-195",
+      "interface": "allowed_target",
+      "name": "SSE redirect fragment rejected",
+      "observed_rejections": [
+        "SSE_REDIRECT_TARGET_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-196",
+      "interface": "allowed_target",
+      "name": "SSE redirect http rejected",
+      "observed_rejections": [
+        "SSE_REDIRECT_TARGET_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-197",
+      "interface": "allowed_target",
+      "name": "SSE redirect userinfo rejected",
+      "observed_rejections": [
+        "SSE_REDIRECT_TARGET_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-198",
+      "interface": "parse_pdf actual parser",
+      "name": "HTML never parsed into PDF catalyst",
+      "observed_rejections": [
+        "SSE_PDF_FORMAT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-199",
+      "interface": "actual original enrichment manifest",
+      "name": "all6 actual SSE body failures preserved without catalyst"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-200",
+      "interface": "financial_features",
+      "name": "synthetic independent derived_revenue_yoy exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-201",
+      "interface": "financial_features",
+      "name": "synthetic independent derived_consolidated_profit_yoy exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-202",
+      "interface": "financial_features",
+      "name": "synthetic independent cash_conversion_ratio exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-203",
+      "interface": "financial_features",
+      "name": "synthetic independent cash_after_capex_proxy exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-204",
+      "interface": "financial_features",
+      "name": "synthetic independent debt_ratio_pct exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-205",
+      "interface": "financial_features",
+      "name": "synthetic independent receivables_to_revenue_ratio exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-206",
+      "interface": "financial_features",
+      "name": "synthetic independent inventory_to_revenue_ratio exact arithmetic"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-207",
+      "interface": "financial_features",
+      "name": "synthetic cash period-mismatch remains unknown/conflict"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-208",
+      "interface": "financial_features",
+      "name": "synthetic cash zero-profit remains unknown/conflict"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-209",
+      "interface": "financial_features",
+      "name": "synthetic cash negative-profit remains unknown/conflict"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-210",
+      "interface": "financial_features",
+      "name": "synthetic cash cross-product-conflict remains unknown/conflict"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-211",
+      "interface": "financial_features",
+      "name": "synthetic cash revision-conflict remains unknown/conflict"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-212",
+      "interface": "financial_features",
+      "name": "synthetic cash missing remains unknown/conflict"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-213",
+      "interface": "financial_features",
+      "name": "synthetic parent-profit-only never denominator"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-214",
+      "interface": "financial_features",
+      "name": "synthetic report_type2 cannot replace primary type1"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_period_revision",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-215",
+      "interface": "financial_features",
+      "name": "synthetic update_flag cannot order revisions"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "financial_independent_math",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-216",
+      "interface": "financial_features",
+      "name": "synthetic Decimal private context independent of global rounding"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_pin_integrity",
+      "expected": "CONDITION_TRUE",
+      "id": "PY-217",
+      "interface": "SHA256 before/after",
+      "name": "all frozen pins and actual originals unchanged at review end"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-001",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH.input.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-002",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH.assessment.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-003",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH.report.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-004",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH.input.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-005",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH.assessment.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-006",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH.report.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-007",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH.input.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-008",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH.assessment.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-009",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH.report.json native closed schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-010",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true provider_identity_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-011",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true license_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-012",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true transport_integrity_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-013",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true historical_visibility_proven promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-014",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true productionGate promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-015",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true tradeable promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-016",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true cloud_transfer promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-017",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true can_produce_order promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-018",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH true production_eligible promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-019",
+      "interface": "validateContract",
+      "name": "603993.SH native ResearchCard rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-020",
+      "interface": "validateContract",
+      "name": "603993.SH native CandidateEligibility rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-021",
+      "interface": "validateContract",
+      "name": "603993.SH native SignalEvent rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-022",
+      "interface": "validateContract",
+      "name": "603993.SH native Approval rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-023",
+      "interface": "validateContract",
+      "name": "603993.SH native OrderIntent rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-024",
+      "interface": "validateContract",
+      "name": "603993.SH native Fill rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-025",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition ResearchCard blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-026",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition Candidate blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-027",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition Signal blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-028",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition Approval blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-029",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition OrderIntent blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-030",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition Order blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-031",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition Fill blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-032",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH transition CLOUD_MODEL blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-033",
+      "interface": "transitionLocalResearch",
+      "name": "603993.SH legitimate local display allowed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-034",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH namespace CORE_40 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-035",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH namespace EVENT_3 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-036",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH namespace RESEARCH_6_18M blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-037",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH namespace LOCAL_EXPERIMENTAL_REAL_RESEARCH:EVENT_3 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-038",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH extra probability blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-039",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH extra expected_return blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-040",
+      "interface": "validateLocalResearch",
+      "name": "603993.SH extra order_intent blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-041",
+      "interface": "prepareRealResearchInput",
+      "name": "603993.SH formal input refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-042",
+      "interface": "assessFormalInput",
+      "name": "603993.SH formal assessment refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-043",
+      "interface": "produceFormalCard",
+      "name": "603993.SH formal Card refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-044",
+      "interface": "validateOrderChain",
+      "name": "603993.SH report cannot validate order chain",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-045",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true provider_identity_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-046",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true license_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-047",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true transport_integrity_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-048",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true historical_visibility_proven promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-049",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true productionGate promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-050",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true tradeable promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-051",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true cloud_transfer promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-052",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true can_produce_order promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-053",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH true production_eligible promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-054",
+      "interface": "validateContract",
+      "name": "600312.SH native ResearchCard rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-055",
+      "interface": "validateContract",
+      "name": "600312.SH native CandidateEligibility rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-056",
+      "interface": "validateContract",
+      "name": "600312.SH native SignalEvent rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-057",
+      "interface": "validateContract",
+      "name": "600312.SH native Approval rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-058",
+      "interface": "validateContract",
+      "name": "600312.SH native OrderIntent rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-059",
+      "interface": "validateContract",
+      "name": "600312.SH native Fill rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-060",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition ResearchCard blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-061",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition Candidate blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-062",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition Signal blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-063",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition Approval blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-064",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition OrderIntent blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-065",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition Order blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-066",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition Fill blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-067",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH transition CLOUD_MODEL blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-068",
+      "interface": "transitionLocalResearch",
+      "name": "600312.SH legitimate local display allowed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-069",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH namespace CORE_40 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-070",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH namespace EVENT_3 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-071",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH namespace RESEARCH_6_18M blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-072",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH namespace LOCAL_EXPERIMENTAL_REAL_RESEARCH:EVENT_3 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-073",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH extra probability blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-074",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH extra expected_return blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-075",
+      "interface": "validateLocalResearch",
+      "name": "600312.SH extra order_intent blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-076",
+      "interface": "prepareRealResearchInput",
+      "name": "600312.SH formal input refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-077",
+      "interface": "assessFormalInput",
+      "name": "600312.SH formal assessment refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-078",
+      "interface": "produceFormalCard",
+      "name": "600312.SH formal Card refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-079",
+      "interface": "validateOrderChain",
+      "name": "600312.SH report cannot validate order chain",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-080",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true provider_identity_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-081",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true license_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-082",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true transport_integrity_verified promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-083",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true historical_visibility_proven promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-084",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true productionGate promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-085",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true tradeable promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-086",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true cloud_transfer promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-087",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true can_produce_order promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-088",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH true production_eligible promotion blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-089",
+      "interface": "validateContract",
+      "name": "603228.SH native ResearchCard rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-090",
+      "interface": "validateContract",
+      "name": "603228.SH native CandidateEligibility rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-091",
+      "interface": "validateContract",
+      "name": "603228.SH native SignalEvent rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-092",
+      "interface": "validateContract",
+      "name": "603228.SH native Approval rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-093",
+      "interface": "validateContract",
+      "name": "603228.SH native OrderIntent rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-094",
+      "interface": "validateContract",
+      "name": "603228.SH native Fill rejects Report",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-095",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition ResearchCard blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-096",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition Candidate blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-097",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition Signal blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-098",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition Approval blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-099",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition OrderIntent blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-100",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition Order blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-101",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition Fill blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-102",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH transition CLOUD_MODEL blocked",
+      "observed_rejections": [
+        "WAVE_D_FORMAL_OR_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-103",
+      "interface": "transitionLocalResearch",
+      "name": "603228.SH legitimate local display allowed"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-104",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH namespace CORE_40 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-105",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH namespace EVENT_3 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-106",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH namespace RESEARCH_6_18M blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-107",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH namespace LOCAL_EXPERIMENTAL_REAL_RESEARCH:EVENT_3 blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-108",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH extra probability blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-109",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH extra expected_return blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "score_to_probability",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-110",
+      "interface": "validateLocalResearch",
+      "name": "603228.SH extra order_intent blocked",
+      "observed_rejections": [
+        "WAVE_D_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-111",
+      "interface": "prepareRealResearchInput",
+      "name": "603228.SH formal input refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-112",
+      "interface": "assessFormalInput",
+      "name": "603228.SH formal assessment refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-113",
+      "interface": "produceFormalCard",
+      "name": "603228.SH formal Card refuses sandbox",
+      "observed_rejections": [
+        "WAVE_C_SANDBOX_FORMAL_PROMOTION_FORBIDDEN"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-114",
+      "interface": "validateOrderChain",
+      "name": "603228.SH report cannot validate order chain",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-115",
+      "interface": "validateLocalResearch",
+      "name": "actual comparison native schema accepts local object"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-116",
+      "interface": "validateContract",
+      "name": "Comparison cannot promote ResearchCard",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-117",
+      "interface": "validateContract",
+      "name": "Comparison cannot promote CandidateEligibility",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-118",
+      "interface": "validateContract",
+      "name": "Comparison cannot promote SignalEvent",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-119",
+      "interface": "validateContract",
+      "name": "Comparison cannot promote Approval",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-120",
+      "interface": "validateContract",
+      "name": "Comparison cannot promote OrderIntent",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-121",
+      "interface": "validateContract",
+      "name": "Comparison cannot promote Fill",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "historical_available_at_backfill",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-122",
+      "interface": "validateLocalResearch timestampNs",
+      "name": "nanosecond retrieval after cutoff rejected",
+      "observed_rejections": [
+        "WAVE_D_CUTOFF_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-123",
+      "interface": "assessSemantics actual helper",
+      "name": "synthetic S is nontradeable and uncalibrated"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quality_to_timing",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-124",
+      "interface": "assessSemantics",
+      "name": "high synthetic Quality with Timing gap only WATCH"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "high_quality_to_tradeable",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-125",
+      "interface": "assessSemantics",
+      "name": "cost unset prevents even illustrative S"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "high_quality_to_tradeable",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-126",
+      "interface": "assessSemantics",
+      "name": "account_suitability unset prevents even illustrative S"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "high_quality_to_tradeable",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-127",
+      "interface": "assessSemantics",
+      "name": "tradeability unset prevents even illustrative S"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-128",
+      "interface": "assessSemantics evidence admission",
+      "name": "real report refs cannot enter synthetic semantics",
+      "observed_rejections": [
+        "P1B_CLOUD_EVIDENCE_UNTRUSTED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-129",
+      "interface": "validateContract Approval",
+      "name": "native synthetic human approval structurally valid only fixture"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-130",
+      "interface": "validateContract Approval",
+      "name": "LLM cannot be HUMAN_USER",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-131",
+      "interface": "validateContract Approval",
+      "name": "MODEL cannot be HUMAN_USER",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-132",
+      "interface": "validateContract Approval",
+      "name": "SYSTEM cannot be HUMAN_USER",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-133",
+      "interface": "validateContract Approval",
+      "name": "LLM APPROVE cannot be user approval decision",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "high_quality_to_tradeable",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-134",
+      "interface": "productionGate",
+      "name": "real unconfigured account blocks production"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-135",
+      "interface": "validateOrderChain actual fixture",
+      "name": "actual authenticated synthetic two-phase order chain is preparable but production disabled"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-136",
+      "interface": "validateOrderChain",
+      "name": "actual authenticated-shape LLM with approval hashes rejected",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-137",
+      "interface": "validateOrderChain",
+      "name": "actual approval human string without authority rejected",
+      "observed_rejections": [
+        "ContractViolation"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "high_quality_to_tradeable",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-138",
+      "interface": "productionGate actual unconfigured profile",
+      "name": "exact30 actual account/cost/risk settings remain unset"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-139",
+      "interface": "createRealAdmissionService.verifyPacket",
+      "name": "actual SSE reference native verification succeeds narrow local scope"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-140",
+      "interface": "prepareRealResearchInput empty stock registry",
+      "name": "verified ADMITTED calendar receipt cannot mint stock Input",
+      "observed_rejections": [
+        "WAVE_C_FORMAL_STOCK_RECEIPT_NOT_REGISTERED"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-141",
+      "interface": "importResearchResult CostEngine",
+      "name": "actual native importer positive control returns only fixture Draft"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-142",
+      "interface": "buildBrainPacket",
+      "name": "603993.SH native packet builder refuses sandbox snapshot",
+      "observed_rejections": [
+        "CLOSURE_SNAPSHOT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-143",
+      "interface": "buildBrainPacket",
+      "name": "603993.SH native packet builder refuses sandbox receipt",
+      "observed_rejections": [
+        "CLOSURE_PURPOSE_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-144",
+      "interface": "importResearchResult",
+      "name": "603993.SH native importer rejects actual Report",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-145",
+      "interface": "importResearchResult evidence refs",
+      "name": "603993.SH real report evidence spoof rejected by importer",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-146",
+      "interface": "buildBrainPacket",
+      "name": "600312.SH native packet builder refuses sandbox snapshot",
+      "observed_rejections": [
+        "CLOSURE_SNAPSHOT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-147",
+      "interface": "buildBrainPacket",
+      "name": "600312.SH native packet builder refuses sandbox receipt",
+      "observed_rejections": [
+        "CLOSURE_PURPOSE_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-148",
+      "interface": "importResearchResult",
+      "name": "600312.SH native importer rejects actual Report",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-149",
+      "interface": "importResearchResult evidence refs",
+      "name": "600312.SH real report evidence spoof rejected by importer",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-150",
+      "interface": "buildBrainPacket",
+      "name": "603228.SH native packet builder refuses sandbox snapshot",
+      "observed_rejections": [
+        "CLOSURE_SNAPSHOT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-151",
+      "interface": "buildBrainPacket",
+      "name": "603228.SH native packet builder refuses sandbox receipt",
+      "observed_rejections": [
+        "CLOSURE_PURPOSE_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-152",
+      "interface": "importResearchResult",
+      "name": "603228.SH native importer rejects actual Report",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-153",
+      "interface": "importResearchResult evidence refs",
+      "name": "603228.SH real report evidence spoof rejected by importer",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-154",
+      "interface": "assertDraftTransition",
+      "name": "actual native fixture Draft blocks SignalEvent",
+      "observed_rejections": [
+        "CLOSURE_DRAFT_NON_EXECUTABLE"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-155",
+      "interface": "assertDraftTransition",
+      "name": "actual Report blocks native Draft transition SignalEvent",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-156",
+      "interface": "assertDraftTransition",
+      "name": "actual native fixture Draft blocks Approval",
+      "observed_rejections": [
+        "CLOSURE_DRAFT_NON_EXECUTABLE"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-157",
+      "interface": "assertDraftTransition",
+      "name": "actual Report blocks native Draft transition Approval",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-158",
+      "interface": "assertDraftTransition",
+      "name": "actual native fixture Draft blocks OrderIntent",
+      "observed_rejections": [
+        "CLOSURE_DRAFT_NON_EXECUTABLE"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-159",
+      "interface": "assertDraftTransition",
+      "name": "actual Report blocks native Draft transition OrderIntent",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-160",
+      "interface": "assertDraftTransition",
+      "name": "actual native fixture Draft blocks Order",
+      "observed_rejections": [
+        "CLOSURE_DRAFT_NON_EXECUTABLE"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-161",
+      "interface": "assertDraftTransition",
+      "name": "actual Report blocks native Draft transition Order",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-162",
+      "interface": "assertDraftTransition",
+      "name": "actual native fixture Draft blocks Fill",
+      "observed_rejections": [
+        "CLOSURE_DRAFT_NON_EXECUTABLE"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-163",
+      "interface": "assertDraftTransition",
+      "name": "actual Report blocks native Draft transition Fill",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "llm_to_human",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-164",
+      "interface": "importResearchResult unchanged guards",
+      "name": "native result injection blocked: LLM",
+      "observed_rejections": [
+        "CLOSURE_LLM_EXECUTION_INJECTION"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_signal",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-165",
+      "interface": "importResearchResult unchanged guards",
+      "name": "native result injection blocked: SignalEvent",
+      "observed_rejections": [
+        "CLOSURE_LLM_EXECUTION_INJECTION"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "report_to_order",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-166",
+      "interface": "importResearchResult unchanged guards",
+      "name": "native result injection blocked: OrderIntent",
+      "observed_rejections": [
+        "CLOSURE_LLM_EXECUTION_INJECTION"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "future_announcement",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-167",
+      "interface": "importResearchResult unchanged guards",
+      "name": "native result injection blocked: future_return",
+      "observed_rejections": [
+        "CLOSURE_OUTCOME_LEAKAGE"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-168",
+      "interface": "importResearchResult",
+      "name": "native importer strategy mismatch CORE_40 rejected",
+      "observed_rejections": [
+        "CLOSURE_NAMESPACE_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_namespace",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-169",
+      "interface": "importResearchResult",
+      "name": "native importer strategy mismatch EVENT_3 rejected",
+      "observed_rejections": [
+        "CLOSURE_NAMESPACE_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "quarantine_formal_escalation",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-170",
+      "interface": "service.registerPolicy",
+      "name": "actual native policy register refuses caller real-source policy",
+      "observed_rejections": [
+        "CLOSURE_IMPORT_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "zero_execution_writes",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-171",
+      "interface": "executionState native PGlite fixture",
+      "name": "all 22 native execution/Card tables unchanged"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "sandbox_to_formal_card",
+      "expected": "CONDITION_TRUE",
+      "id": "NATIVE-172",
+      "interface": "formalProducerStatus",
+      "name": "formal producer empty stock registry and zero outputs preserved"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-001",
+      "interface": "direct raw result SSEDATE/TITLE/CODE/URL",
+      "name": "603993.SH all official index/report facts independently match original ordinals"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-002",
+      "interface": "actual original query scope",
+      "name": "603993.SH actual SSE request bounded exactsymbol/date5rows"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-003",
+      "interface": "actual Report body status/clocks",
+      "name": "603993.SH title/date never become verified business facts"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-004",
+      "interface": "direct raw result SSEDATE/TITLE/CODE/URL",
+      "name": "600312.SH all official index/report facts independently match original ordinals"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-005",
+      "interface": "actual original query scope",
+      "name": "600312.SH actual SSE request bounded exactsymbol/date5rows"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-006",
+      "interface": "actual Report body status/clocks",
+      "name": "600312.SH title/date never become verified business facts"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-007",
+      "interface": "direct raw result SSEDATE/TITLE/CODE/URL",
+      "name": "603228.SH all official index/report facts independently match original ordinals"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-008",
+      "interface": "actual original query scope",
+      "name": "603228.SH actual SSE request bounded exactsymbol/date5rows"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_body",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-009",
+      "interface": "actual Report body status/clocks",
+      "name": "603228.SH title/date never become verified business facts"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-010",
+      "interface": "actual recorded redirect/status/raw magic",
+      "name": "actual public document1 retains301 exact static target and failedPDF"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-011",
+      "interface": "actual recorded redirect/status/raw magic",
+      "name": "actual public document2 retains301 exact static target and failedPDF"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-012",
+      "interface": "actual recorded redirect/status/raw magic",
+      "name": "actual public document3 retains301 exact static target and failedPDF"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-013",
+      "interface": "actual recorded redirect/status/raw magic",
+      "name": "actual public document4 retains301 exact static target and failedPDF"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-014",
+      "interface": "actual recorded redirect/status/raw magic",
+      "name": "actual public document5 retains301 exact static target and failedPDF"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-015",
+      "interface": "actual recorded redirect/status/raw magic",
+      "name": "actual public document6 retains301 exact static target and failedPDF"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "native_positive_control",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-016",
+      "interface": "normalize_index",
+      "name": "synthetic bounded SSE index positive parser control"
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-017",
+      "interface": "normalize_index",
+      "name": "synthetic SSE source-code cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_INDEX_SCOPE_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-018",
+      "interface": "normalize_index",
+      "name": "synthetic SSE future-date cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_ANNOUNCEMENT_DATE_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-019",
+      "interface": "normalize_index",
+      "name": "synthetic SSE row-code cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_ANNOUNCEMENT_SYMBOL_MISMATCH"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-020",
+      "interface": "normalize_index",
+      "name": "synthetic SSE external-host cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_DOCUMENT_URL_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-021",
+      "interface": "normalize_index",
+      "name": "synthetic SSE query cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_DOCUMENT_URL_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-022",
+      "interface": "normalize_index",
+      "name": "synthetic SSE wrong-page cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_INDEX_PAGINATION_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "announcement_url_pdf",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-023",
+      "interface": "normalize_index",
+      "name": "synthetic SSE HTML-title cannot become approved index evidence",
+      "observed_rejections": [
+        "SSE_TITLE_INVALID"
+      ]
+    },
+    {
+      "actual": "PASS",
+      "attack_class": "source_pin_integrity",
+      "expected": "CONDITION_TRUE",
+      "id": "SSE-024",
+      "interface": "direct before/after SHA256",
+      "name": "all public reference source versions unchanged throughout supplemental review"
+    }
+  ],
+  "classes": {
+    "announcement_body": 9,
+    "announcement_url_pdf": 25,
+    "current_industry_to_history": 3,
+    "deterministic_replay": 15,
+    "financial_independent_math": 33,
+    "financial_period_revision": 26,
+    "full_statement_schema": 2,
+    "future_announcement": 1,
+    "high_quality_to_tradeable": 5,
+    "historical_available_at_backfill": 1,
+    "human_report_coverage": 3,
+    "llm_to_human": 7,
+    "native_positive_control": 19,
+    "pit_four_clocks": 8,
+    "producer_authority": 39,
+    "quality_to_timing": 1,
+    "quarantine_formal_escalation": 34,
+    "raw_adjusted_isolation": 9,
+    "report_to_order": 12,
+    "report_to_signal": 9,
+    "sandbox_namespace": 14,
+    "sandbox_permission": 3,
+    "sandbox_to_formal_card": 60,
+    "score_coordinates": 4,
+    "score_to_probability": 9,
+    "source_lineage": 9,
+    "source_pin_integrity": 2,
+    "source_version_invalidation": 18,
+    "status_completeness": 23,
+    "unknown_not_zero": 6,
+    "valuation_units": 3,
+    "zero_execution_writes": 1
+  },
+  "code_candidate": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+  "epoch": "REPORTS-G4",
+  "fail": 0,
+  "pass": 413,
+  "productionGate": false,
+  "real_values_disclosed": false,
+  "result": "PASS_WITH_CONDITIONS",
+  "suites": {
+    "native_actual_consumers": {
+      "fail": 0,
+      "pass": 172,
+      "total": 172
+    },
+    "python_actual_producer_math": {
+      "fail": 0,
+      "pass": 217,
+      "total": 217
+    },
+    "sse_direct_originals": {
+      "fail": 0,
+      "pass": 24,
+      "total": 24
+    }
+  },
+  "total": 413,
+  "version": "1.0.0-wave-d-independent"
+}

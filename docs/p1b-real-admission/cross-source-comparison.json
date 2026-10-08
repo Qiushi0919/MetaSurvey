@@ -1,0 +1,128 @@
+{
+  "version": "1.0.0",
+  "source_evidence": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/real-stock-slice-20261005/positive-repaired-A/real-slice-evidence.json",
+    "sha256": "sha256:303dcf5b02ad0a58179193bec3aa0facb9d70bcd34579d9d47d0b9de5226d18e"
+  },
+  "gateway_probe_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/probe-report.json",
+      "sha256": "sha256:1b0c68a1f64b556d654eec084a37b673f7465d7289e025c1bcc051bffc95951a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/probe-report.json",
+      "sha256": "sha256:3fef3e75ebe227e0744fe5fdb70e849b1307eec07d9a18f2feabd578fca071d9"
+    }
+  ],
+  "calendar_comparisons": [
+    {
+      "date": "2026-09-20",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-09-25",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-09-26",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-09-27",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-09-28",
+      "official_expected_is_open": 1,
+      "gateway_is_open": 1,
+      "match": true
+    },
+    {
+      "date": "2026-10-01",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-02",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-03",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-04",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-05",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-06",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-07",
+      "official_expected_is_open": 0,
+      "gateway_is_open": 0,
+      "match": true
+    },
+    {
+      "date": "2026-10-08",
+      "official_expected_is_open": 1,
+      "gateway_is_open": 1,
+      "match": true
+    }
+  ],
+  "official_facts_outside_requested_date_scope": [
+    "2026-10-10"
+  ],
+  "security_code_reference_comparisons": [
+    {
+      "official_reference_symbol": "SSE:603993",
+      "gateway_ts_code": "603993.SH",
+      "gateway_exchange": "SSE",
+      "scope_code_matches": true
+    },
+    {
+      "official_reference_symbol": "SSE:600312",
+      "gateway_ts_code": "600312.SH",
+      "gateway_exchange": "SSE",
+      "scope_code_matches": true
+    },
+    {
+      "official_reference_symbol": "SSE:603228",
+      "gateway_ts_code": "603228.SH",
+      "gateway_exchange": "SSE",
+      "scope_code_matches": true
+    }
+  ],
+  "security_names_listing_ST_status_crosscheck": "NOT_COMPARABLE_OLD_SSE_REFERENCES_DO_NOT_CONTAIN_BASIC_OR_STATUS_HISTORY",
+  "selected_current_observed_facts": "HOLIDAY_CLOSED_AND_SYMBOL_REFERENCE_SCOPE_ONLY",
+  "raw_bar_action_numeric_crosscheck": "NOT_COMPARABLE_NO_ADMITTED_OFFICIAL_NUMERIC_REFERENCE",
+  "internal_bar_calendar_factor_alignment": "PASS_READ_ONLY_REPLAY_VALIDATED",
+  "mismatch": false,
+  "decision": "PASS_FOR_COMPARED_REFERENCE_FACTS_ONLY",
+  "source_admission": "BLOCKED",
+  "historical_visibility_proven": false
+}

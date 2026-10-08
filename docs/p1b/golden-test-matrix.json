@@ -1,0 +1,1215 @@
+{
+  "run_id": "P1B-CLEAN-fb39c13",
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "counts": {
+    "tests": 300,
+    "pass": 299,
+    "fail": 0,
+    "skipped": 1
+  },
+  "invariants": [
+    {
+      "invariant": "PIT / future-data isolation",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 7,
+          "name": "PIT rejects future data before packet hash, including titles and IDs",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 34,
+          "name": "Stale (>5 seconds) and future prices fail closed, exact boundary is explicit",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 63,
+          "name": "BrainPacket binds the exact frozen snapshot, cutoff and ordered evidence",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 77,
+          "name": "Honestly resealed and rebound chains still reject rule mismatch and missing/future trigger",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 23,
+          "name": "P1A data: known future identity/status cannot backfill past registry",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 56,
+          "name": "P1A data: latest visible suspension blocks resolution and snapshot; future status does not contaminate historical closure",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 85,
+          "name": "P1A data: financial revision filters before selection; original immutable and future restatement hidden",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "freeze-before-reveal",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 24,
+          "name": "Freeze-before-reveal uses retained immutable decision, forbids uncommitted or duplicate reveal",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 217,
+          "name": "freeze-before-reveal and future-data isolation are enforced for snapshot members",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "T+1",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 27,
+          "name": "P1-A restart persists requests, fills, lots, sequence, cash and T+1",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 56,
+          "name": "T+1 rejects same-day sale regardless of claimed human approval or override fields",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 61,
+          "name": "T+1 uses supplied trading sessions across long gaps and requires the next session",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 126,
+          "name": "T+1 declared availability, lot quantities and timestamp context are mandatory",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "same-day cash ordering",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 56,
+          "name": "T+1 rejects same-day sale regardless of claimed human approval or override fields",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 70,
+          "name": "same-day later sale proceeds cannot finance an earlier buy; ordering is never silently sorted",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "integer / Decimal / BigInt reconciliation",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 10,
+          "name": "P1-A cost uses independent BigInt oracle across rounding/minimum/tax and large precision boundaries",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 25,
+          "name": "partial gross rounds per execution, fee basis uses exact cumulative notional",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 15,
+          "name": "P1-A paper reserve→submit→two fills uses cumulative minimum settlement and reconciles independently",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 69,
+          "name": "P1-A sub-cent partial rounding has conservative reservation and reconciles all gross execution cents",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 73,
+          "name": "P1-A independent oracle tracks concurrent sell-lot reservations and cancellation allocation",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 87,
+          "name": "P1-A Shanghai trading date is independently reconciled for a valid negative timezone offset",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 91,
+          "name": "P1-A concurrent readers get atomic account/lot snapshots and reconcile after queued mutation",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "minimum commission",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 10,
+          "name": "P1-A cost uses independent BigInt oracle across rounding/minimum/tax and large precision boundaries",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 17,
+          "name": "minimum effect is part of actual commission, never an extra fee",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 21,
+          "name": "partial cumulative settlement crosses minimum and reports negative sub-attribution delta correctly",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "fee-inclusive affordability",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 29,
+          "name": "fee-inclusive affordability rejects gross-only budget and passes exact all-in boundary",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "raw / adjusted isolation",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 157,
+          "name": "raw and adjusted prices coexist, traced adjustment revisions cannot overwrite either",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "corporate-action visibility",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 157,
+          "name": "raw and adjusted prices coexist, traced adjustment revisions cannot overwrite either",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 316,
+          "name": "corporate-action factors cannot expose future knowledge or precede factor retrieval",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 93,
+          "name": "P1A data: factor wire values reject Infinity/NaN/exponents/overprecision and read-back forged values",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "financial revision PIT",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 175,
+          "name": "financial restatements preserve old versions; PIT blocks future revisions and later retrieval",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 376,
+          "name": "financial PIT lineage cannot be retrieved or published before its actual announcement",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 85,
+          "name": "P1A data: financial revision filters before selection; original immutable and future restatement hidden",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "security identity conflict",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 11,
+          "name": "P1A data: canonical representations require exchange; conflicting registry quarantines and audits",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 23,
+          "name": "P1A data: known future identity/status cannot backfill past registry",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "strategy namespace",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/contracts.test.mjs",
+          "line": 22,
+          "name": "Research namespace produces neither signals/orders nor short-horizon card",
+          "sha256": "sha256:738cf442acab94dccea52be9e045fa4e0694cd5f1a6e8d3ee3d0958513ecb796",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "stale data",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 34,
+          "name": "Stale (>5 seconds) and future prices fail closed, exact boundary is explicit",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "duplicate order",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 109,
+          "name": "duplicate fill and order application block within sequence and from persisted state",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 56,
+          "name": "P1-A limit-price, overfill, duplicate client/fill and nonmonotonic event failures leave no partial writes",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "card/version invalidation",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 39,
+          "name": "Authenticated two-phase version chain is preparable only, never production executable",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 48,
+          "name": "Card version/cost/quantity/account/mode/namespace changes invalidate old approvals",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 77,
+          "name": "Honestly resealed and rebound chains still reject rule mismatch and missing/future trigger",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "Snapshot lineage closure",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 56,
+          "name": "P1A data: latest visible suspension blocks resolution and snapshot; future status does not contaminate historical closure",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 104,
+          "name": "P1A data: content addressed snapshot closes evidence; one byte mutation changes hash and rejects old snapshot",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 18,
+          "name": "Experiment A: actual committed source + immutable snapshot replay twice, trace/wall time do not change economics",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 32,
+          "name": "snapshot persisted closure rejects caller byte mutation and SourceObservation schema cannot admit unknown availability",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "source-byte mutation",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 70,
+          "name": "P1A data: public fixtures have original byte hashes and explicit unknown license/time provenance",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 104,
+          "name": "P1A data: content addressed snapshot closes evidence; one byte mutation changes hash and rejects old snapshot",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 24,
+          "name": "Experiment A mutations: cost version only/rule version only/source byte only change identity and invalidate old approval/result",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 32,
+          "name": "snapshot persisted closure rejects caller byte mutation and SourceObservation schema cannot admit unknown availability",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "same cash double spending",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 19,
+          "name": "P1-A shared account locks prevent simultaneous Core/Event double spending without shared positions",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "partial fill",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 15,
+          "name": "P1-A paper reserve→submit→two fills uses cumulative minimum settlement and reconciles independently",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 23,
+          "name": "P1-A partial cancel/reject release once, retain minimum fee, block late fills",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 56,
+          "name": "P1-A limit-price, overfill, duplicate client/fill and nonmonotonic event failures leave no partial writes",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 69,
+          "name": "P1-A sub-cent partial rounding has conservative reservation and reconciles all gross execution cents",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 21,
+          "name": "partial cumulative settlement crosses minimum and reports negative sub-attribution delta correctly",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 25,
+          "name": "partial gross rounds per execution, fee basis uses exact cumulative notional",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "restart idempotency",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 27,
+          "name": "P1-A restart persists requests, fills, lots, sequence, cash and T+1",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 81,
+          "name": "P1-A idempotency keys and client identity scope persist per account and reject mutated approval/snapshot terms",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "append-only audit",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 11,
+          "name": "P1A data: canonical representations require exchange; conflicting registry quarantines and audits",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 107,
+          "name": "P1A data: every new persistence family rejects truncation and retains actual source/hash/time/security/version/trace",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-integration-foundation.test.mjs",
+          "line": 37,
+          "name": "persisted audit chain links source/hash/time/security/version/trace and redacts nested sensitive fields",
+          "sha256": "sha256:704d95cb543fea8f6c724d88c04875ff2504a7f74d77fe7ff534f85613093469",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 307,
+          "name": "P0 schema never grants production authorization and preserves append-only audit",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "UNSET production block",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 19,
+          "name": "Date-only publications require next exchange session availability and unknown dates block",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 39,
+          "name": "Authenticated two-phase version chain is preparable only, never production executable",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 59,
+          "name": "Unknown config/missing fields/null/NaN block production and never inherit legacy assumptions",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 82,
+          "name": "Even self-declared fully configured verification cannot enable P0 production",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 9,
+          "name": "P1-A cannot weaken accepted P0 production/approval gate bytes",
+          "sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 18,
+          "name": "UNSET_REQUIRED inventory is generated from schema and the actual unconfigured profile",
+          "sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "LLM != HUMAN_USER",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 42,
+          "name": "Model self-claim HUMAN identity does not authenticate a user approval",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/contracts.test.mjs",
+          "line": 39,
+          "name": "LLM APPROVE cannot be an Approval actor or USER approval enum",
+          "sha256": "sha256:738cf442acab94dccea52be9e045fa4e0694cd5f1a6e8d3ee3d0958513ecb796",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "PROD gateway rejection",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 9,
+          "name": "P1-A cannot weaken accepted P0 production/approval gate bytes",
+          "sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    },
+    {
+      "invariant": "micro-ladder insufficient edge",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13",
+      "tests": [
+        {
+          "path": "tests/p1a-integration-foundation.test.mjs",
+          "line": 23,
+          "name": "new tranche pays its independent minimum; benefit must cover all costs and experimental safety multiple",
+          "sha256": "sha256:704d95cb543fea8f6c724d88c04875ff2504a7f74d77fe7ff534f85613093469",
+          "status": "PASS",
+          "fresh_run_id": "P1B-CLEAN-fb39c13"
+        }
+      ]
+    }
+  ],
+  "core_invariants_regressed": false,
+  "old_test_changes": "only exact schemaVersion5→6 in replay test; safety/economic assertions preserved; new assertions added",
+  "phase_code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "phase_source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "historical_matrix_retained": "docs/closure-implementation/golden-test-matrix.json",
+  "new_log_sha256": "sha256:5303eced99a672156786221f2c85e099747ca5dd2fe8474828944f09474e4d81",
+  "status": "PASS_NO_REGRESSION",
+  "new_tests": [
+    {
+      "path": "p1b/tests/evidence-adapter.test.mjs",
+      "line": 4,
+      "name": "P1B cloud pointer is linked to new admitted local source facts only after live facade verification",
+      "sha256": "sha256:10f1d4ca2344bc0b938d8d434eaf0862950a5255b33a03d8c4c4c04eda917769",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence-adapter.test.mjs",
+      "line": 5,
+      "name": "P1B cloud mismatched source and future discovery cannot enter admitted resolution or trusted packet",
+      "sha256": "sha256:10f1d4ca2344bc0b938d8d434eaf0862950a5255b33a03d8c4c4c04eda917769",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence-adapter.test.mjs",
+      "line": 6,
+      "name": "P1B source resolution cannot survive receipt revocation or be forged by relabel and rehash",
+      "sha256": "sha256:10f1d4ca2344bc0b938d8d434eaf0862950a5255b33a03d8c4c4c04eda917769",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence-adapter.test.mjs",
+      "line": 7,
+      "name": "P1B full reference identities repeat with same admitted bytes, checked epoch, point and DEV key",
+      "sha256": "sha256:10f1d4ca2344bc0b938d8d434eaf0862950a5255b33a03d8c4c4c04eda917769",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence.test.mjs",
+      "line": 8,
+      "name": "P1-B cloud discovery is an immutable deterministic pending lead, never admitted by citation",
+      "sha256": "sha256:e112ea3627791374fe2685048b751f79a07a8182dae74b7dc17f8ca659cf09e2",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence.test.mjs",
+      "line": 16,
+      "name": "P1-B cloud evidence cannot satisfy or clear Hard Block, upgrade grade/sizing or enter execution/PIT",
+      "sha256": "sha256:e112ea3627791374fe2685048b751f79a07a8182dae74b7dc17f8ca659cf09e2",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence.test.mjs",
+      "line": 23,
+      "name": "P1-B cloud caller relabel, fake admission and resealed usable flags cannot promote trust",
+      "sha256": "sha256:e112ea3627791374fe2685048b751f79a07a8182dae74b7dc17f8ca659cf09e2",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence.test.mjs",
+      "line": 30,
+      "name": "P1-B ingest rejects self-asserted trust/clock/approval fields and unsafe reference schemes",
+      "sha256": "sha256:e112ea3627791374fe2685048b751f79a07a8182dae74b7dc17f8ca659cf09e2",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/evidence.test.mjs",
+      "line": 37,
+      "name": "P1-B discovery date is not historical availability and workflow requires raw/PIT/admission verification",
+      "sha256": "sha256:e112ea3627791374fe2685048b751f79a07a8182dae74b7dc17f8ca659cf09e2",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/foundation.test.mjs",
+      "line": 2,
+      "name": "P1B future timestamp comparison preserves a one-microsecond boundary",
+      "sha256": "sha256:ab26fa4d5bb626c72e9e8d939fe929932ac47508f144c69009c453b6d1d492ea",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/foundation.test.mjs",
+      "line": 3,
+      "name": "P1B cannot alter any of the 140 frozen closure source/fixture bytes",
+      "sha256": "sha256:ab26fa4d5bb626c72e9e8d939fe929932ac47508f144c69009c453b6d1d492ea",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/foundation.test.mjs",
+      "line": 4,
+      "name": "P1B actual capture fixture bytes and observed timestamps are pinned, not historical availability",
+      "sha256": "sha256:ab26fa4d5bb626c72e9e8d939fe929932ac47508f144c69009c453b6d1d492ea",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/foundation.test.mjs",
+      "line": 5,
+      "name": "P1B experimental score references are not an empirical probability or real-account configuration",
+      "sha256": "sha256:ab26fa4d5bb626c72e9e8d939fe929932ac47508f144c69009c453b6d1d492ea",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 28,
+      "name": "REAL_PUBLIC_CAPTURE_TEST_REFERENCE: original byte/terms chain yields local-only observed calendar snapshot, receipt and sanitized packet",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 42,
+      "name": "real observation constructor copies bytes, terms, approved set and caller outputs",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 49,
+      "name": "raw mutation reaches original byte hash guard",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 55,
+      "name": "terms mutation reaches original terms hash guard",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 61,
+      "name": "self-hashed unknown or missing terms cannot acquire local permission",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 67,
+      "name": "wrong original host and unknown source fail source admission, not a code-proof shortcut",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 72,
+      "name": "one-microsecond future retrieval and old historical cutoff are blocked",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 78,
+      "name": "future terms capture is also required before use",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 84,
+      "name": "DATE_ONLY midnight and fabricated availability cannot alter signed source-derived projection",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 90,
+      "name": "finite calendar coverage cannot widen to complete year, unknown days or stock symbols",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 97,
+      "name": "narrow policy projects only its exact finite source facts",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 105,
+      "name": "caller policy hash does not self-approve and no Set mutation widens constructor approval",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 112,
+      "name": "forged terms binding and code epoch are rejected even with internally consistent hashes",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 118,
+      "name": "forged snapshot, future clock and observation reference cannot replace locally frozen bytes",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 125,
+      "name": "receipt signature cannot be replaced by caller-supplied identity",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 130,
+      "name": "registered receipt required; replay into another service is refused",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 135,
+      "name": "receipt and policy revocation remain active on every packet use and local transfer",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 140,
+      "name": "POINT_IN_TIME_ONLY receipt cannot be reused at another cutoff even one microsecond later",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 144,
+      "name": "purpose and CORE_40 namespace cannot be promoted to model research or EVENT_3",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 149,
+      "name": "signed modified calendar fact is rejected by actual source-derived projection",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 154,
+      "name": "arbitrary packet payload, internal path and extra consumer self-assertion are blocked",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/real-data.test.mjs",
+      "line": 160,
+      "name": "MANUAL_EXPORT API model cloud broker and trading transfer modes stay denied",
+      "sha256": "sha256:ef7a0fad21c169fd4dd89cd2fc953eea1e46c5022927ac6a3000f9b12b9bfa91",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 14,
+      "name": "P1-B all-PASS illustrative template is S REQUEST_REVIEW, with real suitability/edge/sizing/probability blocked",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 20,
+      "name": "P1-B ten independent dimensions preserve HIGH quality with unmet timing/cost/account/tradeability as A WATCH",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 27,
+      "name": "P1-B unknown or NOT_APPLICABLE in every dimension fails S, and required unknowns remain explicit",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 33,
+      "name": "P1-B Hard Block has precedence, B logic gaps differ from C observe-only and A cannot override X",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 40,
+      "name": "P1-B semantic scope rejects real stock/account/grade/probability claims and numerical threshold inputs",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 49,
+      "name": "P1-B cloud citation/object/ref/caller trust claims cannot set/clear Hard Block or upgrade grade",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    },
+    {
+      "path": "p1b/tests/semantics.test.mjs",
+      "line": 57,
+      "name": "P1-B semantic A-to-S and A-to-X transitions depend on changed checks, never company quality alone",
+      "sha256": "sha256:85ca7b3626a63e123a1cdf2371c564537fdfff6b6fd1da496cce8f4ec12c3d1e",
+      "status": "PASS",
+      "run_id": "P1B-CLEAN-fb39c13"
+    }
+  ],
+  "frozen_old_code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "frozen_old_source_tree_hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5"
+}

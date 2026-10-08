@@ -1,0 +1,110 @@
+{
+  "version": "1.0.0",
+  "code_candidate": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+  "completed_at": "2026-10-06T08:08:11.195562+00:00",
+  "unique": 795,
+  "pass": 794,
+  "fail": 0,
+  "skip": 1,
+  "carried": 720,
+  "new": 75,
+  "new_python": 66,
+  "new_native": 9,
+  "new_python_modules": {
+    "financial": 41,
+    "boundaries": 25
+  },
+  "node_suite_counts": [
+    258,
+    42,
+    48,
+    26,
+    27,
+    8,
+    11,
+    13,
+    9
+  ],
+  "node_pass_counts": [
+    257,
+    42,
+    48,
+    26,
+    27,
+    8,
+    11,
+    13,
+    9
+  ],
+  "node_fail_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "node_skip_counts": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "python_suite_counts": [
+    38,
+    38,
+    49,
+    124,
+    38,
+    66
+  ],
+  "independent_assertions_not_counted": 413,
+  "old_expectations_relaxed": false,
+  "fresh_checkout": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/fresh-checkout",
+    "head": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+    "clean": true,
+    "dependency_install_exit": 0,
+    "full_entry_exit": 0,
+    "actual_saved_replay": "10_MACHINE_OBJECTS_AND4_HUMAN_REPORTS_BYTE_IDENTICAL",
+    "private_archives": "UNMOVED_ONLY_NO_REMOTE_CI_OR_ARCHIVE_RELOCATION_CLAIM"
+  },
+  "refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/final-full-G4.log",
+      "sha256": "sha256:936fa182195622c9fcc7bd8600d273270135d08cf34cd6af7df4b6ff6f838e97",
+      "bytes": 103095
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/npm-ci-G4.log",
+      "sha256": "sha256:f98e4609830e361c862a7109f6a7558691858d9c51e095e99c1e8a6c2f89a0dc",
+      "bytes": 347
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/produce-G4.log",
+      "sha256": "sha256:187a25f0932d669cb66013330a183ff079285a4aa9528b3b1d9d5241e7783155",
+      "bytes": 254
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/actual-fresh-G3.log",
+      "sha256": "sha256:cd7f4459153871d7a2bd01455f236233e0d323b84ad043fa068ef88815a4feb4",
+      "bytes": 946
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/portability-identity-G3.json",
+      "sha256": "sha256:6b55a4e272f4f1e56187e5019ea78ea0f5c3a99072814f6cb6309e7c9be554b4",
+      "bytes": 364
+    }
+  ],
+  "known_skipped": "One unchanged optional external legacyV5 CLI path;portable14-day ledger regression executed and passed",
+  "productionGate": false,
+  "formal_source_admission": "BLOCKED"
+}

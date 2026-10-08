@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:overnight:diagnostic:AdmissionReadinessDryRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "kind",
+    "fixture",
+    "namespace",
+    "state",
+    "source_admission",
+    "historical_visibility_proven",
+    "productionGate",
+    "new_source_policies",
+    "new_source_observations",
+    "admitted_clock_evidence_issued",
+    "real_snapshots_issued",
+    "real_receipts_issued",
+    "real_packets_issued",
+    "real_cards_issued",
+    "authenticated_requests_this_run",
+    "credential_lookups_this_run",
+    "real_snapshot_B_ready",
+    "pilot_ready",
+    "cloud_export_permitted",
+    "historical_backtest_permitted",
+    "redistribution_permitted",
+    "broker_permitted",
+    "all_actual_account_parameters",
+    "input_hashes",
+    "categories",
+    "closed_business_condition_ids",
+    "C30",
+    "content_hash"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0-diagnostic"
+    },
+    "kind": {
+      "const": "ADMISSION_READINESS_DRY_RUN"
+    },
+    "fixture": {
+      "type": "boolean"
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "state": {
+      "const": "QUARANTINED"
+    },
+    "source_admission": {
+      "const": "BLOCKED"
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "new_source_policies": {
+      "const": 0
+    },
+    "new_source_observations": {
+      "const": 0
+    },
+    "admitted_clock_evidence_issued": {
+      "const": 0
+    },
+    "real_snapshots_issued": {
+      "const": 0
+    },
+    "real_receipts_issued": {
+      "const": 0
+    },
+    "real_packets_issued": {
+      "const": 0
+    },
+    "real_cards_issued": {
+      "const": 0
+    },
+    "authenticated_requests_this_run": {
+      "const": 0
+    },
+    "credential_lookups_this_run": {
+      "const": 0
+    },
+    "real_snapshot_B_ready": {
+      "const": false
+    },
+    "pilot_ready": {
+      "const": false
+    },
+    "cloud_export_permitted": {
+      "const": false
+    },
+    "historical_backtest_permitted": {
+      "const": false
+    },
+    "redistribution_permitted": {
+      "const": false
+    },
+    "broker_permitted": {
+      "const": false
+    },
+    "all_actual_account_parameters": {
+      "const": "UNSET_REQUIRED"
+    },
+    "input_hashes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset",
+        "coverage",
+        "factor",
+        "financial"
+      ],
+      "properties": {
+        "dataset": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "coverage": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "factor": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "financial": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "category",
+          "actual_apis",
+          "requests",
+          "observed_physical_rows",
+          "coverage_physical_rows",
+          "request_refs",
+          "engineering_readiness",
+          "state",
+          "admission_status",
+          "historical_visibility_proven",
+          "blocking_reasons",
+          "next_action"
+        ],
+        "properties": {
+          "category": {
+            "enum": [
+              "SECURITY_STATUS",
+              "CALENDAR_RULES",
+              "RAW_BARS",
+              "CORPORATE_ACTIONS",
+              "ADJUSTMENT_VERSIONS",
+              "FINANCIAL_REVISIONS",
+              "ANNOUNCEMENTS",
+              "INDUSTRY_MEMBERSHIP"
+            ]
+          },
+          "actual_apis": {
+            "type": "array",
+            "uniqueItems": true,
+            "maxItems": 2,
+            "items": {
+              "enum": [
+                "stock_basic",
+                "suspend_d",
+                "trade_cal",
+                "daily",
+                "dividend",
+                "adj_factor",
+                "fina_indicator",
+                "index_member_all"
+              ]
+            }
+          },
+          "requests": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "observed_physical_rows": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coverage_physical_rows": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "request_refs": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "request_fingerprint",
+                "raw_sha256",
+                "report_sha256",
+                "scope",
+                "response_dq"
+              ],
+              "properties": {
+                "request_fingerprint": {
+                  "type": "string",
+                  "pattern": "^sha256:[a-f0-9]{64}$"
+                },
+                "raw_sha256": {
+                  "type": "string",
+                  "pattern": "^sha256:[a-f0-9]{64}$"
+                },
+                "report_sha256": {
+                  "type": "string",
+                  "pattern": "^sha256:[a-f0-9]{64}$"
+                },
+                "scope": {
+                  "enum": [
+                    "SMOKE",
+                    "COVERAGE"
+                  ]
+                },
+                "response_dq": {
+                  "enum": [
+                    "PASS",
+                    "BLOCKED",
+                    "EMPTY_NOT_COVERAGE"
+                  ]
+                }
+              }
+            }
+          },
+          "engineering_readiness": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "state": {
+            "const": "QUARANTINED"
+          },
+          "admission_status": {
+            "const": "BLOCKED"
+          },
+          "historical_visibility_proven": {
+            "const": false
+          },
+          "blocking_reasons": {
+            "type": "array",
+            "minItems": 5,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z0-9_]+$",
+              "maxLength": 128
+            }
+          },
+          "next_action": {
+            "const": "INDEPENDENT_SOURCE_EVIDENCE_AND_SEPARATE_OWNER_GATE_REQUIRED"
+          }
+        }
+      }
+    },
+    "closed_business_condition_ids": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "C30": {
+      "const": "AT_LEAST_20_ACTUAL_FORWARD_PAPER_TRADING_DAYS_NOT_SATISFIED_BY_FIXTURES"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  }
+}

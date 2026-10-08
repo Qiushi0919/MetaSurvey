@@ -1,0 +1,503 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:preparation:StockSliceProposal:1.0.0",
+  "title": "StockSliceProposal",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "StockSliceProposal"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "proposal_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "state": {
+      "const": "OWNER_REVIEW_REQUIRED"
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "route": {
+      "enum": [
+        "OBSERVED_CURRENT_RESEARCH_PROPOSED",
+        "HISTORICAL_ASOF_RESEARCH_PROPOSED"
+      ]
+    },
+    "symbols": {
+      "const": "UNSET_REQUIRED"
+    },
+    "from": {
+      "const": "UNSET_REQUIRED"
+    },
+    "to": {
+      "const": "UNSET_REQUIRED"
+    },
+    "decision_cutoff": {
+      "const": "UNSET_REQUIRED"
+    },
+    "clock_contract_proposal": {
+      "const": "ClockEvidenceProposal1.0.0"
+    },
+    "usage_rights": {
+      "type": "object",
+      "properties": {
+        "local_research": {
+          "enum": [
+            "UNSET_REQUIRED",
+            "DENIED"
+          ]
+        },
+        "cloud_manual_export": {
+          "enum": [
+            "UNSET_REQUIRED",
+            "DENIED"
+          ]
+        },
+        "historical_backtest": {
+          "enum": [
+            "UNSET_REQUIRED",
+            "DENIED"
+          ]
+        },
+        "redistribution": {
+          "enum": [
+            "UNSET_REQUIRED",
+            "DENIED"
+          ]
+        }
+      },
+      "required": [
+        "local_research",
+        "cloud_manual_export",
+        "historical_backtest",
+        "redistribution"
+      ],
+      "additionalProperties": false
+    },
+    "datasets": {
+      "type": "object",
+      "properties": {
+        "SECURITY_STATUS": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "CALENDAR_RULES": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "RAW_BARS_1D": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "CORPORATE_ACTIONS": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "ADJUSTMENT_VERSIONS": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "FINANCIAL_REVISIONS": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "ANNOUNCEMENTS": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "INDUSTRY_MEMBERSHIP": {
+          "type": "object",
+          "properties": {
+            "provider_proposal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "source_identity_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "license_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "coverage_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "pit_status": {
+              "const": "UNSET_REQUIRED"
+            },
+            "admission": {
+              "const": "BLOCKED"
+            },
+            "required_evidence": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          },
+          "required": [
+            "provider_proposal",
+            "source_identity_status",
+            "license_status",
+            "coverage_status",
+            "pit_status",
+            "admission",
+            "required_evidence"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "SECURITY_STATUS",
+        "CALENDAR_RULES",
+        "RAW_BARS_1D",
+        "CORPORATE_ACTIONS",
+        "ADJUSTMENT_VERSIONS",
+        "FINANCIAL_REVISIONS",
+        "ANNOUNCEMENTS",
+        "INDUSTRY_MEMBERSHIP"
+      ],
+      "additionalProperties": false
+    },
+    "manual_export_only_if_separately_licensed": {
+      "const": true
+    },
+    "real_source_admission": {
+      "const": "BLOCKED"
+    },
+    "real_research_pilot": {
+      "const": "BLOCKED"
+    },
+    "real_signal": {
+      "const": "BLOCKED"
+    },
+    "real_order": {
+      "const": "BLOCKED"
+    },
+    "actual_account_fields": {
+      "const": "UNSET_REQUIRED"
+    },
+    "production_enabled": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "proposal_id",
+    "state",
+    "namespace",
+    "route",
+    "symbols",
+    "from",
+    "to",
+    "decision_cutoff",
+    "clock_contract_proposal",
+    "usage_rights",
+    "datasets",
+    "manual_export_only_if_separately_licensed",
+    "real_source_admission",
+    "real_research_pilot",
+    "real_signal",
+    "real_order",
+    "actual_account_fields",
+    "production_enabled"
+  ],
+  "additionalProperties": false,
+  "x-boundary": "Finite scope/universe/provider/rights must be decided and evidenced before actual adapter. No admitted facts, policy, receipt, model inputs or execution capabilities are created."
+}

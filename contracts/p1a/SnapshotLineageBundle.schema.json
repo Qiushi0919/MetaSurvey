@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:SnapshotLineageBundle",
+  "title": "SnapshotLineageBundle",
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": "p1a-data-1.0.0"
+    },
+    "root_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "object_version": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "object_id",
+          "object_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "closure_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "object_version": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "object_id",
+          "object_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "feature_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "data_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "manifest_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "scope": {
+      "enum": [
+        "SYNTHETIC",
+        "OBSERVED",
+        "RECONSTRUCTED"
+      ]
+    },
+    "tradeability": {
+      "enum": [
+        "OFFLINE_ELIGIBLE",
+        "NON_TRADEABLE"
+      ]
+    },
+    "production_execution_enabled": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_version",
+    "root_refs",
+    "closure_refs",
+    "feature_version",
+    "decision_cutoff",
+    "rules_hash",
+    "data_hash",
+    "manifest_hash",
+    "scope",
+    "tradeability",
+    "production_execution_enabled"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

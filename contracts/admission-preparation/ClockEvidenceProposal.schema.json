@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:preparation:ClockEvidenceProposal:1.0.0",
+  "title": "ClockEvidenceProposal",
+  "description": "Owner-review proposal only; validation does not prove source/clock truth or grant admission. No live adapter.",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "ClockEvidenceProposal"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "const": "PROPOSED_UNVERIFIED"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "data_type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "observation_event_time": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "event_kind": {
+      "enum": [
+        "BUSINESS_EVENT",
+        "OBSERVATION_CAPTURE",
+        "UNSET_REQUIRED"
+      ]
+    },
+    "event_time": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "event_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "event_precision": {
+      "enum": [
+        "SECOND",
+        "DATE_ONLY",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "business_effective_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "publication_precision": {
+      "enum": [
+        "SECOND",
+        "DATE_ONLY",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "available_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "availability_method_proposal": {
+      "enum": [
+        "UNSET_REQUIRED",
+        "PROPOSED_OBSERVED_RETRIEVAL",
+        "PROPOSED_PROVEN_HISTORICAL_VISIBILITY"
+      ]
+    },
+    "retrieved_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "admission": {
+      "const": "BLOCKED"
+    },
+    "production_enabled": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "status",
+    "source_id",
+    "data_type",
+    "observation_event_time",
+    "event_kind",
+    "event_time",
+    "event_date",
+    "event_precision",
+    "business_effective_date",
+    "published_at",
+    "published_date",
+    "publication_precision",
+    "available_at",
+    "availability_method_proposal",
+    "retrieved_at",
+    "historical_visibility_proven",
+    "admission",
+    "production_enabled"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "publication_precision": {
+            "const": "DATE_ONLY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "published_at": {
+            "type": "null"
+          },
+          "published_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_precision": {
+            "const": "DATE_ONLY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "event_time": {
+            "type": "null"
+          },
+          "event_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "publication_precision": {
+            "const": "SECOND"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "published_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "publication_precision": {
+            "enum": [
+              "UNKNOWN",
+              "NOT_APPLICABLE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "published_at": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_precision": {
+            "const": "SECOND"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "event_time": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_precision": {
+            "enum": [
+              "UNKNOWN",
+              "NOT_APPLICABLE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "event_time": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "x-boundary": "Business dates/publication precision are distinct from observation/retrieval and availability; unknowns stay null/UNSET. These are proposed fields; no historical reconstruction policy approved."
+}

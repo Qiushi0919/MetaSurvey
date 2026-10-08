@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "completed_at": "2026-10-05T16:48:58.556116+00:00",
+  "code_candidate_commit": "55cb3916262fc6f236a92d156028561248ae2f09",
+  "release": "1.8.2-offline",
+  "unique_tests": 534,
+  "pass": 533,
+  "fail": 0,
+  "skip": 1,
+  "node_suite_counts": [
+    258,
+    42,
+    48,
+    26,
+    27,
+    8
+  ],
+  "python_suite_counts": [
+    38,
+    38,
+    49
+  ],
+  "counting_rule": "477 carried portable baseline +57 new overnight; do not sum repeated G1/G2 runs or independent assertions",
+  "new_overnight": {
+    "data": 23,
+    "analysis": 18,
+    "dry_run": 4,
+    "verification": 4,
+    "fixture_boundary": 5,
+    "schema": 3
+  },
+  "frozen_original_tests": 451,
+  "ported_original_business_assertions": 12,
+  "new_portability_tests": 14,
+  "fresh_clone": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/night-clean-checkout-G3",
+    "head": "55cb3916262fc6f236a92d156028561248ae2f09",
+    "clean": true,
+    "new_dependency_cache": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/night-fresh-npm-cache-G3",
+    "dependency_install_exit_code": 0,
+    "full_entry_exit_code": 0
+  },
+  "evidence": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/night-clone-G3.log",
+      "sha256": "sha256:fd9303f1792a8494756437b45163e09602efb0215c21e9a4bb09b81ed3afe832",
+      "bytes": 113
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/night-npm-ci-G3.log",
+      "sha256": "sha256:f6f284d6d0a8befdc8aa664a6f5f827f44c60461106d833e16b0343b7eaee5f9",
+      "bytes": 348
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/night-full-clean-G3.log",
+      "sha256": "sha256:f780e1418c0ff2d8f8dad54527ea08aa4f92463280a339a74f59b3cd8a868d9a",
+      "bytes": 65454
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/night-new-candidate-G3.log",
+      "sha256": "sha256:4faa7efa6ed209b05662c5a3b66c364b99cacda6e744285b8858a7ea9663a77b",
+      "bytes": 9468
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/final-deterministic-replay-G3.json",
+      "sha256": "sha256:f91a2b445c2e4cbca26638456bee2781ded5c7ad1252b7ec86a93ea9a9fe1aa8",
+      "bytes": 3800
+    }
+  ],
+  "core_golden_regressions": 0,
+  "old_expectations_relaxed": false,
+  "source_admission": "BLOCKED",
+  "productionGate": false
+}

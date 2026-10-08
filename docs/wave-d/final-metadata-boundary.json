@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "completed_at": "2026-10-06T08:10:53.959473+00:00",
+  "old_immutable_files": 563,
+  "new_frozen_pins": 28,
+  "formal_handoff_hash_matches_primary_source_of_truth": true,
+  "immutable_numerical_artifacts": 15,
+  "four_local_human_reports": 4,
+  "private_evidence_files": 215,
+  "private_file_modes": "0600",
+  "private_directory_modes": "0700",
+  "raw_evidence_in_git": false,
+  "actual_secret_value_reread": false,
+  "reviewer_written_data": "METADATA_HASH_ONLY",
+  "legacy_databases_modified": false,
+  "external_state_db_global_audit": false,
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false,
+  "next_phase_authorized": false,
+  "stop_after_gate": true
+}

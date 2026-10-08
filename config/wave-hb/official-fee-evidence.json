@@ -1,0 +1,341 @@
+{
+  "contract_name": "OfficialFeeReferenceRoster",
+  "contract_version": "1.0.0",
+  "scope": "PUBLIC_REFERENCE_ONLY_NOT_OWNER_DEFAULT",
+  "actual_profile_admission": false,
+  "production_enabled": false,
+  "historical_visibility_proven": false,
+  "historical_interval_completeness_proven": false,
+  "credential_lookups": 0,
+  "authenticated_requests": 0,
+  "search_queries": 3,
+  "direct_official_gets": 6,
+  "captures": [
+    {
+      "id": "sse-current-charge",
+      "request_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/charge/c/c_20250610_10781461.shtml",
+      "response_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/charge/c/c_20250610_10781461.shtml",
+      "method": "GET",
+      "response_status": 200,
+      "started_at": "2026-10-07T07:31:55.647356Z",
+      "retrieved_at": "2026-10-07T07:31:56.023790Z",
+      "raw_ref": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/sse-current-charge.html",
+        "sha256": "sha256:1192429787ae4850ca3c1e6e9253a389ee986d88c6a3d0591239d8f40b6f106c",
+        "bytes": 35403
+      },
+      "response_headers": {
+        "Server": "nginx",
+        "Date": "Wed, 07 Oct 2026 07:31:55 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept-Encoding",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-Xss-Protection": "1",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Content-Security-Policy": "style-src 'self' https://*.sseinfo.com https://*.sse.com.cn  https://yunhq.sse.com.cn:32042 'unsafe-inline'; script-src 'self' https://*.sseinfo.com https://*.sse.com.cn https://yunhq.sse.com.cn:32042  'unsafe-inline' 'unsafe-eval';worker-src www.sse.com.cn play.szs.nagasoft.cn blob:;  frame-ancestors *.sse.com.cn *.sseinfo.com "
+      },
+      "credential_present": false,
+      "proxy_used": false,
+      "redirect_followed": false,
+      "source_version": "UNKNOWN",
+      "published_at_basis": "ORIGINAL_BODY_REQUIRED",
+      "historical_visibility_proven": false
+    },
+    {
+      "id": "stamp-tax-law",
+      "request_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202106/t458595.html",
+      "response_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202106/t458595.html",
+      "method": "GET",
+      "response_status": 200,
+      "started_at": "2026-10-07T07:31:56.024053Z",
+      "retrieved_at": "2026-10-07T07:31:56.302341Z",
+      "raw_ref": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tax-law.html",
+        "sha256": "sha256:d652677c4fe3bd554c1bd58c2752c9cad7d6d2fc19dd566f47e52ceae02edfb8",
+        "bytes": 35232
+      },
+      "response_headers": {
+        "Date": "Wed, 07 Oct 2026 07:13:31 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Accept-Ranges": "bytes"
+      },
+      "credential_present": false,
+      "proxy_used": false,
+      "redirect_followed": false,
+      "source_version": "UNKNOWN",
+      "published_at_basis": "ORIGINAL_BODY_REQUIRED",
+      "historical_visibility_proven": false
+    },
+    {
+      "id": "stamp-tax-halving",
+      "request_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202308/t468451.html",
+      "response_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202308/t468451.html",
+      "method": "GET",
+      "response_status": 200,
+      "started_at": "2026-10-07T07:31:56.302546Z",
+      "retrieved_at": "2026-10-07T07:31:56.535992Z",
+      "raw_ref": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tax-halving.html",
+        "sha256": "sha256:dd4db6a83f18db7a15f01512beed5da19ea309c6949a874caf31cc1885de83f0",
+        "bytes": 27977
+      },
+      "response_headers": {
+        "Date": "Wed, 07 Oct 2026 07:13:31 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Accept-Ranges": "bytes"
+      },
+      "credential_present": false,
+      "proxy_used": false,
+      "redirect_followed": false,
+      "source_version": "UNKNOWN",
+      "published_at_basis": "ORIGINAL_BODY_REQUIRED",
+      "historical_visibility_proven": false
+    },
+    {
+      "id": "sse-fee-tariff.docx",
+      "request_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/charge/c/10781461/files/6ead9e7d60e14272a19cd75b622dd2ef.docx",
+      "response_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/charge/c/10781461/files/6ead9e7d60e14272a19cd75b622dd2ef.docx",
+      "method": "GET",
+      "response_status": 200,
+      "started_at": "2026-10-07T07:32:34.695225Z",
+      "retrieved_at": "2026-10-07T07:32:34.913556Z",
+      "raw_ref": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/sse-fee-tariff.docx",
+        "sha256": "sha256:b42cb6ad16be71f59618e2150ec31af57e8cf8874bc83973934ca8237fd56e84",
+        "bytes": 31017
+      },
+      "response_headers": {
+        "Server": "nginx",
+        "Date": "Wed, 07 Oct 2026 07:32:34 GMT",
+        "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "Content-Length": "31017",
+        "Connection": "close",
+        "Last-Modified": "Fri, 11 Sep 2026 08:32:44 GMT",
+        "ETag": "\"6aa3bcac-7929\"",
+        "Accept-Ranges": "bytes",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-Xss-Protection": "1",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Content-Security-Policy": "style-src 'self' https://*.sseinfo.com https://*.sse.com.cn  https://yunhq.sse.com.cn:32042 'unsafe-inline'; script-src 'self' https://*.sseinfo.com https://*.sse.com.cn https://yunhq.sse.com.cn:32042  'unsafe-inline' 'unsafe-eval';worker-src www.sse.com.cn play.szs.nagasoft.cn blob:;  frame-ancestors *.sse.com.cn *.sseinfo.com "
+      },
+      "credential_present": false,
+      "proxy_used": false,
+      "redirect_followed": false,
+      "source_version": "\"6aa3bcac-7929\"",
+      "published_at_basis": "PARENT_BODY_DATE_OR_UNKNOWN",
+      "historical_visibility_proven": false
+    },
+    {
+      "id": "stamp-tariff-1.jpg",
+      "request_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202106/W020210616333303252974.jpg",
+      "response_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202106/W020210616333303252974.jpg",
+      "method": "GET",
+      "response_status": 200,
+      "started_at": "2026-10-07T07:32:34.913739Z",
+      "retrieved_at": "2026-10-07T07:32:35.256269Z",
+      "raw_ref": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tariff-1.jpg",
+        "sha256": "sha256:cce2080158bde64ba64b75f56d5d8ecbf3c073102d33a03849e5406a2678393f",
+        "bytes": 126530
+      },
+      "response_headers": {
+        "Date": "Wed, 07 Oct 2026 07:32:35 GMT",
+        "Content-Type": "image/jpeg",
+        "Content-Length": "126530",
+        "Connection": "close",
+        "Last-Modified": "Fri, 24 Oct 2025 06:54:06 GMT",
+        "ETag": "\"1ee42-641e204033f80\"",
+        "Accept-Ranges": "bytes",
+        "Vary": "Accept-Encoding"
+      },
+      "credential_present": false,
+      "proxy_used": false,
+      "redirect_followed": false,
+      "source_version": "\"1ee42-641e204033f80\"",
+      "published_at_basis": "PARENT_BODY_DATE_OR_UNKNOWN",
+      "historical_visibility_proven": false
+    },
+    {
+      "id": "stamp-tariff-2.jpg",
+      "request_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202106/W020210616333303263019.jpg",
+      "response_url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/yhs/202106/W020210616333303263019.jpg",
+      "method": "GET",
+      "response_status": 200,
+      "started_at": "2026-10-07T07:32:35.256470Z",
+      "retrieved_at": "2026-10-07T07:32:35.601566Z",
+      "raw_ref": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tariff-2.jpg",
+        "sha256": "sha256:7a8252fe595570fed7c52cd13c32b57ed02f4c23f255bd295576667a3b3597bc",
+        "bytes": 134338
+      },
+      "response_headers": {
+        "Date": "Wed, 07 Oct 2026 07:32:35 GMT",
+        "Content-Type": "image/jpeg",
+        "Content-Length": "134338",
+        "Connection": "close",
+        "Last-Modified": "Fri, 24 Oct 2025 06:54:06 GMT",
+        "ETag": "\"20cc2-641e204033f80\"",
+        "Accept-Ranges": "bytes",
+        "Vary": "Accept-Encoding"
+      },
+      "credential_present": false,
+      "proxy_used": false,
+      "redirect_followed": false,
+      "source_version": "\"20cc2-641e204033f80\"",
+      "published_at_basis": "PARENT_BODY_DATE_OR_UNKNOWN",
+      "historical_visibility_proven": false
+    }
+  ],
+  "reference_facts": [
+    {
+      "fact_id": "SSE_A_AUCTION_EXCHANGE_HANDLING_20230828",
+      "product": "SSE_A_SHARE_AUCTION",
+      "component": "exchange_handling_fee",
+      "rate_fraction": "0.0000341",
+      "display_percent": "0.00341%",
+      "sides": [
+        "BUY",
+        "SELL"
+      ],
+      "effective_from": "2023-08-28",
+      "effective_to": "UNKNOWN",
+      "timezone": "Asia/Shanghai",
+      "source_version": "上证发〔2023〕137号 / 收费项目及标准（2023年8月修订）",
+      "applicability_originals": [
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/sse-current-charge.html",
+          "sha256": "sha256:1192429787ae4850ca3c1e6e9253a389ee986d88c6a3d0591239d8f40b6f106c",
+          "bytes": 35403
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/sse-fee-tariff.docx",
+          "sha256": "sha256:b42cb6ad16be71f59618e2150ec31af57e8cf8874bc83973934ca8237fd56e84",
+          "bytes": 31017
+        }
+      ],
+      "location": "Parent effective date; DOCX chapter3 section3.1.1",
+      "retrieved_at": "2026-10-07T07:32:34.913556Z",
+      "available_at": "2026-10-07T07:32:34.913556Z",
+      "available_at_basis": "CURRENT_LOCAL_CAPTURE_NOT_HISTORICAL_FIRST_VISIBLE",
+      "published_at": {
+        "value": "2023-08-18",
+        "precision": "DATE_ONLY",
+        "timezone": "Asia/Shanghai"
+      },
+      "url_migration_date_not_publication": "2025-06-10",
+      "broker_comprehensive_inclusion": "UNKNOWN",
+      "actual_fee_profile_default": false,
+      "historical_pit_proven": false
+    },
+    {
+      "fact_id": "STAMP_TAX_LAW_BASE_20220701",
+      "product": "SECURITIES_TRANSFER_WITH_PRICE",
+      "component": "stamp_tax",
+      "rate_fraction": "0.001",
+      "display_permille": "1",
+      "sides": [
+        "SELL"
+      ],
+      "effective_from": "2022-07-01",
+      "effective_to": "UNKNOWN",
+      "source_version": "中华人民共和国印花税法（2021年6月10日通过）",
+      "applicability_originals": [
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tax-law.html",
+          "sha256": "sha256:d652677c4fe3bd554c1bd58c2752c9cad7d6d2fc19dd566f47e52ceae02edfb8",
+          "bytes": 35232
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tariff-2.jpg",
+          "sha256": "sha256:7a8252fe595570fed7c52cd13c32b57ed02f4c23f255bd295576667a3b3597bc",
+          "bytes": 134338
+        }
+      ],
+      "location": "Law article3 seller only; article20 implementation; attached tariff final row",
+      "retrieved_at": "2026-10-07T07:32:35.601566Z",
+      "available_at": "2026-10-07T07:32:35.601566Z",
+      "available_at_basis": "CURRENT_LOCAL_CAPTURE_NOT_HISTORICAL_FIRST_VISIBLE",
+      "published_at": {
+        "value": "2021-06-16 09:14",
+        "precision": "MINUTE",
+        "timezone": "UNKNOWN"
+      },
+      "current_effective_rate": false,
+      "actual_fee_profile_default": false,
+      "historical_pit_proven": false
+    },
+    {
+      "fact_id": "STAMP_TAX_HALVING_20230828",
+      "product": "SECURITIES_TRANSFER_WITH_PRICE",
+      "component": "stamp_tax",
+      "rate_fraction": "0.0005",
+      "sides": [
+        "SELL"
+      ],
+      "effective_from": "2023-08-28",
+      "effective_to": "UNKNOWN",
+      "source_version": "财政部 税务总局公告2023年第39号",
+      "derivation": {
+        "base_fact": "STAMP_TAX_LAW_BASE_20220701",
+        "multiplier_fraction": "0.5",
+        "formula": "0.001 * 0.5 = 0.0005"
+      },
+      "applicability_originals": [
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tax-law.html",
+          "sha256": "sha256:d652677c4fe3bd554c1bd58c2752c9cad7d6d2fc19dd566f47e52ceae02edfb8",
+          "bytes": 35232
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tariff-2.jpg",
+          "sha256": "sha256:7a8252fe595570fed7c52cd13c32b57ed02f4c23f255bd295576667a3b3597bc",
+          "bytes": 134338
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/wave-hb-20261007/public/fees/stamp-tax-halving.html",
+          "sha256": "sha256:dd4db6a83f18db7a15f01512beed5da19ea309c6949a874caf31cc1885de83f0",
+          "bytes": 27977
+        }
+      ],
+      "location": "Announcement effective date and halving, read together with law+tariff",
+      "retrieved_at": "2026-10-07T07:31:56.535992Z",
+      "available_at": "2026-10-07T07:31:56.535992Z",
+      "available_at_basis": "CURRENT_LOCAL_CAPTURE_NOT_HISTORICAL_FIRST_VISIBLE",
+      "published_at": {
+        "value": "2023-08-28 16:12",
+        "precision": "MINUTE",
+        "timezone": "UNKNOWN"
+      },
+      "actual_fee_profile_default": false,
+      "historical_pit_proven": false
+    }
+  ],
+  "unresolved": [
+    "BROKER_COMMISSION_RATE",
+    "BROKER_PER_ORDER_MINIMUM",
+    "BUY_SELL_COMMISSION_SCOPE",
+    "BROKER_EXCHANGE_FEE_INCLUSION",
+    "CLEARING_TRANSFER_RATE_AND_INCLUSION",
+    "REGULATORY_FEE_RATE_AND_INCLUSION",
+    "OTHER_FEES_EXHAUSTIVENESS",
+    "ACTUAL_SLIPPAGE_AND_PRICE_TREATMENT",
+    "BROKER_CASH_SETTLEMENT_ROUNDING",
+    "CURRENT_SOURCE_REVALIDATION",
+    "HISTORICAL_COMPLETE_EFFECTIVE_INTERVALS_AND_FIRST_VISIBILITY"
+  ],
+  "limits": [
+    "Statutory facts do not establish this Owner account entitlement, broker deductions, license or production readiness.",
+    "Open-ended effective_to UNKNOWN is reference metadata, not an admitted closed historical interval.",
+    "SSE migrated 2025 URL carries 2023 revision; URL date does not become rule publication.",
+    "No clearing rate is inferred from a debt-market page.",
+    "Engine does not automatically insert these rates into any profile."
+  ]
+}

@@ -1,0 +1,15 @@
+# ADR-019：只读证据根映射与冻结验证器兼容
+
+Status: ACCEPTED_ENGINEERING_SCOPE_ONLY。2026-10-05。
+
+旧AdmissionVerification1.0.0的七个evidence_refs包含原工作区和Git外档案的绝对路径。旧验证器以自身checkout位置生成允许目录，所以原目录通过、干净副本以DIAGNOSTIC_EVIDENCE_PATH_UNAPPROVED失败。该行为和失败已经保存在4562427的Gate及独立补充审查中。
+
+采用新的EvidenceRootBinding1.0.0及release1.7.0-verification，限定两份repository document和五份private archive document。七个原始path/hash必须逐项、按原顺序匹配，两个项目文档读取当前checkout中对应原字节文件，五个外部证据仍从明确的原private archive根读取。配置和六个冻结依赖有完整SHA256 pin。非正规文件、symlink、路径越界、缺失、内容变化、重复或遗漏均失败。
+
+新验证器调用冻结旧验证器的schema/hash/业务检查，并用上述精确映射替代旧checkout依赖的文件路径检查。旧验证器中的文件检查在该调用处关闭后，必须在返回前完成七项新的实际文件检查；不提供跳过这些检查的live API。不是关闭证据验证，也不允许重封旧对象、caller提供新根或从原项目代码偷偷替代副本代码。
+
+冻结旧12项测试原件不改。新compatibility suite保留同一12项业务断言并绑定新验证器，另增加14项文件/映射/release安全测试。新的完整入口执行451个冻结检查、12个兼容断言及14个新增安全检查，共477项；原463与新477是重叠验证口径，不能相加。旧聚合入口的路径失败仍保留，新入口的完成状态另写新报告。
+
+外部档案不搬迁、不进入Git、不创建credentials文件、不读取Keychain、不联网。迁移范围仅CHECKOUT_RELOCATION_WITH_UNMOVED_PRIVATE_EVIDENCE，不声明通用跨机器可移植。若未来要移动private archive，必须另行版本化根合同并审查。
+
+返回诊断只读结果，不是新的Snapshot/Receipt协议，不产生数据准入权。historical_visibility_proven=false、admitted_policy_count=0、production_enabled=false，Schema6和SQL001–006不变，所有原供应商、费用/PIT、审批及生产阻断保留。

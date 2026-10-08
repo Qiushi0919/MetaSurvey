@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "epoch": "R2",
+  "status": "PASS_WITH_CONDITIONS",
+  "candidate": "95476b67255863efd7fc5fb9ee34c84766e7d68a",
+  "release": "1.0.1-post-wave-e-preparation",
+  "code_pins": 37,
+  "atomic_assertions": 14986,
+  "assertions_by_suite": {
+    "python": 13945,
+    "native": 1028,
+    "extended_forward": 11,
+    "strict_hash": 2
+  },
+  "count_definition": "R2 final execution assertions only; no R1 or repeated earlier helper executions; not regression cases. Before/after source checks are distinct checkpoints.",
+  "attack_classes": [
+    {
+      "name": "FUTURE_METADATA_AND_PERIOD_ISOLATION",
+      "state": "PASS",
+      "sample_assertions": 480
+    },
+    {
+      "name": "LATE_REVISION_BACKFILL",
+      "state": "PASS",
+      "sample_assertions": 240
+    },
+    {
+      "name": "OBSERVED_VS_RECONSTRUCTED",
+      "state": "PASS",
+      "sample_assertions": 12
+    },
+    {
+      "name": "DATE_ONLY_IMPUTATION",
+      "state": "PASS",
+      "sample_assertions": 24
+    },
+    {
+      "name": "EVENT_TIME_INDEPENDENCE",
+      "state": "PASS",
+      "sample_assertions": 12
+    },
+    {
+      "name": "CURRENT_UNIVERSE_STATUS_BACKFILL",
+      "state": "PASS",
+      "sample_assertions": 18
+    },
+    {
+      "name": "ABSENT_STATUS_NO_SAFE_INFERENCE",
+      "state": "PASS",
+      "sample_assertions": 6
+    },
+    {
+      "name": "SAME_BAR_AND_T1_FILL_AUTHORITY",
+      "state": "PASS",
+      "sample_assertions": 5
+    },
+    {
+      "name": "DOUBLE_ACTION",
+      "state": "PASS",
+      "sample_assertions": 1
+    },
+    {
+      "name": "SYNTHETIC_FEE_UNITS_NOT_OWNER_POLICY",
+      "state": "PASS",
+      "sample_assertions": 6
+    },
+    {
+      "name": "DIAGNOSTIC_NOT_FINAL_STRATEGY",
+      "state": "PASS",
+      "sample_assertions": 1
+    },
+    {
+      "name": "FREEZE_BEFORE_REVEAL",
+      "state": "PASS",
+      "sample_assertions": 1
+    },
+    {
+      "name": "API_TIER_OWNER_DOCUMENT_NOT_LICENSE",
+      "state": "PASS",
+      "sample_assertions": 1
+    },
+    {
+      "name": "LLM_NOT_HUMAN",
+      "state": "PASS",
+      "sample_assertions": 4
+    },
+    {
+      "name": "SYNTHETIC_FORWARD_ZERO_ACTUAL_DAYS",
+      "state": "PASS",
+      "sample_assertions": 1
+    },
+    {
+      "name": "REAL_PAPER_AND_SNAPSHOT_B_HARD_BLOCK",
+      "state": "PASS",
+      "sample_assertions": 4
+    },
+    {
+      "name": "SOURCE_ORIGINAL_LINEAGE",
+      "state": "PASS",
+      "sample_assertions": 94
+    },
+    {
+      "name": "FINANCIAL_ORDINAL_MULTISET",
+      "state": "PASS",
+      "sample_assertions": 12
+    },
+    {
+      "name": "COPY_RESEAL_NOT_REGISTRY",
+      "state": "PASS",
+      "sample_assertions": 8
+    },
+    {
+      "name": "ADOPTED_ORIGINAL_INVALIDATION",
+      "state": "PASS",
+      "sample_assertions": 295
+    },
+    {
+      "name": "DURABLE_STORE_REOPEN",
+      "state": "PASS",
+      "sample_assertions": 1
+    },
+    {
+      "name": "NATIVE_ORDER_BROKER_AUTHORITY",
+      "state": "PASS",
+      "sample_assertions": 64
+    },
+    {
+      "name": "PROVIDER_DUPLICATE_KEYS_RETENTION",
+      "state": "PASS",
+      "sample_assertions": 2
+    },
+    {
+      "name": "PROVIDER_BEARER_REDaction",
+      "state": "PASS",
+      "sample_assertions": 8
+    }
+  ],
+  "actual_original_checks": {
+    "retained_rows": 4206,
+    "request_clock_identities": 94,
+    "physical_original_paths": 94,
+    "distinct_original_hashes": 85,
+    "financial_observations": 447,
+    "financial_cells": 4875,
+    "active_source_paths": 996,
+    "adopted_private_paths": 293,
+    "expected_hash_private_read_attacks": 295,
+    "before_after_unchanged": true
+  },
+  "R1_findings": [
+    {
+      "id": "R1-F01",
+      "state": "CLOSED_ENGINEERING_ONLY",
+      "financial_original_paths": 21,
+      "all_retained_observation_closure_verified": true,
+      "license_or_pit_admitted": false
+    },
+    {
+      "id": "R1-F02",
+      "state": "CLOSED_ENGINEERING_ONLY",
+      "duplicate_keys_including_unicode_escaped_rejected": true,
+      "bearer_patterns_rejected": true,
+      "bad_original_bytes_retained": 0,
+      "actual_secret_used": false
+    }
+  ],
+  "R2_failed_epochs": [],
+  "R1_epochs_retained_separately": true,
+  "root_full_regression": "SEPARATE_ROOT_RUN_NOT_REPLACED_OR_COUNTED_HERE",
+  "authenticated_requests": 0,
+  "credential_lookups": 0,
+  "new_public_requests": 0,
+  "actual_forward_days": 0,
+  "productionGate": false,
+  "historical_visibility_proven": false,
+  "formal_source_admission": "BLOCKED",
+  "native_execution_writes": 0,
+  "critical_false_acceptance": false,
+  "limitations": [
+    "DISPLAY_SELF_RESEAL_IS_METADATA_SHAPE_NOT_PROOF",
+    "SOURCE_MUTATION_TESTS_USE_READ_INTERCEPTION_AND_ISOLATED_SYNTHETIC_HASH_FILE_NO_ORIGINAL_MUTATION",
+    "NO_ACTUAL_PAPER_OR_FILL_INTERFACE",
+    "NO_PRIVILEGED_WHOLE_STORE_RESEAL_OR_HOSTILE_INTERPRETER_PROOF",
+    "PRIVATE_ARCHIVE_RELOCATION_NOT_VERIFIED",
+    "NO_LEGAL_OR_INDEPENDENT_ENTITLEMENT_CONCLUSION"
+  ]
+}

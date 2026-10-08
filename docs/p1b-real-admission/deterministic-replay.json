@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "QUARANTINE_RAW_REPLAY_NOT_SNAPSHOT_RECEIPT",
+  "same_original_capture_replay": "PASS",
+  "result_hash": "sha256:5cae766d0594ee4c5edee42068dde32aa2c2b9e9d4203a24e9ac8a33c7342b37",
+  "raw_integrity": "PASS",
+  "canonical_request_scope": "PASS",
+  "clock_and_DQ_recomputation": "PASS",
+  "admission_issued": false,
+  "network_requests_during_replay": 0,
+  "credential_lookup_during_replay": false,
+  "capture_code_commit": "8f8cc0d8a7b32fcc77479f1f265068ca87e6b684",
+  "probe_reports": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/probe-report.json",
+      "sha256": "sha256:1b0c68a1f64b556d654eec084a37b673f7465d7289e025c1bcc051bffc95951a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/probe-report.json",
+      "sha256": "sha256:3fef3e75ebe227e0744fe5fdb70e849b1307eec07d9a18f2feabd578fca071d9"
+    }
+  ],
+  "verification_code_commit": "42e1e4c457edc8a30316aec560c9d444f2406517",
+  "future_implementation_publication_guard": "PASS_ALL_CURRENT_ORIGINAL_ROWS"
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "SYNTHETIC_TEST_ONLY",
+  "fixture_E2E": "PASS",
+  "deterministic_replay": "PASS",
+  "replay_hash": "sha256:93ffa7f02bfa27c1621ddb68be7acadbb87220cda6350592661e88b2b41c627f",
+  "chain_ref": {
+    "object_id": "synthetic:fixture-research-chain:CORE_40",
+    "object_version": 1,
+    "content_hash": "sha256:14fa964b503875ce10ef7f360230d431f0e82c71a2aa1f02c420c0c371addaa6"
+  },
+  "packet_ref": {
+    "content_hash": "sha256:6591de62f437132c18a5f5b021cb4bc0e172a42280643aa90a83d82ffa2ea773",
+    "object_id": "brain:3d552d8278eb8fd34db6ff4a60dffe98c7adc2caacaba97f660eb747ed26eb1c",
+    "object_version": 1
+  },
+  "draft_ref": {
+    "content_hash": "sha256:c7d1df0fb883255d7757418f70b818ec0af13366231935f951b8b815bb73c2ac",
+    "object_id": "draft:0c9dc1e88421fe38091c3fc5cd65df6f69604a001fe731431a6135eb2228a1d2",
+    "object_version": 1
+  },
+  "assessment_ref": {
+    "content_hash": "sha256:d112b7e411b47ed47c910bed7cc280f0d5e907721b2f8e680e745398803f4b41",
+    "object_id": "semantic-assessment:28cef030c7af91b3141991deae72541a9c4b40129d0705acdeb11f851b8d2c5f",
+    "object_version": 1
+  },
+  "card_ref": {
+    "content_hash": "sha256:928d9565584e94c02bd85b3535486db05e5130b7db5f2f2b1be0c891648bf82f",
+    "object_id": "synthetic:fixture-research-card:CORE_40",
+    "object_version": 1
+  },
+  "native_card_contract": "ResearchCard1.0.0",
+  "real_grade": "UNSET_REQUIRED",
+  "real_cost_edge_probability_sizing": "UNSET_REQUIRED",
+  "assessment_S_max_action": "REQUEST_REVIEW",
+  "execution_writes": 0,
+  "research_model_calls": 0,
+  "full_external_evidence_path": "/Users/qiushi/投资研究/.p1b-archives/real-stock-slice-20261005/fixture-repaired-final/fixture-chain-results.json",
+  "sha256": "sha256:4dcf2ab54ad281335e463a05d167bd472734509491ef116797fa69febf28ed60",
+  "runtime_issuer_lifetime": "PROCESS_ONLY",
+  "semantics_evidence_is_separate_illustrative_coordinate": true
+}

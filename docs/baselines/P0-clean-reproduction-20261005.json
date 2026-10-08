@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "observed_at": "2026-10-05T05:51:26.524Z",
+  "baseline_commit": "433a2e96482e5db6e2a0ea452727baf61f4c4426",
+  "restored_from_bundle": true,
+  "checkout": "P0_ANNOTATED_TAG_IN_INDEPENDENT_CLONE",
+  "node": "v24.19.0",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "dependencies_preexisting": false,
+  "npm_cache_preexisting": false,
+  "user_npm_config": "EMPTY_DEDICATED_FILE",
+  "global_npm_config": "EMPTY_DISTINCT_FILE",
+  "inherited_environment": "MINIMAL_ALLOWLIST_NO_LEGACY_ENV_OR_CREDS",
+  "legacy_external_assets_required": false,
+  "prior_setup_attempt": {
+    "exit_code": 1,
+    "reason": "NPM_REJECTED_SAME_CONFIG_PATH_FOR_USER_AND_GLOBAL",
+    "baseline_test_ran": false
+  },
+  "results": [
+    {
+      "command": "npm ci",
+      "exit_code": 0,
+      "output_sha256": "sha256:2fa1861fe3934d7b0532b2738ccf5c2cc9d6f7aadc4f6ec93f3103ccc8e2ed14",
+      "tail": "\nadded 8 packages, and audited 9 packages in 6s\n\n2 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n"
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 0,
+      "output_sha256": "sha256:187fb8c5401ac2d9dd74f4784eeeb966c43477c4e5bcba299bcfc12ddd3eec02",
+      "tail": "✔ DATE_ONLY packet fixture reads require the same explicit calendar context as writes (466.501917ms)\nℹ tests 98\nℹ suites 0\nℹ pass 97\nℹ fail 0\nℹ cancelled 0\nℹ skipped 1\nℹ todo 0\nℹ duration_ms 4174.220959\n"
+    }
+  ]
+}

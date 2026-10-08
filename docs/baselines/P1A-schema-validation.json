@@ -1,0 +1,291 @@
+{
+  "schema_version": 5,
+  "empty_to_latest": {
+    "schemaVersion": 5,
+    "applied": [
+      "001_schema_v1.sql",
+      "002_contract_registry.sql",
+      "003_p1a_data.sql",
+      "004_p1a_paper.sql",
+      "005_p1a_replay_audit.sql"
+    ],
+    "verified": []
+  },
+  "repeat_no_changes": {
+    "schemaVersion": 5,
+    "applied": [],
+    "verified": [
+      "001_schema_v1.sql",
+      "002_contract_registry.sql",
+      "003_p1a_data.sql",
+      "004_p1a_paper.sql",
+      "005_p1a_replay_audit.sql"
+    ]
+  },
+  "engine": "PGlite 0.5.8 (PostgreSQL SQL execution)",
+  "external_postgresql_acceptance": false,
+  "tables": [
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "accounts"
+    },
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "fills"
+    },
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "ledger"
+    },
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "lot_reservations"
+    },
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "lots"
+    },
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "orders"
+    },
+    {
+      "table_schema": "p1a_paper",
+      "table_name": "requests"
+    },
+    {
+      "table_schema": "p1a_replay",
+      "table_name": "audit"
+    },
+    {
+      "table_schema": "p1a_replay",
+      "table_name": "results"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "account_profiles"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "account_snapshots"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "accounts"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "adjustment_actions"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "adjustment_versions"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "announcements"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "approvals"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "audit_log"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "backtest_runs"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "bars_1d"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "bars_1m"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "brain_packets"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "brain_reviews"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "candidate_eligibility"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "card_evidence"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "config_versions"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "contract_records"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "corp_actions"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "cost_estimates"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "data_sources"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "features_eod"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "fills_real"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "fills_sim"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "financials"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "ledger_real"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "ledger_sim"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "legacy_asset_registry"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "news_events"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "order_claims_real"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "order_claims_sim"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "order_drafts"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "orderbook_l2"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "orders_real"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "orders_sim"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "p1a_data_audit"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "p1a_data_objects"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "p1a_data_raw"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "p1a_data_staging"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "positions_real"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "positions_sim"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "research_cards"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "research_evidence"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "schema_migrations"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "sector_membership"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "securities"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "security_master"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "signal_events"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "snapshot_entries"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "snapshot_manifests"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "staging_imports"
+    },
+    {
+      "table_schema": "public",
+      "table_name": "strategy_metrics"
+    }
+  ],
+  "migrations": [
+    {
+      "name": "001_schema_v1.sql",
+      "sha256": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a"
+    },
+    {
+      "name": "002_contract_registry.sql",
+      "sha256": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84"
+    },
+    {
+      "name": "003_p1a_data.sql",
+      "sha256": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340"
+    },
+    {
+      "name": "004_p1a_paper.sql",
+      "sha256": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154"
+    },
+    {
+      "name": "005_p1a_replay_audit.sql",
+      "sha256": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab"
+    }
+  ]
+}

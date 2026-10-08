@@ -1,0 +1,221 @@
+{
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "SourceObservation"
+    },
+    "contract_version": {
+      "const": "1.1.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "source_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "original_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "raw_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "terms_raw_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "scope": {
+      "const": "OBSERVED"
+    },
+    "data_type": {
+      "const": "CALENDAR_REFERENCE"
+    },
+    "clock": {
+      "type": "object",
+      "properties": {
+        "published_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "available_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "publication_precision": {
+          "const": "DATE_ONLY"
+        },
+        "clock_basis": {
+          "const": "RETRIEVAL_OBSERVATION"
+        },
+        "historical_availability_proven": {
+          "const": false
+        }
+      },
+      "required": [
+        "published_date",
+        "published_at",
+        "available_at",
+        "retrieved_at",
+        "publication_precision",
+        "clock_basis",
+        "historical_availability_proven"
+      ],
+      "additionalProperties": false
+    },
+    "calendar": {
+      "type": "object",
+      "properties": {
+        "closures": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          },
+          "maxItems": 1000,
+          "uniqueItems": true
+        },
+        "open_dates": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          },
+          "maxItems": 1000,
+          "uniqueItems": true
+        },
+        "weekend_closures": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          },
+          "maxItems": 1000,
+          "uniqueItems": true
+        },
+        "publication_date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "closures",
+        "open_dates",
+        "weekend_closures",
+        "publication_date"
+      ],
+      "additionalProperties": false
+    },
+    "data_quality_status": {
+      "const": "PASS"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "trace_id",
+    "source_id",
+    "source_version",
+    "original_uri",
+    "raw_sha256",
+    "terms_raw_sha256",
+    "scope",
+    "data_type",
+    "clock",
+    "calendar",
+    "data_quality_status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1b:SourceObservation:1.1.0",
+  "title": "SourceObservation",
+  "x-contract": {
+    "version": "1.1.0",
+    "money": "Integer-cent decimal strings / BigInt; price/rate Decimal; no production values/defaults.",
+    "timezone": "Offset timestamps; Asia/Shanghai business; UTC storage; DATE_ONLY never promoted to intraday.",
+    "hash": "Canonical JSON SHA256 excluding only top-level content_hash/proof. Snapshot v1 uses original protocol.",
+    "reason_codes": [
+      "P1B_SOURCE_UNAPPROVED",
+      "P1B_LICENSE_UNKNOWN",
+      "P1B_TERMS_UNVERIFIED",
+      "P1B_PERMISSION_SCOPE",
+      "P1B_SCOPE_MISMATCH",
+      "P1B_SOURCE_HASH_MISMATCH",
+      "P1B_SOURCE_FACT_MISMATCH",
+      "P1B_FUTURE_DATA",
+      "P1B_HISTORICAL_CLOCK_UNPROVEN",
+      "P1B_RECEIPT_UNKNOWN",
+      "P1B_RECEIPT_REVOKED",
+      "P1B_POLICY_REVOKED",
+      "P1B_HASH_MISMATCH",
+      "P1B_SIGNATURE_INVALID",
+      "P1B_PROJECTION_MISMATCH",
+      "P1B_ARBITRARY_PAYLOAD",
+      "P1B_SECRET_OR_PATH",
+      "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+      "P1B_GRADE_UNCALIBRATED",
+      "P1B_HARD_BLOCK",
+      "P1B_TIMING_UNSATISFIED",
+      "P1B_EDGE_UNSET",
+      "P1B_UNKNOWN_REAL_ACCOUNT",
+      "P1B_NON_EXECUTABLE",
+      "P1B_REAL_STOCK_PILOT_BLOCKED",
+      "P1B_EXPERIMENTAL_SCORE_ONLY",
+      "P1B_CALENDAR_COVERAGE",
+      "P1B_CODE_EPOCH_MISMATCH",
+      "P1B_POINT_IN_TIME_ONLY",
+      "P1B_SEMANTICS_SCOPE"
+    ],
+    "required_optional": "All declared fields required; null is explicitly unknown.",
+    "invalidation": [
+      "changed source bytes/terms/projection",
+      "different purpose/coverage/namespace/cutoff/code epoch",
+      "revocation",
+      "attempted cloud/stock/trading scope upgrade"
+    ],
+    "production_enabled": false
+  }
+}

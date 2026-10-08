@@ -1,0 +1,210 @@
+{
+  "gate": "P1B_READINESS_GATE",
+  "current_result": "FAIL",
+  "meaning": "Required research-consumer safety boundary is not established; this is not a failure of the accepted P1-A synthetic cost/ledger/replay baseline.",
+  "scope_policy": "UNSET_REQUIRED_PENDING_HUMAN_DECISION",
+  "p1b_authorized": false,
+  "production_execution_allowed": false,
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Research无法读取QUARANTINED",
+      "current_result": "FAIL",
+      "why": "已有data closure拒绝quarantine；不存在强制consumer入口/隔离运行验收。",
+      "conditions": [
+        "C01",
+        "C02",
+        "C09"
+      ],
+      "baseline_evidence": [
+        "src/data/snapshot.mjs",
+        "docs/closure/boundary-inspection.json"
+      ],
+      "required_acceptance_test": "消费者尝试读raw/DB/unknown source，输出/bytes/hash/refs均不含拒绝对象",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R02",
+      "requirement": "Research无法读取future-invalid",
+      "current_result": "FAIL",
+      "why": "已有PIT机制Golden；未实现研究export/import时cutoff复核。",
+      "conditions": [
+        "C03",
+        "C05"
+      ],
+      "baseline_evidence": [
+        "src/data/snapshot.mjs",
+        "tests/p1a-data.test.mjs"
+      ],
+      "required_acceptance_test": "未来available/retrieved/status/action/financial/title/ID不得进入研究包",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R03",
+      "requirement": "只能引用验证且用途准入的SnapshotManifest",
+      "current_result": "FAIL",
+      "why": "低层verifier不认证许可/真实性；synthetic→OBSERVED反例可通过低层校验。",
+      "conditions": [
+        "C01",
+        "C02",
+        "C04",
+        "C06"
+      ],
+      "baseline_evidence": [
+        "docs/closure/boundary-inspection.json"
+      ],
+      "required_acceptance_test": "只接受由可信facade发出的purpose/version/hash绑定receipt；caller篡改或用途升格拒绝",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R04",
+      "requirement": "Card输入可追踪source/raw/hash/time/version",
+      "current_result": "FAIL",
+      "why": "已有source→snapshot→reference Feature→Cost→Replay链；正式Card producer/导入链尚无。",
+      "conditions": [
+        "C04",
+        "C05"
+      ],
+      "baseline_evidence": [
+        "src/p1a/replay.mjs",
+        "docs/experiments/P1A-results.json"
+      ],
+      "required_acceptance_test": "snapshot→packet→非交易draft每一输入都能读回闭包；改变上游使旧输入失效",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R05",
+      "requirement": "研究输出不能直接产生订单",
+      "current_result": "FAIL",
+      "why": "基线无transport且reference只可PAPER；新的模型导入/订单字段负向链未实现。",
+      "conditions": [
+        "C08"
+      ],
+      "baseline_evidence": [
+        "src/baseline/gates.mjs",
+        "src/paper/index.mjs"
+      ],
+      "required_acceptance_test": "模型返回BUY/OrderIntent/APPROVE，orders/fills/真实approval writes均0；合法回包仅非交易draft",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R06",
+      "requirement": "LLM approval不是人工批准",
+      "current_result": "FAIL",
+      "why": "冻结Approval schema与两HUMAN authority检查已通过；新研究ingress尚无端到端负向证据。",
+      "conditions": [
+        "C08"
+      ],
+      "baseline_evidence": [
+        "tests/gates.test.mjs",
+        "tests/contracts.test.mjs"
+      ],
+      "required_acceptance_test": "LLM自报actor HUMAN或两approval hash不能制造真实authority/订单",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R07",
+      "requirement": "CORE/EVENT/RESEARCH namespace隔离",
+      "current_result": "FAIL",
+      "why": "现contract/SQL/Paper隔离已通过；新packet/import链的namespace交叉需验收。",
+      "conditions": [
+        "C05"
+      ],
+      "baseline_evidence": [
+        "tests/contracts.test.mjs",
+        "tests/p1a-paper.test.mjs"
+      ],
+      "required_acceptance_test": "跨namespace输出/已有Card/Feature refs拒绝；RESEARCH不得产生signal/order，EVENT仅placeholder",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R08",
+      "requirement": "Cost Engine在Candidate admission前运行",
+      "current_result": "FAIL",
+      "why": "独立cost API可用；实际候选producer的前后顺序尚无。",
+      "conditions": [
+        "C07"
+      ],
+      "baseline_evidence": [
+        "src/cost/index.mjs",
+        "contracts/v1/CandidateEligibility.schema.json"
+      ],
+      "required_acceptance_test": "事件/调用序列证明cost先于eligibility，缺cost_ref或无policy cannot tradeable",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R09",
+      "requirement": "费用未知不能声称适合真实账户",
+      "current_result": "FAIL",
+      "why": "30真实参数UNSET且prod gate关闭；新研究Card/import适用性声明还需验证。",
+      "conditions": [
+        "C07",
+        "C32",
+        "C33",
+        "C35"
+      ],
+      "baseline_evidence": [
+        "config/p1a/unset-required.inventory.json"
+      ],
+      "required_acceptance_test": "UNKNOWN费用/本金输出真实适用性=BLOCKED，grade/sizing不能由fixture补齐；模型肯定句也被拒绝/隔离",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R10",
+      "requirement": "productionGate保持false",
+      "current_result": "PASS",
+      "why": "本轮实际调用未配置profile：allowed=false；冻结gate和production-lock测试字节未改。",
+      "conditions": [
+        "C08",
+        "C38"
+      ],
+      "baseline_evidence": [
+        "docs/closure/boundary-inspection.json",
+        "tests/p1a-production-lock.test.mjs"
+      ],
+      "required_acceptance_test": "新Closure代码/真实值自报/NaN/null/fixture升级均false，旧baseline同样false",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R11",
+      "requirement": "Broker transport不存在或硬禁用",
+      "current_result": "PASS",
+      "why": "现模块只有PAPER reference，无broker submit route；冻结实现source tree字节已核验。",
+      "conditions": [
+        "C08",
+        "C37",
+        "C39"
+      ],
+      "baseline_evidence": [
+        "docs/closure/evidence-verification.json",
+        "src/paper/index.mjs"
+      ],
+      "required_acceptance_test": "新candidate不引入submit transport/credentials/LLM订单能力，broker操作全部拒绝",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R12",
+      "requirement": "纯MANUAL_EXPORT/PAPER可工作",
+      "current_result": "FAIL",
+      "why": "已有synthetic paper/replay；MANUAL_EXPORT真正生成/返回输入闭包adapter尚未实现。",
+      "conditions": [
+        "C01",
+        "C04",
+        "C08",
+        "C09"
+      ],
+      "baseline_evidence": [
+        "docs/P1A-Gate-Review.md",
+        "contracts/v1/BrainPacket.schema.json"
+      ],
+      "required_acceptance_test": "隔离手动文件往返可重复验证，仅允许批准scope；不调用研究模型、不启动真实交易",
+      "new_consumer_test_run": "NOT_RUN_NOT_IMPLEMENTED"
+    }
+  ],
+  "counts": {
+    "PASS": 2,
+    "FAIL": 10
+  },
+  "criteria_to_open": "All 12 requirements PASS for an explicitly approved scope AND all MUST_CLOSE_BEFORE_P1B closed AND explicit APPROVE_P1B. Existing real captured sources remain blocked.",
+  "future_real_research_gate": "BLOCKED_UNTIL_EACH_CONSUMED_SOURCE_LICENSE_CLOCK_COVERAGE_ADMITTED"
+}

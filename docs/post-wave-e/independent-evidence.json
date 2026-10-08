@@ -1,0 +1,202 @@
+{
+  "version": "1.0.0",
+  "review_epoch": "R2",
+  "candidate": "95476b67255863efd7fc5fb9ee34c84766e7d68a",
+  "release": "1.0.1-post-wave-e-preparation",
+  "conclusion": "PASS_WITH_CONDITIONS",
+  "atomic_assertions": 14986,
+  "regression_counts_not_added": true,
+  "R1_findings_closed": true,
+  "source_before_after_paths": 996,
+  "source_bytes_unchanged": true,
+  "R2_failed_epochs": 0,
+  "synthetic_helper_earlier_repeat_not_counted": true,
+  "authenticated_requests": 0,
+  "credential_lookups": 0,
+  "actual_forward_days": 0,
+  "historical_visibility_proven": false,
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false,
+  "artifacts": [
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/adversarial.py",
+      "sha256": "sha256:5091a2e259c4aae98869e07ce85aee8824e6c26d218031ddc05772f43cf7a109",
+      "bytes": 25367
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/extended-forward-matrix.json",
+      "sha256": "sha256:8805ce51e455d949b28eadbf5ad516f6939e91f005a317736ea2923398b65109",
+      "bytes": 759
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/extended-forward.log",
+      "sha256": "sha256:eef036f2306651cb19d215f778be1f17491ae666604177f720c124bdfccc3162",
+      "bytes": 104
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/extended-forward.py",
+      "sha256": "sha256:b3373f1ade45d89a1f90f447e2408cd61f4b5db764732a7af376f16be0314926",
+      "bytes": 5915
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/final-source-pins.json",
+      "sha256": "sha256:a27bcafe0b2fb910b89914f0f9366fcb9254bbc484be48e66ad0dfcaa7257de0",
+      "bytes": 325116
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/body-tamper.fixture.sqlite3",
+      "sha256": "sha256:47b42dfb73c366fe0a2422b3e4bffbe75970b1298d2d52b19792808884291d56",
+      "bytes": 32768
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/concurrent.fixture.sqlite3",
+      "sha256": "sha256:eecf014442a053918054e63c67ba9ee6846e9d12fd162367800177d2da63b625",
+      "bytes": 40960
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/copied.fixture.sqlite3",
+      "sha256": "sha256:70f5a012ec2b4ed1c7b5ee9209613163d33bbc1d4a151022c2f6d94ed282ab5f",
+      "bytes": 36864
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/paper.fixture.sqlite3",
+      "sha256": "sha256:70f5a012ec2b4ed1c7b5ee9209613163d33bbc1d4a151022c2f6d94ed282ab5f",
+      "bytes": 36864
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/provider-input/duplicate-0.synthetic.json",
+      "sha256": "sha256:9139f64df2ce9af093e5b506944ae38e9f536a81908e59c976ef970d42dcf7a9",
+      "bytes": 498
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/provider-input/duplicate-1.synthetic.json",
+      "sha256": "sha256:3c4e5f849ede3e1b81b9f3e6216d011f00bcad4cf5f32b793d211af46026cacf",
+      "bytes": 503
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/provider-input/endpoint-query.synthetic.json",
+      "sha256": "sha256:d37fd95d3023ef1d5e52ea93a050e1d273cd72eae875e1cbdf5591175292ca25",
+      "bytes": 462
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/provider-input/purpose-query.synthetic.json",
+      "sha256": "sha256:5e1b86c72d9e118deb278b27a9bf78efa8e94bb084cac4e706e28bd0cbf4a2c3",
+      "bytes": 455
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/strict-hash-final.synthetic.json",
+      "sha256": "sha256:4d34a6f62ad96a6734bc96afc9f89b8f39033f92d5b0fc58dee5f1feb24c4f88",
+      "bytes": 24
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/strict-hash.synthetic.json",
+      "sha256": "sha256:4d34a6f62ad96a6734bc96afc9f89b8f39033f92d5b0fc58dee5f1feb24c4f88",
+      "bytes": 24
+    },
+    {
+      "kind": "REVIEW_FIXTURE_SYMLINK",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/symlink.fixture.sqlite3",
+      "target": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/paper.fixture.sqlite3",
+      "live_authority": false
+    },
+    {
+      "kind": "REVIEW_SYNTHETIC_FIXTURE",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/fixtures/tamper.fixture.sqlite3",
+      "sha256": "sha256:b73da9271381a3b5b7227ac5b5cb2a598d2eaefeb0faacfe9e139080bdf37706",
+      "bytes": 28672
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/matrix.json",
+      "sha256": "sha256:8e1fc714d9bbaa1661c07c6716b9d97c2aa6340f52db64930601e6147fbfe74a",
+      "bytes": 4910
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/native-matrix.json",
+      "sha256": "sha256:f46cc529483bb736f5a9a6582d60f2221ad5b082eb0642f11cbafc73c53faf56",
+      "bytes": 1613
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/native.log",
+      "sha256": "sha256:f775ebb66346debf628582dcd4c446770413c1095773f5004660b62a57456cb0",
+      "bytes": 104
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/native.mjs",
+      "sha256": "sha256:15d0140595de3e6d6d5b4574a226a84375a7162c9cd2b1171802883476d69a12",
+      "bytes": 6541
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/python-matrix.json",
+      "sha256": "sha256:007bf15b8a506505e198b417eef9691ce3e1a0ed42cc49f2e0f3c62258ce9454",
+      "bytes": 3169
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/python.log",
+      "sha256": "sha256:7173d71161d10c03b14d45dca4125b8b4745d8e54a55cf5620bb67fb5ac49f00",
+      "bytes": 216
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/report.md",
+      "sha256": "sha256:e08c048c99d9b34bc4bb5104f93c418bfc026334f0526bf75faa309b7249c517",
+      "bytes": 6748
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/source-pins-after.json",
+      "sha256": "sha256:3601ef2c976883c1dbe140136e9b08a0fd66c6509827e87d8a69b5a714e65f13",
+      "bytes": 213620
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/source-pins-before.json",
+      "sha256": "sha256:3601ef2c976883c1dbe140136e9b08a0fd66c6509827e87d8a69b5a714e65f13",
+      "bytes": 213620
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/strict-hash-final-matrix.json",
+      "sha256": "sha256:f2a9709f414a467ea1ce608b287f45f4435f7487ffeb2b057b895017fe05aabd",
+      "bytes": 288
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/strict-hash-matrix.json",
+      "sha256": "sha256:f2a9709f414a467ea1ce608b287f45f4435f7487ffeb2b057b895017fe05aabd",
+      "bytes": 288
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/strict-hash.log",
+      "sha256": "sha256:48ef42598988af2cd2a4427ae2bd45817a3b09ed98be603ff4125f4fc3b59e6a",
+      "bytes": 47
+    },
+    {
+      "kind": "REVIEW_ARTIFACT",
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/review/R2/strict-hash.py",
+      "sha256": "sha256:e72f5c8c504a4e191f72e1a1a11b67e25357a6677f233b4b5cb6c4118c145901",
+      "bytes": 1218
+    }
+  ]
+}

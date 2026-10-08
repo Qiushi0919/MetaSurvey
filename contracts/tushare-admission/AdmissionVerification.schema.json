@@ -1,0 +1,1872 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:tushare-admission:AdmissionVerification:1.0.0",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "AdmissionVerification"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "purpose": {
+      "const": "TECHNICAL_READ_ONLY_ENTITLEMENT_DIAGNOSTIC"
+    },
+    "stock_scope": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "actual_account_tier": {
+      "const": 15000
+    },
+    "account_tier_evidence_basis": {
+      "const": "OWNER_ASSERTED"
+    },
+    "actual_product_type": {
+      "const": "MONTH_CARD_OWNER_ASSERTED"
+    },
+    "actual_product_identifier": {
+      "const": "UNSET_REQUIRED"
+    },
+    "actual_account_identifier": {
+      "const": "UNSET_REQUIRED"
+    },
+    "actual_expiration": {
+      "const": "UNSET_REQUIRED"
+    },
+    "source_id": {
+      "const": "TUSHARE_MONTHLY_GATEWAY"
+    },
+    "endpoint": {
+      "const": "http://118.89.117.77:8030/"
+    },
+    "source_operator": {
+      "const": "UNSET_REQUIRED"
+    },
+    "official_relationship_proven": {
+      "const": false
+    },
+    "verification_conclusion": {
+      "enum": [
+        "BLOCKED_CREDENTIAL_AND_ENTITLEMENT",
+        "BLOCKED_ENTITLEMENT_AFTER_TECHNICAL_PROBE",
+        "BLOCKED_PROVIDER_PREREQUISITES"
+      ]
+    },
+    "credential_lookup": {
+      "type": "object",
+      "properties": {
+        "reference_provided": {
+          "type": "boolean"
+        },
+        "presence": {
+          "type": "boolean"
+        },
+        "result": {
+          "enum": [
+            "UNSET_REQUIRED",
+            "NOT_FOUND",
+            "PRESENT_IN_MEMORY_ONLY"
+          ]
+        },
+        "lookup_from_chat": {
+          "const": false
+        },
+        "persisted": {
+          "const": false
+        }
+      },
+      "required": [
+        "reference_provided",
+        "presence",
+        "result",
+        "lookup_from_chat",
+        "persisted"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "result": {
+                "const": "PRESENT_IN_MEMORY_ONLY"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "presence": {
+                "const": true
+              },
+              "reference_provided": {
+                "const": true
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "presence": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "result": {
+                "const": "UNSET_REQUIRED"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reference_provided": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "category_matrix": {
+      "type": "object",
+      "properties": {
+        "SECURITY_STATUS": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "SECURITY_STATUS"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "stock_basic",
+                  "stock_st",
+                  "suspend_d"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "CALENDAR_RULES": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "CALENDAR_RULES"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "trade_cal"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "RAW_BARS_1D": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "RAW_BARS_1D"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "daily"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "CORPORATE_ACTIONS": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "CORPORATE_ACTIONS"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "dividend"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "ADJUSTMENT_VERSIONS": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "ADJUSTMENT_VERSIONS"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "adj_factor"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "FINANCIAL_REVISIONS": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "FINANCIAL_REVISIONS"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "income",
+                  "balancesheet",
+                  "cashflow",
+                  "fina_indicator"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "INDUSTRY_MEMBERSHIP": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "INDUSTRY_MEMBERSHIP"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "index_member_all"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "ANNOUNCEMENTS": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "const": "ANNOUNCEMENTS"
+            },
+            "state": {
+              "enum": [
+                "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                "ENTITLEMENT_NOT_GRANTED",
+                "VALIDATION_FAILED",
+                "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+              ]
+            },
+            "api_products": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "anns_d"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "authenticated_request_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "observed_row_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "coverage_complete": {
+              "const": false
+            },
+            "license_admitted": {
+              "const": false
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "source_observation_ref": {
+              "type": "null"
+            },
+            "clock_evidence_ref": {
+              "type": "null"
+            },
+            "policy_ref": {
+              "type": "null"
+            },
+            "snapshot_ref": {
+              "type": "null"
+            },
+            "receipt_ref": {
+              "type": "null"
+            },
+            "lineage_status": {
+              "const": "NOT_ISSUED"
+            },
+            "reason_codes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+                  "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+                  "SOURCE_OPERATOR_UNVERIFIED",
+                  "TERMS_BINDING_UNPROVEN",
+                  "RETENTION_UNSET_REQUIRED",
+                  "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                  "NO_ACTUAL_THREE_STOCK_CAPTURE",
+                  "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+                  "POST_HOLIDAY_DATA_PENDING",
+                  "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+                  "UNKNOWN_IS_NOT_DENIAL",
+                  "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+                  "NEW_CREDENTIAL_REQUIRED",
+                  "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+                  "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+                  "PHASE_B_DEFERRED_UNTIL_A_PASS",
+                  "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "category",
+            "state",
+            "api_products",
+            "authenticated_request_count",
+            "observed_row_count",
+            "coverage_complete",
+            "license_admitted",
+            "historical_visibility_proven",
+            "source_observation_ref",
+            "clock_evidence_ref",
+            "policy_ref",
+            "snapshot_ref",
+            "receipt_ref",
+            "lineage_status",
+            "reason_codes"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "NOT_QUERIED_BLOCKED_CREDENTIAL",
+                      "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+                      "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+                    ]
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "TECHNICAL_ACCESS_OBSERVED_ONLY",
+                      "ENTITLEMENT_NOT_GRANTED"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "state": {
+                    "const": "ENTITLEMENT_NOT_GRANTED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "SECURITY_STATUS",
+        "CALENDAR_RULES",
+        "RAW_BARS_1D",
+        "CORPORATE_ACTIONS",
+        "ADJUSTMENT_VERSIONS",
+        "FINANCIAL_REVISIONS",
+        "INDUSTRY_MEMBERSHIP",
+        "ANNOUNCEMENTS"
+      ],
+      "additionalProperties": false
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "local_real_research": {
+          "const": false
+        },
+        "cloud_research_export": {
+          "const": false
+        },
+        "historical_backtest": {
+          "const": false
+        },
+        "production_data": {
+          "const": false
+        },
+        "redistribution": {
+          "const": false
+        },
+        "cloud_model": {
+          "const": false
+        },
+        "research_pilot": {
+          "const": false
+        },
+        "signal_or_order": {
+          "const": false
+        },
+        "broker_or_production": {
+          "const": false
+        }
+      },
+      "required": [
+        "local_real_research",
+        "cloud_research_export",
+        "historical_backtest",
+        "production_data",
+        "redistribution",
+        "cloud_model",
+        "research_pilot",
+        "signal_or_order",
+        "broker_or_production"
+      ],
+      "additionalProperties": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "closed_condition_ids": {
+      "const": []
+    },
+    "snapshot_B": {
+      "const": "PENDING_ACTUAL_NEW_POST_HOLIDAY_DATA_AND_ADMITTED_LINEAGE"
+    },
+    "public_document_captures": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+          "ACCOUNT_ENTITLEMENT_UNVERIFIED",
+          "SOURCE_OPERATOR_UNVERIFIED",
+          "TERMS_BINDING_UNPROVEN",
+          "RETENTION_UNSET_REQUIRED",
+          "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+          "NO_ACTUAL_THREE_STOCK_CAPTURE",
+          "HISTORICAL_FIRST_AVAILABILITY_UNPROVEN",
+          "POST_HOLIDAY_DATA_PENDING",
+          "REFERENCE_CONTRACT_NOT_MARKET_DATA_CONTRACT",
+          "UNKNOWN_IS_NOT_DENIAL",
+          "HASH_ONLY_NOT_REPLAYABLE_ORIGINAL",
+          "NEW_CREDENTIAL_REQUIRED",
+          "SUPPLIER_HTTPS_EVIDENCE_UNSET_REQUIRED",
+          "OWNER_HTTP_EXCEPTION_NOT_GRANTED",
+          "PHASE_B_DEFERRED_UNTIL_A_PASS",
+          "NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "stop_before_next_phase": {
+      "const": true
+    },
+    "credential_rotation": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "UNSET_REQUIRED"
+        },
+        "old_credential_permitted": {
+          "const": false
+        },
+        "owner_rotation_confirmed": {
+          "const": false
+        }
+      },
+      "required": [
+        "status",
+        "old_credential_permitted",
+        "owner_rotation_confirmed"
+      ],
+      "additionalProperties": false
+    },
+    "transport_gate": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "PENDING_SUPPLIER_HTTPS_EVIDENCE"
+        },
+        "credential_lookup_allowed": {
+          "const": false
+        },
+        "authenticated_request_allowed": {
+          "const": false
+        },
+        "formal_supplier_endpoint_evidence": {
+          "type": "null"
+        },
+        "owner_http_exception": {
+          "const": false
+        },
+        "tls_bypass_allowed": {
+          "const": false
+        },
+        "endpoint_substitution_allowed": {
+          "const": false
+        }
+      },
+      "required": [
+        "state",
+        "credential_lookup_allowed",
+        "authenticated_request_allowed",
+        "formal_supplier_endpoint_evidence",
+        "owner_http_exception",
+        "tls_bypass_allowed",
+        "endpoint_substitution_allowed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "generated_at",
+    "namespace",
+    "purpose",
+    "stock_scope",
+    "actual_account_tier",
+    "account_tier_evidence_basis",
+    "actual_product_type",
+    "actual_product_identifier",
+    "actual_account_identifier",
+    "actual_expiration",
+    "source_id",
+    "endpoint",
+    "source_operator",
+    "official_relationship_proven",
+    "verification_conclusion",
+    "credential_lookup",
+    "category_matrix",
+    "permissions",
+    "historical_visibility_proven",
+    "closed_condition_ids",
+    "snapshot_B",
+    "public_document_captures",
+    "evidence_refs",
+    "reason_codes",
+    "stop_before_next_phase",
+    "credential_rotation",
+    "transport_gate"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "transport_gate": {
+            "properties": {
+              "credential_lookup_allowed": {
+                "const": false
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "credential_lookup": {
+            "properties": {
+              "presence": {
+                "const": false
+              },
+              "result": {
+                "const": "UNSET_REQUIRED"
+              }
+            }
+          },
+          "category_matrix": {
+            "properties": {
+              "SECURITY_STATUS": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "CALENDAR_RULES": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "RAW_BARS_1D": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "CORPORATE_ACTIONS": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "ADJUSTMENT_VERSIONS": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "FINANCIAL_REVISIONS": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "INDUSTRY_MEMBERSHIP": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              },
+              "ANNOUNCEMENTS": {
+                "properties": {
+                  "authenticated_request_count": {
+                    "const": 0
+                  },
+                  "observed_row_count": {
+                    "const": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

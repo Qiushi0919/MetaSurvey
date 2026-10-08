@@ -1,0 +1,369 @@
+{
+  "fixture_scope": "SYNTHETIC_EXPERIMENTAL",
+  "provenance": "Hand-authored deterministic P1-A acceptance data and fees. No legacy portfolio, broker rate, or production calibration.",
+  "opening_cash_cents": "1234567",
+  "decision_cutoff": "2025-04-09T08:00:00Z",
+  "sessions": [
+    "2025-04-10",
+    "2025-04-11",
+    "2025-04-14",
+    "2025-04-15",
+    "2025-04-16",
+    "2025-04-17",
+    "2025-04-18",
+    "2025-04-21",
+    "2025-04-22",
+    "2025-04-23",
+    "2025-04-24",
+    "2025-04-25",
+    "2025-04-28",
+    "2025-04-29",
+    "2025-04-30",
+    "2025-05-06",
+    "2025-05-07",
+    "2025-05-08",
+    "2025-05-09",
+    "2025-05-12",
+    "2025-05-13",
+    "2025-05-14",
+    "2025-05-15",
+    "2025-05-16",
+    "2025-05-19",
+    "2025-05-20",
+    "2025-05-21",
+    "2025-05-22",
+    "2025-05-23",
+    "2025-05-26",
+    "2025-05-27",
+    "2025-05-28",
+    "2025-05-29",
+    "2025-05-30",
+    "2025-06-03",
+    "2025-06-04",
+    "2025-06-05",
+    "2025-06-06",
+    "2025-06-09",
+    "2025-06-10",
+    "2025-06-11"
+  ],
+  "calendar_notice": "This is an explicit synthetic session list. It does not certify an exchange calendar or historical official availability.",
+  "rule_version": "SYNTHETIC_PREDETERMINED_CORE_EXIT_RISK_V1",
+  "feature_version": "P1A_REFERENCE_LAST_CLOSE_V1",
+  "signals": [
+    {
+      "id": "R1",
+      "quantity": 200,
+      "entry_price": "10",
+      "exit_price": "11",
+      "incremental_expected_benefit_cents": "400",
+      "exit_reason": "RISK_INVALIDATED"
+    },
+    {
+      "id": "R2",
+      "quantity": 200,
+      "entry_price": "10",
+      "exit_price": "11",
+      "incremental_expected_benefit_cents": "1800",
+      "exit_reason": "THESIS_INVALIDATED"
+    },
+    {
+      "id": "R3",
+      "quantity": 200,
+      "entry_price": "10",
+      "exit_price": "11",
+      "incremental_expected_benefit_cents": "10000",
+      "exit_reason": "MATERIAL_EVENT"
+    }
+  ],
+  "edge_policy": {
+    "scope": "SYNTHETIC_EXPERIMENTAL",
+    "production_enabled": false,
+    "safety_multiple": "2",
+    "minimum_net_edge_cents": "1",
+    "minimum_edge_cost_ratio": "2"
+  },
+  "stress_profiles": {
+    "LOW_FRICTION": {
+      "commission_rate": "0.0002",
+      "minimum_commission_cents": "25",
+      "stamp_tax_sell_rate": "0.0003",
+      "exchange_rate": "0.00001",
+      "other_rate": "0.00001",
+      "slippage_rate": "0.00005"
+    },
+    "BASE_FRICTION": {
+      "commission_rate": "0.0008",
+      "minimum_commission_cents": "150",
+      "stamp_tax_sell_rate": "0.0009",
+      "exchange_rate": "0.00004",
+      "other_rate": "0.00003",
+      "slippage_rate": "0.0003"
+    },
+    "HIGH_FRICTION": {
+      "commission_rate": "0.0025",
+      "minimum_commission_cents": "700",
+      "stamp_tax_sell_rate": "0.002",
+      "exchange_rate": "0.0002",
+      "other_rate": "0.0001",
+      "slippage_rate": "0.0015"
+    }
+  },
+  "daily_marks": [
+    {
+      "trade_date": "2025-04-10",
+      "price": "10"
+    },
+    {
+      "trade_date": "2025-04-11",
+      "price": "11"
+    }
+  ],
+  "path_bars": [
+    {
+      "trade_date": "2025-04-10",
+      "low": "9.8",
+      "high": "11.2",
+      "close": "10"
+    },
+    {
+      "trade_date": "2025-04-11",
+      "low": "9.8",
+      "high": "11.2",
+      "close": "10"
+    },
+    {
+      "trade_date": "2025-04-14",
+      "low": "9.8",
+      "high": "11.2",
+      "close": "10"
+    },
+    {
+      "trade_date": "2025-04-15",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-16",
+      "low": "10",
+      "high": "11.2",
+      "close": "11"
+    },
+    {
+      "trade_date": "2025-04-17",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-18",
+      "low": "10",
+      "high": "12",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-21",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-22",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-23",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-24",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-25",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-28",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-29",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-04-30",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-06",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-07",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-08",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-09",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-12",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-13",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-14",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-15",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-16",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-19",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-20",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-21",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-22",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-23",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-26",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-27",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-28",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-29",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-05-30",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-03",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-04",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-05",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-06",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-09",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-10",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    },
+    {
+      "trade_date": "2025-06-11",
+      "low": "10",
+      "high": "11.2",
+      "close": "10.5"
+    }
+  ]
+}

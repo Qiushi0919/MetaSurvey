@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:v1:Approval",
+  "title": "Approval",
+  "description": "V1 P0 Approval; structural engineering contract, no implicit production policy.",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "Approval"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "object_version": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Version"
+    },
+    "trace_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "content_hash": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Hash"
+    },
+    "recorded_at": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Timestamp"
+    },
+    "business_timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "provenance": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Provenance"
+    },
+    "reason_codes": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/ReasonCodes"
+    },
+    "invalidation": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Invalidation"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "mode": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Mode"
+    },
+    "account_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "strategy_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/TradeStrategy"
+    },
+    "actor_type": {
+      "const": "HUMAN_USER"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "USER_UI",
+        "MANUAL_IMPORT"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "DECISION_APPROVAL",
+        "FINAL_ORDER_CONFIRMATION"
+      ]
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "USER_APPROVED",
+        "USER_REJECTED",
+        "USER_WAIT"
+      ]
+    },
+    "card_ref": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Ref"
+    },
+    "signal_ref": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Ref"
+    },
+    "cost_ref": {
+      "anyOf": [
+        {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Ref"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "order_terms_hash": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "account_snapshot_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "approved_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "recorded_at",
+    "business_timezone",
+    "provenance",
+    "reason_codes",
+    "invalidation",
+    "mode",
+    "account_id",
+    "strategy_id",
+    "actor_type",
+    "actor_id",
+    "channel",
+    "phase",
+    "decision",
+    "card_ref",
+    "signal_ref",
+    "cost_ref",
+    "order_terms_hash",
+    "account_snapshot_hash",
+    "approved_at",
+    "expires_at"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "money": "canonical integer-cent string -> BigInt; Decimal prices/rates; no IEEE-754 money",
+    "timezone": "offset required; business Asia/Shanghai, storage UTC",
+    "hash": "SHA-256 of canonical JSON excluding only top-level content_hash",
+    "required_optional": "required array is authoritative; nullable is required but explicitly unknown/not applicable",
+    "reason_codes": "common ReasonCode enum; no arbitrary silent fallback",
+    "invalidated_by": [
+      "actor unverified",
+      "terms/cost/account snapshot changed",
+      "card/signal superseded",
+      "approval expired"
+    ],
+    "business_policy_defaults": false
+  }
+}

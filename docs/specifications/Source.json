@@ -1,0 +1,11 @@
+{
+  "kind": "PreservedPrimaryEngineeringHandoff",
+  "version": "1.0.0",
+  "copied_without_rewrite": true,
+  "source_local_name": "A股交易系统重构工程交接文档：云端“大脑”与本地“眼睛和手”.md",
+  "repository_path": "docs/specifications/V1-Engineering-Handoff.md",
+  "bytes": 56426,
+  "sha256": "sha256:63e78aac5e061a82419bd202b58c2cba28ca025053030a14b8aad8737b55fb38",
+  "authority": "PRIMARY_SOURCE_OF_TRUTH_WITH_EXPLICIT_OWNER_DECISIONS",
+  "new_business_rules_inferred": false
+}

@@ -1,0 +1,243 @@
+{
+  "$id": "urn:metasurvey:dual-track:ForwardPrediction:1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "description": "Closed independent research metadata. Runtime also verifies hash, source originals, scope, temporal bounds and signatures. Never native trading authority.",
+  "properties": {
+    "bands_calibrated": {
+      "const": false
+    },
+    "base_price_evidence": {
+      "const": "OWNER_SUPPLIED_RAW_CLOSE_ASSUMPTION_UNVERIFIED"
+    },
+    "base_session": {
+      "const": "2026-09-30"
+    },
+    "boundaries": {
+      "const": {
+        "actual_authority": false,
+        "historical_visibility_proven": false,
+        "no_broker": true,
+        "no_money": true,
+        "no_order": true,
+        "non_tradeable": true,
+        "productionGate": false,
+        "research_only": true
+      }
+    },
+    "d10_centers_tied": {
+      "const": [
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "d10_ordinal_order": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "entries": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "base_close_cny": {
+            "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+            "maxLength": 110,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+            "type": "string"
+          },
+          "center_return_percent": {
+            "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+            "maxLength": 110,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+            "type": "string"
+          },
+          "d10_positive_probability_percent": {
+            "anyOf": [
+              {
+                "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                "maxLength": 110,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "derived_center_price_cny": {
+            "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+            "maxLength": 110,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+            "type": "string"
+          },
+          "high_return_percent": {
+            "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+            "maxLength": 110,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+            "type": "string"
+          },
+          "horizon": {
+            "enum": [
+              1,
+              5,
+              10
+            ]
+          },
+          "low_return_percent": {
+            "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+            "maxLength": 110,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+            "type": "string"
+          },
+          "quoted_d10_center_price_cny": {
+            "anyOf": [
+              {
+                "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                "maxLength": 110,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "symbol": {
+            "enum": [
+              "603993.SH",
+              "600312.SH",
+              "603228.SH"
+            ]
+          },
+          "target_session": {
+            "format": "date",
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbol",
+          "horizon",
+          "target_session",
+          "base_close_cny",
+          "low_return_percent",
+          "high_return_percent",
+          "center_return_percent",
+          "d10_positive_probability_percent",
+          "quoted_d10_center_price_cny",
+          "derived_center_price_cny"
+        ],
+        "type": "object"
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array"
+    },
+    "frozen_at": {
+      "description": "Offset required; UTC persisted, Asia/Shanghai session boundary.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "invalidation": {
+      "const": [
+        "FILE_HASH_CHANGED",
+        "BASE_ASSUMPTION_DISPROVED",
+        "TARGET_SESSION_MAPPING_DISPROVED",
+        "SOURCE_TEXT_CHANGED",
+        "BOUNDARY_CHANGED"
+      ]
+    },
+    "kind": {
+      "const": "ForwardPrediction"
+    },
+    "namespace": {
+      "const": "FORWARD_RESEARCH_ONLY:CORE_40:OWNER_TEXT_V1"
+    },
+    "original_artifact_sha256_claim": {
+      "const": "sha256:7718b46d2d3f281fe574215ce347caedca8b2355033551774d6febc181067072"
+    },
+    "original_artifact_state": {
+      "const": "ORIGINAL_NOT_PROVIDED_HASH_NOT_VERIFIED"
+    },
+    "prediction_id": {
+      "const": "ForwardPrediction-v1-OWNER_TEXT_IMPORT"
+    },
+    "probability_calibrated": {
+      "const": false
+    },
+    "producer": {
+      "const": "OWNER_TEXT_CHATGPT_ASSISTED_UNVERIFIED"
+    },
+    "reason_codes": {
+      "const": [
+        "ORIGINAL_ARTIFACT_MISSING",
+        "NEW_OWNER_TEXT_IMPORT",
+        "SUBJECTIVE_PROBABILITY_NOT_WIN_RATE",
+        "NO_ACTUAL_MARKET_OUTCOMES"
+      ]
+    },
+    "source_ref": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "path": {
+          "pattern": "^/",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "target_mapping_evidence": {
+      "const": "OWNER_PLANNED_SESSIONS_NOT_ACTUAL_OPEN_WITNESS"
+    },
+    "timestamp_evidence": {
+      "const": "LOCAL_HOST_CLOCK_NO_INDEPENDENT_TIMESTAMP"
+    },
+    "version": {
+      "const": "1.0.0"
+    },
+    "version_parent": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "version",
+    "kind",
+    "prediction_id",
+    "namespace",
+    "boundaries",
+    "producer",
+    "source_ref",
+    "original_artifact_sha256_claim",
+    "original_artifact_state",
+    "frozen_at",
+    "timestamp_evidence",
+    "base_session",
+    "base_price_evidence",
+    "target_mapping_evidence",
+    "entries",
+    "d10_ordinal_order",
+    "d10_centers_tied",
+    "probability_calibrated",
+    "bands_calibrated",
+    "version_parent",
+    "invalidation",
+    "reason_codes"
+  ],
+  "title": "ForwardPrediction research sidecar 1.0.0",
+  "type": "object"
+}

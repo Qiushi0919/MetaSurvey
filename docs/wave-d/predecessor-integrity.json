@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "scope": "Metadata only; actual old coordinates compared in memory but not printed or persisted here",
+  "checks": [
+    {
+      "symbol": "603993.SH",
+      "original_quality_timing_cutoff_bytes": "MATCH",
+      "prior_conflicts": "PRESERVED",
+      "numerical_values_in_audit": false
+    },
+    {
+      "symbol": "600312.SH",
+      "original_quality_timing_cutoff_bytes": "MATCH",
+      "prior_conflicts": "PRESERVED",
+      "numerical_values_in_audit": false
+    },
+    {
+      "symbol": "603228.SH",
+      "original_quality_timing_cutoff_bytes": "MATCH",
+      "prior_conflicts": "PRESERVED",
+      "numerical_values_in_audit": false
+    }
+  ],
+  "productionGate": false
+}

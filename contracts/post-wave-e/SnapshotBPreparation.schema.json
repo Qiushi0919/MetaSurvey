@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:SnapshotBPreparation:1.0.0",
+  "title": "SnapshotBPreparation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "SnapshotBPreparation"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:SnapshotBPreparation:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "planned_first_post_holiday_session",
+        "actual_fresh_session_observed",
+        "fresh_eod_available",
+        "snapshot_b_created",
+        "scheduled",
+        "actual_forward_days",
+        "required_checks",
+        "live_authority"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "const": "BLOCKED_SEPARATE_OWNER_REQUIRED"
+        },
+        "planned_first_post_holiday_session": {
+          "type": "string",
+          "const": "2026-10-08"
+        },
+        "actual_fresh_session_observed": {
+          "type": "boolean",
+          "const": false
+        },
+        "fresh_eod_available": {
+          "type": "boolean",
+          "const": false
+        },
+        "snapshot_b_created": {
+          "type": "boolean",
+          "const": false
+        },
+        "scheduled": {
+          "type": "boolean",
+          "const": false
+        },
+        "actual_forward_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_checks": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "NEW_HUMAN_OWNER_AUTHORIZATION"
+              },
+              {
+                "type": "string",
+                "const": "ACTUAL_EXCHANGE_SESSION_OPEN"
+              },
+              {
+                "type": "string",
+                "const": "ACTUAL_EOD_SOURCE_AVAILABLE"
+              },
+              {
+                "type": "string",
+                "const": "EXACT_3_SYMBOLS"
+              },
+              {
+                "type": "string",
+                "const": "FRESH_POST_SNAPSHOT_A_RETRIEVAL"
+              },
+              {
+                "type": "string",
+                "const": "FOUR_CLOCKS_NO_DATE_IMPUTATION"
+              },
+              {
+                "type": "string",
+                "const": "SOURCE_POLICY_VERSION_HASH"
+              },
+              {
+                "type": "string",
+                "const": "NO_PROVIDER_LICENSE_PROMOTION"
+              },
+              {
+                "type": "string",
+                "const": "NEW_IMMUTABLE_SNAPSHOT_LINEAGE"
+              },
+              {
+                "type": "string",
+                "const": "OWNER_ACCOUNT_COST_RISK_STRATEGY_POLICIES"
+              },
+              {
+                "type": "string",
+                "const": "NO_NATIVE_EXECUTION_AUTHORITY"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "live_authority": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

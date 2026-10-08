@@ -1,0 +1,3 @@
+# ADR-026 — Diagnostic readiness and formal backtest separation
+
+Accepted for bounded Wave E engineering only. Eighteen independent readiness domains separate engine availability from formal price and fundamental PIT backtests. Exact three current-observed securities form a disclosed diagnostic cohort, never a proven historical universe. MA20/MA60 and four synthetic DPU cost scenarios are registered before actual engine output; no search or optimization. A close(t) diagnostic can first fill the next observed session open. Missing status defaults to blocking; assumed tradability is a separately labelled sensitivity. Actual accounts/fees/risk remain 30 UNSET_REQUIRED. All formal gates BLOCKED.

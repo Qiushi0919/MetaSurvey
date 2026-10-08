@@ -1,0 +1,1104 @@
+{
+  "fixture_version": "1.0.0",
+  "fixture_id": "legacy-v5-fourteen-day-replay",
+  "provenance": "LEGACY_FIXTURE_NOT_PRODUCTION",
+  "experiment_namespace": "LEGACY_EXPERIMENT:sector-swing40-v5",
+  "target_strategy_mapping": null,
+  "source_run": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z",
+  "opening_cash_cents": "1000000",
+  "holding_horizon": {
+    "experiment_window_sessions": 40,
+    "minimum_plan_sessions": 5,
+    "maximum_plan_sessions": 8,
+    "preferred_holding_sessions": 5
+  },
+  "legacy_fee_profile": {
+    "provenance": "LEGACY_FIXTURE_NOT_PRODUCTION",
+    "code_version": "sector-swing40-v5",
+    "source_engine_path": "模拟交易实验/historical-validation-100d/swing40_engine_v5.py",
+    "source_engine_sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+    "price_unit": "MILLS_CNY",
+    "cash_unit": "CENTS_CNY",
+    "rounding": "HALF_UP",
+    "commission_rate": "0.00025",
+    "commission_min_cents": "500",
+    "commission_scope": "PER_LEGACY_TRADE_ROW",
+    "transfer_rate": "0.00001",
+    "stamp_sell_rates": [
+      {
+        "effective_from": "0001-01-01",
+        "rate": "0.001"
+      },
+      {
+        "effective_from": "2023-08-28",
+        "rate": "0.0005"
+      }
+    ],
+    "slippage_buy_multiplier": "1.0005",
+    "slippage_sell_multiplier": "0.9995",
+    "price_tick_mills": 10,
+    "slippage_treatment": "ALREADY_EMBEDDED_IN_SAVED_EXECUTION_PRICE",
+    "limitation": "Recorded legacy assumptions only; no claim these are current official/broker fees or actual auction fills."
+  },
+  "source_code_hashes": [
+    {
+      "path": "模拟交易实验/historical-validation-100d/BROAD_RESEARCH_PROMPT_V3.md",
+      "recorded_sha256": "a2fd8e8af07f79eb1cff956025e4a0ac35954fa17869c59cbf804ed5d03e1b78",
+      "observed_sha256": "a2fd8e8af07f79eb1cff956025e4a0ac35954fa17869c59cbf804ed5d03e1b78",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/BROAD_SECTOR_PROMPT.md",
+      "recorded_sha256": "ec4d5714812783fe0fc2d0872923eaf1367deb94bc141ad34970b8bdbe149086",
+      "observed_sha256": "ec4d5714812783fe0fc2d0872923eaf1367deb94bc141ad34970b8bdbe149086",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/BROAD_STOCK_PROMPT_V2.md",
+      "recorded_sha256": "6aa3a4046d8eb471b6a0f8ee059cce8f6a4c82a1f4b2180a9c4b6bce64f715f2",
+      "observed_sha256": "6aa3a4046d8eb471b6a0f8ee059cce8f6a4c82a1f4b2180a9c4b6bce64f715f2",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/SWING40_RESEARCH_V5.md",
+      "recorded_sha256": "1d1c7378da6c224b45c2a44da93f9c25254dc2cfddfd4cb380cfd02e05a9544b",
+      "observed_sha256": "1d1c7378da6c224b45c2a44da93f9c25254dc2cfddfd4cb380cfd02e05a9544b",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/SWING40_SECTORS_V5.md",
+      "recorded_sha256": "1f78b205a891fe609e6bc6335ba44fabbad7c36db2b1f2ee55974779cd0d9b44",
+      "observed_sha256": "1f78b205a891fe609e6bc6335ba44fabbad7c36db2b1f2ee55974779cd0d9b44",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/SWING40_STOCKS_V5.md",
+      "recorded_sha256": "9b8939156485e5025cb950ef2645d84c37d5a6ba350e29a2a2f60355d448d776",
+      "observed_sha256": "9b8939156485e5025cb950ef2645d84c37d5a6ba350e29a2a2f60355d448d776",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_active_evidence_v4.py",
+      "recorded_sha256": "0789b8e7918b4c37eb5b34a701fdf8bfd2a61e6428c272f0b8512fbe689bc27f",
+      "observed_sha256": "0789b8e7918b4c37eb5b34a701fdf8bfd2a61e6428c272f0b8512fbe689bc27f",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_active_policy_v4.py",
+      "recorded_sha256": "c2848b30ed5dbc56cd0b057d79f8053b0278113093ff326e0ed6f16a4675f506",
+      "observed_sha256": "c2848b30ed5dbc56cd0b057d79f8053b0278113093ff326e0ed6f16a4675f506",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_collect_v3.mjs",
+      "recorded_sha256": "97e978e97aa2d4c1eaa70136c1b0a9a4458e0cd4dd869e98cd6a981d91549e0e",
+      "observed_sha256": "97e978e97aa2d4c1eaa70136c1b0a9a4458e0cd4dd869e98cd6a981d91549e0e",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_data_v3.py",
+      "recorded_sha256": "3481a985cf76034a852e921a1b0364587536eb3f594b9aa3b4cdeb422b1b48bc",
+      "observed_sha256": "3481a985cf76034a852e921a1b0364587536eb3f594b9aa3b4cdeb422b1b48bc",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_extract_v3.py",
+      "recorded_sha256": "c382b1ec167a155fcceca75ccafbc77d5a3973882576fe429caac9110019ba34",
+      "observed_sha256": "c382b1ec167a155fcceca75ccafbc77d5a3973882576fe429caac9110019ba34",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_runner_v3.py",
+      "recorded_sha256": "dc082e4a722dc8da45b75c1c683b6d5bee2371980c98f947a81cbbac55f7ee05",
+      "observed_sha256": "dc082e4a722dc8da45b75c1c683b6d5bee2371980c98f947a81cbbac55f7ee05",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_v3.py",
+      "recorded_sha256": "3d8e00e572acde3b46f570d0c94594688ce7ae6342c2ac2429f1e9f82580a20c",
+      "observed_sha256": "3d8e00e572acde3b46f570d0c94594688ce7ae6342c2ac2429f1e9f82580a20c",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_discovery.py",
+      "recorded_sha256": "22b857cb53ee47595e0828916aaed04fc4610dfae97b189002e5111fc52f0999",
+      "observed_sha256": "22b857cb53ee47595e0828916aaed04fc4610dfae97b189002e5111fc52f0999",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_execution_v2.py",
+      "recorded_sha256": "159b6914348e149a075805be76d5b4c536b98ccc30e7ef8edccb59b8e5972c1f",
+      "observed_sha256": "159b6914348e149a075805be76d5b4c536b98ccc30e7ef8edccb59b8e5972c1f",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_financial_locator_repair_v4.py",
+      "recorded_sha256": "ecdfacf05d94abb7cfb5d7112fad30afc9bb71c0debb8158f69cfd50bf22dac0",
+      "observed_sha256": "ecdfacf05d94abb7cfb5d7112fad30afc9bb71c0debb8158f69cfd50bf22dac0",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_market_sources.json",
+      "recorded_sha256": "3a0d6377ae0603a2c25d1a501c65f9def34ab37c455f4bb78b46d03447581627",
+      "observed_sha256": "3a0d6377ae0603a2c25d1a501c65f9def34ab37c455f4bb78b46d03447581627",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_prompt_numeric_v4.py",
+      "recorded_sha256": "c2191011c1bf6c8a9a5360c7cae69dc23530154852f3f5f299552ca2b5dd174e",
+      "observed_sha256": "c2191011c1bf6c8a9a5360c7cae69dc23530154852f3f5f299552ca2b5dd174e",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_prompt_table_v4.py",
+      "recorded_sha256": "b8120a54aad10c88333fa816c7dd4ccc6870ab5330251028df3a693755d55e1c",
+      "observed_sha256": "b8120a54aad10c88333fa816c7dd4ccc6870ab5330251028df3a693755d55e1c",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_research_v2.py",
+      "recorded_sha256": "f17be8a027b029fcb1bfd744fd943abeac1ddf57909d342ab6bbce24ca8dba84",
+      "observed_sha256": "f17be8a027b029fcb1bfd744fd943abeac1ddf57909d342ab6bbce24ca8dba84",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_start_clock_v4.py",
+      "recorded_sha256": "c8302b8edf0b15c6cc4bf7a1e50cb2744878eac657a7325ef6a7d8699dcd1d7b",
+      "observed_sha256": "c8302b8edf0b15c6cc4bf7a1e50cb2744878eac657a7325ef6a7d8699dcd1d7b",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_v4_rules.json",
+      "recorded_sha256": "8b0f447ec30ed1c59a07fd87ccf3a3da3dede8e3edcd4d1f6e7a9a024cb86f2a",
+      "observed_sha256": "8b0f447ec30ed1c59a07fd87ccf3a3da3dede8e3edcd4d1f6e7a9a024cb86f2a",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/evidence_pack.py",
+      "recorded_sha256": "579fa3e0683751407d781cc6115f5e47adbec94e8d7dae2c7c2f094817d85339",
+      "observed_sha256": "579fa3e0683751407d781cc6115f5e47adbec94e8d7dae2c7c2f094817d85339",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/execution_support.py",
+      "recorded_sha256": "5aa4b93238e13db63d8f75a8dc77b9e59fa5b60c71e814ad4c8028a81c443e05",
+      "observed_sha256": "5aa4b93238e13db63d8f75a8dc77b9e59fa5b60c71e814ad4c8028a81c443e05",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/hv.py",
+      "recorded_sha256": "02e16bc12b8488c09c3da2c8a0aa04b4c1e8a8991425bbfe83a5ad9597ca8a23",
+      "observed_sha256": "02e16bc12b8488c09c3da2c8a0aa04b4c1e8a8991425bbfe83a5ad9597ca8a23",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolated_model.py",
+      "recorded_sha256": "fca3742c465853a3004d77852561d43306c3ffb1355bc99cbadea2505fa454f2",
+      "observed_sha256": "fca3742c465853a3004d77852561d43306c3ffb1355bc99cbadea2505fa454f2",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolation_audit.py",
+      "recorded_sha256": "3e843ccbc2c1957608b807559347175cb24dc766a047bcd904a0f463db113228",
+      "observed_sha256": "3e843ccbc2c1957608b807559347175cb24dc766a047bcd904a0f463db113228",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolation_audit_v2.py",
+      "recorded_sha256": "3ae7d5f96a3f96e875c87499f4e6c1df8e9fe044665b97e0f6f433bd4d983216",
+      "observed_sha256": "3ae7d5f96a3f96e875c87499f4e6c1df8e9fe044665b97e0f6f433bd4d983216",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolation_resume_audit_v3.py",
+      "recorded_sha256": "df1dfe59304d6f6b46b9cd37dcc144a34dfb996515d3b7c6a1e3904be255236e",
+      "observed_sha256": "df1dfe59304d6f6b46b9cd37dcc144a34dfb996515d3b7c6a1e3904be255236e",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/judge.py",
+      "recorded_sha256": "27ff4564fe17505a26991cba09ed5292248347e663d1f46b1daa615fe686b5f0",
+      "observed_sha256": "27ff4564fe17505a26991cba09ed5292248347e663d1f46b1daa615fe686b5f0",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/model_policy.json",
+      "recorded_sha256": "c482a6728e53680a80a2a8afeda7d5bd12beb6797dc03833add106514a1febc0",
+      "observed_sha256": "c482a6728e53680a80a2a8afeda7d5bd12beb6797dc03833add106514a1febc0",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/reconcile.py",
+      "recorded_sha256": "70795e5ccbb3a1f3a225c1b21a760b5500251ee8dc69a5476cf4c815e663c5ba",
+      "observed_sha256": "70795e5ccbb3a1f3a225c1b21a760b5500251ee8dc69a5476cf4c815e663c5ba",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_collect_v5.mjs",
+      "recorded_sha256": "de37e81cefa04f53effa1f528329cf30cef75d6b69d6e8f0efeb2196048bdd16",
+      "observed_sha256": "de37e81cefa04f53effa1f528329cf30cef75d6b69d6e8f0efeb2196048bdd16",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_data_v5.py",
+      "recorded_sha256": "33954cd875ca3669e5027dea53b57256170dc31a9ef14c3789d2114b2749dabc",
+      "observed_sha256": "33954cd875ca3669e5027dea53b57256170dc31a9ef14c3789d2114b2749dabc",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_discovery_v5.py",
+      "recorded_sha256": "0434cc4ab53148735b56fcd29d51ae3a326d3db4864e638435dcc7d8db69ab34",
+      "observed_sha256": "0434cc4ab53148735b56fcd29d51ae3a326d3db4864e638435dcc7d8db69ab34",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_engine_v5.py",
+      "recorded_sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+      "observed_sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_evidence_v5.py",
+      "recorded_sha256": "d48decdd5dc1848d4b45385ba80bef74b30dff29789ad42b0b691fc187570018",
+      "observed_sha256": "d48decdd5dc1848d4b45385ba80bef74b30dff29789ad42b0b691fc187570018",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_judge_v5.py",
+      "recorded_sha256": "d9d4bb4c1e23e9af0da47628e537d5451584afd1133f12fe9efeb95ff451f018",
+      "observed_sha256": "d9d4bb4c1e23e9af0da47628e537d5451584afd1133f12fe9efeb95ff451f018",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_policy_v5.py",
+      "recorded_sha256": "05e651419c1e79ff4b1746d420b094e3971dbb415ab1ed771257b7d6bccbe412",
+      "observed_sha256": "05e651419c1e79ff4b1746d420b094e3971dbb415ab1ed771257b7d6bccbe412",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_preflight_v5.py",
+      "recorded_sha256": "a1df06199435c81a4f50a453159737b64751d0be24bb75d8460a0e0d14d339ff",
+      "observed_sha256": "a1df06199435c81a4f50a453159737b64751d0be24bb75d8460a0e0d14d339ff",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_reconcile_v5.py",
+      "recorded_sha256": "0affcbe04d386626493c004d4aad48c848dce93bf636c886dfcb8f74105d5d41",
+      "observed_sha256": "0affcbe04d386626493c004d4aad48c848dce93bf636c886dfcb8f74105d5d41",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_rules_v5.json",
+      "recorded_sha256": "5c5bada8d291d7996a7bebc3ce8253e31be44806b0063f560135dff51a646bc5",
+      "observed_sha256": "5c5bada8d291d7996a7bebc3ce8253e31be44806b0063f560135dff51a646bc5",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_run_v5.py",
+      "recorded_sha256": "59c507dc023cf65911b084ecc327662eca9a7924092bf4ed7bd4004fc202f8d1",
+      "observed_sha256": "59c507dc023cf65911b084ecc327662eca9a7924092bf4ed7bd4004fc202f8d1",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_runner_v5.py",
+      "recorded_sha256": "c9684cc3d8eb7e434dfa444200ec00c6af01a3df2aa6d2ab530f001daff8a39d",
+      "observed_sha256": "c9684cc3d8eb7e434dfa444200ec00c6af01a3df2aa6d2ab530f001daff8a39d",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/trading_calendar.json",
+      "recorded_sha256": "7fa88dc34c366c068e74c3b2ba4b27b7527e510ae4624f191ce3a09eb39df32c",
+      "observed_sha256": "7fa88dc34c366c068e74c3b2ba4b27b7527e510ae4624f191ce3a09eb39df32c",
+      "relocation_only_mapping_applied": false
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/window_lock.json",
+      "recorded_sha256": "95546042a8b368377658dea29506dd1830f994bb47806b35a88a2ee8f95b2b40",
+      "observed_sha256": "95546042a8b368377658dea29506dd1830f994bb47806b35a88a2ee8f95b2b40",
+      "relocation_only_mapping_applied": false
+    }
+  ],
+  "days": [
+    {
+      "day": "2025-04-10",
+      "rows": [
+        {
+          "type": "UNFILLED",
+          "day": "2025-04-10",
+          "symbol": "sh.600406",
+          "side": "BUY",
+          "reason": "OPEN_OUTSIDE_LIMIT"
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-10",
+        "cash_cents": 1000000,
+        "nav_cents": 1000000,
+        "positions": {},
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "9cf0ab87b837180cb4650fd25eb7fd0c1e7b1a782395e90c60b6372ea7944937"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 1000000,
+        "nav_cents": 1000000,
+        "fees_cents": 0,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "9cf0ab87b837180cb4650fd25eb7fd0c1e7b1a782395e90c60b6372ea7944937",
+      "frozen_file_sha256": "88f9047875acebb459082b3e90d59c21e76bfd82a3b84916bc1c83042b5e63ec",
+      "result_sha256": "24790d5bc2ac3c5beda34eb092fde9596a6e8cd6b977d818d5cf353083bd818a",
+      "decision_sha256": "3beccb58018ab26e0d9d67eba1d7bb2cbfbd01ea4759ebe7618621fd2bafe96c",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-10/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-10/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-11",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-11",
+          "symbol": "sz.002033",
+          "side": "BUY",
+          "qty": 500,
+          "price_mills": 9650,
+          "gross_cents": 482500,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 0
+          },
+          "asset": "stock",
+          "reason": "NEXT_OPEN_PROXY",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            500
+          ],
+          "cash_delta": -483005
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-11",
+        "cash_cents": 516995,
+        "nav_cents": 1001495,
+        "positions": {
+          "sz.002033": {
+            "qty": 500,
+            "entry_index": 367,
+            "entry_day": "2025-04-11",
+            "cost_cents": 483005,
+            "plan": {
+              "symbol": "sz.002033",
+              "sector": "N78公共设施管理业",
+              "buy_low": 9500,
+              "buy_high": 9700,
+              "stop": 9300,
+              "target": 10400,
+              "max_sessions": 6
+            },
+            "mark": 9690
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "558c7523913ab24de9dac399bc986550bc1a250b6c54e3bb2cf71ff11347ccc7"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 516995,
+        "nav_cents": 1001495,
+        "fees_cents": 505,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "558c7523913ab24de9dac399bc986550bc1a250b6c54e3bb2cf71ff11347ccc7",
+      "frozen_file_sha256": "54dce9704bdaf773c3e59ecfe3a6154ef6bf20837f77c9d6b64d62989f8bd555",
+      "result_sha256": "4f1429d9d850017e1cbca7d8f784e1237e06205be3141f5bc46ec72292cb8d46",
+      "decision_sha256": "bfda0c427d47b069b7e7147cda3e1a452ae82331d6fef2e1389f9092b7afbb3f",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-11/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-11/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-14",
+      "rows": [
+        {
+          "type": "UNFILLED",
+          "day": "2025-04-14",
+          "symbol": "sh.603708",
+          "side": "BUY",
+          "reason": "OPEN_OUTSIDE_LIMIT"
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-14",
+        "cash_cents": 516995,
+        "nav_cents": 1004495,
+        "positions": {
+          "sz.002033": {
+            "qty": 500,
+            "entry_index": 367,
+            "entry_day": "2025-04-11",
+            "cost_cents": 483005,
+            "plan": {
+              "symbol": "sz.002033",
+              "sector": "N78公共设施管理业",
+              "buy_low": 9500,
+              "buy_high": 9700,
+              "stop": 9300,
+              "target": 10400,
+              "max_sessions": 6
+            },
+            "mark": 9750
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "5b0875702670c8b054a30ab293d0c05177dd5467b0f949a258a97226d56b5364"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 516995,
+        "nav_cents": 1004495,
+        "fees_cents": 505,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "5b0875702670c8b054a30ab293d0c05177dd5467b0f949a258a97226d56b5364",
+      "frozen_file_sha256": "89a7423c3b379b3f7445c7c46fa104a249a2fbb67bf641dbf90953c055f96b41",
+      "result_sha256": "f556b2b0ba17d847570a1ccb83465bfc49647e620d34bf368a75a1288f14bde5",
+      "decision_sha256": "ba6ec096fa2096e7eda1f256da5b74df7a54df92efc4eabe08e6a17454ac055a",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-14/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-14/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-15",
+      "rows": [],
+      "snapshot": {
+        "day": "2025-04-15",
+        "cash_cents": 516995,
+        "nav_cents": 1003995,
+        "positions": {
+          "sz.002033": {
+            "qty": 500,
+            "entry_index": 367,
+            "entry_day": "2025-04-11",
+            "cost_cents": 483005,
+            "plan": {
+              "symbol": "sz.002033",
+              "sector": "N78公共设施管理业",
+              "buy_low": 9500,
+              "buy_high": 9700,
+              "stop": 9300,
+              "target": 10400,
+              "max_sessions": 6
+            },
+            "mark": 9740
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "6912bed2bb2829dfca8c787aa2f7fb342eba2b1d9d89aa738ad832cfe12c46e4"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 516995,
+        "nav_cents": 1003995,
+        "fees_cents": 505,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "6912bed2bb2829dfca8c787aa2f7fb342eba2b1d9d89aa738ad832cfe12c46e4",
+      "frozen_file_sha256": "deca82ad126a7fc742a9349708cc9a47d488b6421eb35e626a80d0ddbc5e3304",
+      "result_sha256": "92ed3bb1862d3a2c122634baabfccc837146ae44d00aaa3bd1f35a7694fc6e50",
+      "decision_sha256": "b7a97da197f5bc6d64bb3635c490ca6ea5cca647256f5a90bb9dad0aa87c7751",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-15/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-15/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-16",
+      "rows": [],
+      "snapshot": {
+        "day": "2025-04-16",
+        "cash_cents": 516995,
+        "nav_cents": 1009995,
+        "positions": {
+          "sz.002033": {
+            "qty": 500,
+            "entry_index": 367,
+            "entry_day": "2025-04-11",
+            "cost_cents": 483005,
+            "plan": {
+              "symbol": "sz.002033",
+              "sector": "N78公共设施管理业",
+              "buy_low": 9500,
+              "buy_high": 9700,
+              "stop": 9300,
+              "target": 10400,
+              "max_sessions": 6
+            },
+            "mark": 9860
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "0348c4ec5100588958d05d79c6d8946ec5478d91292e256423ba4f55c401b1d3"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 516995,
+        "nav_cents": 1009995,
+        "fees_cents": 505,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "0348c4ec5100588958d05d79c6d8946ec5478d91292e256423ba4f55c401b1d3",
+      "frozen_file_sha256": "4e8f21e3da9f62626c0dc1ec00e0d850c5e53745d399e1d00c761b39edd0484b",
+      "result_sha256": "715d4535e549e1ec03856e8bda65b6d5dc07c100ee9664aa1c0702486c3dea53",
+      "decision_sha256": "b7a97da197f5bc6d64bb3635c490ca6ea5cca647256f5a90bb9dad0aa87c7751",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-16/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-16/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-17",
+      "rows": [],
+      "snapshot": {
+        "day": "2025-04-17",
+        "cash_cents": 516995,
+        "nav_cents": 1017995,
+        "positions": {
+          "sz.002033": {
+            "qty": 500,
+            "entry_index": 367,
+            "entry_day": "2025-04-11",
+            "cost_cents": 483005,
+            "plan": {
+              "symbol": "sz.002033",
+              "sector": "N78公共设施管理业",
+              "buy_low": 9500,
+              "buy_high": 9700,
+              "stop": 9300,
+              "target": 10400,
+              "max_sessions": 6
+            },
+            "mark": 10020
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "2c16ac4ebfa23f6bea70d7c5756e0a0ed0fb6b0edb9c0c670901e89cabed4d11"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 516995,
+        "nav_cents": 1017995,
+        "fees_cents": 505,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "2c16ac4ebfa23f6bea70d7c5756e0a0ed0fb6b0edb9c0c670901e89cabed4d11",
+      "frozen_file_sha256": "4d4c977ae08f239b956158ceb173ef0495b7225c552e7f097628d9758083f2a6",
+      "result_sha256": "1d243b6892e527435e2f167e0ac3fe7ad209cd5e8b2f68aa61284eed6257f159",
+      "decision_sha256": "44c9ca242d3858b535a519dd7c2a2dbc92eff1ecfaa6c585e1a7fbe76e442862",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-17/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-17/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-18",
+      "rows": [
+        {
+          "type": "UNFILLED",
+          "day": "2025-04-18",
+          "symbol": "sz.000417",
+          "side": "BUY",
+          "reason": "OPEN_OUTSIDE_LIMIT"
+        },
+        {
+          "type": "TRADE",
+          "day": "2025-04-18",
+          "symbol": "sz.002033",
+          "side": "SELL",
+          "qty": 500,
+          "price_mills": 9510,
+          "gross_cents": 475500,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 238
+          },
+          "asset": "stock",
+          "reason": "DEADLINE",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            500
+          ],
+          "cash_delta": 474757,
+          "realized_pnl_cents": -8248
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-18",
+        "cash_cents": 991752,
+        "nav_cents": 991752,
+        "positions": {},
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "d070f62a76e8e5eb82fea204abb4c621ddc7e446d3ee2efad57654e70464d45c"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 991752,
+        "nav_cents": 991752,
+        "fees_cents": 1248,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "d070f62a76e8e5eb82fea204abb4c621ddc7e446d3ee2efad57654e70464d45c",
+      "frozen_file_sha256": "033f479469b3459f5447a14ec7c897e0c76bc85caefd04e1ef4395ba31725a67",
+      "result_sha256": "3f245c8476e06d58b16edd7908eedae27318d63ebb9f59d04afc12790614f6eb",
+      "decision_sha256": "ec6d03c2f7a96483c00f4616cb1359b23955f6ba9524ea606acb8ab7fdab1977",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-18/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-18/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-21",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-21",
+          "symbol": "sz.002419",
+          "side": "BUY",
+          "qty": 900,
+          "price_mills": 5320,
+          "gross_cents": 478800,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 0
+          },
+          "asset": "stock",
+          "reason": "NEXT_OPEN_PROXY",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            900
+          ],
+          "cash_delta": -479305
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-21",
+        "cash_cents": 512447,
+        "nav_cents": 996647,
+        "positions": {
+          "sz.002419": {
+            "qty": 900,
+            "entry_index": 373,
+            "entry_day": "2025-04-21",
+            "cost_cents": 479305,
+            "plan": {
+              "symbol": "sz.002419",
+              "sector": "F52零售业",
+              "buy_low": 5280,
+              "buy_high": 5400,
+              "stop": 5200,
+              "target": 5800,
+              "max_sessions": 6
+            },
+            "mark": 5380
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "97713ccff0c397150c05c36002881581ff27121e301fa88ca3e877c6e22d26b0"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 512447,
+        "nav_cents": 996647,
+        "fees_cents": 1753,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "97713ccff0c397150c05c36002881581ff27121e301fa88ca3e877c6e22d26b0",
+      "frozen_file_sha256": "f7aa4c3596cbf4647048868039a83e0a43ee5b5a0f5de9064861c6cae120bc8b",
+      "result_sha256": "39cfc1283adbf26474c502d6c68b0bd103801a9f50ccee3f267a04984407b136",
+      "decision_sha256": "a8891af385987997f56521dbbeb9ab17923129d04b337ad64240e64d377355e1",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-21/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-21/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-22",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-22",
+          "symbol": "sh.600258",
+          "side": "BUY",
+          "qty": 300,
+          "price_mills": 15190,
+          "gross_cents": 455700,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 0
+          },
+          "asset": "stock",
+          "reason": "NEXT_OPEN_PROXY",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            300
+          ],
+          "cash_delta": -456205
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-22",
+        "cash_cents": 56242,
+        "nav_cents": 997642,
+        "positions": {
+          "sz.002419": {
+            "qty": 900,
+            "entry_index": 373,
+            "entry_day": "2025-04-21",
+            "cost_cents": 479305,
+            "plan": {
+              "symbol": "sz.002419",
+              "sector": "F52零售业",
+              "buy_low": 5280,
+              "buy_high": 5400,
+              "stop": 5200,
+              "target": 5800,
+              "max_sessions": 6
+            },
+            "mark": 5430
+          },
+          "sh.600258": {
+            "qty": 300,
+            "entry_index": 374,
+            "entry_day": "2025-04-22",
+            "cost_cents": 456205,
+            "plan": {
+              "symbol": "sh.600258",
+              "sector": "H61住宿业",
+              "buy_low": 15100,
+              "buy_high": 15400,
+              "stop": 14850,
+              "target": 16400,
+              "max_sessions": 6
+            },
+            "mark": 15090
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "8cea75dd6254b4c7bf54fb54c3d19526410b001eb5cfb3d217184430f96e3643"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 56242,
+        "nav_cents": 997642,
+        "fees_cents": 2258,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "8cea75dd6254b4c7bf54fb54c3d19526410b001eb5cfb3d217184430f96e3643",
+      "frozen_file_sha256": "cb3c34280c9a42aff97cb6515b74a26111b32b90ee08d64618456ac803a0b47b",
+      "result_sha256": "3065d2dcbb48eb4aa81c8d34b51825e5775e4377ef731c4c0c514f0fad91f1c2",
+      "decision_sha256": "40479980374c2a91fb719b9a43a38214080e413d79a96e6f1562e7f3e1cfcc25",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-22/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-22/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-23",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-23",
+          "symbol": "sh.600258",
+          "side": "SELL",
+          "qty": 300,
+          "price_mills": 15040,
+          "gross_cents": 451200,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 226
+          },
+          "asset": "stock",
+          "reason": "MODEL_EXIT_NEXT_OPEN",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            300
+          ],
+          "cash_delta": 450469,
+          "realized_pnl_cents": -5736
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-23",
+        "cash_cents": 506711,
+        "nav_cents": 981911,
+        "positions": {
+          "sz.002419": {
+            "qty": 900,
+            "entry_index": 373,
+            "entry_day": "2025-04-21",
+            "cost_cents": 479305,
+            "plan": {
+              "symbol": "sz.002419",
+              "sector": "F52零售业",
+              "buy_low": 5280,
+              "buy_high": 5400,
+              "stop": 5200,
+              "target": 5800,
+              "max_sessions": 6
+            },
+            "mark": 5280
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "26b8ff26daf4076b9e93e0489a3fc5b64e18660340bbb8fe852161b28f3eab5b"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 506711,
+        "nav_cents": 981911,
+        "fees_cents": 2989,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "26b8ff26daf4076b9e93e0489a3fc5b64e18660340bbb8fe852161b28f3eab5b",
+      "frozen_file_sha256": "bc3e55af6836f0d5a2bbc2c9b68d3d02967bc9d5dcfdd81b2238b7f4f24f1121",
+      "result_sha256": "8ccf856ac57c20bad31e4b372b095d63ac0467e8458ad5fd7e71e3414b7521cb",
+      "decision_sha256": "1805370bb18eb7223ba8a13c7f91875e704c07b5cdfc68dc36d8090fb5f98fa9",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-23/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-23/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-24",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-24",
+          "symbol": "sz.002419",
+          "side": "SELL",
+          "qty": 900,
+          "price_mills": 5250,
+          "gross_cents": 472500,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 236
+          },
+          "asset": "stock",
+          "reason": "MODEL_EXIT_NEXT_OPEN",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            900
+          ],
+          "cash_delta": 471759,
+          "realized_pnl_cents": -7546
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-24",
+        "cash_cents": 978470,
+        "nav_cents": 978470,
+        "positions": {},
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "70bc68b89bf082d59a0b6ba8b5f87e85d3f5f9f9308cbe72a1ea906229f2bc0c"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 978470,
+        "nav_cents": 978470,
+        "fees_cents": 3730,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "70bc68b89bf082d59a0b6ba8b5f87e85d3f5f9f9308cbe72a1ea906229f2bc0c",
+      "frozen_file_sha256": "fc798323ecab74c93b3f900a43ad9faf17289238e5cd9e9cafe92df6a237e916",
+      "result_sha256": "a1cb543a38e7565bbe0bfc36535aeb8b341e67597ba346f512c9155bff261ec6",
+      "decision_sha256": "75fb2a987703a4063cfca47639c82a58de46a19e8eb42c21e159a3cc940f8eeb",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-24/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-24/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-25",
+      "rows": [
+        {
+          "type": "UNFILLED",
+          "day": "2025-04-25",
+          "symbol": "sh.601179",
+          "side": "BUY",
+          "reason": "OPEN_OUTSIDE_LIMIT"
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-25",
+        "cash_cents": 978470,
+        "nav_cents": 978470,
+        "positions": {},
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "0c53dd177f0b09994abed3d2944c034dab065e8ed202b1e718f805f53ab9cd4e"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 978470,
+        "nav_cents": 978470,
+        "fees_cents": 3730,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "0c53dd177f0b09994abed3d2944c034dab065e8ed202b1e718f805f53ab9cd4e",
+      "frozen_file_sha256": "c2c397a892e43df9d8a33ea33219dc0c85172e945dfe723643372aceebe8ea27",
+      "result_sha256": "e5c147ca021dcab1c2347ece03318ab396ed684911087e12fc3b8f474e5d37a5",
+      "decision_sha256": "953ea88a96aed4592251ae3d25d14d22e947531456029cfdf068bb4a5067abc7",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-25/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-25/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-28",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-28",
+          "symbol": "sh.600166",
+          "side": "BUY",
+          "qty": 1900,
+          "price_mills": 2580,
+          "gross_cents": 490200,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 0
+          },
+          "asset": "stock",
+          "reason": "NEXT_OPEN_PROXY",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            1900
+          ],
+          "cash_delta": -490705
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-28",
+        "cash_cents": 487765,
+        "nav_cents": 981765,
+        "positions": {
+          "sh.600166": {
+            "qty": 1900,
+            "entry_index": 378,
+            "entry_day": "2025-04-28",
+            "cost_cents": 490705,
+            "plan": {
+              "symbol": "sh.600166",
+              "sector": "C36汽车制造业",
+              "buy_low": 2550,
+              "buy_high": 2600,
+              "stop": 2490,
+              "target": 2800,
+              "max_sessions": 5
+            },
+            "mark": 2600
+          }
+        },
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "91d61ea02d6fa59d74847409d7173fc017217545926d09d305c7b72f4080504f"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 487765,
+        "nav_cents": 981765,
+        "fees_cents": 4235,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "91d61ea02d6fa59d74847409d7173fc017217545926d09d305c7b72f4080504f",
+      "frozen_file_sha256": "567500390732aa58ee0fe5b037cdd980528410a15328fdd7a0f6b52c1656ed9c",
+      "result_sha256": "07955c3202ec0c19913124c5932e8cb1e817be4ef38ac8d6984b2025ee617e63",
+      "decision_sha256": "be8eebeea2b1287b331eed7257698a549ff89bd3747c27da8834671cf94fe982",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-28/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-28/frozen.json"
+      }
+    },
+    {
+      "day": "2025-04-29",
+      "rows": [
+        {
+          "type": "TRADE",
+          "day": "2025-04-29",
+          "symbol": "sh.600166",
+          "side": "SELL",
+          "qty": 1900,
+          "price_mills": 2590,
+          "gross_cents": 492100,
+          "fees": {
+            "commission": 500,
+            "transfer": 5,
+            "stamp": 246
+          },
+          "asset": "stock",
+          "reason": "MODEL_EXIT_NEXT_OPEN",
+          "fill_assumption": "daily_proxy_conditional_fill_not_observed_auction",
+          "quantity_bounds_without_auction_evidence": [
+            0,
+            1900
+          ],
+          "cash_delta": 491349,
+          "realized_pnl_cents": 644
+        }
+      ],
+      "snapshot": {
+        "day": "2025-04-29",
+        "cash_cents": 979114,
+        "nav_cents": 979114,
+        "positions": {},
+        "stale_marks": [],
+        "unliquidated_at_end": [],
+        "frozen_hash": "5de863c7bd018999705a561aa4220b56e5aaf518dc71fe0cd940d553395ebb04"
+      },
+      "saved_reconciliation": {
+        "cash_cents": 979114,
+        "nav_cents": 979114,
+        "fees_cents": 4986,
+        "independent_integer_audit": true
+      },
+      "frozen_hash": "5de863c7bd018999705a561aa4220b56e5aaf518dc71fe0cd940d553395ebb04",
+      "frozen_file_sha256": "fb45f024d908a123a9f003ad9bb366d4a44cd2d7c12106b3725451f5f115852f",
+      "result_sha256": "86e1da0a053567a1426448996503ed48d266dfa4c05174908ec6fb166ba8a149",
+      "decision_sha256": "ec3320582e9c2e0f272d1c452d6f515d6ba4e28e319ef987cd930d6370b03e5a",
+      "source_paths": {
+        "result": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-29/result.json",
+        "frozen": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-29/frozen.json"
+      }
+    }
+  ],
+  "expected": {
+    "completed_days": 14,
+    "trade_rows": 8,
+    "completed_rounds": 4,
+    "final_cash_cents": "979114",
+    "final_nav_cents": "979114",
+    "fees_cents": "4986",
+    "net_pnl_cents": "-20886",
+    "open_positions": {}
+  },
+  "limitations": [
+    "Saved decisions and daily proxy judge inputs only; not a fresh raw disclosure/PIT audit.",
+    "Fourteen of forty sessions only; no full-window return and no profitability certification.",
+    "No account_id/strategy_id existed in the old symbol-keyed ledger; no modern approvals are fabricated."
+  ]
+}

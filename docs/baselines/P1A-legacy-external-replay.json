@@ -1,0 +1,266 @@
+{
+  "replay_status": "PASS",
+  "integrity_status": "PASS",
+  "legacy_assets_unchanged": true,
+  "selected_anchor_count": 85,
+  "before_fingerprint": "e4b6e8a9d9eb2d28128940804be51b915e64b36a3501ab47b3588dfbcfc47d2a",
+  "after_fingerprint": "e4b6e8a9d9eb2d28128940804be51b915e64b36a3501ab47b3588dfbcfc47d2a",
+  "portable_fixture": {
+    "status": "PASS",
+    "provenance": "LEGACY_FIXTURE_NOT_PRODUCTION",
+    "completed_days": 14,
+    "trade_rows": 8,
+    "completed_rounds": 4,
+    "unfilled_rows_preserved": 4,
+    "fees_cents": "4986",
+    "final_cash_cents": "979114",
+    "final_nav_cents": "979114",
+    "net_pnl_cents": "-20886",
+    "days": [
+      {
+        "day": "2025-04-10",
+        "cash_cents": "1000000",
+        "nav_cents": "1000000"
+      },
+      {
+        "day": "2025-04-11",
+        "cash_cents": "516995",
+        "nav_cents": "1001495"
+      },
+      {
+        "day": "2025-04-14",
+        "cash_cents": "516995",
+        "nav_cents": "1004495"
+      },
+      {
+        "day": "2025-04-15",
+        "cash_cents": "516995",
+        "nav_cents": "1003995"
+      },
+      {
+        "day": "2025-04-16",
+        "cash_cents": "516995",
+        "nav_cents": "1009995"
+      },
+      {
+        "day": "2025-04-17",
+        "cash_cents": "516995",
+        "nav_cents": "1017995"
+      },
+      {
+        "day": "2025-04-18",
+        "cash_cents": "991752",
+        "nav_cents": "991752"
+      },
+      {
+        "day": "2025-04-21",
+        "cash_cents": "512447",
+        "nav_cents": "996647"
+      },
+      {
+        "day": "2025-04-22",
+        "cash_cents": "56242",
+        "nav_cents": "997642"
+      },
+      {
+        "day": "2025-04-23",
+        "cash_cents": "506711",
+        "nav_cents": "981911"
+      },
+      {
+        "day": "2025-04-24",
+        "cash_cents": "978470",
+        "nav_cents": "978470"
+      },
+      {
+        "day": "2025-04-25",
+        "cash_cents": "978470",
+        "nav_cents": "978470"
+      },
+      {
+        "day": "2025-04-28",
+        "cash_cents": "487765",
+        "nav_cents": "981765"
+      },
+      {
+        "day": "2025-04-29",
+        "cash_cents": "979114",
+        "nav_cents": "979114"
+      }
+    ]
+  },
+  "external_replay": {
+    "status": "PASS",
+    "completed_days": 14,
+    "trade_rows": 8,
+    "final_cash_cents": "979114",
+    "final_nav_cents": "979114",
+    "fees_cents": "4986",
+    "provenance": "LEGACY_FIXTURE_NOT_PRODUCTION",
+    "engine": "UNCHANGED_EXTERNAL_V5_ENGINE",
+    "reconcile": "UNCHANGED_EXTERNAL_V5_RECONCILE",
+    "read_only_guard": "PYTHON_AUDIT_HOOK_NO_WRITES_NETWORK_OR_SUBPROCESSES",
+    "days": [
+      {
+        "day": "2025-04-10",
+        "cash_cents": "1000000",
+        "nav_cents": "1000000",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-11",
+        "cash_cents": "516995",
+        "nav_cents": "1001495",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-14",
+        "cash_cents": "516995",
+        "nav_cents": "1004495",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-15",
+        "cash_cents": "516995",
+        "nav_cents": "1003995",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-16",
+        "cash_cents": "516995",
+        "nav_cents": "1009995",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-17",
+        "cash_cents": "516995",
+        "nav_cents": "1017995",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-18",
+        "cash_cents": "991752",
+        "nav_cents": "991752",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-21",
+        "cash_cents": "512447",
+        "nav_cents": "996647",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-22",
+        "cash_cents": "56242",
+        "nav_cents": "997642",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-23",
+        "cash_cents": "506711",
+        "nav_cents": "981911",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-24",
+        "cash_cents": "978470",
+        "nav_cents": "978470",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-25",
+        "cash_cents": "978470",
+        "nav_cents": "978470",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-28",
+        "cash_cents": "487765",
+        "nav_cents": "981765",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      },
+      {
+        "day": "2025-04-29",
+        "cash_cents": "979114",
+        "nav_cents": "979114",
+        "daily_rows_match": true,
+        "snapshot_matches": true,
+        "independent_legacy_reconcile_matches": true
+      }
+    ]
+  },
+  "native_compatibility": {
+    "status": "FAIL",
+    "known_issue": "LEGACY_CODEX_CLI_HASH_MISMATCH",
+    "original_verifier_error": "PINNED_CONTEXT_OR_CLI_CHANGED",
+    "binding_fields": {
+      "tool_schema_sha256": {
+        "expected": "bd1b63a0ec86c253614d4c95c8579f0934989d62391224877f50943ed49f43dc",
+        "observed": "bd1b63a0ec86c253614d4c95c8579f0934989d62391224877f50943ed49f43dc",
+        "matches": true
+      },
+      "builtin_sha256": {
+        "expected": "513dee9703e0871ab6ff3e7d8d415d961e9d624491bd4ff8faba011168329be3",
+        "observed": "513dee9703e0871ab6ff3e7d8d415d961e9d624491bd4ff8faba011168329be3",
+        "matches": true
+      },
+      "static_context_sha256": {
+        "expected": "252b952d8fd648aa6151ce0baa3ead8916874eccd920e8ea7bb299a8118d3ed5",
+        "observed": "252b952d8fd648aa6151ce0baa3ead8916874eccd920e8ea7bb299a8118d3ed5",
+        "matches": true
+      },
+      "environment_template_sha256": {
+        "expected": "5cbc2327ab978dcc45fca4e39b8155329bcf15cd97a5e5b32a30bdb051c2e5ec",
+        "observed": "5cbc2327ab978dcc45fca4e39b8155329bcf15cd97a5e5b32a30bdb051c2e5ec",
+        "matches": true
+      },
+      "command_sha256": {
+        "expected": "64e1842b9c3f33cff8678752189cb9d8a41296ac0c187a24187af80f5d731545",
+        "observed": "64e1842b9c3f33cff8678752189cb9d8a41296ac0c187a24187af80f5d731545",
+        "matches": true
+      },
+      "cli_sha256": {
+        "expected": "3e11ccc743e8198a5ef84fb57c89941d845b0ea0302485ed1fbac2f0821aca5a",
+        "observed": "6b582e8813ce7e8ed4c52814ee5cf230dba647bf2292df747a4003f2657ef201",
+        "matches": false
+      }
+    },
+    "mismatching_fields": [
+      "cli_sha256"
+    ],
+    "seal_modified": false,
+    "repaired": false,
+    "scope": "Original native seal compatibility; raw-derived bindings are diagnostics only, not a substitute PASS."
+  },
+  "native_compatibility_is_repaired": false,
+  "limitations": [
+    "Saved inputs/outputs deterministic replay only; 14 of 40 sessions.",
+    "No fresh audit of all original evidence/PIT, no profitability proof, no legacy writes or production execution."
+  ]
+}

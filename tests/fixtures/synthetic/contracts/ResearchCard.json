@@ -1,0 +1,115 @@
+{
+  "contract_name": "ResearchCard",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-ResearchCard",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:daf00b9d38eed9915261fda20fc98809c73e0d6075c4e75b270f8df30da4d286",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "strategy_id": "CORE_40",
+  "symbol": "SSE:600000",
+  "snapshot_ref": {
+    "object_id": "fixture-ref",
+    "object_version": 1,
+    "content_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a"
+  },
+  "decision_cutoff": "2026-10-05T02:00:00Z",
+  "grade": "A",
+  "research": {
+    "thesis": "Synthetic thesis",
+    "strongest_counterevidence": "Synthetic countercase",
+    "unknowns": [
+      "Unverified fixture assumptions"
+    ],
+    "evidence_refs": [
+      {
+        "object_id": "fixture-ref",
+        "object_version": 1,
+        "content_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a"
+      }
+    ],
+    "horizon_months": {
+      "minimum": 6,
+      "maximum": 18
+    }
+  },
+  "price": {
+    "reference_price": "10",
+    "entry_rules": [],
+    "no_trade_rules": []
+  },
+  "trade": {
+    "target_holding_sessions": {
+      "minimum": 20,
+      "maximum": 40
+    },
+    "invalidation_rules": [],
+    "thesis_invalidation": [
+      "Synthetic adverse event"
+    ],
+    "sizing_policy_version": "synthetic-only",
+    "can_produce_order": true
+  },
+  "probability": {
+    "scenarios": [
+      {
+        "name": "up",
+        "probability": "1",
+        "return_bps": "100"
+      }
+    ],
+    "calibrated": true,
+    "calibration_ref": {
+      "object_id": "fixture-ref",
+      "object_version": 1,
+      "content_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a"
+    },
+    "expected_mae_bps": "UNSET_REQUIRED",
+    "net_edge_bps": "UNSET_REQUIRED",
+    "edge_policy_version": "synthetic-only"
+  },
+  "scores": {
+    "fundamental": "UNSET_REQUIRED",
+    "sector": "UNSET_REQUIRED",
+    "catalyst": "UNSET_REQUIRED",
+    "trend": "UNSET_REQUIRED",
+    "valuation": "UNSET_REQUIRED",
+    "liquidity": "UNSET_REQUIRED",
+    "evidence": "UNSET_REQUIRED",
+    "risk": "UNSET_REQUIRED",
+    "research": "UNSET_REQUIRED",
+    "quality": "UNSET_REQUIRED",
+    "timing": "UNSET_REQUIRED",
+    "raw": "UNSET_REQUIRED",
+    "final": "UNSET_REQUIRED"
+  },
+  "scoring_policy_version": "synthetic-only",
+  "hard_blocks": [],
+  "rule_version": "synthetic-only"
+}

@@ -1,0 +1,482 @@
+{
+  "summary": {
+    "review_id": "WAVE_E_INDEPENDENT_R1_FINAL",
+    "verdict": "PASS_WITH_CONDITIONS",
+    "candidate_commit": "abc11d8f869ccf108dfce2658a17fdeffde13dcd",
+    "release": "1.0.0-wave-e-readiness",
+    "completed_at": "2026-10-06T13:03:28.164388+00:00",
+    "counts_kind": "ATOMIC_ASSERTIONS_NOT_TEST_CASES",
+    "PASS": 47040,
+    "FAIL": 0,
+    "SKIP": 0,
+    "sections": {
+      "python_G2": 46712,
+      "native": 270,
+      "synthetic_money": 15,
+      "predecessor_official_supplement": 43
+    },
+    "attack_classes": 20,
+    "native_execution_table_write_delta": 0,
+    "active_context_pins": 790,
+    "main_source_evidence_before_after_pins": 888,
+    "supplement_pins": 8,
+    "combined_distinct_source_evidence_pins": 891,
+    "all_source_evidence_identical": true,
+    "actual_price_originals": 20,
+    "raw_column_ordinal_assertions": 8934,
+    "diagnostic_scenarios": 8,
+    "signal_rows_reviewed": 930,
+    "hypothetical_fills_reviewed": 390,
+    "equity_days_reviewed": 2616,
+    "critical_business_false_acceptances": 0,
+    "source_mutations": 0,
+    "network_requests_by_reviewer": 0,
+    "credential_lookups_by_reviewer": 0,
+    "credential_readback_for_matching": false,
+    "new_literal_credential_pattern_matches": 0,
+    "actual_snapshot_b_executed": false,
+    "actual_forward_days": 0,
+    "formal_strategy_evidence": false,
+    "historical_visibility_proven": false,
+    "productionGate": false,
+    "preserved_review_harness_failures": 1
+  },
+  "attacks": [
+    {
+      "class": "same_bar_lookahead",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "samebar",
+        "native_order_chain"
+      ],
+      "evidence": "Original signal ordinals/rolling windows, next observed open per fill, T+1 and prefix invariance; direct native Order chain rejects diagnostics.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "future_row_leakage",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "futureprice"
+      ],
+      "evidence": "Independent prefixes61/137/301 and altered future tails; signals/fills/equity prior to cutoff unchanged.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "future_financial_leakage",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "futurefinancial",
+        "engine_shape"
+      ],
+      "evidence": "Actual price projections have exactly OHLC/date/source_ref; finance columns forbidden by pure engine; no financial feature or current revision used.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "cutoff_backfill",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "cutoff_backfill",
+        "clock"
+      ],
+      "evidence": "Current retrieved/available clocks are literal and never historical event/publication time; after-cutoff/date-only/imputed clocks reject.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "missing_status_tradable",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "unknown_status"
+      ],
+      "evidence": "Unknown-block scenario has zero hypothetical fills; explicit assumption scene labelled unproven; caller CLEAR/TRADING state rejects.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "suspension_unknown_clear",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "readiness",
+        "historical_universe"
+      ],
+      "evidence": "Suspension/status/limit/delist stay UNKNOWN; no absence-of-row inference and no formal-ready condition.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "raw_adjusted_mixing",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "raw_factor",
+        "engine_shape"
+      ],
+      "evidence": "Two separate treatment ledgers and per-row treatment source provenance; adjustment fields on pure price rows reject; independent first-anchor OHLC math.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "factor_authoritative_action",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "factor_authority"
+      ],
+      "evidence": "Factor sensitivity always authoritative_adjustment=false/cash_entitlement=false; old5/8/UNSET proven against predecessor reports.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "corporate_action_double_count",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "corporate_doublecount",
+        "ledger"
+      ],
+      "evidence": "No dividend cash/share credits or total-return claim; integer cash independently derived exclusively from hypothetical fills.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "date_midnight_imputation",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "clock"
+      ],
+      "evidence": "Date-only/null/midnight/invalid day and future-nanosecond cases reject; no historical available_at fabricated.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "current_industry_history",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "engine_shape",
+        "readiness"
+      ],
+      "evidence": "Industry column rejected; readiness industry_history BLOCKED; current observations cannot become historical membership.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "current_stocklist_historical_universe",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "historical_universe",
+        "namespace"
+      ],
+      "evidence": "Three present-day engineering symbols explicitly disclosed; universe_history BLOCKED; expansion/native namespace promotions reject.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "zero_cost_NetEdge",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "zero_cost",
+        "economic_promotion"
+      ],
+      "evidence": "Zero-fee scenario remains synthetic DPU sensitivity; resealed NetEdge/probability/winrate/grade/BUY or formal claim rejected.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "diagnostic_formal_promotion",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "diagnostic_formal",
+        "native_contract",
+        "native_transition",
+        "formal_source"
+      ],
+      "evidence": "Closed registry rejects mutation/copies/issuance, display-only contract remains nonauthority, actual formal source registry empty.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "HTTP_license_promotion",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "HTTP_license",
+        "authority"
+      ],
+      "evidence": "22 captured credential-free official reads prove no account entitlement; source/license/provider/transport remain false and resealed promotion rejects.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "execution_source_admission",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "readiness",
+        "authority",
+        "formal_source"
+      ],
+      "evidence": "Successful deterministic engine execution leaves every formal gate BLOCKED; no source receipt grant via code success.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "credential_artifact_boundary",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "credential_boundary"
+      ],
+      "evidence": "Method plus new private outputs inspected for labelled literal credential/query/Auth patterns; never read Token/Keychain/secret/environment values to match.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "private_archive_path_substitution",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "private_path"
+      ],
+      "evidence": "Outside root/symlink and altered saved-manifest path reject; same-root identical copy is data-only and cannot replace pinned release source identity.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "source_rule_code_schema_drift",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "drift",
+        "display_limit",
+        "source_after"
+      ],
+      "evidence": "Actual active checked-file path interception, registered context drift, per-binding fixture drift; before/after all fixed evidence unchanged. Display JSON shape alone grants no source verification.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    },
+    {
+      "class": "synthetic_forward_day",
+      "state": "PASS_BOUNDED",
+      "coverage_groups": [
+        "forward_days",
+        "actual_runners",
+        "forward_registry"
+      ],
+      "evidence": "Opaque human fixture two-day append preserves chain and counts0actual; Oct6/7, oldSep30, weekend, LLM/copy/reseal/actual counter promotions reject; real runners unconditional block.",
+      "scripts": [
+        "python-G2/adversarial.py",
+        "native-adversarial.mjs",
+        "synthetic-money.py",
+        "gap-public-checks.py"
+      ]
+    }
+  ],
+  "sections": {
+    "python": {
+      "FAIL": 0,
+      "PASS": 46712,
+      "SKIP": 0,
+      "active_context_pins": 790,
+      "actual_forward_days": 0,
+      "assertions": 46712,
+      "categories": {
+        "HTTP_license": 23,
+        "actual_runners": 6,
+        "authority": 36,
+        "cash_ordering": 2616,
+        "clock": 8,
+        "corporate_doublecount": 8,
+        "credential_boundary": 104,
+        "cutoff_backfill": 1990,
+        "diagnostic_formal": 1,
+        "drawdown": 2624,
+        "drift": 15,
+        "duplicate_order": 198,
+        "engine_shape": 10,
+        "factor_authority": 982,
+        "fees": 398,
+        "forward_days": 12,
+        "forward_registry": 13,
+        "futurefinancial": 930,
+        "futureprice": 1872,
+        "historical_universe": 8,
+        "human_LLM": 3,
+        "ledger": 11285,
+        "native_promotion": 40,
+        "positive_controls": 4,
+        "private_path": 4,
+        "public_body": 12,
+        "public_host": 3,
+        "raw_columns": 14926,
+        "raw_factor": 3927,
+        "readiness": 16,
+        "registry": 7,
+        "replay": 2,
+        "samebar": 2640,
+        "source_after": 888,
+        "source_integrity": 890,
+        "t_plus_one": 192,
+        "unknown_status": 10,
+        "zero_cost": 9
+      },
+      "credential_lookup": 0,
+      "distinct_original_raw": 20,
+      "limits": [
+        "Wave E active dependency identity binds old Wave B raw hashes indirectly through immutable Wave D Input; original daily/factor bytes additionally verified by this review, not re-read by each Wave E assert_registered.",
+        "No universal hostile interpreter, race, remote CI, archive relocation or external production database security claim."
+      ],
+      "math_coverage": {
+        "equity_days": 2616,
+        "fills": 390,
+        "scenarios": 8,
+        "signal_rows": 930
+      },
+      "network_requests": 0,
+      "numeric_values_in_review": false,
+      "raw_column_assertions": 8934,
+      "source_mutations": 0,
+      "source_pins_before_after": 888,
+      "verdict": "PASS_WITH_CONDITIONS"
+    },
+    "native": {
+      "verdict": "PASS_WITH_CONDITIONS",
+      "assertions": 270,
+      "PASS": 270,
+      "FAIL": 0,
+      "SKIP": 0,
+      "categories": {
+        "positive_controls": 4,
+        "display": 8,
+        "authority": 36,
+        "namespace": 16,
+        "native_contract": 32,
+        "native_transition": 32,
+        "native_draft": 32,
+        "native_order_chain": 24,
+        "native_packet": 12,
+        "native_signature": 4,
+        "native_import": 12,
+        "formal_source": 13,
+        "native_paper": 8,
+        "economic_promotion": 10,
+        "readiness": 2,
+        "actual_snapshot": 3,
+        "forward_days": 4,
+        "clock": 3,
+        "display_limit": 10,
+        "production": 1,
+        "human_LLM": 2,
+        "native_writes": 2
+      },
+      "execution_table_write_delta": 0,
+      "actual_forward_days": 0,
+      "network_requests": 0,
+      "credential_lookups": 0,
+      "numeric_values_redacted": true,
+      "limits": [
+        "In-memory synthetic PGlite fixtures only; execution-table delta starts after fixture setup and positive nonexecuting packet/import controls.",
+        "JSON schema validates display shape/hash only. It does not verify current source identities; Python closed registry does.",
+        "Not a universal proof against caller-written valid synthetic fixtures, arbitrary interpreter mutation, races, broker or external database capability."
+      ]
+    },
+    "synthetic_money": {
+      "PASS": 15,
+      "FAIL": 0,
+      "SKIP": 0,
+      "provenance": "SYNTHETIC_REVIEW_FIXTURE_ONLY",
+      "production_defaults": false,
+      "actual_forward_days": 0
+    },
+    "predecessor_public": {
+      "PASS": 43,
+      "FAIL": 0,
+      "SKIP": 0,
+      "read_only": true,
+      "network_requests": 0,
+      "credential_lookups": 0,
+      "source_pins_before_after": 8,
+      "numeric_values_disclosed": false
+    }
+  },
+  "limits": [
+    "Only abc11d8 / release1.0.0-wave-e-readiness and fixed local archives reviewed; no universal hostile interpreter, race, broker or external production database security claim.",
+    "Wave E closed live context re-reads790active pins, including immutable Wave D Input seals. Old Wave B raw hashes are indirectly bound by those inputs; each live assert_registered does not re-open all historical Wave B raw. This review additionally checked20daily/factor originals column-by-column/ordinal and before/after.",
+    "JSON schema/hash validates detached DISPLAY shape only; a caller-resealed changed hash can remain DISPLAY-valid. It cannot become a live Python-registry object, formal source receipt, Card/Signal/Approval/Order, real Snapshot B or Paper authority.",
+    "Native execution-state measurement uses two local in-memory synthetic PGlite fixtures after setup/positive nonexecuting packet/import checks. Direct diagnostic attacks yield execution-table delta0. Caller-authored otherwise-valid synthetic fixtures, arbitrary wrapper/interpreter mutation or external database capabilities are not universally certified.",
+    "Credential audit used labelled query/header/assignment patterns and actual public request metadata, without reading/matching a real Token. Zero matches are bounded artifact evidence, not a universal proof of hidden unlabeled secrets or prior chat/session state.",
+    "All financial/price/performance numeric expected and actual values stayed in RAM/private preexisting evidence; review outputs only assertions/counts/status/hashes. Synthetic money values in reproducible scripts are expressly fixture-only.",
+    "Historical PIT/source/provider/license/transport/status/universe/action/dated fees and30real-account settings remain unresolved. Six public announcement bodies still fail decoded PDF identity. No C12–C22 closure or formal strategy evidence is inferred.",
+    "Initial Python G1 stopped due to Reviewer original-discovery scope missing eight declared Wave B factor-change originals. This was a harness failure, not observed incorrect business acceptance. Original script/log/error file unchanged; new G2 corrected only reviewer discovery, no source/rules/contracts/expected business outcomes changed."
+  ]
+}

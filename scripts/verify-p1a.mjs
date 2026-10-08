@@ -1,0 +1,13 @@
+import {readFile,readdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {verifyCodeProvenance} from '../src/p1a/code-provenance.mjs';
+import {p1aContractNames,validateP1AContract} from '../src/p1a/contracts.mjs';
+const sha=b=>`sha256:${createHash('sha256').update(b).digest('hex')}`;
+const release=JSON.parse(await readFile(new URL('../contracts/release.p1a.json',import.meta.url),'utf8'));
+if(release.production_execution_enabled!==false||release.p1b_research_enabled!==false||release.schema_version!==5)throw new Error('P1A_SCOPE_GATE_CHANGED');
+if(sha(await readFile(new URL('../contracts/release.v1.json',import.meta.url)))!==release.p0_release_sha256)throw new Error('P0_RELEASE_CHANGED');
+for(const file of release.files)if(sha(await readFile(new URL('../'+file.path,import.meta.url)))!==file.sha256)throw new Error(`P1A_FROZEN_FILE_CHANGED:${file.path}`);
+if(JSON.stringify(p1aContractNames())!==JSON.stringify(release.contracts))throw new Error('P1A_CONTRACT_SET_CHANGED');
+const migrations=(await readdir(new URL('../migrations/',import.meta.url))).filter(n=>n.endsWith('.sql')).sort();if(migrations.length!==5||migrations.some((n,i)=>Number(n.slice(0,3))!==i+1))throw new Error('P1A_MIGRATION_SEQUENCE_CHANGED');
+validateP1AContract('CodeProvenance',await verifyCodeProvenance(release));
+console.log('P1-A frozen contracts, migrations and actual committed implementation verified; production and P1-B remain blocked.');

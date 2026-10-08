@@ -1,0 +1,62 @@
+{
+  "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+  "status": "PASS",
+  "candidate_head": "b9a4ed6283733ca0c6e55fbaf5e86dd948ceb356",
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "source_tree_hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5",
+  "command": "npm ci --ignore-scripts; npm run check",
+  "exit_code": 0,
+  "counts": {
+    "tests": 258,
+    "pass": 257,
+    "fail": 0,
+    "skipped": 1
+  },
+  "platform": {
+    "system": "darwin",
+    "architecture": "arm64",
+    "node": "24.19.0",
+    "scope": "ACTUAL_LOCAL_MACOS_ONLY",
+    "remote_CI_executed": false
+  },
+  "clean_environment": {
+    "independent_checkout": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-clean",
+    "fresh_node_modules": true,
+    "empty_initial_npm_cache": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-empty-cache",
+    "distinct_empty_user_global_configs": true,
+    "env_i": true,
+    "legacy_environment_not_supplied": true
+  },
+  "logs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-install.log",
+      "sha256": "sha256:99d4e3babaf4fb540598c80e2806b1507022f58cc8f05c3e3a2dcff2bbb75171"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/reviewer-fixed-check.log",
+      "sha256": "sha256:b4898bdbf500feac27adbf7ea421b80de25516596bd6742babc55a1b8f7b83d3"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/publication-fix-tests.log",
+      "sha256": "sha256:48dcb27cc795214b519b3be12491a33c8f006b94bcf478bfba52dfe2f1338b20"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/final-e2e.log",
+      "sha256": "sha256:5dbac9774a7ecd387c24347fb0edbb750c9884cc4bdf2a746484df31c2cd58d3"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1a-archives/closure-validation-20261005/final-economic.log",
+      "sha256": "sha256:8e2f0018d013bd3a6091994512e8552938db5d1bcee852aa8e6e292041ec9498"
+    }
+  ],
+  "skipped_test": "optional external read-only V5 replay; prohibited this round; portable immutable 14-day regression PASSED",
+  "pre_fix_evidence": {
+    "logs": [
+      "candidate-check.log",
+      "clean-check.log",
+      "final-clean-check.log"
+    ],
+    "scope": "PRE_FIX_254_TESTS_NOT_FINAL_GATE",
+    "reviewer_original_failure_retained": true
+  }
+}

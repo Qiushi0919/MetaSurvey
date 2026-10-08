@@ -1,0 +1,1133 @@
+{
+  "manifest_version": "1.0.0",
+  "asof_date": "2026-10-05",
+  "timezone": "Asia/Shanghai",
+  "path_base": "LEGACY_ASSET_ROOT_OR_REPOSITORY_PARENT_WORKSPACE",
+  "reference_policy": "workspace-relative; no credentials or runtime databases copied",
+  "primary_source_of_truth": {
+    "path": "交易策略/A股交易系统重构工程交接文档：云端“大脑”与本地“眼睛和手”.md",
+    "sha256": "63e78aac5e061a82419bd202b58c2cba28ca025053030a14b8aad8737b55fb38"
+  },
+  "migration_baseline": {
+    "path": "交易策略/A股交易系统V1第一阶段现状与迁移审查_2026-10-05.md",
+    "sha256": "fd46c1822b7b3371aa2b6c516d2961dca92a93979aa6c4bb63d4a1fd1e05922f",
+    "confirmed_direction_only": true,
+    "unconfirmed_proposals_are_business_rules": false
+  },
+  "preservation_order": [
+    "PRESERVE",
+    "ISOLATE",
+    "REPLACE",
+    "VERIFY",
+    "DEPRECATE"
+  ],
+  "deletions_executed": false,
+  "legacy_writes_permitted": false,
+  "assets": [
+    {
+      "asset_id": "formal-handoff",
+      "classification": "KEEP",
+      "path": "交易策略/A股交易系统重构工程交接文档：云端“大脑”与本地“眼睛和手”.md",
+      "kind": "DOCUMENT",
+      "policy": "PRIMARY_SOURCE_OF_TRUTH"
+    },
+    {
+      "asset_id": "migration-review",
+      "classification": "KEEP",
+      "path": "交易策略/A股交易系统V1第一阶段现状与迁移审查_2026-10-05.md",
+      "kind": "DOCUMENT",
+      "policy": "CONFIRMED_CURRENT_STATE_BASELINE_ONLY"
+    },
+    {
+      "asset_id": "v5-raw-evidence",
+      "classification": "KEEP",
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z",
+      "kind": "EVIDENCE_DIRECTORY",
+      "policy": "PRESERVE_ORIGINAL_BYTES_PATHS_FAILURES_AND_SEALS"
+    },
+    {
+      "asset_id": "legacy-behavior-replacement",
+      "classification": "MODIFY",
+      "path": "模拟交易实验/historical-validation-100d/hv.py",
+      "kind": "CODE",
+      "policy": "MODIFY_NEW_REPLACEMENT_ONLY; original stays read-only",
+      "new_replacement_location": "ashare-trading-v1/src/baseline"
+    },
+    {
+      "asset_id": "legacy-cost-replacement",
+      "classification": "MODIFY",
+      "path": "模拟交易实验/historical-validation-100d/execution_support.py",
+      "kind": "CODE",
+      "policy": "VERSIONED_NEW_ADAPTER_ONLY; never edit pinned original"
+    },
+    {
+      "asset_id": "v5-experiment",
+      "classification": "ISOLATE",
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z",
+      "kind": "LEGACY_EXPERIMENT",
+      "namespace": "LEGACY_EXPERIMENT:sector-swing40-v5",
+      "target_strategy_mapping": null,
+      "provenance": "LEGACY_NOT_PRODUCTION",
+      "holding_horizon": {
+        "experiment_window_sessions": 40,
+        "minimum_plan_sessions": 5,
+        "maximum_plan_sessions": 8,
+        "preferred_holding_sessions": 5
+      },
+      "legacy_rules": {
+        "version": "sector-swing40-v5",
+        "sessions": 40,
+        "initial_cash_cents": 1000000,
+        "single_position_budget_cents": 800000,
+        "portfolio_budget_cents": 950000,
+        "max_positions": 2,
+        "allow_same_sector": true,
+        "max_planned_loss_cents": 25000,
+        "max_portfolio_planned_loss_cents": 40000,
+        "minimum_net_rr_numerator": 13,
+        "minimum_net_rr_denominator": 10,
+        "minimum_target_return_bps": 500,
+        "minimum_target_net_profit_cents": 20000,
+        "preferred_holding_sessions": 5,
+        "minimum_plan_sessions": 5,
+        "maximum_plan_sessions": 8,
+        "minimum_remaining_entry_sessions": 5,
+        "maximum_open_gap_bps": 300,
+        "maximum_plan_target_bps": 2000,
+        "maximum_prompt_bytes": 180000,
+        "history_sessions": 120,
+        "sector_history_sessions": 20,
+        "sector_refresh_every_sessions": 1,
+        "scope": "沪深普通主板非ST；保持旧交易范围，不含北交所/科创/创业板；行业与主题不是同一概念",
+        "round_definition": "每只股票一次完整买入至全部卖出的模拟交易；不把浮盈、未成交计划或亏损绝对值算成达标",
+        "round_pass": "实际成交价涨幅至少5%且扣全部模拟税费滑点后净盈利至少200元；分别报告各项达标率",
+        "target_is_not_forecast_or_guarantee": true,
+        "no_forced_buy": true,
+        "no_model_resampling": true,
+        "real_trades": false,
+        "automatic_parameter_tuning_during_run": false
+      },
+      "legacy_fee_profile": {
+        "provenance": "LEGACY_FIXTURE_NOT_PRODUCTION",
+        "code_version": "sector-swing40-v5",
+        "source_engine_path": "模拟交易实验/historical-validation-100d/swing40_engine_v5.py",
+        "source_engine_sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+        "price_unit": "MILLS_CNY",
+        "cash_unit": "CENTS_CNY",
+        "rounding": "HALF_UP",
+        "commission_rate": "0.00025",
+        "commission_min_cents": "500",
+        "commission_scope": "PER_LEGACY_TRADE_ROW",
+        "transfer_rate": "0.00001",
+        "stamp_sell_rates": [
+          {
+            "effective_from": "0001-01-01",
+            "rate": "0.001"
+          },
+          {
+            "effective_from": "2023-08-28",
+            "rate": "0.0005"
+          }
+        ],
+        "slippage_buy_multiplier": "1.0005",
+        "slippage_sell_multiplier": "0.9995",
+        "price_tick_mills": 10,
+        "slippage_treatment": "ALREADY_EMBEDDED_IN_SAVED_EXECUTION_PRICE",
+        "limitation": "Recorded legacy assumptions only; no claim these are current official/broker fees or actual auction fills."
+      },
+      "source_code_hashes": [
+        {
+          "path": "模拟交易实验/historical-validation-100d/BROAD_RESEARCH_PROMPT_V3.md",
+          "recorded_sha256": "a2fd8e8af07f79eb1cff956025e4a0ac35954fa17869c59cbf804ed5d03e1b78",
+          "observed_sha256": "a2fd8e8af07f79eb1cff956025e4a0ac35954fa17869c59cbf804ed5d03e1b78",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/BROAD_SECTOR_PROMPT.md",
+          "recorded_sha256": "ec4d5714812783fe0fc2d0872923eaf1367deb94bc141ad34970b8bdbe149086",
+          "observed_sha256": "ec4d5714812783fe0fc2d0872923eaf1367deb94bc141ad34970b8bdbe149086",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/BROAD_STOCK_PROMPT_V2.md",
+          "recorded_sha256": "6aa3a4046d8eb471b6a0f8ee059cce8f6a4c82a1f4b2180a9c4b6bce64f715f2",
+          "observed_sha256": "6aa3a4046d8eb471b6a0f8ee059cce8f6a4c82a1f4b2180a9c4b6bce64f715f2",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/SWING40_RESEARCH_V5.md",
+          "recorded_sha256": "1d1c7378da6c224b45c2a44da93f9c25254dc2cfddfd4cb380cfd02e05a9544b",
+          "observed_sha256": "1d1c7378da6c224b45c2a44da93f9c25254dc2cfddfd4cb380cfd02e05a9544b",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/SWING40_SECTORS_V5.md",
+          "recorded_sha256": "1f78b205a891fe609e6bc6335ba44fabbad7c36db2b1f2ee55974779cd0d9b44",
+          "observed_sha256": "1f78b205a891fe609e6bc6335ba44fabbad7c36db2b1f2ee55974779cd0d9b44",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/SWING40_STOCKS_V5.md",
+          "recorded_sha256": "9b8939156485e5025cb950ef2645d84c37d5a6ba350e29a2a2f60355d448d776",
+          "observed_sha256": "9b8939156485e5025cb950ef2645d84c37d5a6ba350e29a2a2f60355d448d776",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_active_evidence_v4.py",
+          "recorded_sha256": "0789b8e7918b4c37eb5b34a701fdf8bfd2a61e6428c272f0b8512fbe689bc27f",
+          "observed_sha256": "0789b8e7918b4c37eb5b34a701fdf8bfd2a61e6428c272f0b8512fbe689bc27f",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_active_policy_v4.py",
+          "recorded_sha256": "c2848b30ed5dbc56cd0b057d79f8053b0278113093ff326e0ed6f16a4675f506",
+          "observed_sha256": "c2848b30ed5dbc56cd0b057d79f8053b0278113093ff326e0ed6f16a4675f506",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_cycle_collect_v3.mjs",
+          "recorded_sha256": "97e978e97aa2d4c1eaa70136c1b0a9a4458e0cd4dd869e98cd6a981d91549e0e",
+          "observed_sha256": "97e978e97aa2d4c1eaa70136c1b0a9a4458e0cd4dd869e98cd6a981d91549e0e",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_cycle_data_v3.py",
+          "recorded_sha256": "3481a985cf76034a852e921a1b0364587536eb3f594b9aa3b4cdeb422b1b48bc",
+          "observed_sha256": "3481a985cf76034a852e921a1b0364587536eb3f594b9aa3b4cdeb422b1b48bc",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_cycle_extract_v3.py",
+          "recorded_sha256": "c382b1ec167a155fcceca75ccafbc77d5a3973882576fe429caac9110019ba34",
+          "observed_sha256": "c382b1ec167a155fcceca75ccafbc77d5a3973882576fe429caac9110019ba34",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_cycle_runner_v3.py",
+          "recorded_sha256": "dc082e4a722dc8da45b75c1c683b6d5bee2371980c98f947a81cbbac55f7ee05",
+          "observed_sha256": "dc082e4a722dc8da45b75c1c683b6d5bee2371980c98f947a81cbbac55f7ee05",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_cycle_v3.py",
+          "recorded_sha256": "3d8e00e572acde3b46f570d0c94594688ce7ae6342c2ac2429f1e9f82580a20c",
+          "observed_sha256": "3d8e00e572acde3b46f570d0c94594688ce7ae6342c2ac2429f1e9f82580a20c",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_discovery.py",
+          "recorded_sha256": "22b857cb53ee47595e0828916aaed04fc4610dfae97b189002e5111fc52f0999",
+          "observed_sha256": "22b857cb53ee47595e0828916aaed04fc4610dfae97b189002e5111fc52f0999",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_execution_v2.py",
+          "recorded_sha256": "159b6914348e149a075805be76d5b4c536b98ccc30e7ef8edccb59b8e5972c1f",
+          "observed_sha256": "159b6914348e149a075805be76d5b4c536b98ccc30e7ef8edccb59b8e5972c1f",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_financial_locator_repair_v4.py",
+          "recorded_sha256": "ecdfacf05d94abb7cfb5d7112fad30afc9bb71c0debb8158f69cfd50bf22dac0",
+          "observed_sha256": "ecdfacf05d94abb7cfb5d7112fad30afc9bb71c0debb8158f69cfd50bf22dac0",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_market_sources.json",
+          "recorded_sha256": "3a0d6377ae0603a2c25d1a501c65f9def34ab37c455f4bb78b46d03447581627",
+          "observed_sha256": "3a0d6377ae0603a2c25d1a501c65f9def34ab37c455f4bb78b46d03447581627",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_prompt_numeric_v4.py",
+          "recorded_sha256": "c2191011c1bf6c8a9a5360c7cae69dc23530154852f3f5f299552ca2b5dd174e",
+          "observed_sha256": "c2191011c1bf6c8a9a5360c7cae69dc23530154852f3f5f299552ca2b5dd174e",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_prompt_table_v4.py",
+          "recorded_sha256": "b8120a54aad10c88333fa816c7dd4ccc6870ab5330251028df3a693755d55e1c",
+          "observed_sha256": "b8120a54aad10c88333fa816c7dd4ccc6870ab5330251028df3a693755d55e1c",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_research_v2.py",
+          "recorded_sha256": "f17be8a027b029fcb1bfd744fd943abeac1ddf57909d342ab6bbce24ca8dba84",
+          "observed_sha256": "f17be8a027b029fcb1bfd744fd943abeac1ddf57909d342ab6bbce24ca8dba84",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_start_clock_v4.py",
+          "recorded_sha256": "c8302b8edf0b15c6cc4bf7a1e50cb2744878eac657a7325ef6a7d8699dcd1d7b",
+          "observed_sha256": "c8302b8edf0b15c6cc4bf7a1e50cb2744878eac657a7325ef6a7d8699dcd1d7b",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/broad_v4_rules.json",
+          "recorded_sha256": "8b0f447ec30ed1c59a07fd87ccf3a3da3dede8e3edcd4d1f6e7a9a024cb86f2a",
+          "observed_sha256": "8b0f447ec30ed1c59a07fd87ccf3a3da3dede8e3edcd4d1f6e7a9a024cb86f2a",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/evidence_pack.py",
+          "recorded_sha256": "579fa3e0683751407d781cc6115f5e47adbec94e8d7dae2c7c2f094817d85339",
+          "observed_sha256": "579fa3e0683751407d781cc6115f5e47adbec94e8d7dae2c7c2f094817d85339",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/execution_support.py",
+          "recorded_sha256": "5aa4b93238e13db63d8f75a8dc77b9e59fa5b60c71e814ad4c8028a81c443e05",
+          "observed_sha256": "5aa4b93238e13db63d8f75a8dc77b9e59fa5b60c71e814ad4c8028a81c443e05",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/hv.py",
+          "recorded_sha256": "02e16bc12b8488c09c3da2c8a0aa04b4c1e8a8991425bbfe83a5ad9597ca8a23",
+          "observed_sha256": "02e16bc12b8488c09c3da2c8a0aa04b4c1e8a8991425bbfe83a5ad9597ca8a23",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/isolated_model.py",
+          "recorded_sha256": "fca3742c465853a3004d77852561d43306c3ffb1355bc99cbadea2505fa454f2",
+          "observed_sha256": "fca3742c465853a3004d77852561d43306c3ffb1355bc99cbadea2505fa454f2",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/isolation_audit.py",
+          "recorded_sha256": "3e843ccbc2c1957608b807559347175cb24dc766a047bcd904a0f463db113228",
+          "observed_sha256": "3e843ccbc2c1957608b807559347175cb24dc766a047bcd904a0f463db113228",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/isolation_audit_v2.py",
+          "recorded_sha256": "3ae7d5f96a3f96e875c87499f4e6c1df8e9fe044665b97e0f6f433bd4d983216",
+          "observed_sha256": "3ae7d5f96a3f96e875c87499f4e6c1df8e9fe044665b97e0f6f433bd4d983216",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/isolation_resume_audit_v3.py",
+          "recorded_sha256": "df1dfe59304d6f6b46b9cd37dcc144a34dfb996515d3b7c6a1e3904be255236e",
+          "observed_sha256": "df1dfe59304d6f6b46b9cd37dcc144a34dfb996515d3b7c6a1e3904be255236e",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/judge.py",
+          "recorded_sha256": "27ff4564fe17505a26991cba09ed5292248347e663d1f46b1daa615fe686b5f0",
+          "observed_sha256": "27ff4564fe17505a26991cba09ed5292248347e663d1f46b1daa615fe686b5f0",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/model_policy.json",
+          "recorded_sha256": "c482a6728e53680a80a2a8afeda7d5bd12beb6797dc03833add106514a1febc0",
+          "observed_sha256": "c482a6728e53680a80a2a8afeda7d5bd12beb6797dc03833add106514a1febc0",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/reconcile.py",
+          "recorded_sha256": "70795e5ccbb3a1f3a225c1b21a760b5500251ee8dc69a5476cf4c815e663c5ba",
+          "observed_sha256": "70795e5ccbb3a1f3a225c1b21a760b5500251ee8dc69a5476cf4c815e663c5ba",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_collect_v5.mjs",
+          "recorded_sha256": "de37e81cefa04f53effa1f528329cf30cef75d6b69d6e8f0efeb2196048bdd16",
+          "observed_sha256": "de37e81cefa04f53effa1f528329cf30cef75d6b69d6e8f0efeb2196048bdd16",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_data_v5.py",
+          "recorded_sha256": "33954cd875ca3669e5027dea53b57256170dc31a9ef14c3789d2114b2749dabc",
+          "observed_sha256": "33954cd875ca3669e5027dea53b57256170dc31a9ef14c3789d2114b2749dabc",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_discovery_v5.py",
+          "recorded_sha256": "0434cc4ab53148735b56fcd29d51ae3a326d3db4864e638435dcc7d8db69ab34",
+          "observed_sha256": "0434cc4ab53148735b56fcd29d51ae3a326d3db4864e638435dcc7d8db69ab34",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_engine_v5.py",
+          "recorded_sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+          "observed_sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_evidence_v5.py",
+          "recorded_sha256": "d48decdd5dc1848d4b45385ba80bef74b30dff29789ad42b0b691fc187570018",
+          "observed_sha256": "d48decdd5dc1848d4b45385ba80bef74b30dff29789ad42b0b691fc187570018",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_judge_v5.py",
+          "recorded_sha256": "d9d4bb4c1e23e9af0da47628e537d5451584afd1133f12fe9efeb95ff451f018",
+          "observed_sha256": "d9d4bb4c1e23e9af0da47628e537d5451584afd1133f12fe9efeb95ff451f018",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_policy_v5.py",
+          "recorded_sha256": "05e651419c1e79ff4b1746d420b094e3971dbb415ab1ed771257b7d6bccbe412",
+          "observed_sha256": "05e651419c1e79ff4b1746d420b094e3971dbb415ab1ed771257b7d6bccbe412",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_preflight_v5.py",
+          "recorded_sha256": "a1df06199435c81a4f50a453159737b64751d0be24bb75d8460a0e0d14d339ff",
+          "observed_sha256": "a1df06199435c81a4f50a453159737b64751d0be24bb75d8460a0e0d14d339ff",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_reconcile_v5.py",
+          "recorded_sha256": "0affcbe04d386626493c004d4aad48c848dce93bf636c886dfcb8f74105d5d41",
+          "observed_sha256": "0affcbe04d386626493c004d4aad48c848dce93bf636c886dfcb8f74105d5d41",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_rules_v5.json",
+          "recorded_sha256": "5c5bada8d291d7996a7bebc3ce8253e31be44806b0063f560135dff51a646bc5",
+          "observed_sha256": "5c5bada8d291d7996a7bebc3ce8253e31be44806b0063f560135dff51a646bc5",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_run_v5.py",
+          "recorded_sha256": "59c507dc023cf65911b084ecc327662eca9a7924092bf4ed7bd4004fc202f8d1",
+          "observed_sha256": "59c507dc023cf65911b084ecc327662eca9a7924092bf4ed7bd4004fc202f8d1",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/swing40_runner_v5.py",
+          "recorded_sha256": "c9684cc3d8eb7e434dfa444200ec00c6af01a3df2aa6d2ab530f001daff8a39d",
+          "observed_sha256": "c9684cc3d8eb7e434dfa444200ec00c6af01a3df2aa6d2ab530f001daff8a39d",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/trading_calendar.json",
+          "recorded_sha256": "7fa88dc34c366c068e74c3b2ba4b27b7527e510ae4624f191ce3a09eb39df32c",
+          "observed_sha256": "7fa88dc34c366c068e74c3b2ba4b27b7527e510ae4624f191ce3a09eb39df32c",
+          "relocation_only_mapping_applied": false
+        },
+        {
+          "path": "模拟交易实验/historical-validation-100d/window_lock.json",
+          "recorded_sha256": "95546042a8b368377658dea29506dd1830f994bb47806b35a88a2ee8f95b2b40",
+          "observed_sha256": "95546042a8b368377658dea29506dd1830f994bb47806b35a88a2ee8f95b2b40",
+          "relocation_only_mapping_applied": false
+        }
+      ],
+      "recorded_state": {
+        "version": "sector-swing40-v5",
+        "completed_days": 14,
+        "maximum_days": 40,
+        "finished": false,
+        "next_day": "2025-04-30",
+        "nav_cents": 979114,
+        "cash_cents": 979114,
+        "open_positions": {},
+        "runtime": {
+          "state": "BLOCKED",
+          "worker_pid": null,
+          "worker_started_at": "2026-09-30T14:55:33.737089+00:00",
+          "updated_at": "2026-09-30T15:24:08.434762+00:00",
+          "error": "NEW_SIGNATURE_REQUIRES_VISUAL_REVIEW",
+          "original_stop_is_history": true
+        },
+        "worker_alive": false,
+        "real_trades": false,
+        "updated_at": "2026-09-30T15:59:19.531841+00:00"
+      },
+      "status_is_process_health_certification": false
+    },
+    {
+      "asset_id": "v1r",
+      "classification": "ISOLATE",
+      "path": "模拟交易实验/2026-09-28",
+      "kind": "LEGACY_EXPERIMENT",
+      "policy": "SOURCE_AND_RUNTIME_COPY_NOT_PRODUCTION_DEFAULTS"
+    },
+    {
+      "asset_id": "research-v2",
+      "classification": "ISOLATE",
+      "path": "模拟交易实验/research-v2",
+      "kind": "LEGACY_RESEARCH",
+      "policy": "PRESERVE_SHADOW_RESULTS_AND_THIRD_PARTY_VERSION_BOUNDARIES"
+    },
+    {
+      "asset_id": "old-gui",
+      "classification": "ISOLATE",
+      "path": "History/炒股/程序",
+      "kind": "LEGACY_APPLICATION",
+      "policy": "READ_ONLY_GUI_AND_STRATEGY_ASSETS; no large GUI migration in P0"
+    },
+    {
+      "asset_id": "old-business-db",
+      "classification": "ISOLATE",
+      "path": "History/炒股/程序/data/stocks.db",
+      "kind": "DATABASE",
+      "policy": "EXTERNAL_ONLY; consistent SQLite/WAL backup required before later migration",
+      "git_copy_permitted": false,
+      "snapshot_or_content_audit_in_this_manifest": false
+    },
+    {
+      "asset_id": "old-runs",
+      "classification": "ISOLATE",
+      "path": "模拟交易实验/historical-validation-100d/runs",
+      "kind": "EVIDENCE_DIRECTORY",
+      "policy": "EXTERNAL_ONLY; model state DBs are not trading DBs",
+      "git_copy_permitted": false
+    },
+    {
+      "asset_id": "old-watcher",
+      "classification": "ISOLATE",
+      "path": "本机盯盘",
+      "kind": "LEGACY_APPLICATION",
+      "policy": "OLD_OBSERVATION_THRESHOLDS_ARE_NOT_PRODUCTION_EXECUTION_GATES"
+    },
+    {
+      "asset_id": "old-write-entrypoints",
+      "classification": "DEPRECATE",
+      "path": "模拟交易实验/historical-validation-100d/swing40_run_v5.py",
+      "kind": "CODE",
+      "status": "PLANNED_NOT_EXECUTED",
+      "policy": "Retire new use only after replacements, regression, evidence references and owner gate pass; historical runs remain readable"
+    },
+    {
+      "asset_id": "regenerable-caches",
+      "classification": "DELETE_LATER",
+      "path": "模拟交易实验/historical-validation-100d",
+      "path_patterns": [
+        "**/__pycache__/**",
+        "**/.pytest_cache/**"
+      ],
+      "kind": "CACHE_CANDIDATE",
+      "status": "NO_DELETION_AUTHORIZED_OR_EXECUTED",
+      "policy": "Only after evidence-reference review and backup/restore check; not all temporary-looking files are disposable"
+    }
+  ],
+  "selected_anchors": [
+    {
+      "path": "交易策略/A股交易系统重构工程交接文档：云端“大脑”与本地“眼睛和手”.md",
+      "sha256": "63e78aac5e061a82419bd202b58c2cba28ca025053030a14b8aad8737b55fb38",
+      "bytes": 56426,
+      "role": "PRIMARY_SOURCE_OF_TRUTH",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "交易策略/A股交易系统V1第一阶段现状与迁移审查_2026-10-05.md",
+      "sha256": "fd46c1822b7b3371aa2b6c516d2961dca92a93979aa6c4bb63d4a1fd1e05922f",
+      "bytes": 42386,
+      "role": "CONFIRMED_MIGRATION_BASELINE_NOT_BUSINESS_DEFAULTS",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/config.json",
+      "sha256": "a52bbd71ce3e2f17af6a6b62e35b7c418e681845f0af310047dc8152c69ff48e",
+      "bytes": 7238,
+      "role": "LEGACY_EXPERIMENT_EVIDENCE",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/STOPPED.json",
+      "sha256": "4858f04c7ed6fb67607102c2b28a7fe3f8ca1468ecba067b7653d40d4dfcff5b",
+      "bytes": 948,
+      "role": "LEGACY_EXPERIMENT_EVIDENCE",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/runtime-v1.json",
+      "sha256": "2072bec4d08e564abcf19ed58eb3becdce8c073b54d4cd5b695887d9cf4b2244",
+      "bytes": 244,
+      "role": "LEGACY_EXPERIMENT_EVIDENCE",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/isolation-contract-v2.json",
+      "sha256": "99138ae7ee47b2b8af7e7976b63f101f9cd403f1dc6a637341db30eee98395e7",
+      "bytes": 4387,
+      "role": "LEGACY_EXPERIMENT_EVIDENCE",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/journal/events.jsonl",
+      "sha256": "de2934a9443d851beb54c82191f0bbe58c60829a5cd21022e236f3add4e600d4",
+      "bytes": 65773,
+      "role": "LEGACY_EXPERIMENT_EVIDENCE",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/journal/events.head.json",
+      "sha256": "fed37f8d381891369707ee4f35eff14e56ccc168272560131e5d83707495a5b5",
+      "bytes": 86,
+      "role": "LEGACY_EXPERIMENT_EVIDENCE",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/CURRENT_SWING40_V5.json",
+      "sha256": "cd8d0f9e00b973a1650c9ea24280f5d3e816182e8013eb200324984cfe1cff90",
+      "bytes": 13625,
+      "role": "LEGACY_STATUS_OR_SEAL",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/relocation-manifest.json",
+      "sha256": "4c853b4dee40a8d9f168dd7b0983a1a6128776b4630448193eac49f0cf4fe12b",
+      "bytes": 1985,
+      "role": "LEGACY_STATUS_OR_SEAL",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/isolation-contract-native-v2.json",
+      "sha256": "73c0628601b5f885c8bbc679e6f038eb2ba3fd0e7ebc492e3ca28bd0bdc3e993",
+      "bytes": 1256,
+      "role": "LEGACY_STATUS_OR_SEAL",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/BROAD_RESEARCH_PROMPT_V3.md",
+      "sha256": "a2fd8e8af07f79eb1cff956025e4a0ac35954fa17869c59cbf804ed5d03e1b78",
+      "bytes": 4685,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/BROAD_SECTOR_PROMPT.md",
+      "sha256": "ec4d5714812783fe0fc2d0872923eaf1367deb94bc141ad34970b8bdbe149086",
+      "bytes": 1991,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/BROAD_STOCK_PROMPT_V2.md",
+      "sha256": "6aa3a4046d8eb471b6a0f8ee059cce8f6a4c82a1f4b2180a9c4b6bce64f715f2",
+      "bytes": 2379,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/SWING40_RESEARCH_V5.md",
+      "sha256": "1d1c7378da6c224b45c2a44da93f9c25254dc2cfddfd4cb380cfd02e05a9544b",
+      "bytes": 5222,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/SWING40_SECTORS_V5.md",
+      "sha256": "1f78b205a891fe609e6bc6335ba44fabbad7c36db2b1f2ee55974779cd0d9b44",
+      "bytes": 2140,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/SWING40_STOCKS_V5.md",
+      "sha256": "9b8939156485e5025cb950ef2645d84c37d5a6ba350e29a2a2f60355d448d776",
+      "bytes": 1999,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_active_evidence_v4.py",
+      "sha256": "0789b8e7918b4c37eb5b34a701fdf8bfd2a61e6428c272f0b8512fbe689bc27f",
+      "bytes": 2088,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_active_policy_v4.py",
+      "sha256": "c2848b30ed5dbc56cd0b057d79f8053b0278113093ff326e0ed6f16a4675f506",
+      "bytes": 4150,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_collect_v3.mjs",
+      "sha256": "97e978e97aa2d4c1eaa70136c1b0a9a4458e0cd4dd869e98cd6a981d91549e0e",
+      "bytes": 6385,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_data_v3.py",
+      "sha256": "3481a985cf76034a852e921a1b0364587536eb3f594b9aa3b4cdeb422b1b48bc",
+      "bytes": 14014,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_extract_v3.py",
+      "sha256": "c382b1ec167a155fcceca75ccafbc77d5a3973882576fe429caac9110019ba34",
+      "bytes": 1666,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_runner_v3.py",
+      "sha256": "dc082e4a722dc8da45b75c1c683b6d5bee2371980c98f947a81cbbac55f7ee05",
+      "bytes": 5142,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_cycle_v3.py",
+      "sha256": "3d8e00e572acde3b46f570d0c94594688ce7ae6342c2ac2429f1e9f82580a20c",
+      "bytes": 21792,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_discovery.py",
+      "sha256": "22b857cb53ee47595e0828916aaed04fc4610dfae97b189002e5111fc52f0999",
+      "bytes": 11798,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_execution_v2.py",
+      "sha256": "159b6914348e149a075805be76d5b4c536b98ccc30e7ef8edccb59b8e5972c1f",
+      "bytes": 7040,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_financial_locator_repair_v4.py",
+      "sha256": "ecdfacf05d94abb7cfb5d7112fad30afc9bb71c0debb8158f69cfd50bf22dac0",
+      "bytes": 5085,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_market_sources.json",
+      "sha256": "3a0d6377ae0603a2c25d1a501c65f9def34ab37c455f4bb78b46d03447581627",
+      "bytes": 715,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_prompt_numeric_v4.py",
+      "sha256": "c2191011c1bf6c8a9a5360c7cae69dc23530154852f3f5f299552ca2b5dd174e",
+      "bytes": 3615,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_prompt_table_v4.py",
+      "sha256": "b8120a54aad10c88333fa816c7dd4ccc6870ab5330251028df3a693755d55e1c",
+      "bytes": 5075,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_research_v2.py",
+      "sha256": "f17be8a027b029fcb1bfd744fd943abeac1ddf57909d342ab6bbce24ca8dba84",
+      "bytes": 15563,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_start_clock_v4.py",
+      "sha256": "c8302b8edf0b15c6cc4bf7a1e50cb2744878eac657a7325ef6a7d8699dcd1d7b",
+      "bytes": 9451,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/broad_v4_rules.json",
+      "sha256": "8b0f447ec30ed1c59a07fd87ccf3a3da3dede8e3edcd4d1f6e7a9a024cb86f2a",
+      "bytes": 1276,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/evidence_pack.py",
+      "sha256": "579fa3e0683751407d781cc6115f5e47adbec94e8d7dae2c7c2f094817d85339",
+      "bytes": 18458,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/execution_support.py",
+      "sha256": "5aa4b93238e13db63d8f75a8dc77b9e59fa5b60c71e814ad4c8028a81c443e05",
+      "bytes": 6188,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/hv.py",
+      "sha256": "02e16bc12b8488c09c3da2c8a0aa04b4c1e8a8991425bbfe83a5ad9597ca8a23",
+      "bytes": 12893,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolated_model.py",
+      "sha256": "fca3742c465853a3004d77852561d43306c3ffb1355bc99cbadea2505fa454f2",
+      "bytes": 15189,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolation_audit.py",
+      "sha256": "3e843ccbc2c1957608b807559347175cb24dc766a047bcd904a0f463db113228",
+      "bytes": 16595,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolation_audit_v2.py",
+      "sha256": "3ae7d5f96a3f96e875c87499f4e6c1df8e9fe044665b97e0f6f433bd4d983216",
+      "bytes": 22126,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/isolation_resume_audit_v3.py",
+      "sha256": "df1dfe59304d6f6b46b9cd37dcc144a34dfb996515d3b7c6a1e3904be255236e",
+      "bytes": 28147,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/judge.py",
+      "sha256": "27ff4564fe17505a26991cba09ed5292248347e663d1f46b1daa615fe686b5f0",
+      "bytes": 11345,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/model_policy.json",
+      "sha256": "c482a6728e53680a80a2a8afeda7d5bd12beb6797dc03833add106514a1febc0",
+      "bytes": 660,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/reconcile.py",
+      "sha256": "70795e5ccbb3a1f3a225c1b21a760b5500251ee8dc69a5476cf4c815e663c5ba",
+      "bytes": 2218,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_collect_v5.mjs",
+      "sha256": "de37e81cefa04f53effa1f528329cf30cef75d6b69d6e8f0efeb2196048bdd16",
+      "bytes": 6612,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_data_v5.py",
+      "sha256": "33954cd875ca3669e5027dea53b57256170dc31a9ef14c3789d2114b2749dabc",
+      "bytes": 15218,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_discovery_v5.py",
+      "sha256": "0434cc4ab53148735b56fcd29d51ae3a326d3db4864e638435dcc7d8db69ab34",
+      "bytes": 11214,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_engine_v5.py",
+      "sha256": "6f7487b566c7dcb90a2936f4feb855e2b7d12ba5d005358b1d51563366eeb13f",
+      "bytes": 11769,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_evidence_v5.py",
+      "sha256": "d48decdd5dc1848d4b45385ba80bef74b30dff29789ad42b0b691fc187570018",
+      "bytes": 2427,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_judge_v5.py",
+      "sha256": "d9d4bb4c1e23e9af0da47628e537d5451584afd1133f12fe9efeb95ff451f018",
+      "bytes": 31345,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_policy_v5.py",
+      "sha256": "05e651419c1e79ff4b1746d420b094e3971dbb415ab1ed771257b7d6bccbe412",
+      "bytes": 9175,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_preflight_v5.py",
+      "sha256": "a1df06199435c81a4f50a453159737b64751d0be24bb75d8460a0e0d14d339ff",
+      "bytes": 1970,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_reconcile_v5.py",
+      "sha256": "0affcbe04d386626493c004d4aad48c848dce93bf636c886dfcb8f74105d5d41",
+      "bytes": 2352,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_rules_v5.json",
+      "sha256": "5c5bada8d291d7996a7bebc3ce8253e31be44806b0063f560135dff51a646bc5",
+      "bytes": 1373,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_run_v5.py",
+      "sha256": "59c507dc023cf65911b084ecc327662eca9a7924092bf4ed7bd4004fc202f8d1",
+      "bytes": 17497,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/swing40_runner_v5.py",
+      "sha256": "c9684cc3d8eb7e434dfa444200ec00c6af01a3df2aa6d2ab530f001daff8a39d",
+      "bytes": 6682,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/trading_calendar.json",
+      "sha256": "7fa88dc34c366c068e74c3b2ba4b27b7527e510ae4624f191ce3a09eb39df32c",
+      "bytes": 11586,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/window_lock.json",
+      "sha256": "95546042a8b368377658dea29506dd1830f994bb47806b35a88a2ee8f95b2b40",
+      "bytes": 2732,
+      "role": "LEGACY_PINNED_CODE_OR_RULES",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-10/result.json",
+      "sha256": "24790d5bc2ac3c5beda34eb092fde9596a6e8cd6b977d818d5cf353083bd818a",
+      "bytes": 1353,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-10/frozen.json",
+      "sha256": "88f9047875acebb459082b3e90d59c21e76bfd82a3b84916bc1c83042b5e63ec",
+      "bytes": 355361,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-11/result.json",
+      "sha256": "4f1429d9d850017e1cbca7d8f784e1237e06205be3141f5bc46ec72292cb8d46",
+      "bytes": 2136,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-11/frozen.json",
+      "sha256": "54dce9704bdaf773c3e59ecfe3a6154ef6bf20837f77c9d6b64d62989f8bd555",
+      "bytes": 383741,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-14/result.json",
+      "sha256": "f556b2b0ba17d847570a1ccb83465bfc49647e620d34bf368a75a1288f14bde5",
+      "bytes": 2400,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-14/frozen.json",
+      "sha256": "89a7423c3b379b3f7445c7c46fa104a249a2fbb67bf641dbf90953c055f96b41",
+      "bytes": 355783,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-15/result.json",
+      "sha256": "92ed3bb1862d3a2c122634baabfccc837146ae44d00aaa3bd1f35a7694fc6e50",
+      "bytes": 1604,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-15/frozen.json",
+      "sha256": "deca82ad126a7fc742a9349708cc9a47d488b6421eb35e626a80d0ddbc5e3304",
+      "bytes": 433327,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-16/result.json",
+      "sha256": "715d4535e549e1ec03856e8bda65b6d5dc07c100ee9664aa1c0702486c3dea53",
+      "bytes": 1605,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-16/frozen.json",
+      "sha256": "4e8f21e3da9f62626c0dc1ec00e0d850c5e53745d399e1d00c761b39edd0484b",
+      "bytes": 443366,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-17/result.json",
+      "sha256": "1d243b6892e527435e2f167e0ac3fe7ad209cd5e8b2f68aa61284eed6257f159",
+      "bytes": 1607,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-17/frozen.json",
+      "sha256": "4d4c977ae08f239b956158ceb173ef0495b7225c552e7f097628d9758083f2a6",
+      "bytes": 353515,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-18/result.json",
+      "sha256": "3f245c8476e06d58b16edd7908eedae27318d63ebb9f59d04afc12790614f6eb",
+      "bytes": 2542,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-18/frozen.json",
+      "sha256": "033f479469b3459f5447a14ec7c897e0c76bc85caefd04e1ef4395ba31725a67",
+      "bytes": 351860,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-21/result.json",
+      "sha256": "39cfc1283adbf26474c502d6c68b0bd103801a9f50ccee3f267a04984407b136",
+      "bytes": 2121,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-21/frozen.json",
+      "sha256": "f7aa4c3596cbf4647048868039a83e0a43ee5b5a0f5de9064861c6cae120bc8b",
+      "bytes": 350647,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-22/result.json",
+      "sha256": "3065d2dcbb48eb4aa81c8d34b51825e5775e4377ef731c4c0c514f0fad91f1c2",
+      "bytes": 3162,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-22/frozen.json",
+      "sha256": "cb3c34280c9a42aff97cb6515b74a26111b32b90ee08d64618456ac803a0b47b",
+      "bytes": 393760,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-23/result.json",
+      "sha256": "8ccf856ac57c20bad31e4b372b095d63ac0467e8458ad5fd7e71e3414b7521cb",
+      "bytes": 2806,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-23/frozen.json",
+      "sha256": "bc3e55af6836f0d5a2bbc2c9b68d3d02967bc9d5dcfdd81b2238b7f4f24f1121",
+      "bytes": 506719,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-24/result.json",
+      "sha256": "a1cb543a38e7565bbe0bfc36535aeb8b341e67597ba346f512c9155bff261ec6",
+      "bytes": 1764,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-24/frozen.json",
+      "sha256": "fc798323ecab74c93b3f900a43ad9faf17289238e5cd9e9cafe92df6a237e916",
+      "bytes": 382615,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-25/result.json",
+      "sha256": "e5c147ca021dcab1c2347ece03318ab396ed684911087e12fc3b8f474e5d37a5",
+      "bytes": 1346,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-25/frozen.json",
+      "sha256": "c2c397a892e43df9d8a33ea33219dc0c85172e945dfe723643372aceebe8ea27",
+      "bytes": 357186,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-28/result.json",
+      "sha256": "07955c3202ec0c19913124c5932e8cb1e817be4ef38ac8d6984b2025ee617e63",
+      "bytes": 2132,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-28/frozen.json",
+      "sha256": "567500390732aa58ee0fe5b037cdd980528410a15328fdd7a0f6b52c1656ed9c",
+      "bytes": 350462,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-29/result.json",
+      "sha256": "86e1da0a053567a1426448996503ed48d266dfa4c05174908ec6fb166ba8a149",
+      "bytes": 1766,
+      "role": "V5_SAVED_REPLAY_INPUT_AND_EXPECTED",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "模拟交易实验/historical-validation-100d/runs/sector-swing40-v5-20260930T042302613534Z/days/2025-04-29/frozen.json",
+      "sha256": "fb45f024d908a123a9f003ad9bb366d4a44cd2d7c12106b3725451f5f115852f",
+      "bytes": 395781,
+      "role": "V5_FROZEN_PRE_REVEAL_DECISION",
+      "access": "READ_ONLY"
+    }
+  ],
+  "portable_fixture": {
+    "path": "tests/fixtures/legacy/v5-fourteen-days.v1.json",
+    "sha256": "f61e4502db35a72ee47d48031d995416c76643f4ac162a24ffae21e3484cfbff",
+    "provenance": "LEGACY_FIXTURE_NOT_PRODUCTION"
+  },
+  "known_compatibility_issues": [
+    {
+      "issue_id": "LEGACY_CODEX_CLI_HASH_MISMATCH",
+      "status": "OPEN_KNOWN_FAILURE",
+      "reason_code": "PINNED_CONTEXT_OR_CLI_CHANGED",
+      "seal_path": "模拟交易实验/historical-validation-100d/runs/isolation-contract-native-v2.json",
+      "expected_binding": {
+        "tool_schema_sha256": "bd1b63a0ec86c253614d4c95c8579f0934989d62391224877f50943ed49f43dc",
+        "builtin_sha256": "513dee9703e0871ab6ff3e7d8d415d961e9d624491bd4ff8faba011168329be3",
+        "static_context_sha256": "252b952d8fd648aa6151ce0baa3ead8916874eccd920e8ea7bb299a8118d3ed5",
+        "environment_template_sha256": "5cbc2327ab978dcc45fca4e39b8155329bcf15cd97a5e5b32a30bdb051c2e5ec",
+        "command_sha256": "64e1842b9c3f33cff8678752189cb9d8a41296ac0c187a24187af80f5d731545",
+        "cli_sha256": "3e11ccc743e8198a5ef84fb57c89941d845b0ea0302485ed1fbac2f0821aca5a"
+      },
+      "observed_cli_sha256": "6b582e8813ce7e8ed4c52814ee5cf230dba647bf2292df747a4003f2657ef201",
+      "other_binding_fields_match_at_baseline": true,
+      "seal_modified": false,
+      "native_compatibility_pass_claimed": false
+    }
+  ],
+  "scope_limits": [
+    "Directory entries are a boundary inventory, not recursive content fingerprints.",
+    "Only selected code/config/seal/journal and 14 saved frozen/results are content-hashed.",
+    "Runtime copies in Application Support, credentials and all state DB contents remain outside Git and outside this manifest fingerprint.",
+    "No full historical data import, process health audit or new source fact certification."
+  ]
+}

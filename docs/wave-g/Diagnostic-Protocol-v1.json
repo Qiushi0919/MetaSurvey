@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "frozen_at": "2026-10-06T16:50:37.907430+00:00",
+  "kind": "RETROSPECTIVE_DIAGNOSTIC_PROTOCOL_NOT_OWNER_STRATEGY_POLICY",
+  "namespace": "RETROSPECTIVE_DIAGNOSTIC_ONLY:CORE_40",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "source_strategy_file": "docs/wave-f/Frozen-StrategySpec-v1.json",
+  "source_strategy_sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+  "families": [
+    "CORE40_Q_PULLBACK_V1",
+    "CORE40_Q_BREAKOUT_V1"
+  ],
+  "family_modification_or_selection": false,
+  "inputs": "existing frozen quarantined raw bars/factors/financials/reports/calendar only; no new authenticated capture",
+  "retrospective_samples": "ALL_EXPOSED_NOT_OOS",
+  "money_cost_risk_policy": "UNSET_REQUIRED; no account or strategy-profit simulation",
+  "horizons": [
+    5,
+    20,
+    60
+  ],
+  "labels": "RAW_UNADJUSTED_PRICE_CHANGE_ONLY; no fee-inclusive/total/portfolio return; actions and status unresolved remain explicit exclusion",
+  "calendar_policy": "if frozen current-reference calendar complete, reconstruct next5/20/60open sessions with reference-source lineage but no historicalPITclaim; absent/incomplete => session labelUNKNOWN, separate clearly named observed-bar-offset descriptive labels allowed",
+  "row_policy": "sort by symbol/date, retain all original/duplicate/conflicting observations; no silently overwrite conflict, no flat fabricated bar, missing future endpointUNKNOWN",
+  "timing_price_component": "exact price-only subconditions of two frozen families; sectorRS/company/valuation/catalyst/Edge/status/action gates not assumed, complete family decision alwaysNO_DECISION when unknown",
+  "feature_prefix": "only observation trade_date<=diagnostic cutoff; actual available/retrieved/source clocks preserved as current-reconstruction, not rewritten into historical first availability",
+  "label_separation": "future labels are reveal-only outputs; not passed to feature/eligibility calculation; truncate/futuremutation prefix noninterference tests",
+  "quality": "current WaveC/WaveD coordinates and point-in-time/current financial field/missingness lineage; no backfill todayQuality into historical price decisions; no quality-to-future predictive claim without asof financial evidence",
+  "chronological_price_diagnostics": "fixed chronological expanding price-only blocks, no fitting/tuning; all retrospective exposed; complete final60label purge at block boundary; no walk-forward formal/OOS claim",
+  "sensitivity": {
+    "classification": "PREDECLARED_UNIVARIATE_DIAGNOSTIC_ONLY_NOT_REGISTERED_FAMILY_VARIANTS",
+    "pullback_volume3_to_volume20_thresholds": [
+      "0.72",
+      "0.8",
+      "0.88"
+    ],
+    "breakout_volume_to_previous20_thresholds": [
+      "1.35",
+      "1.5",
+      "1.65"
+    ],
+    "rule": "alter only stated volume subcondition separately; report every membership/coverage flip and unknown, no winner ranking or candidate parameter mutation, no objective search"
+  },
+  "reporting": [
+    "all3/all2/allhorizons counts/sample/exclusions/missing/tail/actionbias",
+    "rawpricechange distribution quantiles and rawpath drawdown, decimal strings",
+    "compare allsymbols without pooled claim/winrate/recommendation",
+    "currentQuality field/missingness/rank sensitivity and counterexamples",
+    "double deterministic byte-identical replay after freeze; preserve failedepochs"
+  ],
+  "forbidden_output_claims": [
+    "FORMAL_HISTORICAL_BACKTEST",
+    "UNTOUCHED_OOS",
+    "EDGE_PASS",
+    "WIN_RATE",
+    "BUY_RECOMMENDATION",
+    "FEE_INCLUSIVE_STRATEGY_PROFIT"
+  ],
+  "actual_forward_days": 0,
+  "historical_visibility_proven": false,
+  "productionGate": false
+}

@@ -1,0 +1,298 @@
+{
+  "gate": "P1B_READINESS_GATE",
+  "current_result": "PASS",
+  "meaning": "Only approved fixture-only manual export/PAPER readiness; no actual research or production authorization",
+  "scope_policy": "D01_APPROVED_FIXTURE_ONLY",
+  "p1b_authorized": false,
+  "production_execution_allowed": false,
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Research无法读取QUARANTINED",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C01",
+        "C02",
+        "C09"
+      ],
+      "baseline_evidence": [
+        "src/data/snapshot.mjs",
+        "docs/closure/boundary-inspection.json"
+      ],
+      "required_acceptance_test": "消费者尝试读raw/DB/unknown source，输出/bytes/hash/refs均不含拒绝对象",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "Closure DA: quarantined persisted root is blocked before any export exists",
+        "closure actual isolated MANUAL_EXPORT roundtrip blocks raw/DB/credentials/repo/network/exec in native OS and Node layers"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R02",
+      "requirement": "Research无法读取future-invalid",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C03",
+        "C05"
+      ],
+      "baseline_evidence": [
+        "src/data/snapshot.mjs",
+        "tests/p1a-data.test.mjs"
+      ],
+      "required_acceptance_test": "未来available/retrieved/status/action/financial/title/ID不得进入研究包",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "Closure DA: future raw-clock data cannot be exported through a caller-made frozen manifest",
+        "Closure DA: available_at spoof is rejected from original bytes, despite coherent new hashes",
+        "production required /provenance/available_at missing -> structural rejection and production fail closed",
+        "Closure DA: source event_time cannot be caller-refreshed beyond its original publication bytes"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R03",
+      "requirement": "只能引用验证且用途准入的SnapshotManifest",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C01",
+        "C02",
+        "C04",
+        "C06"
+      ],
+      "baseline_evidence": [
+        "docs/closure/boundary-inspection.json"
+      ],
+      "required_acceptance_test": "只接受由可信facade发出的purpose/version/hash绑定receipt；caller篡改或用途升格拒绝",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "Closure DA: original OBSERVED/RECONSTRUCTED freeze counterexample is rejected at admission",
+        "Closure DA: authority and constructor approved hashes cannot be discovered or widened",
+        "Closure DA: receipt is bound to snapshot, namespace, purpose, version and trust root"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R04",
+      "requirement": "Card输入可追踪source/raw/hash/time/version",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C04",
+        "C05"
+      ],
+      "baseline_evidence": [
+        "src/p1a/replay.mjs",
+        "docs/experiments/P1A-results.json"
+      ],
+      "required_acceptance_test": "snapshot→packet→非交易draft每一输入都能读回闭包；改变上游使旧输入失效",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "Closure DA: deterministic admitted fixture exports only a sanitized signed 1.1 packet",
+        "R01-R12 closure: actual isolated manual roundtrip repeats exact identities; zero execution writes"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R05",
+      "requirement": "研究输出不能直接产生订单",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C08"
+      ],
+      "baseline_evidence": [
+        "src/baseline/gates.mjs",
+        "src/paper/index.mjs"
+      ],
+      "required_acceptance_test": "模型返回BUY/OrderIntent/APPROVE，orders/fills/真实approval writes均0；合法回包仅非交易draft",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "closure untrusted LLM BUY/APPROVE/HUMAN/OrderIntent and arbitrary payload cannot write execution objects",
+        "closure Draft cannot transition into Candidate/Signal/Approval/OrderIntent/Order/Fill"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R06",
+      "requirement": "LLM approval不是人工批准",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C08"
+      ],
+      "baseline_evidence": [
+        "tests/gates.test.mjs",
+        "tests/contracts.test.mjs"
+      ],
+      "required_acceptance_test": "LLM自报actor HUMAN或两approval hash不能制造真实authority/订单",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "closure untrusted LLM BUY/APPROVE/HUMAN/OrderIntent and arbitrary payload cannot write execution objects",
+        "R05 R06 R08 R09 R10: hostile model returns and missing Cost do not write any execution state"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R07",
+      "requirement": "CORE/EVENT/RESEARCH namespace隔离",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C05"
+      ],
+      "baseline_evidence": [
+        "tests/contracts.test.mjs",
+        "tests/p1a-paper.test.mjs"
+      ],
+      "required_acceptance_test": "跨namespace输出/已有Card/Feature refs拒绝；RESEARCH不得产生signal/order，EVENT仅placeholder",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "closure result namespace/purpose/version/evidence crossover and future/path/secret descriptions are refused",
+        "Closure DA: receipt is bound to snapshot, namespace, purpose, version and trust root"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R08",
+      "requirement": "Cost Engine在Candidate admission前运行",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C07"
+      ],
+      "baseline_evidence": [
+        "src/cost/index.mjs",
+        "contracts/v1/CandidateEligibility.schema.json"
+      ],
+      "required_acceptance_test": "事件/调用序列证明cost先于eligibility，缺cost_ref或无policy cannot tradeable",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "closure import uses actual cost before account suitability and deterministically produces NON_TRADEABLE only"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R09",
+      "requirement": "费用未知不能声称适合真实账户",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C07",
+        "C32",
+        "C33",
+        "C35"
+      ],
+      "baseline_evidence": [
+        "config/p1a/unset-required.inventory.json"
+      ],
+      "required_acceptance_test": "UNKNOWN费用/本金输出真实适用性=BLOCKED，grade/sizing不能由fixture补齐；模型肯定句也被拒绝/隔离",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "closure caller real-account verification assertions cannot promote fixture suitability",
+        "closure missing/unknown/real cost cannot reach suitability and fake cost_ref cannot replace Cost Engine"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R10",
+      "requirement": "productionGate保持false",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C08",
+        "C38"
+      ],
+      "baseline_evidence": [
+        "docs/closure/boundary-inspection.json",
+        "tests/p1a-production-lock.test.mjs"
+      ],
+      "required_acceptance_test": "新Closure代码/真实值自报/NaN/null/fixture升级均false，旧baseline同样false",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "P1-A cannot weaken accepted P0 production/approval gate bytes",
+        "Even self-declared fully configured verification cannot enable P0 production"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R11",
+      "requirement": "Broker transport不存在或硬禁用",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C08",
+        "C37",
+        "C39"
+      ],
+      "baseline_evidence": [
+        "docs/closure/evidence-verification.json",
+        "src/paper/index.mjs"
+      ],
+      "required_acceptance_test": "新candidate不引入submit transport/credentials/LLM订单能力，broker操作全部拒绝",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "closure actual isolated MANUAL_EXPORT roundtrip blocks raw/DB/credentials/repo/network/exec in native OS and Node layers",
+        "closure untrusted LLM BUY/APPROVE/HUMAN/OrderIntent and arbitrary payload cannot write execution objects"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "R12",
+      "requirement": "纯MANUAL_EXPORT/PAPER可工作",
+      "current_result": "PASS",
+      "why": "Final clean tests + NEW independent 22 attacks; approved scope only",
+      "conditions": [
+        "C01",
+        "C04",
+        "C08",
+        "C09"
+      ],
+      "baseline_evidence": [
+        "docs/P1A-Gate-Review.md",
+        "contracts/v1/BrainPacket.schema.json"
+      ],
+      "required_acceptance_test": "隔离手动文件往返可重复验证，仅允许批准scope；不调用研究模型、不启动真实交易",
+      "new_consumer_test_run": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "status": "PASS",
+      "run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+      "evidence_tests": [
+        "R01-R12 closure: actual isolated manual roundtrip repeats exact identities; zero execution writes",
+        "closure import uses actual cost before account suitability and deterministically produces NON_TRADEABLE only"
+      ],
+      "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    }
+  ],
+  "counts": {
+    "PASS": 12,
+    "FAIL": 0
+  },
+  "criteria_to_open": "All 12 requirements PASS for an explicitly approved scope AND all MUST_CLOSE_BEFORE_P1B closed AND explicit APPROVE_P1B. Existing real captured sources remain blocked.",
+  "future_real_research_gate": "BLOCKED_UNTIL_EACH_CONSUMED_SOURCE_LICENSE_CLOCK_COVERAGE_ADMITTED",
+  "real_data_admission_gate": "BLOCKED",
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc"
+}

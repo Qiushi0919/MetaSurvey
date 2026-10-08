@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "baseline_files": 616,
+  "immutable_files": 613,
+  "unchanged_immutable_files": 613,
+  "navigation_exceptions": [
+    "AGENTS.md",
+    "README.md",
+    "docs/source-of-truth.json"
+  ],
+  "release_pins": 27,
+  "predecessor_gate_owner_literal": "PENDING_UNCHANGED",
+  "current_owner_Wave_D_acceptance": "ACCEPT_WITH_CONDITIONS",
+  "no_migrations": true,
+  "schema_version": 6,
+  "prior_failures_preserved": true,
+  "productionGate": false
+}

@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "new_authenticated_calls": 0,
+  "credential_lookups": 0,
+  "new_public_GETs": 0,
+  "reused_public_evidence": "FROZEN_WAVE_E_DOCUMENTS; public docs are not account entitlement",
+  "new_data_downloads": 0,
+  "new_model_cloud_broker_calls": 0,
+  "actual_snapshot_b": false,
+  "actual_forward_sessions": 0,
+  "scheduling_created": false,
+  "strategy_optimization": false,
+  "security_expansion": false,
+  "source_admission_promotion": false,
+  "legacy_mutation": false,
+  "productionGate": false
+}

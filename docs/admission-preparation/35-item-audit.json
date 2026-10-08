@@ -1,0 +1,375 @@
+{
+  "version": "1.0.0",
+  "as_of": "2026-10-05T11:35:57.597317+00:00",
+  "scope": "LATEST_STATE_AUDIT_NOT_REDO_OF_P1B0_AND_NOT_FULL_NEW_W4",
+  "baseline_commit": "1fffea964ad3fed5c47d7955b9121b31f8ceff74",
+  "items": [
+    {
+      "id": "01",
+      "subject": "Current commit / tag / source-tree hash",
+      "status": "PASS_FROZEN_BASELINE",
+      "finding": "Runtime baseline 1fffea9; code 42197c9; p1b-data-semantics-20261005 intact. Preparation delivery commit/tag are recorded after commit in external delivery-checkpoint.json; no self-referential commit hash.",
+      "evidence": [
+        "preconditions.json",
+        "preservation.json",
+        "../p1b/Gate.json"
+      ]
+    },
+    {
+      "id": "02",
+      "subject": "Frozen contract/release matrix",
+      "status": "PASS_UNCHANGED",
+      "finding": "P0/P1A/Closure/P1B immutable releases and 140+34 pins preserved; P1B release1.3.0/schema6. Two proposal-only contracts1.0.0 are outside runtime release, not an admission service.",
+      "evidence": [
+        "../../contracts/release.p1b.json",
+        "../p1b/contract-matrix.json",
+        "Contract-Fit-Analysis.md"
+      ]
+    },
+    {
+      "id": "03",
+      "subject": "Contract Fit Analysis",
+      "status": "PASS_PREPARATION",
+      "finding": "Existing calendar adapter cannot expand to stock/financial clocks. New proposals do not modify frozen contracts.",
+      "evidence": [
+        "Contract-Fit-Analysis.md"
+      ]
+    },
+    {
+      "id": "04",
+      "subject": "Research semantics specification",
+      "status": "PASS_SYNTHETIC_BASELINE_ONLY",
+      "finding": "Existing semantics are retained; this phase adds no real research producer or grades.",
+      "evidence": [
+        "../p1b/Semantics-and-Evidence.md"
+      ]
+    },
+    {
+      "id": "05",
+      "subject": "Ten-dimension matrix",
+      "status": "PASS_SYNTHETIC_BASELINE_ONLY",
+      "finding": "Ten independent dimensions already exist; no collapsed score and no real suitability.",
+      "evidence": [
+        "../p1b/Semantics-and-Evidence.md",
+        "../../p1b/config/semantics.v1.json"
+      ]
+    },
+    {
+      "id": "06",
+      "subject": "Quality-vs-Timing proof",
+      "status": "PASS_ACTUAL_SYNTHETIC_REGRESSION",
+      "finding": "Current full check reruns quality-high/timing-gap and unchanged timing cannot auto A→S.",
+      "evidence": [
+        "validation.json",
+        "../../p1b/tests/semantics.test.mjs"
+      ]
+    },
+    {
+      "id": "07",
+      "subject": "S/A/B/C/X exact semantics",
+      "status": "PASS_SYNTHETIC_BASELINE_ONLY",
+      "finding": "Existing S template only REQUEST_REVIEW; A WATCH, B NO_ACTIVE_TRADE, C RESEARCH_ONLY, X BLOCKED. No true stock grade.",
+      "evidence": [
+        "../p1b/Semantics-and-Evidence.md",
+        "../../p1b/src/semantics.mjs"
+      ]
+    },
+    {
+      "id": "08",
+      "subject": "Hard Block registry",
+      "status": "PARTIAL_SEMANTIC_REGISTRY_ONLY",
+      "finding": "Existing fixture Hard Block precedence/reasons pass. No real fact resolution, full stock registry or risk rules silently finalized.",
+      "evidence": [
+        "../../p1b/config/semantics.v1.json",
+        "../../contracts/reason-codes.p1b.json",
+        "../p1b/conditions.json"
+      ]
+    },
+    {
+      "id": "09",
+      "subject": "Probability/calibration status",
+      "status": "BLOCKED_UNCALIBRATED",
+      "finding": "Probability remains UNSET_REQUIRED/uncalibrated; no score→probability, OOS or real return claim.",
+      "evidence": [
+        "../../contracts/p1b/ResearchAssessment.schema.json",
+        "../p1b/conditions.json"
+      ]
+    },
+    {
+      "id": "10",
+      "subject": "Evidence trust classes",
+      "status": "PASS_BASELINE_WITH_SCOPE_LIMIT",
+      "finding": "Pending cloud lead and verified local source facts remain distinct. Only historical exact calendar local reference has actual previous admission evidence.",
+      "evidence": [
+        "../p1b/Semantics-and-Evidence.md",
+        "../p1b/real-reference-results.json"
+      ]
+    },
+    {
+      "id": "11",
+      "subject": "Cloud-discovered evidence workflow",
+      "status": "PARTIAL_STOCK_RESOLUTION_BLOCKED",
+      "finding": "Frozen pending lead workflow and bounded calendar source-fact resolution exist; citation never grants stock/cloud rights or clears Hard Block.",
+      "evidence": [
+        "../../p1b/src/evidence.mjs",
+        "../../p1b/src/evidence-adapter.mjs",
+        "Data-Requirements.md"
+      ]
+    },
+    {
+      "id": "12",
+      "subject": "ResearchAssessment / ResearchCard relationship",
+      "status": "PARTIAL_FULL_LINK_MISSING",
+      "finding": "ResearchAssessment is pure synthetic; research_card_ref currently null. No producer/compatibility adapter connecting Draft→Assessment→Card version chain.",
+      "evidence": [
+        "../p1b/Contract-Fit-Analysis.md",
+        "../../p1b/src/semantics.mjs",
+        "../../contracts/p1b/ResearchAssessment.schema.json"
+      ]
+    },
+    {
+      "id": "13",
+      "subject": "BrainPacket / ResearchDraft E2E",
+      "status": "PARTIAL_FULL_NEW_RESEARCH_E2E_MISSING",
+      "finding": "Closure fixture MANUAL_EXPORT→NON_TRADEABLE Draft actual E2E exists. New full BrainPacket→Draft→Assessment→Card chain and linked replay do not exist.",
+      "evidence": [
+        "../closure-implementation/E2E-results.json",
+        "validation.json"
+      ]
+    },
+    {
+      "id": "14",
+      "subject": "MANUAL_EXPORT isolation proof",
+      "status": "PASS_FIXTURE_NOT_REAL_SOURCE_RIGHTS",
+      "finding": "Closure sanitization/capability isolation rerun. Calendar local packet denies MANUAL_EXPORT/model; proposed stock cloud rights UNSET, manual copying is not permission.",
+      "evidence": [
+        "validation.json",
+        "../../tests/closure-admission.test.mjs",
+        "slice-observed.proposal.json"
+      ]
+    },
+    {
+      "id": "15",
+      "subject": "Source inventory",
+      "status": "PASS_DOCUMENTED_AS_OF_ONLY",
+      "finding": "Prior actual inventory 16 entries preserved at Oct5 10:22:08Z; no new DB crawl. Five provider paths compared without market data acquisition.",
+      "evidence": [
+        "../p1b/source-inventory.json",
+        "provider-evidence.json"
+      ]
+    },
+    {
+      "id": "16",
+      "subject": "License / Purpose matrix",
+      "status": "PASS_PREPARATION_STOCK_RIGHTS_BLOCKED",
+      "finding": "9 actual public document captures; provider directory/terms are not owner entitlement. Three research purposes UNSET, redistribution DENIED.",
+      "evidence": [
+        "Source-Comparison.md",
+        "provider-evidence.json",
+        "public-document-captures.json"
+      ]
+    },
+    {
+      "id": "17",
+      "subject": "PIT clock matrix",
+      "status": "PASS_PROPOSAL_SHAPE_ONLY_RUNTIME_BLOCKED",
+      "finding": "Observation/business/publication/available/retrieved separated in proposal. DATE_ONLY not midnight; no chronology/source proof in new schema. Historical visibility false.",
+      "evidence": [
+        "Data-Requirements.md",
+        "proposal-validation.json",
+        "../../contracts/admission-preparation/ClockEvidenceProposal.schema.json"
+      ]
+    },
+    {
+      "id": "18",
+      "subject": "Coverage matrix",
+      "status": "BLOCKED_REAL_COVERAGE_UNSET",
+      "finding": "CORE-only proposal; symbols/from/to/cutoff UNSET. Eight required classes BLOCKED. Zero-symbol calendar proof does not cover stocks.",
+      "evidence": [
+        "Data-Requirements.md",
+        "slice-observed.proposal.json",
+        "slice-historical.proposal.json"
+      ]
+    },
+    {
+      "id": "19",
+      "subject": "Data admission matrix",
+      "status": "BLOCKED_ALL_NEW_STOCK_CLASSES",
+      "finding": "Eight proposed classes remain BLOCKED; no Snapshot, Policy, Receipt or model-use grant created.",
+      "evidence": [
+        "Data-Requirements.md",
+        "provider-evidence.json"
+      ]
+    },
+    {
+      "id": "20",
+      "subject": "Cost-before-Candidate proof",
+      "status": "PASS_CLOSURE_REGRESSION_REAL_CANDIDATE_BLOCKED",
+      "finding": "Actual Closure import verifies bound cost before suitability and outputs NON_TRADEABLE. New stock Candidate producer absent.",
+      "evidence": [
+        "validation.json",
+        "../../tests/closure-platform.test.mjs"
+      ]
+    },
+    {
+      "id": "21",
+      "subject": "Account/Cost UNSET blocking proof",
+      "status": "PASS_REGRESSION_NO_REAL_PARAMETER_SET",
+      "finding": "Existing unknown-config production rejection rerun; original30 fields unchanged. Synthetic fees/capital not promoted.",
+      "evidence": [
+        "validation.json",
+        "../closure-implementation/unset-required.json",
+        "../../config/account-profile.unconfigured.v1.json"
+      ]
+    },
+    {
+      "id": "22",
+      "subject": "Outcome leakage tests",
+      "status": "PASS_EXISTING_KERNEL_REGRESSION_NEW_PRODUCER_UNTESTED",
+      "finding": "Current check reruns hidden outcome/MAE/MFE, future financial revision and action/factor attacks. No new real source adapter or full research producer to validate.",
+      "evidence": [
+        "validation.json",
+        "../p1b/golden-test-matrix.json"
+      ]
+    },
+    {
+      "id": "23",
+      "subject": "Namespace isolation tests",
+      "status": "PASS_EXISTING_REGRESSION_AND_PROPOSAL_SHAPE",
+      "finding": "Current old tests pass; proposal rejects EVENT_3. CORE_40/EVENT_3/RESEARCH_6_18M not merged; V5 remains legacy.",
+      "evidence": [
+        "validation.json",
+        "proposal-validation.json"
+      ]
+    },
+    {
+      "id": "24",
+      "subject": "Deterministic replay results",
+      "status": "PARTIAL_FULL_NEW_RESEARCH_REPLAY_MISSING",
+      "finding": "Current baseline tests actually replay fixture admission/import and bounded calendar identity. Old economic/E2E reports preserved. No linked Draft→Assessment→Card replay claimed.",
+      "evidence": [
+        "validation.json",
+        "../p1b/real-reference-results.json",
+        "../closure-implementation/E2E-results.json"
+      ]
+    },
+    {
+      "id": "25",
+      "subject": "Golden regression results",
+      "status": "PASS_ACTUAL_CURRENT_RUN",
+      "finding": "300 tests =299PASS/0FAIL/1optional external V5 SKIP;25 historical invariant classes rerun. New proposal17 checks separately labelled structure only.",
+      "evidence": [
+        "validation.json",
+        "proposal-validation.json"
+      ]
+    },
+    {
+      "id": "26",
+      "subject": "Independent Reviewer findings",
+      "status": "PASS_WITH_CONDITIONS_PREPARATION_ONLY",
+      "finding": "Fresh read-only independent review of proposal/capture/pin/evidence boundaries; not a full business W4 or real data admission audit.",
+      "evidence": [
+        "independent-review.md",
+        "independent-review.json"
+      ]
+    },
+    {
+      "id": "27",
+      "subject": "Remaining C12-C22 status",
+      "status": "PARTIAL_OR_BLOCKED_UNCHANGED",
+      "finding": "Old condition file preserved. New documentation/clock shapes close no real-data, policy, producer, calibration or industry condition.",
+      "evidence": [
+        "../p1b/conditions.json",
+        "Data-Requirements.md"
+      ]
+    },
+    {
+      "id": "28",
+      "subject": "Remaining technical debt",
+      "status": "PARTIAL_OPEN",
+      "finding": "Full fixture chain/Card compatibility; real adapters/clocks/coverage/rights; persistent authority/revocation; PostgreSQL multi-process/RBAC/backup/crash before production.",
+      "evidence": [
+        "Source-Preparation-Review.md",
+        "Data-Requirements.md"
+      ]
+    },
+    {
+      "id": "29",
+      "subject": "REAL_DATA_ADMISSION_GATE status",
+      "status": "BLOCKED_STOCK_GLOBAL",
+      "finding": "No new admitted source. Historical exact local calendar evidence remains unchanged; not a live receipt or global PASS.",
+      "evidence": [
+        "../p1b/Gate.json",
+        "provider-evidence.json"
+      ]
+    },
+    {
+      "id": "30",
+      "subject": "productionGate status",
+      "status": "PASS_FALSE_BLOCKED",
+      "finding": "productionGate=false; no broker, credentials or production capability created.",
+      "evidence": [
+        "../../contracts/release.p1b.json",
+        "../closure-implementation/unset-required.json"
+      ]
+    },
+    {
+      "id": "31",
+      "subject": "remaining UNSET_REQUIRED inventory",
+      "status": "PASS_PRESERVED_UNKNOWN",
+      "finding": "Original account30 plus actual stock provider/rights/symbols/window/cutoff/clock/coverage UNSET. Real risk/fees/capital not needed for preparation.",
+      "evidence": [
+        "../closure-implementation/unset-required.json",
+        "slice-observed.proposal.json",
+        "slice-historical.proposal.json"
+      ]
+    },
+    {
+      "id": "32",
+      "subject": "whether REAL STOCK RESEARCH is ready",
+      "status": "BLOCKED",
+      "finding": "No licensed/PIT/covered stock slice or real producer; no research call/Card/grade.",
+      "evidence": [
+        "Data-Requirements.md",
+        "../p1b/conditions.json"
+      ]
+    },
+    {
+      "id": "33",
+      "subject": "whether Research Pilot is ready",
+      "status": "BLOCKED",
+      "finding": "Not authorized; even future owner route choice cannot replace source proof or APPROVE_P1B_RESEARCH_PILOT.",
+      "evidence": [
+        "W1-Preparation-Freeze.md",
+        "Source-Preparation-Review.md"
+      ]
+    },
+    {
+      "id": "34",
+      "subject": "whether any path can produce Signal/Order",
+      "status": "BLOCKED_REAL_RESEARCH_PATH",
+      "finding": "New preparation creates neither path; Draft/assessment cannot order. Existing synthetic/PAPER kernel is retained, so not falsely claiming no fixture order path anywhere.",
+      "evidence": [
+        "validation.json",
+        "../../contracts/p1b/ResearchAssessment.schema.json",
+        "Source-Preparation-Review.md"
+      ]
+    },
+    {
+      "id": "35",
+      "subject": "Recommendation for next Gate",
+      "status": "OWNER_DECISION_REQUIRED",
+      "finding": "Review source/product/use evidence, choose bounded observed or historical slice and clock proposal; then separately authorize finite adapter/admission evidence engineering. Pilot remains a later gate.",
+      "evidence": [
+        "Source-Comparison.md",
+        "Data-Requirements.md",
+        "Source-Preparation-Review.md"
+      ]
+    }
+  ],
+  "all_35_complete_pass_claim": false,
+  "test_count_is_strategy_validity": false,
+  "real_stock_research": false,
+  "research_pilot": false,
+  "productionGate": false
+}

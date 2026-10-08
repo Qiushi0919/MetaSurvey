@@ -1,0 +1,293 @@
+{
+  "run_id": "P1B-SCHEMA-2026-10-05T10:35:54.286Z",
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "schema_version": 6,
+  "engine": "temporary in-memory PGlite; no external/live/legacy DB connection",
+  "first": {
+    "schemaVersion": 6,
+    "applied": [
+      "001_schema_v1.sql",
+      "002_contract_registry.sql",
+      "003_p1a_data.sql",
+      "004_p1a_paper.sql",
+      "005_p1a_replay_audit.sql",
+      "006_closure_admission.sql"
+    ],
+    "verified": []
+  },
+  "second": {
+    "schemaVersion": 6,
+    "applied": [],
+    "verified": [
+      "001_schema_v1.sql",
+      "002_contract_registry.sql",
+      "003_p1a_data.sql",
+      "004_p1a_paper.sql",
+      "005_p1a_replay_audit.sql",
+      "006_closure_admission.sql"
+    ]
+  },
+  "tables": [
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "audit"
+    },
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "policies"
+    },
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "receipts"
+    },
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "revocations"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "accounts"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "fills"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "ledger"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "lot_reservations"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "lots"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "orders"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "requests"
+    },
+    {
+      "schemaname": "p1a_replay",
+      "tablename": "audit"
+    },
+    {
+      "schemaname": "p1a_replay",
+      "tablename": "results"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "account_profiles"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "account_snapshots"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "accounts"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "adjustment_actions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "adjustment_versions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "announcements"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "approvals"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "audit_log"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "backtest_runs"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bars_1d"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bars_1m"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "brain_packets"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "brain_reviews"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "candidate_eligibility"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "card_evidence"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "config_versions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "contract_records"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "corp_actions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "cost_estimates"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "data_sources"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "features_eod"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "fills_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "fills_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "financials"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ledger_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ledger_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "legacy_asset_registry"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "news_events"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "order_claims_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "order_claims_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "order_drafts"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "orderbook_l2"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "orders_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "orders_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_audit"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_objects"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_raw"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_staging"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "positions_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "positions_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "research_cards"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "research_evidence"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "schema_migrations"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "sector_membership"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "securities"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "security_master"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "signal_events"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "snapshot_entries"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "snapshot_manifests"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "staging_imports"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "strategy_metrics"
+    }
+  ],
+  "table_count": 64,
+  "new_p1b_migration": false,
+  "new_real_execution_table": false,
+  "p1b_admission_store": "PRIVATE_PROCESS_MEMORY_ONLY"
+}

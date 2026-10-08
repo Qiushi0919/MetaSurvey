@@ -1,0 +1,42 @@
+{
+  "run_id": "SOURCE-PREPARATION-CHECK-2026-10-05T11:35:57.597317+00:00",
+  "checked_at": "2026-10-05T11:35:57.597317+00:00",
+  "runtime_baseline_commit": "1fffea964ad3fed5c47d7955b9121b31f8ceff74",
+  "runtime_changed": false,
+  "baseline_regression": {
+    "command": "node p1b/scripts/check.mjs",
+    "exit_code": 0,
+    "execution": "ACTUALLY_RUN_IN_CURRENT_CHECKOUT_WITH_EXISTING_LOCKED_DEPENDENCIES",
+    "fresh_clean_install_claim": false,
+    "counts": {
+      "tests": 300,
+      "pass": 299,
+      "fail": 0,
+      "skipped": 1
+    },
+    "log_path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/current-full-check.log",
+    "log_sha256": "sha256:834311b55ca7873d0bdcf72d51341acf6c2550879e21a962ed0f175f6459542c",
+    "skip": "Only optional external read-only V5 replay; portable 14-day ledger baseline PASS. No V5 restored/executed.",
+    "old_golden_invariants": 25,
+    "closure_source_files": 140,
+    "p1b_source_files": 34
+  },
+  "new_preparation_check": {
+    "command": "node tools/admission-preparation/check-proposals.mjs --output=<external-new-file> --capture-dir=<external-public-documents>",
+    "counts": {
+      "cases": 17,
+      "pass": 17,
+      "fail": 0
+    },
+    "compiled_schemas": 2,
+    "original_docs_verified": 9,
+    "scope": "PROPOSAL_SHAPE_ONLY_NOT_PIT_FACTS_OR_REAL_DATA_ADMISSION",
+    "checker_sha256": "sha256:2bafac725d02581deb89f08514acbf416c89a933ef3e5cd813af53c9a840c3b6",
+    "report_path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/portable-proposal-validation-final.json",
+    "report_sha256": "sha256:bec8f2a7bceac3008b72ebe1b4fb7883cebae7acb56470e0fdf33d2767ce547b"
+  },
+  "real_source_admission_created": false,
+  "live_market_rows_downloaded": 0,
+  "productionGate": false,
+  "new_business_pipeline_w4_claim": false
+}

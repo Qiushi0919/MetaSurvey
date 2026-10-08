@@ -1,0 +1,206 @@
+{
+  "contract_version": "1.0.0",
+  "schema_version": 2,
+  "gate_status": "AWAITING_P0_GATE_REVIEW",
+  "business_rules_inferred": false,
+  "contracts": [
+    {
+      "name": "AccountProfile",
+      "version": "1.0.0",
+      "path": "contracts/v1/AccountProfile.schema.json"
+    },
+    {
+      "name": "Approval",
+      "version": "1.0.0",
+      "path": "contracts/v1/Approval.schema.json"
+    },
+    {
+      "name": "AuditEvent",
+      "version": "1.0.0",
+      "path": "contracts/v1/AuditEvent.schema.json"
+    },
+    {
+      "name": "BacktestResult",
+      "version": "1.0.0",
+      "path": "contracts/v1/BacktestResult.schema.json"
+    },
+    {
+      "name": "BrainPacket",
+      "version": "1.0.0",
+      "path": "contracts/v1/BrainPacket.schema.json"
+    },
+    {
+      "name": "CandidateEligibility",
+      "version": "1.0.0",
+      "path": "contracts/v1/CandidateEligibility.schema.json"
+    },
+    {
+      "name": "CostEstimate",
+      "version": "1.0.0",
+      "path": "contracts/v1/CostEstimate.schema.json"
+    },
+    {
+      "name": "DataEnvelope",
+      "version": "1.0.0",
+      "path": "contracts/v1/DataEnvelope.schema.json"
+    },
+    {
+      "name": "FeatureSet",
+      "version": "1.0.0",
+      "path": "contracts/v1/FeatureSet.schema.json"
+    },
+    {
+      "name": "Fill",
+      "version": "1.0.0",
+      "path": "contracts/v1/Fill.schema.json"
+    },
+    {
+      "name": "LedgerEntry",
+      "version": "1.0.0",
+      "path": "contracts/v1/LedgerEntry.schema.json"
+    },
+    {
+      "name": "OrderIntent",
+      "version": "1.0.0",
+      "path": "contracts/v1/OrderIntent.schema.json"
+    },
+    {
+      "name": "ResearchCard",
+      "version": "1.0.0",
+      "path": "contracts/v1/ResearchCard.schema.json"
+    },
+    {
+      "name": "SecurityIdentity",
+      "version": "1.0.0",
+      "path": "contracts/v1/SecurityIdentity.schema.json"
+    },
+    {
+      "name": "SignalEvent",
+      "version": "1.0.0",
+      "path": "contracts/v1/SignalEvent.schema.json"
+    },
+    {
+      "name": "SnapshotManifest",
+      "version": "1.0.0",
+      "path": "contracts/v1/SnapshotManifest.schema.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "contracts/v1/AccountProfile.schema.json",
+      "sha256": "sha256:039296fae33ad694bd77c35c8c2774b2741f9cd0a03082dd6c83f1fa874ded1a"
+    },
+    {
+      "path": "contracts/v1/Approval.schema.json",
+      "sha256": "sha256:55ca29a826bbf29b5d074619edc8a9e6dae8c4bd63b5e26f6864fd2e031df56e"
+    },
+    {
+      "path": "contracts/v1/AuditEvent.schema.json",
+      "sha256": "sha256:2ae7f67344be7c1c6f45d83b7445d65120cd4c48bc03dfa54c509399fb38031d"
+    },
+    {
+      "path": "contracts/v1/BacktestResult.schema.json",
+      "sha256": "sha256:d1eb254faa802d28be328272dc323d03f67a0a6f807aaf2626f520f0cc887688"
+    },
+    {
+      "path": "contracts/v1/BrainPacket.schema.json",
+      "sha256": "sha256:f57359752088bc9788840f96711c7dfca4b598ff1d1ee88e07808ea93b3eedc0"
+    },
+    {
+      "path": "contracts/v1/CandidateEligibility.schema.json",
+      "sha256": "sha256:f0699554418579367d14d1ac16c40cc16fe033ac2fb76c9217dce850657e474a"
+    },
+    {
+      "path": "contracts/v1/CostEstimate.schema.json",
+      "sha256": "sha256:aca2e56876ecaa5a381f00e352c124ade1f416afbff7e37fb14511b6e3a3564b"
+    },
+    {
+      "path": "contracts/v1/DataEnvelope.schema.json",
+      "sha256": "sha256:45bb7495479ea41e4b796f91bb299c97ca03442a1c5228f28489addc90990760"
+    },
+    {
+      "path": "contracts/v1/FeatureSet.schema.json",
+      "sha256": "sha256:e3792a384b61d88cdce9c02fe119687a56c10f1207fefd24e9ac10dca7dc5831"
+    },
+    {
+      "path": "contracts/v1/Fill.schema.json",
+      "sha256": "sha256:803eefa1372ff7bba5f8ca6ada3cff61401cb7791a2cb85917e55554e07337b3"
+    },
+    {
+      "path": "contracts/v1/LedgerEntry.schema.json",
+      "sha256": "sha256:7dc318676c984f3ea45531651dccde5cfa4a8d71246edc84fec78ef95de8aeb5"
+    },
+    {
+      "path": "contracts/v1/OrderIntent.schema.json",
+      "sha256": "sha256:4e2c22852f5dda94cc06c66e6e50d5f5e39410960669546e4072d920beeee683"
+    },
+    {
+      "path": "contracts/v1/ResearchCard.schema.json",
+      "sha256": "sha256:efa9422bc5f79a7b81b9758df703a025dc9682297000648d37eb468bb0df56c5"
+    },
+    {
+      "path": "contracts/v1/SecurityIdentity.schema.json",
+      "sha256": "sha256:76d497ead91b8970009ee4f6abeb8b5273846e6c0db030b3736efcfad3aa4c15"
+    },
+    {
+      "path": "contracts/v1/SignalEvent.schema.json",
+      "sha256": "sha256:a5da23d5f59c8cf7a02ef1cfb4ffc243a04c0e4468006b61529f7ffada639470"
+    },
+    {
+      "path": "contracts/v1/SnapshotManifest.schema.json",
+      "sha256": "sha256:72e701091ca06095a564bc13151abd5e45d67eaa6482c6788748ddd277147e91"
+    },
+    {
+      "path": "contracts/v1/common.schema.json",
+      "sha256": "sha256:36605dc6b4090fc4d92f87cbafaf16ea0f5fb5756f0706c57be1ba5ff21f3de6"
+    },
+    {
+      "path": "contracts/reason-codes.v1.json",
+      "sha256": "sha256:bd58e1e8776f9775ae0a4828cded6ff5b1545bd71f835bef507b2c757076c51a"
+    },
+    {
+      "path": "contracts/persistence-mapping.v1.json",
+      "sha256": "sha256:b7125a0a598ec83e72cc4c2f0a7449ae6a67a80606a48db0a744c7df72751d50"
+    },
+    {
+      "path": "scripts/generate-contracts.mjs",
+      "sha256": "sha256:cd1927b13d01cd301001aa5f00fd37fa6ff3c2f0020d738f702912114b3ca524"
+    },
+    {
+      "path": "src/contracts/validate.mjs",
+      "sha256": "sha256:db2c1325ead728ffb6aa82b03ef9e8daac8024bd39387f9ef864c3e36e5e3bd6"
+    },
+    {
+      "path": "src/baseline/gates.mjs",
+      "sha256": "sha256:cfbcc3094d351f0a0572ca9ff7818469fcc30219b6b8c5f11e1d88de325985f4"
+    },
+    {
+      "path": "src/baseline/economics.mjs",
+      "sha256": "sha256:028151e0dd73f654a1246c4aa4e55cca0454ef1a4e61717ef32c060d32cb0c86"
+    },
+    {
+      "path": "src/baseline/ledger.mjs",
+      "sha256": "sha256:51a05295e1c3a4d2db1916d01d47df9abf84c82c57eda46efa54736061e5ccd6"
+    },
+    {
+      "path": "src/baseline/migrate.mjs",
+      "sha256": "sha256:f448a734de132eceb8d0c921d904599d3ebb5f2dcd05a4fbc237648604fbd2cf"
+    },
+    {
+      "path": "src/baseline/staging.mjs",
+      "sha256": "sha256:b4446934cffb848c698c4819129d5a6bff99bd2dfe864820c116462aa7c59786"
+    },
+    {
+      "path": "config/account-profile.unconfigured.v1.json",
+      "sha256": "sha256:755f4ca81f06881c51343d0dd7f48a5d5112124c6eca1ba1366e33033013d201"
+    },
+    {
+      "path": "migrations/001_schema_v1.sql",
+      "sha256": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a"
+    },
+    {
+      "path": "migrations/002_contract_registry.sql",
+      "sha256": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84"
+    }
+  ]
+}

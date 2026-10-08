@@ -1,0 +1,435 @@
+{
+  "version": "1.0.0",
+  "reviewer": "FRESH_INDEPENDENT_READONLY_REVIEWER",
+  "engineering_review_gate": "PASS_WITH_CONDITIONS",
+  "candidate_initial_gate": "FAIL_TWO_DEFECTS_FIVE_ACCEPTANCES",
+  "candidate_code": "ba6cb20efb609757ce198cb52ac13fa23ca5139c",
+  "reviewed_final_code": "266a7083ce2c77c31917899ced458951661ddaed",
+  "source_tree_hash": "sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e",
+  "review_decision_cutoff": "2026-10-05T12:52:01.244Z",
+  "LOCAL_REAL_RESEARCH_GATE": "PARTIAL",
+  "CLOUD_RESEARCH_EXPORT_GATE": "BLOCKED",
+  "HISTORICAL_BACKTEST_GATE": "BLOCKED",
+  "PRODUCTION_DATA_GATE": "BLOCKED",
+  "RESEARCH_PILOT": "NOT_GRANTED",
+  "redistribution": "DENIED",
+  "counts": {
+    "base_suite": 41,
+    "independently_authored": 49,
+    "pure_clock_arithmetic": 10,
+    "total_executed_cases": 100,
+    "failures": 0,
+    "owner_threat_categories": 28
+  },
+  "findings": [
+    {
+      "id": "IR-001",
+      "severity": "P1",
+      "subject": "Replaceable method receiver admission bypass",
+      "final_status": "CLOSED_IN_REVIEWED_CODE",
+      "reproductions": [
+        {
+          "id": "packet_call_rebinding_cannot_mint_backdated_signed_packet",
+          "boundary": "INDEPENDENT_ACTUAL_LIVE_AUTHORITY",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_REF_INVALIDATED"
+        },
+        {
+          "id": "verifyPacket_call_rebinding_cannot_bypass_exact_usepoint",
+          "boundary": "INDEPENDENT_ACTUAL_LIVE_AUTHORITY",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_REF_INVALIDATED"
+        },
+        {
+          "id": "verifyPacket_receiver_rebinding_cannot_bypass_revocation",
+          "boundary": "INDEPENDENT_ACTUAL_LIVE_AUTHORITY",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_RECEIPT_REVOKED"
+        },
+        {
+          "id": "transfer_receiver_rebinding_cannot_return_raw_secret_payload",
+          "boundary": "INDEPENDENT_ACTUAL_LIVE_AUTHORITY",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_DQ_FAILED"
+        }
+      ]
+    },
+    {
+      "id": "IR-002",
+      "severity": "P2",
+      "subject": "Fractional precision truncation of Card TTL",
+      "final_status": "CLOSED_IN_REVIEWED_CODE",
+      "reproductions": [
+        {
+          "id": "fixture_TTL_plus_one_nanosecond",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        },
+        {
+          "id": "fixture_TTL_plus_one_millisecond",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        },
+        {
+          "id": "fixture_TTL_exact_expiry_is_valid",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_POSITIVE_CONTROL"
+        },
+        {
+          "id": "fixture_TTL_one_ns_before_expiry_is_valid",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_POSITIVE_CONTROL"
+        },
+        {
+          "id": "fixture_one_ns_before_decision_cutoff",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        },
+        {
+          "id": "fixture_rejects_invalid_timestamp_2026-02-30T12:00:00Z",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        },
+        {
+          "id": "fixture_rejects_invalid_timestamp_2026-10-05T24:00:00Z",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        },
+        {
+          "id": "fixture_rejects_invalid_timestamp_2026-10-05T12:00:00.1234567890Z",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        },
+        {
+          "id": "fixture_rejects_invalid_timestamp_2026-10-05T12:00:00+24:00",
+          "boundary": "NATIVE_SYNTHETIC_COMPOSITION",
+          "status": "PASS_FAIL_CLOSED",
+          "reason": "SLICE_CARD_INVALIDATED"
+        }
+      ]
+    }
+  ],
+  "owner_threat_matrix": [
+    {
+      "threat": "fake available_at",
+      "case_id": "fake_available_at",
+      "boundary": "DIRECT_CLOCK_AND_REAL_REGISTERED_BOUNDARY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "retrieved_at backdating",
+      "case_id": "retrieved_at_backdating",
+      "boundary": "ACTUAL_COLLECTOR_PRIVATE_REGISTRATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "DATE_ONLY midnight fabrication",
+      "case_id": "DATE_ONLY_midnight_fabrication",
+      "boundary": "DIRECT_CLOCK_AND_REAL_REGISTERED_BOUNDARY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "trade_date → available_at inference",
+      "case_id": "trade_date_to_available_at",
+      "boundary": "DIRECT_CLOCK_AND_REAL_REGISTERED_BOUNDARY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "provider update-window spoof",
+      "case_id": "provider_update_window_spoof",
+      "boundary": "DIRECT_CLOCK_AND_REAL_REGISTERED_BOUNDARY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "historical visibility escalation",
+      "case_id": "historical_visibility_escalation",
+      "boundary": "NO_HISTORICAL_PROOF_OR_UPGRADE",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "current-observed → historical-PIT escalation",
+      "case_id": "current_to_historical_PIT",
+      "boundary": "PURPOSE_MODE_GATE",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "HISTORICAL_VISIBILITY_UNPROVEN",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "synthetic → observed escalation",
+      "case_id": "synthetic_to_observed",
+      "boundary": "COLLECTOR_PRIVATE_BRAND",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_CAPTURE_UNTRUSTED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "source/product entitlement mismatch",
+      "case_id": "source_product_entitlement_mismatch",
+      "boundary": "EXACT_POLICY_REGISTRATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_POLICY_UNKNOWN",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "purpose escalation",
+      "case_id": "purpose_escalation",
+      "boundary": "PURPOSE_MODE_GATE",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_PERMISSION_DENIED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "local → cloud scope escalation",
+      "case_id": "local_to_cloud_escalation",
+      "boundary": "NO_CLOUD_TRANSFER",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_PERMISSION_DENIED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "coverage widening",
+      "case_id": "coverage_widening",
+      "boundary": "EXACT_POLICY_REGISTRATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_POLICY_UNKNOWN",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "symbol widening",
+      "case_id": "symbol_widening",
+      "boundary": "EXACT_SOURCE_REGISTRATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "date widening",
+      "case_id": "date_widening",
+      "boundary": "EXACT_SOURCE_REGISTRATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "namespace crossover",
+      "case_id": "namespace_crossover",
+      "boundary": "CORE_40_ONLY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_PERMISSION_DENIED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "raw byte mutation",
+      "case_id": "raw_byte_mutation",
+      "boundary": "ACTUAL_OWN_RAW_ORIGINAL_REVALIDATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_RAW_MUTATION",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "receipt reuse",
+      "case_id": "receipt_reuse_other_stock",
+      "boundary": "ACTUAL_ISSUER_SNAPSHOT_AND_USEPOINT_BINDING",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "receipt revocation",
+      "case_id": "receipt_revocation",
+      "boundary": "ACTUAL_ISSUER_REVOCATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_RECEIPT_REVOKED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "policy revocation",
+      "case_id": "policy_revocation",
+      "boundary": "ACTUAL_ISSUER_REVOCATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_POLICY_REVOKED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "source version mutation",
+      "case_id": "source_version_mutation",
+      "boundary": "EXACT_SOURCE_REGISTRATION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "corporate-action future leakage",
+      "case_id": "corporate_action_future_leakage",
+      "boundary": "UNSUPPORTED_REFERENCE_BOUNDARY_ONLY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "adjustment factor future leakage",
+      "case_id": "adjustment_factor_future_leakage",
+      "boundary": "UNSUPPORTED_REFERENCE_BOUNDARY_ONLY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "financial revision leakage",
+      "case_id": "financial_revision_leakage",
+      "boundary": "UNSUPPORTED_REFERENCE_BOUNDARY_ONLY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "industry current-label backfill",
+      "case_id": "industry_current_label_backfill",
+      "boundary": "UNSUPPORTED_REFERENCE_BOUNDARY_ONLY",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "announcement revision loss",
+      "case_id": "announcement_revision_loss",
+      "boundary": "REGISTERED_REFERENCE_DELETION_ONLY_NOT_FULL_REVISION_PARSER",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_REF_INVALIDATED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "raw/cloud payload leakage",
+      "case_id": "raw_cloud_payload_leakage",
+      "boundary": "STRICT_PROJECTION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "secret/token leakage",
+      "case_id": "secret_token_leakage",
+      "boundary": "SYNTHETIC_LEAK_ATTEMPT_NO_REAL_SECRET_LOOKUP",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    },
+    {
+      "threat": "future outcome leakage",
+      "case_id": "future_outcome_leakage",
+      "boundary": "STRICT_PROJECTION",
+      "status": "PASS_FAIL_CLOSED",
+      "reason_code": "SLICE_DQ_FAILED",
+      "real_market_financial_action_factor_industry_algorithm_certified": false
+    }
+  ],
+  "own_actual_originals": [
+    {
+      "id": "sse-terms",
+      "raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "signature": "VALID",
+      "byte_exact_after_review": true
+    },
+    {
+      "id": "sse-holiday",
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "signature": "VALID",
+      "byte_exact_after_review": true
+    },
+    {
+      "id": "sse-announcements-603993",
+      "raw_sha256": "sha256:17338562bc659bec549e65dcfe5890a548081be735c88c8b0c760e71d97f297f",
+      "signature": "VALID",
+      "byte_exact_after_review": true
+    },
+    {
+      "id": "sse-announcements-600312",
+      "raw_sha256": "sha256:637dbfa67533c258ae2f6c21ddedf2d27a53ca371d0c4ae13419599c54aa59d1",
+      "signature": "VALID",
+      "byte_exact_after_review": true
+    },
+    {
+      "id": "sse-announcements-603228",
+      "raw_sha256": "sha256:6346c4bf74263cf25bcdaeb5a92109022b2ba74a770220f78f7fc5d7a45aaf4c",
+      "signature": "VALID",
+      "byte_exact_after_review": true
+    }
+  ],
+  "observed_real_counts": {
+    "captured_originals": 5,
+    "admitted_source_identities": 2,
+    "admitted_products": 2,
+    "admitted_stock_reference_count": 3,
+    "stock_snapshot_count": 3,
+    "admission_receipt_count": 3,
+    "sanitized_local_brainpacket_count": 3,
+    "announcement_reference_count": 15,
+    "parsed_market_rows": 0,
+    "parsed_financial_rows": 0,
+    "model_calls": 0,
+    "broker_calls": 0,
+    "execution_writes": 0
+  },
+  "coverage": {
+    "SECURITY_STATUS": "BLOCKED",
+    "CALENDAR_RULES": "PARTIAL_FINITE_DATES_ONLY",
+    "RAW_BARS_1D": "BLOCKED",
+    "CORPORATE_ACTIONS": "BLOCKED",
+    "ADJUSTMENT_VERSIONS": "BLOCKED",
+    "FINANCIAL_REVISIONS": "BLOCKED",
+    "ANNOUNCEMENTS": "PARTIAL_FIVE_METADATA_REFERENCES_PER_STOCK",
+    "INDUSTRY_MEMBERSHIP": "BLOCKED"
+  },
+  "snapshot_A": "ACTUAL_2026_10_05_CLOSED_NO_PRICE_NO_TRIGGER_NO_TRADEABILITY",
+  "latest_trading_session": null,
+  "snapshot_B": "PENDING_ACTUAL_NEW_POST_HOLIDAY_DATA",
+  "synthetic_AB_proves_real_B": false,
+  "strict_native_ResearchCard": "1.0.0_NONEXECUTABLE_SYNTHETIC_IDENTITY_UNKNOWN_REAL_GRADE",
+  "semantics_role": "ILLUSTRATIVE_FIXED_COORDINATE_NOT_REAL_DERIVED_COMPANY_FACT",
+  "clock_scope": "ACTUAL_RETRIEVAL_FOR_CURRENT_OBSERVATION_ONLY",
+  "limits": [
+    "HOST_WALL_CLOCK_AND_HTTPS_ARE_DEV_TRUST_BOUNDARY",
+    "PROCESS_REGISTRY_AND_PRIVATE_SIGNER_NOT_DURABLE_AUTHORITY",
+    "OFFLINE_SIGNATURES_DO_NOT_RESTORE_LIVE_USE",
+    "NO_COMPLETE_320_SESSION_OR_12_QUARTER_HISTORY",
+    "NO_PDF_DOCUMENT_BODY_ADMITTED",
+    "NO_REAL_ACTION_FACTOR_FINANCIAL_INDUSTRY_DOMAIN_ALGORITHM_CERTIFIED",
+    "NO_REAL_STOCK_MODEL_RESEARCH_OR_CALIBRATION",
+    "NO_AUTOMATIC_C12_C22_CLOSURE"
+  ],
+  "evidence_files": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/real-stock-slice-20261005/independent-review/review-results-2026-10-05T125159272Z.json",
+      "sha256": "sha256:49594e250969dc9ce72981dbb1d4dd483e489e1301208e7d2bcd5bf8eaca6fab"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/real-stock-slice-20261005/independent-review/clock-arithmetic-results.json",
+      "sha256": "sha256:274ebf24bc3028b97c453c953d004ecf7953ac7dd140fe9818eff0eb4ca54cb0"
+    }
+  ],
+  "repo_writes_by_reviewer": 0,
+  "legacy_writes": 0,
+  "secrets_read": 0,
+  "model_calls": 0,
+  "broker_calls": 0,
+  "execution_writes": 0,
+  "stop_after_gate": true
+}

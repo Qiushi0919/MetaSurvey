@@ -1,0 +1,259 @@
+{
+  "entries": [
+    {
+      "actual_field_gaps": [
+        "clock() accepts invalid dates and normalizes malformed offsets while claiming source exactness (F02)",
+        "Limited consumer skips labels contains and complete clock type/precision semantics (F03)",
+        "Namespace/mode/security identity, full source and interval typing, reason/invalidation registries, provenance/clock-proof linkage still not a final shared contract"
+      ],
+      "final_shared_contract_approved": false,
+      "final_status": "HOLD_F02_F03_AND_DEFERRED_FIELD_REVIEW",
+      "name": "HistoricalEvidenceBundle",
+      "native_contract_replacement": false,
+      "preserved_direction": [
+        "Five named source clocks including first_visible; UNKNOWN nulls and date-only timezone=null",
+        "Original disclosure literals, raw and record hash, row ordinal/selector, content-hash-not-vendor-revision semantics",
+        "Effective/knowledge interval uncertainty, units and explicit license/history unaccepted states"
+      ],
+      "required_for_bounded_fix": [
+        "Calendar-valid DATE_ONLY and strictly valid exact offset/precision classification without invention",
+        "Enforce declared schema constraints with JSON type-aware const/enum checks or a complete fail-closed validator; preserve unknown literal as uninterpreted"
+      ],
+      "required_for_future_final_freeze": [
+        "Explicit required/optional fields and closed enums/types including precision/null consistency",
+        "Reviewed mapping to shared evidence/clock identity, namespace/mode and immutable lineage; positive PIT requires independent original visibility/revision/license evidence"
+      ],
+      "root_required": [
+        "kind",
+        "version",
+        "labels",
+        "records",
+        "historical_visibility_proven",
+        "productionGate"
+      ],
+      "schema_id": "metasurvey:backtest-5y:HistoricalEvidenceBundle:1.0.0-candidate",
+      "schema_ref": {
+        "bytes": 1915,
+        "path": "/Users/qiushi/投资研究/ashare-backtest-5y/contracts/backtest-5y/HistoricalEvidenceBundle.schema.json",
+        "sha256": "sha256:502a655aba3f5b4e0c15fdb21a32e77f4e89dfa6843be295eb6cce21ca535f20"
+      },
+      "version": "1.0.0-candidate"
+    },
+    {
+      "actual_field_gaps": [
+        "Limited root false constants use Python equality (F03)",
+        "Candidate schema lacks source snapshot hash/namespace/mode/cutoff/coverage/version-proof/receipt trace fields for a positive contract"
+      ],
+      "final_shared_contract_approved": false,
+      "final_status": "HOLD_F01_F03_AND_NO_POSITIVE_ADMISSION_SCHEMA",
+      "name": "AdmittedHistoricalSnapshot",
+      "native_contract_replacement": false,
+      "preserved_direction": [
+        "BLOCKED or fixture-only state; actual_admission/full_family_authorized/engine_called/prod false",
+        "Approved actual manifest registry is empty; caller booleans do not create authority; fixture cannot admit full family"
+      ],
+      "required_for_bounded_fix": [
+        "Enforce exact bool false for declared no-admission/control fields",
+        "Repair shared exact_clock comparisons (F01/F02) before any later proof consumer can rely on them"
+      ],
+      "required_for_future_final_freeze": [
+        "Versioned price-only versus full-family coverage and immutable manifest/proof IDs",
+        "Exact clocks, admitted issuer/license/policy/receipt dependencies and invalidation; explicit rejection consumers"
+      ],
+      "root_required": [
+        "kind",
+        "version",
+        "state",
+        "actual_admission",
+        "full_family_authorized",
+        "engine_called",
+        "reason_codes",
+        "productionGate"
+      ],
+      "schema_id": "metasurvey:backtest-5y:AdmittedHistoricalSnapshot:1.0.0-candidate",
+      "schema_ref": {
+        "bytes": 615,
+        "path": "/Users/qiushi/投资研究/ashare-backtest-5y/contracts/backtest-5y/AdmittedHistoricalSnapshot.schema.json",
+        "sha256": "sha256:3dac8b9ff94cd110c650db814b96160e09648c0967ea55a5ef83915184eafc79"
+      },
+      "version": "1.0.0-candidate"
+    },
+    {
+      "actual_field_gaps": [
+        "Current financial prerequisite calculation includes a claimed first-visible event 1ns after cutoff (F01)",
+        "Schema lacks exact family item enums (custom check exists), typed candidate/prerequisite/lineage records and namespace/time/units/invalidations",
+        "Quality/valuation/industry/fees and methods still unresolved; not a computable family"
+      ],
+      "final_shared_contract_approved": false,
+      "final_status": "HOLD_F01_F03_AND_FULL_PREREQUISITES",
+      "name": "StrategyFeatureDecision",
+      "native_contract_replacement": false,
+      "preserved_direction": [
+        "Exact two original family IDs and original frozen hash retained",
+        "ENGINE_NOT_RUN, full prerequisites NOT_COMPUTABLE, no native Signal/Approval/Order",
+        "Raw component diagnostics separate from full family and hash-addressed lineage"
+      ],
+      "required_for_bounded_fix": [
+        "Lossless exact source-time comparisons, or reject unsupported precision before payload inspection; add 1ns financial future-poison regression",
+        "Complete declared constants/types without changing original two family IDs/hash"
+      ],
+      "required_for_future_final_freeze": [
+        "Per-security/as-of/version lineage, explicit quality/valuation/timing/edge unknowns and full-family completeness semantics",
+        "No implicit methods v1.0.1 adoption or price-only substitute; Owner-approved method/policy separately versioned"
+      ],
+      "root_required": [
+        "kind",
+        "version",
+        "state",
+        "prerequisite_state",
+        "engine_called",
+        "families",
+        "strategy_sha256",
+        "candidates",
+        "common_blockers",
+        "lineage_catalog",
+        "productionGate"
+      ],
+      "schema_id": "metasurvey:backtest-5y:StrategyFeatureDecision:1.0.0-candidate",
+      "schema_ref": {
+        "bytes": 719,
+        "path": "/Users/qiushi/投资研究/ashare-backtest-5y/contracts/backtest-5y/StrategyFeatureDecision.schema.json",
+        "sha256": "sha256:0dfe5102fa0f22e12fd295e79f5fc81fccdbd4c7e15357caa9ac6a0e75f0b508"
+      },
+      "version": "1.0.0-candidate"
+    },
+    {
+      "actual_field_gaps": [
+        "net_edge/micro_ladder nested structures untyped in candidate schema",
+        "No final dated money/fee/slippage/partial-fill order aggregation/namespace/profile hash contract",
+        "Root bool constants are subject to F03"
+      ],
+      "final_shared_contract_approved": false,
+      "final_status": "HOLD_F03_AND_COST_BRIDGE_POLICY_UNSET",
+      "name": "DatedExecutionEconomics",
+      "native_contract_replacement": false,
+      "preserved_direction": [
+        "Actual profile UNSET_REQUIRED and NOT_COMPUTABLE",
+        "Wave F integer CNY cent HALF_EVEN kept separate from parent HALF_UP",
+        "No claimed actual rounding/partial-fill aggregation bridge; no guessed real fees or capital"
+      ],
+      "required_for_bounded_fix": [
+        "JSON-type-aware production/control validation; keep explicit actual UNSET and uncomputed economic outputs"
+      ],
+      "required_for_future_final_freeze": [
+        "Reviewed HALF_EVEN/HALF_UP bridge with money representation, CNY units and no float",
+        "Minimum commission per-order/partial-fill/cancel-and-replace policies, inclusive/exclusive fee dates, slippage already-in-price binding and source/profile/policy hashes",
+        "No actual net-edge result before benefit/calibration and actual profile evidence"
+      ],
+      "root_required": [
+        "kind",
+        "version",
+        "state",
+        "actual_account_parameters",
+        "rounding_bridge_state",
+        "net_edge",
+        "micro_ladder",
+        "productionGate"
+      ],
+      "schema_id": "metasurvey:backtest-5y:DatedExecutionEconomics:1.0.0-candidate",
+      "schema_ref": {
+        "bytes": 587,
+        "path": "/Users/qiushi/投资研究/ashare-backtest-5y/contracts/backtest-5y/DatedExecutionEconomics.schema.json",
+        "sha256": "sha256:af1d772e572c62c21b1a0db70c2be4c58b64509125e7529c4509b3d4d837b770"
+      },
+      "version": "1.0.0-candidate"
+    },
+    {
+      "actual_field_gaps": [
+        "Current validator accepts formal_windows_executed=false and productionGate=0 (F03)",
+        "Current validator accepts nonempty windows despite declared maxItems=0 (F03)",
+        "parameters/reason items untyped; final session grid, endpoint inclusion and boundary policies unresolved"
+      ],
+      "final_shared_contract_approved": false,
+      "final_status": "HOLD_F03_AND_WINDOW_POLICIES_UNSET",
+      "name": "WalkForwardWindowPlan",
+      "native_contract_replacement": false,
+      "preserved_direction": [
+        "Original 36m/12m/6m, step6m, 40 actual-session purge/embargo parameters retained as engineering plan",
+        "anchor=null, windows=[], formal_windows_executed=0, untouched_oos=false",
+        "Boundary/anchor/purge objects/embargo origin/cross-window cash/right-censoring explicit UNSET"
+      ],
+      "required_for_bounded_fix": [
+        "Enforce declared zero/false/empty constraints without treating bool as number",
+        "Preserve empty windows and exposed-history state; no formal scheduling/window generation"
+      ],
+      "required_for_future_final_freeze": [
+        "Owner-reviewed anchor/session/time boundary and purge/embargo/event-span policies",
+        "Versioned window IDs, spec/data/policy/fee hashes, cross-window holdings/cash/censoring, failure retention and OOS exposure semantics"
+      ],
+      "root_required": [
+        "kind",
+        "version",
+        "state",
+        "parameters",
+        "anchor",
+        "windows",
+        "reason_codes",
+        "untouched_oos",
+        "formal_windows_executed",
+        "productionGate"
+      ],
+      "schema_id": "metasurvey:backtest-5y:WalkForwardWindowPlan:1.0.0-candidate",
+      "schema_ref": {
+        "bytes": 594,
+        "path": "/Users/qiushi/投资研究/ashare-backtest-5y/contracts/backtest-5y/WalkForwardWindowPlan.schema.json",
+        "sha256": "sha256:c8bbc24c0325721d87d6c57722c4740887a65003def9cc4cd32a051773e7ce85"
+      },
+      "version": "1.0.0-candidate"
+    },
+    {
+      "actual_field_gaps": [
+        "Declared root false control is subject to F03",
+        "metrics={} permitted: no required metric names; ledger_state/nav_state required but untyped",
+        "No complete run-input/namespace/account/mode/spec/economics/data/window hashes, event ledger/NAV schema or rejected/failed/unfinished-trade schema"
+      ],
+      "final_shared_contract_approved": false,
+      "final_status": "HOLD_F03_AND_AUDIT_RUN_FIELDS_PENDING",
+      "name": "AuditableSimulationRun",
+      "native_contract_replacement": false,
+      "preserved_direction": [
+        "ENGINE_NOT_RUN and NOT_COMPUTABLE; numeric economic metrics rejected by limited consumer",
+        "NO_TRADES not used to describe an unrun engine; unavailable ledger/NAV explicit in current output"
+      ],
+      "required_for_bounded_fix": [
+        "Typed conservative constants; preserve NULL economic metrics and unrun state"
+      ],
+      "required_for_future_final_freeze": [
+        "Enumerated run-state distinctions and required metric keys/units/nullability",
+        "Per-order/fill/fee/cash/position/NAV lineage, money rounding, rejected orders/failed windows/incomplete-trade retention",
+        "Full-trade count definition and simulated result must not be promoted to source PIT or actual permission"
+      ],
+      "root_required": [
+        "kind",
+        "version",
+        "engine_state",
+        "strategy_state",
+        "metrics",
+        "ledger_state",
+        "nav_state",
+        "productionGate"
+      ],
+      "schema_id": "metasurvey:backtest-5y:AuditableSimulationRun:1.0.0-candidate",
+      "schema_ref": {
+        "bytes": 552,
+        "path": "/Users/qiushi/投资研究/ashare-backtest-5y/contracts/backtest-5y/AuditableSimulationRun.schema.json",
+        "sha256": "sha256:264d495f52d0d465e0e4b64162bae9f2ba3019eb2b56fbd17ffba4056f627c05"
+      },
+      "version": "1.0.0-candidate"
+    }
+  ],
+  "kind": "IndependentSixDtoFieldMatrix",
+  "parent_decision_ref": {
+    "bytes": 3205,
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/parallel-lines/Interface-Decision-v1.json",
+    "sha256": "sha256:bd64704c76d304480e69016f55f2b471d7ba1e479f01c9a1ef8a68440a75f701"
+  },
+  "productionGate": false,
+  "recorded_at": "2026-10-08T12:37:42.815955+00:00",
+  "scope": "Sidecar candidate fields versus parent Interface-Decision-v1; not native schema replacement"
+}

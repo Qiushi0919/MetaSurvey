@@ -1,0 +1,75 @@
+{
+  "archive": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008",
+  "cloud_transfer_admitted": false,
+  "credentials_private_keys_or_phone_backup_in_bundle": false,
+  "files": [
+    {
+      "bytes": 1892,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Day0-Integrity-Recheck.json",
+      "sha256": "sha256:14736343979cf0f737ab9eb069cb8e7e86c4a4bdece20e13bda08d1402d69651"
+    },
+    {
+      "bytes": 1690,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Base-Reference-A-Verification.json",
+      "sha256": "sha256:7e6829042878ae8507fdfea378c756e18763277ff97b4aed59dfcd4718f13c39"
+    },
+    {
+      "bytes": 2834,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Public-Key-and-Signature-Gap.json",
+      "sha256": "sha256:36f634a5a5c80d05f1d957346ec3f9b3e918348ea740068dfcf4316326914f98"
+    },
+    {
+      "bytes": 2434,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Dual-Track-Status.json",
+      "sha256": "sha256:299f4f21791fc7f2f2984becd6ca67aa7687cd5a50c338306ee32718a49918a9"
+    },
+    {
+      "bytes": 150153,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Formal-Historical-PIT-Gap-Register.json",
+      "sha256": "sha256:dcd420baaaf17de975fcf75be5f2c41dd0036ec6e5e3b3931282e9d1c1c402c0"
+    },
+    {
+      "bytes": 353,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Immutable-Predecessor-Recheck.json",
+      "sha256": "sha256:eb4e089689a7c601646b36acea83f885d519636c7e4cb3e1dcb75196e131dfce"
+    },
+    {
+      "bytes": 674,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/ForwardOutcome-D1-Pending.json",
+      "sha256": "sha256:d9932e2805b9b8da7e4e55f8f28f94b7fb8b8aa5e70a051e58404fa2827b80ba"
+    },
+    {
+      "bytes": 742,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Portable-Public-Setup-Audit.json",
+      "sha256": "sha256:278634df25110ddbbd4513fcfb5f2bfc2fa39fe6dc10c8a245116d42eb5a0cd9"
+    },
+    {
+      "bytes": 1107,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Preserved-Failures.json",
+      "sha256": "sha256:2ce04cbd788a82c9829a57dd15ce591ea8d589b399d163b4b29becb9b0a33650"
+    },
+    {
+      "bytes": 1474,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Fresh-Final-Code-Checks.json",
+      "sha256": "sha256:dbe63fd738e30b37d1b5005a3cec3e4edbce35993bf660fb3fc4abb9194a3bf7"
+    },
+    {
+      "bytes": 3985,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Dual-Track-Status-Final.json",
+      "sha256": "sha256:fe4150236b207f3e98e9de3dd074e5f949294f7f4d222215d9efb1162abce2b5"
+    }
+  ],
+  "kind": "Day1ArtifactIndex",
+  "local_only": true,
+  "pending_journal": {
+    "bytes_at_delivery": 0,
+    "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/ForwardOutcome-D1.jsonl",
+    "records": 0,
+    "role": "EMPTY_PENDING_APPEND_ONLY_NOT_A_G_STORE_OR_OUTCOME",
+    "schema": "contracts/day1-reveal/Day1RevealOutcome-v1.schema.json"
+  },
+  "raw_vendor_originals_in_bundle": false,
+  "redistribution_admitted": false,
+  "runtime_database_in_bundle": false,
+  "version": "1.0.0"
+}

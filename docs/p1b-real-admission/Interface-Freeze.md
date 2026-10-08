@@ -1,0 +1,17 @@
+# P1-B limited Tushare real probe interface freeze
+
+New diagnostic epoch. Existing contracts, releases, SQL001–006, schema6, old source pins, SSE Gate and V5 assets remain immutable. Raw store and runtime secrets stay outside Git; metadata is local-only.
+
+Provider TUSHARE_MONTHLY_GATEWAY / OWNER_PROVIDED_MONTHLY_GATEWAY. Owner accepts current credential reuse and HTTP read-only probe. Default fixed Keychain is provisioned by parent; no runtime session fallback. Supplier identity, license, retention/transfer rights, transport integrity and account entitlement remain independently unverified. Tier15000 and2026-10-05–2026-11-05 month are Owner assertions; expiration instant UNSET_REQUIRED.
+
+Data owns only probe.py/tests. Parent owns ProbeGate1.0.0 diagnostic decision/schema, read-only raw verifier, matrices, ADR/reasons/provenance/Git. Fresh Independent Reviewer writes external artifacts only. Existing StockSnapshot1.0 / AdmissionReceipt2.0 / BrainPacket2.0 are the sole real-slice protocols; none is issued for new unverified gateway. No market source policy is approved.
+
+22 SMOKE requests over three stocks, one SSE calendar. Optional separately authorized22 COVERAGE requests use latest Owner bounded intervals20250601–20261005 and financial20230101–20261005. Eight APIs only: stock_basic, suspend_d, trade_cal, daily, adj_factor, dividend, fina_indicator, index_member_all. No MCP ingestion, fallback, purchases, announcements/minutes or full-market download. REST route fixed to locally installed SDK1.4.29 behavior; official public docs describe protocol but do not verify this package override or gateway.
+
+All raw successful and meaningful failed responses are exact bytes, exclusive0600 private quarantine under Git-external capture root, token/request-body never saved. Credential echoes and non-UTF8 bodies are discarded before raw/hash. Typed credentials/requests, finite plans, no redirects/proxy substitution/retries, process-owned clocks and private sealing constrain writer. Process registry is not durable supplier/source authority.
+
+Collector retrieved_at/available_at/observation_event_at equal complete response time only. published_at remains null, DATE_ONLY fields retained separately, history_visibility false. Raw OHLC, provider pre_close ex-rights reference, factor-only and corporate-action terms remain distinct. Financial rows with distinct revisions appended; exact duplicates quarantined; update_flag is not historical revision proof. Current industry labels cannot backfill historical availability.
+
+Parent verifier replays original bytes, exact request fingerprints/date/symbol fields/rowcaps, DQ and normalized hashes, clock tuple, source/code epoch, raw file paths/permissions, bar/calendar and factor/date alignment. Gate statistics/categories are derived from those reports, not independent mutable claims. Hash-pinned quarantine observations are not admitted SourceObservation/ClockEvidence. Empty successful responses demonstrate only access; they do not prove absent actions, no suspension, complete revisions or coverage.
+
+ProbeGate1.0.0 cannot express ADMITTED for this epoch: provider/license/transport unverified, every new category BLOCKED, no condition closure, null policy/Snapshot/Receipt/BrainPacket/Card refs. Global priorSSELOCAL remainsPARTIAL. Cloud, Historical Backtest, Pilot, realSignal/Approval/Order/broker/production remainBLOCKED; productionGate false,30 account/fee/risk UNSET unchanged. Complete26-item Gate review then stop.

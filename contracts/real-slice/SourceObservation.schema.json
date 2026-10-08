@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:real-slice:SourceObservation:2.0.0",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "SourceObservation"
+    },
+    "contract_version": {
+      "const": "2.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "product": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "source_version": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "original_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "raw_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "capture_attestation_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "data_type": {
+      "enum": [
+        "ANNOUNCEMENTS",
+        "CALENDAR_RULES",
+        "FINANCIAL_REVISIONS",
+        "SECURITY_STATUS",
+        "RAW_BARS_1D",
+        "CORPORATE_ACTIONS",
+        "ADJUSTMENT_VERSIONS",
+        "INDUSTRY_MEMBERSHIP"
+      ]
+    },
+    "scope": {
+      "const": "CURRENT_OBSERVED"
+    },
+    "clock": {
+      "$ref": "urn:ashare:real-slice:ClockEvidence:1.0.0"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "DOCUMENT_REFERENCE",
+              "CALENDAR_CLOSED",
+              "CALENDAR_OPEN",
+              "SESSION_RULE"
+            ]
+          },
+          "symbol": {
+            "anyOf": [
+              {
+                "enum": [
+                  "SSE:603993",
+                  "SSE:600312",
+                  "SSE:603228"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "official_uri": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "document_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "symbol",
+          "date",
+          "title",
+          "official_uri",
+          "document_sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "fact_hashes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^sha256:[a-f0-9]{64}$"
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "symbols": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "SSE:603993",
+              "SSE:600312",
+              "SSE:603228"
+            ]
+          },
+          "uniqueItems": true,
+          "maxItems": 3
+        },
+        "from": {
+          "type": "string",
+          "format": "date"
+        },
+        "to": {
+          "type": "string",
+          "format": "date"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "claim": {
+          "enum": [
+            "DOCUMENT_REFERENCES_ONLY",
+            "FINITE_CALENDAR_REFERENCE",
+            "COMPLETE_CURRENT_OBSERVED_DATA"
+          ]
+        }
+      },
+      "required": [
+        "symbols",
+        "from",
+        "to",
+        "complete",
+        "claim"
+      ],
+      "additionalProperties": false
+    },
+    "data_quality_status": {
+      "const": "PASS"
+    },
+    "normalized_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "source_id",
+    "product",
+    "source_version",
+    "original_uri",
+    "raw_sha256",
+    "capture_attestation_hash",
+    "data_type",
+    "scope",
+    "clock",
+    "facts",
+    "fact_hashes",
+    "coverage",
+    "data_quality_status",
+    "normalized_hash"
+  ],
+  "additionalProperties": false
+}

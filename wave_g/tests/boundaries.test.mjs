@@ -1,0 +1,20 @@
+import fs from 'node:fs';import test from 'node:test';import assert from 'node:assert/strict';
+import {validateDisplay,transitionDisplay,issueActual} from '../display.mjs';
+import {validateContract,contentHash} from '../../src/contracts/validate.mjs';
+const names=['Provider-License-Transport-Evidence-Pack','Historical-PIT-Three-Symbol-Matrix','Historical-PIT-Closure-Progress','Retrospective-Diagnostic-Summary','Snapshot-B-Activation-Readiness','Forward-Paper-Activation-Readiness','Small-Live-Pilot-Policy-Summary'];
+const objects=names.map(n=>JSON.parse(fs.readFileSync(new URL('../../docs/wave-g/'+n+'.json',import.meta.url))));
+const reseal=v=>({...v,content_hash:contentHash(v)});
+test('seven current summaries have closed diagnostic display shape',()=>{for(const v of objects)assert.equal(validateDisplay(v),v);});
+test('all sixteen native contracts reject all seven diagnostic summaries',()=>{
+ const contracts=fs.readdirSync(new URL('../../contracts/v1/',import.meta.url)).filter(x=>x.endsWith('.schema.json')&&x!=='common.schema.json').map(x=>x.replace('.schema.json',''));
+ assert.equal(contracts.length,16);for(const v of objects)for(const n of contracts)assert.throws(()=>validateContract(n,v));
+});
+test('resealed caller claim remains display only and never native issuer',()=>{const v=reseal({...objects[0],body:{owner_approved:true,approval_kind:'HUMAN'}});validateDisplay(v);assert.throws(()=>issueActual(v));assert.throws(()=>transitionDisplay(v,'OrderIntent'));});
+test('all actual native cloud and cross strategy transitions reject',()=>{for(const v of objects)for(const t of ['SignalEvent','Approval','OrderIntent','Fill','BROKER','PRODUCTION','CLOUD','ADMITTED','CORE_40','EVENT_3','RESEARCH_6_18M','HISTORICAL_BACKTEST','SnapshotB','ACTUAL_FORWARD'])assert.throws(()=>transitionDisplay(v,t));});
+test('caller reseal cannot alter closed authority flags',()=>{for(const v of objects)for(const k of ['productionGate','live_authority','historical_visibility_proven','native_signal_order_broker','provider_license_transport_verified','formal_backtest_authorized','snapshot_b_authorized','forward_paper_authorized'])assert.throws(()=>validateDisplay(reseal({...v,[k]:true})));});
+test('fixture planned bool or string counts do not become actual days',()=>{for(const x of [true,1,-1,'0'])assert.throws(()=>validateDisplay(reseal({...objects[0],actual_forward_days:x})));});
+test('kind name namespace and scope mismatch reject',()=>{for(const x of [{kind:'SignalEvent'},{artifact_name:'Approval.json'},{kind:objects[1].kind},{namespace:'CORE_40'},{namespace:'EVENT_3'},{symbols:[...objects[0].symbols].reverse()},{symbols:[...objects[0].symbols,'000001.SZ']}])assert.throws(()=>validateDisplay(reseal({...objects[0],...x})));});
+test('money or Human or token approval extras reject',()=>{for(const x of [{capital:5000},{owner_approved:true},{approval_kind:'HUMAN'},{OrderIntent:{}}])assert.throws(()=>validateDisplay(reseal({...objects[0],...x})));});
+test('hash and version integrity reject',()=>{for(const mutate of [v=>v.version='2.0.0',v=>delete v.context_hash,v=>v.protocol_hash='invalid']){const v=structuredClone(objects[0]);mutate(v);assert.throws(()=>validateDisplay(reseal(v)));}assert.throws(()=>validateDisplay({...objects[0],content_hash:'sha256:'+'0'.repeat(64)}));});
+test('JSON floats and unsafe integers forbidden in nested diagnostics',()=>{for(const x of [0.01,Number.MAX_SAFE_INTEGER+1,NaN,Infinity])assert.throws(()=>validateDisplay({...objects[0],body:{money:x}}));});
+test('pending suggested caps never acquire execute permission',()=>{const p=objects[6].body;assert.equal(p.acceptance,'OWNER_PENDING');assert.equal(p.parameters_are_executable_defaults,false);assert.equal(p.actual_owner_settings.length,30);assert.equal(p.draft.execution_allowed,false);assert.equal(p.draft.adopted_by_owner,false);assert.throws(()=>issueActual(p));});

@@ -1,0 +1,83 @@
+{
+  "version": "1.0.0",
+  "contracts": [
+    {
+      "name": "HistoricalPITGap",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "TradeabilityHistoryReadiness",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "FinancialRevisionReadiness",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "ActionAdjustmentReconciliation",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "FrozenStrategySpec",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "ForwardPaperRealAdapterReadiness",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "SnapshotBPreparation",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    },
+    {
+      "name": "ProviderLicenseTransportGap",
+      "version": "1.0.0",
+      "required": "ALL_SCHEMA_FIELDS",
+      "optional": [],
+      "scope": "DISPLAY_ONLY",
+      "unresolved_actual_parameters": "UNSET_REQUIRED",
+      "native_authority": false
+    }
+  ],
+  "source_clock_rules": "ADR004/009/029",
+  "namespace": "LOCAL_PREPARATION_ONLY:CORE_40",
+  "strategy_other_namespaces": "REJECTED",
+  "schema6_migrations001_006": "UNCHANGED",
+  "money": "CNY_MINOR_INTEGER_STRING / exact Decimal string; no floats",
+  "productionGate": false
+}

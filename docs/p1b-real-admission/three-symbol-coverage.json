@@ -1,0 +1,407 @@
+{
+  "version": "1.0.0",
+  "physical_row_observations_including_smoke_coverage_overlap": 2786,
+  "unique_raw_bars": 981,
+  "unique_sessions_per_symbol": 327,
+  "requested_target_sessions": 320,
+  "target_quarters": 12,
+  "no_historical_PIT_or_admission_from_counts": true,
+  "symbols": {
+    "603993.SH": {
+      "stock_basic": {
+        "request_id": "stock_basic-603993.SH-COVERAGE",
+        "captured_rows": 1,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "suspend_d": {
+        "request_id": "suspend_d-603993.SH-COVERAGE",
+        "captured_rows": 0,
+        "technical_dq": "EMPTY_NOT_COVERAGE",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "daily": {
+        "request_id": "daily-603993.SH-COVERAGE",
+        "captured_rows": 327,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": true,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 327,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "adj_factor": {
+        "request_id": "adj_factor-603993.SH-COVERAGE",
+        "captured_rows": 327,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": true,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 327,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "dividend": {
+        "request_id": "dividend-603993.SH-COVERAGE",
+        "captured_rows": 71,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "fina_indicator": {
+        "request_id": "fina_indicator-603993.SH-COVERAGE",
+        "captured_rows": 19,
+        "technical_dq": "BLOCKED",
+        "quarantine_reasons": [
+          "DATE_SCOPE_MISMATCH"
+        ],
+        "coverage": null,
+        "raw_unique_report_periods": 15,
+        "raw_report_period_range": [
+          "20221231",
+          "20230331",
+          "20230630",
+          "20230930",
+          "20231231",
+          "20240331",
+          "20240630",
+          "20240930",
+          "20241231",
+          "20250331",
+          "20250630",
+          "20250930",
+          "20251231",
+          "20260331",
+          "20260630"
+        ],
+        "admitted": false
+      },
+      "index_member_all": {
+        "request_id": "index_member_all-603993.SH-COVERAGE",
+        "captured_rows": 1,
+        "technical_dq": "BLOCKED",
+        "quarantine_reasons": [
+          "DQ_DATE_INVALID"
+        ],
+        "coverage": null,
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      }
+    },
+    "600312.SH": {
+      "stock_basic": {
+        "request_id": "stock_basic-600312.SH-COVERAGE",
+        "captured_rows": 1,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "suspend_d": {
+        "request_id": "suspend_d-600312.SH-COVERAGE",
+        "captured_rows": 0,
+        "technical_dq": "EMPTY_NOT_COVERAGE",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "daily": {
+        "request_id": "daily-600312.SH-COVERAGE",
+        "captured_rows": 327,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": true,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 327,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "adj_factor": {
+        "request_id": "adj_factor-600312.SH-COVERAGE",
+        "captured_rows": 327,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": true,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 327,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "dividend": {
+        "request_id": "dividend-600312.SH-COVERAGE",
+        "captured_rows": 98,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "fina_indicator": {
+        "request_id": "fina_indicator-600312.SH-COVERAGE",
+        "captured_rows": 18,
+        "technical_dq": "BLOCKED",
+        "quarantine_reasons": [
+          "DATE_SCOPE_MISMATCH"
+        ],
+        "coverage": null,
+        "raw_unique_report_periods": 15,
+        "raw_report_period_range": [
+          "20221231",
+          "20230331",
+          "20230630",
+          "20230930",
+          "20231231",
+          "20240331",
+          "20240630",
+          "20240930",
+          "20241231",
+          "20250331",
+          "20250630",
+          "20250930",
+          "20251231",
+          "20260331",
+          "20260630"
+        ],
+        "admitted": false
+      },
+      "index_member_all": {
+        "request_id": "index_member_all-600312.SH-COVERAGE",
+        "captured_rows": 1,
+        "technical_dq": "BLOCKED",
+        "quarantine_reasons": [
+          "DQ_DATE_INVALID"
+        ],
+        "coverage": null,
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      }
+    },
+    "603228.SH": {
+      "stock_basic": {
+        "request_id": "stock_basic-603228.SH-COVERAGE",
+        "captured_rows": 1,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "suspend_d": {
+        "request_id": "suspend_d-603228.SH-COVERAGE",
+        "captured_rows": 0,
+        "technical_dq": "EMPTY_NOT_COVERAGE",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "daily": {
+        "request_id": "daily-603228.SH-COVERAGE",
+        "captured_rows": 327,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": true,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 327,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "adj_factor": {
+        "request_id": "adj_factor-603228.SH-COVERAGE",
+        "captured_rows": 327,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": true,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 327,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "dividend": {
+        "request_id": "dividend-603228.SH-COVERAGE",
+        "captured_rows": 58,
+        "technical_dq": "PASS",
+        "quarantine_reasons": [],
+        "coverage": {
+          "coverage_sufficient_for_admission": false,
+          "open_sessions": 0,
+          "target_counts_met": false,
+          "target_quarters": 12,
+          "target_sessions": 320,
+          "unique_dates": 0,
+          "unique_report_periods": 0
+        },
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      },
+      "fina_indicator": {
+        "request_id": "fina_indicator-603228.SH-COVERAGE",
+        "captured_rows": 22,
+        "technical_dq": "BLOCKED",
+        "quarantine_reasons": [
+          "DATE_SCOPE_MISMATCH"
+        ],
+        "coverage": null,
+        "raw_unique_report_periods": 15,
+        "raw_report_period_range": [
+          "20221231",
+          "20230331",
+          "20230630",
+          "20230930",
+          "20231231",
+          "20240331",
+          "20240630",
+          "20240930",
+          "20241231",
+          "20250331",
+          "20250630",
+          "20250930",
+          "20251231",
+          "20260331",
+          "20260630"
+        ],
+        "admitted": false
+      },
+      "index_member_all": {
+        "request_id": "index_member_all-603228.SH-COVERAGE",
+        "captured_rows": 1,
+        "technical_dq": "BLOCKED",
+        "quarantine_reasons": [
+          "DQ_DATE_INVALID"
+        ],
+        "coverage": null,
+        "raw_unique_report_periods": null,
+        "raw_report_period_range": null,
+        "admitted": false
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "version": "1.6.0-diagnostic",
+  "contract": "ProbeGate1.0.0",
+  "schema_version": 6,
+  "new_migrations": [],
+  "approved_policy_count": 0,
+  "production_enabled": false,
+  "files": [
+    {
+      "path": "contracts/tushare-real-admission/ProbeGate.schema.json",
+      "sha256": "sha256:c698a8d1671eb28f256f75f3d33d3ec6b049dad799025629389f4ffbdd3fccfd"
+    },
+    {
+      "path": "contracts/tushare-real-admission/reason-codes.v1.json",
+      "sha256": "sha256:3d5258fa3ac4d0954686b1aa120ce65f95eefe1500c1ed7a87c3b500b7a63b67"
+    },
+    {
+      "path": "config/provider/tushare-monthly-gateway.json",
+      "sha256": "sha256:71d86c0590752d2f761e15f6b16026e09a9cc9fbb0a39e0fc9b5602f5396e419"
+    },
+    {
+      "path": "tushare-real-admission/probe.py",
+      "sha256": "sha256:fe632bd17da6663a6fdad702b2d03ff1b2a702927914d333b7302aae0ee9bc26"
+    },
+    {
+      "path": "tushare-real-admission/tests/test_probe.py",
+      "sha256": "sha256:ee46c877f1bfdbb3a04996eb19f9eabfb06839caab43ed7ee94867c39a3443c1"
+    },
+    {
+      "path": "tushare-real-admission/parent/evidence.py",
+      "sha256": "sha256:bf8fcbd5827fd1578499b5a64fe2d5b46ee3d83080318a43826ec3c85d4431a6"
+    },
+    {
+      "path": "tushare-real-admission/parent/verify.mjs",
+      "sha256": "sha256:cfb49c7db3140b5b6ac833fbdebd3efc045e109d4f7985d90c768788e6fe2694"
+    },
+    {
+      "path": "tushare-real-admission/parent/contracts.test.mjs",
+      "sha256": "sha256:ca14bee5fdf67d879f0b958f9a9fdae37e42e0b8b8368fb398aabf0175122269"
+    },
+    {
+      "path": "tushare-real-admission/check.mjs",
+      "sha256": "sha256:fb3d3f00c0c86203637175d8f462e11a08db66b8939182710e969442e8da3f3d"
+    }
+  ]
+}

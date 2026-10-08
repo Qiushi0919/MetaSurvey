@@ -1,0 +1,7 @@
+# ADR-024: Experimental three-stock Quality and Timing coordinates
+
+Accepted for Wave C local diagnostic methods only, not production score policies. Frozen pairwise cohort ranks provide reproducible, interpretable comparisons without invented industry thresholds, probabilities or full-quality claims. Quality uses three available fundamental metrics, with cash generation and earnings quality unknown. Timing uses only raw price structure, explicitly subject to corporate-action distortion. Quality does not imply Timing, suitability, Edge or tradeability.
+
+All math uses a private Decimal context, precision 50 and HALF_EVEN six-place presentation. Nonannualized volatility is a descriptive sample standard deviation of 20 raw daily close changes. Drawdown uses the last 60 observed closes. No currency conversion, affordability, sizing or fees are inferred from unverified units or old experiments. Missing required components block a coordinate; no zero imputation. Equal values get half a comparison. Scores are not comparable outside this exact three-stock cohort or across changed methods.
+
+The existing grade mapping, real probability, expected return, Net Edge, actual cost and account configuration remain UNSET_REQUIRED. Future OOS calibration and formal research/production gates remain separate Owner decisions. Source/raw/rules/code/version/cutoff changes invalidate artifacts and require a distinct frozen version, never self-reseal of old reports.

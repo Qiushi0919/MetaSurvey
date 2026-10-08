@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "baseline": "docs/real-slice/conditions.json",
+  "closed_ids": [],
+  "conditions": [
+    {
+      "id": "C12",
+      "subject": "真实security/master/status历史",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C13",
+      "subject": "完整calendar与board/session规则",
+      "baseline_status_preserved": "PARTIAL_REFERENCE_ONLY",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C14",
+      "subject": "真实历史available_at",
+      "baseline_status_preserved": "BLOCKED_HISTORICAL",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C15",
+      "subject": "真实EOD raw bars",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C16",
+      "subject": "corporate-action feed",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C17",
+      "subject": "adjustment/entitlement math实证",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C18",
+      "subject": "financial parser/revision样本",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C19",
+      "subject": "DATE_ONLY历史重构政策",
+      "baseline_status_preserved": "CURRENT_OBSERVED_POLICY_IMPLEMENTED_HISTORICAL_UNSET_REQUIRED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C20",
+      "subject": "industry/sector membership PIT",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C21",
+      "subject": "真实指标/校准样本",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C22",
+      "subject": "Research producers与概率/Edge政策",
+      "baseline_status_preserved": "FIXTURE_CHAIN_CLOSED_REAL_PRODUCERS_BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "reason": "NO_NEW_ADMITTED_THREE_STOCK_CAPTURE; current retrieval would not prove historical visibility",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    }
+  ],
+  "existing_SSE_evidence_chain_preserved": true,
+  "no_pilot_authorization": true,
+  "latest_probe_progress": "44_AUTHENTICATED_REQUESTS_44_QUARANTINE_CAPTURES_NO_NEW_ADMISSION",
+  "new_source_admission": "BLOCKED_PROVIDER_LICENSE_TRANSPORT_AND_CATEGORY_DQ_GAPS"
+}

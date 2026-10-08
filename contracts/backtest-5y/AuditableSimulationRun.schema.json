@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"metasurvey:backtest-5y:AuditableSimulationRun:1.0.1-candidate",
+  "type":"object","required":["kind","version","engine_state","strategy_state","metrics","ledger_state","nav_state","productionGate"],
+  "properties":{"kind":{"const":"AuditableSimulationRun"},"version":{"const":"1.0.1-candidate"},"engine_state":{"const":"ENGINE_NOT_RUN"},"strategy_state":{"const":"NOT_COMPUTABLE"},"metrics":{"type":"object","additionalProperties":{"type":"null"}},"productionGate":{"const":false}}
+}

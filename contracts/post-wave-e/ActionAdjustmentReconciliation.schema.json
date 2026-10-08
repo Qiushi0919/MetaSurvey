@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:ActionAdjustmentReconciliation:1.0.0",
+  "title": "ActionAdjustmentReconciliation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "ActionAdjustmentReconciliation"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:ActionAdjustmentReconciliation:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "preserved_ambiguous_actions",
+        "preserved_nonzero_pre_close_deltas",
+        "price_paths",
+        "same_provider_factor_authoritative",
+        "factor_plus_cash_credit",
+        "actual_entitlement_credits",
+        "tolerance",
+        "source_rounding",
+        "share_quantity_rounding",
+        "cash_dividend_units",
+        "needs_independent_action_evidence",
+        "revision_resolution",
+        "live_authority"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "preserved_ambiguous_actions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "preserved_nonzero_pre_close_deltas": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "price_paths": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "RAW_UNADJUSTED"
+              },
+              {
+                "type": "string",
+                "const": "FACTOR_SENSITIVITY"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "same_provider_factor_authoritative": {
+          "type": "boolean",
+          "const": false
+        },
+        "factor_plus_cash_credit": {
+          "type": "string",
+          "const": "FORBIDDEN"
+        },
+        "actual_entitlement_credits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tolerance": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "source_rounding": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "share_quantity_rounding": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "cash_dividend_units": {
+          "type": "string",
+          "const": "UNVERIFIED"
+        },
+        "needs_independent_action_evidence": {
+          "type": "boolean",
+          "const": true
+        },
+        "revision_resolution": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "live_authority": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "candidate": "95476b67255863efd7fc5fb9ee34c84766e7d68a",
+  "release": "1.0.1-post-wave-e-preparation",
+  "fresh_checkout": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/fresh-checkout-G2",
+  "private_archives_unmoved": true,
+  "remote_CI_or_archive_relocation_proven": false,
+  "dependency_install": "OFFLINE_IGNORE_SCRIPTS_LOCK_UNCHANGED",
+  "full_regression": {
+    "unique": 1138,
+    "pass": 1137,
+    "fail": 0,
+    "skip": 1,
+    "carried_unique": 939,
+    "new_unique": 199,
+    "python_unique": 671,
+    "native_unique": 467,
+    "count_definition": "ONE_FINAL_FULL_CHAIN; not summing repeated epochs/assertions"
+  },
+  "new_suite": {
+    "python": 187,
+    "native": 12,
+    "pass": 199
+  },
+  "independent_review": {
+    "epoch": "R2",
+    "atomic_assertions": 14986,
+    "not_added_to_regression_count": true,
+    "active_sources_unchanged": 996,
+    "R1_findings_closed": true
+  },
+  "raw_artifacts": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/clone-G2.log",
+      "sha256": "sha256:a3a9327d5ea324199072696c59354f47322a9374176067a878359fb603ad8ccc",
+      "bytes": 115
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/npm-ci-G2.log",
+      "sha256": "sha256:f75fb627adbb9ccca3f9793858717d84c06a9be1d85397ea7c1bde3632e79411",
+      "bytes": 141
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/full-fresh-G2.log",
+      "sha256": "sha256:e1444a948ff3f05bd32168145e2efc46af5716e37674037b80a275ac4fc0377e",
+      "bytes": 147648
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/new-only-G3.log",
+      "sha256": "sha256:425a9a3e3778607130c0f548cbb87f4fb007ed99acab1929b4f398f0e9f9a447",
+      "bytes": 24864
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/producer-G4.log",
+      "sha256": "sha256:3fc76596b3b70290aa980abdbe3907cb71f679cd621305dee9c3ef8c6a6cd00c",
+      "bytes": 264
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/validation/baseline-secret-audit-G2.json",
+      "sha256": "sha256:8d95e2153fedba86c5276c2fcf5eac42e12b60dca87f3c8a647fbb40e2b70be9",
+      "bytes": 502
+    }
+  ],
+  "productionGate": false
+}

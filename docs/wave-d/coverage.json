@@ -1,0 +1,243 @@
+{
+  "version": "1.0.0",
+  "kind": "PHYSICAL_ELIGIBLE_OBSERVATION_COUNTS_NOT_DISTINCT_DATES_OR_LICENSE_COVERAGE",
+  "code_candidate": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+  "reports": [
+    {
+      "symbol": "603993.SH",
+      "report_ref": {
+        "bytes": 1377201,
+        "name": "603993.SH.report.json",
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.report.json",
+        "sha256": "sha256:8dd85d5131411d105c72cae04c47a7774a8398ea5020a6d412979e3638ad1a14"
+      },
+      "categories": [
+        {
+          "category": "security",
+          "delta": 1,
+          "eligible_observation_count": 4,
+          "formal_admission": "BLOCKED",
+          "previous_count": 3,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "calendar",
+          "delta": 0,
+          "eligible_observation_count": 500,
+          "formal_admission": "BLOCKED",
+          "previous_count": 500,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "bars",
+          "delta": 0,
+          "eligible_observation_count": 330,
+          "formal_admission": "BLOCKED",
+          "previous_count": 330,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "actions",
+          "delta": 0,
+          "eligible_observation_count": 76,
+          "formal_admission": "BLOCKED",
+          "previous_count": 76,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "factors",
+          "delta": 0,
+          "eligible_observation_count": 333,
+          "formal_admission": "BLOCKED",
+          "previous_count": 333,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "financial",
+          "delta": 127,
+          "eligible_observation_count": 140,
+          "formal_admission": "BLOCKED",
+          "previous_count": 13,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "industry",
+          "delta": 0,
+          "eligible_observation_count": 1,
+          "formal_admission": "BLOCKED",
+          "previous_count": 1,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "announcements",
+          "delta": 5,
+          "eligible_observation_count": 5,
+          "formal_admission": "BLOCKED",
+          "previous_count": 0,
+          "state": "OBSERVED_PARTIAL"
+        }
+      ],
+      "financial_features_known": 34
+    },
+    {
+      "symbol": "600312.SH",
+      "report_ref": {
+        "bytes": 1398076,
+        "name": "600312.SH.report.json",
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.report.json",
+        "sha256": "sha256:3f2d7d9ca6f293010d3bbf0317ad58318e02eb73762e44333b2abbef6a68d3ae"
+      },
+      "categories": [
+        {
+          "category": "security",
+          "delta": 1,
+          "eligible_observation_count": 4,
+          "formal_admission": "BLOCKED",
+          "previous_count": 3,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "calendar",
+          "delta": 0,
+          "eligible_observation_count": 500,
+          "formal_admission": "BLOCKED",
+          "previous_count": 500,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "bars",
+          "delta": 0,
+          "eligible_observation_count": 330,
+          "formal_admission": "BLOCKED",
+          "previous_count": 330,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "actions",
+          "delta": 0,
+          "eligible_observation_count": 102,
+          "formal_admission": "BLOCKED",
+          "previous_count": 102,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "factors",
+          "delta": 0,
+          "eligible_observation_count": 333,
+          "formal_admission": "BLOCKED",
+          "previous_count": 333,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "financial",
+          "delta": 136,
+          "eligible_observation_count": 149,
+          "formal_admission": "BLOCKED",
+          "previous_count": 13,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "industry",
+          "delta": 1,
+          "eligible_observation_count": 1,
+          "formal_admission": "BLOCKED",
+          "previous_count": 0,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "announcements",
+          "delta": 5,
+          "eligible_observation_count": 5,
+          "formal_admission": "BLOCKED",
+          "previous_count": 0,
+          "state": "OBSERVED_PARTIAL"
+        }
+      ],
+      "financial_features_known": 34
+    },
+    {
+      "symbol": "603228.SH",
+      "report_ref": {
+        "bytes": 1403081,
+        "name": "603228.SH.report.json",
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.report.json",
+        "sha256": "sha256:55bd5d575893df4c92b1c2b24170ce0c8a95bde10e41fa2f57b137bfaf3b938b"
+      },
+      "categories": [
+        {
+          "category": "security",
+          "delta": 1,
+          "eligible_observation_count": 4,
+          "formal_admission": "BLOCKED",
+          "previous_count": 3,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "calendar",
+          "delta": 0,
+          "eligible_observation_count": 500,
+          "formal_admission": "BLOCKED",
+          "previous_count": 500,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "bars",
+          "delta": 0,
+          "eligible_observation_count": 330,
+          "formal_admission": "BLOCKED",
+          "previous_count": 330,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "actions",
+          "delta": 0,
+          "eligible_observation_count": 62,
+          "formal_admission": "BLOCKED",
+          "previous_count": 62,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "factors",
+          "delta": 0,
+          "eligible_observation_count": 332,
+          "formal_admission": "BLOCKED",
+          "previous_count": 332,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "financial",
+          "delta": 142,
+          "eligible_observation_count": 158,
+          "formal_admission": "BLOCKED",
+          "previous_count": 16,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "industry",
+          "delta": 1,
+          "eligible_observation_count": 1,
+          "formal_admission": "BLOCKED",
+          "previous_count": 0,
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "announcements",
+          "delta": 5,
+          "eligible_observation_count": 5,
+          "formal_admission": "BLOCKED",
+          "previous_count": 0,
+          "state": "OBSERVED_PARTIAL"
+        }
+      ],
+      "financial_features_known": 34
+    }
+  ],
+  "notes": [
+    "Full 94/158/97 fields retained in nine private original responses. Only named research projection contributes observations. Multiple versions/overlapping captures are counted, not merged to pretend unique coverage.",
+    "15 SSE index references;0 accepted PDF bodies;180-day requested window is not proven full coverage.",
+    "327 distinct same-provider raw/factor sessions per symbol; 330/333 physical records retain duplicate/versions.",
+    "All eight categories remain formally BLOCKED; old 5 action ambiguities/8 nonzero deltas retained."
+  ],
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false
+}

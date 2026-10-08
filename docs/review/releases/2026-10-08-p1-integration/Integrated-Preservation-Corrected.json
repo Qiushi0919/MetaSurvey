@@ -1,0 +1,92 @@
+{
+  "main972": {
+    "checked": 972,
+    "state": "PASS",
+    "findings": []
+  },
+  "child954": {
+    "checked": 954,
+    "state": "PASS",
+    "findings": []
+  },
+  "Forward4": {
+    "checked": 4,
+    "state": "PASS",
+    "findings": []
+  },
+  "integrated_owned_changes": {
+    "state": "PASS",
+    "changed_paths": [
+      "backtest_5y/OWNERSHIP.md",
+      "backtest_5y/README.md",
+      "backtest_5y/__init__.py",
+      "backtest_5y/clocks.py",
+      "backtest_5y/collectors.py",
+      "backtest_5y/data.py",
+      "backtest_5y/delivery.py",
+      "backtest_5y/dto.py",
+      "backtest_5y/economics.py",
+      "backtest_5y/gateway.py",
+      "backtest_5y/interface.py",
+      "backtest_5y/maintenance.py",
+      "backtest_5y/pit.py",
+      "backtest_5y/protocol.json",
+      "backtest_5y/requirements.py",
+      "backtest_5y/run.py",
+      "backtest_5y/schema_subset.py",
+      "backtest_5y/sources.py",
+      "backtest_5y/store.py",
+      "backtest_5y/strategy.py",
+      "backtest_5y/tests/test_collectors.py",
+      "backtest_5y/tests/test_data.py",
+      "backtest_5y/tests/test_delivery.py",
+      "backtest_5y/tests/test_economics.py",
+      "backtest_5y/tests/test_integration.py",
+      "backtest_5y/tests/test_maintenance.py",
+      "backtest_5y/tests/test_pit.py",
+      "backtest_5y/tests/test_root_regressions.py",
+      "backtest_5y/tests/test_store.py",
+      "backtest_5y/tests/test_strategy.py",
+      "contracts/backtest-5y/AdmittedHistoricalSnapshot.schema.json",
+      "contracts/backtest-5y/AuditableSimulationRun.schema.json",
+      "contracts/backtest-5y/DatedExecutionEconomics.schema.json",
+      "contracts/backtest-5y/HistoricalEvidenceBundle.schema.json",
+      "contracts/backtest-5y/StrategyFeatureDecision.schema.json",
+      "contracts/backtest-5y/WalkForwardWindowPlan.schema.json",
+      "docs/backtest-5y/Acceptance-Usage-P1.md",
+      "docs/backtest-5y/CORE40-Data-Gaps-and-Maintenance-P1.md",
+      "docs/backtest-5y/Contracts-Candidate-v1.md",
+      "docs/backtest-5y/P1-Gate-Review.md"
+    ],
+    "outside_owned_paths": [],
+    "ignored_files_not_inspected": true,
+    "working_copy_can_change_after_read": true
+  },
+  "integrated40": {
+    "checked": 40,
+    "state": "PASS"
+  },
+  "source_seals_reviews_input_refs": {
+    "checked_reference_rows": 233,
+    "unique_paths": 185,
+    "state": "PASS",
+    "findings": [],
+    "hash_formats_supported": [
+      "64_LOWERCASE_HEX",
+      "sha256:64_LOWERCASE_HEX"
+    ],
+    "original_declared_hashes_not_modified": true
+  },
+  "child_head": {
+    "state": "PASS",
+    "child_clean": true
+  },
+  "root_harness_correction": {
+    "source_defect": false,
+    "previous_false_mismatch_reference_rows": 212,
+    "cause": "Root checker incorrectly required sha256: prefix for references whose original format is plain hex. Digest bytes are identical. Original FAIL preserved; new independent read only.",
+    "old_failed_result": "Integrated-Preservation.json",
+    "candidate_changes": 0,
+    "old_seal_changes": 0
+  }
+}

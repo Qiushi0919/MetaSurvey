@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "preserved_prior_failures": "docs/p1b-real-admission/known-failures.json",
+  "issues": [
+    {
+      "id": "OVERNIGHT-T1-OLD-ENTRY",
+      "state": "PRESERVED_HISTORICAL_FAILURE",
+      "reason": "Old absolute-path aggregate clone entry remains unchanged; new exact seven-bindings entry passes only moved checkout with unmoved private archives."
+    },
+    {
+      "id": "OVERNIGHT-T2-INITIAL-SYNTHETIC-DAY",
+      "state": "CORRECTED_NEW_FIXTURE_INPUT_ONLY",
+      "reason": "Initial one new synthetic expectation used wrong UTC/Shanghai calendar date. Original log and reconstructed test source/fixture recorded explicitly as reconstructed, not pre-pinned bytes; no old core test or capture modified.",
+      "evidence_root": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/data"
+    },
+    {
+      "id": "OVERNIGHT-T6-INITIAL-WRAPPER",
+      "state": "CORRECTED_NEW_WRAPPER_ONLY",
+      "reason": "Initial wrapper incorrectly applied Packet export outcome-field sanitizer to native required Card expected_mae_bps=UNSET_REQUIRED. Exact failed new source/test bytes and replay log preserved before fix. Frozen Packet guard and native Card/chain contracts remain unchanged.",
+      "evidence_root": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/failures/t6-initial-wrapper"
+    },
+    {
+      "id": "FACTOR-ACTION-SEMANTICS",
+      "state": "PARTIAL",
+      "reason": "Five multiple-original same-date links unresolved; eight exact reference deltas nonzero; no guessed tolerance or entitlement ledger."
+    },
+    {
+      "id": "FINANCIAL-FILTER",
+      "state": "BLOCKED",
+      "reason": "Three wide responses contain six out-of-period observations; append-only parser does not repair provider filtering."
+    },
+    {
+      "id": "INDUSTRY-END-DATE",
+      "state": "BLOCKED",
+      "reason": "Six blank out_date literals remain invalid; no inferred null/infinity."
+    },
+    {
+      "id": "SUPPLIER-LICENSE-PIT",
+      "state": "BLOCKED",
+      "reason": "Product/account/channel/expiry/local storage-retention-transfer rights, transport integrity and historical first visibility independently unproven."
+    },
+    {
+      "id": "FROZEN-BARE-COLLECTOR-GUARD",
+      "state": "DISCLOSED_MANDATORY_PARENT_COMPENSATION",
+      "reason": "Frozen bare collector omits future imp_ann_date guard; unchanged strict 42e parent verifier is mandatory before every new real dataset and output."
+    },
+    {
+      "id": "DEV-ISSUER-REGISTRY",
+      "state": "DEFERRED_BEFORE_PERSISTENT_CONSUMER",
+      "reason": "In-process fixture/loader registries do not authorize persistent consumers or restored artifacts; a separate topology/contract Gate remains required."
+    },
+    {
+      "id": "REVIEW-P2-TEXT-BOUNDARY",
+      "state": "CLOSED_NEW_CODE55CB391_FINAL_FUNCTIONAL_RETEST_CONFIRMED",
+      "reason": "Fresh Reviewer found new synthetic normalizer accepted generic credential forms and prefix/encoded private paths; new typed1.0.1/release1.8.1 guard rejects without trimming. Candidate8ba9e57 and exact pre-fix bytes retained; no actual capture leak, old core source or rules changed.",
+      "evidence_root": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/failures/review-P2-text-boundary-G1",
+      "final_review": "docs/overnight/Independent-Functional-Review.json"
+    },
+    {
+      "id": "REVIEW-P2-ACCESSOR-DIRECTORY",
+      "state": "CLOSED_NEW_CODE55CB391_FINAL_FUNCTIONAL_RETEST_CONFIRMED",
+      "reason": "New wrapper accessed directory repeatedly; synthetic accessor could change value after guard. Own data descriptors and one frozen primitive snapshot now bind checks to producer use. Old candidate/logs retained; fixed frozen producer remains unchanged.",
+      "evidence_root": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/failures/review-P2-accessor-G2",
+      "final_review": "docs/overnight/Independent-Functional-Review.json"
+    },
+    {
+      "id": "REVIEW-TOOL-CONTENT-INTERRUPTION",
+      "state": "PRESERVED_RECOVERED_BY_NEW_LIMITED_FUNCTIONAL_REVIEW",
+      "reason": "First fresh Reviewer completed134 independent main PASS and4 accepted pre-fix counterexamples; two subsequent turns were interrupted by tool content review for possible cybersecurity risk. Parent did not bypass external permissions or read credentials for Reviewer. Complete evidence remains; final local functional re-review required.",
+      "final_review": "docs/overnight/Independent-Functional-Review.json"
+    },
+    {
+      "id": "INITIAL_GENERIC_SECRET_SCAN",
+      "state": "CLASSIFIED_SYNTHETIC_NOT_REAL_LEAK",
+      "reason": "Initial generic scan exited1 on9 files, all3 frozen synthetic Bearer test sources repeated in2checkouts; exact credential matches0. Detailed classification preserved; final audit2528files/578Gitblobs exact0 and unclassified generic0.",
+      "evidence_root": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation"
+    }
+  ],
+  "core_golden_regressions_observed": 0,
+  "higher_gates_upgraded": false
+}

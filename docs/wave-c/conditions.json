@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "prior_conditions_sha256": "sha256:cff001586ff296f0e416fb9dddff42cdde90f27d47b1848c58220a63d9e08698",
+  "closed_ids": [],
+  "conditions": [
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "LOCAL_CURRENT_OBSERVED_REAL_FEATURES_AND_SANDBOX_REPORTS",
+      "id": "C12",
+      "remaining": "当前身份观测和代码参考一致；ST/停牌/上市状态历史与准入未证明。",
+      "subject": "真实security/master/status历史",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "PARTIAL_REFERENCE_ONLY",
+      "engineering_progress": "EXISTING_EVIDENCE_PRESERVED_NO_AUTHORITY_UPGRADE",
+      "id": "C13",
+      "remaining": "492日历日/327开市日与13项既有SSE事实一致；全板块规则、来源准入未证明。",
+      "subject": "完整calendar与board/session规则",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED_HISTORICAL",
+      "engineering_progress": "EXISTING_EVIDENCE_PRESERVED_NO_AUTHORITY_UPGRADE",
+      "id": "C14",
+      "remaining": "available_at仅原完整响应捕获时刻，历史首可见仍false。",
+      "subject": "真实历史available_at",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "LOCAL_CURRENT_OBSERVED_REAL_FEATURES_AND_SANDBOX_REPORTS",
+      "id": "C15",
+      "remaining": "三股各327日，未复权、Decimal、OHLC/量额/日历/重复检查完成；单位身份和数值第二来源未证明。",
+      "subject": "真实EOD raw bars",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "EXISTING_EVIDENCE_PRESERVED_NO_AUTHORITY_UPGRADE",
+      "id": "C16",
+      "remaining": "8因子变化点均有同日dividend观测，5点多原始记录未解决；无action feed准入或权益账本。",
+      "subject": "corporate-action feed",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "EXISTING_EVIDENCE_PRESERVED_NO_AUTHORITY_UPGRADE",
+      "id": "C17",
+      "remaining": "981因子日期对齐；8pre_close对账非零delta，禁止猜容差/四舍五入，无权益实证升级。",
+      "subject": "adjustment/entitlement math实证",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "LOCAL_CURRENT_OBSERVED_REAL_FEATURES_AND_SANDBOX_REPORTS",
+      "id": "C18",
+      "remaining": "每股15报告期；6越界行保留、3宽窗整响应BLOCKED；14多版本组/1指标差异组仅观察，修订历史与财报全表未证明。",
+      "subject": "financial parser/revision样本",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "CURRENT_OBSERVED_POLICY_IMPLEMENTED_HISTORICAL_UNSET_REQUIRED",
+      "engineering_progress": "EXISTING_EVIDENCE_PRESERVED_NO_AUTHORITY_UPGRADE",
+      "id": "C19",
+      "remaining": "不补午夜、不用ann_date/update_flag构造历史available_at；历史重建政策仍UNSET_REQUIRED。",
+      "subject": "DATE_ONLY历史重构政策",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "LOCAL_CURRENT_OBSERVED_REAL_FEATURES_AND_SANDBOX_REPORTS",
+      "id": "C20",
+      "remaining": "全部空out_date按INVALID_DATE_LITERAL保留，不变null/无限期；成员历史PIT未证明。",
+      "subject": "industry/sector membership PIT",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "BLOCKED",
+      "engineering_progress": "LOCAL_CURRENT_OBSERVED_REAL_FEATURES_AND_SANDBOX_REPORTS",
+      "id": "C21",
+      "remaining": "沙盒真实特征和Quality/Timing坐标已生成，校准/概率/Edge/正式ADMITTED证据仍缺失。",
+      "subject": "真实指标/校准样本",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    },
+    {
+      "baseline_status_preserved": "FIXTURE_CHAIN_CLOSED_REAL_PRODUCERS_BLOCKED",
+      "engineering_progress": "LOCAL_CURRENT_OBSERVED_REAL_FEATURES_AND_SANDBOX_REPORTS",
+      "id": "C22",
+      "remaining": "沙盒producer产出三份独立Report；正式producer为空stock receipt registry skeleton，formal Card/概率/Edge仍BLOCKED。",
+      "subject": "Research producers与概率/Edge政策",
+      "this_phase_closure": "NOT_CLOSED",
+      "wave_b_engineering_progress_preserved": "NEW_QUARANTINE_CANDIDATE_EVIDENCE_ONLY"
+    }
+  ],
+  "sandbox_success_is_separate_from_formal_condition_closure": true,
+  "productionGate": false
+}

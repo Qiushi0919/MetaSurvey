@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:CostAttribution",
+  "title": "CostAttribution",
+  "type": "object",
+  "properties": {
+    "gross_pnl_cents": {
+      "type": "string",
+      "pattern": "^(0|-?[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "commission_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "proportional_commission_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "minimum_commission_effect_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "stamp_tax_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "exchange_fee_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "other_fee_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "slippage_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "total_friction_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "net_pnl_cents": {
+      "type": "string",
+      "pattern": "^(0|-?[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "minimum_commission_effect_is_subset": {
+      "const": true
+    },
+    "friction_to_gross_profit_ratio": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "friction_per_trade_cents": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "friction_per_round_trip_cents": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "friction_per_strategy": {
+      "type": "object",
+      "properties": {
+        "CORE_40": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,37})$",
+          "x-unit": "CNY_CENTS"
+        },
+        "EVENT_3": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,37})$",
+          "x-unit": "CNY_CENTS"
+        }
+      },
+      "required": [
+        "CORE_40",
+        "EVENT_3"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "gross_pnl_cents",
+    "commission_cents",
+    "proportional_commission_cents",
+    "minimum_commission_effect_cents",
+    "stamp_tax_cents",
+    "exchange_fee_cents",
+    "other_fee_cents",
+    "slippage_cents",
+    "total_friction_cents",
+    "net_pnl_cents",
+    "minimum_commission_effect_is_subset",
+    "friction_to_gross_profit_ratio",
+    "friction_per_trade_cents",
+    "friction_per_round_trip_cents",
+    "friction_per_strategy"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

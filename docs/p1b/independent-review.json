@@ -1,0 +1,762 @@
+{
+  "reviewer": "NEW P1B0+B1 DATA/SEMANTICS independent review, not prior W4 PASS",
+  "candidate_head": "fb39c13b18854a068b2beb1deaee54cad593a66d",
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "files_pinned": 34,
+  "old_closure_files_immutable": 140,
+  "migrations": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006"
+  ],
+  "attacks": [
+    {
+      "id": "B01",
+      "title": "One microsecond and nanosecond future raw visibility",
+      "result": "PASS",
+      "evidence": {
+        "microsecond": "P1B_FUTURE_DATA",
+        "nanosecond": "P1B_FUTURE_DATA"
+      },
+      "reason_codes": [
+        "P1B_FUTURE_DATA"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B02",
+      "title": "Future terms capture independently blocks use",
+      "result": "PASS",
+      "evidence": {
+        "reason": "P1B_FUTURE_DATA"
+      },
+      "reason_codes": [
+        "P1B_FUTURE_DATA"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B03",
+      "title": "DATE_ONLY cannot acquire publication or historical midnight",
+      "result": "PASS",
+      "evidence": {
+        "fully_signed_projection": "P1B_PROJECTION_MISMATCH",
+        "old_cutoff": "P1B_FUTURE_DATA",
+        "actual_published_at": null,
+        "published_date": "2026-09-17"
+      },
+      "reason_codes": [
+        "P1B_PROJECTION_MISMATCH",
+        "P1B_FUTURE_DATA"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B04",
+      "title": "Permission scope cannot become cloud/model/backtest/trading",
+      "result": "PASS",
+      "evidence": {
+        "policy": "P1B_ARBITRARY_PAYLOAD",
+        "transfers": [
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE"
+        ]
+      },
+      "reason_codes": [
+        "P1B_ARBITRARY_PAYLOAD",
+        "P1B_PERMISSION_SCOPE"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B05",
+      "title": "Self-reported license/terms cannot widen narrow authority",
+      "result": "PASS",
+      "evidence": {
+        "license": "P1B_ARBITRARY_PAYLOAD",
+        "terms_hash": "P1B_SOURCE_FACT_MISMATCH"
+      },
+      "reason_codes": [
+        "P1B_ARBITRARY_PAYLOAD",
+        "P1B_SOURCE_FACT_MISMATCH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B06",
+      "title": "Source and terms one-byte mutation reached actual bytes guard",
+      "result": "PASS",
+      "evidence": {
+        "raw": "P1B_SOURCE_HASH_MISMATCH",
+        "terms": "P1B_SOURCE_HASH_MISMATCH"
+      },
+      "reason_codes": [
+        "P1B_SOURCE_HASH_MISMATCH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B07",
+      "title": "Coherently rehashed source cannot retain parent approval",
+      "result": "PASS",
+      "evidence": {
+        "old_policy": "P1B_SOURCE_FACT_MISMATCH",
+        "changed_policy": "P1B_SOURCE_UNAPPROVED"
+      },
+      "reason_codes": [
+        "P1B_SOURCE_FACT_MISMATCH",
+        "P1B_SOURCE_UNAPPROVED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B08",
+      "title": "Coherent UNKNOWN terms do not grant local reference",
+      "result": "PASS",
+      "evidence": {
+        "reason": "P1B_TERMS_UNVERIFIED"
+      },
+      "reason_codes": [
+        "P1B_TERMS_UNVERIFIED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B09",
+      "title": "Unsupported provider/source or non-original URI",
+      "result": "PASS",
+      "evidence": {
+        "uri": "P1B_SOURCE_UNAPPROVED",
+        "other_source": "P1B_SOURCE_UNAPPROVED"
+      },
+      "reason_codes": [
+        "P1B_SOURCE_UNAPPROVED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B10",
+      "title": "No stock coverage, full-year calendar or inferred dates",
+      "result": "PASS",
+      "evidence": {
+        "stocks": "P1B_SCOPE_MISMATCH",
+        "year": "P1B_CALENDAR_COVERAGE",
+        "unknown_days": "P1B_CALENDAR_COVERAGE",
+        "symbol_count": 0,
+        "known_days": {
+          "closures": [
+            "2026-10-01",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-05",
+            "2026-10-06",
+            "2026-10-07"
+          ],
+          "open_dates": [
+            "2026-10-08"
+          ],
+          "weekend_closures": [],
+          "publication_date": "2026-09-17"
+        }
+      },
+      "reason_codes": [
+        "P1B_SCOPE_MISMATCH",
+        "P1B_CALENDAR_COVERAGE"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B11",
+      "title": "Foreign signer cannot authenticate receipt/packet",
+      "result": "PASS",
+      "evidence": {
+        "receipt": "P1B_SIGNATURE_INVALID",
+        "packet": "P1B_SIGNATURE_INVALID"
+      },
+      "reason_codes": [
+        "P1B_SIGNATURE_INVALID"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B12",
+      "title": "Same key/epoch foreign service lacks registered receipt",
+      "result": "PASS",
+      "evidence": {
+        "reason": "P1B_RECEIPT_UNKNOWN"
+      },
+      "reason_codes": [
+        "P1B_RECEIPT_UNKNOWN"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B13",
+      "title": "Receipt and policy revocation hit packet/adapter actual use",
+      "result": "PASS",
+      "evidence": {
+        "reasons": [
+          "P1B_RECEIPT_REVOKED",
+          "P1B_RECEIPT_REVOKED",
+          "P1B_RECEIPT_REVOKED",
+          "P1B_POLICY_REVOKED",
+          "P1B_POLICY_REVOKED",
+          "P1B_POLICY_REVOKED"
+        ]
+      },
+      "reason_codes": [
+        "P1B_RECEIPT_REVOKED",
+        "P1B_POLICY_REVOKED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B14",
+      "title": "Code/schema epoch and point-in-time receipt cannot be reused",
+      "result": "PASS",
+      "evidence": {
+        "epoch": "P1B_CODE_EPOCH_MISMATCH",
+        "later": "P1B_POINT_IN_TIME_ONLY"
+      },
+      "reason_codes": [
+        "P1B_CODE_EPOCH_MISMATCH",
+        "P1B_POINT_IN_TIME_ONLY"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B15",
+      "title": "Signed altered facts, calendar and normalized projection",
+      "result": "PASS",
+      "evidence": {
+        "reason": "P1B_PROJECTION_MISMATCH"
+      },
+      "reason_codes": [
+        "P1B_PROJECTION_MISMATCH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B16",
+      "title": "MAE/MFE/outcome/trace metadata never reaches accepted packet",
+      "result": "PASS",
+      "evidence": {
+        "reasons": [
+          "P1B_FUTURE_DATA",
+          "P1B_FUTURE_DATA",
+          "P1B_FUTURE_DATA",
+          "P1B_PROJECTION_MISMATCH",
+          "P1B_PROJECTION_MISMATCH",
+          "P1B_PROJECTION_MISMATCH"
+        ]
+      },
+      "reason_codes": [
+        "P1B_FUTURE_DATA",
+        "P1B_PROJECTION_MISMATCH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B17",
+      "title": "Arbitrary payload, private path and secret rejects",
+      "result": "PASS",
+      "evidence": {
+        "extra": "P1B_ARBITRARY_PAYLOAD",
+        "path": "P1B_SECRET_OR_PATH",
+        "secret": "P1B_SECRET_OR_PATH"
+      },
+      "reason_codes": [
+        "P1B_ARBITRARY_PAYLOAD",
+        "P1B_SECRET_OR_PATH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B18",
+      "title": "Cloud/manual self-asserted ADMITTED cannot upgrade trust",
+      "result": "PASS",
+      "evidence": {
+        "use": "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+        "adapter": "P1B_ARBITRARY_PAYLOAD",
+        "manual_claim": "P1B_ARBITRARY_PAYLOAD"
+      },
+      "reason_codes": [
+        "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+        "P1B_ARBITRARY_PAYLOAD"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B19",
+      "title": "URI match does not admit lying lead narrative",
+      "result": "PASS",
+      "evidence": {
+        "claims_admitted": false,
+        "source_fact_oct1_closed": true,
+        "lead_stays_pending": true,
+        "restricted_uses": [
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE",
+          "P1B_PERMISSION_SCOPE"
+        ]
+      },
+      "reason_codes": [
+        "P1B_PERMISSION_SCOPE"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B20",
+      "title": "Wrong source and future cloud discovery cannot acquire resolution",
+      "result": "PASS",
+      "evidence": {
+        "source": "P1B_SOURCE_UNAPPROVED",
+        "future_ns": "P1B_FUTURE_DATA"
+      },
+      "reason_codes": [
+        "P1B_SOURCE_UNAPPROVED",
+        "P1B_FUTURE_DATA"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B21",
+      "title": "Citations/manual narrative cannot set or clear Hard Block/grade/sizing",
+      "result": "PASS",
+      "evidence": {
+        "uses": [
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "P1B_CLOUD_EVIDENCE_UNTRUSTED"
+        ],
+        "semantics": "P1B_CLOUD_EVIDENCE_UNTRUSTED"
+      },
+      "reason_codes": [
+        "P1B_CLOUD_EVIDENCE_UNTRUSTED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B22",
+      "title": "High research quality cannot become BUY, probability or real suitability",
+      "result": "PASS",
+      "evidence": {
+        "grade": "A",
+        "action": "WATCH",
+        "score": "P1B_ARBITRARY_PAYLOAD",
+        "probability": "P1B_ARBITRARY_PAYLOAD",
+        "production_enabled": false
+      },
+      "reason_codes": [
+        "P1B_ARBITRARY_PAYLOAD"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B23",
+      "title": "Unknown required dimensions and low evidence cannot become S",
+      "result": "PASS",
+      "evidence": {
+        "outputs": [
+          {
+            "dimension": "company_quality",
+            "grade": "UNSET_REQUIRED"
+          },
+          {
+            "dimension": "sector_quality",
+            "grade": "B"
+          },
+          {
+            "dimension": "catalyst",
+            "grade": "B"
+          },
+          {
+            "dimension": "evidence_quality",
+            "grade": "UNSET_REQUIRED"
+          },
+          {
+            "dimension": "valuation",
+            "grade": "B"
+          },
+          {
+            "dimension": "timing",
+            "grade": "A"
+          },
+          {
+            "dimension": "risk",
+            "grade": "UNSET_REQUIRED"
+          },
+          {
+            "dimension": "cost",
+            "grade": "A"
+          },
+          {
+            "dimension": "account_suitability",
+            "grade": "A"
+          },
+          {
+            "dimension": "tradeability",
+            "grade": "A"
+          }
+        ],
+        "no_evidence": "UNSET_REQUIRED"
+      },
+      "reason_codes": [],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B24",
+      "title": "Only explicit illustrative trusted hard block can take precedence",
+      "result": "PASS",
+      "evidence": {
+        "known_fixture": "X",
+        "cloud": "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+        "non_executable": true
+      },
+      "reason_codes": [
+        "P1B_CLOUD_EVIDENCE_UNTRUSTED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B25",
+      "title": "Real stocks and namespace cannot enter synthetic assessment or calendar receipt",
+      "result": "PASS",
+      "evidence": {
+        "scope": "P1B_SEMANTICS_SCOPE",
+        "symbol": "P1B_ARBITRARY_PAYLOAD",
+        "namespaces": [
+          "P1B_SCOPE_MISMATCH",
+          "P1B_SCOPE_MISMATCH"
+        ],
+        "purpose": "P1B_SCOPE_MISMATCH"
+      },
+      "reason_codes": [
+        "P1B_SEMANTICS_SCOPE",
+        "P1B_ARBITRARY_PAYLOAD",
+        "P1B_SCOPE_MISMATCH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B26",
+      "title": "Resealed snapshot refs and source-byte hash cannot substitute registered facts",
+      "result": "PASS",
+      "evidence": {
+        "snapshot": "P1B_SOURCE_FACT_MISMATCH",
+        "raw_bind": "P1B_SOURCE_FACT_MISMATCH"
+      },
+      "reason_codes": [
+        "P1B_SOURCE_FACT_MISMATCH"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B27",
+      "title": "Rejected trace/payload does not contaminate audit metadata",
+      "result": "PASS",
+      "evidence": {
+        "no_rejected_trace_in_audit": true,
+        "rejection_refs": []
+      },
+      "reason_codes": [],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B28",
+      "title": "Caller bytes and approved Set mutation cannot widen authority",
+      "result": "PASS",
+      "evidence": {
+        "source_unchanged": true,
+        "policy_expansion": "P1B_SOURCE_UNAPPROVED"
+      },
+      "reason_codes": [
+        "P1B_SOURCE_UNAPPROVED"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B29",
+      "title": "productionGate remains false even profile verification asserts true",
+      "result": "PASS",
+      "evidence": {
+        "allowed": false,
+        "reason_codes": [
+          "PRODUCTION_DISABLED_P0",
+          "UNSET_REQUIRED_CONFIG",
+          "SYNTHETIC_FIXTURE_ONLY"
+        ],
+        "missing_paths": [
+          "/account_id",
+          "/settings/capital_cents",
+          "/settings/target_order_cents",
+          "/settings/max_positions",
+          "/settings/max_single_trade_loss_bps",
+          "/settings/max_sector_exposure_bps",
+          "/settings/daily_loss_limit_cents",
+          "/settings/max_portfolio_drawdown_bps",
+          "/settings/margin_allowed",
+          "/settings/monthly_trade_frequency",
+          "/settings/strategy_budget_cents/CORE_40",
+          "/settings/strategy_budget_cents/EVENT_3",
+          "/broker_costs/broker_id",
+          "/broker_costs/commission_rate",
+          "/broker_costs/minimum_commission_cents",
+          "/broker_costs/commission_scope",
+          "/broker_costs/exchange_fee_rate",
+          "/broker_costs/exchange_fee_included",
+          "/broker_costs/other_fee_rate",
+          "/broker_costs/other_fee_included",
+          "/broker_costs/stamp_tax_sell_rate",
+          "/broker_costs/statutory_rate_source",
+          "/broker_costs/statutory_rate_verified_at",
+          "/broker_costs/effective_from",
+          "/broker_costs/effective_to",
+          "/broker_costs/slippage_base_bps",
+          "/broker_costs/slippage_stress_bps",
+          "/broker_costs/rounding_mode",
+          "/broker_costs/configuration_source",
+          "/user_risk_policy_version"
+        ]
+      },
+      "reason_codes": [
+        "PRODUCTION_DISABLED_P0",
+        "UNSET_REQUIRED_CONFIG",
+        "SYNTHETIC_FIXTURE_ONLY"
+      ],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    },
+    {
+      "id": "B30",
+      "title": "Real local reference deterministic positive remains zero-stock and non-executable",
+      "result": "PASS",
+      "evidence": {
+        "repeat_equal": true,
+        "identity_hash": "sha256:e3e92b1cff88d8734b2d46126cc90c0fb43fc2166a614e6165b276fc7f7e2db8",
+        "permission_scope": {
+          "local_download": true,
+          "local_reference": true,
+          "cloud_export": false,
+          "redistribution": false,
+          "historical_backtest": false,
+          "model_research": false,
+          "trading": false
+        },
+        "calendar_scope": {
+          "exchange": "SSE",
+          "symbols": [],
+          "from": "2026-10-01",
+          "to": "2026-10-08",
+          "data_type": "CALENDAR_REFERENCE"
+        },
+        "clock": {
+          "published_date": "2026-09-17",
+          "published_at": null,
+          "available_at": "2026-10-05T10:08:22.746222+00:00",
+          "retrieved_at": "2026-10-05T10:08:22.746222+00:00",
+          "publication_precision": "DATE_ONLY",
+          "clock_basis": "RETRIEVAL_OBSERVATION",
+          "historical_availability_proven": false
+        }
+      },
+      "reason_codes": [],
+      "execution": "ACTUALLY_RUN_EXTERNAL_SCRIPT"
+    }
+  ],
+  "findings": [],
+  "counts": {
+    "tests": 30,
+    "pass": 30,
+    "fail": 0
+  },
+  "positive_scope": {
+    "source": "official:sse-calendar-reference",
+    "data_type": "CALENDAR_REFERENCE",
+    "purpose": "LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE",
+    "strategy_id": "CORE_40",
+    "coverage": {
+      "exchange": "SSE",
+      "symbols": [],
+      "from": "2026-10-01",
+      "to": "2026-10-08",
+      "data_type": "CALENDAR_REFERENCE"
+    },
+    "publication_date": "2026-09-17",
+    "availability": "2026-10-05T10:08:22.746222+00:00",
+    "historical_availability_proven": false,
+    "cloud_export": false,
+    "model_research": false,
+    "historical_backtest": false,
+    "stock_coverage": 0,
+    "production_enabled": false
+  },
+  "conditions": [
+    {
+      "id": "COND-01",
+      "severity": "GATE_SCOPE",
+      "blocking_for": "STOCK_RESEARCH_PILOT_AND_FULL_P1B1",
+      "description": "Calendar-only local reference is not admitted security master, prices, corporate actions, financial revisions, disclosures for stock research or sector PIT. Stock/historical research MVP remains partial/blocked."
+    },
+    {
+      "id": "COND-02",
+      "severity": "SEMANTIC_LIMIT",
+      "blocking_for": "NEXT_MARKET_FINANCIAL_SOURCE_EXTENSION",
+      "description": "SourceObservation lacks independent event_time; Snapshot event_time is observation-capture time. Calendar fact business dates are separate. Clarify this limited observation-event meaning; do not call capture time market event time or fact dates available time; future version must carry explicit business event/effective versus observation/publication/availability/retrieval clocks."
+    },
+    {
+      "id": "COND-03",
+      "severity": "OPERATIONAL_LIMIT",
+      "blocking_for": "PILOT_AND_PRODUCTION",
+      "description": "Memory-only receipt/revocation registry and ephemeral DEV authority do not provide restart durability or production source/issuer authentication; references are point-in-time-only, no model/export permission."
+    }
+  ],
+  "conclusion": "PASS_WITH_CONDITIONS",
+  "authorization": "Human APPROVE_P1B authorizes B0+B1 DATA/SEMANTICS only; this review does not authorize a Research Pilot, real stock recommendation or production.",
+  "code_pin_rejection_not_used_as_attack_evidence": true,
+  "read_only": true,
+  "runtime": {
+    "node": "24.19.0",
+    "platform": "macOS/darwin arm64",
+    "remote_ci_run": false
+  },
+  "tests": {
+    "direct_reviewer_full_check": {
+      "command": "node p1b/scripts/check.mjs",
+      "tests": 300,
+      "pass": 299,
+      "fail": 0,
+      "skipped": 1,
+      "groups": {
+        "frozen_old": {
+          "tests": 258,
+          "pass": 257,
+          "fail": 0,
+          "skipped": 1
+        },
+        "p1b_new": {
+          "tests": 42,
+          "pass": 42,
+          "fail": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "parent_fresh_clean": {
+      "tests": 300,
+      "pass": 299,
+      "fail": 0,
+      "skipped": 1
+    },
+    "independent_cases": {
+      "cases": 30,
+      "adversarial_cases": 29,
+      "positive_case": 1,
+      "pass": 30,
+      "fail": 0
+    },
+    "skip_reason": "Optional external legacy environment integration only; no V5 restore/run in this review."
+  },
+  "status": {
+    "p1b0_semantics": "PASS_FOR_SYNTHETIC_TEMPLATES_ONLY",
+    "real_data_admission": "PASS_FOR_SPECIFIC_SSE_LOCAL_NONCOMMERCIAL_CALENDAR_REFERENCE_ONLY",
+    "p1b1_stock_historical_research_mvp": "PARTIAL_BLOCKED",
+    "full_trading_calendar": "NOT_ESTABLISHED",
+    "stock_research_pilot": "BLOCKED_PENDING_ADMITTED_STOCK_DATA_AND_EXPLICIT_APPROVAL",
+    "model_research": "NOT_AUTHORIZED",
+    "productionGate": false
+  },
+  "authority_limits": "Parent-created trusted captures and approved hashes are constructor trust inputs, not public untrusted fields. DEV key is ephemeral process authority, not independent production authentication. No additional network acquisition occurred in reviewer task.",
+  "clock_finding": {
+    "severity": "CONDITION_NOT_CURRENT_EXPLOIT",
+    "blocking_current_local_calendar_scope": false,
+    "event_semantics": "SourceObservation.clock has no independent event_time; SnapshotManifest.provenance.event_time is source-observation capture time. Calendar closures/open_dates/weekend_closures are business fact dates, not availability.",
+    "published_date": "2026-09-17",
+    "published_at": null,
+    "available_at": "2026-10-05T10:08:22.746222+00:00",
+    "historical_availability_proven": false,
+    "next_extension_requirement": "New version/explicit adapter must separate observation event, business event/effective date, publication precision, available_at and retrieved_at before market/financial research sources. No retroactive midnight or event-based availability assumption."
+  },
+  "scope_analysis": "This is one real raw/terms → observation → calendar facts → DQ → observed snapshot → policy → stored signed receipt → sanitized LOCAL_REVIEW_ONLY packet → source-facts-only EvidenceResolution chain. symbols=[] means zero securities; it is not limited stock-universe/historical research data admission. Real Research Producer/Pilot prerequisites remain unmet.",
+  "inventory_review": {
+    "recorded_at": "2026-10-05T10:22:08.462Z",
+    "source_entries": 16,
+    "legacy_and_prior_captures": "Remain BLOCKED; limited new calendar source does not relicense them.",
+    "method": "Read-only metadata inspection of machine inventory and implementation; reviewer did not open credentials or run legacy programs."
+  },
+  "commands": [
+    "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node p1b/scripts/check.mjs",
+    "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/reviewer/attacks.mjs"
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/reviewer/attacks.mjs",
+      "sha256": "sha256:f4e09a35cac20deec2eee882be07a75161b31c33cfa92df6c18582e5c3adb1e4",
+      "bytes": 20989
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/reviewer/attacks.log",
+      "sha256": "sha256:c9471db7ddb888decdb718d8670c02609009e24b81744dce1f32204469bf098d",
+      "bytes": 7714
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/reviewer/check.log",
+      "sha256": "sha256:24a5599ee8b09681058738c7b021b61e931d0d2c10c9ad9f18c67088365981f7",
+      "bytes": 33597
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b/validation.json",
+      "sha256": "sha256:f861bc4394d42796cefd134c40f55209dbf1702a0ea62aefa0ebefa3555608de",
+      "bytes": 1967
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b/real-reference-results.json",
+      "sha256": "sha256:de81c4d89e6b20e848cf3f9663dab56e8cf10bf4be19ac516cafe597b2301d85",
+      "bytes": 27234
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b/schema-report.json",
+      "sha256": "sha256:b5ab42b2c6c1bb01df3cbb725384fa3d7d8cec7a9a04788c224e140e035b1f77",
+      "bytes": 6012
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b/source-inventory.json",
+      "sha256": "sha256:5501600545a773d2381675c49a94253533e13f0e177994925db53423fa93478f",
+      "bytes": 26433
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/clean-check.log",
+      "sha256": "sha256:5303eced99a672156786221f2c85e099747ca5dd2fe8474828944f09474e4d81",
+      "bytes": 33607
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/p1b/tests/fixtures/real-reference/capture-manifest.json",
+      "sha256": "sha256:c468e3e095aec4e6f1ce2fa8fd3c5d8b2b59329b546950d595170a6d0f734221",
+      "bytes": 2099
+    }
+  ],
+  "old_preservation": "All 140 old closure implementation/fixture hashes verified again. Git diff versus p1a-closure-20261005 was empty for src/scripts/tests/config/closure/contracts/closure/migrations/legacy/docs/experiments and historical release files. 001–006/schema6 and economic baselines unchanged; no new migration.",
+  "repo_mutations_by_reviewer": false,
+  "open_blocking_findings": 0
+}

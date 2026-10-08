@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "counts_are_physical_observations_not_unique_events_or_business_coverage": true,
+  "stocks": [
+    {
+      "symbol": "603993.SH",
+      "features": 31,
+      "dimensions": 10,
+      "quality": "COMPUTED_FROM_REAL_ELIGIBLE_FUNDAMENTAL_OBSERVATIONS_EXPERIMENTAL_UNCALIBRATED",
+      "timing": "COMPUTED_INDEPENDENTLY_FROM_REAL_RAW_PRICES_EXPERIMENTAL_UNCALIBRATED",
+      "unknown_features": [
+        "st_status",
+        "suspension_status",
+        "earnings_quality",
+        "cash_generation",
+        "valuation_ttm_pe",
+        "valuation_ev_ebitda",
+        "current_observed_industry",
+        "historical_industry_membership",
+        "company_announcement_catalyst",
+        "verified_action_reconciliation"
+      ],
+      "conflicts": [],
+      "coverage": [
+        {
+          "category": "security",
+          "eligible_observation_count": 3,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "calendar",
+          "eligible_observation_count": 500,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "bars",
+          "eligible_observation_count": 330,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "actions",
+          "eligible_observation_count": 76,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "factors",
+          "eligible_observation_count": 333,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "financial",
+          "eligible_observation_count": 13,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "industry",
+          "eligible_observation_count": 1,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "announcements",
+          "eligible_observation_count": 0,
+          "formal_admission": "BLOCKED",
+          "state": "UNKNOWN"
+        }
+      ],
+      "assessment_ref": {
+        "object_id": "sandbox:assessment:603993.SH:9f7adf3d48f6b5bd",
+        "object_version": 1,
+        "content_hash": "sha256:4c44e0112a59467886edc6fefb47da2cfec992cb560d1fe6973b3eeb01c02672"
+      }
+    },
+    {
+      "symbol": "600312.SH",
+      "features": 31,
+      "dimensions": 10,
+      "quality": "COMPUTED_FROM_REAL_ELIGIBLE_FUNDAMENTAL_OBSERVATIONS_EXPERIMENTAL_UNCALIBRATED",
+      "timing": "COMPUTED_INDEPENDENTLY_FROM_REAL_RAW_PRICES_EXPERIMENTAL_UNCALIBRATED",
+      "unknown_features": [
+        "st_status",
+        "suspension_status",
+        "earnings_quality",
+        "cash_generation",
+        "valuation_ttm_pe",
+        "valuation_ev_ebitda",
+        "current_observed_industry",
+        "historical_industry_membership",
+        "company_announcement_catalyst",
+        "verified_action_reconciliation"
+      ],
+      "conflicts": [],
+      "coverage": [
+        {
+          "category": "security",
+          "eligible_observation_count": 3,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "calendar",
+          "eligible_observation_count": 500,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "bars",
+          "eligible_observation_count": 330,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "actions",
+          "eligible_observation_count": 102,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "factors",
+          "eligible_observation_count": 333,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "financial",
+          "eligible_observation_count": 13,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "industry",
+          "eligible_observation_count": 0,
+          "formal_admission": "BLOCKED",
+          "state": "UNKNOWN"
+        },
+        {
+          "category": "announcements",
+          "eligible_observation_count": 0,
+          "formal_admission": "BLOCKED",
+          "state": "UNKNOWN"
+        }
+      ],
+      "assessment_ref": {
+        "object_id": "sandbox:assessment:600312.SH:9f7adf3d48f6b5bd",
+        "object_version": 1,
+        "content_hash": "sha256:cb3cfa96abd1fd90e38ee8d4ce71d9c35f7c42dd0bfb4bd6c8eae588c95f457e"
+      }
+    },
+    {
+      "symbol": "603228.SH",
+      "features": 31,
+      "dimensions": 10,
+      "quality": "COMPUTED_FROM_REAL_ELIGIBLE_FUNDAMENTAL_OBSERVATIONS_EXPERIMENTAL_UNCALIBRATED",
+      "timing": "COMPUTED_INDEPENDENTLY_FROM_REAL_RAW_PRICES_EXPERIMENTAL_UNCALIBRATED",
+      "unknown_features": [
+        "st_status",
+        "suspension_status",
+        "earnings_quality",
+        "cash_generation",
+        "valuation_ttm_pe",
+        "valuation_ev_ebitda",
+        "current_observed_industry",
+        "historical_industry_membership",
+        "company_announcement_catalyst",
+        "verified_action_reconciliation"
+      ],
+      "conflicts": [
+        "FINANCIAL_OBSERVED_METRIC_VERSIONS:20250630; CHRONOLOGY_UNKNOWN"
+      ],
+      "coverage": [
+        {
+          "category": "security",
+          "eligible_observation_count": 3,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "calendar",
+          "eligible_observation_count": 500,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "bars",
+          "eligible_observation_count": 330,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "actions",
+          "eligible_observation_count": 62,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "factors",
+          "eligible_observation_count": 332,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "financial",
+          "eligible_observation_count": 16,
+          "formal_admission": "BLOCKED",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "category": "industry",
+          "eligible_observation_count": 0,
+          "formal_admission": "BLOCKED",
+          "state": "UNKNOWN"
+        },
+        {
+          "category": "announcements",
+          "eligible_observation_count": 0,
+          "formal_admission": "BLOCKED",
+          "state": "UNKNOWN"
+        }
+      ],
+      "assessment_ref": {
+        "object_id": "sandbox:assessment:603228.SH:9f7adf3d48f6b5bd",
+        "object_version": 1,
+        "content_hash": "sha256:6694139514328e8e2719c61408a6af760e6c307caa4fe21d69ffd7d175146cff"
+      }
+    }
+  ],
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false
+}

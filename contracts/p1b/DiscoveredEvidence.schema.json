@@ -1,0 +1,143 @@
+{
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "DiscoveredEvidence"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "trust_class": {
+      "const": "CLOUD_DISCOVERED_EVIDENCE"
+    },
+    "status": {
+      "const": "PENDING_VERIFICATION"
+    },
+    "original_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "lead": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "discovered_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "origin": {
+      "enum": [
+        "LLM",
+        "MANUAL_RESEARCH_LEAD"
+      ]
+    },
+    "admission_ref": {
+      "type": "null"
+    },
+    "usable_for_hard_block": {
+      "const": false
+    },
+    "usable_for_grade": {
+      "const": false
+    },
+    "usable_for_sizing": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "production_enabled": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "trace_id",
+    "trust_class",
+    "status",
+    "original_uri",
+    "lead",
+    "discovered_at",
+    "origin",
+    "admission_ref",
+    "usable_for_hard_block",
+    "usable_for_grade",
+    "usable_for_sizing",
+    "can_produce_order",
+    "production_enabled"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1b:DiscoveredEvidence:1.0.0",
+  "title": "DiscoveredEvidence",
+  "x-contract": {
+    "version": "1.0.0",
+    "money": "Integer-cent decimal strings / BigInt; price/rate Decimal; no production values/defaults.",
+    "timezone": "Offset timestamps; Asia/Shanghai business; UTC storage; DATE_ONLY never promoted to intraday.",
+    "hash": "Canonical JSON SHA256 excluding only top-level content_hash/proof. Snapshot v1 uses original protocol.",
+    "reason_codes": [
+      "P1B_SOURCE_UNAPPROVED",
+      "P1B_LICENSE_UNKNOWN",
+      "P1B_TERMS_UNVERIFIED",
+      "P1B_PERMISSION_SCOPE",
+      "P1B_SCOPE_MISMATCH",
+      "P1B_SOURCE_HASH_MISMATCH",
+      "P1B_SOURCE_FACT_MISMATCH",
+      "P1B_FUTURE_DATA",
+      "P1B_HISTORICAL_CLOCK_UNPROVEN",
+      "P1B_RECEIPT_UNKNOWN",
+      "P1B_RECEIPT_REVOKED",
+      "P1B_POLICY_REVOKED",
+      "P1B_HASH_MISMATCH",
+      "P1B_SIGNATURE_INVALID",
+      "P1B_PROJECTION_MISMATCH",
+      "P1B_ARBITRARY_PAYLOAD",
+      "P1B_SECRET_OR_PATH",
+      "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+      "P1B_GRADE_UNCALIBRATED",
+      "P1B_HARD_BLOCK",
+      "P1B_TIMING_UNSATISFIED",
+      "P1B_EDGE_UNSET",
+      "P1B_UNKNOWN_REAL_ACCOUNT",
+      "P1B_NON_EXECUTABLE",
+      "P1B_REAL_STOCK_PILOT_BLOCKED",
+      "P1B_EXPERIMENTAL_SCORE_ONLY",
+      "P1B_CALENDAR_COVERAGE",
+      "P1B_CODE_EPOCH_MISMATCH",
+      "P1B_POINT_IN_TIME_ONLY",
+      "P1B_SEMANTICS_SCOPE"
+    ],
+    "required_optional": "All declared fields required; null is explicitly unknown.",
+    "invalidation": [
+      "changed source bytes/terms/projection",
+      "different purpose/coverage/namespace/cutoff/code epoch",
+      "revocation",
+      "attempted cloud/stock/trading scope upgrade"
+    ],
+    "production_enabled": false
+  }
+}

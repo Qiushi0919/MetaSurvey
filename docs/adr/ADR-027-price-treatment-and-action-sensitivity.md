@@ -1,0 +1,3 @@
+# ADR-027 — Raw prices and causal factor sensitivity
+
+Append new diagnostic artifacts without rewriting originals. Keep raw OHLC unchanged. Separate sensitivity series uses factor(t)/factor(first observed session), avoiding a future terminal-factor anchor. Current-observed factor revisions have no proven historical visibility. This is neither authoritative adjustment nor cash entitlement or total return. No cash/share corporate action credits. Preserve five action ambiguities, eight nonzero pre_close deltas, and UNSET tolerance/rounding. DPU minor-unit HALF_EVEN ledger rounding is a synthetic engine convention and does not settle the source reconciliation tolerance.

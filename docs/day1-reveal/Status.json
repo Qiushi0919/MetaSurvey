@@ -1,0 +1,146 @@
+{
+  "D20": "UNSET",
+  "D40": "UNSET",
+  "Day0_integrity": "PASS",
+  "Snapshot_B": "NOT_YET_RUN_NO_PLACEHOLDER_SNAPSHOT",
+  "actual_D1": "BLOCKED",
+  "actual_G_store_created": false,
+  "actual_authority": false,
+  "actual_forward_days": 0,
+  "actual_signature_chain": "NOT_PROVIDED_NOT_VERIFIED",
+  "base_reference_A": "PASS_CURRENT_RAW_REFERENCE_MATCH",
+  "baseline_commit": "501f94d763a5be32660b85f5e4ba07eefb93c1ef",
+  "baseline_status_ref": {
+    "bytes": 6615,
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/dual-track/Status.json",
+    "sha256": "sha256:5cad401c6339d102d0b0745de00ff060682ea74839eb420c8c8f606d41f9df65"
+  },
+  "checks": {
+    "actual_signed_D1_positive_path": "NOT_RUN_NO_ACTUAL_GRANTS",
+    "atomic_assertions_not_added_as_cases": true,
+    "case_count": 279,
+    "checked_at": "2026-10-08T04:19:45.038218Z",
+    "code_candidate_commit": "932edc2ce63041141655d430cfe136a50036a3e9",
+    "fail": 0,
+    "fresh_clone": "PASS_LOCAL_UNMOVED_PRIVATE_ARCHIVES_SHARED_LOCKED_NODE_MODULES",
+    "independent_human_review": false,
+    "kind": "Day1OfflineChecks",
+    "logs": [
+      {
+        "bytes": 205,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Fresh-Clone.log",
+        "sha256": "sha256:82523964e94a43e0f0e61a4f535cb2ad254e7587126d6ef2df331c4fde2337a2"
+      },
+      {
+        "bytes": 3011,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Fresh-New-Checks.log",
+        "sha256": "sha256:fda8babadd626da9958fad6e638bde0376ee61fca5bbcfb77be27b06245e2fc8"
+      },
+      {
+        "bytes": 3979,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Fresh-Original-Dual-Track-Checks.log",
+        "sha256": "sha256:432f1e7269b288624977182407781e938deec2c4750255659193bc68febe8d05"
+      },
+      {
+        "bytes": 20585,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/Fresh-Frozen-HB-Checks.log",
+        "sha256": "sha256:e445167d16869b0781bec6044f9104543de70642fae8e0bf2cd71a1bf1a06864"
+      }
+    ],
+    "new_python_cases": 24,
+    "new_schema_atomic_assertions": 51,
+    "original_HB_node_cases": 143,
+    "original_HB_python_cases": 87,
+    "original_dual_track_cases": 25,
+    "original_schema_atomic_assertions": 35,
+    "prior_phase_results_not_added_to_this_round_count": true,
+    "public_setup_signatures_reverified": 2,
+    "skip": 0,
+    "version": "1.0.0"
+  },
+  "code_candidate_commit": "932edc2ce63041141655d430cfe136a50036a3e9",
+  "engineering": "PASS_WITH_CONDITIONS",
+  "formal_PIT": {
+    "continuous_domains_closed": 0,
+    "domain_count": 20,
+    "symbol_domain_rows": 60
+  },
+  "freeze_timestamp": "LOCAL_HOST_ONLY_NOT_INDEPENDENT",
+  "higher_gates": {
+    "broker": "BLOCKED",
+    "cloud": "BLOCKED",
+    "formal_historical_backtest": "BLOCKED",
+    "paper_trading": "BLOCKED",
+    "production_data": "BLOCKED",
+    "production_execution": "BLOCKED",
+    "real_money": "BLOCKED"
+  },
+  "historical_lite": {
+    "date_span": [
+      "2025-06-03",
+      "2026-09-30"
+    ],
+    "formal_admission": "BLOCKED",
+    "historical_visibility_proven": false,
+    "horizons": [
+      1,
+      5,
+      10,
+      20,
+      40
+    ],
+    "observed_sessions_per_symbol": 327,
+    "prediction_positions": 4905,
+    "real_fee_net_return": null,
+    "real_strategy_trade_count": 0,
+    "right_censored": 228,
+    "sample_exposed": true,
+    "scored_reference_pairs": 4449,
+    "state": "RETROSPECTIVE_RECONSTRUCTION_COMPLETE_FORMAL_OOS_BLOCKED",
+    "symbols": [
+      "603993.SH",
+      "600312.SH",
+      "603228.SH"
+    ],
+    "untouched_oos": false,
+    "warmup": 228
+  },
+  "kind": "Day1RevealStatus",
+  "old_external_original": "ORIGINAL_NOT_PROVIDED_HASH_NOT_VERIFIED",
+  "outcomes": 0,
+  "prediction_sha256": "sha256:954569db8402e2e50e66841c1a449523c72f20ff1ce364d6183c4d3c7a018039",
+  "prediction_signature": "NOT_PROVIDED_NOT_VERIFIED",
+  "prediction_v1_horizons": [
+    1,
+    5,
+    10
+  ],
+  "productionGate": false,
+  "public_setup_signatures": "OWNER_AND_REVIEWER_VERIFIED_SETUP_ONLY",
+  "recorded_at": "2026-10-08T04:19:45.052415Z",
+  "remaining_owner_parameters": "30_ORIGINAL_PLUS_15_ADDITIONAL_UNSET_REQUIRED",
+  "stop_after_delivery": true,
+  "stop_reason_codes": [
+    "ACTUAL_EOD_ORIGINALS_NOT_OBSERVED",
+    "SIGNED_CAPTURE_REVIEW_FORWARD_CHAIN_NOT_PROVIDED"
+  ],
+  "target_dates": {
+    "D1": "2026-10-08",
+    "D10": "2026-10-21",
+    "D5": "2026-10-14"
+  },
+  "this_round_actions": {
+    "G_store_mutations": 0,
+    "actual_forward_days_increment": 0,
+    "auto_run": false,
+    "broker_orders": 0,
+    "credential_lookups": 0,
+    "market_requests": 0,
+    "native_orders": 0,
+    "private_key_reads": 0,
+    "real_model_calls": 0,
+    "real_outcomes": 0,
+    "signed_grants_created": 0
+  },
+  "version": "1.0.0"
+}

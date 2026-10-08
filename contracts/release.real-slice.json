@@ -1,0 +1,20 @@
+{
+  "release_version": "1.4.0",
+  "scope": "CURRENT_OBSERVED_LOCAL_REFERENCE_AND_SYNTHETIC_CHAIN_ONLY",
+  "schema_version": 6,
+  "code_provenance": "real-slice/config/code-provenance.json",
+  "contract_versions": {
+    "ClockEvidence": "1.0.0",
+    "SourceObservation": "2.0.0",
+    "SourceAdmissionPolicy": "2.0.0",
+    "StockSnapshot": "1.0.0",
+    "AdmissionReceipt": "2.0.0",
+    "BrainPacket": "2.0.0",
+    "FixtureResearchChain": "1.0.0"
+  },
+  "historical_visibility_proven": false,
+  "research_pilot_authorized": false,
+  "cloud_model_export_authorized": false,
+  "production_execution_enabled": false,
+  "new_migrations": []
+}

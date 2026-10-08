@@ -1,0 +1,51 @@
+{
+  "contract_name": "LedgerEntry",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-LedgerEntry",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:48a078082a7b2cd54aba8a6dac214bf1fb51ad1aa78d19a7de21e3729c14bd28",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "strategy_id": "CORE_40",
+  "currency": "CNY",
+  "entry_type": "FILL",
+  "symbol": "SSE:600000",
+  "fill_ref": {
+    "object_id": "fixture-ref",
+    "object_version": 1,
+    "content_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a"
+  },
+  "cash_delta_cents": "-100123",
+  "quantity_delta": 100,
+  "account_cash_after_cents": "0",
+  "position_quantity_after": 100,
+  "effective_at": "2026-10-05T02:00:00Z",
+  "sequence": 1,
+  "previous_entry_hash": null
+}

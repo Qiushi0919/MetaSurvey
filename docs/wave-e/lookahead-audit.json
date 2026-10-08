@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "private_ref": {
+    "bytes": 7777,
+    "name": "lookahead-audit.json",
+    "path": "/Users/qiushi/\u6295\u8d44\u7814\u7a76/.p1b-archives/wave-e-20261006/results/DIAGNOSTIC-G1/lookahead-audit.json",
+    "sha256": "sha256:7d415345c5b3f404af3f2446bcdd00a91a8f079f300f49c0dc9c4c82010a22c3"
+  },
+  "state": "PASS",
+  "historical_visibility_proven": false,
+  "formal_strategy_evidence": false,
+  "productionGate": false
+}

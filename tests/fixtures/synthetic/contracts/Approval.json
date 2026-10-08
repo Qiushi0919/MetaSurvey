@@ -1,0 +1,56 @@
+{
+  "contract_name": "Approval",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-decision-approval",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:7dfe77470981b00483c20bfd1ed61d56ec182b7b32d7a825302e2997974b7583",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "strategy_id": "CORE_40",
+  "actor_type": "HUMAN_USER",
+  "actor_id": "fixture-user",
+  "channel": "USER_UI",
+  "phase": "DECISION_APPROVAL",
+  "decision": "USER_APPROVED",
+  "card_ref": {
+    "object_id": "synthetic-ResearchCard",
+    "object_version": 1,
+    "content_hash": "sha256:daf00b9d38eed9915261fda20fc98809c73e0d6075c4e75b270f8df30da4d286"
+  },
+  "signal_ref": {
+    "object_id": "synthetic-SignalEvent",
+    "object_version": 1,
+    "content_hash": "sha256:ce8d758ba4e97224366fdf5316550be76df877bd794d5337d0c16b3d915e04e2"
+  },
+  "cost_ref": null,
+  "order_terms_hash": null,
+  "account_snapshot_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+  "approved_at": "2026-10-05T02:00:00Z",
+  "expires_at": "2026-10-05T03:00:00Z"
+}

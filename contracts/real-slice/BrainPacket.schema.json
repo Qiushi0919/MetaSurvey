@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:real-slice:BrainPacket:2.0.0",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "BrainPacket"
+    },
+    "contract_version": {
+      "const": "2.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "receipt_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "purpose": {
+      "const": "LOCAL_CURRENT_OBSERVED_REFERENCE"
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "transfer_mode": {
+      "const": "LOCAL_REVIEW_ONLY"
+    },
+    "projection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "DOCUMENT_REFERENCE",
+              "CALENDAR_CLOSED",
+              "CALENDAR_OPEN",
+              "SESSION_RULE"
+            ]
+          },
+          "symbol": {
+            "anyOf": [
+              {
+                "enum": [
+                  "SSE:603993",
+                  "SSE:600312",
+                  "SSE:603228"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "official_uri": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "document_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "symbol",
+          "date",
+          "title",
+          "official_uri",
+          "document_sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 500
+    },
+    "projection_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "category_status": {
+      "type": "object",
+      "properties": {
+        "SECURITY_STATUS": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "CALENDAR_RULES": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "RAW_BARS_1D": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "CORPORATE_ACTIONS": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "ADJUSTMENT_VERSIONS": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "FINANCIAL_REVISIONS": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "ANNOUNCEMENTS": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "INDUSTRY_MEMBERSHIP": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        }
+      },
+      "required": [
+        "SECURITY_STATUS",
+        "CALENDAR_RULES",
+        "RAW_BARS_1D",
+        "CORPORATE_ACTIONS",
+        "ADJUSTMENT_VERSIONS",
+        "FINANCIAL_REVISIONS",
+        "ANNOUNCEMENTS",
+        "INDUSTRY_MEMBERSHIP"
+      ],
+      "additionalProperties": false
+    },
+    "market_state": {
+      "enum": [
+        "CLOSED",
+        "UNKNOWN",
+        "OPEN"
+      ]
+    },
+    "latest_trading_session": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "live_price": {
+      "const": null
+    },
+    "trade_trigger": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "cloud_export_allowed": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "proof": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "const": "ED25519"
+        },
+        "public_key_der_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "signature": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "algorithm",
+        "public_key_der_sha256",
+        "signature"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "snapshot_ref",
+    "receipt_ref",
+    "namespace",
+    "purpose",
+    "decision_cutoff",
+    "transfer_mode",
+    "projection",
+    "projection_hash",
+    "category_status",
+    "market_state",
+    "latest_trading_session",
+    "live_price",
+    "trade_trigger",
+    "tradeable",
+    "can_produce_order",
+    "cloud_export_allowed",
+    "historical_visibility_proven",
+    "production_enabled",
+    "proof"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:ReplayInputManifest",
+  "title": "ReplayInputManifest",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "ReplayInputManifest"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "fixture_scope": {
+      "const": "SYNTHETIC_EXPERIMENTAL"
+    },
+    "mode": {
+      "const": "PAPER"
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "data_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "feature_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "feature_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "account_profile_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "cost_profile_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "rule_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "calendar_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "calendar_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "security_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "security_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "code_version": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "source_tree_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "signals_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "edge_enabled": {
+      "type": "boolean"
+    },
+    "edge_policy_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "execution_fixture_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "fixture_scope",
+    "mode",
+    "production_enabled",
+    "snapshot_ref",
+    "data_hash",
+    "feature_ref",
+    "feature_version",
+    "account_profile_ref",
+    "cost_profile_ref",
+    "rule_version",
+    "calendar_hash",
+    "calendar_version",
+    "security_hash",
+    "security_version",
+    "code_version",
+    "source_tree_hash",
+    "signals_hash",
+    "edge_enabled",
+    "edge_policy_hash",
+    "content_hash",
+    "execution_fixture_hash"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

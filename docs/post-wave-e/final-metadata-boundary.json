@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "authority": "EXTERNAL_FINAL_GIT_HEAD_TREE_CLEAN_TAG_BUNDLE_BINDING",
+  "external_checkpoint": "/Users/qiushi/投资研究/.p1b-archives/post-wave-e-20261006/delivery/Delivery-Checkpoint.json",
+  "code_candidate_is_separate_from_final_documentation_commit": true,
+  "private_archives_must_remain_unmoved": true,
+  "Git_only_bundle_has_no_private_archives": true,
+  "staged_package_requires_separate_original_hash_check": true,
+  "historical_gate_files_immutable": true,
+  "productionGate": false
+}

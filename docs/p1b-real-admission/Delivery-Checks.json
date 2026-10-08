@@ -1,0 +1,218 @@
+{
+  "version": "1.0.0",
+  "checked_at": "2026-10-05T15:19:40.278329+00:00",
+  "candidate_commit": "55cfa442ea85cddbfdd860865e5490902be38c9f",
+  "source_tree_hash": "sha256:4dcc9bd86cc87ef4c7032a124a69ed4d0e62c957b1243c453e388ecde63aaf9a",
+  "gate_content_hash": "sha256:43d27e322c95bf0161a48beab066e8a6eb967fef0b0a9245330cc3ae50f61b7f",
+  "checks": [
+    {
+      "id": "candidate_clone_head",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "delivery_metadata_candidate",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "canonical_workspace_unique_results",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "delivery_reports_exact_failure_not_full_pass",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "all_six_final_logs_hash_match",
+      "result": "PASS",
+      "evidence": [
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-npm-ci.log",
+          "sha256": "sha256:99d4e3babaf4fb540598c80e2806b1507022f58cc8f05c3e3a2dcff2bbb75171"
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-npm-check.log",
+          "sha256": "sha256:98f9758a3a68d0c0faf9971f66ec3842b6ca223aeaa733956b6fa07a6f61827b"
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-all-gate-check.log",
+          "sha256": "sha256:5dc179b0783a524d63626f5a835c0c9966c0beae64e7ad8c9f8c4748bf233b74"
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-new-only-check.log",
+          "sha256": "sha256:ce3eefa2a0f4bf5c004d147d75950678efcd99bfe787cd284ffe870273d771eb"
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/all-frozen-baselines-check.log",
+          "sha256": "sha256:854920c311f781640876aaaf373015b9c57f7e61438a89fd7f6a39f288447c25"
+        },
+        {
+          "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/new-final-gate-check.log",
+          "sha256": "sha256:e75a843f7bc30a19a91ef025a5c11fa9fbc3f860094b6dbb951e59a7c9d4186d"
+        }
+      ]
+    },
+    {
+      "id": "fresh_dependency_and_base_check",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "base_log_has_258_257_0_1",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "aggregate_failure_precedes_current_epoch_tests",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "new_only_log_27_plus_38",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "frozen_old_validator_exact_baseline_and_clone",
+      "result": "PASS",
+      "evidence": {
+        "sha256": "sha256:48ce0d4d9c72aa29f6ce0106e8a05061168ae5dd1bd9f5303a0e99660e919bca"
+      }
+    },
+    {
+      "id": "frozen_old_gate_exact_baseline_and_clone",
+      "result": "PASS",
+      "evidence": {
+        "sha256": "sha256:21dc8fc52d223aef7422b8158931bbc15fac9572af6c660f943da9ad611365cf"
+      }
+    },
+    {
+      "id": "unchanged_absolute_refs_outside_clone_allowlist",
+      "result": "PASS",
+      "evidence": {
+        "clone_derived_archive": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/.p1b-archives/tushare-admission-20261005/",
+        "unapproved_ref_count": 7,
+        "first_unapproved_ref": "/Users/qiushi/投资研究/ashare-trading-v1/docs/authorizations/TUSHARE15000-local-admission-20261005.md"
+      }
+    },
+    {
+      "id": "independent_canonical_frozen_verifier_pass",
+      "result": "PASS",
+      "evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-canonical-frozen-verifier.log",
+        "sha256": "sha256:fd2ea4f40fd9ce3ff9f4e4e99a5752456ad2684f12db0dd94b72fbe62e9507f8",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "independent_clone_frozen_verifier_exact_failure",
+      "result": "PASS",
+      "evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-clone-frozen-verifier.log",
+        "sha256": "sha256:5394f8e8830ad26c4e11557a1f03af9362fb78f3a412bce89209d42dc9e436a2",
+        "exit_code": 1
+      }
+    },
+    {
+      "id": "all_nine_current_source_pins_same_in_clone",
+      "result": "PASS",
+      "evidence": {
+        "source_tree_hash": "sha256:4dcc9bd86cc87ef4c7032a124a69ed4d0e62c957b1243c453e388ecde63aaf9a"
+      }
+    },
+    {
+      "id": "current_gate_exact_clone_epoch_and_blocks",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "independent_current_clone_44_original_replay_pass",
+      "result": "PASS",
+      "evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-clone-current-verifier.log",
+        "sha256": "sha256:c138396da3b38c3e3a359d7012ff4c3acfdfabe1b9120707005a7c7e83be0657",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "original_three_review_artifacts_unchanged",
+      "result": "PASS",
+      "evidence": {
+        "Independent-Review.json": "sha256:e804f226d118194df69b8d8e4d2d1e042e33da2c64b63791e0d94226e5dbddd0",
+        "Independent-Review.md": "sha256:37c077c1a253c1b642ab4b5b21a4cdfbe1c986551de4d2eff2edf9f8d16354cb",
+        "Attack-Matrix.json": "sha256:c05037a222d407f42e2ecef810d5e9423bd8376fc422176bc0adac2c0109ec3e"
+      }
+    },
+    {
+      "id": "repo_three_review_copies_exact",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "reviewed_owner_gate_checkpoint_exact",
+      "result": "PASS",
+      "evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/delivery-checkpoint/Owner-Gate-Review-reviewed-55cfa442.md",
+        "sha256": "sha256:0237ae0da33201d839fc2769159815aac60e68508e7ee2525b59b6b652aaa411"
+      }
+    },
+    {
+      "id": "owner_gate_delivery_append_discloses_clone_failure",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "delivery_metadata_hash_refs_and_unresolved_debt",
+      "result": "PASS",
+      "evidence": null
+    },
+    {
+      "id": "only_three_allowed_delivery_metadata_tracked_changes",
+      "result": "PASS",
+      "evidence": [
+        "docs/p1b-real-admission/Gate-Review.md",
+        "docs/p1b-real-admission/known-failures.json",
+        "docs/p1b-real-admission/validation.json"
+      ]
+    }
+  ],
+  "summary": {
+    "checks": 23,
+    "pass": 23,
+    "fail": 0
+  },
+  "real_network_requests": 0,
+  "real_credential_lookups": 0,
+  "repo_writes": 0,
+  "original_independent_unique_checks_remain": 906,
+  "no_check_count_aggregation_with_original_review": true,
+  "delivery_evidence": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-validation.json",
+    "sha256": "sha256:cbd63eb240334e61a06557a38d3dab125dbd322cf5642a1be4b1a2b84d6cc468"
+  },
+  "independent_reproductions": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-canonical-frozen-verifier.log",
+      "sha256": "sha256:fd2ea4f40fd9ce3ff9f4e4e99a5752456ad2684f12db0dd94b72fbe62e9507f8",
+      "exit_code": 0
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-clone-frozen-verifier.log",
+      "sha256": "sha256:5394f8e8830ad26c4e11557a1f03af9362fb78f3a412bce89209d42dc9e436a2",
+      "exit_code": 1
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-clone-current-verifier.log",
+      "sha256": "sha256:c138396da3b38c3e3a359d7012ff4c3acfdfabe1b9120707005a7c7e83be0657",
+      "exit_code": 0
+    }
+  ],
+  "original_review_hashes": {
+    "Independent-Review.json": "sha256:e804f226d118194df69b8d8e4d2d1e042e33da2c64b63791e0d94226e5dbddd0",
+    "Independent-Review.md": "sha256:37c077c1a253c1b642ab4b5b21a4cdfbe1c986551de4d2eff2edf9f8d16354cb",
+    "Attack-Matrix.json": "sha256:c05037a222d407f42e2ecef810d5e9423bd8376fc422176bc0adac2c0109ec3e"
+  }
+}

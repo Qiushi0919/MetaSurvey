@@ -1,0 +1,137 @@
+{
+  "version": "1.0.0",
+  "failures": [
+    {
+      "id": "STATUS_TERMINAL_SCHEMA",
+      "state": "PRESERVED_UNRESOLVED",
+      "count": 2,
+      "reason": "Terminal offset response code0 but fields do not match requested schema; completeness/negative status not proven. No expectation relaxed."
+    },
+    {
+      "id": "SSE_INITIAL_OFFICIAL_REDIRECT",
+      "state": "PRESERVED_RESOLVED_ADDRESS_ONLY",
+      "count": 6,
+      "reason": "No automatic redirect followed. Subsequent separate epoch records301 www→static official same path. This public-only target handling never applies to gateway credential sender."
+    },
+    {
+      "id": "SSE_G2_NOT_PDF",
+      "state": "PRESERVED_UNRESOLVED",
+      "count": 6,
+      "reason": "Exact static responses failed PDF magic check; originals preserved. Index titles never become business body facts."
+    }
+  ],
+  "schema_or_scope_excluded_rows": 42,
+  "excluded_reason_counts": {
+    "REPORT_PERIOD_OUT_OF_SCOPE": 42
+  },
+  "old_action_ambiguities": 5,
+  "old_nonzero_pre_close_deltas": 8,
+  "old_V5_cli_hash_mismatch": "UNCHANGED_LEGACY_COMPATIBILITY_ISSUE",
+  "independent_provider_license_transport": "UNVERIFIED",
+  "units": "FINANCIAL_SCALE_UNVERIFIED;VALUATION_SOURCE_DECLARED_UNITS",
+  "productionGate": false,
+  "pre_delivery_interrupted_epochs": [
+    {
+      "epoch": "INITIAL-G1",
+      "exit": 130,
+      "state": "NOT_A_TEST_PASS",
+      "reason": "Full official financial-field scope expansion and one-call graph verification deduplication",
+      "source_snapshot": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/development/G1-before-expansion",
+      "log": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/initial-produce.log"
+    },
+    {
+      "epoch": "INITIAL-G2",
+      "exit": 130,
+      "state": "NOT_A_TEST_PASS",
+      "reason": "Owner authorization normalized to operative instructions; introductory numeric-stock commentary excluded from Git",
+      "source_snapshot": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/development/G2-pre-boundary-finalization",
+      "log": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/produce-G2.log"
+    }
+  ],
+  "developer_initial_synthetic_test_error": {
+    "scope": "Financial synthetic test only",
+    "reason": "Overbroad account substring falsely matched accounts_receivable; changed to exact prohibited account-default names; no mathematical or business assertion relaxed",
+    "final_synthetic_tests": 41
+  },
+  "failed_G3_relocation": {
+    "candidate": "6eb2367",
+    "state": "FAIL_PRESERVED_FIXED_IN_G4_ACTUAL_FRESH_SAVED_REPLAY",
+    "proof": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/portability-identity-G3.json",
+    "reason": "Absolute Git file paths changed source_identity after checkout move; corrected to relative Git + fixed private archive keys. No facts/thresholds relaxed.",
+    "actual_fresh_replay_exit": 1,
+    "actual_fresh_replay_log": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/actual-fresh-G3.log",
+    "actual_reason": "WAVE_D_SAVED_REPLAY_INVALID",
+    "fixed_code_candidate": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+    "G4_fresh_saved_replay": "PASS",
+    "G4_full_entry": "PASS_795_UNIQUE_794PASS_0FAIL_1SKIP",
+    "G4_log": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/final-full-G4.log"
+  },
+  "misnamed_root_readonly_G3_run": {
+    "log": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/validation/initial-fresh-G3.log",
+    "exit": 0,
+    "working_directory": "/Users/qiushi/投资研究/ashare-trading-v1",
+    "state": "NOT_FRESH_CHECKOUT_EVIDENCE",
+    "reason": "Command ran in ROOT by error; not counted as fresh relocation or extra regression PASS"
+  },
+  "interface_freeze_epoch_note": {
+    "literal": "Final frozen source/header cutoff uses G3",
+    "interpretation": "Historical prototype sentence only; subsequent G3 FAIL/G4 repair paragraph, actual rules decision_cutoff and final release pins are authoritative for final G4. No business rule changed."
+  },
+  "independent_pre_final_epochs_preserved": {
+    "candidate_for_final_review": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+    "events": [
+      {
+        "epoch": "reviewer-python-syntax-v1",
+        "outcome": "NOT_EXECUTED_NOT_A_TEST_PASS",
+        "reason": "Extra closing parenthesis in reviewer harness; script/log preserved, syntax repaired without changing expected assertions."
+      },
+      {
+        "epoch": "G3-python-v2",
+        "outcome": "INCOMPLETE_NOT_A_TEST_PASS",
+        "reason": "Root changed candidate while live replay was running; WAVE_D_CONTEXT_FORGERY was preserved. No source/threshold was changed by reviewer."
+      },
+      {
+        "epoch": "G3-native",
+        "outcome": "168_ACTUAL_ASSERTIONS_PASSED_PRE_FINAL_ONLY",
+        "reason": "G3 reports and native boundary consumers; not counted in finalG4 count."
+      }
+    ],
+    "preserved_harness_epochs": {
+      "native-G3-results.json": {
+        "bytes": 55556,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/review/native-G3-results.json",
+        "sha256": "sha256:5fbf6af37d3f8c5056cfa037a3e2868201bfb37e4c71b15d3330cfa1fe5dd598"
+      },
+      "native-G3.log": {
+        "bytes": 86,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/review/native-G3.log",
+        "sha256": "sha256:1fd452388ae33f96ac7bf1a8e83f46cc41b9c55fb5ffbb728c67254dac375bfe"
+      },
+      "python-G3-v2.log": {
+        "bytes": 1632,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/review/python-G3-v2.log",
+        "sha256": "sha256:68d84a486605694ffe01fc6345f0b1d19ba277f7d278443a0e0e47ebf7d14762"
+      },
+      "python-G3.log": {
+        "bytes": 541,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/review/python-G3.log",
+        "sha256": "sha256:b3916d3ae8529a16952762c2a8c54f8d9b29d9f0d8dddd6eee596c6b4ee99c6f"
+      },
+      "reviewer-python-syntax-v1.py": {
+        "bytes": 29723,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/review/reviewer-python-syntax-v1.py",
+        "sha256": "sha256:58d718369c7d95dd934b859ce970d4045dd4a349c8d982e7aa8475dee15f0b67"
+      }
+    },
+    "productionGate": false,
+    "source_or_business_changes_by_reviewer": 0,
+    "version": "1.0.0"
+  },
+  "final_independent_result": {
+    "candidate": "51771e9a4ac70f417d70b04f7833d8b463ad8712",
+    "total": 413,
+    "pass": 413,
+    "fail": 0,
+    "old_epoch_passes_counted_in_final": false
+  }
+}

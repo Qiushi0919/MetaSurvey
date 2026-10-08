@@ -1,0 +1,85 @@
+{
+  "kind": "RootP1HistoricalIntegrationGate",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-08T12:53:53.488133+00:00",
+  "engineering_integration": "PASS_WITH_CONDITIONS",
+  "root_branch": "review/backtest-5y-p1-20261008",
+  "baseline_commit": "11fba19fa3b2dde8288fbed470f2319020a60da6",
+  "integrated_code_commit": "37ec2ec9f8f16d406b10f2e2724858fc1a58f375",
+  "original_child_delivery_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "child_worktree_overwritten": false,
+  "sidecar_candidate_files": 40,
+  "candidate_DTO_version": "1.0.1-candidate",
+  "six_final_shared_contract_freeze": "HOLD_PENDING_FIELD_AND_CONSUMER_REVIEW",
+  "software_findings": {
+    "F01": "CLOSED_ROOT_REPAIR",
+    "F02": "CLOSED_ROOT_REPAIR",
+    "F03": "CLOSED_ROOT_REPAIR"
+  },
+  "producer_tests": {
+    "integrated_sidecar": 123,
+    "boundary_and_forward": 35,
+    "unique": 158,
+    "pass": 158,
+    "fail": 0,
+    "skip": 0,
+    "pre_post_repeat_counts_not_added": true
+  },
+  "independent": {
+    "R1_total": 31,
+    "R1_expected": 18,
+    "R1_software_counterexamples": 10,
+    "R1_deferred_field_probes": 3,
+    "R2_original_total": 105,
+    "R2_original_pass": 104,
+    "R2_harness_failure": 1,
+    "R2_clarification": {
+      "pass": 3,
+      "fail": 0
+    },
+    "limited_open_software_findings": 0,
+    "not_human_authorization": true
+  },
+  "preservation": {
+    "parent972": "MATCH",
+    "child954": "MATCH",
+    "Forward4": "MATCH",
+    "integrated40": "MATCH",
+    "input_refs233_unique185": "MATCH",
+    "initial_false_FAIL_preserved": true,
+    "actual_db_mutations": 0
+  },
+  "strategy": {
+    "frozen_sha256": "d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+    "two_families_unchanged": true,
+    "methods_proposal_v1_0_1": "OWNER_PENDING_NOT_ADOPTED",
+    "actual_PIT_admitted": 0,
+    "full_family": "NOT_COMPUTABLE",
+    "engine": "ENGINE_NOT_RUN",
+    "economic_metrics": null,
+    "untouched_oos": false,
+    "formal_windows_executed": 0
+  },
+  "Forward": {
+    "Day0": "PRESERVED",
+    "Snapshot_B": "NOT_YET_RUN",
+    "actual_D1": "BLOCKED_MISSING_ORIGINALS_AND_SIGNED_CHAIN",
+    "actual_days": 0
+  },
+  "real_settings": "UNSET_REQUIRED",
+  "higher_gates": {
+    "formal_OOS": "BLOCKED",
+    "formal_historical_backtest": "BLOCKED",
+    "production_data": "BLOCKED",
+    "production_execution": "BLOCKED",
+    "broker": "BLOCKED",
+    "real_money": "BLOCKED",
+    "cloud_export": "BLOCKED"
+  },
+  "market_requests_this_round": 0,
+  "credential_lookups_this_round": 0,
+  "scheduling_created": false,
+  "next_phase_auto_started": false,
+  "productionGate": false,
+  "stop_after_this_engineering_acceptance": true
+}

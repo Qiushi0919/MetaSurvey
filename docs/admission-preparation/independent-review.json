@@ -1,0 +1,736 @@
+{
+  "version": "1.0.0",
+  "role": "NEW_INDEPENDENT_READ_ONLY_REVIEWER",
+  "reviewer": "/root/source_preparation_reviewer",
+  "reviewed_at": "2026-10-05T11:43:51.700Z",
+  "conclusion": "PASS_WITH_CONDITIONS",
+  "acceptance_scope": "STOCK_SOURCE_ADMISSION_PREPARATION_PROPOSALS_ONLY_NOT_COMPLETE_NEW_BUSINESS_W4",
+  "candidate_identity_rule": "28 exact reviewed input hashes on parent-frozen shared worktree; later delivery metadata not claimed executed by reviewer",
+  "baseline_commit": "1fffea964ad3fed5c47d7955b9121b31f8ceff74",
+  "observed_head": "1fffea964ad3fed5c47d7955b9121b31f8ceff74",
+  "input_hashes": {
+    "AGENTS.md": "sha256:585732a9842d6c60ac0c513eae4d634259856f866165177d0624c8758a5ed250",
+    "docs/authorizations/P1B-next-step-20261005.md": "sha256:6d1c57bfbadb0fdb4b27839b3db9642c14bfd39dba6e627dab1eb4e9d3e0d324",
+    "docs/admission-preparation/Contract-Fit-Analysis.md": "sha256:8583be2cfe1a3bc6c30b7ddc9da5965371f57b71f129e7debaf17baefeb76538",
+    "docs/admission-preparation/W1-Preparation-Freeze.md": "sha256:8e0194d265da73cf9e6d58cdf88a611d5a2604822696afa4d49c1c2fd7300f0b",
+    "docs/admission-preparation/preconditions.json": "sha256:3773c5af40424311174ec4fc2da9e92d6952c310a884260109f9878d973a7d41",
+    "docs/admission-preparation/public-document-captures.json": "sha256:7be8cabf00891110880e53a025ab2da023dd9347eaeac1e489aad54cec41c043",
+    "docs/admission-preparation/slice-observed.proposal.json": "sha256:3e3d117cabb19e397c1f4335cff3c5ad8c89a8344dc3926ce737a5986ab69568",
+    "docs/admission-preparation/slice-historical.proposal.json": "sha256:d0a6c2bd75dd03382e441d46f701c38bc4bed94776b11dc784f68497f84617f2",
+    "docs/admission-preparation/clock-unknown.proposal.json": "sha256:5e28b6638e2212afce428961ae31646380adfd2057edcc3e2da5a084120c7a7b",
+    "contracts/admission-preparation/ClockEvidenceProposal.schema.json": "sha256:1c1bbf7d3bc31083d0cab36b0a1e791f24ea1e46ac82ad8dea80c9067d4c1ef3",
+    "contracts/admission-preparation/StockSliceProposal.schema.json": "sha256:bc5de1679825da0a61e6636dc98b94c1f334e06d9c615b70f24a62303eec9f33",
+    "docs/p1b/Gate.json": "sha256:f7341a1d5fd0d66c425175be72a221809cd53fedede7ef461d03598b2487e1da",
+    "docs/p1b/conditions.json": "sha256:5cc6c23343b34842765554d27ff6e5c0416b0d2b43c4fe9e9b90c99f28b2b51a",
+    "docs/p1b/source-inventory.json": "sha256:5501600545a773d2381675c49a94253533e13f0e177994925db53423fa93478f",
+    "docs/p1b/Gate-Review.md": "sha256:df0393c6fe45acc1142ea6c038fac3420f5b944ed90676975293d7e02d408f9a",
+    "docs/source-of-truth.json": "sha256:03fdf749a6515f3d902b4b21f80d154384ee71f377c8723d222d6a92db473cdb",
+    "README.md": "sha256:6caa042e37d83c161c719f94fca49b6a5ed77d43e1b1cb983e798703d4e6ea29",
+    "docs/admission-preparation/provider-evidence.json": "sha256:c54a77e93316919363fe5aa4bbcad3ac1105ec765dcac7de95020e977e4b4e4c",
+    "docs/admission-preparation/proposal-validation.json": "sha256:bec8f2a7bceac3008b72ebe1b4fb7883cebae7acb56470e0fdf33d2767ce547b",
+    "docs/admission-preparation/Source-Comparison.md": "sha256:8436f7b7d7655bc6e1999564760fbdb09ce3543a67423ad3abc5430d3bb6ee9b",
+    "docs/admission-preparation/Data-Requirements.md": "sha256:ef6d67cad8d68660684895a9eecfaf09849dfd06acbf56b24594ed6be881e2b8",
+    "docs/admission-preparation/35-item-audit.json": "sha256:a91c827e2519d0e4a7e9e1a3dfcb1d4156157ab6905f1c81c800d04f01af83ac",
+    "docs/admission-preparation/35-item-audit.md": "sha256:0e4f42843e6e908e043092989f26a0218d669450b32fd3d285760f6bb2de1ae4",
+    "docs/admission-preparation/preservation.json": "sha256:c42bed8fe33b105aaba13bfb78afb1a04ca019bca731cee051e0611177ca2aec",
+    "docs/admission-preparation/validation.json": "sha256:3a59eb7edc69002ee3a1137b97b6d54c08653b73bdd29f1fa33395364729f47b",
+    "docs/admission-preparation/Source-Preparation-Review.md": "sha256:3a0cecb45981ebd89602aecc82e545b2bba2703725762d111510155fc8016d6d",
+    "docs/admission-preparation/Preparation-Gate.json": "sha256:5f5e91688bcc83d12c89e1960ebe1263230e14a69a52c414462032518dfd0646",
+    "tools/admission-preparation/check-proposals.mjs": "sha256:2bafac725d02581deb89f08514acbf416c89a933ef3e5cd813af53c9a840c3b6"
+  },
+  "reviewed_current_documents": [
+    "Contract-Fit-Analysis",
+    "W1-Preparation-Freeze",
+    "Data-Requirements",
+    "Source-Comparison",
+    "provider-evidence",
+    "35-item-audit MD/JSON",
+    "Source-Preparation-Review",
+    "Preparation-Gate",
+    "README",
+    "AGENTS",
+    "source-of-truth 1.7",
+    "tools/admission-preparation/check-proposals.mjs"
+  ],
+  "explicit_human_authorization_copy_match": true,
+  "actual_account_unset_fields": 30,
+  "schema_shape_counts": {
+    "total": 32,
+    "pass": 32,
+    "fail": 0
+  },
+  "schema_cases": [
+    {
+      "name": "unknown-clock-shape-accepted-as-unverified",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "observed-route-shape-not-admission",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "historical-route-shape-not-admission",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "clock-cannot-self-admit",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "clock-cannot-self-prove-historical-visibility",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "clock-production-enable-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "clock-extra-payload-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "date-only-publication-keeps-null-instant",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "date-only-publication-no-invented-midnight",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "date-only-business-event-keeps-null-instant",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "date-only-business-event-no-invented-end-of-day",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "timezone-less-retrieval-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "invalid-calendar-date-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "source-status-cannot-self-upgrade",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "source-license-cannot-self-approve",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "local-rights-cannot-self-grant",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "manual-cloud-rights-cannot-self-grant",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "stock-admission-cannot-self-upgrade",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "pilot-enable-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "signal-enable-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "order-enable-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "production-enable-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "namespace-crossover-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "symbols-remain-owner-decision",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "arbitrary-payload-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "required-dataset-omission-denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "scope-date-remains-owner-decision",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "manual-export-license-boundary-cannot-disable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "second-publication-requires-instant-shape",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "second-event-requires-instant-shape",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "unknown-publication-cannot-carry-guessed-instant",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "unknown-business-event-cannot-carry-guessed-instant",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    }
+  ],
+  "proposal_chronology_limitation": [
+    {
+      "name": "chronology-is-not-enforced-by-proposal-shape",
+      "schema_accepts": true,
+      "admission": "BLOCKED",
+      "historical_visibility_proven": false,
+      "implication": "Unverified proposal shape only. A future runtime must reject observed available_at before actual retrieval and require evidence identity/hash/revision/visibility. This test is not a PIT pass."
+    }
+  ],
+  "portable_entry_counts": {
+    "cases": 5,
+    "pass": 5,
+    "fail": 0
+  },
+  "portable_checker_sha256": "sha256:2bafac725d02581deb89f08514acbf416c89a933ef3e5cd813af53c9a840c3b6",
+  "portable_entry_cases": [
+    {
+      "name": "no-output-structure-only-has-zero-external-byte-claim",
+      "status": 0,
+      "expected": "EXIT_0_17_SHAPE_CHECKS_0_DOCS_VERIFIED",
+      "pass": true
+    },
+    {
+      "name": "new-report-with-nine-originals-stays-external",
+      "status": 0,
+      "expected": "EXIT_0_EXTERNAL_NEW_FILE_17_CHECKS_9_ORIGINALS",
+      "pass": true
+    },
+    {
+      "name": "outside-directory-symlink-cannot-place-report-inside-repo",
+      "status": 1,
+      "expected": "EXIT_NONZERO_BEFORE_ANY_REPO_WRITE",
+      "pass": true
+    },
+    {
+      "name": "existing-external-report-cannot-be-overwritten",
+      "status": 1,
+      "expected": "EXIT_NONZERO_EEXIST_SAVED_REPORT_UNCHANGED",
+      "pass": true
+    },
+    {
+      "name": "relative-option-path-rejected",
+      "status": 1,
+      "expected": "EXIT_NONZERO_OPTION_PATHS_MUST_BE_ABSOLUTE",
+      "pass": true
+    }
+  ],
+  "repo_output_created": false,
+  "existing_external_result_unchanged": true,
+  "captured_documents": [
+    {
+      "id": "sse-services",
+      "uri": "https://www.sse.com.cn/transparency/services/",
+      "actual_sha256": "sha256:c67591bb37d61b048bfcd3110bfa768edcd6741cb858536c8042c7aa50fa19f1",
+      "expected_sha256": "sha256:c67591bb37d61b048bfcd3110bfa768edcd6741cb858536c8042c7aa50fa19f1",
+      "bytes": 16755,
+      "expected_bytes": 16755,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.379454+00:00"
+    },
+    {
+      "id": "sse-historical-products",
+      "uri": "https://english.sse.com.cn/markets/dataservice/products/",
+      "actual_sha256": "sha256:d4cbff2b81cc8e5574eb06bfe554f036d191e93e40f7979c60d8deae09cfa896",
+      "expected_sha256": "sha256:d4cbff2b81cc8e5574eb06bfe554f036d191e93e40f7979c60d8deae09cfa896",
+      "bytes": 78314,
+      "expected_bytes": 78314,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.753707+00:00"
+    },
+    {
+      "id": "tushare-user-agreement",
+      "uri": "https://tushare.pro/document/1?doc_id=409",
+      "actual_sha256": "sha256:d33eb90c3034fefebe06a89a5a751d81442143a315cec0305927ba55058071c4",
+      "expected_sha256": "sha256:d33eb90c3034fefebe06a89a5a751d81442143a315cec0305927ba55058071c4",
+      "bytes": 23992,
+      "expected_bytes": 23992,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.406890+00:00"
+    },
+    {
+      "id": "tushare-service-agreement",
+      "uri": "https://tushare.pro/document/1?doc_id=405",
+      "actual_sha256": "sha256:4d26a245e5a80eaef815830a2bd944cbaea8a1d9600e82b0ba91c083721155c5",
+      "expected_sha256": "sha256:4d26a245e5a80eaef815830a2bd944cbaea8a1d9600e82b0ba91c083721155c5",
+      "bytes": 23076,
+      "expected_bytes": 23076,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.413149+00:00"
+    },
+    {
+      "id": "tushare-raw-daily-spec",
+      "uri": "https://tushare.pro/document/2?doc_id=27",
+      "actual_sha256": "sha256:4cfb933a6fe33de8d5390d7253138cb92731726bf7f9c25f7b3f13e3926e1ab0",
+      "expected_sha256": "sha256:4cfb933a6fe33de8d5390d7253138cb92731726bf7f9c25f7b3f13e3926e1ab0",
+      "bytes": 36901,
+      "expected_bytes": 36901,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.573592+00:00"
+    },
+    {
+      "id": "tushare-factor-spec",
+      "uri": "https://tushare.pro/document/2?doc_id=28",
+      "actual_sha256": "sha256:d442e3d060417df8599a0756b790bfad11219b836ee45967fa0c52e1bc2ffd7b",
+      "expected_sha256": "sha256:d442e3d060417df8599a0756b790bfad11219b836ee45967fa0c52e1bc2ffd7b",
+      "bytes": 35411,
+      "expected_bytes": 35411,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.600798+00:00"
+    },
+    {
+      "id": "tushare-income-spec",
+      "uri": "https://tushare.pro/document/2?doc_id=33",
+      "actual_sha256": "sha256:4ff82992991c07ca6d48b96140e0ec4add29ec22a8187cffda3d0552ae8cea11",
+      "expected_sha256": "sha256:4ff82992991c07ca6d48b96140e0ec4add29ec22a8187cffda3d0552ae8cea11",
+      "bytes": 47217,
+      "expected_bytes": 47217,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.636811+00:00"
+    },
+    {
+      "id": "tushare-membership-spec",
+      "uri": "https://tushare.pro/document/2?doc_id=335",
+      "actual_sha256": "sha256:f3aeceb45660be16fcc84ca7a6f5571a96589d28cada68d8fe27f2e9d5dc3bbc",
+      "expected_sha256": "sha256:f3aeceb45660be16fcc84ca7a6f5571a96589d28cada68d8fe27f2e9d5dc3bbc",
+      "bytes": 35471,
+      "expected_bytes": 35471,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.766661+00:00"
+    },
+    {
+      "id": "cninfo-service-shell",
+      "uri": "https://webapi.cninfo.com.cn/",
+      "actual_sha256": "sha256:350741d7137dfbbd1570b9e77e251ad07688ef4314d5d718825a302ea582ec44",
+      "expected_sha256": "sha256:350741d7137dfbbd1570b9e77e251ad07688ef4314d5d718825a302ea582ec44",
+      "bytes": 4138,
+      "expected_bytes": 4138,
+      "sha_matches": true,
+      "length_matches": true,
+      "state": "BLOCKED",
+      "grant": false,
+      "document_only": true,
+      "retrieved_at": "2026-10-05T11:10:52.800651+00:00"
+    }
+  ],
+  "source_pin_checks": [
+    {
+      "pin": "config/closure/code-provenance.json",
+      "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+      "checked": 140,
+      "pass": 140,
+      "failures": []
+    },
+    {
+      "pin": "p1b/config/code-provenance.json",
+      "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+      "checked": 34,
+      "pass": 34,
+      "failures": []
+    }
+  ],
+  "historical_artifact_index": {
+    "checked": 291,
+    "pass": 291,
+    "failures": []
+  },
+  "current_preservation_check": {
+    "current_files_checked": 289,
+    "current_files_matching": 289,
+    "current_file_failures": [],
+    "bundles": [
+      {
+        "bundle": "/Users/qiushi/投资研究/.p1a-archives/p1a-closure-20261005/p1a-closure-20261005.bundle",
+        "manifest_hash_matches": true,
+        "bundle_hash_matches": true
+      },
+      {
+        "bundle": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/ashare-trading-v1-p1b.bundle",
+        "manifest_hash_matches": true,
+        "bundle_hash_matches": true
+      }
+    ],
+    "restore_claim": "BYTE_HASH_VERIFICATION_ONLY_NOT_NEW_RESTORE_EXECUTION"
+  },
+  "parent_actual_baseline_log_read_and_hash_verified": {
+    "log_sha256": "sha256:834311b55ca7873d0bdcf72d51341acf6c2550879e21a962ed0f175f6459542c",
+    "expected_sha256": "sha256:834311b55ca7873d0bdcf72d51341acf6c2550879e21a962ed0f175f6459542c",
+    "hash_matches": true,
+    "observed_log_counts": {
+      "tests": 300,
+      "pass": 299,
+      "fail": 0,
+      "skipped": 1
+    },
+    "provenance": "PARENT_ACTUAL_EXECUTION_LOG_READ_BY_REVIEWER_NOT_REVIEWER_FULL_CHECK_EXECUTION",
+    "fresh_install_claim": false
+  },
+  "provider_reference_checks": {
+    "manifest_sha_matches": true,
+    "prior_inventory_sha_matches": true,
+    "documents": [
+      {
+        "id": "sse-services",
+        "pass": true
+      },
+      {
+        "id": "sse-historical-products",
+        "pass": true
+      },
+      {
+        "id": "tushare-user-agreement",
+        "pass": true
+      },
+      {
+        "id": "tushare-service-agreement",
+        "pass": true
+      },
+      {
+        "id": "tushare-raw-daily-spec",
+        "pass": true
+      },
+      {
+        "id": "tushare-factor-spec",
+        "pass": true
+      },
+      {
+        "id": "tushare-income-spec",
+        "pass": true
+      },
+      {
+        "id": "tushare-membership-spec",
+        "pass": true
+      },
+      {
+        "id": "cninfo-service-shell",
+        "pass": true
+      }
+    ],
+    "claims": [
+      {
+        "id": "SSE-01",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "SSE-02",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "SSE-03",
+        "kind": "INFERENCE",
+        "pass": true
+      },
+      {
+        "id": "TS-01",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "TS-02",
+        "kind": "INFERENCE",
+        "pass": true
+      },
+      {
+        "id": "TS-03",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "TS-04",
+        "kind": "INFERENCE",
+        "pass": true
+      },
+      {
+        "id": "TS-05",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "TS-06",
+        "kind": "INFERENCE",
+        "pass": true
+      },
+      {
+        "id": "TS-07",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "TS-08",
+        "kind": "INFERENCE",
+        "pass": true
+      },
+      {
+        "id": "TS-09",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "TS-10",
+        "kind": "INFERENCE",
+        "pass": true
+      },
+      {
+        "id": "CN-01",
+        "kind": "READ_FACT",
+        "pass": true
+      },
+      {
+        "id": "CN-02",
+        "kind": "INFERENCE",
+        "pass": true
+      }
+    ],
+    "candidates": [
+      {
+        "id": "SSE_LICENSED_EOD_PRODUCT_PROPOSED",
+        "pass": true
+      },
+      {
+        "id": "TUSHARE_PRO_PROPOSED",
+        "pass": true
+      },
+      {
+        "id": "OFFICIAL_DISCLOSURES_WITH_CNINFO_PROPOSED",
+        "pass": true
+      },
+      {
+        "id": "BAOSTOCK_NOT_YET_DOCUMENTED",
+        "pass": true
+      },
+      {
+        "id": "LEGACY_ASSETS_PRESERVED_NOT_ADMITTED",
+        "pass": true
+      }
+    ],
+    "datasets_all_blocked": true,
+    "routes_all_blocked": true,
+    "owner_approval_does_not_replace_license": true,
+    "admitted_stocks": 0
+  },
+  "audit_35_items": {
+    "numbered": 35,
+    "unique": 35,
+    "all_pass_claim": false,
+    "full_draft_assessment_card_chain": "PARTIAL_MISSING",
+    "real_stock_research": "BLOCKED",
+    "real_research_pilot": "BLOCKED",
+    "real_research_to_signal_order": "BLOCKED",
+    "paper_synthetic_kernel": "EXISTING_PRESERVED"
+  },
+  "resolved_findings": [
+    {
+      "id": "PREP-R01",
+      "subject": "usage rights wording",
+      "resolution": "three purposes UNSET_REQUIRED and redistribution DENIED now accurately documented"
+    },
+    {
+      "id": "PREP-R02",
+      "subject": "nonexistent item14 evidence link",
+      "resolution": "existing closure-admission.test.mjs evidence link used; referenced test and isolation baseline are preserved"
+    },
+    {
+      "id": "PREP-R03",
+      "subject": "historical/current navigation wording",
+      "resolution": "README historical entrance separated; SoT1.7 points to new preparation and preserves old gate"
+    },
+    {
+      "id": "PREP-R04",
+      "subject": "lexical-only output path guard",
+      "resolution": "actual parent/root realpath plus canonical outside target and wx; independent controlled symlink/no-overwrite/absolute-path tests passed without repository writes"
+    }
+  ],
+  "unresolved_blocking_safety_findings_in_preparation_scope": 0,
+  "remaining_conditions": [
+    {
+      "id": "PREP-C01",
+      "blocks": "REAL_SOURCE_CLOCK_RUNTIME",
+      "requires": "evidence-bound per-version source/raw/hash/clock/precision/chronology/freshness validation; proposal shape alone never proves PIT"
+    },
+    {
+      "id": "PREP-C02",
+      "blocks": "STOCK_SOURCE_ADMISSION",
+      "requires": "specific provider entitlement and per-purpose rights plus finite security/date coverage, units, originals, revisions and DQ; separate new reviewed runtime contracts"
+    },
+    {
+      "id": "PREP-C03",
+      "blocks": "REAL_STOCK_RESEARCH_AND_PILOT",
+      "requires": "C12-C22 and full Draft/Assessment/Card evidence/version pipeline remain open; separate human APPROVE_P1B_RESEARCH_PILOT"
+    },
+    {
+      "id": "PREP-C04",
+      "blocks_if": "PERSISTENT_OR_MULTIPROCESS_CONSUMER_REQUESTED",
+      "requires": "new topology gate for durable issuer/receipt/revocation and publication/use recheck; fixed-use DEV archive not permanent entitlement"
+    },
+    {
+      "id": "PREP-C05",
+      "blocks": "CLOUD_MODEL_EXPORT",
+      "requires": "actual source/type/coverage/purpose/model-use license; MANUAL_EXPORT and owner selection cannot create vendor rights"
+    }
+  ],
+  "owner_decisions": [
+    "observed-current vs historical-asof route",
+    "specific provider/product and non-secret entitlement/permitted purposes",
+    "finite symbols/exchanges/business date range and cutoff",
+    "new clock proposal semantic review"
+  ],
+  "actual_execution_boundaries": {
+    "real_market_rows_fetched": 0,
+    "authenticated_api_calls": 0,
+    "real_model_calls": 0,
+    "source_admission_grants": 0,
+    "real_stock_card_grade_signal_order": false,
+    "productionGate": false,
+    "repo_or_legacy_modified_by_reviewer": false,
+    "vendor_contact_or_purchase": false,
+    "reviewer_full_300_execution": false,
+    "full_new_business_w4": false,
+    "reviewer_new_archive_restore": false
+  },
+  "report_md_sha256": "sha256:2d24b751e02525cf139ce46b43ac4a00df08b4bdc64508da2d4359ee3786433a",
+  "evidence": {
+    "review-audit.mjs": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/reviewer/review-audit.mjs",
+      "sha256": "sha256:a26e6e404f141a97cf1dc3b9a7852314309b8833f2489e946e73657756af641f"
+    },
+    "review-audit.json": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/reviewer/review-audit.json",
+      "sha256": "sha256:b007976a9e20a12e111234113ec319022ef6ba5588a3eaa021ff298ffef8ca48"
+    },
+    "review-audit.log": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/reviewer/review-audit.log",
+      "sha256": "sha256:fe6e4175c6a1ac823c02fa43a3e8c862b85d70c36601d9c76711cd263a7a6f43"
+    },
+    "portable-boundary-check.mjs": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/reviewer/portable-boundary-check.mjs",
+      "sha256": "sha256:9a6e843f250dbf481be2e75c4cd3f15fe86de9e2165b8c48b9f71173ae37b145"
+    },
+    "portable-boundary-check.json": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/reviewer/portable-boundary-check.json",
+      "sha256": "sha256:0d24d709a5ed8a444dc500af9f2213c6e792be3db3b5fd70894e6a4981c03513"
+    },
+    "portable-boundary-check.log": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/source-preparation-20261005/reviewer/portable-boundary-check.log",
+      "sha256": "sha256:7b7515109f99c9b13d06ba89c119210aa254854bdc337d8d25a441cfc1f762f3"
+    }
+  }
+}

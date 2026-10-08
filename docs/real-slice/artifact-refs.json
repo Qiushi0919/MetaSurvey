@@ -1,0 +1,140 @@
+{
+  "actual_real_capture_date_shanghai": "2026-10-05",
+  "decision_cutoff": "2026-10-05T12:51:22.803Z",
+  "code_version": "266a7083ce2c77c31917899ced458951661ddaed",
+  "source_tree_hash": "sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e",
+  "source_manifest_hash": "sha256:43b45a998c2df18316a962933e7c90d91ecf13e879973b1668cd8e89910f8b5d",
+  "full_external_evidence_sha256": "sha256:303dcf5b02ad0a58179193bec3aa0facb9d70bcd34579d9d47d0b9de5226d18e",
+  "full_external_evidence_path": "/Users/qiushi/投资研究/.p1b-archives/real-stock-slice-20261005/positive-repaired-A/real-slice-evidence.json",
+  "counts": {
+    "captured_originals": 5,
+    "admitted_source_identities": 2,
+    "admitted_products": 2,
+    "admitted_stock_reference_count": 3,
+    "stock_snapshot_count": 3,
+    "admission_receipt_count": 3,
+    "sanitized_local_brainpacket_count": 3,
+    "announcement_reference_count": 15,
+    "parsed_market_rows": 0,
+    "parsed_financial_rows": 0,
+    "model_calls": 0,
+    "broker_calls": 0,
+    "execution_writes": 0
+  },
+  "stocks": [
+    {
+      "symbol": "SSE:603993",
+      "snapshot_ref": {
+        "object_id": "snapshot:9a1c0f45bb0ab87dd7c94c078df3207e6e9ad654e588d491756d20b0f9143e7f",
+        "object_version": 1,
+        "content_hash": "sha256:fa01677219c2e62208bd32e0f3ab254de5ee7ddd381efbed5b40e00de3b0bc90"
+      },
+      "receipt_ref": {
+        "object_id": "receipt:fa01677219c2e62208bd32e0f3ab254de5ee7ddd381efbed5b40e00de3b0bc90",
+        "object_version": 1,
+        "content_hash": "sha256:97fe3b399f4628f80bc7956c37f38fc6407dfd7c39f32c5365c0a846af82e4d9"
+      },
+      "packet_ref": {
+        "object_id": "packet:7907b5c0c1c22e7fb51ad9e6dc4161afd9d1b5565521e66e6617c01e81a7aa81",
+        "object_version": 1,
+        "content_hash": "sha256:f75765570eee98f0ac6c9536412dd2f10f033f81224d791567d9b2fc661531c7"
+      },
+      "snapshot_version": "1.0.0",
+      "receipt_version": "2.0.0",
+      "packet_version": "2.0.0",
+      "market_state": "CLOSED",
+      "latest_trading_session": null,
+      "live_price": null,
+      "tradeability": false,
+      "completion": "PARTIAL_RESEARCH_ONLY",
+      "category_status": {
+        "SECURITY_STATUS": "BLOCKED",
+        "CALENDAR_RULES": "PARTIAL",
+        "RAW_BARS_1D": "BLOCKED",
+        "CORPORATE_ACTIONS": "BLOCKED",
+        "ADJUSTMENT_VERSIONS": "BLOCKED",
+        "FINANCIAL_REVISIONS": "BLOCKED",
+        "ANNOUNCEMENTS": "PARTIAL",
+        "INDUSTRY_MEMBERSHIP": "BLOCKED"
+      },
+      "deterministic_same_capture_replay": true
+    },
+    {
+      "symbol": "SSE:600312",
+      "snapshot_ref": {
+        "object_id": "snapshot:67722eb70933e4b4d0c5feabb3f44fccf55bbae27788dfceb376edb38f823036",
+        "object_version": 1,
+        "content_hash": "sha256:8959d62f3213779fb9c80c4b67b5e5a638cac9a7458939f0dcc40021c7def1ca"
+      },
+      "receipt_ref": {
+        "object_id": "receipt:8959d62f3213779fb9c80c4b67b5e5a638cac9a7458939f0dcc40021c7def1ca",
+        "object_version": 1,
+        "content_hash": "sha256:0493ac7031af943d09b2ce23f6d5d776e5a528de878393bf137e4deda092a638"
+      },
+      "packet_ref": {
+        "object_id": "packet:361b0590a3f4b8fb199791f61ef0afdb7054176b4d73e585cff2d13c3852c4da",
+        "object_version": 1,
+        "content_hash": "sha256:cefe3559225d0e22fe4f2b33d54d310ce7eb21fd6d6c7c9762741e4540cdf4c0"
+      },
+      "snapshot_version": "1.0.0",
+      "receipt_version": "2.0.0",
+      "packet_version": "2.0.0",
+      "market_state": "CLOSED",
+      "latest_trading_session": null,
+      "live_price": null,
+      "tradeability": false,
+      "completion": "PARTIAL_RESEARCH_ONLY",
+      "category_status": {
+        "SECURITY_STATUS": "BLOCKED",
+        "CALENDAR_RULES": "PARTIAL",
+        "RAW_BARS_1D": "BLOCKED",
+        "CORPORATE_ACTIONS": "BLOCKED",
+        "ADJUSTMENT_VERSIONS": "BLOCKED",
+        "FINANCIAL_REVISIONS": "BLOCKED",
+        "ANNOUNCEMENTS": "PARTIAL",
+        "INDUSTRY_MEMBERSHIP": "BLOCKED"
+      },
+      "deterministic_same_capture_replay": true
+    },
+    {
+      "symbol": "SSE:603228",
+      "snapshot_ref": {
+        "object_id": "snapshot:9fb0d551f7d38207a16c480bd45f61f7a4d83ae68e5a6ee54aeb2a4e2ade7bac",
+        "object_version": 1,
+        "content_hash": "sha256:b04ea1575074ca417d0ffa01cc811e48abb25d77bb154face58b7a571256447a"
+      },
+      "receipt_ref": {
+        "object_id": "receipt:b04ea1575074ca417d0ffa01cc811e48abb25d77bb154face58b7a571256447a",
+        "object_version": 1,
+        "content_hash": "sha256:17b99f814b96b14aa6798d6c48aa6d84ac2609a6f023fbcf58c58fb421123b7c"
+      },
+      "packet_ref": {
+        "object_id": "packet:29f5166b071f5ae2eb5558822437f54af01a7f8c0f3c51e65f1e2e994ad5bc36",
+        "object_version": 1,
+        "content_hash": "sha256:48c03ad556676588293c4c69616aff7b6dd9688f99103285fd17bd6ce235fc83"
+      },
+      "snapshot_version": "1.0.0",
+      "receipt_version": "2.0.0",
+      "packet_version": "2.0.0",
+      "market_state": "CLOSED",
+      "latest_trading_session": null,
+      "live_price": null,
+      "tradeability": false,
+      "completion": "PARTIAL_RESEARCH_ONLY",
+      "category_status": {
+        "SECURITY_STATUS": "BLOCKED",
+        "CALENDAR_RULES": "PARTIAL",
+        "RAW_BARS_1D": "BLOCKED",
+        "CORPORATE_ACTIONS": "BLOCKED",
+        "ADJUSTMENT_VERSIONS": "BLOCKED",
+        "FINANCIAL_REVISIONS": "BLOCKED",
+        "ANNOUNCEMENTS": "PARTIAL",
+        "INDUSTRY_MEMBERSHIP": "BLOCKED"
+      },
+      "deterministic_same_capture_replay": true
+    }
+  ],
+  "offline_signature_proof_restores_live_authority": false,
+  "private_signer_keys_archived": false,
+  "full_raw_data_in_git": false
+}

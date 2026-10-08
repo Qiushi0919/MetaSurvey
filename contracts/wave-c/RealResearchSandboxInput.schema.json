@@ -1,0 +1,984 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:wave-c:RealResearchSandboxInput:1.0.0",
+  "title": "RealResearchSandboxInput",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "RealResearchSandboxInput"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3000
+    },
+    "object_version": {
+      "const": 1
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3000
+    },
+    "symbol": {
+      "enum": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "strategy_id": {
+      "const": "CORE_40"
+    },
+    "namespace": {
+      "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH:CORE_40"
+    },
+    "trust_tier": {
+      "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH"
+    },
+    "purpose": {
+      "const": "LOCAL_EXPERIMENTAL_RESEARCH"
+    },
+    "provider_id": {
+      "const": "TUSHARE_MONTHLY_GATEWAY"
+    },
+    "source_classification": {
+      "const": "OWNER_PROVIDED_MONTHLY_GATEWAY"
+    },
+    "source_admission": {
+      "const": "UNVERIFIED_GATEWAY"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "current_observed": {
+      "const": true
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "code_version": {
+      "const": "1.0.0-wave-c-sandbox"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "local_only": {
+      "const": true
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "validation_status": {
+      "const": "NON_TRADEABLE"
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "real_account_settings": {
+      "const": "UNSET_REQUIRED"
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "WAVE_C_UNVERIFIED_GATEWAY",
+          "WAVE_C_CURRENT_OBSERVED_ONLY",
+          "WAVE_C_NON_TRADEABLE",
+          "WAVE_C_UNCALIBRATED",
+          "WAVE_C_MISSING_EVIDENCE",
+          "WAVE_C_RAW_ACTION_DISTORTION",
+          "WAVE_C_UNIT_NOT_INDEPENDENTLY_VERIFIED",
+          "WAVE_C_REVISION_CHRONOLOGY_UNKNOWN",
+          "WAVE_C_INDUSTRY_HISTORY_UNKNOWN"
+        ]
+      },
+      "maxItems": 5000
+    },
+    "invalidation_conditions": {
+      "const": [
+        "RAW_OR_SOURCE_EVIDENCE_CHANGED",
+        "FINANCIAL_ACTION_FACTOR_INDUSTRY_VERSION_CHANGED",
+        "RULES_CODE_SCHEMA_CHANGED",
+        "CUTOFF_OR_NAMESPACE_CHANGED",
+        "CALLER_COPY_OR_RESEAL"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "properties": {
+        "observations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/observation"
+          },
+          "maxItems": 5000
+        },
+        "excluded": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "api_name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 3000
+              },
+              "source_ref": {
+                "$ref": "#/$defs/source_ref"
+              },
+              "reason_code": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 3000
+              }
+            },
+            "required": [
+              "api_name",
+              "source_ref",
+              "reason_code"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 5000
+        },
+        "upstream_input_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "baseline_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "release_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "observations",
+        "excluded",
+        "upstream_input_hash",
+        "baseline_hash",
+        "release_hash"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "trace_id",
+    "symbol",
+    "strategy_id",
+    "namespace",
+    "trust_tier",
+    "purpose",
+    "provider_id",
+    "source_classification",
+    "source_admission",
+    "formal_source_admission",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "current_observed",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "rules_hash",
+    "code_version",
+    "code_hash",
+    "source_identity",
+    "local_only",
+    "cloud_transfer",
+    "tradeable",
+    "validation_status",
+    "can_produce_order",
+    "production_eligible",
+    "productionGate",
+    "real_account_settings",
+    "reason_codes",
+    "invalidation_conditions",
+    "body"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "source_ref": {
+      "type": "object",
+      "properties": {
+        "origin": {
+          "enum": [
+            "legacy",
+            "new"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "request_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "row_ordinal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "available_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "published_at": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "origin",
+        "scope",
+        "request_id",
+        "request_fingerprint",
+        "raw_sha256",
+        "row_ordinal",
+        "retrieved_at",
+        "available_at",
+        "published_at"
+      ],
+      "additionalProperties": false
+    },
+    "object_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "api_name": {
+          "enum": [
+            "daily",
+            "fina_indicator",
+            "stock_basic",
+            "index_member_all",
+            "dividend",
+            "adj_factor",
+            "trade_cal"
+          ]
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "ts_code": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "trade_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "open": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "high": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "low": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "close": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "pre_close": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "change": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "pct_chg": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "vol": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "amount": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "ann_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "end_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "eps": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "roe": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "debt_to_assets": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "netprofit_yoy": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "update_flag": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "symbol": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "exchange": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "curr_type": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "list_status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "list_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "delist_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "l1_code": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "l1_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "l2_code": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "l2_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "l3_code": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "l3_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "in_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "out_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "is_new": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "adj_factor": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "div_proc": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "stk_div": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "stk_bo_rate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "stk_co_rate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "cash_div": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "cash_div_tax": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "record_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "ex_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "pay_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "imp_ann_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "div_listdate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "base_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "base_share": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "cal_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "is_open": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            },
+            "pretrade_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 1000
+            }
+          },
+          "additionalProperties": false
+        },
+        "source_ref": {
+          "$ref": "#/$defs/source_ref"
+        }
+      },
+      "required": [
+        "api_name",
+        "values",
+        "source_ref"
+      ],
+      "additionalProperties": false
+    },
+    "feature": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "state": {
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "UNKNOWN",
+            "CONFLICT"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 1000
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "formula": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source_ref"
+          },
+          "maxItems": 5000
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "WAVE_C_UNVERIFIED_GATEWAY",
+              "WAVE_C_CURRENT_OBSERVED_ONLY",
+              "WAVE_C_NON_TRADEABLE",
+              "WAVE_C_UNCALIBRATED",
+              "WAVE_C_MISSING_EVIDENCE",
+              "WAVE_C_RAW_ACTION_DISTORTION",
+              "WAVE_C_UNIT_NOT_INDEPENDENTLY_VERIFIED",
+              "WAVE_C_REVISION_CHRONOLOGY_UNKNOWN",
+              "WAVE_C_INDUSTRY_HISTORY_UNKNOWN"
+            ]
+          },
+          "maxItems": 5000
+        }
+      },
+      "required": [
+        "name",
+        "state",
+        "value",
+        "unit",
+        "formula",
+        "source_refs",
+        "reason_codes"
+      ],
+      "additionalProperties": false
+    },
+    "score": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "enum": [
+            "EXPERIMENTAL_UNCALIBRATED",
+            "UNKNOWN"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+        },
+        "meaning": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "component_scores": {
+          "type": "object",
+          "properties": {
+            "components": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "feature_name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 3000
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+                  },
+                  "source_refs": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_ref"
+                    },
+                    "maxItems": 5000
+                  }
+                },
+                "required": [
+                  "feature_name",
+                  "value",
+                  "source_refs"
+                ],
+                "additionalProperties": false
+              },
+              "maxItems": 5000
+            }
+          },
+          "required": [
+            "components"
+          ],
+          "additionalProperties": false
+        },
+        "cohort": {
+          "const": [
+            "603993.SH",
+            "600312.SH",
+            "603228.SH"
+          ]
+        },
+        "calibrated": {
+          "const": false
+        },
+        "probability_claim": {
+          "const": "UNSET_REQUIRED"
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "meaning",
+        "component_scores",
+        "cohort",
+        "calibrated",
+        "probability_claim"
+      ],
+      "additionalProperties": false
+    },
+    "dimension": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "enum": [
+            "company_quality",
+            "sector_quality",
+            "catalyst",
+            "evidence_quality",
+            "valuation",
+            "timing",
+            "risk",
+            "cost",
+            "account_suitability",
+            "tradeability"
+          ]
+        },
+        "state": {
+          "enum": [
+            "OBSERVED_PARTIAL",
+            "UNKNOWN",
+            "UNSET_REQUIRED",
+            "BLOCKED"
+          ]
+        },
+        "feature_names": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000
+          },
+          "maxItems": 5000
+        },
+        "limitation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        }
+      },
+      "required": [
+        "name",
+        "state",
+        "feature_names",
+        "limitation"
+      ],
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "enum": [
+            "security",
+            "calendar",
+            "bars",
+            "actions",
+            "factors",
+            "financial",
+            "industry",
+            "announcements"
+          ]
+        },
+        "eligible_observation_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "state": {
+          "enum": [
+            "OBSERVED_PARTIAL",
+            "UNKNOWN"
+          ]
+        },
+        "formal_admission": {
+          "const": "BLOCKED"
+        }
+      },
+      "required": [
+        "category",
+        "eligible_observation_count",
+        "state",
+        "formal_admission"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "All declared fields required; null explicitly UNKNOWN",
+    "money": "No account money inferred; Decimal numeric strings; integer counts; no float JSON",
+    "timezone": "UTC offset instants; Asia/Shanghai DATE_ONLY; no historical clock backfill",
+    "hash": "Canonical UTF8 sorted compact JSON SHA256 excluding root content_hash",
+    "units": "Explicit per-feature units; provider scales remain independently unverified",
+    "reason_codes": [
+      "WAVE_C_UNVERIFIED_GATEWAY",
+      "WAVE_C_CURRENT_OBSERVED_ONLY",
+      "WAVE_C_NON_TRADEABLE",
+      "WAVE_C_UNCALIBRATED",
+      "WAVE_C_MISSING_EVIDENCE",
+      "WAVE_C_RAW_ACTION_DISTORTION",
+      "WAVE_C_UNIT_NOT_INDEPENDENTLY_VERIFIED",
+      "WAVE_C_REVISION_CHRONOLOGY_UNKNOWN",
+      "WAVE_C_INDUSTRY_HISTORY_UNKNOWN"
+    ],
+    "invalidation": "All raw/source/rules/code/schema/version/cutoff/namespace dependencies checked live and at persisted replay",
+    "production_enabled": false
+  }
+}

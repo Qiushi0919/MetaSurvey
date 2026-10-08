@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"metasurvey:backtest-5y:DatedExecutionEconomics:1.0.1-candidate",
+  "type":"object","required":["kind","version","state","actual_account_parameters","rounding_bridge_state","net_edge","micro_ladder","productionGate"],
+  "properties":{"kind":{"const":"DatedExecutionEconomics"},"version":{"const":"1.0.1-candidate"},"state":{"const":"NOT_COMPUTABLE"},"actual_account_parameters":{"const":"UNSET_REQUIRED"},"rounding_bridge_state":{"const":"WAVE_F_HALF_EVEN_ONLY_ACTUAL_HALF_UP_UNSET"},"productionGate":{"const":false}}
+}

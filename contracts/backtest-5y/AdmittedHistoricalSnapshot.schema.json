@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"metasurvey:backtest-5y:AdmittedHistoricalSnapshot:1.0.1-candidate",
+  "type":"object","required":["kind","version","state","actual_admission","full_family_authorized","engine_called","reason_codes","productionGate"],
+  "properties":{"kind":{"const":"AdmittedHistoricalSnapshot"},"version":{"const":"1.0.1-candidate"},"state":{"enum":["BLOCKED","FIXTURE_PRICE_VERIFIED"]},"actual_admission":{"const":false},"full_family_authorized":{"const":false},"engine_called":{"const":false},"reason_codes":{"type":"array"},"productionGate":{"const":false}}
+}

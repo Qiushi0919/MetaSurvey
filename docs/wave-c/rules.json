@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0-experimental",
+  "decision_cutoff": "2026-10-06T05:45:35.308011Z",
+  "timezone": "Asia/Shanghai",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "namespace": "LOCAL_EXPERIMENTAL_REAL_RESEARCH:CORE_40",
+  "source_admission": "UNVERIFIED_GATEWAY",
+  "formal_source_admission": "BLOCKED",
+  "historical_visibility_proven": false,
+  "productionGate": false,
+  "current_observed_only": true,
+  "arithmetic": {
+    "type": "Decimal",
+    "precision": 50,
+    "presentation_places": 6,
+    "rounding": "ROUND_HALF_EVEN",
+    "annualization": "NONE",
+    "money_conversion": "NONE"
+  },
+  "quality": {
+    "meaning": "PARTIAL_OBSERVED_FUNDAMENTAL_COHORT_COORDINATE_NOT_COMPANY_RATING",
+    "method": "MEAN_PAIRWISE_PERCENTILE_WITH_TIES_HALF",
+    "cohort": "EXACT_THREE_ENGINEERING_SYMBOLS",
+    "metrics": {
+      "roe": "HIGHER",
+      "netprofit_yoy": "HIGHER",
+      "debt_to_assets": "LOWER"
+    },
+    "excluded_unknown_axes": [
+      "earnings_quality",
+      "cash_generation"
+    ],
+    "missing_rule": "NO_ZERO_IMPUTATION; SCORE_UNKNOWN_UNLESS_ALL_THREE_COMPONENTS_HAVE_ALL_THREE_COHORT_VALUES",
+    "latest_period": "LATEST_ELIGIBLE_REPORT_PERIOD; DISTINCT_METRICS_AT_PERIOD_MEANS_UNKNOWN; NEVER_USE_UPDATE_FLAG_AS_CHRONOLOGY"
+  },
+  "timing": {
+    "meaning": "RAW_PRICE_STRUCTURE_COHORT_COORDINATE_NOT_ENTRY_GATE",
+    "method": "MEAN_PAIRWISE_PERCENTILE_WITH_TIES_HALF",
+    "metrics": {
+      "raw_price_change_20_sessions_pct": "HIGHER",
+      "distance_ma20_pct": "HIGHER",
+      "raw_max_drawdown_60_sessions_pct": "HIGHER",
+      "raw_daily_volatility_20_sessions_pct": "LOWER"
+    },
+    "windows": [
+      20,
+      60
+    ],
+    "missing_rule": "UNKNOWN_IF_ANY_REQUIRED_COMPONENT_MISSING",
+    "adjustment": "RAW_ONLY; ACTION_DISTORTION_EXPLICIT; FACTORS_NOT_APPLIED"
+  },
+  "evidence": {
+    "method": "100 * usable_categories / 8",
+    "meaning": "ENGINEERING_COVERAGE_NOT_TRUST_OR_PROBABILITY",
+    "categories": [
+      "security",
+      "calendar",
+      "bars",
+      "actions",
+      "factors",
+      "financial",
+      "industry",
+      "announcements"
+    ]
+  },
+  "grade_mapping": "UNSET_REQUIRED",
+  "probability": "UNSET_REQUIRED",
+  "expected_return": "UNSET_REQUIRED",
+  "net_edge": "UNSET_REQUIRED",
+  "real_cost": "UNSET_REQUIRED",
+  "real_account_suitability": "UNSET_REQUIRED"
+}

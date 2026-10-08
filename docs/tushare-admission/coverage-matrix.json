@@ -1,0 +1,215 @@
+{
+  "version": "1.0.0",
+  "stock_scope": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "rows": [
+    {
+      "category": "SECURITY_STATUS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "stock_basic",
+        "stock_st",
+        "suspend_d"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "A",
+      "execution_state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+    },
+    {
+      "category": "CALENDAR_RULES",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "trade_cal"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "A",
+      "execution_state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+    },
+    {
+      "category": "RAW_BARS_1D",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "daily"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "A",
+      "execution_state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+    },
+    {
+      "category": "CORPORATE_ACTIONS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "dividend"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "B",
+      "execution_state": "DEFERRED_PHASE_A_NOT_PASSED"
+    },
+    {
+      "category": "ADJUSTMENT_VERSIONS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "adj_factor"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "A",
+      "execution_state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES"
+    },
+    {
+      "category": "FINANCIAL_REVISIONS",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "income",
+        "balancesheet",
+        "cashflow",
+        "fina_indicator"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "B",
+      "execution_state": "DEFERRED_PHASE_A_NOT_PASSED"
+    },
+    {
+      "category": "INDUSTRY_MEMBERSHIP",
+      "state": "NOT_QUERIED_BLOCKED_PROVIDER_PREREQUISITES",
+      "api_products": [
+        "index_member_all"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "CREDENTIAL_REFERENCE_UNSET_REQUIRED",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "B",
+      "execution_state": "DEFERRED_PHASE_A_NOT_PASSED"
+    },
+    {
+      "category": "ANNOUNCEMENTS",
+      "state": "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+      "api_products": [
+        "anns_d"
+      ],
+      "authenticated_request_count": 0,
+      "observed_row_count": 0,
+      "coverage_complete": false,
+      "license_admitted": false,
+      "historical_visibility_proven": false,
+      "source_observation_ref": null,
+      "clock_evidence_ref": null,
+      "policy_ref": null,
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "lineage_status": "NOT_ISSUED",
+      "reason_codes": [
+        "INDEPENDENT_ENTITLEMENT_UNPROVEN",
+        "NO_ACTUAL_THREE_STOCK_CAPTURE"
+      ],
+      "phase": "CAPABILITY_ONLY",
+      "execution_state": "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN"
+    }
+  ],
+  "existing_SSE_categories": {
+    "CALENDAR_RULES": "PARTIAL_REFERENCE_ONLY_UNCHANGED",
+    "ANNOUNCEMENTS": "PARTIAL_REFERENCE_ONLY_UNCHANGED"
+  },
+  "expanded_320_session_12_quarter_180_day_download": false,
+  "Snapshot_B": "PENDING_ACTUAL_NEW_DATA_AND_ADMITTED_LINEAGE",
+  "credential_lookup": "NOT_ATTEMPTED_TRANSPORT_GATE_UNVERIFIED",
+  "actual_authenticated_requests": 0
+}

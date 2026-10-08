@@ -1,0 +1,12 @@
+{
+  "scope": "SYNTHETIC_TEST_ONLY",
+  "provenance": "Hand-authored compositional integration cases. The frozen Closure producer provides synthetic source bytes; semantic statuses are illustrative coordinates, not derived company facts, real cost rates, real suitability or calibrated grades.",
+  "compatibility_symbol": "SYNTHETIC:NON_SECURITY_FIXTURE",
+  "compatibility_account_id": "SYNTHETIC_FIXTURE:NON_ACCOUNT",
+  "cases": {
+    "BASE": {"bar_close": "10.00", "dimension_changes": {}, "hard_block": false},
+    "UPSTREAM_REVISION": {"bar_close": "10.25", "dimension_changes": {}, "hard_block": false},
+    "TIMING_GAP": {"bar_close": "10.00", "dimension_changes": {"timing": "GAP"}, "hard_block": false},
+    "HARD_BLOCK": {"bar_close": "10.00", "dimension_changes": {}, "hard_block": true}
+  }
+}

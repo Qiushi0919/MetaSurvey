@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "failed_candidate": "48081c0892bb514ef4d5abe19a2b2f390897b604",
+  "failures": [
+    {
+      "id": "WC-F01",
+      "issue": "Actual fresh checkout followed checkout-parent archive path and failed WAVE_C_PATH_INVALID",
+      "status": "FIXED_G3; ACTUAL_FRESH_CHECKOUT_AND_FULL_720_PASS",
+      "original_candidate_remains_failed": true
+    },
+    {
+      "id": "WC-F02",
+      "issue": "Actual independent caller could use generic derive to register an invented sandbox assessment/report",
+      "status": "FIXED_G3; FINAL_NEW_287_INDEPENDENT_ASSERTIONS_PASS",
+      "formal_or_production_bypass": false,
+      "original_candidate_remains_failed": true,
+      "fixture_attack_value_is_not_production_default": true
+    }
+  ],
+  "refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/validation/48081c0-fresh-root-check.log",
+      "sha256": "sha256:148eaedea2fade0b450f07c2966679b718d781561c42b0af79dde969aa927258",
+      "bytes": 2259
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/review/initial-producer-forgery-48081c0.py",
+      "sha256": "sha256:8d65064dbf8892e75534cb581a08c61d105bfc68968ea79273e34fb00c0ccbdf",
+      "bytes": 523
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/review/initial-producer-forgery-48081c0.log",
+      "sha256": "sha256:064bacba1f8f729fd4c44e97fbfea0be2e55252ea209c8432617b2a0e8194f3a",
+      "bytes": 122
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/review/initial-producer-forgery-48081c0.json",
+      "sha256": "sha256:5aaad2cef777cc32cc8f629b070e8209aa8d96a85d03f2a6ead579e5edcf2ca3",
+      "bytes": 428
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/review/initial-producer-forgery-refs-48081c0.json",
+      "sha256": "sha256:036ab5755366b1abe29f952dd24e5ed84b6ffb1bf6c4c82397c77b123fe8a564",
+      "bytes": 1165
+    }
+  ],
+  "prior_G1_G2_reports": "PRESERVED_AS_SUPERSEDED_PROTOTYPES_NOT_CURRENT_PASS",
+  "debt": [
+    "PROVIDER_LICENSE_TRANSPORT_NOT_VERIFIED",
+    "HISTORICAL_VISIBILITY_UNPROVEN",
+    "FULL_FINANCIAL_STATEMENTS_CASH_GENERATION_EARNINGS_QUALITY_MISSING",
+    "VALUATION_TTM_AND_INDUSTRY_CATALYST_EVIDENCE_MISSING",
+    "RAW_TIMING_SUBJECT_TO_ACTION_DISTORTION",
+    "PARTIAL_THREE_STOCK_COHORT_COORDINATES_NOT_ABSOLUTE_OR_CALIBRATED",
+    "GRADE_COST_ACCOUNT_EDGE_PROBABILITY_POLICY_UNSET_REQUIRED",
+    "FORMAL_PRODUCER_SKELETON_ONLY_NO_VERIFIED_STOCK_SOURCE_OR_FORMAL_RESEARCH_POLICY",
+    "CHECKOUT_RELOCATION_WITH_PRIVATE_ARCHIVES_UNMOVED_ONLY",
+    "NO_ARBITRARY_MALICIOUS_PYTHON_OR_OS_SECURITY_CLAIM"
+  ],
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false,
+  "reviewer_assembly_failure": {
+    "kind": "OVERBROAD_FULL_WORKTREE_CLEAN_PRECONDITION_DURING_PARENT_METADATA_ASSEMBLY",
+    "scope_corrected_without_business_assertion_changes": true,
+    "original_script_and_actual_failure_log_preserved": true,
+    "code_raw_rule_report_pins_unchanged": 669,
+    "evidence_directory": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/review"
+  }
+}

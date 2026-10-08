@@ -1,0 +1,707 @@
+{
+  "scope": "REUSED_P1A_IMMUTABLE_EVIDENCE_NO_NEW_FULL_TEST_RUN",
+  "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7",
+  "run_id_origin": "DERIVED_INDEX_FROM_EXISTING_TIMESTAMP_AND_LOG_SHA_NOT_ORIGINAL_CI_ID",
+  "command": "npm run check",
+  "baseline_checkout_commit": "060acfe11728ccee8022974d4794f5a262803afa",
+  "actual_code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "counts": {
+    "tests": 210,
+    "pass": 209,
+    "fail": 0,
+    "skip": 1
+  },
+  "log": {
+    "path": "/Users/qiushi/投资研究/.p1a-archives/p1a-candidate-20261005-060acfe/run-check.txt",
+    "sha256": "sha256:5f5e0b01b8b77f3ab5519d8bfeb242e6ab1c38c141aa3fa3cb31ee80da216216"
+  },
+  "optional_external_legacy_test": "SKIPPED; no V5 strategy/external legacy replay was run in this milestone",
+  "invariants": [
+    {
+      "invariant": "PIT / future-data isolation",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 7,
+          "name": "PIT rejects future data before packet hash, including titles and IDs",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 34,
+          "name": "Stale (>5 seconds) and future prices fail closed, exact boundary is explicit",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 63,
+          "name": "BrainPacket binds the exact frozen snapshot, cutoff and ordered evidence",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 77,
+          "name": "Honestly resealed and rebound chains still reject rule mismatch and missing/future trigger",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 23,
+          "name": "P1A data: known future identity/status cannot backfill past registry",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 56,
+          "name": "P1A data: latest visible suspension blocks resolution and snapshot; future status does not contaminate historical closure",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 85,
+          "name": "P1A data: financial revision filters before selection; original immutable and future restatement hidden",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "freeze-before-reveal",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 24,
+          "name": "Freeze-before-reveal uses retained immutable decision, forbids uncommitted or duplicate reveal",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 217,
+          "name": "freeze-before-reveal and future-data isolation are enforced for snapshot members",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "T+1",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 27,
+          "name": "P1-A restart persists requests, fills, lots, sequence, cash and T+1",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 56,
+          "name": "T+1 rejects same-day sale regardless of claimed human approval or override fields",
+          "file_sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 61,
+          "name": "T+1 uses supplied trading sessions across long gaps and requires the next session",
+          "file_sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 126,
+          "name": "T+1 declared availability, lot quantities and timestamp context are mandatory",
+          "file_sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "same-day cash ordering",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 56,
+          "name": "T+1 rejects same-day sale regardless of claimed human approval or override fields",
+          "file_sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 70,
+          "name": "same-day later sale proceeds cannot finance an earlier buy; ordering is never silently sorted",
+          "file_sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "integer / Decimal / BigInt reconciliation",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 10,
+          "name": "P1-A cost uses independent BigInt oracle across rounding/minimum/tax and large precision boundaries",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 25,
+          "name": "partial gross rounds per execution, fee basis uses exact cumulative notional",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 15,
+          "name": "P1-A paper reserve→submit→two fills uses cumulative minimum settlement and reconciles independently",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 69,
+          "name": "P1-A sub-cent partial rounding has conservative reservation and reconciles all gross execution cents",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 73,
+          "name": "P1-A independent oracle tracks concurrent sell-lot reservations and cancellation allocation",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 87,
+          "name": "P1-A Shanghai trading date is independently reconciled for a valid negative timezone offset",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 91,
+          "name": "P1-A concurrent readers get atomic account/lot snapshots and reconcile after queued mutation",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "minimum commission",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 10,
+          "name": "P1-A cost uses independent BigInt oracle across rounding/minimum/tax and large precision boundaries",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 17,
+          "name": "minimum effect is part of actual commission, never an extra fee",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 21,
+          "name": "partial cumulative settlement crosses minimum and reports negative sub-attribution delta correctly",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "fee-inclusive affordability",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 29,
+          "name": "fee-inclusive affordability rejects gross-only budget and passes exact all-in boundary",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "raw / adjusted isolation",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 157,
+          "name": "raw and adjusted prices coexist, traced adjustment revisions cannot overwrite either",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "corporate-action visibility",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 157,
+          "name": "raw and adjusted prices coexist, traced adjustment revisions cannot overwrite either",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 316,
+          "name": "corporate-action factors cannot expose future knowledge or precede factor retrieval",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 93,
+          "name": "P1A data: factor wire values reject Infinity/NaN/exponents/overprecision and read-back forged values",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "financial revision PIT",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 175,
+          "name": "financial restatements preserve old versions; PIT blocks future revisions and later retrieval",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 376,
+          "name": "financial PIT lineage cannot be retrieved or published before its actual announcement",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 85,
+          "name": "P1A data: financial revision filters before selection; original immutable and future restatement hidden",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "security identity conflict",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 11,
+          "name": "P1A data: canonical representations require exchange; conflicting registry quarantines and audits",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 23,
+          "name": "P1A data: known future identity/status cannot backfill past registry",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "strategy namespace",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/contracts.test.mjs",
+          "line": 22,
+          "name": "Research namespace produces neither signals/orders nor short-horizon card",
+          "file_sha256": "sha256:738cf442acab94dccea52be9e045fa4e0694cd5f1a6e8d3ee3d0958513ecb796"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "stale data",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 34,
+          "name": "Stale (>5 seconds) and future prices fail closed, exact boundary is explicit",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "duplicate order",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 109,
+          "name": "duplicate fill and order application block within sequence and from persisted state",
+          "file_sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 56,
+          "name": "P1-A limit-price, overfill, duplicate client/fill and nonmonotonic event failures leave no partial writes",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "card/version invalidation",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 39,
+          "name": "Authenticated two-phase version chain is preparable only, never production executable",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 48,
+          "name": "Card version/cost/quantity/account/mode/namespace changes invalidate old approvals",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 77,
+          "name": "Honestly resealed and rebound chains still reject rule mismatch and missing/future trigger",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "Snapshot lineage closure",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 56,
+          "name": "P1A data: latest visible suspension blocks resolution and snapshot; future status does not contaminate historical closure",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 104,
+          "name": "P1A data: content addressed snapshot closes evidence; one byte mutation changes hash and rejects old snapshot",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 18,
+          "name": "Experiment A: actual committed source + immutable snapshot replay twice, trace/wall time do not change economics",
+          "file_sha256": "sha256:9cfae1a8ba705dfdec219ded08489aecaca4e95d43d85e2e2547a8bac924b3d9"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 32,
+          "name": "snapshot persisted closure rejects caller byte mutation and SourceObservation schema cannot admit unknown availability",
+          "file_sha256": "sha256:9cfae1a8ba705dfdec219ded08489aecaca4e95d43d85e2e2547a8bac924b3d9"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "source-byte mutation",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 70,
+          "name": "P1A data: public fixtures have original byte hashes and explicit unknown license/time provenance",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 104,
+          "name": "P1A data: content addressed snapshot closes evidence; one byte mutation changes hash and rejects old snapshot",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 24,
+          "name": "Experiment A mutations: cost version only/rule version only/source byte only change identity and invalidate old approval/result",
+          "file_sha256": "sha256:9cfae1a8ba705dfdec219ded08489aecaca4e95d43d85e2e2547a8bac924b3d9"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 32,
+          "name": "snapshot persisted closure rejects caller byte mutation and SourceObservation schema cannot admit unknown availability",
+          "file_sha256": "sha256:9cfae1a8ba705dfdec219ded08489aecaca4e95d43d85e2e2547a8bac924b3d9"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "same cash double spending",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 19,
+          "name": "P1-A shared account locks prevent simultaneous Core/Event double spending without shared positions",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "partial fill",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 15,
+          "name": "P1-A paper reserve→submit→two fills uses cumulative minimum settlement and reconciles independently",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 23,
+          "name": "P1-A partial cancel/reject release once, retain minimum fee, block late fills",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 56,
+          "name": "P1-A limit-price, overfill, duplicate client/fill and nonmonotonic event failures leave no partial writes",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 69,
+          "name": "P1-A sub-cent partial rounding has conservative reservation and reconciles all gross execution cents",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 21,
+          "name": "partial cumulative settlement crosses minimum and reports negative sub-attribution delta correctly",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 25,
+          "name": "partial gross rounds per execution, fee basis uses exact cumulative notional",
+          "file_sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "restart idempotency",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 27,
+          "name": "P1-A restart persists requests, fills, lots, sequence, cash and T+1",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 81,
+          "name": "P1-A idempotency keys and client identity scope persist per account and reject mutated approval/snapshot terms",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "append-only audit",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 11,
+          "name": "P1A data: canonical representations require exchange; conflicting registry quarantines and audits",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 107,
+          "name": "P1A data: every new persistence family rejects truncation and retains actual source/hash/time/security/version/trace",
+          "file_sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe"
+        },
+        {
+          "path": "tests/p1a-integration-foundation.test.mjs",
+          "line": 37,
+          "name": "persisted audit chain links source/hash/time/security/version/trace and redacts nested sensitive fields",
+          "file_sha256": "sha256:704d95cb543fea8f6c724d88c04875ff2504a7f74d77fe7ff534f85613093469"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 307,
+          "name": "P0 schema never grants production authorization and preserves append-only audit",
+          "file_sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "UNSET production block",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 19,
+          "name": "Date-only publications require next exchange session availability and unknown dates block",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 39,
+          "name": "Authenticated two-phase version chain is preparable only, never production executable",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 59,
+          "name": "Unknown config/missing fields/null/NaN block production and never inherit legacy assumptions",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 82,
+          "name": "Even self-declared fully configured verification cannot enable P0 production",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 9,
+          "name": "P1-A cannot weaken accepted P0 production/approval gate bytes",
+          "file_sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3"
+        },
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 18,
+          "name": "UNSET_REQUIRED inventory is generated from schema and the actual unconfigured profile",
+          "file_sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "LLM != HUMAN_USER",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 42,
+          "name": "Model self-claim HUMAN identity does not authenticate a user approval",
+          "file_sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa"
+        },
+        {
+          "path": "tests/contracts.test.mjs",
+          "line": 39,
+          "name": "LLM APPROVE cannot be an Approval actor or USER approval enum",
+          "file_sha256": "sha256:738cf442acab94dccea52be9e045fa4e0694cd5f1a6e8d3ee3d0958513ecb796"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "PROD gateway rejection",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 9,
+          "name": "P1-A cannot weaken accepted P0 production/approval gate bytes",
+          "file_sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "file_sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    },
+    {
+      "invariant": "micro-ladder insufficient edge",
+      "baseline_status": "PASS_IN_EXISTING_CLEAN_LOG",
+      "tests": [
+        {
+          "path": "tests/p1a-integration-foundation.test.mjs",
+          "line": 23,
+          "name": "new tranche pays its independent minimum; benefit must cover all costs and experimental safety multiple",
+          "file_sha256": "sha256:704d95cb543fea8f6c724d88c04875ff2504a7f74d77fe7ff534f85613093469"
+        }
+      ],
+      "run_id": "P1A-CLEAN-20261005063915290-5f5e0b01b8b7"
+    }
+  ],
+  "new_closure_readiness_tests": "NOT_RUN_NOT_IMPLEMENTED"
+}

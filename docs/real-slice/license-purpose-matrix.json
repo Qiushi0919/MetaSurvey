@@ -1,0 +1,172 @@
+{
+  "rows": [
+    {
+      "policy_ref": {
+        "object_id": "policy:7f5bd3a81e1d29290e40f4cc5f9bec558f16838682a79556cd1e74db8c4f3ef2",
+        "object_version": 1,
+        "content_hash": "sha256:2f0de2b9ffc4f9c9a9a20989aaea92e6d7e3099f1b824195803b0bf31ee3a191"
+      },
+      "observation_ref": {
+        "object_id": "observation:d3e701d41e664f5d826b73283453da489242c16e32f831971d81caf79b942a50",
+        "object_version": 1,
+        "content_hash": "sha256:83b81dad51e3a3d31b1f8840a08281a870934ea1ef371d4ed1ff9687ad223337"
+      },
+      "source_id": "official:sse-calendar-reference-v2",
+      "product": "SSE_PUBLIC_WEBSITE_HOLIDAY_DOCUMENT",
+      "data_type": "CALENDAR_RULES",
+      "purpose": "LOCAL_CURRENT_OBSERVED_REFERENCE",
+      "namespace": "CORE_40",
+      "coverage": {
+        "symbols": [],
+        "from": "2026-09-20",
+        "to": "2026-10-10",
+        "complete": false,
+        "claim": "FINITE_CALENDAR_REFERENCE"
+      },
+      "terms_capture_hash": "sha256:81595daf88819eb6dd6849ca9da70690bcdaf803917394ae43559a1cfe13c6af",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "permissions": {
+        "local_reference": true,
+        "cloud_export": false,
+        "raw_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "production": false
+      },
+      "code_epoch": "266a7083ce2c77c31917899ced458951661ddaed:sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e:schema6:clock1.0.0:receipt2.0.0:packet2.0.0",
+      "use_at": "2026-10-05T12:51:22.803Z",
+      "projection": "REFERENCE_FACTS_ONLY",
+      "admission_role": "AUTHORITY_REFERENCE"
+    },
+    {
+      "policy_ref": {
+        "object_id": "policy:7673fc53a2dc0998064544de3770acaa2a172bf4d94e73a5a0ba053c91e1447d",
+        "object_version": 1,
+        "content_hash": "sha256:400520f35d7caf2cc60f826909ac094ddfbc980bcd2775f965155d459b4036d2"
+      },
+      "observation_ref": {
+        "object_id": "observation:966a42d5bfb05ecf33bc47cc657ca1e9569045497b3efac080400900ad4ad185",
+        "object_version": 1,
+        "content_hash": "sha256:58271f80b6bc6e9652c45ce4130062db4c3ce62809c51d4bb9bd85dc0e295ac1"
+      },
+      "source_id": "official:sse-disclosure-reference",
+      "product": "SSE_PUBLIC_WEBSITE_DISCLOSURE_INDEX",
+      "data_type": "ANNOUNCEMENTS",
+      "purpose": "LOCAL_CURRENT_OBSERVED_REFERENCE",
+      "namespace": "CORE_40",
+      "coverage": {
+        "symbols": [
+          "SSE:603993"
+        ],
+        "from": "2026-09-03",
+        "to": "2026-09-19",
+        "complete": false,
+        "claim": "DOCUMENT_REFERENCES_ONLY"
+      },
+      "terms_capture_hash": "sha256:81595daf88819eb6dd6849ca9da70690bcdaf803917394ae43559a1cfe13c6af",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "permissions": {
+        "local_reference": true,
+        "cloud_export": false,
+        "raw_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "production": false
+      },
+      "code_epoch": "266a7083ce2c77c31917899ced458951661ddaed:sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e:schema6:clock1.0.0:receipt2.0.0:packet2.0.0",
+      "use_at": "2026-10-05T12:51:22.803Z",
+      "projection": "REFERENCE_FACTS_ONLY",
+      "admission_role": "AUTHORITY_REFERENCE"
+    },
+    {
+      "policy_ref": {
+        "object_id": "policy:238f4457e05c1ac876c2c1df49b5830d9200f6f48b0baf2a1c6669e036e5290a",
+        "object_version": 1,
+        "content_hash": "sha256:deb15e67f83f3b520ad191418f6bc977fe7e95e7105539b275946e2e0dbb0c3c"
+      },
+      "observation_ref": {
+        "object_id": "observation:793d83e29440ad6705b052ee2267345a83b6e89b201df4178ff6cf8eccc8a90b",
+        "object_version": 1,
+        "content_hash": "sha256:8bb31217fa2ec27c95709736b5c451eb13561b09c86e9b60f28e22cc2e2b1ae4"
+      },
+      "source_id": "official:sse-disclosure-reference",
+      "product": "SSE_PUBLIC_WEBSITE_DISCLOSURE_INDEX",
+      "data_type": "ANNOUNCEMENTS",
+      "purpose": "LOCAL_CURRENT_OBSERVED_REFERENCE",
+      "namespace": "CORE_40",
+      "coverage": {
+        "symbols": [
+          "SSE:600312"
+        ],
+        "from": "2026-09-24",
+        "to": "2026-09-30",
+        "complete": false,
+        "claim": "DOCUMENT_REFERENCES_ONLY"
+      },
+      "terms_capture_hash": "sha256:81595daf88819eb6dd6849ca9da70690bcdaf803917394ae43559a1cfe13c6af",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "permissions": {
+        "local_reference": true,
+        "cloud_export": false,
+        "raw_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "production": false
+      },
+      "code_epoch": "266a7083ce2c77c31917899ced458951661ddaed:sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e:schema6:clock1.0.0:receipt2.0.0:packet2.0.0",
+      "use_at": "2026-10-05T12:51:22.803Z",
+      "projection": "REFERENCE_FACTS_ONLY",
+      "admission_role": "AUTHORITY_REFERENCE"
+    },
+    {
+      "policy_ref": {
+        "object_id": "policy:8cf4a4fe4f3057fa126576994f083c228a4ff9293225cb4033a749bf48134c28",
+        "object_version": 1,
+        "content_hash": "sha256:03ccce671dd4b091b30cecfcdadfbb81af7df972135eefccfac1f52ea546e932"
+      },
+      "observation_ref": {
+        "object_id": "observation:56d77135243a0a09702596a64918536370551eff6a3fa96020bd4cd5eb26a67c",
+        "object_version": 1,
+        "content_hash": "sha256:27a38f7769c392f1fa4a4ddc8ab8579e4543c9197b8b5c2ba647cf1fd11ba5cf"
+      },
+      "source_id": "official:sse-disclosure-reference",
+      "product": "SSE_PUBLIC_WEBSITE_DISCLOSURE_INDEX",
+      "data_type": "ANNOUNCEMENTS",
+      "purpose": "LOCAL_CURRENT_OBSERVED_REFERENCE",
+      "namespace": "CORE_40",
+      "coverage": {
+        "symbols": [
+          "SSE:603228"
+        ],
+        "from": "2026-09-21",
+        "to": "2026-09-30",
+        "complete": false,
+        "claim": "DOCUMENT_REFERENCES_ONLY"
+      },
+      "terms_capture_hash": "sha256:81595daf88819eb6dd6849ca9da70690bcdaf803917394ae43559a1cfe13c6af",
+      "terms_raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "permissions": {
+        "local_reference": true,
+        "cloud_export": false,
+        "raw_export": false,
+        "redistribution": false,
+        "historical_backtest": false,
+        "production": false
+      },
+      "code_epoch": "266a7083ce2c77c31917899ced458951661ddaed:sha256:358cd6afd7100ce2c6283fffef39496e09149fe9bfcdd96de5d34ff80847e89e:schema6:clock1.0.0:receipt2.0.0:packet2.0.0",
+      "use_at": "2026-10-05T12:51:22.803Z",
+      "projection": "REFERENCE_FACTS_ONLY",
+      "admission_role": "AUTHORITY_REFERENCE"
+    }
+  ],
+  "TUSHARE": "BLOCKED_NO_VERIFIABLE_ACCOUNT_PRODUCT_PURPOSE_RETENTION_TRANSFER_ENTITLEMENT",
+  "BAOSTOCK": "BLOCKED_UNKNOWN_LICENSE",
+  "FORMAL_HISTORICAL_PROVIDER": "FUTURE_NOT_CONNECTED",
+  "source_global_trust_flags": false,
+  "local_reference_only": true,
+  "cloud_gate": "BLOCKED",
+  "historical_gate": "BLOCKED",
+  "production_gate": "BLOCKED",
+  "redistribution": "DENIED",
+  "no_credentials_accessed": true
+}

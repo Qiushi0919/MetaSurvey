@@ -1,0 +1,3 @@
+import {spawnSync} from 'node:child_process';import {readdirSync} from 'node:fs';import path from 'node:path';const root=path.resolve(import.meta.dirname,'../..');
+function run(args){const result=spawnSync(process.execPath,args,{cwd:root,stdio:'inherit',env:process.env});if(result.status!==0)process.exit(result.status??1);}
+run(['scripts/check.mjs']);run(['scripts/verify-closure.mjs']);run(['p1b/scripts/verify.mjs']);run(['--test','--test-concurrency=1',...readdirSync(path.join(root,'tests')).filter(x=>x.endsWith('.test.mjs')).map(x=>'tests/'+x)]);run(['--test','--test-concurrency=1',...readdirSync(path.join(root,'p1b/tests')).filter(x=>x.endsWith('.test.mjs')).map(x=>'p1b/tests/'+x)]);

@@ -1,0 +1,228 @@
+{
+  "phase": "WAVE_F",
+  "critical_actual_false_acceptance": false,
+  "first_independent_review": "REMEDIATION_REQUIRED_SYNTHETIC_BOUNDARIES",
+  "distinct_independent_findings": 2,
+  "findings": [
+    {
+      "id": "WF-R1-STRATEGY-CLOCK-ORDER",
+      "boundary": "SYNTHETIC_RESEARCH_LABEL_ONLY",
+      "original_full_byte_copy": "NOT_CAPTURED_BEFORE_PATCH; exact independent repro/input/output/hash preserved",
+      "fix": "VISIBLE available_at<=retrieved_at guard; no future/private value leak",
+      "fix_state": "FIXED_INDEPENDENT_R2_RETEST_PASS"
+    },
+    {
+      "id": "WF-R1-STALE-ORIGINAL-RELABEL",
+      "boundary": "SYNTHETIC_ACTIVATION_DISPLAY_ONLY",
+      "original_source_epoch": "activation/G1 and independent R1 snapshots retained",
+      "fix_state": "FIXED_INDEPENDENT_R2_RETEST_PASS"
+    }
+  ],
+  "execution_failures_preserved": [
+    "PIT3 HTTP301 bodies, notPDF",
+    "PIT initialsmoke list ordering mismatch",
+    "PITtestG1 two oldselector enum expectation errors, zsh reserved status variable afterfull log",
+    "BacktestG1 AST syntax diagnostic/source",
+    "BacktestG2 one arithmetic-oracle failure",
+    "BacktestG4 two harness/oracle failures",
+    "IndependentR1 initialPYTHONPATH harness failure",
+    "ActivationG2 142PASS/1FAIL testhelper recreated deliberately missing rawhash; originalsource/log preserved, defaulthelper no longer regenerates",
+    "IndependentR2 native initial launch workdir missing leading slash; tool rejected before process creation, raw tool rejection preserved separately"
+  ],
+  "evidence_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/build-evidence-G1.py",
+      "sha256": "sha256:549f6bdba1fa8b84df6e390d3b9d2f0d0db76c2bf2a2ed88e419023087af11a0",
+      "bytes": 6278
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/capture-G1.py",
+      "sha256": "sha256:63222b0c05084e6df301745e62fb3f1739ac180c23c8662a587b80880d18284f",
+      "bytes": 2458
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/pit-before-smoke-G1.py",
+      "sha256": "sha256:d9a57fe9c852930adb900572a922a60156c7908eaee41102a3066e612c07e305",
+      "bytes": 16086
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/smoke-G1.json",
+      "sha256": "sha256:d7949a95ab239920682d4911679e450e479cb7e11782fea407abd5d5dd3779f3",
+      "bytes": 1206
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/tests-G1-failure.json",
+      "sha256": "sha256:2ac7b499d4eb4b322dc571291549ae009999e573a872dd79f3cf2cb9e490ed84",
+      "bytes": 1044
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/tests-G1-source-pit.py",
+      "sha256": "sha256:971627042c954efe8fda1d8b9d196f832261517416dffe43b3c8a57c89bdd8f7",
+      "bytes": 16094
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/tests-G1-source-test_pit.py",
+      "sha256": "sha256:d4d536c8bae06bc3d61150678e16a9ba051e185e6605741f69aa0c526a319c63",
+      "bytes": 15041
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/pit/tests-G1.log",
+      "sha256": "sha256:c630b328ffeeb1585577f470f935ef25d3ffd1b67cc0ce9346bc45adaf2ff74f",
+      "bytes": 7593
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G1-syntax/backtest.py",
+      "sha256": "sha256:5cbee37bc9117ca8a4f0df8f465dec728a1036fa2ee84ba0057fc7dc8fce36a0",
+      "bytes": 45437
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G1-syntax/failure.txt",
+      "sha256": "sha256:2b1968826a28f71d14c287cb9ab56d200a19e2899e737e8fb36f01506e4b87a8",
+      "bytes": 36
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G2-tests/backtest.py",
+      "sha256": "sha256:5b89f7c2968c3892faaefbf150daace291792b2888fff69e0ec2bd33197a8c54",
+      "bytes": 46066
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G2-tests/test.log",
+      "sha256": "sha256:6989bfa44f362d98ceb82f68bdd3bc17b59485cc3bc232cf695eed643e02fa52",
+      "bytes": 13531
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G2-tests/test_backtest.py",
+      "sha256": "sha256:d12f0af3466a4b5702b2ea61c68eb4fde987df4a299219936925ea3e6e62a4e3",
+      "bytes": 37453
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G4-tests/backtest.py",
+      "sha256": "sha256:08f9126bbf5373a92a302c33ba3cc3adbbdeffa65bbed8dfe1408824c478be59",
+      "bytes": 47656
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G4-tests/test.log",
+      "sha256": "sha256:7e8884c94874f5bddfbfffed273a6b4580271c23db71892a849b596be24d0e46",
+      "bytes": 16449
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/backtest/G4-tests/test_backtest.py",
+      "sha256": "sha256:a09dfa103f3d048b8944806eae51e9d10ba0fc87052b1307b04697d3a0abdcdb",
+      "bytes": 43511
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/evidence.json",
+      "sha256": "sha256:33ed644c45efe8ddfa97c37ec85f6badede5829c8fd8b7e36d42f1d25d4ade8a",
+      "bytes": 2645
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/matrix.json",
+      "sha256": "sha256:ac938f6e3339c468587a9983afdaa1594cd8f440c791e1dd0ba39a5ddd2dd879",
+      "bytes": 495
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/preliminary-G1.json",
+      "sha256": "sha256:9cfae680ae862a2433940046325bdf98bc2d90743af99efea7619dbc4aea13e3",
+      "bytes": 9670
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/preliminary-G1.py",
+      "sha256": "sha256:683e22599caa4c360ec0af05415f9b63328bde14f72f3354d3ab1fd3235647ef",
+      "bytes": 3035
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/preliminary-invocation-G1.log",
+      "sha256": "sha256:8341a49c7f0f7246f1a264ea3a2f18ae8e585575840d8b1c0ae3e7bd62ff355c",
+      "bytes": 265
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/report.md",
+      "sha256": "sha256:e66d1de41131b8b6f5a04528e36e7d26a46b9e8bf50cca26898ea82dc70476b0",
+      "bytes": 3291
+    }
+  ],
+  "inherited_known_failures_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/post-wave-e/known-failures.json",
+    "sha256": "sha256:06b061c64b054c5a478585adc7457e1ed6ab8067cd6b2f2e5210fb260c0f9ddb",
+    "bytes": 4290
+  },
+  "unresolved_business_and_data_debt": [
+    "FORMAL_HISTORY_BLOCKED",
+    "SOURCE_PROVIDER_LICENSE_TRANSPORT_UNVERIFIED",
+    "ACTUAL_ACCOUNT_COST_RISK_30_UNSET",
+    "RESEARCH_OWNER_POLICY_UNSET",
+    "ACTUAL_READER_AND_ACTIVATION_ISSUER_UNAVAILABLE",
+    "MINUTE_QUEUE_PARTIAL_FILL_RIGHTS_FRACTIONAL_DYNAMIC_DIVIDEND_TAX_UNSUPPORTED",
+    "NO_UNSEEN_OOS_EDGE_EVIDENCE",
+    "ACTUAL_FORWARD_DAYS_ZERO"
+  ],
+  "productionGate": false,
+  "independent_R1_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/report.md",
+      "sha256": "sha256:e66d1de41131b8b6f5a04528e36e7d26a46b9e8bf50cca26898ea82dc70476b0",
+      "bytes": 3291
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/evidence.json",
+      "sha256": "sha256:33ed644c45efe8ddfa97c37ec85f6badede5829c8fd8b7e36d42f1d25d4ade8a",
+      "bytes": 2645
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R1/matrix.json",
+      "sha256": "sha256:ac938f6e3339c468587a9983afdaa1594cd8f440c791e1dd0ba39a5ddd2dd879",
+      "bytes": 495
+    }
+  ],
+  "activation_final_ref": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/activation/activation-validation-G3.json",
+    "sha256": "sha256:1eeea2384938101f2e28455d844da2d72bdf9f7e1e83705efa5ffebdd827065a",
+    "bytes": 3433
+  },
+  "final_independent_review": "PASS_WITH_CONDITIONS; original R2 issued while separate full-fresh regression still running",
+  "R1_independent_retests": "BOTH_REJECT_FINAL_CANDIDATE",
+  "independent_R2_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R2/report.md",
+      "sha256": "sha256:e5545270870008a284f21a491bdd370e377fa9384679c3e44a8c7fe152ca6b59",
+      "bytes": 9359
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R2/matrix.json",
+      "sha256": "sha256:86a9feaf5106c558ee99a1a245b345af4b40a0466d3a4784c060a3ca387d0984",
+      "bytes": 4560
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R2/evidence.json",
+      "sha256": "sha256:4521347410ae1470d8c13a6328bab937eca8033b5f6a5623c7c92cf1deda7777",
+      "bytes": 4863
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R2/native-invocation-G1.json",
+      "sha256": "sha256:a62b528326b20895b66ecf45ba218ace6c47c398258786ef6b1c0c83e72df80c",
+      "bytes": 286
+    }
+  ],
+  "environment_notes": [
+    "Root unqualified git status reached Apple git, rejected by missing Xcode license; no modification. All effective Git validation uses /opt/homebrew/bin/git."
+  ],
+  "final_fresh_regression": {
+    "total": 1498,
+    "passed": 1497,
+    "failed": 0,
+    "skipped": 1,
+    "independent_addendum_checks": 88
+  },
+  "independent_R2_addendum_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R2/full-fresh-addendum-G1.json",
+      "sha256": "sha256:d3d125da9329fa17802aa87a3bc43efa1b551b38dfb1a52b61b91381015dc745",
+      "bytes": 9669
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/review/R2/full-fresh-addendum-G1.md",
+      "sha256": "sha256:446e49de2b92c51039fea771ca5d5843088f5c3d62a3ec29afd9fba34676965b",
+      "bytes": 1317
+    }
+  ]
+}

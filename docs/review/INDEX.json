@@ -1,0 +1,30 @@
+{
+  "kind": "MetaSurveyPublicReviewIndex",
+  "version": "1.0.0",
+  "updated_on": "2026-10-08",
+  "timezone": "Asia/Shanghai",
+  "latest_entry": "docs/review/LATEST.md",
+  "architecture": "docs/review/ARCHITECTURE.md",
+  "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
+  "reports": [
+    {
+      "phase": "GITHUB_PUBLICATION",
+      "report": "docs/review/releases/2026-10-08-github-publication/REPORT.md",
+      "checks": "docs/review/releases/2026-10-08-github-publication/Checks.json"
+    },
+    {
+      "phase": "BACKTEST_5Y_P1_ROOT_INTEGRATION",
+      "report": "docs/backtest-5y-integration/Acceptance-Report.md",
+      "status": "docs/backtest-5y-integration/Status.json",
+      "independent_evidence": "docs/review/releases/2026-10-08-p1-integration/Evidence-Copies.json"
+    },
+    {
+      "phase": "CORE40_METHOD_PROPOSAL",
+      "report": "docs/core40-method-proposal/Review-Report.md",
+      "owner_decisions": "docs/core40-method-proposal/Owner-Decisions.md"
+    }
+  ],
+  "source_snapshot": "docs/review/Source-Snapshot.json",
+  "local_only_manifest": "docs/review/Local-Only-Manifest.json",
+  "productionGate": false
+}

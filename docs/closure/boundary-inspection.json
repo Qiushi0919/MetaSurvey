@@ -1,0 +1,87 @@
+{
+  "inspection_version": "1.0.0",
+  "run_id": "P1ACC-BOUNDARY-INSPECTION-20261005071454207",
+  "started_at": "2026-10-05T07:14:54.207Z",
+  "finished_at": "2026-10-05T07:14:55.053Z",
+  "command": "node --input-type=module (parent inline read-only boundary inspection)",
+  "scope": "IN_MEMORY_SYNTHETIC_ONLY_NO_REPO_CODE_EDITS_NO_LEGACY_RUNS",
+  "baseline_code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "observations": {
+    "existing_synthetic_snapshot_verification": "PASS",
+    "synthetic_closure_relabel": {
+      "requested_scope": "OBSERVED",
+      "status": "FROZEN",
+      "manifest_scope": "OBSERVED",
+      "closure_origin": "SYNTHETIC",
+      "verified_by_existing_function": true,
+      "interpretation": "Low-level verifier does not certify research admission or source authenticity. The current runReplay guard separately requires SYNTHETIC; no actual research/broker route was executed. Future admission facade must reject synthetic-to-real scope promotion."
+    },
+    "snapshot_protocol": {
+      "p1a_data_hash_definition": "hashValue({root_refs,closure_refs,feature_version,decision_cutoff,rules_hash})",
+      "p0_packet_reference_harness_definition": "hashValue(packet.evidence)",
+      "relationship": "DISTINCT_PROTOCOLS_REQUIRE_VERSIONED_ADAPTER_NOT_IMMUTABLE_HARNESS_REWRITE",
+      "saved_p1a_data_hash": "sha256:66272704d2cc36959404e9f7cf60b40786e40e49a81403bb3bd439191198a539"
+    },
+    "production_gate": {
+      "allowed": false,
+      "reason_codes": [
+        "PRODUCTION_DISABLED_P0",
+        "UNSET_REQUIRED_CONFIG",
+        "SYNTHETIC_FIXTURE_ONLY",
+        "UNRESOLVED_BUSINESS_POLICY"
+      ],
+      "missing_paths": [
+        "/account_id",
+        "/settings/capital_cents",
+        "/settings/target_order_cents",
+        "/settings/max_positions",
+        "/settings/max_single_trade_loss_bps",
+        "/settings/max_sector_exposure_bps",
+        "/settings/daily_loss_limit_cents",
+        "/settings/max_portfolio_drawdown_bps",
+        "/settings/margin_allowed",
+        "/settings/monthly_trade_frequency",
+        "/settings/strategy_budget_cents/CORE_40",
+        "/settings/strategy_budget_cents/EVENT_3",
+        "/broker_costs/broker_id",
+        "/broker_costs/commission_rate",
+        "/broker_costs/minimum_commission_cents",
+        "/broker_costs/commission_scope",
+        "/broker_costs/exchange_fee_rate",
+        "/broker_costs/exchange_fee_included",
+        "/broker_costs/other_fee_rate",
+        "/broker_costs/other_fee_included",
+        "/broker_costs/stamp_tax_sell_rate",
+        "/broker_costs/statutory_rate_source",
+        "/broker_costs/statutory_rate_verified_at",
+        "/broker_costs/effective_from",
+        "/broker_costs/effective_to",
+        "/broker_costs/slippage_base_bps",
+        "/broker_costs/slippage_stress_bps",
+        "/broker_costs/rounding_mode",
+        "/broker_costs/configuration_source",
+        "/user_risk_policy_version"
+      ]
+    }
+  },
+  "assertions": {
+    "original_snapshot_verified": true,
+    "production_disabled": true
+  },
+  "readiness_proven": false,
+  "independent_reviewer_run_this_milestone": false,
+  "reproduction_inputs": {
+    "fixture_helper": "tests/fixtures/p1a-data/helpers.mjs::dataDb/createDataFixture",
+    "fixture_options": "defaults; synthetic sources only",
+    "db": "new in-memory PGlite; migrate001–005",
+    "root_refs": "[ref(fixture.bar)]",
+    "decision_cutoff": "2026-09-30T16:00:00+08:00",
+    "feature_version": "synthetic-feature-1",
+    "rules_hash_input": "hashValue(\"CLOSURE_ANALYSIS_DIFFERENT_RULES\")",
+    "scope": "OBSERVED",
+    "frozen_at": "2026-09-30T16:00:00+08:00",
+    "verification": "verifyDataSnapshot(db, returned_snapshot)",
+    "expected_observed_baseline_behavior": "status=FROZEN, manifest.scope=OBSERVED, original bar.scope=SYNTHETIC, existing verifier returns success",
+    "future_acceptance": "Research admission must reject scope promotion; baseline runReplay still independently rejects non-SYNTHETIC manifests."
+  }
+}

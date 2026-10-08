@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "code_candidate": "4b1d0ef8f3ca42cc1cf47881b7286e7d24cdea8a",
+  "completed_at": "2026-10-06T05:57:51.666789+00:00",
+  "unique": 720,
+  "pass": 719,
+  "fail": 0,
+  "skip": 1,
+  "carried": 669,
+  "new": 51,
+  "new_python": 38,
+  "new_native": 13,
+  "node_suite_counts": [
+    258,
+    42,
+    48,
+    26,
+    27,
+    8,
+    11,
+    13
+  ],
+  "python_suite_counts": [
+    38,
+    38,
+    49,
+    124,
+    38
+  ],
+  "independent_assertions_not_counted": 287,
+  "old_expectations_relaxed": false,
+  "fresh_checkout": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/validation/fresh-checkout",
+    "head": "4b1d0ef8f3ca42cc1cf47881b7286e7d24cdea8a",
+    "clean": true,
+    "dependency_install_exit": 0,
+    "full_entry_exit": 0,
+    "private_archives": "UNMOVED_ONLY_NO_REMOTE_CI_CLAIM"
+  },
+  "refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/validation/final-full-G3.log",
+      "sha256": "sha256:8317529e18488a12c8ff5b7acbb9e54e92e633830bc63e986c8502961a75f779",
+      "bytes": 92486
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/validation/G3-fresh-readonly-verification.log",
+      "sha256": "sha256:667f3dba6b0099100cbd8dd75898635f6a871aa0f8f6cb6531b6f751ee887006",
+      "bytes": 132
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/validation/npm-ci.log",
+      "sha256": "sha256:e557a122beeeaef84f40405ea6737a05a12d885d188f301d0fcee33598a2c449",
+      "bytes": 347
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/validation/48081c0-fresh-root-check.log",
+      "sha256": "sha256:148eaedea2fade0b450f07c2966679b718d781561c42b0af79dde969aa927258",
+      "bytes": 2259
+    }
+  ],
+  "productionGate": false,
+  "formal_source_admission": "BLOCKED"
+}

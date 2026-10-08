@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "actual_account_tier": 15000,
+  "tier_evidence": "OWNER_ASSERTED",
+  "account_entitlement_inventory": "NOT_VERIFIED_API_ACCESS_OBSERVATIONS_ONLY",
+  "product_identity_verified": false,
+  "matrix": {
+    "stock_basic": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 6,
+      "status": "ACCESS_OBSERVED"
+    },
+    "suspend_d": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 0,
+      "status": "ACCESS_OBSERVED"
+    },
+    "trade_cal": {
+      "requests": 2,
+      "success": 2,
+      "denied": 0,
+      "failed": 0,
+      "rows": 504,
+      "status": "ACCESS_OBSERVED"
+    },
+    "daily": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 990,
+      "status": "ACCESS_OBSERVED"
+    },
+    "adj_factor": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 990,
+      "status": "ACCESS_OBSERVED"
+    },
+    "dividend": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 227,
+      "status": "ACCESS_OBSERVED"
+    },
+    "fina_indicator": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 63,
+      "status": "ACCESS_OBSERVED"
+    },
+    "index_member_all": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 6,
+      "status": "ACCESS_OBSERVED"
+    }
+  }
+}

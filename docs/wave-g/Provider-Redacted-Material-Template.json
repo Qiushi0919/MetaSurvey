@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "redacted": true,
+  "dimensions": {
+    "seller_identity": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "order_product": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "validity": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "account_entitlements": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "purpose_license": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "storage_transfer": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "endpoint_identity": {
+      "statement": null,
+      "evidence_paths": []
+    },
+    "transport": {
+      "statement": null,
+      "evidence_paths": []
+    }
+  }
+}

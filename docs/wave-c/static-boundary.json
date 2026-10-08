@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "completed_at": "2026-10-06T05:50:52.329700+00:00",
+  "scope": "NEW_PHASE_CODE_SCHEMA_METADATA_AND_CURRENT_G3_PRIVATE_ARTIFACTS",
+  "files_scanned": 39,
+  "high_confidence_secret_pattern_matches": 0,
+  "actual_secret_equality_scan_performed": false,
+  "credential_lookup_performed": false,
+  "password_prompts": 0,
+  "private_report_modes": "0600",
+  "underlying_raw_boundary": "EXACT_BYTES_SAME_AS_PRIOR_WAVE_B_ACTUAL_SECRET_AUDIT",
+  "prior_exact_secret_audit": {
+    "path": "docs/wave-b/credential-audit.json",
+    "sha256": "sha256:72f61a61b00cf572dbc4b18218f2640a07ec85486f6275399105d2905fe72f0c"
+  },
+  "interpretation": "STATIC_BOUNDARY_CHECK_NOT_A_NEW_ACTUAL_SECRET_EQUALITY_CLAIM",
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false
+}

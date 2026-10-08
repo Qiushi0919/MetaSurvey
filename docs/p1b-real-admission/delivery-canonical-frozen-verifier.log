@@ -1,0 +1,5 @@
+exit_code=0
+stdout:
+{"contract":"AdmissionVerification1.0.0","verification":"BLOCKED_PROVIDER_PREREQUISITES","closed_conditions":[],"approved_tushare_policies":0}
+
+stderr:

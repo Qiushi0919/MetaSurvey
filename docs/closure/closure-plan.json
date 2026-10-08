@@ -1,0 +1,163 @@
+{
+  "plan_version": "1.0.0",
+  "phase": "P1A_CONDITIONAL_CLOSURE",
+  "status": "PROPOSED_PENDING_HUMAN_APPROVAL",
+  "implementation_authorized": false,
+  "research_agent_authorized": false,
+  "p1b_authorized": false,
+  "production_authorized": false,
+  "baseline_ref": "p1a-review-20261005",
+  "recommended_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER_ENGINEERING",
+  "recommended_scope_is_approved": false,
+  "real_consumption": "BLOCKED until each source/purpose/policy/clock/coverage explicitly verified and admitted",
+  "decisions": [
+    {
+      "id": "D01",
+      "subject": "P1-B放行范围",
+      "recommended": "只验收fixture-only MANUAL_EXPORT/PAPER工程边界；真实source仍全BLOCKED",
+      "alternative": "若要求真实公司研究输入，必须先增加最小真实授权source的clock/完整closure/覆盖与用途正向样本验收",
+      "status": "PENDING"
+    },
+    {
+      "id": "D02",
+      "subject": "BrainPacket协议与Admission contracts",
+      "recommended": "独立BrainPacket1.1 + AdmissionReceipt/SourceAdmissionPolicy/ResearchDraft1.0；旧v1/P1-A schemas原字节保留",
+      "alternative": "独立ResearchInputBundle wrapper+明确跨协议映射，需另具体审查；不得默默复用P0 hash校验",
+      "status": "PENDING"
+    },
+    {
+      "id": "D03",
+      "subject": "运行隔离与迁移范围",
+      "recommended": "MANUAL_EXPORT文件边界，研究环境无raw/DB凭证/secret/transport；拟006只持久化policy/receipt/revocation/import/export审计",
+      "alternative": "若DB-backed研究则最小真实server research_read/RBAC测试升为MUST，不能依赖PGlite角色反例",
+      "status": "PENDING"
+    },
+    {
+      "id": "D04",
+      "subject": "接受限制与延期清单",
+      "recommended": "按C12–C47 stated scope延期/保留；SELL不用于真实退出可行性或策略PnL，daily不用于未来预测",
+      "alternative": "若扩大成交评价/真实用途，相关项必须升级MUST并重新批准范围",
+      "status": "PENDING"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "W0",
+      "name": "本轮GAP/条件分类/证据索引",
+      "status": "DELIVERED_FOR_REVIEW",
+      "owner": "parent",
+      "conditions": [],
+      "outputs": [
+        "GAP-Analysis.md",
+        "Conditional-Closure-Plan.md",
+        "conditions.json",
+        "readiness-matrix.json",
+        "artifact-index.json"
+      ],
+      "code_changes": false,
+      "done": "Parent hash/tag/bundle/log/source/experiment checks recorded; plan pending human approval."
+    },
+    {
+      "id": "W1",
+      "name": "人工批准范围、协议、契约/DDL设计冻结",
+      "status": "NOT_STARTED_PENDING_PLAN_APPROVAL",
+      "owner": "parent",
+      "conditions": [
+        "C02",
+        "C04",
+        "C10"
+      ],
+      "outputs": [
+        "approved scope decisions",
+        "draft new contracts/reason extension/ADR",
+        "006 proposal if persistence approved"
+      ],
+      "code_changes": true,
+      "done": "Exact approved contract versions/fields/hash protocol and source/clock scope; old release/tag bytes preserved."
+    },
+    {
+      "id": "W2",
+      "name": "Data Admission与export boundary",
+      "status": "NOT_STARTED",
+      "owner": "proposed Agent DA",
+      "conditions": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C09"
+      ],
+      "outputs": [
+        "mandatory admission reader",
+        "purpose/coverage/version receipt",
+        "isolated manual export",
+        "negative input tests/audit"
+      ],
+      "code_changes": true,
+      "done": "Original relabel/future/unknown-license/source mutation attacks rejected at intended admission guard with no rejected payload exported."
+    },
+    {
+      "id": "W3",
+      "name": "Cost/非执行Import边界",
+      "status": "NOT_STARTED",
+      "owner": "parent or narrowly scoped Agent PH",
+      "conditions": [
+        "C07",
+        "C08"
+      ],
+      "outputs": [
+        "cost-before-candidate validation",
+        "untrusted result import → non-tradeable draft",
+        "LLM/HUMAN and production guards"
+      ],
+      "code_changes": true,
+      "done": "Unknown real costs block real suitability; importer cannot write orders/approval; all production routes rejected."
+    },
+    {
+      "id": "W4",
+      "name": "总控集成、新版本freeze、Golden/clean/独立review",
+      "status": "NOT_STARTED",
+      "owner": "parent + approved read-only Reviewer",
+      "conditions": [
+        "C10",
+        "C11"
+      ],
+      "outputs": [
+        "actual new code commit/source-tree proof",
+        "new release/append-only migration evidence",
+        "25 golden invariant matrix + 12 readiness tests",
+        "clean log and Reviewer report/hash",
+        "25-item Conditional Closure Gate Review"
+      ],
+      "code_changes": true,
+      "done": "All required criteria proven for approved scope, current implementation pinned, no old safety assertion relaxed, artifacts complete."
+    },
+    {
+      "id": "W5",
+      "name": "停止并等待最终用户Gate与APPROVE_P1B",
+      "status": "NOT_STARTED",
+      "owner": "parent/user",
+      "conditions": [],
+      "outputs": [
+        "PASS / PASS_WITH_CONDITIONS / FAIL final Gate in required template",
+        "explicit deferred items and production blockers"
+      ],
+      "code_changes": false,
+      "done": "No automatic P1-B, Research Agent, Deep Research, scoring/GUI/EVENT/broker work."
+    }
+  ],
+  "migration_policy": "No migrations created now. 001–005 immutable. 006 only proposed for narrowly approved receipt/source-policy/revocation/export/import audit. Further numbers assigned by parent after actual design approval.",
+  "release_policy": "New code must have new actual code commit/pin and separate closure release (proposed1.2.0). Keep v1/release.p1a1.1 historical bytes untouched. Historical golden run remains restorable from old tag. Current candidate must cover all new/modified files and retain every safety test; no file-extension/directory tricks to evade provenance.",
+  "experiment_policy": "Old A/B outputs immutable. New implementation changes CodeVersion, hence result identity legitimately changes; retain fixed fixture signals/quantity/prefill/cost profiles and compare order/fill/ledger/NAV/cost/path economic components separately. Do not promise identical old total economic hash across a code-version change.",
+  "non_goals": [
+    "No V5 strategy run/restore or legacy modifications",
+    "No real broker/credentials/production/authentication deployment",
+    "No SELL fee-settlement redesign unless reclassified and approved",
+    "No full data feed/history/calendar expansion in fixture-only scope",
+    "No Research calls/scoring/calibration/selection/GUI/EVENT strategy",
+    "No threshold/rate/account guessing"
+  ],
+  "gate_decision_rule": "Any core golden invariant failure => FAIL. Any required readiness criterion not proven => P1B_READINESS_GATE FAIL and P1-B BLOCKED. Passing technical closure still requires explicit human APPROVE_P1B."
+}

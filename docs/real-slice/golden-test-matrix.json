@@ -1,0 +1,870 @@
+{
+  "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+  "counts": {
+    "tests": 348,
+    "pass": 347,
+    "fail": 0,
+    "skipped": 1
+  },
+  "preserved_invariant_classes": 25,
+  "invariants": [
+    {
+      "invariant": "PIT / future-data isolation",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 7,
+          "name": "PIT rejects future data before packet hash, including titles and IDs",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 34,
+          "name": "Stale (>5 seconds) and future prices fail closed, exact boundary is explicit",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 63,
+          "name": "BrainPacket binds the exact frozen snapshot, cutoff and ordered evidence",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 77,
+          "name": "Honestly resealed and rebound chains still reject rule mismatch and missing/future trigger",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 23,
+          "name": "P1A data: known future identity/status cannot backfill past registry",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 56,
+          "name": "P1A data: latest visible suspension blocks resolution and snapshot; future status does not contaminate historical closure",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 85,
+          "name": "P1A data: financial revision filters before selection; original immutable and future restatement hidden",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "freeze-before-reveal",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 24,
+          "name": "Freeze-before-reveal uses retained immutable decision, forbids uncommitted or duplicate reveal",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 217,
+          "name": "freeze-before-reveal and future-data isolation are enforced for snapshot members",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "T+1",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 27,
+          "name": "P1-A restart persists requests, fills, lots, sequence, cash and T+1",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 56,
+          "name": "T+1 rejects same-day sale regardless of claimed human approval or override fields",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 61,
+          "name": "T+1 uses supplied trading sessions across long gaps and requires the next session",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 126,
+          "name": "T+1 declared availability, lot quantities and timestamp context are mandatory",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "same-day cash ordering",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 56,
+          "name": "T+1 rejects same-day sale regardless of claimed human approval or override fields",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 70,
+          "name": "same-day later sale proceeds cannot finance an earlier buy; ordering is never silently sorted",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "integer / Decimal / BigInt reconciliation",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 10,
+          "name": "P1-A cost uses independent BigInt oracle across rounding/minimum/tax and large precision boundaries",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 25,
+          "name": "partial gross rounds per execution, fee basis uses exact cumulative notional",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 15,
+          "name": "P1-A paper reserve→submit→two fills uses cumulative minimum settlement and reconciles independently",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 69,
+          "name": "P1-A sub-cent partial rounding has conservative reservation and reconciles all gross execution cents",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 73,
+          "name": "P1-A independent oracle tracks concurrent sell-lot reservations and cancellation allocation",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 87,
+          "name": "P1-A Shanghai trading date is independently reconciled for a valid negative timezone offset",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 91,
+          "name": "P1-A concurrent readers get atomic account/lot snapshots and reconcile after queued mutation",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "minimum commission",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 10,
+          "name": "P1-A cost uses independent BigInt oracle across rounding/minimum/tax and large precision boundaries",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 17,
+          "name": "minimum effect is part of actual commission, never an extra fee",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 21,
+          "name": "partial cumulative settlement crosses minimum and reports negative sub-attribution delta correctly",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "fee-inclusive affordability",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 29,
+          "name": "fee-inclusive affordability rejects gross-only budget and passes exact all-in boundary",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "raw / adjusted isolation",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 157,
+          "name": "raw and adjusted prices coexist, traced adjustment revisions cannot overwrite either",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "corporate-action visibility",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 157,
+          "name": "raw and adjusted prices coexist, traced adjustment revisions cannot overwrite either",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 316,
+          "name": "corporate-action factors cannot expose future knowledge or precede factor retrieval",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 75,
+          "name": "P1A data: adjusted bar recursively binds source/actions/security/calendar; future factor and missing lineage rejected",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 93,
+          "name": "P1A data: factor wire values reject Infinity/NaN/exponents/overprecision and read-back forged values",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "financial revision PIT",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 175,
+          "name": "financial restatements preserve old versions; PIT blocks future revisions and later retrieval",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 376,
+          "name": "financial PIT lineage cannot be retrieved or published before its actual announcement",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 85,
+          "name": "P1A data: financial revision filters before selection; original immutable and future restatement hidden",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "security identity conflict",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 11,
+          "name": "P1A data: canonical representations require exchange; conflicting registry quarantines and audits",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 23,
+          "name": "P1A data: known future identity/status cannot backfill past registry",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "strategy namespace",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/contracts.test.mjs",
+          "line": 22,
+          "name": "Research namespace produces neither signals/orders nor short-horizon card",
+          "sha256": "sha256:738cf442acab94dccea52be9e045fa4e0694cd5f1a6e8d3ee3d0958513ecb796",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 31,
+          "name": "P1-A T+1 uses bound sessions, actual event clock, own namespace and same-day sell proceeds ordering",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "stale data",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 34,
+          "name": "Stale (>5 seconds) and future prices fail closed, exact boundary is explicit",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "duplicate order",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/ledger.test.mjs",
+          "line": 109,
+          "name": "duplicate fill and order application block within sequence and from persisted state",
+          "sha256": "sha256:8037b247cf1db3e0b4321473739e3adf8ee5f749fe629ead676596929a8ce0d9",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 56,
+          "name": "P1-A limit-price, overfill, duplicate client/fill and nonmonotonic event failures leave no partial writes",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "card/version invalidation",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 39,
+          "name": "Authenticated two-phase version chain is preparable only, never production executable",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 48,
+          "name": "Card version/cost/quantity/account/mode/namespace changes invalidate old approvals",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 54,
+          "name": "Expired approvals, future approval clocks and stale signals cannot be reused",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 77,
+          "name": "Honestly resealed and rebound chains still reject rule mismatch and missing/future trigger",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "Snapshot lineage closure",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 56,
+          "name": "P1A data: latest visible suspension blocks resolution and snapshot; future status does not contaminate historical closure",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 104,
+          "name": "P1A data: content addressed snapshot closes evidence; one byte mutation changes hash and rejects old snapshot",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 18,
+          "name": "Experiment A: actual committed source + immutable snapshot replay twice, trace/wall time do not change economics",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 32,
+          "name": "snapshot persisted closure rejects caller byte mutation and SourceObservation schema cannot admit unknown availability",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "source-byte mutation",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 70,
+          "name": "P1A data: public fixtures have original byte hashes and explicit unknown license/time provenance",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 104,
+          "name": "P1A data: content addressed snapshot closes evidence; one byte mutation changes hash and rejects old snapshot",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 24,
+          "name": "Experiment A mutations: cost version only/rule version only/source byte only change identity and invalidate old approval/result",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-integration-replay.test.mjs",
+          "line": 32,
+          "name": "snapshot persisted closure rejects caller byte mutation and SourceObservation schema cannot admit unknown availability",
+          "sha256": "sha256:e0e48a778d3286872bfd9fb66fd2b427c48eabe0cfcb86753f1e5f4fbed6dccd",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "same cash double spending",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 19,
+          "name": "P1-A shared account locks prevent simultaneous Core/Event double spending without shared positions",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "partial fill",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 15,
+          "name": "P1-A paper reserve→submit→two fills uses cumulative minimum settlement and reconciles independently",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 23,
+          "name": "P1-A partial cancel/reject release once, retain minimum fee, block late fills",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 56,
+          "name": "P1-A limit-price, overfill, duplicate client/fill and nonmonotonic event failures leave no partial writes",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 69,
+          "name": "P1-A sub-cent partial rounding has conservative reservation and reconciles all gross execution cents",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 21,
+          "name": "partial cumulative settlement crosses minimum and reports negative sub-attribution delta correctly",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-cost.test.mjs",
+          "line": 25,
+          "name": "partial gross rounds per execution, fee basis uses exact cumulative notional",
+          "sha256": "sha256:5157a2174e66b65b76a445edbe2d07a08fc6a7ec6ee5c98d05334b7c8815bf4a",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "restart idempotency",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 27,
+          "name": "P1-A restart persists requests, fills, lots, sequence, cash and T+1",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 81,
+          "name": "P1-A idempotency keys and client identity scope persist per account and reject mutated approval/snapshot terms",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "append-only audit",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 11,
+          "name": "P1A data: canonical representations require exchange; conflicting registry quarantines and audits",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-data.test.mjs",
+          "line": 107,
+          "name": "P1A data: every new persistence family rejects truncation and retains actual source/hash/time/security/version/trace",
+          "sha256": "sha256:53e6a63935962c065b3a14461c9a67e803b076711ed81a257afcaa3af70f35fe",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-integration-foundation.test.mjs",
+          "line": 37,
+          "name": "persisted audit chain links source/hash/time/security/version/trace and redacts nested sensitive fields",
+          "sha256": "sha256:704d95cb543fea8f6c724d88c04875ff2504a7f74d77fe7ff534f85613093469",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/schema.test.mjs",
+          "line": 307,
+          "name": "P0 schema never grants production authorization and preserves append-only audit",
+          "sha256": "sha256:7f7b49c1d6fbb011e80c8dc284f103aaca7dfa2eea2dce47a8c8f036433257f8",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "UNSET production block",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 19,
+          "name": "Date-only publications require next exchange session availability and unknown dates block",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 39,
+          "name": "Authenticated two-phase version chain is preparable only, never production executable",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 59,
+          "name": "Unknown config/missing fields/null/NaN block production and never inherit legacy assumptions",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 82,
+          "name": "Even self-declared fully configured verification cannot enable P0 production",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 9,
+          "name": "P1-A cannot weaken accepted P0 production/approval gate bytes",
+          "sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 18,
+          "name": "UNSET_REQUIRED inventory is generated from schema and the actual unconfigured profile",
+          "sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "LLM != HUMAN_USER",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/gates.test.mjs",
+          "line": 42,
+          "name": "Model self-claim HUMAN identity does not authenticate a user approval",
+          "sha256": "sha256:4df4d3e4c6b2d1f405234aa25d3dc66af41b3c1016605cfe05ac856cb075dcaa",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/contracts.test.mjs",
+          "line": 39,
+          "name": "LLM APPROVE cannot be an Approval actor or USER approval enum",
+          "sha256": "sha256:738cf442acab94dccea52be9e045fa4e0694cd5f1a6e8d3ee3d0958513ecb796",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "PROD gateway rejection",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-production-lock.test.mjs",
+          "line": 9,
+          "name": "P1-A cannot weaken accepted P0 production/approval gate bytes",
+          "sha256": "sha256:e87edc48cdc9d4948e9af8419856c74c651606c9eed180ba0cccc4ded0c2e0c3",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        },
+        {
+          "path": "tests/p1a-paper.test.mjs",
+          "line": 48,
+          "name": "P1-A mode/account/strategy/security/approval mismatch and stale data all fail closed",
+          "sha256": "sha256:234f183b228915f101b83cbd0efecee4dc3c563765a754e0c5f364b2421ffa1d",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    },
+    {
+      "invariant": "micro-ladder insufficient edge",
+      "status": "PASS_FRESH_UNCHANGED_REGRESSION",
+      "run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED",
+      "tests": [
+        {
+          "path": "tests/p1a-integration-foundation.test.mjs",
+          "line": 23,
+          "name": "new tranche pays its independent minimum; benefit must cover all costs and experimental safety multiple",
+          "sha256": "sha256:704d95cb543fea8f6c724d88c04875ff2504a7f74d77fe7ff534f85613093469",
+          "status": "PASS",
+          "fresh_run_id": "REAL-SLICE-CLEAN-1512b3a-REPAIRED"
+        }
+      ]
+    }
+  ],
+  "new_test_count": 48,
+  "actual_registered_reference_attacks_report": "independent-review.json",
+  "all_real_financial_history_certified": false
+}

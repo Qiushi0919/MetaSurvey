@@ -1,0 +1,53 @@
+{
+  "old_contracts_preserved": true,
+  "P0": {
+    "version": "1.0.0",
+    "contracts": 16
+  },
+  "P1A": {
+    "version": "1.0.0",
+    "contracts": 13
+  },
+  "closure_release": "1.2.0",
+  "closure_contracts": {
+    "BrainPacket": "1.1.0",
+    "AdmissionReceipt": "1.0.0",
+    "SourceAdmissionPolicy": "1.0.0",
+    "ResearchDraft": "1.0.0"
+  },
+  "releases": [
+    {
+      "path": "contracts/release.v1.json",
+      "sha256": "sha256:eee1c485838212210f646f755c0ce4c61b38b46dfd6fa1b8708a6ced1bb9b770"
+    },
+    {
+      "path": "contracts/release.p1a.json",
+      "sha256": "sha256:6e593b06f0b09f58ecf5f50e121f338cd7f73d752ce348330207e5c062e3a876"
+    },
+    {
+      "path": "contracts/release.closure.json",
+      "sha256": "sha256:88845aed7bbeaca6e707a2b5d173046b47012f97a0bd3d99b76baa64769e9dfd"
+    }
+  ],
+  "new_schemas": [
+    {
+      "path": "contracts/closure/AdmissionReceipt.schema.json",
+      "sha256": "sha256:4820257ad41681478752787091f321e110f06da45e1c79521b16ce9be27a7d02"
+    },
+    {
+      "path": "contracts/closure/BrainPacket.schema.json",
+      "sha256": "sha256:098be18825a7b40f93eee1dc1f0bf867bd64f9b20b16822dee05b76d5230ddb8"
+    },
+    {
+      "path": "contracts/closure/ResearchDraft.schema.json",
+      "sha256": "sha256:0088e5b2d4aab72bf004f20b1eaeb8687bdc9a55b141376a1f5f50c5133b7d6b"
+    },
+    {
+      "path": "contracts/closure/SourceAdmissionPolicy.schema.json",
+      "sha256": "sha256:e62a69946047839e0f7b25875080d48d5c383de8036c69b3dec50f290d062176"
+    }
+  ],
+  "old_BrainPacket_validator_preserved": true,
+  "protocol": "docs/closure-implementation/W1-interfaces.md",
+  "clarifications": "docs/closure-implementation/W1-clarifications.md"
+}

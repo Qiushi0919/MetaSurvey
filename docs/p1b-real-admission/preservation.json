@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "baseline_commit": "e3e2a6b",
+  "baseline_tracked_files": 392,
+  "byte_identical_files": 389,
+  "allowed_navigation_changes": [
+    "AGENTS.md",
+    "README.md",
+    "docs/source-of-truth.json"
+  ],
+  "missing_files": [],
+  "forbidden_changes": [],
+  "old_203_source_pins": "UNCHANGED_FULL_BASELINE_CHECK_PASSED",
+  "old_tushare_12_frozen_source_pins": "UNCHANGED",
+  "SQL_migrations": "001\u2013006_UNCHANGED_SCHEMA6",
+  "legacy_code_seal_ledger_db_runs": "READ_ONLY_NO_WRITES",
+  "new_migrations": 0,
+  "new_market_policies": 0
+}

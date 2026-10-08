@@ -1,0 +1,112 @@
+{
+  "version": "1.0.0-diagnostic",
+  "baseline": "docs/p1b-real-admission/conditions.json",
+  "baseline_sha256": "sha256:14df691cd492a1a313353db7b05df1006723474e8c80707c7332012f79b48ee9",
+  "closed_ids": [],
+  "conditions": [
+    {
+      "id": "C12",
+      "subject": "真实security/master/status历史",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "CURRENT_IDENTITY_TYPED_SUSPENSION_UNKNOWN",
+      "remaining": "当前身份观测和代码参考一致；ST/停牌/上市状态历史与准入未证明。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C13",
+      "subject": "完整calendar与board/session规则",
+      "baseline_status_preserved": "PARTIAL_REFERENCE_ONLY",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "327_SESSION_BOUNDED_CALENDAR_DIAGNOSTIC_READY",
+      "remaining": "492日历日/327开市日与13项既有SSE事实一致；全板块规则、来源准入未证明。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C14",
+      "subject": "真实历史available_at",
+      "baseline_status_preserved": "BLOCKED_HISTORICAL",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "NO_HISTORICAL_VISIBILITY_CHANGE",
+      "remaining": "available_at仅原完整响应捕获时刻，历史首可见仍false。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C15",
+      "subject": "真实EOD raw bars",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "981_UNIQUE_RAW_BARS_NORMALIZED_QUARANTINED",
+      "remaining": "三股各327日，未复权、Decimal、OHLC/量额/日历/重复检查完成；单位身份和数值第二来源未证明。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C16",
+      "subject": "corporate-action feed",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "227_ACTION_ROWS_RETAINED_FIVE_AMBIGUOUS_LINKS",
+      "remaining": "8因子变化点均有同日dividend观测，5点多原始记录未解决；无action feed准入或权益账本。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C17",
+      "subject": "adjustment/entitlement math实证",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "EXACT_RATIONAL_FACTOR_DIAGNOSTICS_PARTIAL",
+      "remaining": "981因子日期对齐；8pre_close对账非零delta，禁止猜容差/四舍五入，无权益实证升级。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C18",
+      "subject": "financial parser/revision样本",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "63_OBSERVATIONS_45_PERIOD_GROUPS_APPEND_ONLY",
+      "remaining": "每股15报告期；6越界行保留、3宽窗整响应BLOCKED；14多版本组/1指标差异组仅观察，修订历史与财报全表未证明。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C19",
+      "subject": "DATE_ONLY历史重构政策",
+      "baseline_status_preserved": "CURRENT_OBSERVED_POLICY_IMPLEMENTED_HISTORICAL_UNSET_REQUIRED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "DATE_ONLY_AND_CURRENT_CAPTURE_GUARDS_VERIFIED",
+      "remaining": "不补午夜、不用ann_date/update_flag构造历史available_at；历史重建政策仍UNSET_REQUIRED。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C20",
+      "subject": "industry/sector membership PIT",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "SIX_BLANK_END_DATE_OBSERVATIONS_PRESERVED_INVALID",
+      "remaining": "全部空out_date按INVALID_DATE_LITERAL保留，不变null/无限期；成员历史PIT未证明。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C21",
+      "subject": "真实指标/校准样本",
+      "baseline_status_preserved": "BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "NO_REAL_FEATURE_OR_CALIBRATION",
+      "remaining": "真实特征、校准、荐股未启动；typed quarantine工程不是指标/策略证据。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C22",
+      "subject": "Research producers与概率/Edge政策",
+      "baseline_status_preserved": "FIXTURE_CHAIN_CLOSED_REAL_PRODUCERS_BLOCKED",
+      "this_phase_closure": "NOT_CLOSED",
+      "engineering_progress": "COMPLETE_FROZEN_SYNTHETIC_CHAIN_REPLAYED",
+      "remaining": "6实际fixture执行含2组确定性回放，版本/TTL/撤销失效；真实producer/Card/概率/Edge仍BLOCKED。",
+      "still_blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    }
+  ],
+  "C30": "AT_LEAST_20_ACTUAL_FORWARD_PAPER_TRADING_DAYS_REMAINS_UNSATISFIED",
+  "source_admission": "BLOCKED",
+  "historical_visibility_proven": false,
+  "productionGate": false,
+  "real_snapshot_B_ready": false
+}

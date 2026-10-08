@@ -1,0 +1,337 @@
+{
+  "version": "1.0.0",
+  "reviewed_at": "2026-10-05T14:09:58.488163+00:00",
+  "kind": "FINAL_READ_ONLY_METADATA_ADDENDUM_NO_NEW_CODE_TESTS",
+  "initial_review_content_hash": "sha256:ff3d174100298b9e561356559976147caa4c1a20a4bcb63b173f4b7cdba9a791",
+  "matrix_publication_condition": "CLOSED_METADATA_REFRESH_ONLY",
+  "current_verdict": "PASS_WITH_CONDITIONS_PREPARATION_ONLY",
+  "gateway_admission_recommendation": "BLOCK",
+  "code_cases_already_executed": 272,
+  "independently_authored_cases": 234,
+  "same_Data_suite_independently_executed": 38,
+  "new_code_test_executions": 0,
+  "metadata_checks": [
+    {
+      "id": "baseline_navigation_only",
+      "passed": true
+    },
+    {
+      "id": "matrix_stock_basic",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_stock_basic",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_stock_basic",
+      "passed": true
+    },
+    {
+      "id": "matrix_stock_st",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_stock_st",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_stock_st",
+      "passed": true
+    },
+    {
+      "id": "matrix_suspend_d",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_suspend_d",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_suspend_d",
+      "passed": true
+    },
+    {
+      "id": "matrix_trade_cal",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_trade_cal",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_trade_cal",
+      "passed": true
+    },
+    {
+      "id": "matrix_daily",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_daily",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_daily",
+      "passed": true
+    },
+    {
+      "id": "matrix_dividend",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_dividend",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_dividend",
+      "passed": true
+    },
+    {
+      "id": "matrix_adj_factor",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_adj_factor",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_adj_factor",
+      "passed": true
+    },
+    {
+      "id": "matrix_income",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_income",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_income",
+      "passed": true
+    },
+    {
+      "id": "matrix_balancesheet",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_balancesheet",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_balancesheet",
+      "passed": true
+    },
+    {
+      "id": "matrix_cashflow",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_cashflow",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_cashflow",
+      "passed": true
+    },
+    {
+      "id": "matrix_fina_indicator",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_fina_indicator",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_fina_indicator",
+      "passed": true
+    },
+    {
+      "id": "matrix_index_member_all",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_index_member_all",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_index_member_all",
+      "passed": true
+    },
+    {
+      "id": "matrix_anns_d",
+      "passed": true
+    },
+    {
+      "id": "matrix_unknown_entitlement_anns_d",
+      "passed": true
+    },
+    {
+      "id": "no_extra_purchase_anns_d",
+      "passed": true
+    },
+    {
+      "id": "coverage_SECURITY_STATUS",
+      "passed": true
+    },
+    {
+      "id": "coverage_CALENDAR_RULES",
+      "passed": true
+    },
+    {
+      "id": "coverage_RAW_BARS_1D",
+      "passed": true
+    },
+    {
+      "id": "coverage_CORPORATE_ACTIONS",
+      "passed": true
+    },
+    {
+      "id": "coverage_ADJUSTMENT_VERSIONS",
+      "passed": true
+    },
+    {
+      "id": "coverage_FINANCIAL_REVISIONS",
+      "passed": true
+    },
+    {
+      "id": "coverage_INDUSTRY_MEMBERSHIP",
+      "passed": true
+    },
+    {
+      "id": "coverage_ANNOUNCEMENTS",
+      "passed": true
+    },
+    {
+      "id": "none_C12_C22_closed",
+      "passed": true
+    },
+    {
+      "id": "blocked_source_gate",
+      "passed": true
+    },
+    {
+      "id": "all_permissions_closed",
+      "passed": true
+    },
+    {
+      "id": "transport_lookup_query_blocked",
+      "passed": true
+    },
+    {
+      "id": "old_credential_forbidden",
+      "passed": true
+    },
+    {
+      "id": "data_epoch_tushare-admission/probe.py",
+      "passed": true
+    },
+    {
+      "id": "data_epoch_tushare-admission/tests/test_probe.py",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_contracts/tushare-admission/AdmissionVerification.schema.json",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_contracts/tushare-admission/reason-codes.v1.json",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_contracts/release.tushare-admission.json",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_docs/authorizations/TUSHARE15000-local-admission-20261005.md",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_docs/authorizations/TUSHARE-monthly-gateway-probe-20261005.md",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_docs/adr/ADR-017-tushare-probe-admission-separation.md",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_docs/tushare-admission/Interface-Freeze.md",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_tushare-admission/parent/verify.mjs",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_tushare-admission/parent/contracts.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "parent_epoch_tushare-admission/check.mjs",
+      "passed": true
+    }
+  ],
+  "metadata_check_count": 65,
+  "failures": 0,
+  "baseline_files": 368,
+  "old_file_bytes_identical": 365,
+  "allowed_navigation_changes": [
+    "AGENTS.md",
+    "README.md",
+    "docs/source-of-truth.json"
+  ],
+  "unexpected_changes": [],
+  "missing_baseline_files": [],
+  "parent_epoch_unchanged": true,
+  "data_epoch_unchanged": true,
+  "actual_requests": 0,
+  "actual_rows": 0,
+  "secret_storage_not_accessed": true,
+  "closed_C12_C22": [],
+  "Snapshot_B_ready": false,
+  "all_cloud_historical_model_pilot_signal_broker_production_closed": true,
+  "report_files": [
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/tushare-admission/entitlement-matrix.json",
+      "sha256": "sha256:d570f8cd852f0fca2741b6071b9d132c430f97b910be829568b7119bec5d580a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/tushare-admission/coverage-matrix.json",
+      "sha256": "sha256:a386cdb6d94b25d388dc50dc4f46d76eca09dac7aa39cc7e698eae1f9e71e045"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/tushare-admission/Gate.json",
+      "sha256": "sha256:21dc8fc52d223aef7422b8158931bbc15fac9572af6c660f943da9ad611365cf"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/tushare-admission/Gate-Review.md",
+      "sha256": "sha256:c293c9831ad03018f3d12bf0728143ec4c4c72f138e2560ad338e6e9ac3c6270"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/tushare-admission/conditions.json",
+      "sha256": "sha256:55d925951c30e840c110dc45c9d9524f81f182063572882f819634ea46c97e6a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/AGENTS.md",
+      "sha256": "sha256:67f604e4260865637d2f9b9f00aff9df57abf4b7c578fdee4ff9623ddb6753f5"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/README.md",
+      "sha256": "sha256:39cbf0e7a6fb9252087afebe810330210c315af402974106f3e31e026e792e07"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/source-of-truth.json",
+      "sha256": "sha256:1475031a97ceea045bdec07cc7e8413d4617c0cb80ebcc90dcd8ba19b922056c"
+    }
+  ],
+  "stop_before_next_phase": true,
+  "reviewer_harness_label_correction": {
+    "prior_result": "Metadata-Addendum-stale-expectation.json",
+    "prior_sha256": "sha256:d3b27c455b4cfc8bd3ce50e24732c4e3c84f658d85b19ce7cd790177dbc893e7",
+    "classification": "REVIEWER_STALE_EXPECTED_LABEL_NOT_CODE_DEFECT",
+    "final_strict_label": "SKIPPED_INDEPENDENT_ENTITLEMENT_UNPROVEN",
+    "no_business_rule_or_gate_relaxed": true
+  },
+  "content_hash": "sha256:7692a8b6dc2bc99bab2fd887d455eeee9ebf0f779f80a45695d9e7df3fbc7221"
+}

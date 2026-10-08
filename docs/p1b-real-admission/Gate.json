@@ -1,0 +1,470 @@
+{
+  "gate_version": "1.0.0",
+  "report_kind": "P1B_TUSHARE_REAL_ADMISSION_PROBE_GATE",
+  "run_id": "P1B-TUSHARE-REAL-PROBE-20261005-G2",
+  "engineering_gate": "PASS_WITH_CONDITIONS",
+  "provider_id": "TUSHARE_MONTHLY_GATEWAY",
+  "source_classification": "OWNER_PROVIDED_MONTHLY_GATEWAY",
+  "namespace": "CORE_40",
+  "purpose": "LOCAL_REAL_RESEARCH_ADMISSION_PROBE",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "provider_identity_verified": false,
+  "license_verified": false,
+  "transport_integrity_verified": false,
+  "historical_visibility_proven": false,
+  "productionGate": false,
+  "REAL_DATA_ADMISSION_GATE": "BLOCKED",
+  "LOCAL_REAL_RESEARCH_GATE": "BLOCKED",
+  "GLOBAL_LOCAL_EXISTING_SSE_GATE": "PARTIAL",
+  "P1B_RESEARCH_PILOT_GATE": "BLOCKED",
+  "other_gates": {
+    "CLOUD_RESEARCH_EXPORT_GATE": "BLOCKED",
+    "HISTORICAL_BACKTEST_GATE": "BLOCKED",
+    "PRODUCTION_DATA_GATE": "BLOCKED",
+    "CLOUD_MODEL": "BLOCKED",
+    "REDISTRIBUTION": "BLOCKED",
+    "SIGNAL_ORDER": "BLOCKED",
+    "BROKER_PRODUCTION": "BLOCKED"
+  },
+  "entitlement_matrix": {
+    "stock_basic": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 6,
+      "status": "ACCESS_OBSERVED"
+    },
+    "suspend_d": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 0,
+      "status": "ACCESS_OBSERVED"
+    },
+    "trade_cal": {
+      "requests": 2,
+      "success": 2,
+      "denied": 0,
+      "failed": 0,
+      "rows": 504,
+      "status": "ACCESS_OBSERVED"
+    },
+    "daily": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 990,
+      "status": "ACCESS_OBSERVED"
+    },
+    "adj_factor": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 990,
+      "status": "ACCESS_OBSERVED"
+    },
+    "dividend": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 227,
+      "status": "ACCESS_OBSERVED"
+    },
+    "fina_indicator": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 63,
+      "status": "ACCESS_OBSERVED"
+    },
+    "index_member_all": {
+      "requests": 6,
+      "success": 6,
+      "denied": 0,
+      "failed": 0,
+      "rows": 6,
+      "status": "ACCESS_OBSERVED"
+    }
+  },
+  "categories": {
+    "SECURITY_STATUS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 6,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "CALENDAR_RULES": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "TARGET_MET_NOT_ADMITTED",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 504,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "RAW_BARS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "TARGET_MET_NOT_ADMITTED",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 990,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "CORPORATE_ACTIONS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 227,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "ADJUSTMENT_VERSIONS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "TARGET_MET_NOT_ADMITTED",
+      "DQ_status": "PASS_FOR_OBSERVED_ROWS",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 990,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "FINANCIAL_REVISIONS": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "MIXED",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 63,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    },
+    "ANNOUNCEMENTS": {
+      "probe_status": "EXISTING_SSE_REFERENCE_ONLY",
+      "entitlement_status": "NOT_PROBED_EXISTING_SSE",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "EXISTING_SSE_NOT_NEW_CAPTURE",
+      "clock_status": "EXISTING_SSE_NOT_NEW_CAPTURE",
+      "coverage_status": "EXISTING_SSE_PARTIAL",
+      "DQ_status": "EXISTING_SSE_PARTIAL",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 0,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED",
+        "SSE_EXISTING_REFERENCE_ONLY_NO_TUSHARE_ANNOUNCEMENT_PROBE"
+      ],
+      "next_action": "Preserve existing SSE reference policy; no silent substitution"
+    },
+    "INDUSTRY_MEMBERSHIP": {
+      "probe_status": "SUCCESS_NONEMPTY",
+      "entitlement_status": "ACCESS_OBSERVED",
+      "provider_identity_status": "UNVERIFIED",
+      "license_status": "UNVERIFIED",
+      "transport_status": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED",
+      "raw_integrity": "PASS",
+      "clock_status": "CURRENT_OBSERVED_ONLY",
+      "coverage_status": "PARTIAL",
+      "DQ_status": "FAIL",
+      "historical_visibility_proven": false,
+      "admission_status": "BLOCKED",
+      "observed_rows": 6,
+      "reason_codes": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED"
+      ],
+      "next_action": "Supply independent provider/channel/purpose/license evidence; validate remaining coverage and units"
+    }
+  },
+  "authenticated_requests": 44,
+  "raw_captures": 44,
+  "observed_rows": 2786,
+  "raw_inventory": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/trade_cal/trade_cal-SSE-SMOKE.response.json",
+      "sha256": "sha256:09828a30bcb8266c19fd521fb18e1794a0d9ac214149d234654a17b66521bc8a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/stock_basic/stock_basic-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:f2443239c475282825c19b16ad00aa85aed1c4f2550ef62ddbb772cd5cc16332"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/suspend_d/suspend_d-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/daily/daily-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:50cfee35d202dff7478886a447b49e7b817eeea565c16372d32cd37392de9e06"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/adj_factor/adj_factor-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:07a3462fad21aa4168f1c3d35ec0f5319345fef9b9ae184732aaa135d5ebe7ea"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/dividend/dividend-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/fina_indicator/fina_indicator-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:9701e4ad55fc5340c7e0f12213e10c349e82e2026e9d2811f2ccd0de77642a06"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/index_member_all/index_member_all-603993.SH-SMOKE.response.json",
+      "sha256": "sha256:76e58565bf2b70e81137b891c40bd2d2d3b3f10b41789962f1e5019f34dc1c0d"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/stock_basic/stock_basic-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:7994f087454c55595a5cf66fdfbaea98823343232215fd3488a621e02a0a781a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/suspend_d/suspend_d-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/daily/daily-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:fa546c8ccbafa3435dc6dacc80db3bf8f1e1aa5285755efde96e502cbafb44a1"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/adj_factor/adj_factor-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:84eaa7880f5a667f9c980988be3b5169bf0acbbad63aa3dc0f51e3cde2dd0d42"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/dividend/dividend-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/fina_indicator/fina_indicator-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:fc43454039379ac9a468cb48f33b849436696d853c44d2192e1b7039393ac55f"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/index_member_all/index_member_all-600312.SH-SMOKE.response.json",
+      "sha256": "sha256:b68faeac3baf4c195760fe46bcec2592767dafe1bff65ba0632dc6fe8762f0f1"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/stock_basic/stock_basic-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:38886bab1dfbe397acab0b2c927a7b1df8e8103bede514e5d618ce5d7d3e53c8"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/suspend_d/suspend_d-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/daily/daily-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:5518284cd83dc72349edbea5ab7cbba2ab599e81281e202853d3d66b104772f8"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/adj_factor/adj_factor-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:d9eb074c9ba45ae0321ef67054e5bbbf5fdac91d6936517b22f8a7086fc22f94"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/dividend/dividend-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/fina_indicator/fina_indicator-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:e484acc474523c05227c8b0a7a0a57ed3e15fdf3fb228d5cfe42f26094a917ab"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/index_member_all/index_member_all-603228.SH-SMOKE.response.json",
+      "sha256": "sha256:f84c7d7c0aef40cbbdca833ff0a274bcc097531863458e3931afa6c9bcaa0ab0"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/trade_cal/trade_cal-SSE-COVERAGE.response.json",
+      "sha256": "sha256:2fb262cc1cdf63d0ed510b37b84b0e5ec90cc745c61e4dc5ff3b43723b1f96ed"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/stock_basic/stock_basic-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:f2443239c475282825c19b16ad00aa85aed1c4f2550ef62ddbb772cd5cc16332"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/suspend_d/suspend_d-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/daily/daily-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:2f0405ffaeaec6093efa8b8ec53008cd70c5770876bfb818bb569c44afbf261f"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/adj_factor/adj_factor-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:8358609c5133aecfc4e9ec355feff11b6c6af52e89261d7a8a604cfea0a6c064"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/dividend/dividend-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:37fa2af3daf93e4c0521c63bda3f631c1985077de01dfdd8db1b9a4deced3900"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/fina_indicator/fina_indicator-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:cb378d50a4eda47208aee2db497a09198397fc9df22515110a876fd95e495f56"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/index_member_all/index_member_all-603993.SH-COVERAGE.response.json",
+      "sha256": "sha256:76e58565bf2b70e81137b891c40bd2d2d3b3f10b41789962f1e5019f34dc1c0d"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/stock_basic/stock_basic-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:7994f087454c55595a5cf66fdfbaea98823343232215fd3488a621e02a0a781a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/suspend_d/suspend_d-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/daily/daily-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:57f6e77fb858370b844445cb80fb1a2f41d719fb5e47552afec0f1a8003e34ed"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/adj_factor/adj_factor-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:3d729cda3c4eea15ba5a0902089c7bd33a6dd2bff2aa20666d3009efa2bd3c4c"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/dividend/dividend-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:b14d25e0378efb729f9ed28da7eb6649f81933a0897ce49390fce9bd7b956886"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/fina_indicator/fina_indicator-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:7e0c1d8589cb440f27193d43b6f31fa6dcb6f7cee13f881b71e1f0f5b69384b3"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/index_member_all/index_member_all-600312.SH-COVERAGE.response.json",
+      "sha256": "sha256:b68faeac3baf4c195760fe46bcec2592767dafe1bff65ba0632dc6fe8762f0f1"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/stock_basic/stock_basic-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:38886bab1dfbe397acab0b2c927a7b1df8e8103bede514e5d618ce5d7d3e53c8"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/suspend_d/suspend_d-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/daily/daily-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:ae6499e77ccacc3d3556de640e77cca678d3fd5b719912c254400bce99b8f6fd"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/adj_factor/adj_factor-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:34ec2e7bfea8cfbeb8f6e1aa41731b595c1996c2c99963c37cea891a4e0ab2de"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/dividend/dividend-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:9ce511f7c2a754652ead60f8a828749c4735afed9e435750e13ef9205d2de36e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/fina_indicator/fina_indicator-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:1d1ded1dbea960d4b0f58824d9b2a2adb23e93a8f8e005c5b66fbe9a1304e7b9"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/index_member_all/index_member_all-603228.SH-COVERAGE.response.json",
+      "sha256": "sha256:f84c7d7c0aef40cbbdca833ff0a274bcc097531863458e3931afa6c9bcaa0ab0"
+    }
+  ],
+  "credential": {
+    "lookup_result": "FOUND",
+    "presence": true,
+    "storage": "MACOS_KEYCHAIN",
+    "rotation_required": false,
+    "exposure_risk": "OWNER_ACCEPTED",
+    "secret_logged": false,
+    "credential_digest_created": false
+  },
+  "probe_report_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-SMOKE-20261005-G2/probe-report.json",
+      "sha256": "sha256:1b0c68a1f64b556d654eec084a37b673f7465d7289e025c1bcc051bffc95951a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/captures/P1B-TUSHARE-COVERAGE-20261005-G2/probe-report.json",
+      "sha256": "sha256:3fef3e75ebe227e0744fe5fdb70e849b1307eec07d9a18f2feabd578fca071d9"
+    }
+  ],
+  "source_object_refs": {
+    "policy": null,
+    "SourceObservation": null,
+    "ClockEvidence_admitted": null,
+    "StockSnapshot": null,
+    "AdmissionReceipt": null,
+    "BrainPacket": null,
+    "ResearchCard": null
+  },
+  "closed_condition_ids": [],
+  "snapshot_b": "PENDING_REAL_DATA_AND_ADMITTED_LINEAGE",
+  "code_provenance_ref": {
+    "path": "docs/p1b-real-admission/code-provenance.json",
+    "sha256": "sha256:a2014a579f5df70745bf4e47fb0bbb0df1a1becde875c9a2767cb76df0ade359"
+  },
+  "content_hash": "sha256:43d27e322c95bf0161a48beab066e8a6eb967fef0b0a9245330cc3ae50f61b7f"
+}

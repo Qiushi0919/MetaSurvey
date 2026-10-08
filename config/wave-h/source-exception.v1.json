@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "kind": "LOCAL_CURRENT_CAPTURE_EXCEPTION_NOT_SOURCE_ADMISSION",
+  "symbols": [
+    "603993.SH",
+    "600312.SH",
+    "603228.SH"
+  ],
+  "endpoint": "http://118.89.117.77:8030/",
+  "source_identity": "OWNER_PROVIDED_MONTHLY_GATEWAY_UNVERIFIED",
+  "mode": "LOCAL_ONLY_NON_TRADEABLE_CURRENT_OBSERVATION",
+  "redirects": "REJECT",
+  "proxy": "DISABLED",
+  "fallback": "REJECT",
+  "retries": 0,
+  "max_requests": 13,
+  "allowed_apis": [
+    "trade_cal",
+    "daily",
+    "stock_basic",
+    "suspend_d",
+    "stk_limit"
+  ],
+  "required": "actualsignedOwner_sessionwitness_with_originalrefs;exact3same_sessionfreshdaily;clockprecision;independentrawreopenreview",
+  "status_absence": "UNKNOWN_NEVER_NORMAL_OR_SUSPENDED_OR_NO_ACTION",
+  "source_schema_version": "TUSHARE_NATIVE_EOD_REQUEST_FIELDS_V1",
+  "raw_response_hash_is_schema_version": false,
+  "historical_visibility_proven": false,
+  "provider_license_transport_verified": false,
+  "productionGate": false,
+  "cloud_model_export_redistribution": false,
+  "execution": "NEW_H_B_HUMAN_CAPTURE_AND_SEPARATE_FORWARD_GRANTS_REQUIRED",
+  "credential_reference": {
+    "storage": "MACOS_KEYCHAIN",
+    "service": "ashare-trading-v1/tushare-monthly-gateway",
+    "account": "stock_api"
+  },
+  "scope_note": "H-Aimplements/testingonly; no credentiallookup/networkactualcapture/append; HTTPexample orAPI200doesnotverifygateway/license",
+  "source_purpose_license": "UNKNOWN",
+  "money_required_for_no_decision": false
+}

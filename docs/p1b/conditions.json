@@ -1,0 +1,115 @@
+{
+  "conditions": [
+    {
+      "id": "C12",
+      "status": "BLOCKED",
+      "subject": "真实security/master/status历史",
+      "remaining": "flat stock_info无历史状态、原件许可和可得时间证明",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C13",
+      "status": "PARTIAL_REFERENCE_ONLY",
+      "subject": "完整calendar与board/session规则",
+      "remaining": "仅SSE公告10/1–8明确日历事实本地参考；完整日历/其他交易所/板块规则未认证",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C14",
+      "status": "BLOCKED_HISTORICAL",
+      "subject": "真实历史available_at",
+      "remaining": "新calendar只有实际取回的observed availability，旧source不可补历史",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C15",
+      "status": "BLOCKED",
+      "subject": "真实EOD raw bars",
+      "remaining": "旧cache/old SSE dayk无独立行情许可、原始bar clocks/preclose/PIT；无证券范围",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C16",
+      "status": "BLOCKED",
+      "subject": "corporate-action feed",
+      "remaining": "独立action/revision/source admission未齐备",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C17",
+      "status": "BLOCKED",
+      "subject": "adjustment/entitlement math实证",
+      "remaining": "旧qfq→raw fallback不能建立factor版本/原始价格对账",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C18",
+      "status": "BLOCKED",
+      "subject": "financial parser/revision样本",
+      "remaining": "旧CNINFO/issuer引用只是线索；许可、修订原件/可见时钟未齐备",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C19",
+      "status": "UNSET_REQUIRED",
+      "subject": "DATE_ONLY历史重构政策",
+      "remaining": "不补午夜；本地参考已知发布日期+retrieval可用，历史研究规则未批准",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C20",
+      "status": "BLOCKED",
+      "subject": "industry/sector membership PIT",
+      "remaining": "未找到已准入的effective-dated历史成员/修订；当前标签不可回填",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C21",
+      "status": "BLOCKED",
+      "subject": "真实指标/校准样本",
+      "remaining": "没有真实股票研究slice，85/80/78仅实验坐标",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    },
+    {
+      "id": "C22",
+      "status": "SEMANTICS_ONLY_PRODUCERS_BLOCKED",
+      "subject": "Research producers与概率/Edge政策",
+      "remaining": "仅synthetic语义与pending证据/有限calendar adapter；未实现真实producer/store/荐股/calibration",
+      "blocks": "REAL_STOCK_RESEARCH_MVP_AND_PILOT"
+    }
+  ],
+  "additional": [
+    {
+      "id": "P1B-COND-01",
+      "status": "BLOCKED",
+      "subject": "真实证券研究源用途许可/PIT",
+      "close_requires": "股票身份+raw EOD/财报公告最小slice的具体来源/覆盖/terms/cloud model权限/原件与历史可见性；calendar政策不能继承"
+    },
+    {
+      "id": "P1B-COND-02",
+      "status": "BLOCKED",
+      "subject": "显式APPROVE_P1B_RESEARCH_PILOT",
+      "close_requires": "用户第二个Gate批准，且数据前提仍需满足；本轮停止"
+    },
+    {
+      "id": "P1B-COND-03",
+      "status": "DEFERRED_BEFORE_PERSISTENT_CONSUMER",
+      "subject": "DEV authority与内存registry",
+      "close_requires": "如扩多进程/持久consumer须新contract/拓扑Gate，持久issuer/revocation与在publish时live recheck，不猜生产凭据"
+    },
+    {
+      "id": "P1B-COND-04",
+      "status": "DEFERRED_BEFORE_MARKET_FINANCIAL_PRODUCER",
+      "subject": "四时钟扩展",
+      "close_requires": "新版本显式Observation event与business effective date、published精度、available/retrieved；不把capture event当休市时刻"
+    },
+    {
+      "id": "P1B-COND-05",
+      "status": "UNSET_REQUIRED",
+      "subject": "真实账户30字段及生产Edge/sizing/calibration",
+      "close_requires": "原真实参数验证；工程/定性研究与真实sizing/tradeable分开，不阻塞本轮工程"
+    }
+  ],
+  "cannot_auto_upgrade_business_rules": true,
+  "stock_pilot_ready": false
+}

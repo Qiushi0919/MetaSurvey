@@ -1,0 +1,57 @@
+{
+  "candidate_changes": 0,
+  "candidate_commit": "37ec2ec9f8f16d406b10f2e2724858fc1a58f375",
+  "cases": [
+    {
+      "actual": true,
+      "expected": true,
+      "id": "H01_EXACT_CLOCK_NONE_MUST_REJECT",
+      "observed_reason": "EXACT_OFFSET_CLOCK_REQUIRED",
+      "pass_": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "id": "H02_PIT_EXACT_CLOCK_NONE_MUST_REJECT",
+      "observed_reason": "EXACT_OFFSET_CLOCK_REQUIRED",
+      "pass_": true
+    },
+    {
+      "actual": null,
+      "expected": null,
+      "id": "H03_MAINTENANCE_NONE_IS_EXPLICIT_UNKNOWN",
+      "pass_": true
+    }
+  ],
+  "cause": "The harness incorrectly required maintenance._clock(None) to reject despite its explicit None=UNKNOWN contract, while separately expecting the same helper to return None. exact_clock and pit.exact_clock must reject None; maintenance is an optional-clock adapter.",
+  "clarification_count": {
+    "failed": 0,
+    "passed": 3,
+    "total": 3
+  },
+  "kind": "IndependentHarnessClarification",
+  "original_cases_ref": {
+    "bytes": 1374378,
+    "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Cases-R2.json",
+    "sha256": "sha256:f4493a54937c6a7855b01e71d976c86ae8d8dbd4eb1863a358cebd8e74f675a0"
+  },
+  "original_count": {
+    "failed": 1,
+    "passed": 104,
+    "total": 105
+  },
+  "original_failing_case": {
+    "actual": false,
+    "category": "CLOCK_INTEGER_ORACLE_AND_INVALID_SOURCE_BOUNDARIES",
+    "error": null,
+    "expected": true,
+    "id": "T44_INVALID_LITERAL_REJECTED",
+    "inputs": null,
+    "pass_": false
+  },
+  "original_failure_unchanged": true,
+  "productionGate": false,
+  "recorded_at": "2026-10-08T12:47:11.770667+00:00",
+  "round": "R2",
+  "source_finding": false
+}

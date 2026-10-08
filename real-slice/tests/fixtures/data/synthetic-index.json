@@ -1,0 +1,15 @@
+{
+  "fixture_provenance": "SYNTHETIC_TEST_ONLY_NOT_PROVIDER_CAPTURE",
+  "productId": "600312",
+  "beginDate": "2026-04-08",
+  "endDate": "2026-10-05",
+  "isPagination": "true",
+  "pageHelp": {"pageSize": 5, "pageNo": 1, "total": 25},
+  "result": [
+    {"SECURITY_CODE": "600312", "SSEDATE": "2026-09-30", "TITLE": "SYNTHETIC board reference", "URL": "/disclosure/listedinfo/announcement/c/new/2026-09-30/600312_20260930_TEST.pdf", "ADDDATE": "1900-01-01 00:00:00"},
+    {"SECURITY_CODE": "600312", "SSEDATE": "2026-09-30", "TITLE": "SYNTHETIC disclosure reference", "URL": "/disclosure/listedinfo/announcement/c/new/2026-09-30/600312_20260930_ABCD.pdf", "ADDDATE": "2099-12-31 23:59:59"},
+    {"SECURITY_CODE": "600312", "SSEDATE": "2026-09-29", "TITLE": "SYNTHETIC governance reference", "URL": "/disclosure/listedinfo/announcement/c/new/2026-09-29/600312_20260929_ABCD.pdf"},
+    {"SECURITY_CODE": "600312", "SSEDATE": "2026-09-28", "TITLE": "SYNTHETIC action reference", "URL": "/disclosure/listedinfo/announcement/c/new/2026-09-28/600312_20260928_ABCD.pdf"},
+    {"SECURITY_CODE": "600312", "SSEDATE": "2026-09-27", "TITLE": "SYNTHETIC financial report pointer, not parsed financial data", "URL": "/disclosure/listedinfo/announcement/c/new/2026-09-27/600312_20260927_ABCD.pdf"}
+  ]
+}

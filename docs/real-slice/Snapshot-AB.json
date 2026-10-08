@@ -1,0 +1,32 @@
+{
+  "snapshot_A": {
+    "actual_capture_date": "2026-10-05",
+    "actual_decision_cutoff": "2026-10-05T12:51:22.803Z",
+    "count": 3,
+    "market": "CLOSED",
+    "latest_trading_session": null,
+    "latest_session_reason": "NO_ADMITTED_COMPLETE_CALENDAR",
+    "live_price": null,
+    "trade_trigger": false,
+    "tradeable": false
+  },
+  "snapshot_B": {
+    "status": "PENDING_ACTUAL_POST_HOLIDAY_DATA",
+    "actual_comparison_performed": false
+  },
+  "actual_A_B_comparison_performed": false,
+  "synthetic_A_B_mechanics": "PASS_real-slice/tests/core.test.mjs",
+  "synthetic_chain_upstream_supersession": "PASS_real-slice/tests/fixture-chain.test.mjs",
+  "no_synthetic_or_future_B_promoted": true,
+  "automation": {
+    "id": "a-v1-10-8",
+    "status": "ACTIVE",
+    "type": "THREAD_BOUND_ONCE_READINESS_REVIEW",
+    "scheduled_local_date": "2026-10-08",
+    "scheduled_local_time": "16:30",
+    "timezone": "Asia/Shanghai",
+    "requires_actual_new_trading_day_data_and_verified_purpose": true,
+    "may_remain_pending": true,
+    "does_not_grant_new_provider_or_Pilot_permission": true
+  }
+}

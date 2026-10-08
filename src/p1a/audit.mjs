@@ -1,0 +1,16 @@
+import { hashValue, requireThat, canonical, timestampMs } from '../contracts/validate.mjs';
+const sensitive=/(?:password|token|credential|secret|api[_-]?key|authorization|account[_-]?(?:id|number|no)|phone|email|identity[_-]?number|full[_-]?name)/i;
+const credentialText=/(?:\bBearer\s+\S+|\bsk-[A-Za-z0-9_-]{16,}|\bAKIA[A-Z0-9]{16}\b|-----BEGIN[^-]*PRIVATE KEY-----|(?:password|token|secret|api[_-]?key|authorization|account[_-]?(?:id|number|no))\s*[:=]\s*\S+|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b[0-9]{12,}\b)/i;
+export function redact(value){if(typeof value==='string'&&credentialText.test(value))return '[REDACTED]';if(Array.isArray(value))return value.map(redact);if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,sensitive.test(k)?'[REDACTED]':redact(v)]));return value;}
+export async function appendAudit(db,{chain_id,event_type,event_time,source_id,source_hash,security_id,version,trace_id,object_ref,parent_refs=[],reason_codes=[],payload={}}){
+  timestampMs(event_time);for(const v of [chain_id,event_type,source_id,security_id,version,trace_id])requireThat(typeof v==='string'&&v.length>0&&v.length<=512&&!credentialText.test(v),'AUDIT_REQUIRED_FIELD');
+  const strictRef=r=>{requireThat(r&&Object.keys(r).sort().join(',')==='content_hash,object_id,object_version'&&typeof r.object_id==='string'&&r.object_id.length>0&&!credentialText.test(r.object_id)&&Number.isSafeInteger(r.object_version)&&r.object_version>0&&/^sha256:[a-f0-9]{64}$/.test(r.content_hash),'AUDIT_REF_INVALID');};strictRef(object_ref);requireThat(Array.isArray(parent_refs),'AUDIT_REF_INVALID');parent_refs.forEach(strictRef);
+  requireThat(Array.isArray(reason_codes)&&reason_codes.every(r=>typeof r==='string'&&/^[A-Z][A-Z0-9_]{0,100}$/.test(r)),'AUDIT_REASON_INVALID');
+  requireThat(/^sha256:[a-f0-9]{64}$/.test(source_hash)&&object_ref?.content_hash,'AUDIT_HASH_REQUIRED');
+  // Caller connection transaction serializes this chain. Audit is evidence, never authorization.
+  const {rows}=await db.query('SELECT sequence,event_hash FROM p1a_replay.audit WHERE chain_id=$1 ORDER BY sequence DESC LIMIT 1',[chain_id]);
+  const sequence=rows.length?Number(rows[0].sequence)+1:1,previous_hash=rows[0]?.event_hash??hashValue({chain_id,genesis:true});
+  const event={chain_id,sequence,previous_hash,event_type,event_time,source_id,source_hash,security_id,version,trace_id,object_ref,parent_refs,reason_codes,payload:redact(payload)};
+  const event_hash=hashValue(event);await db.query('INSERT INTO p1a_replay.audit(chain_id,sequence,previous_hash,event_hash,event_type,event_time,event_json) VALUES($1,$2,$3,$4,$5,$6,$7::jsonb)',[chain_id,sequence,previous_hash,event_hash,event_type,event_time,canonical({...event,event_hash})]);return {...event,event_hash};
+}
+export async function verifyAudit(db,chain_id){const {rows}=await db.query('SELECT event_json FROM p1a_replay.audit WHERE chain_id=$1 ORDER BY sequence',[chain_id]);let previous=hashValue({chain_id,genesis:true});rows.forEach((r,i)=>{const {event_hash,...event}=r.event_json;requireThat(event.sequence===i+1&&event.previous_hash===previous&&hashValue(event)===event_hash,'AUDIT_CHAIN_MISMATCH');previous=event_hash;});return {events:rows.map(r=>r.event_json),audit_chain_hash:previous};}

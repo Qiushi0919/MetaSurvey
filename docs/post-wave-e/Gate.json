@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "phase": "P1B_HISTORICAL_PIT_AND_FORWARD_PREPARATION_COMPLETED",
+  "engineering_gate": "PASS_WITH_CONDITIONS",
+  "owner_acceptance": "PENDING",
+  "baseline": "9f975258b0c8f88770eebacd841573e492bdbc48",
+  "code_candidate": "95476b67255863efd7fc5fb9ee34c84766e7d68a",
+  "release": "1.0.1-post-wave-e-preparation",
+  "contracts": {
+    "count": 8,
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY"
+  },
+  "immutable_predecessor_files": 663,
+  "frozen_pins": 37,
+  "runtime_dependencies": 996,
+  "adopted_private_paths": 293,
+  "observation_originals": {
+    "request_identities": 94,
+    "physical_paths": 94,
+    "hashes": 85,
+    "rows": 4206
+  },
+  "full_regression": {
+    "unique": 1138,
+    "pass": 1137,
+    "fail": 0,
+    "skip": 1,
+    "carried_unique": 939,
+    "new_unique": 199,
+    "python_unique": 671,
+    "native_unique": 467,
+    "count_definition": "ONE_FINAL_FULL_CHAIN; not summing repeated epochs/assertions"
+  },
+  "independent": {
+    "epoch": "R2",
+    "atomic_assertions": 14986,
+    "not_added_to_regression_count": true,
+    "active_sources_unchanged": 996,
+    "R1_findings_closed": true
+  },
+  "productionGate": false,
+  "historical_visibility_proven": false,
+  "actual_forward_days": 0,
+  "actual_account_parameters": "30_UNSET_REQUIRED",
+  "strategy_economic_parameters": "UNSET_REQUIRED",
+  "provider_license_transport": "UNVERIFIED",
+  "formal_source_admission": "BLOCKED",
+  "gates": {
+    "FORMAL_PRICE_BACKTEST": "BLOCKED",
+    "FORMAL_FUNDAMENTAL_PIT_BACKTEST": "BLOCKED",
+    "SNAPSHOT_B": "BLOCKED",
+    "ACTUAL_FORWARD_PAPER": "BLOCKED",
+    "RESEARCH_PILOT": "BLOCKED",
+    "CLOUD_MODEL_EXPORT_REDISTRIBUTION": "BLOCKED",
+    "SIGNAL_APPROVAL_ORDER_FILL": "BLOCKED",
+    "BROKER_PRODUCTION": "BLOCKED"
+  },
+  "C12_C22_closed": 0,
+  "new_source_calls": 0,
+  "credential_lookups": 0,
+  "scheduling_created": false,
+  "stop_after_gate": true,
+  "next_phase_authorized": false,
+  "private_archives_relocation_supported": false,
+  "delivery_checkpoint_pointer": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/post-wave-e/Delivery-Checkpoint.json",
+    "sha256": "sha256:8f2e9b4acd41e7062b1938c5baf469fe85479e0ed00d24c48c1346f3733c3da8",
+    "bytes": 309
+  },
+  "R1_findings": "CLOSED_ENGINEERING_ONLY_OLD_FAILURES_RETAINED"
+}

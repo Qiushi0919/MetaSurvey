@@ -1,0 +1,17 @@
+{
+  "kind": "PublicationPreservationCheck",
+  "source_baseline": "22f57e32060c6ad407067257862971908ddeb765",
+  "old_tracked_files": 1016,
+  "allowed_navigation_workflow_changes": [
+    ".github/workflows/p0.yml",
+    ".github/workflows/real-slice.yml",
+    "AGENTS.md",
+    "README.md"
+  ],
+  "unexpected_old_changes": [],
+  "child_HEAD": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "child_clean": true,
+  "new_navigation_missing_links": [],
+  "frozen_strategy_sha256": "d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+  "productionGate": false
+}

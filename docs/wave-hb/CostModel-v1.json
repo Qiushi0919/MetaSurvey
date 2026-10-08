@@ -1,0 +1,1475 @@
+{
+  "contract_name": "EconomicDiagnosticCostModel",
+  "contract_version": "1.0.0",
+  "module": "wave_hb/cost.mjs",
+  "exports": [
+    "quoteCost",
+    "netEdge"
+  ],
+  "mode": "ECONOMIC_DIAGNOSTIC_ONLY",
+  "statuses": [
+    "COMPUTABLE_SYNTHETIC_ONLY",
+    "NOT_COMPUTABLE"
+  ],
+  "profile_contract": "EconomicDiagnosticCostProfile",
+  "result_contract": "EconomicDiagnosticCostResult",
+  "actual_profiles_computable": false,
+  "production_enabled": false,
+  "native_authority": false,
+  "units": {
+    "price": "CNY_PER_SHARE_EXACT_DECIMAL_STRING_6DP_MAX",
+    "quantity": "POSITIVE_SAFE_INTEGER_SHARES",
+    "money": "INTEGER_CENTS_STRING",
+    "net_edge": "SIGNED_INTEGER_CENTS_STRING_OR_NULL",
+    "rate": "FRACTION_OF_NOTIONAL_DECIMAL_STRING_12DP_MAX",
+    "trade_date": "Asia/Shanghai local calendar ISO date",
+    "capture_clock": "UTC RFC3339 microsecond precision from literal request receipts"
+  },
+  "profile_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "contract_name",
+      "contract_version",
+      "profile_id",
+      "profile_version",
+      "profile_scope",
+      "production_enabled",
+      "currency",
+      "money_unit",
+      "rounding_mode",
+      "commission_scope",
+      "market",
+      "instrument_kind",
+      "trading_method",
+      "source",
+      "commission",
+      "stamp_tax",
+      "exchange_fee",
+      "clearing_fee",
+      "regulatory_fee",
+      "other_fee",
+      "slippage",
+      "content_hash"
+    ],
+    "properties": {
+      "contract_name": {
+        "anyOf": [
+          {
+            "const": "EconomicDiagnosticCostProfile"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "contract_version": {
+        "anyOf": [
+          {
+            "const": "1.0.0"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "profile_id": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "profile_version": {
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 1
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "profile_scope": {
+        "anyOf": [
+          {
+            "enum": [
+              "SYNTHETIC_FIXTURE",
+              "ACTUAL_ACCOUNT"
+            ]
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "production_enabled": {
+        "anyOf": [
+          {
+            "const": false
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "currency": {
+        "anyOf": [
+          {
+            "const": "CNY"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "money_unit": {
+        "anyOf": [
+          {
+            "const": "INTEGER_CENTS_STRING"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "rounding_mode": {
+        "anyOf": [
+          {
+            "const": "HALF_UP"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "commission_scope": {
+        "anyOf": [
+          {
+            "const": "PER_ORDER_CUMULATIVE"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "market": {
+        "anyOf": [
+          {
+            "const": "SSE"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "instrument_kind": {
+        "anyOf": [
+          {
+            "const": "A_SHARE"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "trading_method": {
+        "anyOf": [
+          {
+            "const": "AUCTION"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "source": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "evidence_id",
+              "description"
+            ],
+            "properties": {
+              "kind": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "SYNTHETIC_FIXTURE",
+                      "OWNER_SET",
+                      "BROKER_DOCUMENT_PENDING"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "commission": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "minimum_cents"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "minimum_cents": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]{0,37})$"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "stamp_tax": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "included_in"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "included_in": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "COMMISSION",
+                      "SEPARATE"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "exchange_fee": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "included_in"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "included_in": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "COMMISSION",
+                      "SEPARATE"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "clearing_fee": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "included_in"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "included_in": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "COMMISSION",
+                      "SEPARATE"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "regulatory_fee": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "included_in"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "included_in": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "COMMISSION",
+                      "SEPARATE"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "other_fee": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "included_in"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "included_in": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "COMMISSION",
+                      "SEPARATE"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "slippage": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rate",
+              "rate_unit",
+              "sides",
+              "effective_from",
+              "effective_to",
+              "evidence_ref",
+              "treatment"
+            ],
+            "properties": {
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|1)(\\.[0-9]{1,12})?$",
+                    "description": "Exact FRACTION of CNY notional; validate range[0,1]"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "rate_unit": {
+                "anyOf": [
+                  {
+                    "const": "FRACTION_OF_NOTIONAL"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "sides": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "BUY",
+                        "SELL"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": true
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "effective_to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "evidence_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              },
+              "treatment": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "INCLUDED_IN_EXECUTION_PRICE",
+                      "SEPARATE_ESTIMATE"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      "UNSET_REQUIRED",
+                      "UNKNOWN",
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      },
+      "content_hash": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          },
+          {
+            "enum": [
+              "UNSET_REQUIRED",
+              "UNKNOWN",
+              null
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "optional_profile_fields": [],
+  "optional_component_fields": [],
+  "optional_fill_fields": [],
+  "fill_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "price",
+      "quantity"
+    ],
+    "properties": {
+      "price": {
+        "type": "string",
+        "pattern": "^(0|[1-9][0-9]{0,13})(\\.[0-9]{1,6})?$"
+      },
+      "quantity": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 9007199254740991
+      }
+    }
+  },
+  "request_fields": {
+    "quoteCost": [
+      "mode",
+      "profile",
+      "side",
+      "fills",
+      "trade_date"
+    ],
+    "netEdge": [
+      "mode",
+      "profile",
+      "buy_fills",
+      "sell_fills",
+      "buy_date",
+      "sell_date"
+    ]
+  },
+  "required_result_fields": [
+    "contract_name",
+    "contract_version",
+    "mode",
+    "scope",
+    "status",
+    "reason_codes",
+    "missing_fields",
+    "source_refs",
+    "net_edge_cents",
+    "production_enabled",
+    "safe_to_trade",
+    "native_authority",
+    "historical_pit_proven",
+    "source_admission",
+    "evidence_tier",
+    "profile_ref",
+    "request_hash",
+    "content_hash"
+  ],
+  "computed_quote_fields": [
+    "trade_date",
+    "side",
+    "quantity",
+    "notional_cents",
+    "exact_notional_yuan",
+    "commission_cents",
+    "stamp_tax_cents",
+    "exchange_fee_cents",
+    "clearing_fee_cents",
+    "regulatory_fee_cents",
+    "other_fee_cents",
+    "slippage_cents",
+    "total_friction_cents",
+    "cash_delta_cents",
+    "included_relationship",
+    "slippage_treatment"
+  ],
+  "computed_net_edge_fields": [
+    "buy_date",
+    "sell_date",
+    "buy",
+    "sell",
+    "gross_edge_cents",
+    "net_edge_cents"
+  ],
+  "rounding": {
+    "context": "Private Decimal.clone precision100 / HALF_UP",
+    "gross": "Round each fill exact price*quantity to cents; sum rounded gross",
+    "fees": "Compute each component on exact cumulative one-order notional; round each to cents HALF_UP",
+    "minimum": "max(rounded proportional commission, explicit per-order minimum), once per cumulative order and side",
+    "fee_inclusion": "COMMISSION -> extra charge zero with separate informational reference; SEPARATE -> charge rounded fee; inclusion sides must be covered by commission",
+    "slippage": "INCLUDED_IN_EXECUTION_PRICE requires incremental rate0; SEPARATE_ESTIMATE charged once",
+    "net_edge": "Sell rounded gross - buy rounded gross - each order total friction; equal aggregate shares required",
+    "money_limit": "Magnitude strictly below10^38 cents; input quantity sum must remain safe integer"
+  },
+  "hash_rules": {
+    "profile": "sha256 canonical recursively sorted JSON excluding content_hash",
+    "request": "sha256 validated pure diagnostic input with pinned profile content_hash",
+    "result": "sha256 canonical recursively sorted JSON excluding content_hash",
+    "source_refs": "SYNTHETIC:<source.evidence_id> is provenance only, never actual proof"
+  },
+  "unknown_rules": {
+    "missing_or_unknown": [
+      null,
+      "UNKNOWN",
+      "UNSET_REQUIRED"
+    ],
+    "required_missing_result": "NOT_COMPUTABLE / REQUIRED_COST_CONFIG_UNSET / net_edge_cents=null",
+    "invalid_populated_result": "NOT_COMPUTABLE / fixed reason / no optimistic output",
+    "zero": "Exact string0 is explicit synthetic assumption; missing is never zero"
+  },
+  "reason_codes": [
+    "ACTUAL_ACCOUNT_EVIDENCE_NOT_ADMITTED",
+    "COMPONENT_CLOSED_SCHEMA_REQUIRED",
+    "COMPONENT_DATE_OUT_OF_SCOPE",
+    "COMPONENT_EVIDENCE_NOT_BOUND",
+    "COMPONENT_SIDES_INVALID",
+    "EXACT_POSITIVE_PRICE_REQUIRED",
+    "FEE_INCLUSION_REQUIRED",
+    "FILL_CLOSED_SCHEMA_REQUIRED",
+    "FRACTION_RATE_REQUIRED",
+    "INCLUDED_FEE_WITHOUT_COMMISSION_SIDE",
+    "INTEGER_CENTS_REQUIRED",
+    "INVALID_INPUT",
+    "MODE_NOT_AUTHORIZED",
+    "MONEY_OVERFLOW",
+    "NONEMPTY_FILLS_REQUIRED",
+    "ORDER_SIDE_INVALID",
+    "POSITIVE_SAFE_QUANTITY_REQUIRED",
+    "PRODUCTION_DISABLED",
+    "PRODUCT_SCOPE_INVALID",
+    "PROFILE_CLOSED_SCHEMA_REQUIRED",
+    "PROFILE_HASH_MISMATCH",
+    "PROFILE_ID_VERSION_INVALID",
+    "PROFILE_SCOPE_INVALID",
+    "PROFILE_VERSION_INVALID",
+    "QUANTITY_OVERFLOW",
+    "RATE_UNIT_UNSUPPORTED",
+    "REQUEST_CLOSED_SCHEMA_REQUIRED",
+    "REQUEST_OBJECT_REQUIRED",
+    "REQUIRED_COST_CONFIG_UNSET",
+    "ROUND_TRIP_DATE_INVALID",
+    "ROUND_TRIP_QUANTITY_MISMATCH",
+    "SETTLEMENT_POLICY_UNSUPPORTED",
+    "SLIPPAGE_DOUBLE_COUNTING",
+    "SLIPPAGE_TREATMENT_REQUIRED",
+    "STAMP_TAX_SIDE_OR_INCLUSION_INVALID",
+    "SYNTHETIC_ARITHMETIC_ONLY",
+    "SYNTHETIC_PROVENANCE_REQUIRED",
+    "TRADE_DATE_INVALID"
+  ],
+  "invalidation_conditions": [
+    "Any profile version/hash/field/unit/product/evidence change",
+    "Any per-component date outside closed explicit effective window",
+    "Unbound evidence ref or actual-account scope without separate evidence admission",
+    "Unknown required component, min commission, side, inclusion or slippage",
+    "Malformed/nonfinite/float price-rate-money or quantity overflow",
+    "Invalid cumulative one-order fills or mismatched round-trip quantity",
+    "PRODUCTION or any mode other than ECONOMIC_DIAGNOSTIC_ONLY"
+  ],
+  "limitations": [
+    "Only synthetic profiles can compute in this version. ACTUAL_ACCOUNT and OWNER_SET are never broker evidence.",
+    "Actual broker-evidence admission adapter and actual economic profiles require future reviewed extension; none exists or is fabricated.",
+    "Each fills array represents exactly one cumulative diagnostic order; not a set of distinct orders.",
+    "Public statutory references are separate and not substituted into missing Owner fields.",
+    "HALF_UP model is a frozen diagnostic settlement rule, not evidence of actual broker settlement.",
+    "Does not validate T+1, account affordability, risk, native contracts, orders or historical PIT."
+  ]
+}

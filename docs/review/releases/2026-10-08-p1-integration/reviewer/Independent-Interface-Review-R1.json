@@ -1,0 +1,274 @@
+{
+  "authority_limits": {
+    "Owner_method_approval": false,
+    "actual_PIT_admission": false,
+    "actual_market_requests": 0,
+    "human_review": false,
+    "model_fits": 0,
+    "productionGate": false,
+    "strategy_runs": 0,
+    "trading": false
+  },
+  "cases_ref": {
+    "bytes": 961044,
+    "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Independent-Interface-Cases-R1.json",
+    "sha256": "sha256:e3ba7e066ef9923c2249ae88d2d90ed01f5c9b087570faa69ad4f2b01932a871"
+  },
+  "cases_summary": {
+    "CURRENT_COMPUTATION_BOUNDARY": {
+      "failed": 4,
+      "passed": 4,
+      "total": 8
+    },
+    "CURRENT_CONSERVATIVE_CONTROL": {
+      "failed": 0,
+      "passed": 10,
+      "total": 10
+    },
+    "CURRENT_CONSUMER_VS_DECLARED_SCHEMA": {
+      "failed": 4,
+      "passed": 0,
+      "total": 4
+    },
+    "CURRENT_METADATA_BOUNDARY": {
+      "failed": 2,
+      "passed": 4,
+      "total": 6
+    },
+    "DEFERRED_FINAL_CONTRACT_BOUNDARY": {
+      "failed": 3,
+      "passed": 0,
+      "total": 3
+    }
+  },
+  "field_matrix_ref": {
+    "bytes": 12681,
+    "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Six-DTO-Field-Matrix-R1.json",
+    "sha256": "sha256:fbe56c0ba4a60b570d52ed4e703b85dc1f79a19b1d620ef144a919ff50ff87b3"
+  },
+  "findings": [
+    {
+      "actual": "datetime.fromisoformat truncates sub-microsecond precision; comparison treats first_visible as equal. Eight quarterly records are included, TTM revenue=400 and RAW_CLOCK_ELIGIBLE_ARITHMETIC_ONLY.",
+      "cases": [
+        "C01_NANOSECOND_FUTURE_IS_LATER",
+        "C05_FUTURE_FINANCIAL_ROW_EXCLUDED",
+        "C06_FUTURE_FINANCIAL_TTM_NOT_COMPUTABLE"
+      ],
+      "current_reachability": "financial_quarters is called by the current prerequisite diagnostic path. This is a current computational boundary defect even though results have historical_visibility_proven=false and no engine run.",
+      "expected": "Only seven eligible quarters; required latest4+prior4 completeness remains NOT_COMPUTABLE and TTM null. Future payload must be excluded before inspecting fields.",
+      "id": "F01",
+      "locations": [
+        {
+          "end": 32,
+          "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/pit.py",
+          "start": 26
+        },
+        {
+          "end": 121,
+          "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/strategy.py",
+          "start": 101
+        },
+        {
+          "end": 355,
+          "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/strategy.py",
+          "start": 354
+        }
+      ],
+      "priority": "P1",
+      "required_change": "Compare exact instants without dropping precision, or reject unsupported precision before computation; strict offset/calendar validation; independent 1ns/cutoff-equivalence/future-poison regressions. Do not change strategy thresholds or original data.",
+      "scope_limit": "Synthetic boundary counterexample only. No evidence that the sealed actual captures were contaminated or that an actual/formal backtest executed.",
+      "title": "Lossy exact_clock permits a future financial row at a cutoff boundary",
+      "trigger": "first_visible_at=2020-01-10T00:00:00.000000001Z; cutoff=2020-01-10T00:00:00Z"
+    },
+    {
+      "actual": "Exact parser normalizes +08:60; DTO says EXACT_SOURCE_RECORDED with derived +09:00 while retaining the invalid original literal. Any ten-character value is DATE_ONLY, including an impossible date.",
+      "cases": [
+        "C04_MALFORMED_OFFSET_REJECTED",
+        "M03_MALFORMED_OFFSET_NOT_EXACT",
+        "M04_IMPOSSIBLE_DATE_NOT_DATE_ONLY"
+      ],
+      "current_reachability": "clock is used by the evidence_bundle adapter; bad literals can pass the limited DATE_ONLY regex check because only shape is checked.",
+      "expected": "Invalid source literal remains uninterpreted/rejected; no inferred exact offset/date. Genuine date-only values stay timezone=null and are never padded to midnight.",
+      "id": "F02",
+      "locations": [
+        {
+          "end": 20,
+          "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/dto.py",
+          "start": 7
+        },
+        {
+          "end": 32,
+          "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/pit.py",
+          "start": 26
+        }
+      ],
+      "priority": "P2",
+      "required_change": "Use strict calendar/time/offset/fraction validation before labeling exact/date-only; preserve source literals and unsupported/invalid precision as UNKNOWN/uninterpreted, never normalize malformed offset silently.",
+      "scope_limit": "Metadata and parser boundary defect, not proof of actual source PIT admission. Original source text retention is correct but precision label is misleading.",
+      "title": "Malformed date/offset is classified as exact source metadata",
+      "trigger": "2020-01-10T00:00:00+08:60 or 2020-99-99"
+    },
+    {
+      "actual": "All four malformed candidates return True. Python equality conflates False and 0; validator checks only a subset of schema constraints and misses maxItems/contains.",
+      "cases": [
+        "V01_NUMERIC_FALSE_GATE_REJECTED",
+        "V02_BOOLEAN_ZERO_COUNT_REJECTED",
+        "V03_NONEMPTY_UNRUN_WINDOWS_REJECTED",
+        "V04_REQUIRED_DIAGNOSTIC_LABEL_REJECTED_IF_ABSENT"
+      ],
+      "current_reachability": "validate_candidate is the implemented sidecar consumer; record formal_admitted has a strict identity check but root constants do not.",
+      "expected": "Reject all four against already declared constraints; valid conservative unrun/UNKNOWN metadata passes. Full final typing remains a separate acceptance item.",
+      "id": "F03",
+      "locations": [
+        {
+          "end": 84,
+          "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/dto.py",
+          "start": 51
+        }
+      ],
+      "priority": "P2",
+      "required_change": "Enforce JSON-type-aware const/enum and all declared constraints fail-closed, using a complete validator or explicit complete candidate checks. Require final consumer-negative/schema-compatibility review before shared freeze.",
+      "scope_limit": "No actual production admission bypass demonstrated: empty registry and other real execution gates remain blocked. Code/doc openly defer full schema review; incomplete final fields are not a falsely claimed final contract.",
+      "title": "Sidecar consumer does not enforce its declared JSON constraints",
+      "trigger": "productionGate=0 instead of false; formal_windows_executed=false instead of zero; windows=[...]; HistoricalEvidenceBundle labels=[]"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 5976,
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/dto.py",
+      "sha256": "sha256:3314379ce9a7017b8afb8085a91178294f7d57d2332754f7dfe0c838767eb1d1"
+    },
+    {
+      "bytes": 2829,
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/interface.py",
+      "sha256": "sha256:9f31b2126cf2085924dd77bee0b8245a677dcab429013111b735e1c0fff83912"
+    },
+    {
+      "bytes": 14668,
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/pit.py",
+      "sha256": "sha256:84ba4c5986da43d87ba16877125330b520c2346a7bcf1bdd6db8c9b700623d37"
+    },
+    {
+      "bytes": 22060,
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y/backtest_5y/strategy.py",
+      "sha256": "sha256:fe384b4d50477711a4f33103738b8eb690ffab840638cdd1d469631911fe36ff"
+    },
+    {
+      "bytes": 4223,
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y/docs/backtest-5y/Contracts-Candidate-v1.md",
+      "sha256": "sha256:9dff086598700a1dbfcfef5a097682d79ebf9d3cc3c345ff73b2158b1cfaee84"
+    },
+    {
+      "bytes": 11310,
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y/docs/backtest-5y/P1-Gate-Review.md",
+      "sha256": "sha256:675f95bde36c28448ff0e225693df65726a283138769016b28981213ab03b1b9"
+    },
+    {
+      "bytes": 38555,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-p1-20261008/Candidate-Manifest-Supplement-R4.json",
+      "sha256": "sha256:d0c0fc698c8d49784f8b8258a7aa34b1ebf90ede1516d6fadb6367f2977eb09d"
+    },
+    {
+      "bytes": 11704,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-p1-20261008/Delivery-Index.json",
+      "sha256": "sha256:5c103e9fa8d9f79b60da89f7be8c43359aedf5d282c3563703bae2f6bb1b7f74"
+    },
+    {
+      "bytes": 694480,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-p1-20261008/Final-Preservation-P1.json",
+      "sha256": "sha256:e71b9aaf2e2009d9d6bc2be4e6d51a5fa09d4290dcca3f1462bf870d12defae7"
+    },
+    {
+      "bytes": 3205,
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/parallel-lines/Interface-Decision-v1.json",
+      "sha256": "sha256:bd64704c76d304480e69016f55f2b471d7ba1e479f01c9a1ef8a68440a75f701"
+    },
+    {
+      "bytes": 6258,
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/parallel-lines/Interface-Review.md",
+      "sha256": "sha256:c78f9df7d6a080ec6193c457d91868695fc6535c43d374582c09e0b901765c7d"
+    },
+    {
+      "bytes": 961044,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Independent-Interface-Cases-R1.json",
+      "sha256": "sha256:e3ba7e066ef9923c2249ae88d2d90ed01f5c9b087570faa69ad4f2b01932a871"
+    },
+    {
+      "bytes": 12681,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-integration-20261008/reviewer/Six-DTO-Field-Matrix-R1.json",
+      "sha256": "sha256:fbe56c0ba4a60b570d52ed4e703b85dc1f79a19b1d620ef144a919ff50ff87b3"
+    }
+  ],
+  "isolated_preservation": "CONDITIONALLY_ACCEPT_READ_ONLY_QUARANTINED_ENGINEERING_ASSETS",
+  "kind": "IndependentReadOnlyInterfaceReview",
+  "preservation_all_match": true,
+  "preservation_summary": {
+    "candidate_inputs_127": {
+      "matched": 127,
+      "reference_rows": 127,
+      "scope_counts": {},
+      "unique_paths": 127
+    },
+    "candidate_source_34": {
+      "matched": 34,
+      "reference_rows": 34,
+      "scope_counts": {},
+      "unique_paths": 34
+    },
+    "delivery_files_42": {
+      "matched": 42,
+      "reference_rows": 42,
+      "scope_counts": {},
+      "unique_paths": 42
+    },
+    "old_preservation_1949": {
+      "matched": 1949,
+      "reference_rows": 1949,
+      "scope_counts": {
+        "accepted_initial_review_output": 20,
+        "forward": 4,
+        "handoff_reference": 17,
+        "parent": 954,
+        "worktree": 954
+      },
+      "unique_paths": 1938
+    },
+    "sealed_db_snapshot_2": {
+      "matched": 2,
+      "reference_rows": 2,
+      "scope_counts": {},
+      "unique_paths": 2
+    }
+  },
+  "recorded_at": "2026-10-08T12:37:42.819463+00:00",
+  "remaining_final_acceptance_conditions": [
+    "All six remain candidates; exact required/optional fields/types/enums/units/money/clock/hash/trace/reasons/invalidation and consumer scope need final parent freeze",
+    "Positive PIT/snapshot/strategy/window/run states require reviewed original evidence, data coverage and pending policy/Owner decisions",
+    "Dated actual money/fees/risk/rounding bridge remain UNSET_REQUIRED; methods v1.0.1 Owner pending; formal windows/actual admitted historical entries remain zero"
+  ],
+  "required_before_bounded_code_acceptance": [
+    "Fix F01-F03 in a new isolated candidate and preserve old R4/DB/seals/reports",
+    "Independent difference review plus targeted synthetic negatives without weakening source/permission gates",
+    "No adoption of pending methods or change to original spec/family IDs"
+  ],
+  "round": "R1",
+  "subject": {
+    "candidate_version": "1.0.0-candidate",
+    "code_commit": "cfbd2092a7ded31803647314410e04d0b6578fc5",
+    "delivery_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+    "original_strategy_sha256": "d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+    "worktree_clean": true
+  },
+  "test_interpretation": {
+    "current_code_counterexamples": 10,
+    "expected_boundaries_met": 18,
+    "explicit_final_field_gap_probes": 3,
+    "full_json_schema_validation_performed": false,
+    "jsonschema_library_available": false,
+    "old_110_suite_not_rerun_by_this_reviewer": true,
+    "targeted_cases_total": 31
+  },
+  "verdict": "REQUEST_CHANGES_FOR_COMPUTATIONAL_INTEGRATION_AND_FINAL_SHARED_CONTRACT_FREEZE",
+  "version": "1.0.0"
+}

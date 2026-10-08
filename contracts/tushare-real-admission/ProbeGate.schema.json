@@ -1,0 +1,1531 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ashare.invalid/contracts/tushare-real-admission/ProbeGate1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gate_version",
+    "report_kind",
+    "run_id",
+    "engineering_gate",
+    "provider_id",
+    "source_classification",
+    "namespace",
+    "purpose",
+    "symbols",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "productionGate",
+    "REAL_DATA_ADMISSION_GATE",
+    "LOCAL_REAL_RESEARCH_GATE",
+    "GLOBAL_LOCAL_EXISTING_SSE_GATE",
+    "P1B_RESEARCH_PILOT_GATE",
+    "other_gates",
+    "credential",
+    "entitlement_matrix",
+    "categories",
+    "authenticated_requests",
+    "raw_captures",
+    "observed_rows",
+    "raw_inventory",
+    "probe_report_refs",
+    "source_object_refs",
+    "closed_condition_ids",
+    "snapshot_b",
+    "code_provenance_ref",
+    "content_hash"
+  ],
+  "properties": {
+    "gate_version": {
+      "const": "1.0.0"
+    },
+    "report_kind": {
+      "const": "P1B_TUSHARE_REAL_ADMISSION_PROBE_GATE"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+    },
+    "engineering_gate": {
+      "enum": [
+        "PASS",
+        "PASS_WITH_CONDITIONS",
+        "FAIL"
+      ]
+    },
+    "provider_id": {
+      "const": "TUSHARE_MONTHLY_GATEWAY"
+    },
+    "source_classification": {
+      "const": "OWNER_PROVIDED_MONTHLY_GATEWAY"
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "purpose": {
+      "const": "LOCAL_REAL_RESEARCH_ADMISSION_PROBE"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "REAL_DATA_ADMISSION_GATE": {
+      "const": "BLOCKED"
+    },
+    "LOCAL_REAL_RESEARCH_GATE": {
+      "const": "BLOCKED"
+    },
+    "GLOBAL_LOCAL_EXISTING_SSE_GATE": {
+      "const": "PARTIAL"
+    },
+    "P1B_RESEARCH_PILOT_GATE": {
+      "const": "BLOCKED"
+    },
+    "other_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "CLOUD_RESEARCH_EXPORT_GATE",
+        "HISTORICAL_BACKTEST_GATE",
+        "PRODUCTION_DATA_GATE",
+        "CLOUD_MODEL",
+        "REDISTRIBUTION",
+        "SIGNAL_ORDER",
+        "BROKER_PRODUCTION"
+      ],
+      "properties": {
+        "CLOUD_RESEARCH_EXPORT_GATE": {
+          "const": "BLOCKED"
+        },
+        "HISTORICAL_BACKTEST_GATE": {
+          "const": "BLOCKED"
+        },
+        "PRODUCTION_DATA_GATE": {
+          "const": "BLOCKED"
+        },
+        "CLOUD_MODEL": {
+          "const": "BLOCKED"
+        },
+        "REDISTRIBUTION": {
+          "const": "BLOCKED"
+        },
+        "SIGNAL_ORDER": {
+          "const": "BLOCKED"
+        },
+        "BROKER_PRODUCTION": {
+          "const": "BLOCKED"
+        }
+      }
+    },
+    "credential": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lookup_result",
+        "presence",
+        "storage",
+        "rotation_required",
+        "exposure_risk",
+        "secret_logged",
+        "credential_digest_created"
+      ],
+      "properties": {
+        "lookup_result": {
+          "enum": [
+            "FOUND",
+            "KEYCHAIN_LOOKUP_FAILED",
+            "CREDENTIAL_REFERENCE_MISSING"
+          ]
+        },
+        "presence": {
+          "type": "boolean"
+        },
+        "storage": {
+          "const": "MACOS_KEYCHAIN"
+        },
+        "rotation_required": {
+          "const": false
+        },
+        "exposure_risk": {
+          "const": "OWNER_ACCEPTED"
+        },
+        "secret_logged": {
+          "const": false
+        },
+        "credential_digest_created": {
+          "const": false
+        }
+      }
+    },
+    "entitlement_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stock_basic",
+        "suspend_d",
+        "trade_cal",
+        "daily",
+        "adj_factor",
+        "dividend",
+        "fina_indicator",
+        "index_member_all"
+      ],
+      "properties": {
+        "stock_basic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "suspend_d": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "trade_cal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "daily": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "adj_factor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "dividend": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "fina_indicator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        },
+        "index_member_all": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requests",
+            "success",
+            "denied",
+            "failed",
+            "rows",
+            "status"
+          ],
+          "properties": {
+            "requests": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "success": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denied": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "enum": [
+                "NOT_QUERIED",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "FAILED"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "SECURITY_STATUS",
+        "CALENDAR_RULES",
+        "RAW_BARS",
+        "CORPORATE_ACTIONS",
+        "ADJUSTMENT_VERSIONS",
+        "FINANCIAL_REVISIONS",
+        "ANNOUNCEMENTS",
+        "INDUSTRY_MEMBERSHIP"
+      ],
+      "properties": {
+        "SECURITY_STATUS": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "CALENDAR_RULES": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "RAW_BARS": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "CORPORATE_ACTIONS": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "ADJUSTMENT_VERSIONS": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "FINANCIAL_REVISIONS": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "ANNOUNCEMENTS": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "INDUSTRY_MEMBERSHIP": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "probe_status",
+            "entitlement_status",
+            "provider_identity_status",
+            "license_status",
+            "transport_status",
+            "raw_integrity",
+            "clock_status",
+            "coverage_status",
+            "DQ_status",
+            "historical_visibility_proven",
+            "admission_status",
+            "observed_rows",
+            "reason_codes",
+            "next_action"
+          ],
+          "properties": {
+            "probe_status": {
+              "enum": [
+                "NOT_RUN",
+                "SUCCESS_NONEMPTY",
+                "SUCCESS_EMPTY",
+                "MIXED",
+                "FAILED",
+                "EXISTING_SSE_REFERENCE_ONLY"
+              ]
+            },
+            "entitlement_status": {
+              "enum": [
+                "UNKNOWN",
+                "ACCESS_OBSERVED",
+                "DENIAL_OBSERVED",
+                "MIXED",
+                "NOT_PROBED_EXISTING_SSE"
+              ]
+            },
+            "provider_identity_status": {
+              "const": "UNVERIFIED"
+            },
+            "license_status": {
+              "const": "UNVERIFIED"
+            },
+            "transport_status": {
+              "const": "HTTP_OWNER_EXCEPTION_NOT_INTEGRITY_VERIFIED"
+            },
+            "raw_integrity": {
+              "enum": [
+                "NOT_CAPTURED",
+                "PASS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "clock_status": {
+              "enum": [
+                "NOT_OBSERVED",
+                "CURRENT_OBSERVED_ONLY",
+                "FAIL",
+                "EXISTING_SSE_NOT_NEW_CAPTURE"
+              ]
+            },
+            "coverage_status": {
+              "enum": [
+                "NOT_MEASURED",
+                "PARTIAL",
+                "TARGET_MET_NOT_ADMITTED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "DQ_status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS_FOR_OBSERVED_ROWS",
+                "FAIL",
+                "MIXED",
+                "EXISTING_SSE_PARTIAL"
+              ]
+            },
+            "historical_visibility_proven": {
+              "const": false
+            },
+            "admission_status": {
+              "const": "BLOCKED"
+            },
+            "observed_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason_codes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z0-9_]+$"
+              },
+              "uniqueItems": true
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "authenticated_requests": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "raw_captures": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "observed_rows": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "raw_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "probe_report_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "source_object_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy",
+        "SourceObservation",
+        "ClockEvidence_admitted",
+        "StockSnapshot",
+        "AdmissionReceipt",
+        "BrainPacket",
+        "ResearchCard"
+      ],
+      "properties": {
+        "policy": {
+          "const": null
+        },
+        "SourceObservation": {
+          "const": null
+        },
+        "ClockEvidence_admitted": {
+          "const": null
+        },
+        "StockSnapshot": {
+          "const": null
+        },
+        "AdmissionReceipt": {
+          "const": null
+        },
+        "BrainPacket": {
+          "const": null
+        },
+        "ResearchCard": {
+          "const": null
+        }
+      }
+    },
+    "closed_condition_ids": {
+      "const": []
+    },
+    "snapshot_b": {
+      "const": "PENDING_REAL_DATA_AND_ADMITTED_LINEAGE"
+    },
+    "code_provenance_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "const": "docs/p1b-real-admission/code-provenance.json"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}

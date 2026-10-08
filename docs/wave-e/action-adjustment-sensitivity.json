@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "private_ref": {
+    "bytes": 9242,
+    "name": "action-adjustment-sensitivity.json",
+    "path": "/Users/qiushi/\u6295\u8d44\u7814\u7a76/.p1b-archives/wave-e-20261006/results/DIAGNOSTIC-G1/action-adjustment-sensitivity.json",
+    "sha256": "sha256:2c0631cf94eeb4947db27b29d4a88d7602adf484305ec2f910cebeca1fe3bbe8"
+  },
+  "state": "SENSITIVITY_ONLY",
+  "historical_visibility_proven": false,
+  "formal_strategy_evidence": false,
+  "productionGate": false
+}

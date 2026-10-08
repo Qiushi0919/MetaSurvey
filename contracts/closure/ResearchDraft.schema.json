@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:closure:ResearchDraft",
+  "title": "ResearchDraft",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "ResearchDraft"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "fixture_scope": {
+      "const": "SYNTHETIC_TEST_ONLY"
+    },
+    "purpose": {
+      "const": "FIXTURE_MANUAL_EXPORT"
+    },
+    "mode": {
+      "enum": [
+        "DEV",
+        "PAPER"
+      ]
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "strategy_id": {
+      "enum": [
+        "CORE_40",
+        "EVENT_3",
+        "RESEARCH_6_18M"
+      ]
+    },
+    "packet_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "receipt_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_ref": {
+            "type": "object",
+            "properties": {
+              "object_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 512
+              },
+              "object_version": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "content_hash": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "object_id",
+              "object_version",
+              "content_hash"
+            ],
+            "additionalProperties": false
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "classification": {
+            "const": "DESCRIPTIVE_ONLY"
+          }
+        },
+        "required": [
+          "evidence_ref",
+          "statement",
+          "classification"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "grade": {
+      "const": "UNSET_REQUIRED"
+    },
+    "scoring_policy_version": {
+      "const": "UNSET_REQUIRED"
+    },
+    "probability_policy_version": {
+      "const": "UNSET_REQUIRED"
+    },
+    "sizing_policy_version": {
+      "const": "UNSET_REQUIRED"
+    },
+    "edge_policy_version": {
+      "const": "UNSET_REQUIRED"
+    },
+    "real_account_suitability": {
+      "const": "BLOCKED"
+    },
+    "real_net_edge": {
+      "const": "UNSET_REQUIRED"
+    },
+    "real_sizing": {
+      "const": "UNSET_REQUIRED"
+    },
+    "cost_test": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "const": "SYNTHETIC_TEST_ONLY"
+        },
+        "cost_profile_ref": {
+          "type": "object",
+          "properties": {
+            "object_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "object_version": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "content_hash": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "object_id",
+            "object_version",
+            "content_hash"
+          ],
+          "additionalProperties": false
+        },
+        "estimate_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "cost_before_suitability": {
+          "const": true
+        }
+      },
+      "required": [
+        "scope",
+        "cost_profile_ref",
+        "estimate_hash",
+        "cost_before_suitability"
+      ],
+      "additionalProperties": false
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+          "CLOSURE_REAL_SOURCE_BLOCKED",
+          "CLOSURE_LICENSE_UNKNOWN",
+          "CLOSURE_TERMS_UNVERIFIED",
+          "CLOSURE_PURPOSE_MISMATCH",
+          "CLOSURE_POLICY_UNTRUSTED",
+          "CLOSURE_POLICY_REVOKED",
+          "CLOSURE_RECEIPT_UNKNOWN",
+          "CLOSURE_RECEIPT_REVOKED",
+          "CLOSURE_RECEIPT_EXPIRED",
+          "CLOSURE_RECEIPT_INVALIDATED",
+          "CLOSURE_SIGNATURE_INVALID",
+          "CLOSURE_SNAPSHOT_INVALID",
+          "CLOSURE_DATA_QUARANTINED",
+          "CLOSURE_FUTURE_DATA",
+          "CLOSURE_STALE_DATA",
+          "CLOSURE_COVERAGE_INCOMPLETE",
+          "CLOSURE_SOURCE_LINEAGE_INCOMPLETE",
+          "CLOSURE_SOURCE_NOT_APPROVED",
+          "CLOSURE_NAMESPACE_MISMATCH",
+          "CLOSURE_HASH_MISMATCH",
+          "CLOSURE_EXPORT_FIELDS_FORBIDDEN",
+          "CLOSURE_OUTCOME_LEAKAGE",
+          "CLOSURE_SECRET_OR_PATH_LEAKAGE",
+          "CLOSURE_LLM_EXECUTION_INJECTION",
+          "CLOSURE_UNKNOWN_REAL_COST_ACCOUNT",
+          "CLOSURE_COST_REQUIRED_FIRST",
+          "CLOSURE_DRAFT_NON_EXECUTABLE",
+          "CLOSURE_PRODUCTION_DISABLED",
+          "CLOSURE_ISOLATION_UNAVAILABLE",
+          "CLOSURE_CONSUMER_ACCESS_DENIED",
+          "CLOSURE_IMPORT_INVALID",
+          "CLOSURE_DUPLICATE_CONFLICT"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "validation_status": {
+      "const": "NON_TRADEABLE"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "fixture_scope",
+    "purpose",
+    "mode",
+    "production_enabled",
+    "strategy_id",
+    "packet_ref",
+    "receipt_ref",
+    "snapshot_ref",
+    "decision_cutoff",
+    "observations",
+    "can_produce_order",
+    "tradeable",
+    "grade",
+    "scoring_policy_version",
+    "probability_policy_version",
+    "sizing_policy_version",
+    "edge_policy_version",
+    "real_account_suitability",
+    "real_net_edge",
+    "real_sizing",
+    "cost_test",
+    "reason_codes",
+    "validation_status"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "scope": "approved fixture-only closure",
+    "required_optional": "all listed properties required; explicit null only where allowed",
+    "timezone": "offset required; business Asia/Shanghai; UTC storage",
+    "money": "No floating money; referenced cost is exact Decimal/integer-cent strings",
+    "hash": "canonical JSON SHA256 excludes top-level content_hash and proof; proof signs content_hash. Source policy has no proof.",
+    "invalidation": [
+      "source/raw/closure/policy/purpose/coverage/namespace/version/hash change",
+      "receipt revocation/expiry",
+      "unknown real input blocks"
+    ],
+    "no_production_defaults": true
+  }
+}

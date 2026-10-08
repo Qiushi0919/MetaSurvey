@@ -1,0 +1,507 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:v1:AccountProfile",
+  "title": "AccountProfile",
+  "description": "V1 P0 AccountProfile; structural engineering contract, no implicit production policy.",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "AccountProfile"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "object_version": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Version"
+    },
+    "trace_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "content_hash": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Hash"
+    },
+    "recorded_at": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Timestamp"
+    },
+    "business_timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "provenance": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Provenance"
+    },
+    "reason_codes": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/ReasonCodes"
+    },
+    "invalidation": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Invalidation"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "DEV",
+        "PAPER",
+        "PROD"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "profile_kind": {
+      "type": "string",
+      "enum": [
+        "UNCONFIGURED",
+        "SYNTHETIC_FIXTURE",
+        "VERIFIED_ACCOUNT"
+      ]
+    },
+    "currency": {
+      "const": "CNY"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "capital_cents": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "target_order_cents": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "max_positions": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "max_single_trade_loss_bps": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "max_sector_exposure_bps": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "daily_loss_limit_cents": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "max_portfolio_drawdown_bps": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "margin_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "monthly_trade_frequency": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "strategy_budget_cents": {
+          "type": "object",
+          "properties": {
+            "CORE_40": {
+              "anyOf": [
+                {
+                  "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+                },
+                {
+                  "const": "UNSET_REQUIRED"
+                }
+              ]
+            },
+            "EVENT_3": {
+              "anyOf": [
+                {
+                  "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+                },
+                {
+                  "const": "UNSET_REQUIRED"
+                }
+              ]
+            }
+          },
+          "required": [
+            "CORE_40",
+            "EVENT_3"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "capital_cents",
+        "target_order_cents",
+        "max_positions",
+        "max_single_trade_loss_bps",
+        "max_sector_exposure_bps",
+        "daily_loss_limit_cents",
+        "max_portfolio_drawdown_bps",
+        "margin_allowed",
+        "monthly_trade_frequency",
+        "strategy_budget_cents"
+      ],
+      "additionalProperties": false
+    },
+    "broker_costs": {
+      "type": "object",
+      "properties": {
+        "broker_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "commission_rate": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "minimum_commission_cents": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "commission_scope": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "PER_ORDER",
+                "BROKER_STATEMENT_POLICY"
+              ]
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "exchange_fee_rate": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "exchange_fee_included": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "other_fee_rate": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "other_fee_included": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "stamp_tax_sell_rate": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "statutory_rate_source": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "statutory_rate_verified_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "effective_from": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "effective_to": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "slippage_base_bps": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "slippage_stress_bps": {
+          "anyOf": [
+            {
+              "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "rounding_mode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "HALF_UP"
+              ]
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        },
+        "configuration_source": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            {
+              "const": "UNSET_REQUIRED"
+            }
+          ]
+        }
+      },
+      "required": [
+        "broker_id",
+        "commission_rate",
+        "minimum_commission_cents",
+        "commission_scope",
+        "exchange_fee_rate",
+        "exchange_fee_included",
+        "other_fee_rate",
+        "other_fee_included",
+        "stamp_tax_sell_rate",
+        "statutory_rate_source",
+        "statutory_rate_verified_at",
+        "effective_from",
+        "effective_to",
+        "slippage_base_bps",
+        "slippage_stress_bps",
+        "rounding_mode",
+        "configuration_source"
+      ],
+      "additionalProperties": false
+    },
+    "user_risk_policy_version": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        {
+          "const": "UNSET_REQUIRED"
+        }
+      ]
+    },
+    "broker_capability_verified": {
+      "type": "boolean"
+    },
+    "cost_reconciliation_passed": {
+      "type": "boolean"
+    },
+    "program_trading_compliance_checked": {
+      "type": "boolean"
+    },
+    "paper_acceptance_passed": {
+      "type": "boolean"
+    },
+    "kill_switch_test_passed": {
+      "type": "boolean"
+    },
+    "execution_mode": {
+      "const": "HUMAN_CONFIRM"
+    },
+    "auto_execute": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "recorded_at",
+    "business_timezone",
+    "provenance",
+    "reason_codes",
+    "invalidation",
+    "mode",
+    "account_id",
+    "profile_kind",
+    "currency",
+    "settings",
+    "broker_costs",
+    "user_risk_policy_version",
+    "broker_capability_verified",
+    "cost_reconciliation_passed",
+    "program_trading_compliance_checked",
+    "paper_acceptance_passed",
+    "kill_switch_test_passed",
+    "execution_mode",
+    "auto_execute"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "money": "canonical integer-cent string -> BigInt; Decimal prices/rates; no IEEE-754 money",
+    "timezone": "offset required; business Asia/Shanghai, storage UTC",
+    "hash": "SHA-256 of canonical JSON excluding only top-level content_hash",
+    "required_optional": "required array is authoritative; nullable is required but explicitly unknown/not applicable",
+    "reason_codes": "common ReasonCode enum; no arbitrary silent fallback",
+    "invalidated_by": [
+      "any required real config unset",
+      "risk profile changed",
+      "account reconciliation failed"
+    ],
+    "business_policy_defaults": false
+  }
+}

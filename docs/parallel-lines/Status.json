@@ -1,0 +1,105 @@
+{
+  "version": "1.0.0",
+  "kind": "ParallelLinesParentReviewStatus",
+  "recorded_at": "2026-10-08T09:50:37.180392+00:00",
+  "code_candidate": "55401054af42b20a36fb190febcf88800287657a",
+  "baseline": "0ea206a834cf4f68a94b536b26377d390f02ec18",
+  "parent_branch": "forward/parallel-review-20261008",
+  "child_branch": "backtest/5y-initial-review-20261008",
+  "shared_interface_semantics": "APPROVE_WITH_CONDITIONS_FOR_SIDECAR_IMPLEMENTATION",
+  "six_field_contracts": "PENDING_SPECIFIC_SCHEMAS_AND_FIXED_CHILD_COMMIT",
+  "frozen_strategy": "PRESERVED_TWO_FAMILIES_HASH_MATCH",
+  "parent_new_files_changed_only": true,
+  "old_baseline_files_each_worktree": 954,
+  "old_baseline_check": "PASS_AT_READ_TIME",
+  "forward_checkpoint_files": 4,
+  "forward_check": "PASS_AT_READ_TIME",
+  "tests": {
+    "new_boundary_cases": 11,
+    "existing_day1_cases": 24,
+    "unique_cases_this_round": 35,
+    "pass": 35,
+    "fail": 0,
+    "skip": 0,
+    "prior_all_system_suite_not_rerun": true,
+    "preservation_checks_not_counted_as_tests": true
+  },
+  "child_implementation": "IN_PROGRESS_NOT_INTEGRATED",
+  "child_gate": "PENDING_FIXED_DELIVERY_AND_INDEPENDENT_REVIEW",
+  "current_forward": {
+    "Day0": "PASS",
+    "public_setup": "PASS_SETUP_ONLY",
+    "Snapshot_B": "NOT_YET_RUN",
+    "actual_D1": "BLOCKED",
+    "actual_forward_days": 0,
+    "remaining": [
+      "ACTUAL_OCT8_EOD_ORIGINALS",
+      "SIGNED_CAPTURE_REVIEW_FORWARD_CHAIN"
+    ]
+  },
+  "formal_historical_PIT": "BLOCKED_60_ROWS_0_CLOSED_FROM_PRIOR_BASELINE",
+  "actual_account": "30_ORIGINAL_PLUS_15_ADDITIONAL_UNSET_REQUIRED",
+  "higher_gates": {
+    "formal_OOS": "BLOCKED",
+    "production": "BLOCKED",
+    "broker": "BLOCKED",
+    "real_money": "BLOCKED",
+    "cloud": "BLOCKED"
+  },
+  "no_new_business_approval": true,
+  "no_actual_authority_issued": true,
+  "auto_merge": false,
+  "self_software_review_only": true,
+  "evidence_refs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Owner-Coordination-Instruction.txt",
+      "bytes": 412,
+      "sha256": "sha256:1b6b03af7e0048681eb9e80e3626b11b6c90a4569b472e597d180a2e8964d725"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Boundary-Tests.log",
+      "bytes": 1437,
+      "sha256": "sha256:f5b8574557d731f360dace0bc2cf47c2c7a184f89e5a86f326cb512fea556d56"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Forward-Regression-Tests.log",
+      "bytes": 2917,
+      "sha256": "sha256:a5f78daf5687160c579c421a60d39801c390fc65bbb99fa96a1c11a3ccee1230"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Boundary-Review.json",
+      "bytes": 1141,
+      "sha256": "sha256:837a8951ba661e936fd0e5ea2d27219ce75199ec67d9fe94a97d359c92134f89"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Forward-Continuation.json",
+      "bytes": 4783,
+      "sha256": "sha256:73b856cc399e848bd141233855a0a86640bcbf30a97f108fe5df99b57e145c01"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Child-Draft-Review.json",
+      "bytes": 2348,
+      "sha256": "sha256:3315b61356dc42f39e94164d7a3c2e19dde73d88ca880fac1f8dd4ab9fbd3b74"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Observed-Draft-interface.py",
+      "bytes": 2754,
+      "sha256": "sha256:b2bdc49e9cb0917dd404d14d408fb007e37d77636084f3038f3c627218b3fec0"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Observed-Draft-protocol.json",
+      "bytes": 1582,
+      "sha256": "sha256:c9bb9e69533e3f7cf3ad37242bff134caf0fbc5124007cf15c06eca5fa56e62c"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Observed-Draft-OWNERSHIP.md",
+      "bytes": 1661,
+      "sha256": "sha256:bfa4cbbc7e38f4d987ab2bb1624d60d3e8db51187bceac84e478ad80179093e0"
+    }
+  ],
+  "interface_decision_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/parallel-lines/Interface-Decision-v1.json",
+    "bytes": 3205,
+    "sha256": "sha256:bd64704c76d304480e69016f55f2b471d7ba1e479f01c9a1ef8a68440a75f701"
+  }
+}

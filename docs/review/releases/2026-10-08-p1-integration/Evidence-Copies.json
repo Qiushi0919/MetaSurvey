@@ -1,0 +1,86 @@
+{
+  "kind": "SoftwareReviewEvidenceCopies",
+  "version": "1.0.0",
+  "files": [
+    {
+      "source_evidence_relative_path": "reviewer/Independent-Interface-Review-R1.md",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/reviewer/Independent-Interface-Review-R1.md",
+      "bytes": 7625,
+      "sha256": "sha256:22a129f78fbda0e090d291fbf574dd2ad08e6d457cf3027dba4e3c535ebecda3",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "reviewer/Independent-Interface-Review-R1.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/reviewer/Independent-Interface-Review-R1.json",
+      "bytes": 12424,
+      "sha256": "sha256:fea264a5fda5a0980431f0c9e7751d12778ed97bb8f0845a537672beebafb369",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "reviewer/Independent-Interface-Review-R2.md",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/reviewer/Independent-Interface-Review-R2.md",
+      "bytes": 5720,
+      "sha256": "sha256:d357d7e9900045a8921348939c60852f77a40144615f0e8ef0ea96343dee7d43",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "reviewer/Independent-Interface-Review-R2.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/reviewer/Independent-Interface-Review-R2.json",
+      "bytes": 10993,
+      "sha256": "sha256:2289c5bfa31d45ce9569268210ac5fe02e8019a4f073d569b96c81bfda7fe279",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "reviewer/Cases-R2-Harness-Clarification.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/reviewer/Cases-R2-Harness-Clarification.json",
+      "bytes": 1762,
+      "sha256": "sha256:e3737a5e8c9032e86648dab991338147103bfa9f4ef8763fa81888d7db2c5b6f",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "reviewer/Six-DTO-Field-Matrix-R1.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/reviewer/Six-DTO-Field-Matrix-R1.json",
+      "bytes": 12681,
+      "sha256": "sha256:fbe56c0ba4a60b570d52ed4e703b85dc1f79a19b1d620ef144a919ff50ff87b3",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "synthetic-integrated/Suite.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/synthetic-integrated/Suite.json",
+      "bytes": 312,
+      "sha256": "sha256:d854506aa15df11eefdc39fb5ae03146218174548e98274a12dc1055db0c2506",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "Integrated-Preservation.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/Integrated-Preservation.json",
+      "bytes": 25303,
+      "sha256": "sha256:52a6a05460899e785c5713a94e627b7f9875a1650273e2bf22a4a5a40c8cbfd6",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "Integrated-Preservation-Corrected.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/Integrated-Preservation-Corrected.json",
+      "bytes": 3004,
+      "sha256": "sha256:a2cba467fd62d1a38f417b250a697cd48df3ee32500680008942e5ae8a3a339b",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "Forward-Readback.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json",
+      "bytes": 1615,
+      "sha256": "sha256:58d494c949f56c61f1354f4649e3241737018fa34fa6a18c922559e81abc18f0",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    },
+    {
+      "source_evidence_relative_path": "Child-Final-Readback.json",
+      "repository_path": "docs/review/releases/2026-10-08-p1-integration/Child-Final-Readback.json",
+      "bytes": 331,
+      "sha256": "sha256:5608375fcf5496bf5643030bde98a1bcbf44be01d60fae958ec30b3bd7abc9e8",
+      "copy_mode": "EXACT_OWNED_SOFTWARE_REVIEW_METADATA"
+    }
+  ],
+  "raw_market_payloads_copied": false,
+  "original_failed_harness_preserved": true,
+  "original_local_evidence_index": "docs/backtest-5y-integration/Evidence-Index.json"
+}

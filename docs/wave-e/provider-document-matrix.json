@@ -1,0 +1,273 @@
+{
+  "version": "1.0.0",
+  "references": [
+    {
+      "product_document": "service_agreement",
+      "request_url": "https://tushare.pro/document/1?doc_id=405",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:14.971248Z",
+      "available_at": "2026-10-06T12:24:14.971248Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 23076,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-405.wire",
+        "sha256": "sha256:4d26a245e5a80eaef815830a2bd944cbaea8a1d9600e82b0ba91c083721155c5"
+      },
+      "decoded_ref": {
+        "bytes": 23076,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-405.decoded",
+        "sha256": "sha256:4d26a245e5a80eaef815830a2bd944cbaea8a1d9600e82b0ba91c083721155c5"
+      },
+      "text_ref": {
+        "bytes": 13993,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-405.txt",
+        "sha256": "sha256:78861af2b22dffcdc4ea71b7d655532ea729cd59e8c459dc3c0c2e27bcfaf6b3"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "user_agreement",
+      "request_url": "https://tushare.pro/document/1?doc_id=409",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:15.163368Z",
+      "available_at": "2026-10-06T12:24:15.163368Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 23992,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-409.wire",
+        "sha256": "sha256:d33eb90c3034fefebe06a89a5a751d81442143a315cec0305927ba55058071c4"
+      },
+      "decoded_ref": {
+        "bytes": 23992,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-409.decoded",
+        "sha256": "sha256:d33eb90c3034fefebe06a89a5a751d81442143a315cec0305927ba55058071c4"
+      },
+      "text_ref": {
+        "bytes": 15048,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-409.txt",
+        "sha256": "sha256:eade9b6f235b87888a4c82242dce7d7c770e4ac069beca0331b67bc1b4d0a695"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "points_and_permissions",
+      "request_url": "https://tushare.pro/document/2?doc_id=290",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:15.365627Z",
+      "available_at": "2026-10-06T12:24:15.365627Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 40149,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-290.wire",
+        "sha256": "sha256:f7a91af8062e8c041049bc4d3f3c6f6c1bc7de8ac65a6659e15d5699f28453a9"
+      },
+      "decoded_ref": {
+        "bytes": 40149,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-290.decoded",
+        "sha256": "sha256:f7a91af8062e8c041049bc4d3f3c6f6c1bc7de8ac65a6659e15d5699f28453a9"
+      },
+      "text_ref": {
+        "bytes": 17244,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-290.txt",
+        "sha256": "sha256:d039045e7e281955c71e0ebee5c344742a21b7fad980032a4fb7d39a2f361b5b"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "daily",
+      "request_url": "https://tushare.pro/document/2?doc_id=27",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:15.584696Z",
+      "available_at": "2026-10-06T12:24:15.584696Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 36901,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-27.wire",
+        "sha256": "sha256:4cfb933a6fe33de8d5390d7253138cb92731726bf7f9c25f7b3f13e3926e1ab0"
+      },
+      "decoded_ref": {
+        "bytes": 36901,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-27.decoded",
+        "sha256": "sha256:4cfb933a6fe33de8d5390d7253138cb92731726bf7f9c25f7b3f13e3926e1ab0"
+      },
+      "text_ref": {
+        "bytes": 14853,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-27.txt",
+        "sha256": "sha256:65139e3a168cacb8cff966ffeb5145a837772de03f102059985e35c49450f0a0"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "cashflow",
+      "request_url": "https://tushare.pro/document/2?doc_id=44",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:15.832147Z",
+      "available_at": "2026-10-06T12:24:15.832147Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 47985,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-44.wire",
+        "sha256": "sha256:25351d6d487c1f33edf87ecb0d0f1823677d4b52940bfd9e70c7966394c82faa"
+      },
+      "decoded_ref": {
+        "bytes": 47985,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-44.decoded",
+        "sha256": "sha256:25351d6d487c1f33edf87ecb0d0f1823677d4b52940bfd9e70c7966394c82faa"
+      },
+      "text_ref": {
+        "bytes": 21271,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-44.txt",
+        "sha256": "sha256:ef175c98a0a52fa6d0d55ecd15f724ac977478e2bc3495d2773567a6c0ab902b"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "daily_basic",
+      "request_url": "https://tushare.pro/document/2?doc_id=32",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:16.053979Z",
+      "available_at": "2026-10-06T12:24:16.053979Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 38080,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-32.wire",
+        "sha256": "sha256:45afa51e13619938e92b50c5a06131ef42023c4f3050d5edeae9096989393f9d"
+      },
+      "decoded_ref": {
+        "bytes": 38080,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-32.decoded",
+        "sha256": "sha256:45afa51e13619938e92b50c5a06131ef42023c4f3050d5edeae9096989393f9d"
+      },
+      "text_ref": {
+        "bytes": 15772,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-32.txt",
+        "sha256": "sha256:2c2683e31f7dd3454272cc46002daee5ff5871ee7bc518aec0d97f1444cd8ee5"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "income",
+      "request_url": "https://tushare.pro/document/2?doc_id=33",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:16.293926Z",
+      "available_at": "2026-10-06T12:24:16.293926Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 47217,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-33.wire",
+        "sha256": "sha256:4ff82992991c07ca6d48b96140e0ec4add29ec22a8187cffda3d0552ae8cea11"
+      },
+      "decoded_ref": {
+        "bytes": 47217,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-33.decoded",
+        "sha256": "sha256:4ff82992991c07ca6d48b96140e0ec4add29ec22a8187cffda3d0552ae8cea11"
+      },
+      "text_ref": {
+        "bytes": 20006,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-33.txt",
+        "sha256": "sha256:21754e2b835ba8ed81e8f1614d6826a7e75645a12b2d5ce7dc7a325a4aeca07f"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "balancesheet",
+      "request_url": "https://tushare.pro/document/2?doc_id=36",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:16.547428Z",
+      "available_at": "2026-10-06T12:24:16.547428Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 52139,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-36.wire",
+        "sha256": "sha256:cec376ae30b9ce7863a23c077f77571778f2d25816c24bf45e9280367e6ef51a"
+      },
+      "decoded_ref": {
+        "bytes": 52139,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-36.decoded",
+        "sha256": "sha256:cec376ae30b9ce7863a23c077f77571778f2d25816c24bf45e9280367e6ef51a"
+      },
+      "text_ref": {
+        "bytes": 23058,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-36.txt",
+        "sha256": "sha256:3cc8566d3172356179441898e672e49424f31426f47d47165d35368204a5e632"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "fina_indicator",
+      "request_url": "https://tushare.pro/document/2?doc_id=79",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:16.785278Z",
+      "available_at": "2026-10-06T12:24:16.785278Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 51669,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-79.wire",
+        "sha256": "sha256:1aab7feb72bdf87f52cdaca5f4ede6603fdcb323fc1e9b9cd9d1b2f1ae999490"
+      },
+      "decoded_ref": {
+        "bytes": 51669,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-79.decoded",
+        "sha256": "sha256:1aab7feb72bdf87f52cdaca5f4ede6603fdcb323fc1e9b9cd9d1b2f1ae999490"
+      },
+      "text_ref": {
+        "bytes": 24329,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/tushare-79.txt",
+        "sha256": "sha256:f1d0eea9a260722958912854f25a9c55dac8d9af27cf695d59b5d9e8dc3076dc"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    },
+    {
+      "product_document": "SSE_HOLIDAY_CALENDAR",
+      "request_url": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "status": 200,
+      "retrieved_at": "2026-10-06T12:24:17.034591Z",
+      "available_at": "2026-10-06T12:24:17.034591Z",
+      "source_version": "CONTENT_SHA256_AT_RETRIEVAL",
+      "raw_ref": {
+        "bytes": 28093,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/sse-holiday.wire",
+        "sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc"
+      },
+      "decoded_ref": {
+        "bytes": 28093,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/sse-holiday.decoded",
+        "sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc"
+      },
+      "text_ref": {
+        "bytes": 6761,
+        "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/public/G1/sse-holiday.txt",
+        "sha256": "sha256:f7496e39e98fa67bb6aaa177b8f3caef4b79bead6681d1f2ba3affa3c646b6e6"
+      },
+      "credentials_attached": false,
+      "entitlement_proven": false,
+      "historical_visibility_proven": false
+    }
+  ],
+  "public_GET_requests": 22,
+  "scope": "PUBLIC_DOCUMENT_FACTS_ONLY",
+  "Owner_monthly_points": 15000,
+  "provider_identity_verified": false,
+  "license_verified": false,
+  "transport_integrity_verified": false,
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false
+}

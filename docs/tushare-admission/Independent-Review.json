@@ -1,0 +1,158 @@
+{
+  "version": "1.0.0",
+  "review_kind": "FRESH_INDEPENDENT_READ_ONLY_REVIEW",
+  "reviewed_at": "2026-10-05T14:06:23.585611+00:00",
+  "engineering_verdict": "PASS_WITH_CONDITIONS_PREPARATION_AND_BLOCKING_ONLY",
+  "monthly_gateway_admission_recommendation": "BLOCK",
+  "actual_three_stock_admission_completed": false,
+  "global_LOCAL_REAL_RESEARCH_GATE": "PARTIAL_EXISTING_SSE_ONLY",
+  "provider_id": "TUSHARE_MONTHLY_GATEWAY",
+  "provider_identity": "UNVERIFIED",
+  "upstream_identity": "UNVERIFIED",
+  "actual_account_tier": 15000,
+  "tier_evidence": "OWNER_ASSERTED_NOT_PROVIDER_ACCOUNT_VERIFIED",
+  "actual_expiration": "UNSET_REQUIRED",
+  "transport_result": "BLOCKED_FORMAL_SUPPLIER_HTTPS_EVIDENCE_MISSING_NO_OWNER_HTTP_EXCEPTION",
+  "old_credential_use": "PROHIBITED",
+  "new_credential_reference": "UNSET_REQUIRED",
+  "secret_lookup_result": "NOT_ATTEMPTED_TRANSPORT_GATE_UNVERIFIED",
+  "secret_presence": null,
+  "reviewer_real_credential_access": false,
+  "reviewer_authenticated_network_requests": 0,
+  "candidate_actual_authenticated_requests": 0,
+  "candidate_actual_captured_rows": 0,
+  "candidate_issued_admission_objects": 0,
+  "tests": {
+    "independently_authored_probe_cases": 70,
+    "independently_authored_schema_validator_cases": 164,
+    "independently_executed_implementation_tests": 38,
+    "total_executed_cases": 272,
+    "failures": 0,
+    "schema_valid_control_was_actual_blocked_report_with_verified_evidence": true
+  },
+  "scope": {
+    "Phase_A": "BLOCKED_TRANSPORT_ROTATION_PROVIDER_PREREQUISITES",
+    "Phase_B": "DEFERRED_UNTIL_PHASE_A_PASS",
+    "320_sessions_12_quarters_expansion": "NEW_OWNER_PROPOSAL_REQUIRED",
+    "MCP": "NOT_RUN_DISCOVERY_EQUIVALENCE_ONLY_AFTER_CANONICAL_PATH",
+    "official_numerical_crosscheck": "NOT_PERFORMED_NO_ADMITTED_OFFICIAL_PRICE_REFERENCE"
+  },
+  "category_evidence": {
+    "SECURITY_STATUS": "NOT_QUERIED_BLOCKED",
+    "CALENDAR_RULES": "NOT_QUERIED_BLOCKED_EXISTING_SSE_REFERENCE_SEPARATE",
+    "RAW_BARS_1D": "NOT_QUERIED_BLOCKED",
+    "CORPORATE_ACTIONS": "DEFERRED_PHASE_B",
+    "ADJUSTMENT_VERSIONS": "NOT_QUERIED_BLOCKED",
+    "FINANCIAL_REVISIONS": "DEFERRED_PHASE_B",
+    "INDUSTRY_MEMBERSHIP": "DEFERRED_PHASE_B",
+    "ANNOUNCEMENTS": "SKIPPED_INDEPENDENT_ENTITLEMENT_UNVERIFIED_EXISTING_SSE_CHAIN_PRESERVED"
+  },
+  "API_success_is_license_or_PIT": false,
+  "historical_visibility_proven": false,
+  "closed_C12_C22_ids": [],
+  "snapshot_B": "PENDING_ACTUAL_NEW_POST_HOLIDAY_DATA_AND_ADMITTED_LINEAGE",
+  "additional_paid_permission_need": "UNDETERMINED_NO_ACTUAL_DENIAL_OR_VERIFIED_GAP_NO_PURCHASE_RECOMMENDED",
+  "future_constraints": [
+    "supplier_gateway_identity_and_endpoint_evidence_required",
+    "new_owner_credential_rotation_and_named_non_Git_reference_required",
+    "purchase_product_account_scope_expiration_and_entitlement_binding_required",
+    "purpose_storage_retention_transfer_and_terms_binding_required",
+    "actual_bounded_three_stock_API_results_and_originals_required",
+    "official_numeric_crosscheck_requires_separately_admitted_market_reference",
+    "current_observed_clock_does_not_prove_historical_first_availability",
+    "PIT_revision_raw_factor_membership_lineage_require_future_evidence_and_review",
+    "new_live_sender_requires_new_reviewed_code_epoch",
+    "DEV_report_registry_is_not_source_authority_or_durable_signature_registry"
+  ],
+  "all_continued_BLOCKED": [
+    "CLOUD_RESEARCH_EXPORT",
+    "HISTORICAL_BACKTEST",
+    "PRODUCTION_DATA",
+    "CLOUD_MODEL",
+    "RESEARCH_PILOT",
+    "SIGNAL_ORDER",
+    "BROKER_PRODUCTION"
+  ],
+  "redistribution": "DENIED",
+  "actual_real_account_parameters": "UNSET_REQUIRED_UNCHANGED",
+  "baseline_preservation": {
+    "baseline_commit": "60b9c4441db195418775a3b89f701137ebb9279d",
+    "files": 368,
+    "same_bytes": 366,
+    "allowed_navigation_only_changes": [
+      "AGENTS.md",
+      "docs/source-of-truth.json"
+    ],
+    "unexpected_changes": [],
+    "missing_files": [],
+    "schema_version": 6,
+    "new_migrations": 0,
+    "old_SSE_Gate_and_source_pins_preserved": true
+  },
+  "parent_frozen_source_tree_hash": "sha256:b835d0d7f751ebed71450e2848340509f266e08d2f5b5edaa4d0d12502ce41b1",
+  "data_files": {
+    "tushare-admission/probe.py": "sha256:abb2fb787b197a8048c5b4a8d54ab6e2a68f356006f0794c7daf25b942e4487e",
+    "tushare-admission/tests/test_probe.py": "sha256:c5628efb75d7da81ec0094138ee9fe6eb0d303d37181cc5883f47d98af8dfc62"
+  },
+  "schema_validator_hashes": {
+    "contracts/tushare-admission/AdmissionVerification.schema.json": "sha256:a136eddc29f53fed8b0c7e4417bd7f67964aaeee68768ed822b15cd9fe9e0bb2",
+    "contracts/tushare-admission/reason-codes.v1.json": "sha256:cf0f246a34cd6e8635663c7ba85dd436fa01b33731dba65e7395293bc0f63721",
+    "contracts/release.tushare-admission.json": "sha256:a011685f0f911b0b48009239eb9891ef9614355038bbf7ada898012809231b97",
+    "tushare-admission/parent/verify.mjs": "sha256:48ce0d4d9c72aa29f6ce0106e8a05061168ae5dd1bd9f5303a0e99660e919bca"
+  },
+  "failed_candidate_evidence_preserved": true,
+  "reviewer_fixture_error_disclosed": "reviewer-harness-correction.json; initial calendar enum generator was invalid, corrected without weakening invariant",
+  "report_metadata_before_publication": "Refresh early entitlement/coverage matrices to latest transport/rotation gates; no code or schema relaxation required.",
+  "evidence": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/independent-attacks-abb2fb787b19-harnessd81e6633.json",
+      "sha256": "sha256:f7e0c7f1ea0f37e0388d91a1375be38f1bd99e7cecbb8b8e987733f68f710cb4"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/schema-attacks-final-a136eddc29f5.json",
+      "sha256": "sha256:c108b818676165f1337584f3ff63f6f93be92c9b393e3e5d8443056fb0e76886"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/reviewer-base-tests.log",
+      "sha256": "sha256:465e64d773da98531e26746028dc524f638f92a6a3c8ff25abf8c293d519b412"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/final-preservation-and-boundary-check.json",
+      "sha256": "sha256:5d10006d123448777747f7d57b781ef43e1a4ed3ffd358f30d2959fcc798164d"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/public-doc-independent-review.json",
+      "sha256": "sha256:d2c9d32202395f73f269e2febb66c215dd6edc6b538d8cf9ed9b5687d984e896"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/latest-authority-review-plan.json",
+      "sha256": "sha256:e91fd76a33b6d1863da3eea47f2d69b71ec6422b42eb181d629e7905e0a2f2c2"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/provisional-defects.json",
+      "sha256": "sha256:71e846c8073008e7802b7cd20f424d3eefe899d27d47145c3cb4bb110875b26c"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/provisional-subclass-defects.json",
+      "sha256": "sha256:282a599bd1c734aac604fc94921bd8922b3fca36531c52931288f40d99645721"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/schema-attacks-initial.json",
+      "sha256": "sha256:ea0d3f9a7928537f1dbae414c7db2fa252ac47d013696199ebb47429312e225d"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/frozen-clock-defect.json",
+      "sha256": "sha256:76e51bd2195913ef5111719687c061412c2b6e73ecf4bfa845421f170698daf8"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/independent-attacks-025e38240f54.json",
+      "sha256": "sha256:260d5e039ce76f54f2c27ea543a5298775607f9d57a64080640d411dcd72cb63"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/review/reviewer-harness-correction.json",
+      "sha256": "sha256:b3d448d8738c66a7748ff84eb56fe391c066d953aba365645502b1446283eb4d"
+    }
+  ],
+  "stop_before_next_phase": true,
+  "content_hash": "sha256:ff3d174100298b9e561356559976147caa4c1a20a4bcb63b173f4b7cdba9a791"
+}

@@ -1,0 +1,65 @@
+{
+  "release_version": "1.2.0",
+  "schema_version": 6,
+  "phase": "P1A_CONDITIONAL_CLOSURE_FIXTURE_ONLY",
+  "gate_status": "REQUIRES_CLOSURE_GATE_REVIEW",
+  "real_data_admission_gate": "BLOCKED",
+  "production_execution_enabled": false,
+  "p1b_research_enabled": false,
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "source_tree_hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5",
+  "p0_release_sha256": "sha256:eee1c485838212210f646f755c0ce4c61b38b46dfd6fa1b8708a6ced1bb9b770",
+  "p1a_release_sha256": "sha256:6e593b06f0b09f58ecf5f50e121f338cd7f73d752ce348330207e5c062e3a876",
+  "contracts": {
+    "BrainPacket": "1.1.0",
+    "AdmissionReceipt": "1.0.0",
+    "SourceAdmissionPolicy": "1.0.0",
+    "ResearchDraft": "1.0.0"
+  },
+  "files": [
+    {
+      "path": "contracts/closure/AdmissionReceipt.schema.json",
+      "sha256": "sha256:4820257ad41681478752787091f321e110f06da45e1c79521b16ce9be27a7d02"
+    },
+    {
+      "path": "contracts/closure/BrainPacket.schema.json",
+      "sha256": "sha256:098be18825a7b40f93eee1dc1f0bf867bd64f9b20b16822dee05b76d5230ddb8"
+    },
+    {
+      "path": "contracts/closure/ResearchDraft.schema.json",
+      "sha256": "sha256:0088e5b2d4aab72bf004f20b1eaeb8687bdc9a55b141376a1f5f50c5133b7d6b"
+    },
+    {
+      "path": "contracts/closure/SourceAdmissionPolicy.schema.json",
+      "sha256": "sha256:e62a69946047839e0f7b25875080d48d5c383de8036c69b3dec50f290d062176"
+    },
+    {
+      "path": "contracts/reason-codes.closure.json",
+      "sha256": "sha256:1616597fb7287bd38a584afd2391978f58a189c4da17e29e87bd6b849af821ff"
+    },
+    {
+      "path": "migrations/006_closure_admission.sql",
+      "sha256": "sha256:8ecf7fb64fa1ac4c2bcf8821753721daa2705e08ab36d858c48664a94e91fd47"
+    },
+    {
+      "path": "config/closure/code-provenance.json",
+      "sha256": "sha256:1da526eec9e5939a406fac922f692abf1686256528bf1d7f348e99ca95494501"
+    },
+    {
+      "path": "docs/closure-implementation/W1-freeze.json",
+      "sha256": "sha256:a0b7387c0bb8208f79db14a499f1f69375e29f964963d496f8831cf47b347c7c"
+    },
+    {
+      "path": "docs/closure-implementation/W1-interfaces.md",
+      "sha256": "sha256:ab16536ab3b79498e99f5193998da4a2c0e69c19dcd06fcc7ff91bded6cec35b"
+    },
+    {
+      "path": "docs/closure-implementation/W1-clarifications.md",
+      "sha256": "sha256:94b23565e22b723bde40856614303b4cd41379709e4bf1d3013420c16b3bd32b"
+    },
+    {
+      "path": "docs/authorizations/P1A-closure-implementation-20261005.md",
+      "sha256": "sha256:2372fa8d18cf399c4ce978364561519d514fa720e177cd1e61648251cbdfb51d"
+    }
+  ]
+}

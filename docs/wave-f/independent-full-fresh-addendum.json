@@ -1,0 +1,435 @@
+{
+  "epoch": "R2_FULL_FRESH_ADDENDUM_G1",
+  "conclusion": "PASS",
+  "candidate_commit": "cca9c2394db015a0ef9fb34fd315322dc9acc605",
+  "assertions_separate_from_original_R2": 88,
+  "failed": 0,
+  "original_R2_atomic_assertions_unchanged": 4374,
+  "full_regression_not_added_to_independent_assertion_count": true,
+  "actual_regressions_from_original_log": {
+    "total": 1498,
+    "passed": 1497,
+    "failed": 0,
+    "skipped": 1,
+    "python": 1021,
+    "native": 477,
+    "python_batches": [
+      38,
+      38,
+      49,
+      124,
+      38,
+      66,
+      131,
+      187,
+      350
+    ],
+    "native_batches": [
+      258,
+      42,
+      48,
+      26,
+      27,
+      8,
+      11,
+      13,
+      9,
+      13,
+      12,
+      10
+    ]
+  },
+  "outer_exit_code": 0,
+  "process_exit_evidence_basis": "Root immutable final-validation-G1 machine record with known hash; independently checked all log summary/terminal lines. Reviewer did not rerun or observe historical process directly.",
+  "clone_current_git_clean": true,
+  "new_code_strategy_policy_pins_checked_root_and_clone": 23,
+  "review_context_hash": "sha256:89f2287ba97ee71aa70a9593a24c7aa05de1749e94bdb08712fec22fc106c9a9",
+  "validation_ref": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/final-validation-G1.json",
+    "sha256": "sha256:50173212edefd29b8546c663e4e9093b2bc658af091d0dde547588e7e3f49247",
+    "bytes": 3164
+  },
+  "logs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/clone-G1.log",
+      "sha256": "sha256:7a68dc5b244f1c4a6fda327e6127495bfb561c1851b92d262dfb336d6dac70bc",
+      "bytes": 110
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/npm-ci-G1.log",
+      "sha256": "sha256:f4028b0775b0bf6a6ba9e0dee791d0368ce420322649217c1843406442c1abaa",
+      "bytes": 27
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/full-fresh-G1.log",
+      "sha256": "sha256:83e0938c96fdcb1f225af655bf065865368ee077aeadea2c9ccb97915b55bba6",
+      "bytes": 189390
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/new-only-G1.log",
+      "sha256": "sha256:f9194adb960edcc1dc1028526435ffee8410a94b0a6e7f6de4c353cfa5d2a2f4",
+      "bytes": 41781
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/producer-G1.log",
+      "sha256": "sha256:168fff0ee0454febcf4cf1a8e4e6ffaae2ca4488a46246239bf23ef1ccabe855",
+      "bytes": 283
+    }
+  ],
+  "checks": [
+    {
+      "id": "validation-original-sha",
+      "pass": true
+    },
+    {
+      "id": "log-hash:clone-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-bytes:clone-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-hash:npm-ci-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-bytes:npm-ci-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-hash:full-fresh-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-bytes:full-fresh-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-hash:new-only-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-bytes:new-only-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-hash:producer-G1.log",
+      "pass": true
+    },
+    {
+      "id": "log-bytes:producer-G1.log",
+      "pass": true
+    },
+    {
+      "id": "actual-python-batches",
+      "pass": true
+    },
+    {
+      "id": "actual-native-batches",
+      "pass": true
+    },
+    {
+      "id": "all-nine-python-OK",
+      "pass": true
+    },
+    {
+      "id": "no-python-FAILED",
+      "pass": true
+    },
+    {
+      "id": "native-failure-sum-zero",
+      "pass": true
+    },
+    {
+      "id": "native-skip-exact-one",
+      "pass": true
+    },
+    {
+      "id": "optional-legacy-skip-identity",
+      "pass": true
+    },
+    {
+      "id": "full-entry-terminal-line",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:total",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:passed",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:failed",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:skipped",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:python",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:native",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:python_batches",
+      "pass": true
+    },
+    {
+      "id": "manifest-vs-log:native_batches",
+      "pass": true
+    },
+    {
+      "id": "outer-process-exit-recorded-zero",
+      "pass": true
+    },
+    {
+      "id": "offline-deps-exit-recorded-zero",
+      "pass": true
+    },
+    {
+      "id": "clone-actual-HEAD",
+      "pass": true
+    },
+    {
+      "id": "clone-actual-Git-clean",
+      "pass": true
+    },
+    {
+      "id": "codepins-23",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/adr/ADR-032-predeclared-research-candidates.md",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/adr/ADR-032-predeclared-research-candidates.md",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/authorizations/P1B-WAVE-F-20261006.md",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/authorizations/P1B-WAVE-F-20261006.md",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/wave-f/Frozen-StrategySpec-v1.json",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/wave-f/Frozen-StrategySpec-v1.json",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/wave-f/Interface-Freeze.md",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/wave-f/Interface-Freeze.md",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/wave-f/Owner-Policy-Decision-Sheet.md",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/wave-f/Owner-Policy-Decision-Sheet.md",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/wave-f/Snapshot-B-Runbook.md",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/wave-f/Snapshot-B-Runbook.md",
+      "pass": true
+    },
+    {
+      "id": "current-pin:docs/wave-f/baseline-pins.json",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:docs/wave-f/baseline-pins.json",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/__init__.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/__init__.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/activation.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/activation.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/backtest.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/backtest.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/check.mjs",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/check.mjs",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/common.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/common.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/core.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/core.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/display.mjs",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/display.mjs",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/pit.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/pit.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/run.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/run.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/strategy.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/strategy.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/tests/boundaries.test.mjs",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/tests/boundaries.test.mjs",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/tests/test_activation.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/tests/test_activation.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/tests/test_backtest.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/tests/test_backtest.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/tests/test_integrity.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/tests/test_integrity.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/tests/test_pit.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/tests/test_pit.py",
+      "pass": true
+    },
+    {
+      "id": "current-pin:wave_f/tests/test_strategy.py",
+      "pass": true
+    },
+    {
+      "id": "clone-pin:wave_f/tests/test_strategy.py",
+      "pass": true
+    },
+    {
+      "id": "strategy-still-predeclared",
+      "pass": true
+    },
+    {
+      "id": "code-still-reviewed",
+      "pass": true
+    },
+    {
+      "id": "source-context-still-reviewed",
+      "pass": true
+    },
+    {
+      "id": "validation-authority-still-blocked",
+      "pass": true
+    },
+    {
+      "id": "original-R2-unchanged:report.md",
+      "pass": true
+    },
+    {
+      "id": "original-R2-unchanged:matrix.json",
+      "pass": true
+    },
+    {
+      "id": "original-R2-unchanged:python-evidence.json",
+      "pass": true
+    },
+    {
+      "id": "original-R2-unchanged:native-evidence.json",
+      "pass": true
+    },
+    {
+      "id": "original-R2-unchanged:source-pins-before.json",
+      "pass": true
+    },
+    {
+      "id": "original-R2-unchanged:source-pins-after.json",
+      "pass": true
+    }
+  ],
+  "actual_forward_days": 0,
+  "productionGate": false
+}

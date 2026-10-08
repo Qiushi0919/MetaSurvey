@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "completed_at": "2026-10-05T14:04:35.051177+00:00",
+  "baseline_regression": {
+    "tests": 348,
+    "pass": 347,
+    "fail": 0,
+    "skip": 1,
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/validation/full-check-relocated.log"
+  },
+  "diagnostic_contract": {
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/validation/diagnostic-final-check.log"
+  },
+  "data_probe_offline": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0,
+    "fixture_only": true,
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/validation/diagnostic-final-check.log"
+  },
+  "total_without_double_counting": {
+    "tests": 398,
+    "pass": 397,
+    "fail": 0,
+    "skip": 1
+  },
+  "independent_review_authored_checks": {
+    "probe": 70,
+    "contract": 164,
+    "total": 234,
+    "fail": 0,
+    "final_report": "docs/tushare-admission/Independent-Review.json"
+  },
+  "initial_integration_failure": {
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/validation/full-check.log",
+    "cause": "New parent script/test placed under frozen Closure scan roots",
+    "fix": "Move only new files to tushare-admission/parent; no old verifier/source hash altered"
+  },
+  "raw_stock_rows": 0,
+  "credential_lookup_performed": false,
+  "authenticated_requests": 0,
+  "public_document_originals": 17,
+  "real_data_coverage_proven": false,
+  "source_admission_conclusion": "BLOCK",
+  "schema_version": 6,
+  "new_migrations": 0,
+  "old_source_pins_preserved": 203,
+  "remote_CI_executed": false,
+  "final_metadata_checks": {
+    "total": 65,
+    "fail": 0,
+    "report": "docs/tushare-admission/Final-Metadata-Addendum.json",
+    "sha256": "sha256:4354c2863934f09f04729fe96a689e5cc8c5b4f0bf709f54b35421c55b090a90"
+  }
+}

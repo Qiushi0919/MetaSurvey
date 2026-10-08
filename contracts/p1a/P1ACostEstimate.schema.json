@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:P1ACostEstimate",
+  "title": "P1ACostEstimate",
+  "type": "object",
+  "properties": {
+    "cost_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "cost_profile_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "side": {
+      "enum": [
+        "BUY",
+        "SELL"
+      ]
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "notional_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "commission_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "proportional_commission_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "minimum_commission_effect_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "actual_commission_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "stamp_tax_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "exchange_fee_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "other_fee_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "slippage_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "total_friction_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "cash_delta_cents": {
+      "type": "string",
+      "pattern": "^(0|-?[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "slippage_treatment": {
+      "enum": [
+        "INCLUDED_IN_EXECUTION_PRICE",
+        "SEPARATE_ESTIMATE"
+      ]
+    },
+    "included_relationship": {
+      "type": "object",
+      "properties": {
+        "exchange_fee": {
+          "enum": [
+            "COMMISSION",
+            "EXCLUDED"
+          ]
+        },
+        "other_fee": {
+          "enum": [
+            "COMMISSION",
+            "EXCLUDED"
+          ]
+        }
+      },
+      "required": [
+        "exchange_fee",
+        "other_fee"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "cost_version",
+    "cost_profile_ref",
+    "side",
+    "quantity",
+    "notional_cents",
+    "commission_cents",
+    "proportional_commission_cents",
+    "minimum_commission_effect_cents",
+    "actual_commission_cents",
+    "stamp_tax_cents",
+    "exchange_fee_cents",
+    "other_fee_cents",
+    "slippage_cents",
+    "total_friction_cents",
+    "cash_delta_cents",
+    "slippage_treatment",
+    "included_relationship"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

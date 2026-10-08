@@ -1,0 +1,1536 @@
+{
+  "version": "1.0.0",
+  "phase": "P1A_CONDITIONAL_CLOSURE_IMPLEMENTATION_COMPLETED",
+  "classification_is_recommendation": false,
+  "categories": [
+    "MUST_CLOSE_BEFORE_P1B",
+    "MAY_DEFER_TO_P1B",
+    "MAY_DEFER_TO_P2",
+    "PROD_ONLY_BLOCKER",
+    "ACCEPTED_KNOWN_LIMITATION"
+  ],
+  "conditions": [
+    {
+      "id": "C01",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "研究读取入口与最小权限隔离尚未建立",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "verifyDataSnapshot 是可调用的低层函数；没有必须经过它的 Research export/read facade。无消费者不等于未来消费者已受保护。",
+      "risk_if_unclosed": "未来模块直接查询 raw/objects 或接收 caller 自封 manifest，会绕过现有门禁。",
+      "impacts": {
+        "research": "会：未知许可/隔离证据可能进入研究",
+        "backtest": "会：模型输入可能不再绑定真实闭包",
+        "real_execution": "会：污染后续 Card/Candidate/Signal，但当前仍硬禁用"
+      },
+      "modules": [
+        "拟新增 admission/export facade",
+        "src/data/index.mjs",
+        "未来 brain-adapter/research-store"
+      ],
+      "required_tests": [
+        "quarantined/future/unknown license/缺 lineage 均无输出",
+        "禁止 raw URI/path/DB handle 暴露",
+        "MANUAL_EXPORT 运行仅获得已准入 artifact，无 raw 挂载/DB凭证",
+        "受限运行环境尝试直读 raw/store 必须拒绝"
+      ],
+      "migration": "建议006仅在批准 receipt/拒绝审计持久化后追加；最小隔离若仅文件不需DB迁移",
+      "frozen_contract_impact": "旧16/13 schemas原字节不改；拟新增 AdmissionReceipt 等独立合同",
+      "user_business_decision": "需要批准最小运行边界：推荐 MANUAL_EXPORT 文件通道；不授权真实研究调用",
+      "evidence": [
+        "src/data/index.mjs",
+        "src/data/snapshot.mjs",
+        "docs/p1a-data.md"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C02",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "数据来源许可、用途与 synthetic scope 必须由可信 receipt 绑定",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "公开来源均 UNKNOWN/UNVERIFIED，现有允许仅 synthetic；内存反例显示 synthetic 闭包可被低层函数标成 OBSERVED 并通过 verify。",
+      "risk_if_unclosed": "仅看 FROZEN/PASS/scope 名称会误把模拟数据或引用副本当真实可研究数据。",
+      "impacts": {
+        "research": "会：来源可信性/许可污染",
+        "backtest": "会：伪造 OBSERVED PIT 样本",
+        "real_execution": "会：真实适用性结论无根据"
+      },
+      "modules": [
+        "source policy/admission registry",
+        "src/data/source.mjs",
+        "src/data/snapshot.mjs",
+        "拟新增 AdmissionReceipt"
+      ],
+      "required_tests": [
+        "复现 synthetic→OBSERVED 的原反例必须在 admission 处拒绝",
+        "unknown/过期/撤销/用途不符许可拒绝",
+        "caller 修改source_class/allowed_use或receipt签发者无效",
+        "source/raw hash不匹配拒绝"
+      ],
+      "migration": "拟006追加版本化source-policy/receipt/revocation记录，不更新旧对象",
+      "frozen_contract_impact": "新 SourceAdmissionPolicy/AdmissionReceipt 拟1.0；已有冻结合同不回改",
+      "user_business_decision": "必须批准 fixture-only 或真实source用途；真实许可证据仍UNSET，用户批准不能制造许可",
+      "evidence": [
+        "docs/closure/boundary-inspection.json",
+        "tests/fixtures/p1a-data/public-capture.json",
+        "src/data/source.mjs"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C03",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "PIT 策略必须在研究入口复核，不接受 caller 自证时钟",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "当前四时钟/闭包 guards 可靠，但真实 SOURCE_FIELD 授权与历史重构未启用；P0 reconstruction harness 不应直接充当真实准入。",
+      "risk_if_unclosed": "自封 available_at、晚取得资料、未来标题/ID或未批准 DATE_ONLY 规则可污染模型。",
+      "impacts": {
+        "research": "会：前视",
+        "backtest": "会：未来泄漏",
+        "real_execution": "会：输入失真"
+      },
+      "modules": [
+        "admission facade",
+        "src/data/source.mjs",
+        "src/data/snapshot.mjs",
+        "src/contracts/validate.mjs"
+      ],
+      "required_tests": [
+        "cutoff±1秒/晚retrieval/未来revision/factor/title/ID拒绝且不进入输出hash",
+        "retrieved不得回填历史available",
+        "DATE_ONLY无获批policy拒绝",
+        "fixture reconstruction标签不能晋升真实"
+      ],
+      "migration": "使用拟006 receipt绑定clock-policy/version；不重写001–005",
+      "frozen_contract_impact": "旧四时钟合同不修改；新增用途/时钟policy refs",
+      "user_business_decision": "真实时钟/重构语义继续UNSET；本轮建议只验证拒绝，不制定真实规则",
+      "evidence": [
+        "src/data/source.mjs",
+        "src/data/snapshot.mjs",
+        "src/contracts/validate.mjs",
+        "tests/gates.test.mjs"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C04",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "P0 BrainPacket 与 P1-A closure 的 hash 协议尚未桥接",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "P0 validateBrainPacket 比较 hashValue(packet.evidence)；P1-A data_hash 为 root/closure/feature/cutoff/rules 的hash。闭包含source/calendar，不能直接当全DataEnvelope数组。",
+      "risk_if_unclosed": "照搬旧validator会拒绝正确闭包；绕开检查或重算data_hash会破坏已冻结证据。",
+      "impacts": {
+        "research": "会：packet不能证明对应闭包",
+        "backtest": "会：输入身份混乱",
+        "real_execution": "会：Card链引用错误"
+      },
+      "modules": [
+        "拟新 BrainPacket协议adapter",
+        "src/baseline/gates.mjs（保持冻结）",
+        "src/data/snapshot.mjs"
+      ],
+      "required_tests": [
+        "真实source snapshot→packet→import→draft完整绑定",
+        "旧P0 harness继续通过",
+        "root/closure/feature/projection任一字节变更拒绝",
+        "不能删校验或改旧hash来通过"
+      ],
+      "migration": "拟006仅保存 receipt/packet refs；现存schema hash不改",
+      "frozen_contract_impact": "需要人工批准新 BrainPacket 1.1 或独立ResearchInputBundle；推荐独立版本BrainPacket1.1+AdmissionReceipt，不冒充v1.0",
+      "user_business_decision": "需要批准新协议版本；不是批准改变策略或审批规则",
+      "evidence": [
+        "src/baseline/gates.mjs",
+        "src/data/snapshot.mjs",
+        "contracts/v1/BrainPacket.schema.json",
+        "docs/closure/boundary-inspection.json"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C05",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "Feature/Card 输入、namespace 与 outcome 隔离必须端到端绑定",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "runReplay 已严格绑定 last_close；尚无通用研究导入链。MAE/MFE/path/future marks 是回放outcome，不是decision Feature。",
+      "risk_if_unclosed": "模型可携带自封feature、新增来源、其他strategy或未来收益标签入Card。",
+      "impacts": {
+        "research": "会：事实/namespace/未来标签污染",
+        "backtest": "会：目标泄漏与交叉策略污染",
+        "real_execution": "会：误导信号"
+      },
+      "modules": [
+        "packet adapter",
+        "research import validator",
+        "feature provenance projection"
+      ],
+      "required_tests": [
+        "feature/source/snapshot/cutoff/version不一致拒绝",
+        "返回新证据ID只 quarantine，不升级trusted",
+        "未来outcomes/拒绝标题不输出",
+        "CORE/EVENT/RESEARCH交叉拒绝，RESEARCH无订单"
+      ],
+      "migration": "拟006记录derivation/projection refs；不导入新研究业务表",
+      "frozen_contract_impact": "新增draft/projection binding合同；ResearchCard/Signal/Approval/OrderIntent旧合同不回改",
+      "user_business_decision": "不需真实参数；拟draft只能非交易、未知scores/grade/policy保持UNSET",
+      "evidence": [
+        "src/p1a/replay.mjs",
+        "src/p1a/metrics.mjs",
+        "contracts/v1/FeatureSet.schema.json",
+        "contracts/v1/ResearchCard.schema.json"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C06",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "Freshness、覆盖范围与 invalidation 必须按消费用途强制",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "verifyDataSnapshot 证明冻结cutoff的闭包；没有当前Research消费时间/freshness参数。历史合法不等于当前实时信号可用。",
+      "risk_if_unclosed": "越日/越年calendar、陈旧状态/许可或旧receipt可能被复用；一刀切wall-clock TTL也会误杀合法历史研究。",
+      "impacts": {
+        "research": "会：实时上下文失效",
+        "backtest": "会：若把当前状态回填历史，污染PIT",
+        "real_execution": "会：stale信号"
+      },
+      "modules": [
+        "admission receipt consumer",
+        "calendar/security policy",
+        "future signal adapter"
+      ],
+      "required_tests": [
+        "历史cutoff验证与current-context freshness分开",
+        "过calendar覆盖/缺最新状态拒绝",
+        "许可撤销/新ref/schema/code/purpose变化旧receipt拒绝",
+        "实时市场5秒边界沿原规则保留"
+      ],
+      "migration": "拟006追加失效事件；不修改冻结历史",
+      "frozen_contract_impact": "新 receipt含purpose/cutoff/coverage/validity/policy refs；不得给P0对象伪造新ACTIVE状态",
+      "user_business_decision": "实时/财报/公告不同freshness政策未指定部分保持UNSET；fixture显式规则不变",
+      "evidence": [
+        "src/data/snapshot.mjs",
+        "src/data/calendar.mjs",
+        "src/baseline/gates.mjs",
+        "docs/P1A-Gate-Review.md"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C07",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "Cost-before-Candidate 与真实费用未知禁适用性结论",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "独立cost API已存在，Candidate语义需要cost_ref；还没有保证先计算费用再准入的真实producer。",
+      "risk_if_unclosed": "模型可用synthetic费用声称适合实际账户或产生tradeable候选。",
+      "impacts": {
+        "research": "会：净Edge/可负担性结论失真",
+        "backtest": "会：毛收益被当成费用后结果",
+        "real_execution": "会：费用/资金门禁绕过"
+      },
+      "modules": [
+        "拟candidate admission boundary",
+        "src/cost/index.mjs",
+        "config/account-profile.unconfigured.v1.json（不改）"
+      ],
+      "required_tests": [
+        "missing/UNSET真实fee或account时拒绝真实suitability与tradeable",
+        "synthetic明确LABEL且禁止晋升",
+        "验证cost计算先于candidate admission",
+        "三种Edge拒绝码及独立minimum不回退"
+      ],
+      "migration": "纯validator不需migration；审计沿拟006",
+      "frozen_contract_impact": "若需记录suitability status新增wrapper；不向旧Candidate schema塞自由字段",
+      "user_business_decision": "所有真实fee/本金/Edge/sizing政策继续UNSET，无需用户现在填值",
+      "evidence": [
+        "src/cost/index.mjs",
+        "src/contracts/validate.mjs",
+        "src/p1a/edge.mjs",
+        "contracts/v1/CandidateEligibility.schema.json"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C08",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "MANUAL_EXPORT/研究导入必须不可执行，LLM不能认证人工",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "当前无broker路径、PROD拒绝；未来LLM输出导入producer尚无E2E。",
+      "risk_if_unclosed": "自然语言或模型自报HUMAN approval被当成订单/许可。",
+      "impacts": {
+        "research": "会：研究输出越权",
+        "backtest": "会：未经批准策略被执行",
+        "real_execution": "会：直接真实订单（当前关闭）"
+      },
+      "modules": [
+        "manual export/import boundary",
+        "approval validator",
+        "production lock"
+      ],
+      "required_tests": [
+        "模型返回BUY/APPROVE/HUMAN_USER/OrderIntent均不能写order/approval",
+        "两人工阶段仍独立",
+        "PROD调用拒绝，broker transport无能力",
+        "manual fixture完整roundtrip仅产非交易draft"
+      ],
+      "migration": "receipt/import audit可用拟006，不建broker表/transport",
+      "frozen_contract_impact": "新 ResearchDraft 非交易DTO；旧HUMAN双阶段合同不改",
+      "user_business_decision": "批准 Closure fixture export验证，不等于 APPROVE_P1B/允许模型调用",
+      "evidence": [
+        "src/baseline/gates.mjs",
+        "src/paper/index.mjs",
+        "tests/p1a-production-lock.test.mjs"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C09",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "研究包字段最小化，拒绝 arbitrary payload 与内部raw路径",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "现有audit脱敏有明确非DLP边界；未来研究包不能只靠敏感键regex。",
+      "risk_if_unclosed": "泄露账户标识、raw路径、secret/future元数据；模型获得quarantine线索。",
+      "impacts": {
+        "research": "会：隐私/输入隔离污染",
+        "backtest": "会：未来元数据泄漏",
+        "real_execution": "会：credentials风险"
+      },
+      "modules": [
+        "manual export allowlist",
+        "audit producer",
+        "receipt refs"
+      ],
+      "required_tests": [
+        "白名单拒绝未知字段/嵌套secret/内部路径/真实account号",
+        "refs只能经许可允许的摘要/结构化值",
+        "未知许可不能导出原文/摘要",
+        "日志也无blocked标题/IDs"
+      ],
+      "migration": "一般无migration；导出审计refs沿006",
+      "frozen_contract_impact": "新export/draft合同明确字段；原AuditChainEvent不改",
+      "user_business_decision": "需要用途许可规则；未知保持阻断；不读取真实credentials做测试",
+      "evidence": [
+        "src/p1a/audit.mjs",
+        "docs/independent-review-p1a.md",
+        "contracts/v1/BrainPacket.schema.json"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C10",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "Closure新增代码与冻结实现的版本/测试协议需先确定",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "当前CodeProvenance枚举全部实现/测试文件，新增代码会使8cca360 pin失效；不能在新candidate继续声称旧CodeVersion有效。",
+      "risk_if_unclosed": "编辑旧release、忽略新文件、改扩展名躲pin或强行保持旧hash，会破坏证据。",
+      "impacts": {
+        "research": "会：输入代码身份错误",
+        "backtest": "会：回放不可解释",
+        "real_execution": "会：审批/版本复用"
+      },
+      "modules": [
+        "parent release/version owner",
+        "code-provenance/phase verification",
+        "artifact index"
+      ],
+      "required_tests": [
+        "旧tag完整恢复并校验冻结bytes",
+        "新candidate实际commit/source-map覆盖所有新/改文件",
+        "新release独立版本且不改旧release/provenance",
+        "旧语义Golden均保留，版本变更必须可解释"
+      ],
+      "migration": "仅按获批追加006；不回改001–005",
+      "frozen_contract_impact": "建议closure release1.2.0，旧v1/p1a1.1保留；Brain新合同单独批准",
+      "user_business_decision": "需要批准release/协议演进方案；不可通过放宽来源/费用/审批断言迁就旧hash",
+      "evidence": [
+        "src/p1a/code-provenance.mjs",
+        "scripts/verify-p1a.mjs",
+        "contracts/release.p1a.json",
+        "config/p1a/code-provenance.json"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C11",
+      "category": "MUST_CLOSE_BEFORE_P1B",
+      "title": "12项P1B_READINESS_GATE必须有新端到端证据与独立审查",
+      "status": "CLOSED_FOR_APPROVED_FIXTURE_SCOPE",
+      "why": "现有Reviewer审的是P1-A实现，不能替尚不存在的consumer、权限、manual adapter背书。",
+      "risk_if_unclosed": "仅凭209测试或未来承诺放行研究。",
+      "impacts": {
+        "research": "会：入口未验证",
+        "backtest": "会：可信性缺口",
+        "real_execution": "会：生产边界未证"
+      },
+      "modules": [
+        "parent integration",
+        "approved DA/PH",
+        "independent reviewer（批准后）"
+      ],
+      "required_tests": [
+        "12项readiness矩阵逐条负向攻击",
+        "25类Golden不回退且0FAIL",
+        "批准边界同snapshot重复导出/导入一致",
+        "旧hash/code/许可/bytes变更拒绝",
+        "reviewer只读且notes实际hash"
+      ],
+      "migration": "沿批准migration；无额外功能DDL",
+      "frozen_contract_impact": "所有新版本由总控冻结；review不改业务规则",
+      "user_business_decision": "Closure Plan批准后才开工；最终仍须显式APPROVE_P1B",
+      "evidence": [
+        "docs/closure/readiness-matrix.json",
+        "docs/closure/golden-test-matrix.json",
+        "docs/independent-review-p1a.md"
+      ],
+      "closure_evidence": [
+        "docs/closure-implementation/readiness-matrix.json",
+        "docs/closure-implementation/validation.json",
+        "docs/closure-implementation/independent-review.json"
+      ],
+      "closure_scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER"
+    },
+    {
+      "id": "C12",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实完整官方security/master/status历史未完成",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "先保证入口只能使用已准入的明确symbol/date/board覆盖，完整全市场历史可分源分批补完。",
+      "risk_if_unclosed": "把缺证券/历史状态当正常会污染公司/候选身份。",
+      "impacts": {
+        "research": "若越coverage会；允许范围内并已认证时不污染",
+        "backtest": "会影响survivorship/status PIT",
+        "real_execution": "必须交易前认证"
+      },
+      "modules": [
+        "src/data/security.mjs",
+        "source-specific security parser"
+      ],
+      "required_tests": [
+        "改名/退市/ST/停牌/lot变更与版本冲突PIT",
+        "当前状态不能回填历史",
+        "缺覆盖symbol拒绝"
+      ],
+      "migration": "优先沿003对象追加；通常不需DDL，需新索引则追加新号",
+      "frozen_contract_impact": "旧SecurityIdentity不改；真实policy需新receipt refs",
+      "user_business_decision": "真实feed/provider/license尚UNSET；批准fixture-only无需补全真实主数据",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "src/data/security.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C13",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "全年calendar与当前各板块session规则未认证",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "无须先补全所有年份才能验证fixture reader；真实用途所需区间必须完整，超界仍拒绝。",
+      "risk_if_unclosed": "2019参考被误用为当前完整规则或使用工作日猜交易日。",
+      "impacts": {
+        "research": "超覆盖会",
+        "backtest": "会：session/T+1/窗口计数错",
+        "real_execution": "会：交易状态错"
+      },
+      "modules": [
+        "src/data/calendar.mjs",
+        "official calendar/session adapters"
+      ],
+      "required_tests": [
+        "闰年/跨年/长假/板块sessions版本",
+        "覆盖缺一天拒绝",
+        "current规则来源与生效期证据"
+      ],
+      "migration": "沿003追加calendar版本；暂不需新DDL",
+      "frozen_contract_impact": "旧calendar projections不改；新coveragepolicy refs",
+      "user_business_decision": "当前真实calendar准入政策/来源证据未确认",
+      "evidence": [
+        "docs/p1a-data.md",
+        "tests/fixtures/p1a-data/public-capture.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C14",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实历史available_at/可信时间证明尚无",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "C03先保证不证明就阻断；真实历史研究用途开放前逐source批准证明，不要求凭空补过去时间。",
+      "risk_if_unclosed": "今天抓取回填旧cutoff，产生虚假的历史研究表现。",
+      "impacts": {
+        "research": "若使用未证历史会",
+        "backtest": "会：前视",
+        "real_execution": "会：输入错"
+      },
+      "modules": [
+        "src/data/source.mjs",
+        "approved clock mapping/archival authority"
+      ],
+      "required_tests": [
+        "未经批准SOURCE_FIELD拒绝",
+        "signed/archive/source proof与raw严格绑定",
+        "区分observed/reconstructed标签",
+        "晚retrieval不得冒充observed"
+      ],
+      "migration": "源proof可沿003/拟006追加；不写旧时钟",
+      "frozen_contract_impact": "新proof/policy版本，P0四时钟不改",
+      "user_business_decision": "真实许可/时钟证据仍UNSET，人工批准范围也不能制造过去available_at",
+      "evidence": [
+        "docs/p1a-data.md",
+        "src/data/source.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C15",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实bars slice缺clock/license/preclose，真实可研究snapshot为0",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "当前阻断正确。可在P1-B数据接入子里程碑补合法完整source，之前只用fixture。",
+      "risk_if_unclosed": "把两条抓到的日线当可交易研究数据。",
+      "impacts": {
+        "research": "会：若绕过阻断",
+        "backtest": "会：行情不完整",
+        "real_execution": "会：报价/费用结论失真"
+      },
+      "modules": [
+        "source-specific bars adapter",
+        "market DQ"
+      ],
+      "required_tests": [
+        "原2条reference继续BLOCKED",
+        "授权+时钟+preclose/证券/日历均完整才允许明确用途",
+        "raw decimal lexeme保留"
+      ],
+      "migration": "沿003，非全历史导入",
+      "frozen_contract_impact": "旧DataEnvelope不改；新增source mapping须版本化",
+      "user_business_decision": "需要真实授权source选择/用途证据；当前不要求支付/账号或新抓取",
+      "evidence": [
+        "docs/closure/data-admission-matrix.json",
+        "src/data/market.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C16",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实corporate-action feed与跨来源factor对账未完成",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "必须先禁止未认证adjusted/事件相关feature；全面feed补完属于后续按需求的数据接入。",
+      "risk_if_unclosed": "未来factor或错分红/送配可改变历史价格/结论。",
+      "impacts": {
+        "research": "若消费该feature会",
+        "backtest": "会：复权/回报污染",
+        "real_execution": "会：持仓状态错"
+      },
+      "modules": [
+        "src/data/market.mjs",
+        "action/feed parser"
+      ],
+      "required_tests": [
+        "源action/factor/hash/ex-date可见性",
+        "缺action完整性不得称无事件",
+        "跨source不一致quarantine"
+      ],
+      "migration": "沿003 action/adjustment追加；新entitlement表另行提案",
+      "frozen_contract_impact": "旧price-basis/lineage不改",
+      "user_business_decision": "真实feed/licensing/方法继续UNSET；批准前只fixture结构测试",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "src/data/market.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C17",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实adjustment math / entitlement reconciliation未实现",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "研究窗口不消费调整/权益未认证结果可以继续工程；将其用于真实回测前必须补。",
+      "risk_if_unclosed": "错误factor/分红权益影响价格路径、收益和NAV。",
+      "impacts": {
+        "research": "估值/回报若使用会",
+        "backtest": "会：特别是跨公司行动PnL",
+        "real_execution": "会：权益账本"
+      },
+      "modules": [
+        "approved adjustment math",
+        "future entitlement ledger",
+        "backtester"
+      ],
+      "required_tests": [
+        "split/bonus/rights/dividend现金及股数精确对账",
+        "ex-date前拒绝未来结果",
+        "方法版本变化失效"
+      ],
+      "migration": "若权益lot/现金事件落库需另行追加（不是本轮006自动包含）",
+      "frozen_contract_impact": "需单独提案新权益合同，禁止更改旧Fill/Ledger语义",
+      "user_business_decision": "真实权益/复权口径需用户/权威source确认；不在本Closure偷偷实现",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "docs/adr/ADR-005-adjustments.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C18",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实financial parser/修订样本/source admission未实现",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "修订机制已通过，但真实财务输入使用前必须按field/source准入；不要求一次完成所有报表历史。",
+      "risk_if_unclosed": "今日修订或错误单位混进旧公司研究。",
+      "impacts": {
+        "research": "会：财务逻辑错",
+        "backtest": "会：revision leakage",
+        "real_execution": "会：Card错"
+      },
+      "modules": [
+        "src/data/market.mjs",
+        "real financial parser"
+      ],
+      "required_tests": [
+        "真实原报/重述/源更正样本",
+        "单位CNY/cents精确",
+        "先cutoff后latest",
+        "缺财务样本feature不输出"
+      ],
+      "migration": "沿003追加revision，通常不改DDL",
+      "frozen_contract_impact": "旧financial数据语义不改；receipt覆盖声明新增",
+      "user_business_decision": "真实license/报告时间/字段口径未确认",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "src/data/market.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C19",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "DATE_ONLY历史重构政策未批准",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "不能由工程师任选次日午夜/工作日。C03先禁无policy的使用，真实重构待后续审批。",
+      "risk_if_unclosed": "伪造时钟或盲目升级P0 synthetic reconstruction。",
+      "impacts": {
+        "research": "会：历史前视",
+        "backtest": "会：cutoff错误",
+        "real_execution": "会：过期消息"
+      },
+      "modules": [
+        "source clock policy",
+        "calendar adapter"
+      ],
+      "required_tests": [
+        "无版本化policy/官方session不允许重构",
+        "下一实际session边界fixture",
+        "reconstructed不会冒充observed"
+      ],
+      "migration": "使用policy记录，无需覆盖旧对象",
+      "frozen_contract_impact": "P0reference规则不改；真实policy单独版本化",
+      "user_business_decision": "需要业务确认真实DATE_ONLY规则与证据，保持UNSET",
+      "evidence": [
+        "docs/p1a-data.md",
+        "src/contracts/validate.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C20",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "行业成员、名称/sector PIT和真实长期验证数据未齐备",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "P1-A只最小slice，不代表交接文档5年等历史需求已满足；全样本扩展在研究/验证阶段。",
+      "risk_if_unclosed": "survivorship、现名现行业回填过去，短强市样本冒充OOS。",
+      "impacts": {
+        "research": "会：板块研究污染",
+        "backtest": "会：有效性虚假",
+        "real_execution": "会：结果误导"
+      },
+      "modules": [
+        "sector history adapter",
+        "research data store",
+        "backtest dataset builder"
+      ],
+      "required_tests": [
+        "历史成员/退市/版本PIT",
+        "数据coverage/censoring标记",
+        "walk-forward训练验证严格隔离"
+      ],
+      "migration": "视新sector/news/announcement索引需求另行追加；非本Closure批量迁移",
+      "frozen_contract_impact": "冻结namespace/SoT历史要求不变",
+      "user_business_decision": "真实数据provider/coverage/授权未定；不得以fixture代历史承诺",
+      "evidence": [
+        "正式交接文档数据深度/sector_membership要求",
+        "docs/P1A-Gate-Review.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C21",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "真实指标使用/校准样本覆盖未确认",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "已有daily retrospective实现不是未来风险预测。P1-B若需要预测/分层证据必须另做样本方法。",
+      "risk_if_unclosed": "以MAE/MFE定义直接产概率或未来drawdown结论。",
+      "impacts": {
+        "research": "会：未校准预测",
+        "backtest": "会：outcome泄漏",
+        "real_execution": "会：风险误导"
+      },
+      "modules": [
+        "research metrics consumer",
+        "future calibration（明确批准后）"
+      ],
+      "required_tests": [
+        "outcome与decision Feature物理分离",
+        "不足窗口null",
+        "真实样本分层/coverage/OOS标签"
+      ],
+      "migration": "沿后续research artifact记录，不改当前metrics表/结果",
+      "frozen_contract_impact": "PathMetrics1.0保留；预测合同若需要单独版本",
+      "user_business_decision": "概率校准/质量时点政策保持UNSET；本Closure不实现",
+      "evidence": [
+        "src/p1a/metrics.mjs",
+        "docs/adr/ADR-011-economic-replay.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C22",
+      "category": "MAY_DEFER_TO_P1B",
+      "title": "Research-store/Brain业务producers、评分与概率/Edge准入政策尚未实现",
+      "status": "APPROVED_DEFERRED_UNTIL_ACTUAL_USE",
+      "why": "P1-B才负责研究工程；Closure只证明非交易输入/输出边界，不能偷偷开Quality/Timing/Grade参数优化。",
+      "risk_if_unclosed": "把示例阈值或multiple2/模型判断当已校准规则。",
+      "impacts": {
+        "research": "会：研究有效性无证",
+        "backtest": "会：优化偏差",
+        "real_execution": "会：不当sizing/净Edge"
+      },
+      "modules": [
+        "未来research-store/brain-adapter/candidate-engine",
+        "approved calibration tasks"
+      ],
+      "required_tests": [
+        "未知评分/概率/净Edge/准入policy保持UNSET且不能交易",
+        "真正calibration另里程碑OOS测试",
+        "RESEARCH长周期不直接驱动CORE买单"
+      ],
+      "migration": "后续research producers可能用现P0表或新增版本索引，另提案",
+      "frozen_contract_impact": "旧Card chain不改；draft/新增研究版本总控批准",
+      "user_business_decision": "需要后续APPROVE_P1B及明确评分/概率政策，不在本轮确定",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "contracts/v1/ResearchCard.schema.json",
+        "src/p1a/edge.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C23",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "真实PostgreSQL多连接/多进程现金并发未验收",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "纯MANUAL_EXPORT/单进程fixture研究不操作账户现金；若选择DB服务/多writer则使用前必须升级为必修。",
+      "risk_if_unclosed": "PGlite同连接通过被误当真实多连接现金锁已证。",
+      "impacts": {
+        "research": "选文件边界则无；DB-backed研究需改分类",
+        "backtest": "并发交易回测部署会影响",
+        "real_execution": "会：double spending需真实server证明"
+      },
+      "modules": [
+        "PostgreSQL integration adapter",
+        "paper transaction boundaries"
+      ],
+      "required_tests": [
+        "独立连接/进程Core+Event同时预留",
+        "隔离级别/锁超时/重试/幂等",
+        "reconcile每次精确"
+      ],
+      "migration": "部署/索引/约束需追加新号；不回改004",
+      "frozen_contract_impact": "paper API契约不能悄改；新增并发协议单独版本",
+      "user_business_decision": "需先选文件或DB-backed拓扑；推荐文件边界后置",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "docs/p1a-paper.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C24",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "完整server RBAC/least privilege未部署",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "C01最小研究通道隔离仍必修；全平台角色/管理员权限体系可延期。研究若直连DB，research_read权限测试立即成为前置。",
+      "risk_if_unclosed": "将无权限共享数据库暴露给研究，或把trigger当owner攻击防护。",
+      "impacts": {
+        "research": "若有直接DB访问会；文件隔离通过后不污染",
+        "backtest": "管理员改写证据可能污染",
+        "real_execution": "会：账户/审计权限"
+      },
+      "modules": [
+        "runtime isolation",
+        "server roles/research_read/data_admin/trade roles"
+      ],
+      "required_tests": [
+        "export-only process没有raw挂载/DB凭证",
+        "DB模式需SELECT只准入视图，无raw/写/TRUNCATE/函数绕过",
+        "owner/operator威胁明确"
+      ],
+      "migration": "角色/grants/view部署可能追加006或后续；不可改旧DDL",
+      "frozen_contract_impact": "角色不是放宽合同；无旧contract变化",
+      "user_business_decision": "部署拓扑选择影响分类；不能以延期全RBAC为由省C01",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "正式交接文档角色边界"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C25",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "备份恢复、可信storage/timestamp authority与不可变外部归档未验收",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "Git bundle/固定raw hash能恢复工程证据；长寿命外部服务的备份/可信时间不是fixture工程前置。",
+      "risk_if_unclosed": "把本地运行clock/DB owner触发器当不可篡改时间权威或数据永存保证。",
+      "impacts": {
+        "research": "长寿命真实研究服务会；fixture重建则范围可控",
+        "backtest": "历史归档真实性与恢复影响",
+        "real_execution": "会：灾难恢复"
+      },
+      "modules": [
+        "external object store",
+        "database backup/recovery",
+        "timestamp authority"
+      ],
+      "required_tests": [
+        "独立恢复raw/schema/receipt/audit全部hash",
+        "丢失对象失败",
+        "外部clock漂移拒绝",
+        "WORM/权限绕过威胁测试"
+      ],
+      "migration": "通常部署配置/归档元数据追加，另批",
+      "frozen_contract_impact": "source/clock proofs不能升格；新authority合同另版本",
+      "user_business_decision": "真实source授权/retention规则未定，保持阻断",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "docs/baselines/P0-freeze-20261005.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C26",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "COMMIT前后崩溃fault injection未验收",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "普通restart/idempotency已证，单进程研究导出不承诺生产交易的崩溃恢复；receipt使用前验证完整性，半成品不得发布。",
+      "risk_if_unclosed": "部分事务/重试重复记账或导出半包。",
+      "impacts": {
+        "research": "导出原子发布最小测试属于C01/C11；全面事务故障后置",
+        "backtest": "会：持久回测损坏",
+        "real_execution": "会：账本恢复"
+      },
+      "modules": [
+        "paper service/db adapter",
+        "atomic export writer"
+      ],
+      "required_tests": [
+        "杀进程于COMMIT前/后/响应前",
+        "重启exactly-once账本/释放预留",
+        "receipt/export临时写后原子发布及损坏拒绝"
+      ],
+      "migration": "按DB能力另行追加；不要重写旧账本",
+      "frozen_contract_impact": "生命周期语义不放宽；故障协议可新版本",
+      "user_business_decision": "不需要真实资金参数；外部部署另授权",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "tests/p1a-paper.test.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C27",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "持续数据健康监控/高频watcher/实时feed恢复未做",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "消费时stale/缺source拒绝C06必修；常驻健康监控、通知和秒级watcher非manual研究Closure范围。",
+      "risk_if_unclosed": "断流后用旧值冒充最新，或告警风暴。",
+      "impacts": {
+        "research": "实时研究会；历史fixture不污染",
+        "backtest": "实时报价/撮合会",
+        "real_execution": "会：数据陈旧"
+      },
+      "modules": [
+        "future watcher/collector monitor",
+        "signal feed health"
+      ],
+      "required_tests": [
+        "断流/恢复/sequence gap均NO_NEW_ORDERS",
+        "去重/限频",
+        "消费stale拒绝先保留"
+      ],
+      "migration": "后续health/state schema视需求追加",
+      "frozen_contract_impact": "现freshness语义不变",
+      "user_business_decision": "不确定新增时间阈值不猜；现明示5秒边界保留",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "src/baseline/gates.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C28",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "Paper SELL全额费预留使零available cash全仓不能退出",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "限定reference/fixture演示可保留；若下一阶段承诺策略执行评价或退出可行性，则必须提前修并批准费用结算语义。",
+      "risk_if_unclosed": "risk exit无法执行，产生虚假持仓/净收益统计或把保守限制当券商规则。",
+      "impacts": {
+        "research": "会影响交易建议可行性；非交易draft不承诺可卖",
+        "backtest": "会：不能当真实策略matcher",
+        "real_execution": "会：不能推广真实行为"
+      },
+      "modules": [
+        "src/paper/index.mjs",
+        "src/paper/oracle.mjs",
+        "future settlement profile"
+      ],
+      "required_tests": [
+        "零现金SELL/partial/cancel/fee-from-proceeds/极端费用",
+        "lot预留/T+1/资金顺序",
+        "oracle独立核账",
+        "不能破坏旧fixture解释"
+      ],
+      "migration": "如需proceeds担保/reserve类别，追加新迁移/版本，非本Closure默认006",
+      "frozen_contract_impact": "可能新 settlement/reservation contract；不悄改旧PER_ORDER reference",
+      "user_business_decision": "真实券商结算映射未定；延期只代表保留限制，不代表认可为规则",
+      "evidence": [
+        "docs/p1a-paper.md",
+        "docs/P1A-Gate-Review.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C29",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "真实tick/涨跌停/流动性/停牌撮合与minute-level执行模型未实现",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "Paper LIMIT fixture不是完整A股撮合；研究工程无需马上补全部matcher，但不能称能交易或可信策略PnL。",
+      "risk_if_unclosed": "不可能成交/滑点误差被当收益；最低手与零股边界错误。",
+      "impacts": {
+        "research": "若声称买点执行优势会",
+        "backtest": "会：费用后策略有效性",
+        "real_execution": "会：订单合法性"
+      },
+      "modules": [
+        "future market microstructure/matcher",
+        "security capability mapping"
+      ],
+      "required_tests": [
+        "tick/价格笼子/涨跌停/停牌/零股/量能/部分撮合",
+        "高低滑点固定输入对比"
+      ],
+      "migration": "按真实规则索引另行追加",
+      "frozen_contract_impact": "不得自行填tick/broker规则；新matcher协议版本",
+      "user_business_decision": "真实板块/订单类型规则和来源需确认",
+      "evidence": [
+        "docs/p1a-paper.md",
+        "contracts/v1/SecurityIdentity.schema.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C30",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "20日真实forward Paper未验收",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "现实验只有fixed synthetic输入，不是forward paper；属于后续真实数据与运行安全验收。",
+      "risk_if_unclosed": "两日模拟/legacy replay被当长期上线证据。",
+      "impacts": {
+        "research": "不验证研究alpha",
+        "backtest": "会：真实forward claim无证",
+        "real_execution": "生产必须完成后续验收"
+      },
+      "modules": [
+        "future forward-paper runner",
+        "daily audit/reconcile"
+      ],
+      "required_tests": [
+        "连续>=20真实sessions按已获批规则",
+        "每日费用/现金/持仓核账",
+        "异常fail closed与恢复"
+      ],
+      "migration": "使用后续paper运行表/manifest；不迁移旧runs",
+      "frozen_contract_impact": "新run来源/许可scope明确",
+      "user_business_decision": "真实source准入与Paper范围需后续批准，不需现在真实账号值",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "正式交接文档Paper验收"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C31",
+      "category": "MAY_DEFER_TO_P2",
+      "title": "生产部署/备份运维、完整GUI、L2/高频基础设施未建",
+      "status": "APPROVED_DEFERRED_REOPEN_IF_SCOPE_EXPANDS",
+      "why": "与数据准入文件通道不构成必然依赖；C01最小隔离可独立交付，不能为Closure扩成平台工程。",
+      "risk_if_unclosed": "过早接账户或开发主体GUI，偏离授权范围。",
+      "impacts": {
+        "research": "当前不污染，若越权接source会",
+        "backtest": "不是当前测试有效性前提",
+        "real_execution": "真实运营需部署验收"
+      },
+      "modules": [
+        "future deployment/gui/watcher（本轮不启动）"
+      ],
+      "required_tests": [
+        "之后按正式交接验收；本轮验证模块/transport缺省关闭"
+      ],
+      "migration": "本轮无此DDL；后续明确编号",
+      "frozen_contract_impact": "不改变SoT总体目标，延期不等于删除",
+      "user_business_decision": "需要后续阶段显式授权；Kubernetes/service mesh不是当前要求",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "正式交接文档部署/GUI要求"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C32",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实account/capital/budgets/risk/frequency参数未配置",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "30项AccountProfile未知不妨碍纯fixture研究，但不允许真实sizing或适合账户判断。",
+      "risk_if_unclosed": "继承旧5000/6000/10000或3000/8000、旧loss限制。",
+      "impacts": {
+        "research": "会：若谈真实账户适用性",
+        "backtest": "真实组合回测参数无效",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "config/account-profile.unconfigured.v1.json",
+        "future account-risk gate"
+      ],
+      "required_tests": [
+        "所有required叶缺失/null/NaN/UNSET均fail closed",
+        "真实适用性声明拒绝",
+        "fixture不能改profile_kind升格"
+      ],
+      "migration": "本轮无账户状态迁移",
+      "frozen_contract_impact": "AccountProfile1.0原字节保留；新增未知不猜",
+      "user_business_decision": "不要求现在填值；真实account设置保持UNSET",
+      "evidence": [
+        "config/p1a/unset-required.inventory.json",
+        "tests/p1a-production-lock.test.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C33",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实券商费率/范围/inclusion/slippage/rounding/effective period映射未认证",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "Synthetic PER_ORDER和日期边界不是券商事实。C07保证未知时不给真实净Edge结论；正式费用接入生产前核验。",
+      "risk_if_unclosed": "错误minimum/手续费重复/税费日期或成交结算偏差。",
+      "impacts": {
+        "research": "会：真实净Edge/affordability失真",
+        "backtest": "真实策略费用后统计会",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future broker-cost mapper",
+        "cost verifier"
+      ],
+      "required_tests": [
+        "按交割单边界/partial/cancel/minimum/收费范围/日期/rounding核账",
+        "比对independent oracle",
+        "未知字段拒绝"
+      ],
+      "migration": "真实profile版本追加，需表另批",
+      "frozen_contract_impact": "新broker profile/version；旧synthetic不可升级default",
+      "user_business_decision": "所有真实费用继续UNSET，不猜 statutory/rate配置",
+      "evidence": [
+        "docs/p1a-paper.md",
+        "config/account-profile.unconfigured.v1.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C34",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实交割单/费用/持仓现金对账未做",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "reference oracle只证明synthetic实现，不证明实际券商结算。",
+      "risk_if_unclosed": "engine精确但映射错误，真实账户/费率不可信。",
+      "impacts": {
+        "research": "不允许真实账户适用性",
+        "backtest": "会：真实费用/成交回测口径",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future statement import/reconcile",
+        "broker capability checker"
+      ],
+      "required_tests": [
+        "read-only脱敏交割单对gross/全部fees/cash/lot",
+        "差异NO_NEW_ORDERS",
+        "原始证据hash/version保留"
+      ],
+      "migration": "只在另授权后staging/statement表追加，不导入旧状态库",
+      "frozen_contract_impact": "新broker证据DTO；当前Fill/Cost旧语义不回改",
+      "user_business_decision": "需要后续真实账户证据授权；本轮不读取credentials/账号/交割单",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "正式交接文档费用与交割单验收"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C35",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实sizing与账户总risk enforcement未实现",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "共享现金检查不等于sector/daily loss/drawdown/budget全账户risk engine。",
+      "risk_if_unclosed": "策略各自有现金但账户总风险越界。",
+      "impacts": {
+        "research": "会：真实仓位建议",
+        "backtest": "会：真实portfolio回测",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future account risk/sizing engine"
+      ],
+      "required_tests": [
+        "共享策略budget+sector+drawdown+loss+margin+frequency组合边界",
+        "未知风险全部拒绝"
+      ],
+      "migration": "risk状态/事件另行追加",
+      "frozen_contract_impact": "新risk/sizing合同需审批；旧namespace和account共享约束不变",
+      "user_business_decision": "用户风险政策、真实阈值全部UNSET",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "config/p1a/unset-required.inventory.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C36",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实用户认证与双人工审批权限未实现",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "synthetic authority只为fixture。研究返回可记录为untrusted draft，不能认证任何真实操作人。",
+      "risk_if_unclosed": "模型自报/本地共享会话被当真实用户批准。",
+      "impacts": {
+        "research": "会：研究输出越权",
+        "backtest": "未经批准决策replay可能混淆",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future user auth/approval authority"
+      ],
+      "required_tests": [
+        "用户会话认证/权限/过期/两阶段terms绑定",
+        "LLM永不HUMAN",
+        "明确修改后批准失效"
+      ],
+      "migration": "真实auth/approval状态另授权后追加",
+      "frozen_contract_impact": "冻结Approval双阶段保持；真实authority协议另批",
+      "user_business_decision": "真实角色/认证方式后续确认，无需现在账户参数",
+      "evidence": [
+        "src/baseline/gates.mjs",
+        "docs/P1A-Gate-Review.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C37",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实broker gateway与接入/适用义务确认未完成",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "P1-B研究无需broker transport；当前不得接入。",
+      "risk_if_unclosed": "自然语言/准备订单越权发送真实委托。",
+      "impacts": {
+        "research": "不需要broker",
+        "backtest": "真实成交验证需后续授权",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future execution-gateway（本轮禁止）"
+      ],
+      "required_tests": [
+        "只在正式生产评审后能力授权/幂等/人工确认/拒绝回报",
+        "无凭证默认不可达"
+      ],
+      "migration": "真实broker表/transport另阶段，不占本Closure迁移",
+      "frozen_contract_impact": "OrderIntent/Approval链不得改；接入capability单独审批",
+      "user_business_decision": "broker/account/适用接入要求UNSET，后续权威确认",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "正式交接文档HUMAN_CONFIRM边界"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C38",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "production Kill Switch/NO_NEW_ORDERS部署未验收",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "现productionGate永久false比临时KillSwitch更严格；研究阶段不能为了验收去打开实盘。",
+      "risk_if_unclosed": "真实断线/错仓位/风险破限未自动禁止新单。",
+      "impacts": {
+        "research": "研究不需要实盘开关",
+        "backtest": "真实运行模拟需后续验收",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future production ops/gateway/health policy"
+      ],
+      "required_tests": [
+        "断线/stale/costunset/reconcilefail/unknownstatus/risklimit均禁止新单",
+        "恢复人工条件/审计"
+      ],
+      "migration": "ops状态另阶段追加",
+      "frozen_contract_impact": "冻结production=false不更改；未来开prod另新授权/新版本",
+      "user_business_decision": "生产风险/上线授权UNSET；本轮保持false",
+      "evidence": [
+        "src/baseline/gates.mjs",
+        "tests/p1a-production-lock.test.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C39",
+      "category": "PROD_ONLY_BLOCKER",
+      "title": "真实credentials/账户敏感数据与生产密钥分发未设置",
+      "status": "BLOCKS_PRODUCTION",
+      "why": "本轮无读取/提交；研究环境必须无prod密钥，C09出口白名单先完成。",
+      "risk_if_unclosed": "dev/research拿到prod权限或日志保存完整账户号。",
+      "impacts": {
+        "research": "会：隐私与越权",
+        "backtest": "不是fixture验证需要",
+        "real_execution": "必须阻断"
+      },
+      "modules": [
+        "future secret storage/auth",
+        "export/log minimization"
+      ],
+      "required_tests": [
+        "dev/paper无法读prodsecret",
+        "leastpriv旋转/吊销/审计",
+        "真实标识不进入packet/日志"
+      ],
+      "migration": "本轮无credentials表/导入",
+      "frozen_contract_impact": "不在schema给真实secret字段；权限政策后续版本",
+      "user_business_decision": "不索取真实credentials；安全部署后续授权",
+      "evidence": [
+        "docs/P1A-Gate-Review.md",
+        "AGENTS.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C40",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "Legacy native CLI hash mismatch继续保留",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "已知兼容失败不是V1安全输入来源；保留原seal/ledger资产比改旧证据更重要。",
+      "risk_if_unclosed": "伪造PASS或覆盖seal/账本破坏审计。",
+      "impacts": {
+        "research": "隔离后不污染；不允许research复用旧实验假设",
+        "backtest": "旧资产只能regression fixture，非策略有效性",
+        "real_execution": "不作为production输入"
+      },
+      "modules": [
+        "legacy manifest/adapters（不修改、不运行旧策略）"
+      ],
+      "required_tests": [
+        "本轮只校验manifest/reports hash",
+        "未来compatibility修复只能新adapter/version，旧seal保持"
+      ],
+      "migration": "无legacy迁移",
+      "frozen_contract_impact": "原manifest/seal不修改",
+      "user_business_decision": "建议接受兼容限制，不代表历史盈利/PIT认证；不需修旧CLI",
+      "evidence": [
+        "docs/baselines/P1A-legacy-native-compatibility.json",
+        "legacy/asset-manifest.v1.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C41",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "DAILY_APPROXIMATION与retrospective metric定义",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "已有明确窗口、缺数据null/INCOMPLETE、entry-day约定；不是minute路径。",
+      "risk_if_unclosed": "把未来outcome当预测/持有全路径或伪分钟数据。",
+      "impacts": {
+        "research": "C05隔离后可作历史结果；不能直接预测",
+        "backtest": "日线近似需声明，缺窗不压缩",
+        "real_execution": "不能当未来风险保证"
+      },
+      "modules": [
+        "src/p1a/metrics.mjs（保持）",
+        "future research outcome boundary"
+      ],
+      "required_tests": [
+        "旧窗口/负timezone/缺session/entry规则保留",
+        "packet不得携带未来指标作为feature"
+      ],
+      "migration": "无修改005 metrics数据",
+      "frozen_contract_impact": "PathMetrics定义保持1.0；新resolution另版本",
+      "user_business_decision": "建议接受日线近似范围；概率预测政策仍UNSET",
+      "evidence": [
+        "docs/adr/ADR-011-economic-replay.md",
+        "docs/experiments/P1A-results.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C42",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "Experiment A/B只有synthetic工程意义",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "gross相同/摩擦递增/Edge拒绝证明工程机制；固定信号不是选股或策略回测。",
+      "risk_if_unclosed": "把正净收益、multiple2或短持有交易当CORE策略有效。",
+      "impacts": {
+        "research": "不能证明研究alpha",
+        "backtest": "不能称OOS/生产收益",
+        "real_execution": "不能据此开资金"
+      },
+      "modules": [
+        "experiment artifacts（不重跑优化）",
+        "report labels"
+      ],
+      "required_tests": [
+        "八字段一致/hash mutation证据保留",
+        "固定signals/qty/prefill",
+        "Edge OFF/ON区分/拒绝码",
+        "不改实验以美化收益"
+      ],
+      "migration": "无迁移",
+      "frozen_contract_impact": "保留旧experiment.json/report/hash；新版本产生新结果另存",
+      "user_business_decision": "建议接受实验范围，不批准任何真实threshold/alpha",
+      "evidence": [
+        "docs/experiments/P1A-results.json",
+        "docs/adr/ADR-012-experimental-edge.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C43",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "现有fixtures与有界reference只证明小范围能力",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "五source、2条bar、有限calendar/synthetic41sessions不是完整真实市场coverage；真实snapshot准入为0。",
+      "risk_if_unclosed": "将有限证据扩大成全年/全市场/历史available认证。",
+      "impacts": {
+        "research": "fixture-only不得称真实研究",
+        "backtest": "不能替5年/多市场样本",
+        "real_execution": "不能交易准入"
+      },
+      "modules": [
+        "fixture/source manifest（保留）",
+        "admission coverage policy"
+      ],
+      "required_tests": [
+        "所有输出显式scope/coverage",
+        "越界拒绝",
+        "public references不能送LLM可交易研究输入"
+      ],
+      "migration": "无新历史导入",
+      "frozen_contract_impact": "不把SYNTHETIC scope修改成OBSERVED；C02修复入口",
+      "user_business_decision": "建议接受有界证据范围；真实消费须另批准具体source/domain",
+      "evidence": [
+        "tests/fixtures/p1a-data/public-capture.json",
+        "tests/fixtures/p1a-replay/experiment.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C44",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "clean验证为darwin/arm64且optional external legacy test skip",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "已实测clean install/check，portable测试不需要旧宿主。跨平台不是当前Gate硬要求。",
+      "risk_if_unclosed": "声称远端CI/所有系统通过，或把skip算通过/新run。",
+      "impacts": {
+        "research": "不直接污染",
+        "backtest": "跨平台精度需之后实测",
+        "real_execution": "真实部署仍P2/Prod blocker"
+      },
+      "modules": [
+        "artifact index",
+        "CI docs（不虚报远端run）"
+      ],
+      "required_tests": [
+        "核验原日志SHA/counts",
+        "skip原因明确",
+        "新candidate按实际平台clean复现，失败不得掩盖"
+      ],
+      "migration": "无迁移",
+      "frozen_contract_impact": "无合同变化",
+      "user_business_decision": "建议接受平台边界；本轮复用日志而不假造新210 run",
+      "evidence": [
+        "docs/baselines/P1A-clean-reproduction-20261005.json",
+        "docs/closure/golden-test-matrix.json"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C45",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "最坏partial rounding导致BUY reserve高于整单affordability",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "保守预留保证不透支；亚分fixture差异明确。不能为了买得起放宽资金门禁。",
+      "risk_if_unclosed": "忽略部分成交rounding会双花/透支；把保守行为当真实券商要求。",
+      "impacts": {
+        "research": "真实执行适用性不得声称",
+        "backtest": "模拟可行性需说明",
+        "real_execution": "真实tick/结算映射需另证"
+      },
+      "modules": [
+        "src/cost/index.mjs",
+        "src/paper/index.mjs（保持）"
+      ],
+      "required_tests": [
+        "整单20000 vs split20002例核账",
+        "reservation不足拒绝",
+        "partial最低佣金delta不double count"
+      ],
+      "migration": "无本轮迁移；以后真实reserve政策另版本",
+      "frozen_contract_impact": "旧money/rounding不变",
+      "user_business_decision": "建议接受fixture保守界限；真实broker规则UNSET",
+      "evidence": [
+        "docs/p1a-paper.md",
+        "docs/independent-review-p1a.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C46",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "synthetic cost生效区间两端包含，P0 harness旧语义不同",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "两个reference协议版本明确；不统一改旧contract或误映射真实券商。",
+      "risk_if_unclosed": "off-by-one费率切换或悄改历史测试。",
+      "impacts": {
+        "research": "真实成本未知不可用该结论",
+        "backtest": "历史profile须按绑定版本",
+        "real_execution": "真实费用需要C33"
+      },
+      "modules": [
+        "cost version registry（保持）",
+        "future mapper"
+      ],
+      "required_tests": [
+        "两个reference各自原边界PASS",
+        "跨version复用拒绝",
+        "真实有效期未知拒绝"
+      ],
+      "migration": "无本轮迁移",
+      "frozen_contract_impact": "不回改P0/当前synthetic profile；真实版本另批",
+      "user_business_decision": "建议接受reference语义差异，不批准真实broker区间",
+      "evidence": [
+        "docs/contracts-p1a.md",
+        "docs/p1a-paper.md"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    },
+    {
+      "id": "C47",
+      "category": "ACCEPTED_KNOWN_LIMITATION",
+      "title": "审计脱敏不是完整DLP、trigger不是DB owner防篡改承诺",
+      "status": "ACCEPTED_SCOPED_LIMITATION_NOT_PERMANENT_WAIVER",
+      "why": "已有递归敏感键/常见secret攻击防护；生产producer/权限仍需加严，研究export C09白名单先落实。",
+      "risk_if_unclosed": "任意未标注秘密或管理员绕过可泄露/改写。",
+      "impacts": {
+        "research": "结构化出口通过后范围可控",
+        "backtest": "证据管理员恶意修改不是当前保证",
+        "real_execution": "真实权限/日志最小化仍Prod blocker"
+      },
+      "modules": [
+        "audit producer",
+        "export allowlist",
+        "future RBAC"
+      ],
+      "required_tests": [
+        "原secret/ref攻击与九表非owner TRUNCATE保护保留",
+        "export白名单定点反例",
+        "不声称能对抗拥有全盘权限的管理员"
+      ],
+      "migration": "无旧audit重写；新receipt审计append-only",
+      "frozen_contract_impact": "原Audit合同不放宽",
+      "user_business_decision": "建议接受已明示威胁模型；C01/C09不是可延期项",
+      "evidence": [
+        "docs/independent-review-p1a.md",
+        "src/p1a/audit.mjs"
+      ],
+      "approved_scope_and_reopen_rules": "D04; deferred/accepted status does not permit real-data use or production and must reopen if a future use/topology makes it a safety prerequisite."
+    }
+  ],
+  "counts": {
+    "MUST_CLOSE_BEFORE_P1B": 11,
+    "MAY_DEFER_TO_P1B": 11,
+    "MAY_DEFER_TO_P2": 9,
+    "PROD_ONLY_BLOCKER": 8,
+    "ACCEPTED_KNOWN_LIMITATION": 8
+  },
+  "accepted_known_limitation_means": "Recommended acceptance within stated scope, not a recorded human approval; scope expansion can promote an item to MUST_CLOSE_BEFORE_P1B.",
+  "decision": "D04_APPROVED",
+  "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER",
+  "baseline_description_semantics": "why/risk_if_unclosed/migration/user_business_decision retain original GAP descriptions; status and closure_evidence are current. Original analysis artifact remains unchanged.",
+  "approved_decisions": {
+    "D01": "APPROVED",
+    "D02": "APPROVED",
+    "D03": "APPROVED",
+    "D04": "APPROVED"
+  },
+  "current_code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc"
+}

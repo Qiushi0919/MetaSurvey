@@ -1,0 +1,236 @@
+{
+  "policy_status": "IMPLEMENTED_FIXTURE_ONLY",
+  "real_admitted_historical_snapshots": 0,
+  "source_manifest": {
+    "path": "tests/fixtures/p1a-data/public-capture.json",
+    "sha256": "sha256:d51fe267627d0305326b22e8ed44590d232e9660d14e6b50dc43f2dd33db94a0"
+  },
+  "sources": [
+    {
+      "source_id": "official:sse-dayk",
+      "source_version": "public-capture-20261005-1",
+      "path": "tests/fixtures/p1a-data/sse-dayk.json",
+      "raw_sha256": "sha256:050d31343e76ee4544f59d3042c955381a3f54dd1fe79ec4bac8b3109e3de80f",
+      "byte_length": 182,
+      "retrieved_at": "2026-10-05T06:09:58.788Z",
+      "available_at_proven_for_historical_market": false,
+      "license_type": "UNKNOWN",
+      "terms_version": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "source_policy_hash_input": {
+        "source_id": "official:sse-dayk",
+        "source_version": "public-capture-20261005-1",
+        "source_class": "OFFICIAL",
+        "license_type": "UNKNOWN",
+        "allowed_use": [
+          "OFFLINE_REFERENCE_CAPTURE"
+        ],
+        "terms_version": "UNVERIFIED",
+        "retention_policy": "P1A_BOUNDED_EVIDENCE_ONLY",
+        "redistribution_allowed": false,
+        "allowed_hosts": [
+          "yunhq.sse.com.cn"
+        ],
+        "data_class": "MARKET_DISPLAY",
+        "url": "https://yunhq.sse.com.cn:32042/v1/sh1/dayk/600000?begin=-3&end=-1&period=day",
+        "clock_policy": {
+          "type": "UNKNOWN"
+        }
+      },
+      "admission": "BLOCKED_FOR_RESEARCH_AND_TRADING",
+      "existing_capture_admission": "NON_TRADEABLE",
+      "reason_codes": [
+        "LICENSE_UNKNOWN",
+        "TERMS_UNVERIFIED",
+        "HISTORICAL_AVAILABILITY_NOT_PROVEN"
+      ],
+      "clock_basis": "UNKNOWN",
+      "closure_admission": "BLOCKED",
+      "why_blocked": "REAL_SOURCE_BLOCKED; no license/clock/coverage authority fabricated"
+    },
+    {
+      "source_id": "official:sse-holiday",
+      "source_version": "public-capture-20261005-1",
+      "path": "tests/fixtures/p1a-data/sse-holiday.html",
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "byte_length": 28093,
+      "retrieved_at": "2026-10-05T06:09:59.054Z",
+      "available_at_proven_for_historical_market": false,
+      "license_type": "UNKNOWN",
+      "terms_version": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "source_policy_hash_input": {
+        "source_id": "official:sse-holiday",
+        "source_version": "public-capture-20261005-1",
+        "source_class": "OFFICIAL",
+        "license_type": "UNKNOWN",
+        "allowed_use": [
+          "OFFLINE_REFERENCE_CAPTURE"
+        ],
+        "terms_version": "UNVERIFIED",
+        "retention_policy": "P1A_BOUNDED_EVIDENCE_ONLY",
+        "redistribution_allowed": false,
+        "allowed_hosts": [
+          "www.sse.com.cn"
+        ],
+        "data_class": "REFERENCE_DOCUMENT",
+        "url": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+        "clock_policy": {
+          "type": "RETRIEVAL_OBSERVATION"
+        }
+      },
+      "admission": "BLOCKED_FOR_RESEARCH_AND_TRADING",
+      "existing_capture_admission": "NON_TRADEABLE",
+      "reason_codes": [
+        "LICENSE_UNKNOWN",
+        "TERMS_UNVERIFIED",
+        "HISTORICAL_AVAILABILITY_NOT_PROVEN"
+      ],
+      "clock_basis": "RETRIEVAL_OBSERVATION",
+      "closure_admission": "BLOCKED",
+      "why_blocked": "REAL_SOURCE_BLOCKED; no license/clock/coverage authority fabricated"
+    },
+    {
+      "source_id": "official:szse-holiday",
+      "source_version": "public-capture-20261005-1",
+      "path": "tests/fixtures/p1a-data/szse-holiday.html",
+      "raw_sha256": "sha256:7b0c4264d27f4ba14a1904ab31cb3b2b870e4e68d6b8d8c0f6cf4254c1a045a4",
+      "byte_length": 24292,
+      "retrieved_at": "2026-10-05T06:09:59.201Z",
+      "available_at_proven_for_historical_market": false,
+      "license_type": "UNKNOWN",
+      "terms_version": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "source_policy_hash_input": {
+        "source_id": "official:szse-holiday",
+        "source_version": "public-capture-20261005-1",
+        "source_class": "OFFICIAL",
+        "license_type": "UNKNOWN",
+        "allowed_use": [
+          "OFFLINE_REFERENCE_CAPTURE"
+        ],
+        "terms_version": "UNVERIFIED",
+        "retention_policy": "P1A_BOUNDED_EVIDENCE_ONLY",
+        "redistribution_allowed": false,
+        "allowed_hosts": [
+          "investor.szse.cn"
+        ],
+        "data_class": "REFERENCE_DOCUMENT",
+        "url": "https://investor.szse.cn/disclosure/notice/general/t20260917_622911.html",
+        "clock_policy": {
+          "type": "RETRIEVAL_OBSERVATION"
+        }
+      },
+      "admission": "BLOCKED_FOR_RESEARCH_AND_TRADING",
+      "existing_capture_admission": "NON_TRADEABLE",
+      "reason_codes": [
+        "LICENSE_UNKNOWN",
+        "TERMS_UNVERIFIED",
+        "HISTORICAL_AVAILABILITY_NOT_PROVEN"
+      ],
+      "clock_basis": "RETRIEVAL_OBSERVATION",
+      "closure_admission": "BLOCKED",
+      "why_blocked": "REAL_SOURCE_BLOCKED; no license/clock/coverage authority fabricated"
+    },
+    {
+      "source_id": "official:sse-session",
+      "source_version": "public-capture-20261005-1",
+      "path": "tests/fixtures/p1a-data/sse-session.html",
+      "raw_sha256": "sha256:f5d95746ec6f8dc7d5c9f057b230ba56eae67dce05dbae06fe62a0bdad98f0db",
+      "byte_length": 45558,
+      "retrieved_at": "2026-10-05T06:09:59.554Z",
+      "available_at_proven_for_historical_market": false,
+      "license_type": "UNKNOWN",
+      "terms_version": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "source_policy_hash_input": {
+        "source_id": "official:sse-session",
+        "source_version": "public-capture-20261005-1",
+        "source_class": "OFFICIAL",
+        "license_type": "UNKNOWN",
+        "allowed_use": [
+          "OFFLINE_REFERENCE_CAPTURE"
+        ],
+        "terms_version": "UNVERIFIED",
+        "retention_policy": "P1A_BOUNDED_EVIDENCE_ONLY",
+        "redistribution_allowed": false,
+        "allowed_hosts": [
+          "one.sse.com.cn"
+        ],
+        "data_class": "REFERENCE_DOCUMENT",
+        "url": "https://one.sse.com.cn/onething/gptz/",
+        "clock_policy": {
+          "type": "RETRIEVAL_OBSERVATION"
+        }
+      },
+      "admission": "BLOCKED_FOR_RESEARCH_AND_TRADING",
+      "existing_capture_admission": "NON_TRADEABLE",
+      "reason_codes": [
+        "LICENSE_UNKNOWN",
+        "TERMS_UNVERIFIED",
+        "HISTORICAL_AVAILABILITY_NOT_PROVEN"
+      ],
+      "clock_basis": "RETRIEVAL_OBSERVATION",
+      "closure_admission": "BLOCKED",
+      "why_blocked": "REAL_SOURCE_BLOCKED; no license/clock/coverage authority fabricated"
+    },
+    {
+      "source_id": "official:szse-session",
+      "source_version": "public-capture-20261005-1",
+      "path": "tests/fixtures/p1a-data/szse-session.html",
+      "raw_sha256": "sha256:5346f053ed5770f8ee603546686ff5c732698ca127bda369ac458fd236e360b5",
+      "byte_length": 11517,
+      "retrieved_at": "2026-10-05T06:09:59.601Z",
+      "available_at_proven_for_historical_market": false,
+      "license_type": "UNKNOWN",
+      "terms_version": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "source_policy_hash_input": {
+        "source_id": "official:szse-session",
+        "source_version": "public-capture-20261005-1",
+        "source_class": "OFFICIAL",
+        "license_type": "UNKNOWN",
+        "allowed_use": [
+          "OFFLINE_REFERENCE_CAPTURE"
+        ],
+        "terms_version": "UNVERIFIED",
+        "retention_policy": "P1A_BOUNDED_EVIDENCE_ONLY",
+        "redistribution_allowed": false,
+        "allowed_hosts": [
+          "investor.szse.cn"
+        ],
+        "data_class": "REFERENCE_DOCUMENT",
+        "url": "https://investor.szse.cn/knowledge/stock/deal/t20191204_572383.html",
+        "clock_policy": {
+          "type": "RETRIEVAL_OBSERVATION"
+        }
+      },
+      "admission": "BLOCKED_FOR_RESEARCH_AND_TRADING",
+      "existing_capture_admission": "NON_TRADEABLE",
+      "reason_codes": [
+        "LICENSE_UNKNOWN",
+        "TERMS_UNVERIFIED",
+        "HISTORICAL_AVAILABILITY_NOT_PROVEN"
+      ],
+      "clock_basis": "RETRIEVAL_OBSERVATION",
+      "closure_admission": "BLOCKED",
+      "why_blocked": "REAL_SOURCE_BLOCKED; no license/clock/coverage authority fabricated"
+    }
+  ],
+  "synthetic": {
+    "purpose": "OFFLINE_TEST_FIXTURE_ONLY",
+    "real_data_admission": false,
+    "can_produce_real_suitability_claim": false
+  },
+  "reason_code_status": "Real-source blocked labels preserve historical source manifest; new runtime closure guards use contracts/reason-codes.closure.json. Frozen old registries are unchanged.",
+  "real_data_admission_gate": "BLOCKED",
+  "fixture_admitted": {
+    "purpose": "FIXTURE_MANUAL_EXPORT",
+    "policy_ref": {
+      "object_id": "synthetic:closure-policy:e22979d3b9d2938e24fe493c24c93f4716921cdc:schema6:packet1.1.0:receipt1.0.0",
+      "object_version": 1,
+      "content_hash": "sha256:36e82a4eeeb0a868574c9afc418e0525cac059771948e5ce2b397ca6ffca03a3"
+    },
+    "snapshot_data_hash": "sha256:831b0010aa34544ccd8a5b3ae1f51eaa809cf8ef1b59f1717d977692ee65a81b"
+  }
+}

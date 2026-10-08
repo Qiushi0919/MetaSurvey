@@ -1,0 +1,13 @@
+# ADR-038 — Daily PIT audit views and conditional historical execution
+
+Status: engineering decision in HISTORICAL-PIT-20261008 Owner scope. Native contracts/migrations/locks/families untouched.
+
+The real-original adapter binds source hashes, request fingerprints/aliases and row ordinals to the original raw vendor response. It keeps current_available_at distinct from historical_available_at and retains date-only event facts without inventing midnight. A captured content hash is a source content version, not an issuer/vendor revision ID or first-visible chronology. All current history remains QUARANTINED, even when the event date is old.
+
+Audit inventory can record rejected rows and full raw references. Per-cutoff decision payload cannot contain future values, titles, revision IDs, counts or hashes. No independent actual historical-proof issuer exists, so actual daily views currently select nothing and say NO_DECISION/BLOCKED. Caller booleans or self-consistent manifest cannot promote them. Old synthetic OBSERVED_AT_TIME/reconstruction selectors remain fixture-only and unchanged. New candidate snapshots are not formal native SnapshotManifest authority.
+
+Six dated SSE holiday notice originals improve calendar structure for2021–2026. Publication dates remain DATE_ONLY; current retrieval does not create historical first-visible timestamps. Planned closures do not prove every actual session, extraordinary interruption or each security's tradability. ST/name/listing/halt intervals and action/payment/version reconciliation still need continuous independent evidence.
+
+The Owner's1260 sessions/100 complete trades and36+12+6/6m/40-session protocol are recorded against the frozen spec. Minimum samples are targets, not assertions that five calendar years always yield1260 sessions or100 trades. Existing static retrospective splits are not silently treated as a36-month walk-forward anchor. Exact anchor and purge/embargo boundary implementation require a pre-reveal reviewed calendar mapping; no window is invented while prerequisites fail. Feature valuation itself needs1260 prior valid observations, so the sample target alone does not guarantee warmup completeness.
+
+Formal prerequisite attempts are retained before any engine call. No actual ledger, return or fee is invented when prerequisites fail. Formal adapter execution is not implemented/promoted by relabelling the old synthetic engine input. Full CORE_40 families also require financial/catalyst/industry/valuation/Edge/dated economic policies and independent review, beyond the four priority price domains. Historical sample exposure remains visible. No time estimate becomes a promise of external first-visible/license evidence.

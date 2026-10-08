@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "prior_conditions_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/wave-c/conditions.json",
+    "sha256": "sha256:de01f6edadc6000d515441ed4b8422ecbf978dc16163d58f8cb866d127a32ebc",
+    "bytes": 5618
+  },
+  "closed_ids": [],
+  "C12_C22_closed": [],
+  "conditions": [
+    {
+      "id": "C12",
+      "subject": "真实security/master/status历史",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "当前身份观测和代码参考一致；ST/停牌/上市状态历史与准入未证明。",
+      "wave_d_engineering_delta": "New three stock_basic declarations; bounded one-day ST/suspend MAIN/REPEAT retained, two terminal schema failures block completeness.",
+      "remaining": "Current/day-set negative status and historical identity/status admission unproven.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C13",
+      "subject": "完整calendar与board/session规则",
+      "baseline_status_preserved": "PARTIAL_REFERENCE_ONLY",
+      "previous_remaining_preserved": "492日历日/327开市日与13项既有SSE事实一致；全板块规则、来源准入未证明。",
+      "wave_d_engineering_delta": "Prior calendar preserved; official SSE holiday notice captured separately.",
+      "remaining": "No complete board/session rules or source-license upgrade; October6/7 closed, not new Snapshot B.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C14",
+      "subject": "真实历史available_at",
+      "baseline_status_preserved": "BLOCKED_HISTORICAL",
+      "previous_remaining_preserved": "available_at仅原完整响应捕获时刻，历史首可见仍false。",
+      "wave_d_engineering_delta": "Every new original binds actual completion retrieved_at/available_at and hashes.",
+      "remaining": "Historical first visibility still false; source report/trade/announcement dates are not historical availability.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C15",
+      "subject": "真实EOD raw bars",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "三股各327日，未复权、Decimal、OHLC/量额/日历/重复检查完成；单位身份和数值第二来源未证明。",
+      "wave_d_engineering_delta": "Existing 327 distinct raw sessions per stock retained; no new daily price download.",
+      "remaining": "Provider/scale/independent price verification and admission not proved.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C16",
+      "subject": "corporate-action feed",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "8因子变化点均有同日dividend观测，5点多原始记录未解决；无action feed准入或权益账本。",
+      "wave_d_engineering_delta": "Raw action originals retained; source-factor consistency series separate.",
+      "remaining": "5 multi-original ambiguities unchanged; no independent action feed/entitlement ledger proof.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C17",
+      "subject": "adjustment/entitlement math实证",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "981因子日期对齐；8pre_close对账非零delta，禁止猜容差/四舍五入，无权益实证升级。",
+      "wave_d_engineering_delta": "327 raw*factor/latest-factor diagnostics per symbol; independent math tested.",
+      "remaining": "8 nonzero pre_close deltas and UNSET tolerance remain; not independent source or total-return proof.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C18",
+      "subject": "financial parser/revision样本",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "每股15报告期；6越界行保留、3宽窗整响应BLOCKED；14多版本组/1指标差异组仅观察，修订历史与财报全表未证明。",
+      "wave_d_engineering_delta": "Full official fields94/158/97 across9 actual calls plus selected financial/indicator observations; matching period/revision/consolidated CFO features.",
+      "remaining": "42 out-of-period rows excluded but preserved. Financial monetary scale, revision chronology and historical PIT unverified; old603228 conflict preserved.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C19",
+      "subject": "DATE_ONLY历史重构政策",
+      "baseline_status_preserved": "CURRENT_OBSERVED_POLICY_IMPLEMENTED_HISTORICAL_UNSET_REQUIRED",
+      "previous_remaining_preserved": "不补午夜、不用ann_date/update_flag构造历史available_at；历史重建政策仍UNSET_REQUIRED。",
+      "wave_d_engineering_delta": "Null event_time/published_at where only DATE_ONLY exists; source dates retained separately.",
+      "remaining": "No midnight imputation/update_flag chronology; historical reconstruction policy UNSET_REQUIRED.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C20",
+      "subject": "industry/sector membership PIT",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "全部空out_date按INVALID_DATE_LITERAL保留，不变null/无限期；成员历史PIT未证明。",
+      "wave_d_engineering_delta": "Current stock_basic source industry declaration now available for all three.",
+      "remaining": "Current industry does not repair old out_date errors or prove historical membership/industry cycle.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C21",
+      "subject": "真实指标/校准样本",
+      "baseline_status_preserved": "BLOCKED",
+      "previous_remaining_preserved": "沙盒真实特征和Quality/Timing坐标已生成，校准/概率/Edge/正式ADMITTED证据仍缺失。",
+      "wave_d_engineering_delta": "Genuine current-observed valuation/cash/profit/leverage facts; frozen Wave C coordinates retained at original cutoff.",
+      "remaining": "No calibrated total score/grade/probability/win rate/Edge or admitted formal sample; 30 actual parameters UNSET.",
+      "this_phase_closure": "NOT_CLOSED"
+    },
+    {
+      "id": "C22",
+      "subject": "Research producers与概率/Edge政策",
+      "baseline_status_preserved": "FIXTURE_CHAIN_CLOSED_REAL_PRODUCERS_BLOCKED",
+      "previous_remaining_preserved": "沙盒producer产出三份独立Report；正式producer为空stock receipt registry skeleton，formal Card/概率/Edge仍BLOCKED。",
+      "wave_d_engineering_delta": "Three reports2.0.0 and comparison1.0.0; closed registered factories and version lineage.",
+      "remaining": "Formal producer remains empty stock-receipt fail-closed skeleton; Card/Signal/Approval/Order blocked. Local report success not formal condition closure.",
+      "this_phase_closure": "NOT_CLOSED"
+    }
+  ],
+  "sandbox_success_is_separate_from_formal_condition_closure": true,
+  "C30": "AT_LEAST20_ACTUAL_FORWARD_PAPER_TRADING_DAYS_STILL_UNSATISFIED",
+  "new_forward_paper_days": 0,
+  "LOCAL_REAL_RESEARCH_SANDBOX_GATE": "PASS",
+  "REAL_DATA_ADMISSION_GATE": "BLOCKED",
+  "P1B_RESEARCH_PILOT_GATE": "BLOCKED",
+  "HISTORICAL_BACKTEST_GATE": "BLOCKED",
+  "CLOUD_RESEARCH_EXPORT_GATE": "BLOCKED",
+  "CLOUD_MODEL_GATE": "BLOCKED",
+  "PRODUCTION_DATA_GATE": "BLOCKED",
+  "productionGate": false,
+  "engineering_gate": "PASS_WITH_CONDITIONS",
+  "owner_acceptance": "PENDING"
+}

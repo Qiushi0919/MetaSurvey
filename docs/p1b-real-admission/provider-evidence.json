@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "provider_id": "TUSHARE_MONTHLY_GATEWAY",
+  "source_classification": "OWNER_PROVIDED_MONTHLY_GATEWAY",
+  "upstream_provider_claim": "TUSHARE_COMPATIBLE_OWNER_PROVIDED",
+  "official_or_authorized_channel_verified": false,
+  "purchase_product_name": "UNSET_REQUIRED",
+  "seller_legal_identity": "UNSET_REQUIRED",
+  "account_identity": "UNSET_REQUIRED",
+  "purchase_order_evidence": "UNSET_REQUIRED",
+  "license_evidence": "UNSET_REQUIRED",
+  "supplier_storage_retention_transfer_evidence": "UNSET_REQUIRED",
+  "actual_account_tier": 15000,
+  "tier_evidence": "OWNER_ASSERTED_NOT_API_ACCOUNT_VERIFIED",
+  "validity": {
+    "start_date": "2026-10-05",
+    "end_date": "2026-11-05",
+    "precision": "DATE_ONLY",
+    "timezone": "OWNER_DATE_CONTEXT_ASIA_SHANGHAI",
+    "expires_at": "UNSET_REQUIRED",
+    "evidence": "OWNER_ASSERTED_ONE_CALENDAR_MONTH_NOT_SUPPLIER_VERIFIED"
+  },
+  "credential_rotation_required": false,
+  "credential_exposure_risk": "OWNER_ACCEPTED",
+  "credential_storage": "MACOS_KEYCHAIN",
+  "credential_reference": "config/provider/tushare-monthly-gateway.json",
+  "keychain_provisioning_evidence": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/owner/secret-provisioning.json",
+    "sha256": "sha256:acc5ac4d91be25a0cf2ae8743aeea3b1e8050519e8d8a827a8b6a80f2253c1dc"
+  },
+  "transport": {
+    "protocol": "HTTP",
+    "owner_read_only_exception": true,
+    "independent_integrity_verified": false,
+    "redirects_allowed": false,
+    "endpoint_substitution_allowed": false,
+    "TLS_bypass_allowed": false
+  },
+  "local_quarantine_storage_authority": "EXPLICIT_OWNER_PROBE_AUTHORIZATION_NOT_SUPPLIER_LICENSE",
+  "gates_not_upgraded_by_purchase_or_API_success": true
+}

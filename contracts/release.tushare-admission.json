@@ -1,0 +1,22 @@
+{
+  "release_version": "1.5.0-diagnostic",
+  "scope": "TUSHARE_BOUNDED_DIAGNOSTIC_ONLY_NO_NEW_ADMISSION_AUTHORITY",
+  "schema_version": 6,
+  "contract_versions": {
+    "AdmissionVerification": "1.0.0"
+  },
+  "files": [
+    {
+      "path": "contracts/tushare-admission/AdmissionVerification.schema.json",
+      "sha256": "sha256:a136eddc29f53fed8b0c7e4417bd7f67964aaeee68768ed822b15cd9fe9e0bb2"
+    },
+    {
+      "path": "contracts/tushare-admission/reason-codes.v1.json",
+      "sha256": "sha256:cf0f246a34cd6e8635663c7ba85dd436fa01b33731dba65e7395293bc0f63721"
+    }
+  ],
+  "new_migrations": [],
+  "historical_visibility_proven": false,
+  "production_enabled": false,
+  "approved_tushare_policy_count": 0
+}

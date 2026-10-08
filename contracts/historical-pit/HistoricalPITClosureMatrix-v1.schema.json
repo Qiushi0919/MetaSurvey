@@ -1,0 +1,381 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:metasurvey:historical-pit:HistoricalPITClosureMatrix:1.0.0",
+  "title": "HistoricalPITClosureMatrix audit metadata, not admitted native contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "namespace",
+    "kind",
+    "baseline_map_ref",
+    "frozen_strategy_ref",
+    "rows",
+    "domain_count",
+    "symbol_domain_rows",
+    "continuous_domains_closed",
+    "conditional_backtest_owner_authorized",
+    "formal_execution",
+    "productionGate",
+    "actual_forward_days_increment"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "namespace": {
+      "const": "HISTORICAL_PIT_PREPARATION:CORE_40"
+    },
+    "kind": {
+      "const": "HistoricalPITClosureMatrix"
+    },
+    "baseline_map_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "frozen_strategy_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 60,
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "symbol",
+          "domain",
+          "baseline_row_ref",
+          "baseline_reasons_preserved",
+          "required_per_decision_fields",
+          "decision_time_policy",
+          "available_at",
+          "first_visible_at",
+          "revision_chain",
+          "formal_admission",
+          "continuous_closed",
+          "calendar_structural_evidence_ref",
+          "reason_codes",
+          "new_owner_scope"
+        ],
+        "properties": {
+          "symbol": {
+            "enum": [
+              "603993.SH",
+              "600312.SH",
+              "603228.SH"
+            ]
+          },
+          "domain": {
+            "enum": [
+              "adjustment_factor_semantics",
+              "benchmark_total_return",
+              "catalyst_originals",
+              "corporate_actions",
+              "dated_costs_and_account",
+              "dividend_action_reconciliation",
+              "economic_estimation_policy",
+              "exchange_calendar_version",
+              "financial_ann_fann_date",
+              "historical_price_limit_regime",
+              "historical_universe_completeness",
+              "industry_history",
+              "listing_anchor",
+              "listing_delisting_history",
+              "name_status_history",
+              "raw_bars_volume",
+              "revision_chronology_first_visibility",
+              "st_history",
+              "suspension_history",
+              "valuation_history"
+            ]
+          },
+          "baseline_row_ref": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "map_ref",
+              "symbol",
+              "domain"
+            ],
+            "properties": {
+              "map_ref": {
+                "type": "object",
+                "required": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "pattern": "^/"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^sha256:[0-9a-f]{64}$"
+                  }
+                }
+              },
+              "symbol": {
+                "enum": [
+                  "603993.SH",
+                  "600312.SH",
+                  "603228.SH"
+                ]
+              },
+              "domain": {
+                "enum": [
+                  "adjustment_factor_semantics",
+                  "benchmark_total_return",
+                  "catalyst_originals",
+                  "corporate_actions",
+                  "dated_costs_and_account",
+                  "dividend_action_reconciliation",
+                  "economic_estimation_policy",
+                  "exchange_calendar_version",
+                  "financial_ann_fann_date",
+                  "historical_price_limit_regime",
+                  "historical_universe_completeness",
+                  "industry_history",
+                  "listing_anchor",
+                  "listing_delisting_history",
+                  "name_status_history",
+                  "raw_bars_volume",
+                  "revision_chronology_first_visibility",
+                  "st_history",
+                  "suspension_history",
+                  "valuation_history"
+                ]
+              }
+            }
+          },
+          "baseline_reasons_preserved": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "ACTION_IMPLEMENTATION_AND_PAYMENT_ORIGINALS_MISSING",
+                "ANN_DATE_F_ANN_DATE_DATE_ONLY_NOT_INSTANT",
+                "CONTINUOUS_HISTORY_INCOMPLETE",
+                "CONTINUOUS_SECURITY_HISTORY_INCOMPLETE",
+                "CURRENT_ISSUER_CLAIM_NOT_CONTEMPORANEOUS",
+                "CURRENT_RETRIEVAL_NOT_HISTORICAL_FIRST_VISIBILITY",
+                "DATED_RULE_STRUCTURE_NOT_CONTINUOUS_APPLICABLE_INTERVAL",
+                "DATE_ONLY_FIRST_VISIBLE_NOT_PROVEN",
+                "DATE_ONLY_HISTORICAL_AVAILABLE_AT_UNKNOWN",
+                "DATE_ONLY_PUBLICATION_NOT_HISTORICAL_AVAILABILITY_INSTANT",
+                "ENTITLEMENT_PAYMENT_UNITS_ROUNDING_UNKNOWN",
+                "FACTOR_PRODUCT_METHOD_AND_VERSION_UNPROVEN",
+                "FAILED_OR_REDIRECTED_PDF_NOT_VERIFIED_BODY",
+                "FINANCIAL_FIRST_VISIBILITY_UNPROVEN",
+                "FINANCIAL_REVISED_ORIGINALS_INCOMPLETE",
+                "FINANCIAL_UNITS_UNVERIFIED",
+                "FIVE_YEAR_EXCHANGE_SESSION_EXCEPTION_HISTORY_MISSING",
+                "HISTORICAL_FIRST_VISIBLE_UNPROVEN",
+                "HISTORICAL_VISIBILITY_UNPROVEN",
+                "LISTING_DATE_NOT_LISTED_OR_DELISTED_INTERVAL",
+                "MISSING_DAILY_BAR_NOT_SUSPENSION_PROOF",
+                "NO_CURRENT_STATUS_OR_SURVIVORSHIP_BACKFILL",
+                "NO_FACTOR_PLUS_CASH_DOUBLE_COUNT",
+                "PER_DECISION_CUTOFF_NOT_SUPPLIED",
+                "PER_SECURITY_STATUS_AND_EXCEPTION_HISTORY_MISSING",
+                "PER_SECURITY_STATUS_AND_TRIGGER_HISTORY_UNKNOWN",
+                "PLANNED_OPEN_DAY_NOT_ACTUAL_SESSION",
+                "PRE_2023_RULE_VERSION_COVERAGE_MISSING",
+                "PROVIDER_LICENSE_TRANSPORT_UNVERIFIED",
+                "RAW_ACTION_FACTOR_RECONCILIATION_AMBIGUITIES_RETAINED",
+                "RULE_2023_EFFECTIVE_TRIGGER_SESSION_UNPROVEN",
+                "RULE_2026_NOT_BACKFILLED",
+                "SAME_PROVIDER_FACTOR_NOT_INDEPENDENT_AUTHORITY",
+                "SEPARATE_FORMAL_RESEARCH_AUTHORIZATION_NOT_GRANTED",
+                "SINGLE_DOCUMENT_OR_CLAIM_NOT_CONTINUOUS_HISTORY",
+                "SIX_DATED_ANNUAL_NOTICES_NOT_ACTUAL_EXCEPTION_HISTORY",
+                "UPDATE_FLAG_NOT_REVISION_CHAIN"
+              ]
+            }
+          },
+          "required_per_decision_fields": {
+            "const": {
+              "available_at": "REQUIRED_INDEPENDENT_HISTORICAL_FIRST_USABLE_EVIDENCE <= decision_time",
+              "decision_time": "REQUIRED_PER_DECISION_NOT_SUPPLIED; exact timezone-aware cutoff for this decision, not a report cutoff or chosen midnight",
+              "event_time": "REQUIRED_WITH_DOMAIN_PRECISION; preserve event/report-period/date-only meaning separately",
+              "first_visible_evidence": "REQUIRED_ORIGINAL_OBSERVED_THEN_OR_INDEPENDENT_RECONSTRUCTION_PROOF; reconstruction labelled separately",
+              "license_status": "REQUIRED_PRODUCT/PURPOSE/ACCOUNT/RETENTION/STORAGE/TRANSFER_BOUNDARY; API200 insufficient",
+              "original_refs": "REQUIRED_REOPENABLE_ORIGINAL_SHA256_PLUS_CLOCK_AND_VERSION_LINEAGE; index/title/failed body insufficient",
+              "published_at": "REQUIRED_EXACT_OR_EXPLICIT_PRECISION_LIMIT; date-only is not midnight",
+              "retrieved_at": "REQUIRED_LITERAL_CAPTURE_CLOCK; present retrieval is not historical availability",
+              "revision_version_chain": "REQUIRED_VERSION_ID/SUPERSEDES/SOURCE_HASH; no current/latest backfill",
+              "rule_effective_interval": "REQUIRED_DOMAIN_APPLICABLE_INTERVAL_AND_EXCEPTION_HISTORY; date precision retained",
+              "security_applicability": "REQUIRED_EXACT_SECURITY/BOARD/NAMESPACE_AND_HISTORICAL_MEMBERSHIP",
+              "units_rounding_method": "REQUIRED_VERSIONED_CURRENCY/SCALE/ROUNDING/FORMULA; no implicit floats or adjusted/raw replacement"
+            }
+          },
+          "decision_time_policy": {
+            "type": "string",
+            "pattern": "^(UNSET_REQUIRED|(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d)?)$"
+          },
+          "available_at": {
+            "type": "null"
+          },
+          "first_visible_at": {
+            "type": "null"
+          },
+          "revision_chain": {
+            "const": "NOT_PROVEN"
+          },
+          "formal_admission": {
+            "const": "BLOCKED"
+          },
+          "continuous_closed": {
+            "const": false
+          },
+          "calendar_structural_evidence_ref": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "pattern": "^/"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^sha256:[0-9a-f]{64}$"
+                  }
+                }
+              }
+            ]
+          },
+          "reason_codes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "ACTION_IMPLEMENTATION_AND_PAYMENT_ORIGINALS_MISSING",
+                "ANN_DATE_F_ANN_DATE_DATE_ONLY_NOT_INSTANT",
+                "CONTINUOUS_HISTORY_INCOMPLETE",
+                "CONTINUOUS_SECURITY_HISTORY_INCOMPLETE",
+                "CURRENT_ISSUER_CLAIM_NOT_CONTEMPORANEOUS",
+                "CURRENT_RETRIEVAL_NOT_HISTORICAL_FIRST_VISIBILITY",
+                "DATED_RULE_STRUCTURE_NOT_CONTINUOUS_APPLICABLE_INTERVAL",
+                "DATE_ONLY_FIRST_VISIBLE_NOT_PROVEN",
+                "DATE_ONLY_HISTORICAL_AVAILABLE_AT_UNKNOWN",
+                "DATE_ONLY_PUBLICATION_NOT_HISTORICAL_AVAILABILITY_INSTANT",
+                "ENTITLEMENT_PAYMENT_UNITS_ROUNDING_UNKNOWN",
+                "FACTOR_PRODUCT_METHOD_AND_VERSION_UNPROVEN",
+                "FAILED_OR_REDIRECTED_PDF_NOT_VERIFIED_BODY",
+                "FINANCIAL_FIRST_VISIBILITY_UNPROVEN",
+                "FINANCIAL_REVISED_ORIGINALS_INCOMPLETE",
+                "FINANCIAL_UNITS_UNVERIFIED",
+                "FIVE_YEAR_EXCHANGE_SESSION_EXCEPTION_HISTORY_MISSING",
+                "HISTORICAL_FIRST_VISIBLE_UNPROVEN",
+                "HISTORICAL_VISIBILITY_UNPROVEN",
+                "LISTING_DATE_NOT_LISTED_OR_DELISTED_INTERVAL",
+                "MISSING_DAILY_BAR_NOT_SUSPENSION_PROOF",
+                "NO_CURRENT_STATUS_OR_SURVIVORSHIP_BACKFILL",
+                "NO_FACTOR_PLUS_CASH_DOUBLE_COUNT",
+                "PER_DECISION_CUTOFF_NOT_SUPPLIED",
+                "PER_SECURITY_STATUS_AND_EXCEPTION_HISTORY_MISSING",
+                "PER_SECURITY_STATUS_AND_TRIGGER_HISTORY_UNKNOWN",
+                "PLANNED_OPEN_DAY_NOT_ACTUAL_SESSION",
+                "PRE_2023_RULE_VERSION_COVERAGE_MISSING",
+                "PROVIDER_LICENSE_TRANSPORT_UNVERIFIED",
+                "RAW_ACTION_FACTOR_RECONCILIATION_AMBIGUITIES_RETAINED",
+                "RULE_2023_EFFECTIVE_TRIGGER_SESSION_UNPROVEN",
+                "RULE_2026_NOT_BACKFILLED",
+                "SAME_PROVIDER_FACTOR_NOT_INDEPENDENT_AUTHORITY",
+                "SEPARATE_FORMAL_RESEARCH_AUTHORIZATION_NOT_GRANTED",
+                "SINGLE_DOCUMENT_OR_CLAIM_NOT_CONTINUOUS_HISTORY",
+                "SIX_DATED_ANNUAL_NOTICES_NOT_ACTUAL_EXCEPTION_HISTORY",
+                "UPDATE_FLAG_NOT_REVISION_CHAIN"
+              ]
+            }
+          },
+          "new_owner_scope": {
+            "const": "PIT_PREPARATION_NOW_BACKTEST_ONLY_AFTER_FULL_PREREQUISITES_PASS"
+          }
+        }
+      }
+    },
+    "domain_count": {
+      "const": 20
+    },
+    "symbol_domain_rows": {
+      "const": 60
+    },
+    "continuous_domains_closed": {
+      "const": 0
+    },
+    "conditional_backtest_owner_authorized": {
+      "const": true
+    },
+    "formal_execution": {
+      "const": "BLOCKED"
+    },
+    "productionGate": {
+      "const": false
+    },
+    "actual_forward_days_increment": {
+      "const": 0
+    }
+  }
+}

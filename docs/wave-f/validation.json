@@ -1,0 +1,103 @@
+{
+  "version": "1.0.0",
+  "phase": "WAVE_F",
+  "candidate_commit": "cca9c2394db015a0ef9fb34fd315322dc9acc605",
+  "clone_path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/fresh-checkout-G1",
+  "clean_before_and_after": true,
+  "offline_dependency_install": {
+    "exit_code": 0,
+    "ignore_scripts": true,
+    "audit": false,
+    "fund": false
+  },
+  "full_fresh_entry": "node wave_f/check.mjs",
+  "outer_process_exit_code": 0,
+  "regressions": {
+    "total": 1498,
+    "passed": 1497,
+    "failed": 0,
+    "skipped": 1,
+    "python": 1021,
+    "native": 477,
+    "python_batches": [
+      38,
+      38,
+      49,
+      124,
+      38,
+      66,
+      131,
+      187,
+      350
+    ],
+    "native_batches": [
+      258,
+      42,
+      48,
+      26,
+      27,
+      8,
+      11,
+      13,
+      9,
+      13,
+      12,
+      10
+    ],
+    "carried_predecessor": 1138,
+    "wave_f_new": 360,
+    "wave_f_python": 350,
+    "wave_f_native": 10,
+    "skip_reason": "unchanged optional external read-only V5 replay requires explicitly supplied legacy host assets"
+  },
+  "independent_review": {
+    "assertions": 4374,
+    "python": 3874,
+    "native": 500,
+    "failed": 0,
+    "separate_from_regressions": true,
+    "includes_dependency_hash_assertions": true,
+    "original_report_issued_before_full_fresh_exit": true
+  },
+  "reviewed_context_hash": "sha256:89f2287ba97ee71aa70a9593a24c7aa05de1749e94bdb08712fec22fc106c9a9",
+  "dependency_count": 1074,
+  "immutable_predecessor_files": 722,
+  "new_pins_byte_identical_to_tested_clone": 23,
+  "logs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/clone-G1.log",
+      "sha256": "sha256:7a68dc5b244f1c4a6fda327e6127495bfb561c1851b92d262dfb336d6dac70bc",
+      "bytes": 110
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/npm-ci-G1.log",
+      "sha256": "sha256:f4028b0775b0bf6a6ba9e0dee791d0368ce420322649217c1843406442c1abaa",
+      "bytes": 27
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/full-fresh-G1.log",
+      "sha256": "sha256:83e0938c96fdcb1f225af655bf065865368ee077aeadea2c9ccb97915b55bba6",
+      "bytes": 189390
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/new-only-G1.log",
+      "sha256": "sha256:f9194adb960edcc1dc1028526435ffee8410a94b0a6e7f6de4c353cfa5d2a2f4",
+      "bytes": 41781
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-f-20261006/validation/producer-G1.log",
+      "sha256": "sha256:168fff0ee0454febcf4cf1a8e4e6ffaae2ca4488a46246239bf23ef1ccabe855",
+      "bytes": 283
+    }
+  ],
+  "verification_limits": [
+    "local clean checkout relocation with original private archives unmoved; not remote CI or private archive relocation",
+    "final delivery Git commit will add documentation only; exact reviewed code/test/strategy/source pins unchanged"
+  ],
+  "actual_snapshot_b": 0,
+  "actual_forward_days": 0,
+  "new_real_performance_results": 0,
+  "productionGate": false,
+  "historical_visibility_proven": false,
+  "source_admission": "BLOCKED"
+}

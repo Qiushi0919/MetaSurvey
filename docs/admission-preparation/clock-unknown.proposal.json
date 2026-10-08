@@ -1,0 +1,22 @@
+{
+  "contract_name": "ClockEvidenceProposal",
+  "contract_version": "1.0.0",
+  "status": "PROPOSED_UNVERIFIED",
+  "source_id": "UNSET_REQUIRED",
+  "data_type": "UNSET_REQUIRED",
+  "observation_event_time": null,
+  "event_kind": "UNSET_REQUIRED",
+  "event_time": null,
+  "event_date": null,
+  "event_precision": "UNKNOWN",
+  "business_effective_date": null,
+  "published_at": null,
+  "published_date": null,
+  "publication_precision": "UNKNOWN",
+  "available_at": null,
+  "availability_method_proposal": "UNSET_REQUIRED",
+  "retrieved_at": null,
+  "historical_visibility_proven": false,
+  "admission": "BLOCKED",
+  "production_enabled": false
+}

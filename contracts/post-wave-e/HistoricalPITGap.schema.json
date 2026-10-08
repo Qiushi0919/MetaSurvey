@@ -1,0 +1,1285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:HistoricalPITGap:1.0.0",
+  "title": "HistoricalPITGap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "HistoricalPITGap"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:HistoricalPITGap:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "engine_diagnostic_ready",
+        "formal_price_backtest",
+        "formal_fundamental_pit_backtest",
+        "historical_visibility_proven",
+        "domains",
+        "price_domains",
+        "fundamental_additional_domains",
+        "closed_c12_c22",
+        "actual_account_unset_count",
+        "observed_at_time_requires",
+        "reconstruction_requires",
+        "date_only_publication",
+        "live_authority"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "engine_diagnostic_ready": {
+          "type": "string",
+          "const": "READY"
+        },
+        "formal_price_backtest": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "formal_fundamental_pit_backtest": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "historical_visibility_proven": {
+          "type": "boolean",
+          "const": false
+        },
+        "domains": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "source_admission"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "provider_identity"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "license"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "transport_integrity"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "raw_bar_readiness"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "adjustment_readiness"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "corporate_action_readiness"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "security_status_history"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "suspension_history"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "limit_tradability_history"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "universe_history"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "historical_visibility"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "transaction_cost_policy"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "account_policy"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "strategy_parameter_freeze"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "financial_publication_timing"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "revision_chronology"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "industry_history"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "listing_delisting_history"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "revision_first_visibility"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "historical_universe_completeness"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "dated_fee_rounding_units"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "owner_risk_kill_policy"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "benchmark_total_return_policy"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "evaluation_oos_freeze"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "announcement_body_identity"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "snapshot_b_fresh_session"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "domain",
+                  "state",
+                  "required_evidence",
+                  "absence_means",
+                  "auto_close_from_interface_tests"
+                ],
+                "properties": {
+                  "domain": {
+                    "type": "string",
+                    "const": "independent_entitlement_per_api"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "BLOCKED"
+                  },
+                  "required_evidence": {
+                    "type": "string",
+                    "const": "INDEPENDENT_VERSIONED_SOURCE_CLOCK_POLICY_EVIDENCE"
+                  },
+                  "absence_means": {
+                    "type": "string",
+                    "const": "UNKNOWN"
+                  },
+                  "auto_close_from_interface_tests": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "price_domains": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "source_admission"
+              },
+              {
+                "type": "string",
+                "const": "provider_identity"
+              },
+              {
+                "type": "string",
+                "const": "license"
+              },
+              {
+                "type": "string",
+                "const": "transport_integrity"
+              },
+              {
+                "type": "string",
+                "const": "raw_bar_readiness"
+              },
+              {
+                "type": "string",
+                "const": "adjustment_readiness"
+              },
+              {
+                "type": "string",
+                "const": "corporate_action_readiness"
+              },
+              {
+                "type": "string",
+                "const": "security_status_history"
+              },
+              {
+                "type": "string",
+                "const": "suspension_history"
+              },
+              {
+                "type": "string",
+                "const": "limit_tradability_history"
+              },
+              {
+                "type": "string",
+                "const": "universe_history"
+              },
+              {
+                "type": "string",
+                "const": "historical_visibility"
+              },
+              {
+                "type": "string",
+                "const": "transaction_cost_policy"
+              },
+              {
+                "type": "string",
+                "const": "account_policy"
+              },
+              {
+                "type": "string",
+                "const": "strategy_parameter_freeze"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "fundamental_additional_domains": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "financial_publication_timing"
+              },
+              {
+                "type": "string",
+                "const": "revision_chronology"
+              },
+              {
+                "type": "string",
+                "const": "industry_history"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "closed_c12_c22": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "actual_account_unset_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_at_time_requires": {
+          "type": "string",
+          "const": "AVAILABLE_AND_RETRIEVED_LE_CUTOFF"
+        },
+        "reconstruction_requires": {
+          "type": "string",
+          "const": "INDEPENDENT_HISTORICAL_AVAILABLE_AT_PROOF_NOT_OBSERVED_THEN"
+        },
+        "date_only_publication": {
+          "type": "string",
+          "const": "UNKNOWN_NO_MIDNIGHT_IMPUTATION"
+        },
+        "live_authority": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

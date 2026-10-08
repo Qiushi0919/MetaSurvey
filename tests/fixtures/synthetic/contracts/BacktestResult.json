@@ -1,0 +1,62 @@
+{
+  "contract_name": "BacktestResult",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-BacktestResult",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:ef7036c6fd993633edd8c4830ee7e55195fbe1f42c27585190a0b0353e5b9a68",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "strategy_id": "CORE_40",
+  "snapshot_ref": {
+    "object_id": "synthetic-SnapshotManifest",
+    "object_version": 1,
+    "content_hash": "sha256:ba78e8fb2a9dc51092d8092dd652501d44a65502feff59570c8b04f186d49125"
+  },
+  "data_hash": "sha256:c455eb46f7cbc4c3281da409da1d8fb32c7079a8023b58942d60a1d50e356e23",
+  "strategy_config_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+  "cost_model_version": "synthetic-only",
+  "code_version": "p0-fixture",
+  "scenario": "BASE",
+  "mae_resolution": "1D",
+  "started_at": "2026-10-05T02:00:00Z",
+  "finished_at": "2026-10-05T02:00:00Z",
+  "metrics": {
+    "gross_pnl_cents": "0",
+    "net_pnl_cents": "0",
+    "fees_cents": "0",
+    "slippage_cents": "0",
+    "trade_count": 0,
+    "max_drawdown_bps": "0",
+    "mfe_bps": "0",
+    "mae_bps": "0",
+    "by_grade": {},
+    "by_signal": {},
+    "oos_status": "SYNTHETIC"
+  }
+}

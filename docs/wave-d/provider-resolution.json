@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "state": "OPEN",
+  "owner_declared_monthly_points": 15000,
+  "actual_independently_verified_tier": null,
+  "seller_product_expiration_purpose": "NO_INDEPENDENT_PROOF_SUPPLIED",
+  "technical_access": "33_GENUINE_GATEWAY_RESPONSES_CODE0_NOT_ENTITLEMENT_OR_LICENSE_ADMISSION",
+  "credential_lookup_count": 2,
+  "credential_prompt_count": 0,
+  "provider_identity_verified": false,
+  "license_verified": false,
+  "transport_integrity_verified": false,
+  "historical_visibility_proven": false,
+  "retention_storage_transfer": "Local-only quarantine research exception from explicit Owner; provider license/retention/redistribution/cloud authority UNVERIFIED, no public reuse grant inferred",
+  "purchase_or_bypass": false,
+  "additional_paid_permission_needed_this_phase": false,
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false
+}

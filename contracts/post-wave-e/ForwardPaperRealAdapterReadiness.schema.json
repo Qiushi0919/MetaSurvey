@@ -1,0 +1,545 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:ForwardPaperRealAdapterReadiness:1.0.0",
+  "title": "ForwardPaperRealAdapterReadiness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "ForwardPaperRealAdapterReadiness"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:ForwardPaperRealAdapterReadiness:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "namespace",
+        "adapter_state",
+        "storage_boundary",
+        "supported_record",
+        "hypothetical_fill_support",
+        "real_start_state",
+        "real_authority_issuance",
+        "actual_forward_days",
+        "actual_settings",
+        "snapshot_b_state",
+        "source_admission",
+        "provider_license_transport",
+        "historical_visibility_proven",
+        "native_promotion",
+        "scheduling_enabled",
+        "fixture_authorities",
+        "fixture_ledger",
+        "integrity_limit",
+        "reason_codes",
+        "actual_source_projection"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "namespace": {
+          "type": "string",
+          "const": "LOCAL_FORWARD_PAPER_FIXTURE:CORE_40"
+        },
+        "adapter_state": {
+          "type": "string",
+          "const": "IMPLEMENTED_FIXTURE_PERSISTENCE_ONLY"
+        },
+        "storage_boundary": {
+          "type": "string",
+          "const": "ISOLATED_SQLITE_APPEND_ONLY"
+        },
+        "supported_record": {
+          "type": "string",
+          "const": "NO_DECISION"
+        },
+        "hypothetical_fill_support": {
+          "type": "boolean",
+          "const": false
+        },
+        "real_start_state": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "real_authority_issuance": {
+          "type": "string",
+          "const": "UNAVAILABLE_THIS_WAVE"
+        },
+        "actual_forward_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "actual_settings": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "snapshot_b_state": {
+          "type": "string",
+          "const": "PENDING"
+        },
+        "source_admission": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "provider_license_transport": {
+          "type": "string",
+          "const": "UNVERIFIED"
+        },
+        "historical_visibility_proven": {
+          "type": "boolean",
+          "const": false
+        },
+        "native_promotion": {
+          "type": "boolean",
+          "const": false
+        },
+        "scheduling_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "fixture_authorities": {
+          "type": "string",
+          "const": "PROCESS_LOCAL_OPAQUE"
+        },
+        "fixture_ledger": {
+          "type": "string",
+          "const": "DURABLE_CANONICAL_PATH_BOUND"
+        },
+        "integrity_limit": {
+          "type": "string",
+          "const": "NOT_PRIVILEGED_FILESYSTEM_OR_HOSTILE_INTERPRETER_PROOF"
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "REAL_FORWARD_NOT_AUTHORIZED"
+              },
+              {
+                "type": "string",
+                "const": "UNSET_REQUIRED"
+              },
+              {
+                "type": "string",
+                "const": "PROVIDER_LICENSE_BLOCKED"
+              },
+              {
+                "type": "string",
+                "const": "SOURCE_PIT_UNPROVEN"
+              },
+              {
+                "type": "string",
+                "const": "TRADEABILITY_UNKNOWN"
+              },
+              {
+                "type": "string",
+                "const": "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED"
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "actual_source_projection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "adapter_version",
+            "state",
+            "projection_kind",
+            "source_refs",
+            "anchor_is_admitted_snapshot",
+            "fresh_snapshot_b",
+            "actual_session_record_appended",
+            "actual_forward_days",
+            "required_owner_policies",
+            "formal_source_admission",
+            "live_authority",
+            "native_order_fields_supported"
+          ],
+          "properties": {
+            "adapter_version": {
+              "type": "string",
+              "const": "1.0.0"
+            },
+            "state": {
+              "type": "string",
+              "const": "BLOCKED"
+            },
+            "projection_kind": {
+              "type": "string",
+              "const": "ACTUAL_CURRENT_OBSERVATION_ANCHOR_DISPLAY_ONLY"
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "symbol",
+                      "object_id",
+                      "object_version",
+                      "content_hash",
+                      "source_identity",
+                      "retrieval_cutoff"
+                    ],
+                    "properties": {
+                      "symbol": {
+                        "type": "string",
+                        "const": "603993.SH"
+                      },
+                      "object_id": {
+                        "type": "string",
+                        "const": "wave-d:input:603993.SH:6679fd3fdf105c4a"
+                      },
+                      "object_version": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "content_hash": {
+                        "type": "string",
+                        "pattern": "^sha256:[0-9a-f]{64}$"
+                      },
+                      "source_identity": {
+                        "type": "string",
+                        "pattern": "^sha256:[0-9a-f]{64}$"
+                      },
+                      "retrieval_cutoff": {
+                        "type": "string",
+                        "const": "2026-10-06T07:37:39.912540Z"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "symbol",
+                      "object_id",
+                      "object_version",
+                      "content_hash",
+                      "source_identity",
+                      "retrieval_cutoff"
+                    ],
+                    "properties": {
+                      "symbol": {
+                        "type": "string",
+                        "const": "600312.SH"
+                      },
+                      "object_id": {
+                        "type": "string",
+                        "const": "wave-d:input:600312.SH:6679fd3fdf105c4a"
+                      },
+                      "object_version": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "content_hash": {
+                        "type": "string",
+                        "pattern": "^sha256:[0-9a-f]{64}$"
+                      },
+                      "source_identity": {
+                        "type": "string",
+                        "pattern": "^sha256:[0-9a-f]{64}$"
+                      },
+                      "retrieval_cutoff": {
+                        "type": "string",
+                        "const": "2026-10-06T07:37:39.912540Z"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "symbol",
+                      "object_id",
+                      "object_version",
+                      "content_hash",
+                      "source_identity",
+                      "retrieval_cutoff"
+                    ],
+                    "properties": {
+                      "symbol": {
+                        "type": "string",
+                        "const": "603228.SH"
+                      },
+                      "object_id": {
+                        "type": "string",
+                        "const": "wave-d:input:603228.SH:6679fd3fdf105c4a"
+                      },
+                      "object_version": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "content_hash": {
+                        "type": "string",
+                        "pattern": "^sha256:[0-9a-f]{64}$"
+                      },
+                      "source_identity": {
+                        "type": "string",
+                        "pattern": "^sha256:[0-9a-f]{64}$"
+                      },
+                      "retrieval_cutoff": {
+                        "type": "string",
+                        "const": "2026-10-06T07:37:39.912540Z"
+                      }
+                    }
+                  }
+                ]
+              },
+              "uniqueItems": true
+            },
+            "anchor_is_admitted_snapshot": {
+              "type": "boolean",
+              "const": false
+            },
+            "fresh_snapshot_b": {
+              "type": "null"
+            },
+            "actual_session_record_appended": {
+              "type": "boolean",
+              "const": false
+            },
+            "actual_forward_days": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_owner_policies": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "account",
+                "cost",
+                "risk",
+                "strategy"
+              ],
+              "properties": {
+                "account": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "cost": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "risk": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                },
+                "strategy": {
+                  "type": "string",
+                  "const": "UNSET_REQUIRED"
+                }
+              }
+            },
+            "formal_source_admission": {
+              "type": "string",
+              "const": "BLOCKED"
+            },
+            "live_authority": {
+              "type": "boolean",
+              "const": false
+            },
+            "native_order_fields_supported": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

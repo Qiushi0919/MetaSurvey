@@ -1,0 +1,41 @@
+{
+  "kind": "RootForwardReadbackDuringHistoricalP1Integration",
+  "recorded_at": "2026-10-08T12:41:55.409940+00:00",
+  "protected_files": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/ForwardPrediction-v1-OWNER_TEXT_IMPORT.json",
+      "bytes": 4146,
+      "sha256": "sha256:954569db8402e2e50e66841c1a449523c72f20ff1ce364d6183c4d3c7a018039",
+      "matched": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/Owner-Provided-Text.txt",
+      "bytes": 24864,
+      "sha256": "sha256:f990215f49d5b572f17c7b4eacbf203243268783b324b7dadd02637f48f95b60",
+      "matched": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/Freeze-Receipt.json",
+      "bytes": 763,
+      "sha256": "sha256:09146f50cafadd4b0e2298589ab3b045148ae4aa3f207e58edda7929cfdccd81",
+      "matched": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/ForwardOutcome-D1.jsonl",
+      "bytes": 0,
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matched": true
+    }
+  ],
+  "Day0": "FROZEN_UNCHANGED",
+  "actual_capture_original_directory_exists": false,
+  "Snapshot_B": "NOT_YET_RUN",
+  "D1_outcome_bytes": 0,
+  "actual_forward_days": 0,
+  "actual_Capture_Review_Forward_chain": "NOT_PROVIDED_NOT_VERIFIED",
+  "credential_state_this_round": "NOT_LOOKED_UP",
+  "market_requests_this_round": 0,
+  "actual_signature_created": false,
+  "schedule_created": false,
+  "productionGate": false
+}

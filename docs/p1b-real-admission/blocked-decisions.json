@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "decision_kind": "DIAGNOSTIC_BLOCKED_ADMISSION_NOT_A_RECEIPT",
+  "existing_contracts": [
+    "StockSnapshot1.0.0",
+    "AdmissionReceipt2.0.0",
+    "BrainPacket2.0.0"
+  ],
+  "new_objects_issued": 0,
+  "new_refs": {
+    "policy": null,
+    "SourceObservation": null,
+    "ClockEvidence_admitted": null,
+    "StockSnapshot": null,
+    "AdmissionReceipt": null,
+    "BrainPacket": null,
+    "ResearchCard": null
+  },
+  "decisions": [
+    {
+      "symbol": "603993.SH",
+      "namespace": "CORE_40",
+      "purpose": "LOCAL_REAL_RESEARCH",
+      "admission": "BLOCKED",
+      "reasons": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED",
+        "INCOMPLETE_OR_QUARANTINED_REQUIRED_CATEGORIES"
+      ],
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "packet_ref": null
+    },
+    {
+      "symbol": "600312.SH",
+      "namespace": "CORE_40",
+      "purpose": "LOCAL_REAL_RESEARCH",
+      "admission": "BLOCKED",
+      "reasons": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED",
+        "INCOMPLETE_OR_QUARANTINED_REQUIRED_CATEGORIES"
+      ],
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "packet_ref": null
+    },
+    {
+      "symbol": "603228.SH",
+      "namespace": "CORE_40",
+      "purpose": "LOCAL_REAL_RESEARCH",
+      "admission": "BLOCKED",
+      "reasons": [
+        "PROVIDER_AUTHORIZATION_EVIDENCE_MISSING",
+        "TRANSPORT_INTEGRITY_UNVERIFIED",
+        "INCOMPLETE_OR_QUARANTINED_REQUIRED_CATEGORIES"
+      ],
+      "snapshot_ref": null,
+      "receipt_ref": null,
+      "packet_ref": null
+    }
+  ],
+  "snapshot_b": "PENDING_REAL_DATA_AND_ADMITTED_LINEAGE",
+  "productionGate": false
+}

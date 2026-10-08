@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"metasurvey:backtest-5y:StrategyFeatureDecision:1.0.1-candidate",
+  "type":"object","required":["kind","version","state","prerequisite_state","engine_called","families","strategy_sha256","candidates","common_blockers","lineage_catalog","productionGate"],
+  "properties":{"kind":{"const":"StrategyFeatureDecision"},"version":{"const":"1.0.1-candidate"},"state":{"const":"ENGINE_NOT_RUN"},"prerequisite_state":{"const":"NOT_COMPUTABLE"},"engine_called":{"const":false},"families":{"type":"array","minItems":2,"maxItems":2},"strategy_sha256":{"const":"d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da"},"productionGate":{"const":false}}
+}

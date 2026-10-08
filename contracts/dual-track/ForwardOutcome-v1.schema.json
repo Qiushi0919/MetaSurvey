@@ -1,0 +1,724 @@
+{
+  "$id": "urn:metasurvey:dual-track:ForwardOutcome:1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "else": {
+        "properties": {
+          "score": {
+            "additionalProperties": false,
+            "properties": {
+              "action_reconciliation": {
+                "const": "UNKNOWN"
+              },
+              "direction_hit": {
+                "type": "boolean"
+              },
+              "forecast_error_percent_points": {
+                "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                "maxLength": 110,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                "type": "string"
+              },
+              "horizon": {
+                "enum": [
+                  1,
+                  5,
+                  10
+                ]
+              },
+              "mae_percent": {
+                "anyOf": [
+                  {
+                    "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                    "maxLength": 110,
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "metric_scope": {
+                "const": "SYNTHETIC_RAW_PRICE_PATH_NOT_EXECUTION_PNL"
+              },
+              "mfe_percent": {
+                "anyOf": [
+                  {
+                    "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                    "maxLength": 110,
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "range_hit": {
+                "type": "boolean"
+              },
+              "realized_return_percent": {
+                "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                "maxLength": 110,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                "type": "string"
+              },
+              "symbol": {
+                "enum": [
+                  "603993.SH",
+                  "600312.SH",
+                  "603228.SH"
+                ]
+              },
+              "target_session": {
+                "format": "date",
+                "type": "string"
+              },
+              "zero_direction_policy": {
+                "const": "THREE_WAY_SIGN_ZERO_IS_NEUTRAL"
+              }
+            },
+            "required": [
+              "symbol",
+              "horizon",
+              "target_session",
+              "realized_return_percent",
+              "forecast_error_percent_points",
+              "direction_hit",
+              "range_hit",
+              "mae_percent",
+              "mfe_percent",
+              "zero_direction_policy",
+              "action_reconciliation",
+              "metric_scope"
+            ],
+            "type": "object"
+          }
+        }
+      },
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "ACTUAL_RESEARCH_ONLY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "additionalProperties": false,
+            "properties": {
+              "action_reconciliation": {
+                "const": "UNKNOWN"
+              },
+              "actual_authority": {
+                "const": false
+              },
+              "actual_forward_days_increment": {
+                "const": 0
+              },
+              "base_assumption_matches_pinned_raw": {
+                "const": true
+              },
+              "base_raw_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "bytes": {
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "path": {
+                    "pattern": "^/",
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "capture_signature_verified": {
+                "const": true
+              },
+              "clock_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "bytes": {
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "path": {
+                    "pattern": "^/",
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "direction_hit": {
+                "type": "boolean"
+              },
+              "forecast_error_percent_points": {
+                "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                "maxLength": 110,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                "type": "string"
+              },
+              "horizon": {
+                "enum": [
+                  1,
+                  5,
+                  10
+                ]
+              },
+              "horizon_mapping": {
+                "const": "OWNER_FIXED_TARGET_DATE_NOT_HISTORICAL_SESSION_AUTHORITY"
+              },
+              "independent_review_signature_verified": {
+                "const": true
+              },
+              "mae_percent": {
+                "anyOf": [
+                  {
+                    "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                    "maxLength": 110,
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "metric_scope": {
+                "const": "CURRENT_REVIEWED_RAW_PRICE_NOT_EXECUTION_PNL"
+              },
+              "mfe_percent": {
+                "anyOf": [
+                  {
+                    "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                    "maxLength": 110,
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "outcome_raw_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "bytes": {
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "path": {
+                    "pattern": "^/",
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "path_metric_state": {
+                "enum": [
+                  "D1_RAW_PATH_OBSERVED",
+                  "COMPLETE_PATH_CALENDAR_AND_ORIGINALS_REQUIRED"
+                ]
+              },
+              "range_hit": {
+                "type": "boolean"
+              },
+              "realized_return_percent": {
+                "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                "maxLength": 110,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                "type": "string"
+              },
+              "reason_codes": {
+                "const": [
+                  "SOURCE_PROVIDER_LICENSE_ACTIONS_UNRESOLVED",
+                  "NO_EXECUTION_OR_PROFIT_AUTHORITY"
+                ]
+              },
+              "scored_at": {
+                "description": "Offset required; UTC persisted, Asia/Shanghai session boundary.",
+                "format": "date-time",
+                "type": "string"
+              },
+              "snapshot_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "bytes": {
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "path": {
+                    "pattern": "^/",
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "source_admission": {
+                "const": "BLOCKED"
+              },
+              "symbol": {
+                "enum": [
+                  "603993.SH",
+                  "600312.SH",
+                  "603228.SH"
+                ]
+              },
+              "target_session": {
+                "format": "date",
+                "type": "string"
+              },
+              "zero_direction_policy": {
+                "const": "THREE_WAY_SIGN_ZERO_IS_NEUTRAL"
+              }
+            },
+            "required": [
+              "symbol",
+              "horizon",
+              "target_session",
+              "realized_return_percent",
+              "forecast_error_percent_points",
+              "direction_hit",
+              "range_hit",
+              "mae_percent",
+              "mfe_percent",
+              "zero_direction_policy",
+              "action_reconciliation",
+              "metric_scope",
+              "snapshot_ref",
+              "base_raw_ref",
+              "outcome_raw_ref",
+              "clock_ref",
+              "scored_at",
+              "capture_signature_verified",
+              "independent_review_signature_verified",
+              "base_assumption_matches_pinned_raw",
+              "source_admission",
+              "path_metric_state",
+              "horizon_mapping",
+              "actual_authority",
+              "actual_forward_days_increment",
+              "reason_codes"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    }
+  ],
+  "description": "Closed independent research metadata. Runtime also verifies hash, source originals, scope, temporal bounds and signatures. Never native trading authority.",
+  "properties": {
+    "hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "kind": {
+      "const": "ForwardOutcome"
+    },
+    "mode": {
+      "enum": [
+        "SYNTHETIC_FIXTURE",
+        "ACTUAL_RESEARCH_ONLY"
+      ]
+    },
+    "prediction_sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "previous_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "score": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "action_reconciliation": {
+              "const": "UNKNOWN"
+            },
+            "direction_hit": {
+              "type": "boolean"
+            },
+            "forecast_error_percent_points": {
+              "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+              "maxLength": 110,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            "horizon": {
+              "enum": [
+                1,
+                5,
+                10
+              ]
+            },
+            "mae_percent": {
+              "anyOf": [
+                {
+                  "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                  "maxLength": 110,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "metric_scope": {
+              "const": "SYNTHETIC_RAW_PRICE_PATH_NOT_EXECUTION_PNL"
+            },
+            "mfe_percent": {
+              "anyOf": [
+                {
+                  "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                  "maxLength": 110,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "range_hit": {
+              "type": "boolean"
+            },
+            "realized_return_percent": {
+              "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+              "maxLength": 110,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            "symbol": {
+              "enum": [
+                "603993.SH",
+                "600312.SH",
+                "603228.SH"
+              ]
+            },
+            "target_session": {
+              "format": "date",
+              "type": "string"
+            },
+            "zero_direction_policy": {
+              "const": "THREE_WAY_SIGN_ZERO_IS_NEUTRAL"
+            }
+          },
+          "required": [
+            "symbol",
+            "horizon",
+            "target_session",
+            "realized_return_percent",
+            "forecast_error_percent_points",
+            "direction_hit",
+            "range_hit",
+            "mae_percent",
+            "mfe_percent",
+            "zero_direction_policy",
+            "action_reconciliation",
+            "metric_scope"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "action_reconciliation": {
+              "const": "UNKNOWN"
+            },
+            "actual_authority": {
+              "const": false
+            },
+            "actual_forward_days_increment": {
+              "const": 0
+            },
+            "base_assumption_matches_pinned_raw": {
+              "const": true
+            },
+            "base_raw_ref": {
+              "additionalProperties": false,
+              "properties": {
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "path": {
+                  "pattern": "^/",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "type": "object"
+            },
+            "capture_signature_verified": {
+              "const": true
+            },
+            "clock_ref": {
+              "additionalProperties": false,
+              "properties": {
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "path": {
+                  "pattern": "^/",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "type": "object"
+            },
+            "direction_hit": {
+              "type": "boolean"
+            },
+            "forecast_error_percent_points": {
+              "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+              "maxLength": 110,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            "horizon": {
+              "enum": [
+                1,
+                5,
+                10
+              ]
+            },
+            "horizon_mapping": {
+              "const": "OWNER_FIXED_TARGET_DATE_NOT_HISTORICAL_SESSION_AUTHORITY"
+            },
+            "independent_review_signature_verified": {
+              "const": true
+            },
+            "mae_percent": {
+              "anyOf": [
+                {
+                  "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                  "maxLength": 110,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "metric_scope": {
+              "const": "CURRENT_REVIEWED_RAW_PRICE_NOT_EXECUTION_PNL"
+            },
+            "mfe_percent": {
+              "anyOf": [
+                {
+                  "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+                  "maxLength": 110,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "outcome_raw_ref": {
+              "additionalProperties": false,
+              "properties": {
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "path": {
+                  "pattern": "^/",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "type": "object"
+            },
+            "path_metric_state": {
+              "enum": [
+                "D1_RAW_PATH_OBSERVED",
+                "COMPLETE_PATH_CALENDAR_AND_ORIGINALS_REQUIRED"
+              ]
+            },
+            "range_hit": {
+              "type": "boolean"
+            },
+            "realized_return_percent": {
+              "description": "Exact Decimal lexeme; no JSON float; percentages are percent, error is percentage points.",
+              "maxLength": 110,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            "reason_codes": {
+              "const": [
+                "SOURCE_PROVIDER_LICENSE_ACTIONS_UNRESOLVED",
+                "NO_EXECUTION_OR_PROFIT_AUTHORITY"
+              ]
+            },
+            "scored_at": {
+              "description": "Offset required; UTC persisted, Asia/Shanghai session boundary.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "snapshot_ref": {
+              "additionalProperties": false,
+              "properties": {
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "path": {
+                  "pattern": "^/",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "type": "object"
+            },
+            "source_admission": {
+              "const": "BLOCKED"
+            },
+            "symbol": {
+              "enum": [
+                "603993.SH",
+                "600312.SH",
+                "603228.SH"
+              ]
+            },
+            "target_session": {
+              "format": "date",
+              "type": "string"
+            },
+            "zero_direction_policy": {
+              "const": "THREE_WAY_SIGN_ZERO_IS_NEUTRAL"
+            }
+          },
+          "required": [
+            "symbol",
+            "horizon",
+            "target_session",
+            "realized_return_percent",
+            "forecast_error_percent_points",
+            "direction_hit",
+            "range_hit",
+            "mae_percent",
+            "mfe_percent",
+            "zero_direction_policy",
+            "action_reconciliation",
+            "metric_scope",
+            "snapshot_ref",
+            "base_raw_ref",
+            "outcome_raw_ref",
+            "clock_ref",
+            "scored_at",
+            "capture_signature_verified",
+            "independent_review_signature_verified",
+            "base_assumption_matches_pinned_raw",
+            "source_admission",
+            "path_metric_state",
+            "horizon_mapping",
+            "actual_authority",
+            "actual_forward_days_increment",
+            "reason_codes"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "sequence": {
+      "maximum": 9,
+      "minimum": 1,
+      "type": "integer"
+    },
+    "version": {
+      "const": "1.0.0"
+    }
+  },
+  "required": [
+    "version",
+    "kind",
+    "mode",
+    "sequence",
+    "previous_hash",
+    "prediction_sha256",
+    "score",
+    "hash"
+  ],
+  "title": "ForwardOutcome research sidecar 1.0.0",
+  "type": "object"
+}

@@ -1,0 +1,569 @@
+{
+  "run_id": "CLOSURE-SCHEMA-20261005085121831",
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "schema_version": 6,
+  "empty_to_latest_applied": [
+    "001_schema_v1.sql",
+    "002_contract_registry.sql",
+    "003_p1a_data.sql",
+    "004_p1a_paper.sql",
+    "005_p1a_replay_audit.sql",
+    "006_closure_admission.sql"
+  ],
+  "second_run": {
+    "schemaVersion": 6,
+    "applied": [],
+    "verified": [
+      "001_schema_v1.sql",
+      "002_contract_registry.sql",
+      "003_p1a_data.sql",
+      "004_p1a_paper.sql",
+      "005_p1a_replay_audit.sql",
+      "006_closure_admission.sql"
+    ]
+  },
+  "migrations": [
+    {
+      "number": 1,
+      "name": "001_schema_v1.sql",
+      "checksum": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a"
+    },
+    {
+      "number": 2,
+      "name": "002_contract_registry.sql",
+      "checksum": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84"
+    },
+    {
+      "number": 3,
+      "name": "003_p1a_data.sql",
+      "checksum": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340"
+    },
+    {
+      "number": 4,
+      "name": "004_p1a_paper.sql",
+      "checksum": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154"
+    },
+    {
+      "number": 5,
+      "name": "005_p1a_replay_audit.sql",
+      "checksum": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab"
+    },
+    {
+      "number": 6,
+      "name": "006_closure_admission.sql",
+      "checksum": "sha256:8ecf7fb64fa1ac4c2bcf8821753721daa2705e08ab36d858c48664a94e91fd47"
+    }
+  ],
+  "tables": [
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "audit"
+    },
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "policies"
+    },
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "receipts"
+    },
+    {
+      "schemaname": "p1a_closure",
+      "tablename": "revocations"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "accounts"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "fills"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "ledger"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "lot_reservations"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "lots"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "orders"
+    },
+    {
+      "schemaname": "p1a_paper",
+      "tablename": "requests"
+    },
+    {
+      "schemaname": "p1a_replay",
+      "tablename": "audit"
+    },
+    {
+      "schemaname": "p1a_replay",
+      "tablename": "results"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "account_profiles"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "account_snapshots"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "accounts"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "adjustment_actions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "adjustment_versions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "announcements"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "approvals"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "audit_log"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "backtest_runs"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bars_1d"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bars_1m"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "brain_packets"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "brain_reviews"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "candidate_eligibility"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "card_evidence"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "config_versions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "contract_records"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "corp_actions"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "cost_estimates"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "data_sources"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "features_eod"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "fills_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "fills_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "financials"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ledger_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ledger_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "legacy_asset_registry"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "news_events"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "order_claims_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "order_claims_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "order_drafts"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "orderbook_l2"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "orders_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "orders_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_audit"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_objects"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_raw"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "p1a_data_staging"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "positions_real"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "positions_sim"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "research_cards"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "research_evidence"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "schema_migrations"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "sector_membership"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "securities"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "security_master"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "signal_events"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "snapshot_entries"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "snapshot_manifests"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "staging_imports"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "strategy_metrics"
+    }
+  ],
+  "table_counts": {
+    "public": 51,
+    "p1a_paper": 7,
+    "p1a_replay": 2,
+    "p1a_closure": 4
+  },
+  "closure_columns": [
+    {
+      "table_name": "audit",
+      "column_name": "event_hash",
+      "data_type": "text"
+    },
+    {
+      "table_name": "audit",
+      "column_name": "chain_id",
+      "data_type": "text"
+    },
+    {
+      "table_name": "audit",
+      "column_name": "sequence",
+      "data_type": "bigint"
+    },
+    {
+      "table_name": "audit",
+      "column_name": "previous_hash",
+      "data_type": "text"
+    },
+    {
+      "table_name": "audit",
+      "column_name": "event_type",
+      "data_type": "text"
+    },
+    {
+      "table_name": "audit",
+      "column_name": "event_time",
+      "data_type": "timestamp with time zone"
+    },
+    {
+      "table_name": "audit",
+      "column_name": "event_json",
+      "data_type": "jsonb"
+    },
+    {
+      "table_name": "policies",
+      "column_name": "content_hash",
+      "data_type": "text"
+    },
+    {
+      "table_name": "policies",
+      "column_name": "policy_json",
+      "data_type": "jsonb"
+    },
+    {
+      "table_name": "policies",
+      "column_name": "valid_from",
+      "data_type": "timestamp with time zone"
+    },
+    {
+      "table_name": "policies",
+      "column_name": "valid_until",
+      "data_type": "timestamp with time zone"
+    },
+    {
+      "table_name": "receipts",
+      "column_name": "content_hash",
+      "data_type": "text"
+    },
+    {
+      "table_name": "receipts",
+      "column_name": "policy_hash",
+      "data_type": "text"
+    },
+    {
+      "table_name": "receipts",
+      "column_name": "receipt_json",
+      "data_type": "jsonb"
+    },
+    {
+      "table_name": "receipts",
+      "column_name": "issued_at",
+      "data_type": "timestamp with time zone"
+    },
+    {
+      "table_name": "receipts",
+      "column_name": "expires_at",
+      "data_type": "timestamp with time zone"
+    },
+    {
+      "table_name": "revocations",
+      "column_name": "target_kind",
+      "data_type": "text"
+    },
+    {
+      "table_name": "revocations",
+      "column_name": "target_hash",
+      "data_type": "text"
+    },
+    {
+      "table_name": "revocations",
+      "column_name": "revoked_at",
+      "data_type": "timestamp with time zone"
+    },
+    {
+      "table_name": "revocations",
+      "column_name": "reason_code",
+      "data_type": "text"
+    }
+  ],
+  "closure_triggers": [
+    {
+      "event_object_table": "audit",
+      "trigger_name": "closure_audit_no_mutation",
+      "event_manipulation": "DELETE"
+    },
+    {
+      "event_object_table": "audit",
+      "trigger_name": "closure_audit_no_mutation",
+      "event_manipulation": "UPDATE"
+    },
+    {
+      "event_object_table": "policies",
+      "trigger_name": "closure_policy_no_mutation",
+      "event_manipulation": "DELETE"
+    },
+    {
+      "event_object_table": "policies",
+      "trigger_name": "closure_policy_no_mutation",
+      "event_manipulation": "UPDATE"
+    },
+    {
+      "event_object_table": "receipts",
+      "trigger_name": "closure_receipt_no_mutation",
+      "event_manipulation": "DELETE"
+    },
+    {
+      "event_object_table": "receipts",
+      "trigger_name": "closure_receipt_no_mutation",
+      "event_manipulation": "UPDATE"
+    },
+    {
+      "event_object_table": "revocations",
+      "trigger_name": "closure_revocation_no_mutation",
+      "event_manipulation": "DELETE"
+    },
+    {
+      "event_object_table": "revocations",
+      "trigger_name": "closure_revocation_no_mutation",
+      "event_manipulation": "UPDATE"
+    }
+  ],
+  "preserved_p1a_files": [
+    {
+      "path": "contracts/p1a/AuditChainEvent.schema.json",
+      "sha256": "sha256:4ab95b95018e6a4613831c6fc0eb25df3bf05ca934a7858b6f55c2d392a54997",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/CodeProvenance.schema.json",
+      "sha256": "sha256:8610a576717012d57ad2455254989b1a18e38fa8a2d5a1f508d941456b67caf8",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/CostAttribution.schema.json",
+      "sha256": "sha256:387bd9f2eb1a9ccb8886c994abafbfd2bc582e9e74ad8f4acb04238120806d0e",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/CostProfile.schema.json",
+      "sha256": "sha256:e9d70b944c284711fe19a04d01a3411c4a3e7e9db376f978f879fcd61e5bce5f",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/DeterministicReplayResult.schema.json",
+      "sha256": "sha256:60ce29f0e2543c7a1e24fce284682aa533335a9b5f797690eceea15fdc05d539",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/P1ACostEstimate.schema.json",
+      "sha256": "sha256:ae534c6a9abd2db063b9ad0f0074f4b2fd77adcb001d596383b208aab636687c",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/PaperCalendarProjection.schema.json",
+      "sha256": "sha256:dd8b536a1fee9fe78d9c0d4e4ed4eae167656201c4cc3809af355ecf023ce850",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/PaperReplayOrderIntent.schema.json",
+      "sha256": "sha256:ef590899177b81df4a73ed954f4b9dade87e35a7a0918d01ce526a9c76980797",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/PaperSecurityProjection.schema.json",
+      "sha256": "sha256:2ebd31a4a7a528a44d11844872f9787f58d365a60738c53645599e46d830497a",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/PathMetrics.schema.json",
+      "sha256": "sha256:f722328bfa72674668ef8f262f24ec0ca36ad885d4a8d90824327bc472087a1c",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/ReplayInputManifest.schema.json",
+      "sha256": "sha256:b5d84f3767955b24235af59309b28b6c54cfcc3388ab21667651dca37f85ac13",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/SnapshotLineageBundle.schema.json",
+      "sha256": "sha256:600ea6d57c3102c1ed4d5e3987fb904f9bbf60f1e297bb1b1824598e2cec28ef",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/p1a/SourceObservation.schema.json",
+      "sha256": "sha256:94f793494be44b83a065c5f8894502d8916d3870fb05eac480be8b072c20ddbb",
+      "unchanged": true
+    },
+    {
+      "path": "contracts/reason-codes.p1a.json",
+      "sha256": "sha256:292a02a833d63917787bd70ab3a82f99e3f97e82dc061a6b086c787092a53101",
+      "unchanged": true
+    },
+    {
+      "path": "migrations/001_schema_v1.sql",
+      "sha256": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a",
+      "unchanged": true
+    },
+    {
+      "path": "migrations/002_contract_registry.sql",
+      "sha256": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84",
+      "unchanged": true
+    },
+    {
+      "path": "migrations/003_p1a_data.sql",
+      "sha256": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340",
+      "unchanged": true
+    },
+    {
+      "path": "migrations/004_p1a_paper.sql",
+      "sha256": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154",
+      "unchanged": true
+    },
+    {
+      "path": "migrations/005_p1a_replay_audit.sql",
+      "sha256": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab",
+      "unchanged": true
+    },
+    {
+      "path": "config/p1a/code-provenance.json",
+      "sha256": "sha256:3f71114210707e0f3524ddd5eaa4b36dbeea329fc589847c045632cdec3d2e2d",
+      "unchanged": true
+    }
+  ],
+  "scope": "ONLY_POLICY_RECEIPT_REVOCATION_EXPORT_IMPORT_AUDIT",
+  "no_new_execution_tables": true
+}

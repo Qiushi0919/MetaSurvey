@@ -1,0 +1,16 @@
+{
+  "fixture_scope": "SYNTHETIC_TEST_ONLY",
+  "provenance": "Hand-authored closure arithmetic fixture, uncalibrated; no real account or legacy default inheritance.",
+  "now": "2026-09-30T16:00:00+08:00",
+  "strategy_id": "RESEARCH_6_18M",
+  "trade_terms": {"side":"BUY","price":"10.00","quantity":100,"trade_date":"2026-09-29"},
+  "cost_profile": {
+    "contract_name":"CostProfile","contract_version":"1.0.0","object_id":"SYNTHETIC_CLOSURE_COST","object_version":1,
+    "profile_scope":"SYNTHETIC_TEST_ONLY","production_enabled":false,"currency":"CNY","money_unit":"INTEGER_CENTS_STRING",
+    "rounding_mode":"HALF_UP","commission_scope":"PER_ORDER","commission_rate":"0.0017","minimum_commission_cents":"211",
+    "stamp_tax_sell_rate":"0.0013","exchange_fee":{"rate":"0.000021","included_in":"EXCLUDED"},
+    "other_fee":{"rate":"0.000037","included_in":"EXCLUDED"},"slippage":{"treatment":"SEPARATE_ESTIMATE","rate":"0.00031"},
+    "effective_from":"2026-01-01","effective_to":"2026-12-31",
+    "source":{"kind":"SYNTHETIC_FIXTURE","description":"Explicit synthetic stress arithmetic only, never real rates or calibrated costs."}
+  }
+}

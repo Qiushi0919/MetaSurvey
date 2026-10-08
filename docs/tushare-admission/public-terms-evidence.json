@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "evidence_kind": "OFFICIAL_PUBLIC_DOCUMENTS_NOT_ACCOUNT_OR_PROXY_ENTITLEMENT",
+  "captured_records": [
+    {
+      "document": "official-quota",
+      "uri": "https://tushare.pro/document/2?doc_id=290",
+      "raw_sha256": "sha256:f7a91af8062e8c041049bc4d3f3c6f6c1bc7de8ac65a6659e15d5699f28453a9",
+      "retrieved_at": "2026-10-05T13:38:15.522638+00:00",
+      "available_at": "2026-10-05T13:38:15.522638+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-service-terms",
+      "uri": "https://tushare.pro/document/1?doc_id=405",
+      "raw_sha256": "sha256:4d26a245e5a80eaef815830a2bd944cbaea8a1d9600e82b0ba91c083721155c5",
+      "retrieved_at": "2026-10-05T13:38:15.568409+00:00",
+      "available_at": "2026-10-05T13:38:15.568409+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-user-terms",
+      "uri": "https://tushare.pro/document/1?doc_id=409",
+      "raw_sha256": "sha256:d33eb90c3034fefebe06a89a5a751d81442143a315cec0305927ba55058071c4",
+      "retrieved_at": "2026-10-05T13:38:15.615117+00:00",
+      "available_at": "2026-10-05T13:38:15.615117+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-minute-rights",
+      "uri": "https://tushare.pro/document/1?doc_id=234",
+      "raw_sha256": "sha256:8645968ed57a14b7ca5d1abafbe41a6faf4d3cbb1594feb6bc5a45eb802a83fd",
+      "retrieved_at": "2026-10-05T13:38:15.670052+00:00",
+      "available_at": "2026-10-05T13:38:15.670052+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-basic",
+      "uri": "https://tushare.pro/document/2?doc_id=25",
+      "raw_sha256": "sha256:2e37c2f4eebab825f3b0ce6fcce81d349db7076284038c2fdb1010c4e077a00f",
+      "retrieved_at": "2026-10-05T13:38:15.736173+00:00",
+      "available_at": "2026-10-05T13:38:15.736173+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-calendar",
+      "uri": "https://tushare.pro/document/2?doc_id=26",
+      "raw_sha256": "sha256:942d0ff91c4d15ab65e0e2c02bffb89732f1f605e667cf61c5af875ef0242461",
+      "retrieved_at": "2026-10-05T13:38:15.791906+00:00",
+      "available_at": "2026-10-05T13:38:15.791906+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-raw-daily",
+      "uri": "https://tushare.pro/document/2?doc_id=27",
+      "raw_sha256": "sha256:4cfb933a6fe33de8d5390d7253138cb92731726bf7f9c25f7b3f13e3926e1ab0",
+      "retrieved_at": "2026-10-05T13:38:15.858230+00:00",
+      "available_at": "2026-10-05T13:38:15.858230+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-factors",
+      "uri": "https://tushare.pro/document/2?doc_id=28",
+      "raw_sha256": "sha256:d442e3d060417df8599a0756b790bfad11219b836ee45967fa0c52e1bc2ffd7b",
+      "retrieved_at": "2026-10-05T13:38:15.909688+00:00",
+      "available_at": "2026-10-05T13:38:15.909688+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-dividend",
+      "uri": "https://tushare.pro/document/2?doc_id=103",
+      "raw_sha256": "sha256:0386571d90b28e464b0d249b19c9b810b099fc1d4027c8f365630c381becb883",
+      "retrieved_at": "2026-10-05T13:38:15.963598+00:00",
+      "available_at": "2026-10-05T13:38:15.963598+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-financial-income",
+      "uri": "https://tushare.pro/document/2?doc_id=33",
+      "raw_sha256": "sha256:4ff82992991c07ca6d48b96140e0ec4add29ec22a8187cffda3d0552ae8cea11",
+      "retrieved_at": "2026-10-05T13:38:16.016678+00:00",
+      "available_at": "2026-10-05T13:38:16.016678+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-financial-balance",
+      "uri": "https://tushare.pro/document/2?doc_id=36",
+      "raw_sha256": "sha256:cec376ae30b9ce7863a23c077f77571778f2d25816c24bf45e9280367e6ef51a",
+      "retrieved_at": "2026-10-05T13:38:16.074143+00:00",
+      "available_at": "2026-10-05T13:38:16.074143+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-financial-cashflow",
+      "uri": "https://tushare.pro/document/2?doc_id=44",
+      "raw_sha256": "sha256:25351d6d487c1f33edf87ecb0d0f1823677d4b52940bfd9e70c7966394c82faa",
+      "retrieved_at": "2026-10-05T13:38:16.139704+00:00",
+      "available_at": "2026-10-05T13:38:16.139704+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-financial-indicator",
+      "uri": "https://tushare.pro/document/2?doc_id=79",
+      "raw_sha256": "sha256:1aab7feb72bdf87f52cdaca5f4ede6603fdcb323fc1e9b9cd9d1b2f1ae999490",
+      "retrieved_at": "2026-10-05T13:38:16.202175+00:00",
+      "available_at": "2026-10-05T13:38:16.202175+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-membership",
+      "uri": "https://tushare.pro/document/2?doc_id=335",
+      "raw_sha256": "sha256:f3aeceb45660be16fcc84ca7a6f5571a96589d28cada68d8fe27f2e9d5dc3bbc",
+      "retrieved_at": "2026-10-05T13:38:16.290299+00:00",
+      "available_at": "2026-10-05T13:38:16.290299+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-st",
+      "uri": "https://tushare.pro/document/2?doc_id=397",
+      "raw_sha256": "sha256:8894f263b00a582eaf1f5c345cf111b1cf4ecf7c8f8a9768b471077d7636f5e2",
+      "retrieved_at": "2026-10-05T13:38:16.350391+00:00",
+      "available_at": "2026-10-05T13:38:16.350391+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-announcements",
+      "uri": "https://tushare.pro/document/2?doc_id=176",
+      "raw_sha256": "sha256:d59799bc5f229e07515c3879e838eda5893d4563e51eda34ab0f45ba0a5cc58b",
+      "retrieved_at": "2026-10-05T13:41:14.123170+00:00",
+      "available_at": "2026-10-05T13:41:14.123170+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    },
+    {
+      "document": "official-suspension",
+      "uri": "https://tushare.pro/document/2?doc_id=214",
+      "raw_sha256": "sha256:fd02b3cc3a557d0a6066b689c38684226f5849d473860aad44d93fa90f915e0a",
+      "retrieved_at": "2026-10-05T13:41:14.177666+00:00",
+      "available_at": "2026-10-05T13:41:14.177666+00:00",
+      "published_at": null,
+      "published_precision": "UNKNOWN",
+      "status": "CAPTURED_PUBLIC_DOCUMENT"
+    }
+  ],
+  "terms_interpretation": {
+    "official_quota": "Official15000 table lists500requests/min; minutes/announcements independent; public table is annual and not actual monthly account term. Not used as probe quota.",
+    "official_service": "Personal/noncommercial/nontransferable/finite authorization through official/authorized channel; endpoint/product binding and local research/retention still need evidence.",
+    "proxy_operator": "UNSET_REQUIRED",
+    "account_product_order_expiry": "UNSET_REQUIRED",
+    "storage_retention": "UNSET_REQUIRED",
+    "cloud_transfer": "BLOCKED",
+    "redistribution": "BLOCKED"
+  },
+  "actual_account_tier": 15000,
+  "tier_provenance": "OWNER_ASSERTED",
+  "actual_api_entitlement_verified": false,
+  "independently_required_public_products": [
+    "anns_d"
+  ],
+  "minute_products": "OUTSIDE_P1B_PROBE_SCOPE_NOT_PURCHASED_OR_TESTED",
+  "source_observation_or_policy_issued": false
+}

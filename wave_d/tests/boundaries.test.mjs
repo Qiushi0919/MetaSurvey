@@ -1,0 +1,18 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {validateLocalResearch,transitionLocalResearch} from '../contracts.mjs';
+import {validateContract,sealContract} from '../../src/contracts/validate.mjs';
+import {prepareRealResearchInput,assessFormalInput,produceFormalCard,formalProducerStatus} from '../../wave_c/formal-producer.mjs';
+import {createClosureDataFixture} from '../../tests/fixtures/closure/data-helpers.mjs';
+import {buildBrainPacket} from '../../src/closure/export.mjs';import {importResearchResult,assertDraftTransition} from '../../src/closure/import.mjs';
+import {productionGate} from '../../src/baseline/gates.mjs';
+const evidence=JSON.parse(fs.readFileSync(new URL('../../docs/wave-d/evidence.json',import.meta.url)));
+const objects=evidence.artifacts.filter(r=>/\.(input|assessment|report)\.json$/.test(r.name)||r.name==='ResearchComparison.json').map(r=>JSON.parse(fs.readFileSync(r.path)));const x=objects.find(r=>r.contract_name==='RealResearchSandboxReport');
+test('all ten actual v2 sandbox and comparison objects validate',()=>{assert.equal(objects.length,10);for(const x of objects)validateLocalResearch(x);});
+test('truth and execution permission promotions are rejected',()=>{for(const k of ['provider_identity_verified','license_verified','transport_integrity_verified','historical_visibility_proven','productionGate','tradeable','cloud_transfer'])assert.throws(()=>validateLocalResearch(sealContract({...x,[k]:true})));});
+test('closed root and monetary float reject arbitrary payload',()=>{assert.throws(()=>validateLocalResearch(sealContract({...x,buy:'BUY'})));const v=structuredClone(x);v.body.features[0].value=0.1;assert.throws(()=>validateLocalResearch(sealContract(v)));});
+test('nanosecond cutoff and namespaces remain strict',()=>{assert.throws(()=>validateLocalResearch(sealContract({...x,retrieval_cutoff:'2026-10-06T15:00:00.000000001Z',decision_cutoff:'2026-10-06T15:00:00.000000000Z'})));for(const namespace of ['EVENT_3','RESEARCH_6_18M','CORE_40'])assert.throws(()=>validateLocalResearch(sealContract({...x,namespace})));});
+test('display validation never allows formal execution or cloud transition',()=>{transitionLocalResearch(x,'LOCAL_SANDBOX_DISPLAY');for(const target of ['ResearchCard','SignalEvent','Approval','OrderIntent','Order','Fill','CLOUD_MODEL'])assert.throws(()=>transitionLocalResearch(x,target));});
+test('native contracts reject sandbox and comparison promotion',()=>{for(const x of objects)for(const name of ['ResearchCard','CandidateEligibility','SignalEvent','Approval','OrderIntent','Fill'])assert.throws(()=>validateContract(name,x));});
+test('formal receipt registry remains empty at all stages',()=>{for(const x of objects){assert.throws(()=>prepareRealResearchInput({packet:x,receipt:x,snapshot:x}));assert.throws(()=>assessFormalInput(x));assert.throws(()=>produceFormalCard(x));}assert.equal(formalProducerStatus().live_stock_receipts,0);});
+test('native importer and signed packet refuse real sandbox; fixture positive still works',async t=>{const f=await createClosureDataFixture();t.after(()=>f.db.close());const packet=await buildBrainPacket(f);await assert.rejects(()=>importResearchResult({...f,packet,result:x}));await assert.rejects(()=>buildBrainPacket({...f,snapshot:x}));for(const target of ['SignalEvent','Approval','OrderIntent'])assert.throws(()=>assertDraftTransition(x,target));});
+test('LLM APPROVE and real UNSET never authorize execution',()=>{assert.throws(()=>validateContract('Approval',{...x,actor_type:'LLM',decision:'APPROVE'}));const p=JSON.parse(fs.readFileSync(new URL('../../config/account-profile.unconfigured.v1.json',import.meta.url)));assert.equal(productionGate(p).allowed,false);});

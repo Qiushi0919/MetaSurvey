@@ -1,0 +1,47 @@
+{
+  "evidence_version": "1.0.0",
+  "phase": "P1A_OFFLINE_ONLY",
+  "code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "source_tree_hash": "sha256:aa8902654fdec40134b862f9abff91330caadddcff7c8ac82bde494d4abff46a",
+  "p0_frozen_unchanged": true,
+  "parent_full_check": {
+    "tests": 210,
+    "pass": 209,
+    "fail": 0,
+    "skip": 1,
+    "skip_reason": "optional external legacy host replay; separate actual read-only replay passed"
+  },
+  "independent_reviewer_full_check": {
+    "tests": 210,
+    "pass": 209,
+    "fail": 0,
+    "skip": 1
+  },
+  "clean_check": {
+    "tests": 210,
+    "pass": 209,
+    "fail": 0,
+    "skip": 1,
+    "evidence": "docs/baselines/P1A-clean-reproduction-20261005.json"
+  },
+  "experiment_A": "PASS",
+  "experiment_B": "PASS",
+  "economic_result_hash": "sha256:b59d2cd0c6b89f3abfdbc5348763665cbb3b1dc3ced7d4e5785ba3e6ab152b4c",
+  "ledger_chain_hash": "sha256:ceb3373ceff6099f28532e5977664f54a9a20549c8b0834e5eed03327c1ea449",
+  "pre_release_failures": [
+    {
+      "candidate_commit": "0472488c374126554060a75447b1d80b8b0b8a19",
+      "tests": 6,
+      "pass": 5,
+      "fail": 1,
+      "reason": "session mutation already rejected by earlier REPLAY_CALENDAR_PROJECTION_MISMATCH; assertion expected a later reason",
+      "resolution": "exact early refusal assertion plus three additional source projection attacks; no admission guard weakened"
+    }
+  ],
+  "known_legacy_native_compatibility": "FAIL_KNOWN_COMPATIBILITY",
+  "legacy_data_replay": "PASS",
+  "legacy_ledger_reconciliation": "PASS",
+  "production_gate_allowed": false,
+  "p1b_authorized": false,
+  "implementation_ref_is_actual_commit": true
+}

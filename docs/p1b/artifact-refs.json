@@ -1,0 +1,75 @@
+{
+  "run_id": "P1B-REAL-REFERENCE-20261005T103100961Z",
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "objects": [
+    {
+      "name": "observation",
+      "contract": "SourceObservation",
+      "version": "1.1.0",
+      "object_id": "p1b-observation:f5b3a2da2c7807bbb5b07b6c13fe60f1e61d8b08c7e54de40b269f153d33a92d",
+      "content_hash": "sha256:29aa911999e11d95ccffaa01b528e1e0a9d07d91cadb184cd93b69c58f9f952b",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/observation.json"
+    },
+    {
+      "name": "policy",
+      "contract": "SourceAdmissionPolicy",
+      "version": "1.1.0",
+      "object_id": "p1b-policy:722f71203759e3d32974234be8c40271b7aaf86d36d284547ef89b8632100118",
+      "content_hash": "sha256:73d4f5671a7c7e82734ab0bbd2597ed02866a391bfba43dac0203cf9e1e0531f",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/policy.json"
+    },
+    {
+      "name": "snapshot",
+      "contract": "SnapshotManifest",
+      "version": "1.0.0",
+      "object_id": "p1b-snapshot:08440dd7a997a3f98f5684da1d13ade2e9fb67115b1e2568fbcf643224e9a3ce",
+      "content_hash": "sha256:663d7a0996779f2b6779fc735c75564869b71f7ac6d1920821d81f013bc1496d",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/snapshot.json"
+    },
+    {
+      "name": "receipt",
+      "contract": "AdmissionReceipt",
+      "version": "1.1.0",
+      "object_id": "p1b-receipt:caad7dc77dd63cbae69110f135b1181c717aa6f1a423e9d3ea9087bdc77c80b7",
+      "content_hash": "sha256:0a55afd72629bfd9f321e6cfe19399fabf4d3332062e0d33ce86c85bcfeaaa15",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/receipt.json"
+    },
+    {
+      "name": "packet",
+      "contract": "BrainPacket",
+      "version": "1.2.0",
+      "object_id": "p1b-packet:4d15424e5bd785a8a9c96fe37f02eebfc18f413b8ae9c81116f77b1fb48c65e1",
+      "content_hash": "sha256:3189c0df3dbde1da557dbcfd371cd55f739d44d0ba7693aab28aa1334e848d40",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/packet.json"
+    },
+    {
+      "name": "lead",
+      "contract": "DiscoveredEvidence",
+      "version": "1.0.0",
+      "object_id": "discovered:df8fb7f5d53a983611d687cadd088a136c66960edc85a8a8987b67f4146b624a",
+      "content_hash": "sha256:c708616527f5c6255dd7936dcdd19d56e6db75a5b5f028531310ac25ae9ddc54",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/lead.json"
+    },
+    {
+      "name": "resolution",
+      "contract": "EvidenceResolution",
+      "version": "1.0.0",
+      "object_id": "resolution:a95cf283be9dd39b1778e60daf1ef89782128689b48f090f490816a6b93aa34b",
+      "content_hash": "sha256:2c9d1df1d7f0c68e05dd1b311b082cd327c3d2376318f94ae43dc224cda2cd5e",
+      "file": "docs/p1b/real-reference-results.json",
+      "archived_file": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/real-artifacts/resolution.json"
+    }
+  ],
+  "full_artifact_file_sha256": "sha256:de81c4d89e6b20e848cf3f9663dab56e8cf10bf4be19ac516cafe597b2301d85",
+  "registered_local_admitted_reference_artifacts_in_run": 1,
+  "real_historical_admitted_stock_snapshots": 0,
+  "persistent_current_live_receipts": 0,
+  "production_enabled": false
+}

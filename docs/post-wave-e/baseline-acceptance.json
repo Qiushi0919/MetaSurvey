@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "current_human_decision": {
+    "Wave_D": "ACCEPTED_WITH_CONDITIONS",
+    "Wave_E": "ACCEPTED_WITH_CONDITIONS"
+  },
+  "historical_gate_bytes_unchanged": true,
+  "previous_delivery_checkpoint": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-e-20261006/delivery/Delivery-Checkpoint.json",
+    "sha256": "sha256:88989d139f9d1e566cd9cd51b2bc9279ecc61dd45a5a974cc8e520e65d6a5cc0",
+    "bytes": 190393
+  },
+  "provider_license_transport_history_verified": false,
+  "productionGate": false
+}

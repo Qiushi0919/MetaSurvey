@@ -1,0 +1,42 @@
+{
+  "schema_version": 5,
+  "migrations": [
+    {
+      "id": "001",
+      "path": "migrations/001_schema_v1.sql",
+      "sha256": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a",
+      "status": "EXISTING_FROZEN"
+    },
+    {
+      "id": "002",
+      "path": "migrations/002_contract_registry.sql",
+      "sha256": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84",
+      "status": "EXISTING_FROZEN"
+    },
+    {
+      "id": "003",
+      "path": "migrations/003_p1a_data.sql",
+      "sha256": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340",
+      "status": "EXISTING_FROZEN"
+    },
+    {
+      "id": "004",
+      "path": "migrations/004_p1a_paper.sql",
+      "sha256": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154",
+      "status": "EXISTING_FROZEN"
+    },
+    {
+      "id": "005",
+      "path": "migrations/005_p1a_replay_audit.sql",
+      "sha256": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab",
+      "status": "EXISTING_FROZEN"
+    }
+  ],
+  "schema_report": {
+    "path": "docs/baselines/P1A-schema-validation.json",
+    "sha256": "sha256:8f152e23553b1e893764e99abeb8ee48049cb232112caadfd10720989a912a8a"
+  },
+  "empty_to_latest": true,
+  "repeat_idempotent": true,
+  "new_migrations": "NOT_CREATED; 006 is a proposal only, pending approved persistence scope"
+}

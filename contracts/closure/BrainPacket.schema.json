@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:closure:BrainPacket",
+  "title": "BrainPacket",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "BrainPacket"
+    },
+    "contract_version": {
+      "const": "1.1.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "fixture_scope": {
+      "const": "SYNTHETIC_TEST_ONLY"
+    },
+    "purpose": {
+      "const": "FIXTURE_MANUAL_EXPORT"
+    },
+    "mode": {
+      "enum": [
+        "DEV",
+        "PAPER"
+      ]
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "transfer_mode": {
+      "const": "MANUAL_EXPORT"
+    },
+    "strategy_id": {
+      "enum": [
+        "CORE_40",
+        "EVENT_3",
+        "RESEARCH_6_18M"
+      ]
+    },
+    "receipt": {
+      "$ref": "urn:ashare:contracts:closure:AdmissionReceipt"
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "data_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "feature_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:ashare:contracts:v1:DataEnvelope"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "projection_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "contains_account_identity_or_credentials": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "issuer": {
+      "type": "object",
+      "properties": {
+        "issuer_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "key_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "public_key_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "issuer_id",
+        "key_id",
+        "public_key_hash"
+      ],
+      "additionalProperties": false
+    },
+    "proof": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "const": "ED25519"
+        },
+        "signature": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9+/]{86}==$"
+        }
+      },
+      "required": [
+        "algorithm",
+        "signature"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "fixture_scope",
+    "purpose",
+    "mode",
+    "production_enabled",
+    "transfer_mode",
+    "strategy_id",
+    "receipt",
+    "snapshot_ref",
+    "decision_cutoff",
+    "data_hash",
+    "feature_version",
+    "rules_hash",
+    "evidence",
+    "projection_hash",
+    "contains_account_identity_or_credentials",
+    "can_produce_order",
+    "issuer",
+    "proof"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.1.0",
+    "scope": "approved fixture-only closure",
+    "required_optional": "all listed properties required; explicit null only where allowed",
+    "timezone": "offset required; business Asia/Shanghai; UTC storage",
+    "money": "No floating money; referenced cost is exact Decimal/integer-cent strings",
+    "hash": "canonical JSON SHA256 excludes top-level content_hash and proof; proof signs content_hash. Source policy has no proof.",
+    "invalidation": [
+      "source/raw/closure/policy/purpose/coverage/namespace/version/hash change",
+      "receipt revocation/expiry",
+      "unknown real input blocks"
+    ],
+    "no_production_defaults": true
+  }
+}

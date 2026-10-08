@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:PathMetrics",
+  "title": "PathMetrics",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "PathMetrics"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "entry_price": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,13})(\\.[0-9]{1,6})?$",
+      "x-unit": "CNY_PER_SHARE"
+    },
+    "entry_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "entry_timing": {
+      "enum": [
+        "SESSION_OPEN",
+        "INTRADAY_UNKNOWN"
+      ]
+    },
+    "mae_resolution": {
+      "const": "DAILY_APPROXIMATION"
+    },
+    "mfe_resolution": {
+      "const": "DAILY_APPROXIMATION"
+    },
+    "usage": {
+      "const": "RETROSPECTIVE_OUTCOME_ONLY"
+    },
+    "horizon_basis": {
+      "const": "TRADING_SESSIONS"
+    },
+    "sample_sessions": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "window_status": {
+      "type": "object",
+      "properties": {
+        "5D": {
+          "enum": [
+            "COMPLETE",
+            "INCOMPLETE"
+          ]
+        },
+        "10D": {
+          "enum": [
+            "COMPLETE",
+            "INCOMPLETE"
+          ]
+        },
+        "20D": {
+          "enum": [
+            "COMPLETE",
+            "INCOMPLETE"
+          ]
+        },
+        "40D": {
+          "enum": [
+            "COMPLETE",
+            "INCOMPLETE"
+          ]
+        }
+      },
+      "required": [
+        "5D",
+        "10D",
+        "20D",
+        "40D"
+      ],
+      "additionalProperties": false
+    },
+    "MAE_5D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "MAE_10D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "MAE_20D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "MFE_5D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "MFE_10D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "MFE_20D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "MFE_40D": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]{1,10})?$",
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "days_to_positive": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "days_to_MFE": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "drawdown_duration": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "max_underwater_days": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "duration_resolution": {
+      "const": "SESSION_CLOSE"
+    },
+    "positive_basis": {
+      "const": "CLOSE_ABOVE_ENTRY_PRICE_EXCLUDING_FEES"
+    },
+    "censored": {
+      "type": "boolean"
+    },
+    "path_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "entry_price",
+    "entry_date",
+    "entry_timing",
+    "mae_resolution",
+    "mfe_resolution",
+    "usage",
+    "horizon_basis",
+    "sample_sessions",
+    "window_status",
+    "MAE_5D",
+    "MAE_10D",
+    "MAE_20D",
+    "MFE_5D",
+    "MFE_10D",
+    "MFE_20D",
+    "MFE_40D",
+    "days_to_positive",
+    "days_to_MFE",
+    "drawdown_duration",
+    "max_underwater_days",
+    "duration_resolution",
+    "positive_basis",
+    "censored",
+    "path_hash"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

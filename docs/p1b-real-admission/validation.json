@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "checked_at": "2026-10-05T15:15:45.636219+00:00",
+  "frozen_baseline_unique_tests": {
+    "tests": 398,
+    "pass": 397,
+    "fail": 0,
+    "skip": 1,
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/all-frozen-baselines-check.log"
+  },
+  "new_Gate_contract": {
+    "tests": 27,
+    "pass": 27,
+    "fail": 0,
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/new-final-gate-check.log"
+  },
+  "new_Data_probe": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0,
+    "fixture_only": true,
+    "log": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/new-final-gate-check.log"
+  },
+  "total_unique": {
+    "tests": 463,
+    "pass": 462,
+    "fail": 0,
+    "skip": 1
+  },
+  "clean_checkout": {
+    "candidate": "3c08f85",
+    "fresh_dependencies_cache": true,
+    "npm_ci_exit": 0,
+    "npm_check_exit": 0,
+    "base_tests": 258,
+    "pass": 257,
+    "fail": 0,
+    "skip": 1,
+    "logs": [
+      "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/clean-npm-ci-corrected.log",
+      "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/clean-npm-check.log"
+    ],
+    "final_code_metadata_clean_checkout": {
+      "candidate": "55cfa442ea85cddbfdd860865e5490902be38c9f",
+      "fresh_dependencies_cache": true,
+      "npm_ci_exit": 0,
+      "npm_check_exit": 0,
+      "aggregate_check_exit": 1,
+      "new_epoch_check_exit": 0,
+      "condition": "HISTORICAL_ABSOLUTE_EVIDENCE_PATH_NOT_PORTABLE_TO_CLONE",
+      "evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-validation.json",
+        "sha256": "sha256:cbd63eb240334e61a06557a38d3dab125dbd322cf5642a1be4b1a2b84d6cc468"
+      },
+      "full_clone_aggregate_pass": false
+    }
+  },
+  "fixture_Draft_Assessment_Card": {
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "status": "PASS",
+    "deterministic_replay": "PASS",
+    "execution_writes": 0,
+    "actual_model_calls": 0,
+    "evidence": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/fixture-chain/fixture-chain-results.json",
+      "sha256": "sha256:4dcf2ab54ad281335e463a05d167bd472734509491ef116797fa69febf28ed60"
+    }
+  },
+  "independent_review": {
+    "engineering": "PASS_WITH_CONDITIONS",
+    "tests": 906,
+    "pass": 906,
+    "fail": 0,
+    "unique_attack_checks": 880,
+    "unique_metadata_checks": 26,
+    "review": {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Independent-Review.json",
+      "sha256": "sha256:e804f226d118194df69b8d8e4d2d1e042e33da2c64b63791e0d94226e5dbddd0"
+    },
+    "attack_matrix": {
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Attack-Matrix.json",
+      "sha256": "sha256:c05037a222d407f42e2ecef810d5e9423bd8376fc422176bc0adac2c0109ec3e"
+    },
+    "original_review_bytes_preserved": true,
+    "delivery_addendum": {
+      "status": "COMPLETE",
+      "checks": 23,
+      "pass": 23,
+      "fail": 0,
+      "separate_from_original_906": true,
+      "engineering": "PASS_WITH_CONDITIONS",
+      "full_clone_aggregate": "FAIL_UNRESOLVED_HISTORICAL_PATH_PORTABILITY",
+      "report": {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Delivery-Addendum.json",
+        "sha256": "sha256:2df53e56f59beebaf418943de1fb1c82dd49ef7385b2b07cddc8339955931ea0"
+      },
+      "checks_ref": {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Delivery-Checks.json",
+        "sha256": "sha256:50359ade3485187bff1e8b80ac7582d7d7635fb785b9253023e395c287658296"
+      }
+    }
+  },
+  "remote_CI_executed": false,
+  "authenticated_requests": 44,
+  "raw_captures": 44,
+  "source_admission": "BLOCKED",
+  "productionGate": false,
+  "secret_boundary_scan": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/secret-boundary-scan.json",
+    "result": "PASS",
+    "files_scanned": 487,
+    "secret_leaks": 0
+  },
+  "final_secret_and_preservation_scan": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-secret-and-preservation-scan.json",
+    "sha256": "sha256:370a38ad71a9fee57252e8047e809387eb0b4624cff1f7ccc38969f9efa5d888",
+    "result": "PASS",
+    "files_scanned": 1090,
+    "secret_leaks": 0,
+    "baseline_immutable_files": 389,
+    "new_source_pins": "UNCHANGED_9_FILES"
+  },
+  "delivery_bookkeeping_only": "Final references/index/commit are an append after reviewed metadata; source pins and Gate unchanged."
+}

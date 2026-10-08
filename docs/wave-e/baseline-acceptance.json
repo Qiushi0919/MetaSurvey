@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "owner_decision": "ACCEPT_WITH_CONDITIONS_LOCAL_ONLY_ENGINEERING",
+  "decision_evidence": "docs/authorizations/P1B-WAVE-E-20261006.md",
+  "accepted_baseline": "52f6a608ca46678dbd2b5ab976945bebc2d2345e",
+  "previous_Gate_unchanged": true,
+  "previous_owner_acceptance_literal_preserved": "PENDING_IN_HISTORICAL_GATE",
+  "previous_delivery_checkpoint": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/delivery/Delivery-Checkpoint.json",
+    "sha256": "sha256:2e4a58f9eeea4a348cbb73b0d7ba4124b9a95a4b7e922919d254bcf35441c656",
+    "bytes": 113551
+  },
+  "immutable_count": 613,
+  "downstream_admission_inferred": false,
+  "productionGate": false
+}

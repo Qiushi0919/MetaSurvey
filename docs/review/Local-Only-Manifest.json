@@ -1,0 +1,46 @@
+{
+  "kind": "LocalOnlyPublicationManifest",
+  "version": "1.0.0",
+  "source_commit": "c9071832f6c8a941a8b62b20b4b6afdcac24a02b",
+  "files": [
+    {
+      "path": "tests/fixtures/p1a-data/public-capture.json",
+      "bytes": 26304,
+      "sha256": "sha256:d51fe267627d0305326b22e8ed44590d232e9660d14e6b50dc43f2dd33db94a0",
+      "reason": "REFERENCE_FIXTURE_LICENSE_UNKNOWN_REDISTRIBUTION_NOT_ALLOWED"
+    },
+    {
+      "path": "tests/fixtures/p1a-data/sse-dayk.json",
+      "bytes": 182,
+      "sha256": "sha256:050d31343e76ee4544f59d3042c955381a3f54dd1fe79ec4bac8b3109e3de80f",
+      "reason": "REFERENCE_FIXTURE_LICENSE_UNKNOWN_REDISTRIBUTION_NOT_ALLOWED"
+    },
+    {
+      "path": "tests/fixtures/p1a-data/sse-holiday.html",
+      "bytes": 28093,
+      "sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "reason": "REFERENCE_FIXTURE_LICENSE_UNKNOWN_REDISTRIBUTION_NOT_ALLOWED"
+    },
+    {
+      "path": "tests/fixtures/p1a-data/sse-session.html",
+      "bytes": 45558,
+      "sha256": "sha256:f5d95746ec6f8dc7d5c9f057b230ba56eae67dce05dbae06fe62a0bdad98f0db",
+      "reason": "REFERENCE_FIXTURE_LICENSE_UNKNOWN_REDISTRIBUTION_NOT_ALLOWED"
+    },
+    {
+      "path": "tests/fixtures/p1a-data/szse-holiday.html",
+      "bytes": 24292,
+      "sha256": "sha256:7b0c4264d27f4ba14a1904ab31cb3b2b870e4e68d6b8d8c0f6cf4254c1a045a4",
+      "reason": "REFERENCE_FIXTURE_LICENSE_UNKNOWN_REDISTRIBUTION_NOT_ALLOWED"
+    },
+    {
+      "path": "tests/fixtures/p1a-data/szse-session.html",
+      "bytes": 11517,
+      "sha256": "sha256:5346f053ed5770f8ee603546686ff5c732698ca127bda369ac458fd236e360b5",
+      "reason": "REFERENCE_FIXTURE_LICENSE_UNKNOWN_REDISTRIBUTION_NOT_ALLOWED"
+    }
+  ],
+  "raw_payloads_published": false,
+  "missing_local_checks_are_not_passed": true,
+  "productionGate": false
+}

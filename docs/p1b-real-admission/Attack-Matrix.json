@@ -1,0 +1,308 @@
+{
+  "kind": "INDEPENDENT_ATTACK_REQUIREMENT_MATRIX",
+  "matrix": [
+    {
+      "attack_requirement": "secret leak",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "transport-attacks-fe632bd17da6.json",
+        "native-reader-attacks-fe632bd17da6.json"
+      ],
+      "scope_and_limit": "Synthetic credentials only. Parent runtime actual-secret scan separately reported487files/0leaks; reviewer never reads real secret."
+    },
+    {
+      "attack_requirement": "credential echo",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "transport-attacks-fe632bd17da6.json",
+        "native-reader-attacks-fe632bd17da6.json"
+      ],
+      "scope_and_limit": "Synthetic credentials only. Parent runtime actual-secret scan separately reported487files/0leaks; reviewer never reads real secret."
+    },
+    {
+      "attack_requirement": "request logging",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "transport-attacks-fe632bd17da6.json",
+        "native-reader-attacks-fe632bd17da6.json"
+      ],
+      "scope_and_limit": "Synthetic credentials only. Parent runtime actual-secret scan separately reported487files/0leaks; reviewer never reads real secret."
+    },
+    {
+      "attack_requirement": "fake provider_verified",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "API success -> license escalation",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "API success -> ADMITTED escalation",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "unknown gateway -> official relabel",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "cloud export",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "model call",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "Approval injection",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "OrderIntent injection",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "broker capability",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "productionGate bypass",
+      "status": "PASS",
+      "evidence": [
+        "schema-attacks-a3e567499e6d-harnessd9db7a409c4c.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual blocked Gate cannot express new permissions/issuance; synthetic frozen consumer denies purpose/transfer and LLM-authentication escalations."
+    },
+    {
+      "attack_requirement": "caller retrieved_at override",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "historical availability spoof",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "DATE_ONLY midnight spoof",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "trade_date -> published_at spoof",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "raw byte mutation",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "duplicate/reorder mutation",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "raw/adjusted mixing",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "financial overwrite",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "industry current-label backfill",
+      "status": "PASS",
+      "evidence": [
+        "probe-attacks-fe632bd17da6.json",
+        "evidence-attacks-bf8fcbd5827f.json",
+        "actual-report-attacks-2reports-helperbf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Actual originals only read; malicious report/raw changes intercepted in RAM. No fake historical visibility, normalization or mutable original."
+    },
+    {
+      "attack_requirement": "future implementation publication",
+      "status": "PASS",
+      "evidence": [
+        "future-implementation-publication.json",
+        "evidence-attacks-bf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "Bare fe632 collector remains incomplete for imp_ann_date. CLOSED_AT_MANDATORY_PARENT_VERIFICATION_BOUNDARY42e, independently verified rejection while future ex/pay business dates remain permitted."
+    },
+    {
+      "attack_requirement": "factor/action mismatch",
+      "status": "CONDITION",
+      "evidence": [
+        "evidence-attacks-bf8fcbd5827f.json",
+        "metadata-review-final.json"
+      ],
+      "scope_and_limit": "Bar/factor date mismatch and calendar inconsistency are rejected. Complete numeric factor/corporate-action reconstruction/reconciliation is not implemented or admitted; do not claim this part tested."
+    },
+    {
+      "attack_requirement": "receipt purpose escalation",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual execution of frozen consumer with clearly synthetic mocked SSE bytes and in-memory reference-only receipt. Exact reference usepoint reuse allowed, new usepoint/code/authority/coverage and revoked receipt/policy denied. No new gateway receipt exists."
+    },
+    {
+      "attack_requirement": "receipt namespace escalation",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual execution of frozen consumer with clearly synthetic mocked SSE bytes and in-memory reference-only receipt. Exact reference usepoint reuse allowed, new usepoint/code/authority/coverage and revoked receipt/policy denied. No new gateway receipt exists."
+    },
+    {
+      "attack_requirement": "receipt coverage expansion",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual execution of frozen consumer with clearly synthetic mocked SSE bytes and in-memory reference-only receipt. Exact reference usepoint reuse allowed, new usepoint/code/authority/coverage and revoked receipt/policy denied. No new gateway receipt exists."
+    },
+    {
+      "attack_requirement": "receipt reuse",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual execution of frozen consumer with clearly synthetic mocked SSE bytes and in-memory reference-only receipt. Exact reference usepoint reuse allowed, new usepoint/code/authority/coverage and revoked receipt/policy denied. No new gateway receipt exists."
+    },
+    {
+      "attack_requirement": "receipt revocation",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual execution of frozen consumer with clearly synthetic mocked SSE bytes and in-memory reference-only receipt. Exact reference usepoint reuse allowed, new usepoint/code/authority/coverage and revoked receipt/policy denied. No new gateway receipt exists."
+    },
+    {
+      "attack_requirement": "old code epoch reuse",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "gate-join-attacks-43d27e322c95.json"
+      ],
+      "scope_and_limit": "Actual execution of frozen consumer with clearly synthetic mocked SSE bytes and in-memory reference-only receipt. Exact reference usepoint reuse allowed, new usepoint/code/authority/coverage and revoked receipt/policy denied. No new gateway receipt exists."
+    },
+    {
+      "attack_requirement": "cross-source mismatch",
+      "status": "CONDITION",
+      "evidence": [
+        "metadata-review-final.json",
+        "evidence-attacks-bf8fcbd5827f.json"
+      ],
+      "scope_and_limit": "13 calendar facts and3code scopes independently recomputed and agree. Forced internal bar/calendar/factor conflicts rejected. No admitted numeric second source or complete status/history exists; actual numeric provider discrepancy path remains unavailable and all source admission staysBLOCKED."
+    },
+    {
+      "attack_requirement": "unknown30account/fee/risk config bypass",
+      "status": "PASS",
+      "evidence": [
+        "frozen-consumer-attacks.json",
+        "metadata-review-final.json"
+      ],
+      "scope_and_limit": "30UNSET_REQUIRED preserved; deletion of each required unknown and LLM authority injection independently cannot enable production."
+    }
+  ],
+  "PASS_is_limited_to_stated_scope": true,
+  "conditions_are_not_permissions": true,
+  "all_new_source_admission": "BLOCKED"
+}

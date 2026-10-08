@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"metasurvey:backtest-5y:WalkForwardWindowPlan:1.0.1-candidate",
+  "type":"object","required":["kind","version","state","parameters","anchor","windows","reason_codes","untouched_oos","formal_windows_executed","productionGate"],
+  "properties":{"kind":{"const":"WalkForwardWindowPlan"},"version":{"const":"1.0.1-candidate"},"state":{"const":"NOT_COMPUTABLE"},"anchor":{"const":null},"windows":{"type":"array","maxItems":0},"formal_windows_executed":{"const":0},"untouched_oos":{"const":false},"productionGate":{"const":false}}
+}

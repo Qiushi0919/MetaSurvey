@@ -1,0 +1,109 @@
+{
+  "release_version": "1.1.0",
+  "module_contract_version": "1.0.0",
+  "schema_version": 5,
+  "phase": "P1A_OFFLINE_ONLY",
+  "gate_status": "REQUIRES_P1A_GATE_REVIEW",
+  "production_execution_enabled": false,
+  "p1b_research_enabled": false,
+  "p0_release_sha256": "sha256:eee1c485838212210f646f755c0ce4c61b38b46dfd6fa1b8708a6ced1bb9b770",
+  "code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "source_tree_hash": "sha256:aa8902654fdec40134b862f9abff91330caadddcff7c8ac82bde494d4abff46a",
+  "contracts": [
+    "AuditChainEvent",
+    "CodeProvenance",
+    "CostAttribution",
+    "CostProfile",
+    "DeterministicReplayResult",
+    "P1ACostEstimate",
+    "PaperCalendarProjection",
+    "PaperReplayOrderIntent",
+    "PaperSecurityProjection",
+    "PathMetrics",
+    "ReplayInputManifest",
+    "SnapshotLineageBundle",
+    "SourceObservation"
+  ],
+  "files": [
+    {
+      "path": "contracts/p1a/AuditChainEvent.schema.json",
+      "sha256": "sha256:4ab95b95018e6a4613831c6fc0eb25df3bf05ca934a7858b6f55c2d392a54997"
+    },
+    {
+      "path": "contracts/p1a/CodeProvenance.schema.json",
+      "sha256": "sha256:8610a576717012d57ad2455254989b1a18e38fa8a2d5a1f508d941456b67caf8"
+    },
+    {
+      "path": "contracts/p1a/CostAttribution.schema.json",
+      "sha256": "sha256:387bd9f2eb1a9ccb8886c994abafbfd2bc582e9e74ad8f4acb04238120806d0e"
+    },
+    {
+      "path": "contracts/p1a/CostProfile.schema.json",
+      "sha256": "sha256:e9d70b944c284711fe19a04d01a3411c4a3e7e9db376f978f879fcd61e5bce5f"
+    },
+    {
+      "path": "contracts/p1a/DeterministicReplayResult.schema.json",
+      "sha256": "sha256:60ce29f0e2543c7a1e24fce284682aa533335a9b5f797690eceea15fdc05d539"
+    },
+    {
+      "path": "contracts/p1a/P1ACostEstimate.schema.json",
+      "sha256": "sha256:ae534c6a9abd2db063b9ad0f0074f4b2fd77adcb001d596383b208aab636687c"
+    },
+    {
+      "path": "contracts/p1a/PaperCalendarProjection.schema.json",
+      "sha256": "sha256:dd8b536a1fee9fe78d9c0d4e4ed4eae167656201c4cc3809af355ecf023ce850"
+    },
+    {
+      "path": "contracts/p1a/PaperReplayOrderIntent.schema.json",
+      "sha256": "sha256:ef590899177b81df4a73ed954f4b9dade87e35a7a0918d01ce526a9c76980797"
+    },
+    {
+      "path": "contracts/p1a/PaperSecurityProjection.schema.json",
+      "sha256": "sha256:2ebd31a4a7a528a44d11844872f9787f58d365a60738c53645599e46d830497a"
+    },
+    {
+      "path": "contracts/p1a/PathMetrics.schema.json",
+      "sha256": "sha256:f722328bfa72674668ef8f262f24ec0ca36ad885d4a8d90824327bc472087a1c"
+    },
+    {
+      "path": "contracts/p1a/ReplayInputManifest.schema.json",
+      "sha256": "sha256:b5d84f3767955b24235af59309b28b6c54cfcc3388ab21667651dca37f85ac13"
+    },
+    {
+      "path": "contracts/p1a/SnapshotLineageBundle.schema.json",
+      "sha256": "sha256:600ea6d57c3102c1ed4d5e3987fb904f9bbf60f1e297bb1b1824598e2cec28ef"
+    },
+    {
+      "path": "contracts/p1a/SourceObservation.schema.json",
+      "sha256": "sha256:94f793494be44b83a065c5f8894502d8916d3870fb05eac480be8b072c20ddbb"
+    },
+    {
+      "path": "contracts/reason-codes.p1a.json",
+      "sha256": "sha256:292a02a833d63917787bd70ab3a82f99e3f97e82dc061a6b086c787092a53101"
+    },
+    {
+      "path": "migrations/001_schema_v1.sql",
+      "sha256": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a"
+    },
+    {
+      "path": "migrations/002_contract_registry.sql",
+      "sha256": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84"
+    },
+    {
+      "path": "migrations/003_p1a_data.sql",
+      "sha256": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340"
+    },
+    {
+      "path": "migrations/004_p1a_paper.sql",
+      "sha256": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154"
+    },
+    {
+      "path": "migrations/005_p1a_replay_audit.sql",
+      "sha256": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab"
+    },
+    {
+      "path": "config/p1a/code-provenance.json",
+      "sha256": "sha256:3f71114210707e0f3524ddd5eaa4b36dbeea329fc589847c045632cdec3d2e2d"
+    }
+  ]
+}

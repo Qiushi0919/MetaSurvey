@@ -1,0 +1,182 @@
+{
+  "assertion_count_semantics": "Atomic comparisons and rejection guards; category counts in separate results. Before/after checks are intentionally separately counted, and final1,295hash reopen checks are separately reported/excluded from39,942aggregate. These are not unique regression tests.",
+  "assertion_parts": [
+    {
+      "assertions_by_category": {
+        "action_bias": 2688,
+        "actual_before_IO": 30,
+        "adversarial_feature_inputs": 3,
+        "adversarial_label": 6,
+        "adversarial_prefix": 36,
+        "clock_precision": 11,
+        "code_after": 17,
+        "code_pins": 28,
+        "context": 2,
+        "csv": 1,
+        "diagnostic_refs": 153,
+        "diagnostic_replay": 8,
+        "direct_dependency_after": 1295,
+        "direct_dependency_before": 1295,
+        "feature_lineage": 981,
+        "full_family": 981,
+        "identity": 2,
+        "immutable_baseline": 764,
+        "label_calendar_path": 2688,
+        "label_counts": 9,
+        "label_numeric_oracle": 5376,
+        "label_scope": 2943,
+        "pit": 6,
+        "policy": 2,
+        "preflight": 1,
+        "preflight_adversarial": 5,
+        "price_numeric_oracle": 9612,
+        "protocol": 1,
+        "provider": 2,
+        "purge": 36,
+        "purge_counts": 108,
+        "purge_label_boundary": 54,
+        "quality_oracle": 12,
+        "quality_scope": 5,
+        "raw_grids": 6,
+        "saved_summaries": 1,
+        "sensitivity_scope": 24,
+        "staging": 8,
+        "staging_sql_guard": 3,
+        "tail_unknown": 255,
+        "warmup": 1962
+      },
+      "atomic_assertions": 31420,
+      "failures": [],
+      "status": "PASS_WITH_CONDITIONS"
+    },
+    {
+      "assertions_by_category": {
+        "actual_day_type_rejection": 28,
+        "actual_issuer_rejection": 14,
+        "display_shape": 7,
+        "flag_promotion_rejection": 56,
+        "metadata_inventory": 1,
+        "namespace_rejection": 21,
+        "native_inventory": 1,
+        "native_rejection": 112,
+        "self_hash_display_only": 14,
+        "self_hash_native_rejection": 56,
+        "transition_rejection": 98
+      },
+      "atomic_assertions": 408,
+      "failures": [],
+      "status": "PASS"
+    },
+    {
+      "assertions_by_category": {
+        "activation_truth": 1,
+        "fact_clock_scope": 11,
+        "issuer_semantics": 11,
+        "official_tushare_fields": 3,
+        "official_tushare_scope": 8,
+        "protocol": 2,
+        "public_capture_scope": 8,
+        "redaction_file_binding": 8,
+        "redaction_scope": 2,
+        "redaction_synthetic_context": 8
+      },
+      "atomic_assertions": 62,
+      "failures": [],
+      "status": "PASS"
+    },
+    {
+      "assertions_by_category": {
+        "condition_inequality": 6408,
+        "family_counts": 6,
+        "family_membership": 1602,
+        "univariate_deltas": 18,
+        "univariate_membership": 18
+      },
+      "atomic_assertions": 8052,
+      "failures": [],
+      "status": "PASS"
+    }
+  ],
+  "authorization_and_gate_conditions": {
+    "actual_forward_days": 0,
+    "authenticated_requests": 0,
+    "company_quality_historical_backfill": false,
+    "continuous_PIT_domains_closed": 0,
+    "credential_lookups_by_reviewer": 0,
+    "exact_symbols": [
+      "603993.SH",
+      "600312.SH",
+      "603228.SH"
+    ],
+    "formal_fundamental_PIT_backtest": "BLOCKED",
+    "formal_price_backtest": "BLOCKED",
+    "future_actual_scope_requires_separate_human_authorization": true,
+    "native_contracts_or_schema_added": 0,
+    "network_requests_by_reviewer": 0,
+    "new_diagnostic_outputs_by_reviewer": 0,
+    "optimization_or_winner_selection": false,
+    "price_profits_or_cash_dividend_applied": false,
+    "provider_dimensions": "8_UNKNOWN",
+    "real_account_settings": "30_UNSET_REQUIRED",
+    "real_forward_day1": "BLOCKED",
+    "real_snapshot_b": "BLOCKED",
+    "remaining_actual_implementation": [
+      "actual source collector/session/status/precision transport adapters",
+      "version-bound source exception/capture acceptance and source-version interpretation",
+      "independent actual original-reopen reviewer and scoped Human issuer capabilities",
+      "accepted actual-session namespace and exactly-once counting binding; generic staging alone insufficient"
+    ],
+    "sample_exposure": "ALL327_SESSIONS_ALREADY_EXPOSED_NOT_OOS",
+    "schema_version": 6,
+    "signal_approval_order_fill_broker_cloud_production": "BLOCKED",
+    "small_live_policy": "OWNER_PENDING_NOT_ADOPTED",
+    "trust": "LOCAL_ONLY_NON_TRADEABLE"
+  },
+  "candidate": "c4fdb9a98a083677973fd052c622da5060be85d4",
+  "code_pins": 28,
+  "conclusion": "PASS_WITH_CONDITIONS",
+  "context_hash": "sha256:cfe01c4e0d31b0bb4c21e73f77f8f7095054848b5820b9b34664ec86cb8e497d",
+  "critical_false_acceptances": 0,
+  "final_separate_dependency_hash_checks": 1295,
+  "immutable_baseline_files": 764,
+  "independent_atomic_assertions": 39942,
+  "limitations": [
+    "Root fresh-clone full regression and final delivery hash/CRC/checkpoint review are separate completion duties; this report does not substitute for them.",
+    "All source/raw/diagnostic input paths are current local unmoved private archives; no remote CI or archive relocation claim.",
+    "31,420Python,408native,62semantic/redaction,8,052membership atomic assertions exclude first aborted review harness and are not unique regression-test count.",
+    "No universal secret absence, hostile interpreter/privileged rewrite, or captured-provider license claim.",
+    "Sealed pre-registration and saved failed epochs preserve diagnostic settings; exposed327session samples never become untouched OOS."
+  ],
+  "preserved_review_harness_failures": [
+    {
+      "classification": "REVIEWER_FIXTURE_PAIR_MISMATCH_STRICTLY_REJECTED",
+      "epoch": "Python-G1",
+      "passed_epoch": "Python-G2",
+      "product_changed": false,
+      "ref": "review-harness-G1-failure.json"
+    }
+  ],
+  "product_findings": [],
+  "raw_oracle_scope": {
+    "bar_dates": 981,
+    "chronological_blocks": 18,
+    "close_return_drawdown_values_compared": 5376,
+    "family_memberships": 1602,
+    "feature_rows": 981,
+    "full_family_observations": 1962,
+    "labels": 2943,
+    "observable_labels": 2688,
+    "raw_price_quantities_compared": 9612,
+    "rule_inequalities": 6408,
+    "symbols": 3,
+    "tail_unknown_labels": 255,
+    "univariate_variants": 18
+  },
+  "regression_tests_repeated": 0,
+  "reviewed_at": "2026-10-06T17:36:24.874309+00:00",
+  "reviewer_role": "INDEPENDENT_REVIEWER_READ_ONLY",
+  "source_dependencies_checked_before_after": 1295,
+  "source_dependencies_unchanged": true,
+  "stop_after_delivery": true,
+  "version": "1.0.0"
+}

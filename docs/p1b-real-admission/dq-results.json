@@ -1,0 +1,932 @@
+{
+  "version": "1.0.0",
+  "totals": {
+    "PASS": 26,
+    "EMPTY_NOT_COVERAGE": 9,
+    "BLOCKED": 9
+  },
+  "cross_source_numeric_check": "NOT_AVAILABLE_NO_ADMITTED_NUMERIC_REFERENCE",
+  "supplier_units_and_update_rules_verified": false,
+  "results": [
+    {
+      "request_id": "trade_cal-SSE-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 12,
+      "normalized_hash": "sha256:9c090a892d74707eb17400ba14255820368ed304827c796eb37768bd6ca47a13",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:09828a30bcb8266c19fd521fb18e1794a0d9ac214149d234654a17b66521bc8a",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 5,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 12,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "stock_basic-603993.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:2c567986fd95b51b4d36ada260a309f4f0edbcea04394e73efe579faa9d94764",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:f2443239c475282825c19b16ad00aa85aed1c4f2550ef62ddbb772cd5cc16332",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "suspend_d-603993.SH-SMOKE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "daily-603993.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 3,
+      "normalized_hash": "sha256:377188f61f0e6e8b48fb5d2b1c2ae6b1009fb2a6491f75414f4bd20fdc7bc6f2",
+      "units": {
+        "amount": "THOUSAND_YUAN",
+        "change": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "close": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "high": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "low": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "open": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "pct_chg": "PERCENT",
+        "pre_close": "PROVIDER_EX_RIGHTS_REFERENCE_PRICE_UNVERIFIED",
+        "vol": "LOT_HAND_NO_SHARE_CONVERSION"
+      },
+      "price_adjustment": "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS",
+      "raw_sha256": "sha256:50cfee35d202dff7478886a447b49e7b817eeea565c16372d32cd37392de9e06",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 3,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "adj_factor-603993.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 3,
+      "normalized_hash": "sha256:72296e4834ac96058202508fddba0be2b30ef7ce0ba0fdd03a5d9d5db34bab9c",
+      "units": {
+        "adj_factor": "DIMENSIONLESS_FACTOR"
+      },
+      "price_adjustment": "FACTOR_ONLY_NO_ADJUSTED_PRICES",
+      "raw_sha256": "sha256:07a3462fad21aa4168f1c3d35ec0f5319345fef9b9ae184732aaa135d5ebe7ea",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 3,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "dividend-603993.SH-SMOKE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {
+        "cash_div": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_POST_TAX",
+        "cash_div_tax": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_PRE_TAX",
+        "stk_bo_rate": "SHARES_PER_SHARE",
+        "stk_co_rate": "SHARES_PER_SHARE",
+        "stk_div": "SHARES_PER_SHARE"
+      },
+      "price_adjustment": "CORPORATE_ACTION_TERMS_NOT_PRICE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "fina_indicator-603993.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:a481a6ac93c5312d57783f99915cb006ddb25dbd36ed536b688f7301401be9ce",
+      "units": {
+        "debt_to_assets": "PROVIDER_RATIO_SCALE_UNVERIFIED",
+        "eps": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED",
+        "netprofit_yoy": "PERCENT",
+        "roe": "PROVIDER_RATIO_SCALE_UNVERIFIED"
+      },
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:9701e4ad55fc5340c7e0f12213e10c349e82e2026e9d2811f2ccd0de77642a06",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 1,
+        "unique_report_periods": 1
+      }
+    },
+    {
+      "request_id": "index_member_all-603993.SH-SMOKE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DQ_DATE_INVALID"
+      ],
+      "row_count": 1,
+      "normalized_hash": null,
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:76e58565bf2b70e81137b891c40bd2d2d3b3f10b41789962f1e5019f34dc1c0d",
+      "coverage": null
+    },
+    {
+      "request_id": "stock_basic-600312.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:9d078f29f356cc7da2d82384e04f2d21896e3a14a07c5db2c112d64d2aca074e",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:7994f087454c55595a5cf66fdfbaea98823343232215fd3488a621e02a0a781a",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "suspend_d-600312.SH-SMOKE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "daily-600312.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 3,
+      "normalized_hash": "sha256:083cef88e158cff7dbfef10b032059066f52d37fd7b055d12b4ec33591a2159e",
+      "units": {
+        "amount": "THOUSAND_YUAN",
+        "change": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "close": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "high": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "low": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "open": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "pct_chg": "PERCENT",
+        "pre_close": "PROVIDER_EX_RIGHTS_REFERENCE_PRICE_UNVERIFIED",
+        "vol": "LOT_HAND_NO_SHARE_CONVERSION"
+      },
+      "price_adjustment": "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS",
+      "raw_sha256": "sha256:fa546c8ccbafa3435dc6dacc80db3bf8f1e1aa5285755efde96e502cbafb44a1",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 3,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "adj_factor-600312.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 3,
+      "normalized_hash": "sha256:0b0a921cf43582fd761af64e0a4d88cc26b314d8b192d855209492ac6e02145f",
+      "units": {
+        "adj_factor": "DIMENSIONLESS_FACTOR"
+      },
+      "price_adjustment": "FACTOR_ONLY_NO_ADJUSTED_PRICES",
+      "raw_sha256": "sha256:84eaa7880f5a667f9c980988be3b5169bf0acbbad63aa3dc0f51e3cde2dd0d42",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 3,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "dividend-600312.SH-SMOKE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {
+        "cash_div": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_POST_TAX",
+        "cash_div_tax": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_PRE_TAX",
+        "stk_bo_rate": "SHARES_PER_SHARE",
+        "stk_co_rate": "SHARES_PER_SHARE",
+        "stk_div": "SHARES_PER_SHARE"
+      },
+      "price_adjustment": "CORPORATE_ACTION_TERMS_NOT_PRICE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "fina_indicator-600312.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:a8f2350370afa949db549308ebe8443560a1da09ca1b3be69dec6a7a04458f55",
+      "units": {
+        "debt_to_assets": "PROVIDER_RATIO_SCALE_UNVERIFIED",
+        "eps": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED",
+        "netprofit_yoy": "PERCENT",
+        "roe": "PROVIDER_RATIO_SCALE_UNVERIFIED"
+      },
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:fc43454039379ac9a468cb48f33b849436696d853c44d2192e1b7039393ac55f",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 1,
+        "unique_report_periods": 1
+      }
+    },
+    {
+      "request_id": "index_member_all-600312.SH-SMOKE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DQ_DATE_INVALID"
+      ],
+      "row_count": 1,
+      "normalized_hash": null,
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:b68faeac3baf4c195760fe46bcec2592767dafe1bff65ba0632dc6fe8762f0f1",
+      "coverage": null
+    },
+    {
+      "request_id": "stock_basic-603228.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:f9b5789ee7e49e1cbc767e4456af76db6af3cf3a0e79fc42638e579f2a1a1384",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:38886bab1dfbe397acab0b2c927a7b1df8e8103bede514e5d618ce5d7d3e53c8",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "suspend_d-603228.SH-SMOKE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "daily-603228.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 3,
+      "normalized_hash": "sha256:52877b3b20b64cac6c06f4d993c0ed49761a5957ea91b92410fd15ed967ecc12",
+      "units": {
+        "amount": "THOUSAND_YUAN",
+        "change": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "close": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "high": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "low": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "open": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "pct_chg": "PERCENT",
+        "pre_close": "PROVIDER_EX_RIGHTS_REFERENCE_PRICE_UNVERIFIED",
+        "vol": "LOT_HAND_NO_SHARE_CONVERSION"
+      },
+      "price_adjustment": "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS",
+      "raw_sha256": "sha256:5518284cd83dc72349edbea5ab7cbba2ab599e81281e202853d3d66b104772f8",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 3,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "adj_factor-603228.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 3,
+      "normalized_hash": "sha256:edf798700a20548cf58942254cb8678ec33500375034d3ab7708e101826ee79b",
+      "units": {
+        "adj_factor": "DIMENSIONLESS_FACTOR"
+      },
+      "price_adjustment": "FACTOR_ONLY_NO_ADJUSTED_PRICES",
+      "raw_sha256": "sha256:d9eb074c9ba45ae0321ef67054e5bbbf5fdac91d6936517b22f8a7086fc22f94",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 3,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "dividend-603228.SH-SMOKE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {
+        "cash_div": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_POST_TAX",
+        "cash_div_tax": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_PRE_TAX",
+        "stk_bo_rate": "SHARES_PER_SHARE",
+        "stk_co_rate": "SHARES_PER_SHARE",
+        "stk_div": "SHARES_PER_SHARE"
+      },
+      "price_adjustment": "CORPORATE_ACTION_TERMS_NOT_PRICE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "fina_indicator-603228.SH-SMOKE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 2,
+      "normalized_hash": "sha256:1ca8a81e833179541fd9baf14f4c31792465cc2963311af8c27c41553bc2ac56",
+      "units": {
+        "debt_to_assets": "PROVIDER_RATIO_SCALE_UNVERIFIED",
+        "eps": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED",
+        "netprofit_yoy": "PERCENT",
+        "roe": "PROVIDER_RATIO_SCALE_UNVERIFIED"
+      },
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:e484acc474523c05227c8b0a7a0a57ed3e15fdf3fb228d5cfe42f26094a917ab",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 1,
+        "unique_report_periods": 1
+      }
+    },
+    {
+      "request_id": "index_member_all-603228.SH-SMOKE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DQ_DATE_INVALID"
+      ],
+      "row_count": 1,
+      "normalized_hash": null,
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:f84c7d7c0aef40cbbdca833ff0a274bcc097531863458e3931afa6c9bcaa0ab0",
+      "coverage": null
+    },
+    {
+      "request_id": "trade_cal-SSE-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 492,
+      "normalized_hash": "sha256:31602bcff1bf69d76ea785eeb57be0fb77851cda48b11fdb2dd5ec8d6e85f01e",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:2fb262cc1cdf63d0ed510b37b84b0e5ec90cc745c61e4dc5ff3b43723b1f96ed",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 327,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 492,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "stock_basic-603993.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:2c567986fd95b51b4d36ada260a309f4f0edbcea04394e73efe579faa9d94764",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:f2443239c475282825c19b16ad00aa85aed1c4f2550ef62ddbb772cd5cc16332",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "suspend_d-603993.SH-COVERAGE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "daily-603993.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 327,
+      "normalized_hash": "sha256:df36ddca4eface9b520451ab0e8fee2b2febd3ac2f843ec765a8b82efa9b4166",
+      "units": {
+        "amount": "THOUSAND_YUAN",
+        "change": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "close": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "high": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "low": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "open": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "pct_chg": "PERCENT",
+        "pre_close": "PROVIDER_EX_RIGHTS_REFERENCE_PRICE_UNVERIFIED",
+        "vol": "LOT_HAND_NO_SHARE_CONVERSION"
+      },
+      "price_adjustment": "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS",
+      "raw_sha256": "sha256:2f0405ffaeaec6093efa8b8ec53008cd70c5770876bfb818bb569c44afbf261f",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 327,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "adj_factor-603993.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 327,
+      "normalized_hash": "sha256:d99fe8aa658dff5d31943c2a0fe8784ec31b7cf36ee6df5ee29ee7b1897a604d",
+      "units": {
+        "adj_factor": "DIMENSIONLESS_FACTOR"
+      },
+      "price_adjustment": "FACTOR_ONLY_NO_ADJUSTED_PRICES",
+      "raw_sha256": "sha256:8358609c5133aecfc4e9ec355feff11b6c6af52e89261d7a8a604cfea0a6c064",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 327,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "dividend-603993.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 71,
+      "normalized_hash": "sha256:037521b02d38919936c8ec1b3a79edf7e42dd116c8d13ebd8b1f07fcfccd3f7a",
+      "units": {
+        "cash_div": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_POST_TAX",
+        "cash_div_tax": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_PRE_TAX",
+        "stk_bo_rate": "SHARES_PER_SHARE",
+        "stk_co_rate": "SHARES_PER_SHARE",
+        "stk_div": "SHARES_PER_SHARE"
+      },
+      "price_adjustment": "CORPORATE_ACTION_TERMS_NOT_PRICE",
+      "raw_sha256": "sha256:37fa2af3daf93e4c0521c63bda3f631c1985077de01dfdd8db1b9a4deced3900",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "fina_indicator-603993.SH-COVERAGE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DATE_SCOPE_MISMATCH"
+      ],
+      "row_count": 19,
+      "normalized_hash": null,
+      "units": {
+        "debt_to_assets": "PROVIDER_RATIO_SCALE_UNVERIFIED",
+        "eps": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED",
+        "netprofit_yoy": "PERCENT",
+        "roe": "PROVIDER_RATIO_SCALE_UNVERIFIED"
+      },
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:cb378d50a4eda47208aee2db497a09198397fc9df22515110a876fd95e495f56",
+      "coverage": null
+    },
+    {
+      "request_id": "index_member_all-603993.SH-COVERAGE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DQ_DATE_INVALID"
+      ],
+      "row_count": 1,
+      "normalized_hash": null,
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:76e58565bf2b70e81137b891c40bd2d2d3b3f10b41789962f1e5019f34dc1c0d",
+      "coverage": null
+    },
+    {
+      "request_id": "stock_basic-600312.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:9d078f29f356cc7da2d82384e04f2d21896e3a14a07c5db2c112d64d2aca074e",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:7994f087454c55595a5cf66fdfbaea98823343232215fd3488a621e02a0a781a",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "suspend_d-600312.SH-COVERAGE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "daily-600312.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 327,
+      "normalized_hash": "sha256:7706c2fcf2373b5ff5f1a2df114cea7901456e407ee4629f856e3741c85ad0ae",
+      "units": {
+        "amount": "THOUSAND_YUAN",
+        "change": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "close": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "high": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "low": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "open": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "pct_chg": "PERCENT",
+        "pre_close": "PROVIDER_EX_RIGHTS_REFERENCE_PRICE_UNVERIFIED",
+        "vol": "LOT_HAND_NO_SHARE_CONVERSION"
+      },
+      "price_adjustment": "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS",
+      "raw_sha256": "sha256:57f6e77fb858370b844445cb80fb1a2f41d719fb5e47552afec0f1a8003e34ed",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 327,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "adj_factor-600312.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 327,
+      "normalized_hash": "sha256:73fb9a9c01d56e818a6fe6bdd7b47c4f8f43a7f18f82d5bcc295b5ba479288bf",
+      "units": {
+        "adj_factor": "DIMENSIONLESS_FACTOR"
+      },
+      "price_adjustment": "FACTOR_ONLY_NO_ADJUSTED_PRICES",
+      "raw_sha256": "sha256:3d729cda3c4eea15ba5a0902089c7bd33a6dd2bff2aa20666d3009efa2bd3c4c",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 327,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "dividend-600312.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 98,
+      "normalized_hash": "sha256:3dc4696e394b4c72008f54317fedbae771e194066a3c73c1c5b9bcb278dc0884",
+      "units": {
+        "cash_div": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_POST_TAX",
+        "cash_div_tax": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_PRE_TAX",
+        "stk_bo_rate": "SHARES_PER_SHARE",
+        "stk_co_rate": "SHARES_PER_SHARE",
+        "stk_div": "SHARES_PER_SHARE"
+      },
+      "price_adjustment": "CORPORATE_ACTION_TERMS_NOT_PRICE",
+      "raw_sha256": "sha256:b14d25e0378efb729f9ed28da7eb6649f81933a0897ce49390fce9bd7b956886",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "fina_indicator-600312.SH-COVERAGE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DATE_SCOPE_MISMATCH"
+      ],
+      "row_count": 18,
+      "normalized_hash": null,
+      "units": {
+        "debt_to_assets": "PROVIDER_RATIO_SCALE_UNVERIFIED",
+        "eps": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED",
+        "netprofit_yoy": "PERCENT",
+        "roe": "PROVIDER_RATIO_SCALE_UNVERIFIED"
+      },
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:7e0c1d8589cb440f27193d43b6f31fa6dcb6f7cee13f881b71e1f0f5b69384b3",
+      "coverage": null
+    },
+    {
+      "request_id": "index_member_all-600312.SH-COVERAGE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DQ_DATE_INVALID"
+      ],
+      "row_count": 1,
+      "normalized_hash": null,
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:b68faeac3baf4c195760fe46bcec2592767dafe1bff65ba0632dc6fe8762f0f1",
+      "coverage": null
+    },
+    {
+      "request_id": "stock_basic-603228.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 1,
+      "normalized_hash": "sha256:f9b5789ee7e49e1cbc767e4456af76db6af3cf3a0e79fc42638e579f2a1a1384",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:38886bab1dfbe397acab0b2c927a7b1df8e8103bede514e5d618ce5d7d3e53c8",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "suspend_d-603228.SH-COVERAGE",
+      "dq_status": "EMPTY_NOT_COVERAGE",
+      "dq_reasons": [],
+      "row_count": 0,
+      "normalized_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "daily-603228.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 327,
+      "normalized_hash": "sha256:d2713ca6db8e3c21bbf25b9c320a55dadf17881d389ee3016f6324d3444c9406",
+      "units": {
+        "amount": "THOUSAND_YUAN",
+        "change": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "close": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "high": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "low": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "open": "PROVIDER_PRICE_CURRENCY_UNVERIFIED",
+        "pct_chg": "PERCENT",
+        "pre_close": "PROVIDER_EX_RIGHTS_REFERENCE_PRICE_UNVERIFIED",
+        "vol": "LOT_HAND_NO_SHARE_CONVERSION"
+      },
+      "price_adjustment": "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS",
+      "raw_sha256": "sha256:ae6499e77ccacc3d3556de640e77cca678d3fd5b719912c254400bce99b8f6fd",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 327,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "adj_factor-603228.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 327,
+      "normalized_hash": "sha256:eadaaf3d0928e60e86bae520d329fa70054ee898239ca85a3d026a0d0ce0f754",
+      "units": {
+        "adj_factor": "DIMENSIONLESS_FACTOR"
+      },
+      "price_adjustment": "FACTOR_ONLY_NO_ADJUSTED_PRICES",
+      "raw_sha256": "sha256:34ec2e7bfea8cfbeb8f6e1aa41731b595c1996c2c99963c37cea891a4e0ab2de",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": true,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 327,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "dividend-603228.SH-COVERAGE",
+      "dq_status": "PASS",
+      "dq_reasons": [],
+      "row_count": 58,
+      "normalized_hash": "sha256:ddd336f3b641fef4ea483b62caf98e45788d252e8e955ce32a743c9cab3221cd",
+      "units": {
+        "cash_div": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_POST_TAX",
+        "cash_div_tax": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED_PRE_TAX",
+        "stk_bo_rate": "SHARES_PER_SHARE",
+        "stk_co_rate": "SHARES_PER_SHARE",
+        "stk_div": "SHARES_PER_SHARE"
+      },
+      "price_adjustment": "CORPORATE_ACTION_TERMS_NOT_PRICE",
+      "raw_sha256": "sha256:9ce511f7c2a754652ead60f8a828749c4735afed9e435750e13ef9205d2de36e",
+      "coverage": {
+        "coverage_sufficient_for_admission": false,
+        "open_sessions": 0,
+        "target_counts_met": false,
+        "target_quarters": 12,
+        "target_sessions": 320,
+        "unique_dates": 0,
+        "unique_report_periods": 0
+      }
+    },
+    {
+      "request_id": "fina_indicator-603228.SH-COVERAGE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DATE_SCOPE_MISMATCH"
+      ],
+      "row_count": 22,
+      "normalized_hash": null,
+      "units": {
+        "debt_to_assets": "PROVIDER_RATIO_SCALE_UNVERIFIED",
+        "eps": "PROVIDER_CURRENCY_PER_SHARE_UNVERIFIED",
+        "netprofit_yoy": "PERCENT",
+        "roe": "PROVIDER_RATIO_SCALE_UNVERIFIED"
+      },
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:1d1ded1dbea960d4b0f58824d9b2a2adb23e93a8f8e005c5b66fbe9a1304e7b9",
+      "coverage": null
+    },
+    {
+      "request_id": "index_member_all-603228.SH-COVERAGE",
+      "dq_status": "BLOCKED",
+      "dq_reasons": [
+        "DQ_DATE_INVALID"
+      ],
+      "row_count": 1,
+      "normalized_hash": null,
+      "units": {},
+      "price_adjustment": "NOT_APPLICABLE",
+      "raw_sha256": "sha256:f84c7d7c0aef40cbbdca833ff0a274bcc097531863458e3931afa6c9bcaa0ab0",
+      "coverage": null
+    }
+  ]
+}

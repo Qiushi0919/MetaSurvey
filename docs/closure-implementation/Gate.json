@@ -1,0 +1,270 @@
+{
+  "version": "1.0.0",
+  "phase": "P1A_CONDITIONAL_CLOSURE",
+  "conclusion": "PASS_WITH_CONDITIONS",
+  "scope": "FIXTURE_ONLY_MANUAL_EXPORT_PAPER",
+  "approved_user_decisions": {
+    "D01": "APPROVED",
+    "D02": "APPROVED",
+    "D03": "APPROVED",
+    "D04": "APPROVED"
+  },
+  "milestones": {
+    "W1": "COMPLETE_FROZEN_BEFORE_DELEGATED_IMPLEMENTATION",
+    "W2": "COMPLETE_DA",
+    "W3": "COMPLETE_PH",
+    "W4": "COMPLETE_NEW_READONLY_REVIEWER"
+  },
+  "branch": "p1a/conditional-closure-implementation",
+  "reviewed_candidate_head": "b9a4ed6283733ca0c6e55fbaf5e86dd948ceb356",
+  "code_version": "e22979d3b9d2938e24fe493c24c93f4716921cdc",
+  "source_tree_hash": "sha256:f74cb7c5b9409a66b1959cbc2d1c2087d990c221bb6828d556d6a321116673f5",
+  "source_file_count": 140,
+  "release_version": "1.2.0",
+  "schema_version": 6,
+  "test_run_id": "CLOSURE-CLEAN-20261005-b4898bdbf500",
+  "tests": {
+    "tests": 258,
+    "pass": 257,
+    "fail": 0,
+    "skipped": 1
+  },
+  "golden_invariants": {
+    "PASS": 25,
+    "FAIL": 0,
+    "regressed": false
+  },
+  "independent_attacks": {
+    "PASS": 22,
+    "FAIL": 0
+  },
+  "reviewer_findings": {
+    "F01": "RESOLVED",
+    "open_findings": 0
+  },
+  "closed_must_conditions": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11"
+  ],
+  "all_must_close_before_p1b_closed_for_approved_scope": true,
+  "deferred_to_p1b": [
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22"
+  ],
+  "deferred_to_p2": [
+    "C23",
+    "C24",
+    "C25",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "C30",
+    "C31"
+  ],
+  "production_blockers": [
+    "C32",
+    "C33",
+    "C34",
+    "C35",
+    "C36",
+    "C37",
+    "C38",
+    "C39"
+  ],
+  "accepted_scoped_limitations": [
+    "C40",
+    "C41",
+    "C42",
+    "C43",
+    "C44",
+    "C45",
+    "C46",
+    "C47"
+  ],
+  "P1B_READINESS_GATE": "PASS",
+  "readiness_counts": {
+    "PASS": 12,
+    "FAIL": 0
+  },
+  "REAL_DATA_ADMISSION_GATE": "BLOCKED",
+  "real_admitted_historical_snapshots": 0,
+  "productionGate": false,
+  "p1b_development_authorized": false,
+  "actual_research_agent_authorized": false,
+  "closure_user_acceptance": "PENDING",
+  "next_action": "STOP_AWAIT_EXPLICIT_APPROVE_P1B",
+  "release_tag": "p1a-closure-20261005",
+  "checkpoint_manifest": "/Users/qiushi/投资研究/.p1a-archives/p1a-closure-20261005/manifest.json",
+  "self_reference_policy": "Delivery commit/tag/bundle/index hashes resolved by external checkpoint; report and index do not hash themselves.",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Executive conclusion",
+      "result": "PASS_WITH_CONDITIONS",
+      "artifact": "Gate.json"
+    },
+    {
+      "number": 2,
+      "title": "Current Git state",
+      "result": "PINNED_REVIEWED_CODE; FINAL_METADATA_COMMIT_IN_CHECKPOINT",
+      "artifact": "repo-tree.json"
+    },
+    {
+      "number": 3,
+      "title": "P0 / P1-A / Closure tags, commits and hashes",
+      "result": "PRESERVED; FINAL_DELIVERY_REF_IN_CHECKPOINT",
+      "artifact": "artifact-index.json"
+    },
+    {
+      "number": 4,
+      "title": "Contract release matrix",
+      "result": "PASS",
+      "artifact": "contract-matrix.json"
+    },
+    {
+      "number": 5,
+      "title": "Migration matrix",
+      "result": "PASS_SCHEMA6",
+      "artifact": "schema-report.json"
+    },
+    {
+      "number": 6,
+      "title": "Golden Test matrix",
+      "result": "PASS",
+      "artifact": "golden-test-matrix.json"
+    },
+    {
+      "number": 7,
+      "title": "Data Admission matrix",
+      "result": "FIXTURE_ONLY; REAL_BLOCKED",
+      "artifact": "data-admission-matrix.json"
+    },
+    {
+      "number": 8,
+      "title": "Security / Calendar / PIT",
+      "result": "PASS_SYNTHETIC_REGRESSION; REAL_DEFERRED",
+      "artifact": "golden-test-matrix.json"
+    },
+    {
+      "number": 9,
+      "title": "Cost Engine",
+      "result": "PASS; REAL_UNKNOWN",
+      "artifact": "E2E-results.json"
+    },
+    {
+      "number": 10,
+      "title": "Paper / Ledger / Replay",
+      "result": "PASS_BASELINE_EQUAL",
+      "artifact": "economic-regression.json"
+    },
+    {
+      "number": 11,
+      "title": "CORE_40 skeleton",
+      "result": "PRESERVED; NOT_REAL_STRATEGY",
+      "artifact": "economic-regression.json"
+    },
+    {
+      "number": 12,
+      "title": "MAE / MFE",
+      "result": "DAILY_APPROX_RETROSPECTIVE_ONLY",
+      "artifact": "independent-review.json"
+    },
+    {
+      "number": 13,
+      "title": "Transaction cost attribution",
+      "result": "PASS_COMPONENTS_EQUAL",
+      "artifact": "economic-regression.json"
+    },
+    {
+      "number": 14,
+      "title": "Friction stress",
+      "result": "PASS_SIX_SYNTHETIC_RUNS",
+      "artifact": "economic-regression.json"
+    },
+    {
+      "number": 15,
+      "title": "Micro-Ladder",
+      "result": "PASS_REJECTIONS_PRESERVED",
+      "artifact": "economic-regression.json"
+    },
+    {
+      "number": 16,
+      "title": "Audit chain evidence",
+      "result": "PASS_SCOPED_APPEND_ONLY",
+      "artifact": "E2E-results.json"
+    },
+    {
+      "number": 17,
+      "title": "Independent Reviewer findings",
+      "result": "SCOPED_PASS; F01_RESOLVED",
+      "artifact": "independent-review.md"
+    },
+    {
+      "number": 18,
+      "title": "UNSET_REQUIRED inventory",
+      "result": "PRESERVED_UNKNOWN",
+      "artifact": "unset-required.json"
+    },
+    {
+      "number": 19,
+      "title": "Known limitations",
+      "result": "ACCEPTED_SCOPED_NOT_PERMANENT_WAIVER",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 20,
+      "title": "Deferred P1-B",
+      "result": "APPROVED_D04; GATE_BEFORE_ACTUAL_USE",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 21,
+      "title": "Deferred P2",
+      "result": "APPROVED_D04; REOPEN_IF_TOPOLOGY_EXPANDS",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 22,
+      "title": "PROD_ONLY_BLOCKERS",
+      "result": "ALL_CONTINUE_BLOCKING",
+      "artifact": "conditions.json"
+    },
+    {
+      "number": 23,
+      "title": "P1B_READINESS_GATE",
+      "result": "PASS_12_OF_12_FIXTURE_ONLY",
+      "artifact": "readiness-matrix.json"
+    },
+    {
+      "number": 24,
+      "title": "ProductionGate",
+      "result": "FALSE; REAL_DATA_ADMISSION_GATE_BLOCKED",
+      "artifact": "Gate.json"
+    },
+    {
+      "number": 25,
+      "title": "Artifact index",
+      "result": "HASHED; SELF_HASH_IN_EXTERNAL_CHECKPOINT",
+      "artifact": "artifact-index.json"
+    }
+  ]
+}

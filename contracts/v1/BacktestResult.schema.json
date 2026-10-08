@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:v1:BacktestResult",
+  "title": "BacktestResult",
+  "description": "V1 P0 BacktestResult; structural engineering contract, no implicit production policy.",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "BacktestResult"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "object_version": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Version"
+    },
+    "trace_id": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Id"
+    },
+    "content_hash": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Hash"
+    },
+    "recorded_at": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Timestamp"
+    },
+    "business_timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "provenance": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Provenance"
+    },
+    "reason_codes": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/ReasonCodes"
+    },
+    "invalidation": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Invalidation"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "strategy_id": {
+      "type": "string",
+      "enum": [
+        "CORE_40",
+        "EVENT_3"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "DEV",
+        "PAPER"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "snapshot_ref": {
+      "$ref": "urn:ashare:contracts:v1:common#/$defs/Ref"
+    },
+    "data_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "strategy_config_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "cost_model_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "code_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "scenario": {
+      "type": "string",
+      "enum": [
+        "OPTIMISTIC",
+        "BASE",
+        "PESSIMISTIC"
+      ]
+    },
+    "mae_resolution": {
+      "type": "string",
+      "enum": [
+        "1D",
+        "1M"
+      ]
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "finished_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "gross_pnl_cents": {
+          "type": "string",
+          "pattern": "^(0|-?[1-9][0-9]{0,37})$",
+          "x-unit": "CNY_CENT_INTEGER_STRING"
+        },
+        "net_pnl_cents": {
+          "type": "string",
+          "pattern": "^(0|-?[1-9][0-9]{0,37})$",
+          "x-unit": "CNY_CENT_INTEGER_STRING"
+        },
+        "fees_cents": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,37})$",
+          "x-unit": "CNY_CENT_INTEGER_STRING"
+        },
+        "slippage_cents": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,37})$",
+          "x-unit": "CNY_CENT_INTEGER_STRING"
+        },
+        "trade_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "max_drawdown_bps": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]{0,9})(\\.[0-9]{1,10})?$",
+          "maxLength": 22,
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        "mfe_bps": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]{0,9})(\\.[0-9]{1,10})?$",
+          "maxLength": 22,
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        "mae_bps": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]{0,9})(\\.[0-9]{1,10})?$",
+          "maxLength": 22,
+          "x-unit": "EXACT_DECIMAL_STRING"
+        },
+        "by_grade": {
+          "type": "object"
+        },
+        "by_signal": {
+          "type": "object"
+        },
+        "oos_status": {
+          "type": "string",
+          "enum": [
+            "SYNTHETIC",
+            "DEVELOPMENT",
+            "UNSEEN_OOS",
+            "PAPER"
+          ]
+        }
+      },
+      "required": [
+        "gross_pnl_cents",
+        "net_pnl_cents",
+        "fees_cents",
+        "slippage_cents",
+        "trade_count",
+        "max_drawdown_bps",
+        "mfe_bps",
+        "mae_bps",
+        "by_grade",
+        "by_signal",
+        "oos_status"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "recorded_at",
+    "business_timezone",
+    "provenance",
+    "reason_codes",
+    "invalidation",
+    "strategy_id",
+    "mode",
+    "account_id",
+    "snapshot_ref",
+    "data_hash",
+    "strategy_config_hash",
+    "cost_model_version",
+    "code_version",
+    "scenario",
+    "mae_resolution",
+    "started_at",
+    "finished_at",
+    "metrics"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "money": "canonical integer-cent string -> BigInt; Decimal prices/rates; no IEEE-754 money",
+    "timezone": "offset required; business Asia/Shanghai, storage UTC",
+    "hash": "SHA-256 of canonical JSON excluding only top-level content_hash",
+    "required_optional": "required array is authoritative; nullable is required but explicitly unknown/not applicable",
+    "reason_codes": "common ReasonCode enum; no arbitrary silent fallback",
+    "invalidated_by": [
+      "snapshot/config/code changed",
+      "OOS contaminated",
+      "resolution misrepresented"
+    ],
+    "business_policy_defaults": false
+  }
+}

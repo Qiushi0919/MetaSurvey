@@ -1,0 +1,777 @@
+{
+  "version": "1.0.0",
+  "contracts": [
+    {
+      "name": "RealResearchSandboxAssessment",
+      "version": "2.0.0",
+      "schema_ref": {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/contracts/wave-d/RealResearchSandboxAssessment.schema.json",
+        "sha256": "sha256:e13593debcd069c183bfaaf9cf3918bb6c0c2dec92bbff4c72a0f4d52752108a",
+        "bytes": 22218
+      },
+      "additionalProperties": false,
+      "required": [
+        "contract_name",
+        "contract_version",
+        "object_version",
+        "object_id",
+        "trace_id",
+        "symbol",
+        "strategy_id",
+        "namespace",
+        "trust_tier",
+        "purpose",
+        "source_admission",
+        "formal_source_admission",
+        "provider_identity_verified",
+        "license_verified",
+        "transport_integrity_verified",
+        "historical_visibility_proven",
+        "current_observed",
+        "decision_cutoff",
+        "retrieval_cutoff",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity",
+        "local_only",
+        "cloud_transfer",
+        "tradeable",
+        "validation_status",
+        "can_produce_order",
+        "production_eligible",
+        "productionGate",
+        "real_account_settings",
+        "reason_codes",
+        "invalidation_conditions",
+        "content_hash",
+        "body"
+      ],
+      "timezone": "UTC actual source clocks; Asia/Shanghai source dates/calendar",
+      "numbers": "Source/Decimal finite strings; missing null. No JSON floats; HALF_EVEN50/q6 diagnostics, no CNY ledger/production defaults",
+      "hash_trace": [
+        "object_id",
+        "object_version",
+        "trace_id",
+        "content_hash",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity"
+      ],
+      "reason_codes": {
+        "const": [
+          "UNVERIFIED_GATEWAY",
+          "CURRENT_OBSERVED_ONLY",
+          "NON_TRADEABLE",
+          "UNCALIBRATED",
+          "NO_HISTORICAL_PIT"
+        ]
+      },
+      "invalidation_conditions": {
+        "const": [
+          "RAW_SOURCE_CHANGED",
+          "RULE_CODE_SCHEMA_CHANGED",
+          "CUTOFF_NAMESPACE_CHANGED",
+          "PARENT_VERSION_CHANGED",
+          "CALLER_COPY_RESEAL"
+        ]
+      },
+      "authority": "Closed in-process registered factory. JSON/Ajv display validation alone does not confer live authority; native formal/packet/approval/order reject sandbox.",
+      "optional": [],
+      "body_required": [
+        "input_ref",
+        "wave_c_report_ref",
+        "features",
+        "dimensions",
+        "wave_c_quality",
+        "wave_c_timing",
+        "coordinates_cutoff",
+        "coordinates_policy",
+        "coverage",
+        "unknowns",
+        "unknown_delta",
+        "conflicts",
+        "warnings",
+        "status_evidence",
+        "announcements",
+        "adjustment",
+        "grade",
+        "probability",
+        "win_rate",
+        "net_edge",
+        "cost",
+        "account_suitability",
+        "tradeability",
+        "snapshot_B"
+      ],
+      "closed_body": false,
+      "enum_const_rules": {
+        "contract_name": {
+          "const": "RealResearchSandboxAssessment"
+        },
+        "contract_version": {
+          "const": "2.0.0"
+        },
+        "object_version": {
+          "const": 2
+        },
+        "symbol": {
+          "enum": [
+            "603993.SH",
+            "600312.SH",
+            "603228.SH"
+          ]
+        },
+        "strategy_id": {
+          "const": "CORE_40"
+        },
+        "namespace": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH:CORE_40"
+        },
+        "trust_tier": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH"
+        },
+        "purpose": {
+          "const": "LOCAL_EXPERIMENTAL_RESEARCH"
+        },
+        "source_admission": {
+          "const": "UNVERIFIED_GATEWAY"
+        },
+        "formal_source_admission": {
+          "const": "BLOCKED"
+        },
+        "provider_identity_verified": {
+          "const": false
+        },
+        "license_verified": {
+          "const": false
+        },
+        "transport_integrity_verified": {
+          "const": false
+        },
+        "historical_visibility_proven": {
+          "const": false
+        },
+        "current_observed": {
+          "const": true
+        },
+        "code_version": {
+          "const": "2.0.0-wave-d-local-loop"
+        },
+        "local_only": {
+          "const": true
+        },
+        "cloud_transfer": {
+          "const": false
+        },
+        "tradeable": {
+          "const": false
+        },
+        "validation_status": {
+          "const": "NON_TRADEABLE"
+        },
+        "can_produce_order": {
+          "const": false
+        },
+        "production_eligible": {
+          "const": false
+        },
+        "productionGate": {
+          "const": false
+        },
+        "real_account_settings": {
+          "const": "UNSET_REQUIRED"
+        },
+        "reason_codes": {
+          "const": [
+            "UNVERIFIED_GATEWAY",
+            "CURRENT_OBSERVED_ONLY",
+            "NON_TRADEABLE",
+            "UNCALIBRATED",
+            "NO_HISTORICAL_PIT"
+          ]
+        },
+        "invalidation_conditions": {
+          "const": [
+            "RAW_SOURCE_CHANGED",
+            "RULE_CODE_SCHEMA_CHANGED",
+            "CUTOFF_NAMESPACE_CHANGED",
+            "PARENT_VERSION_CHANGED",
+            "CALLER_COPY_RESEAL"
+          ]
+        }
+      }
+    },
+    {
+      "name": "RealResearchSandboxInput",
+      "version": "2.0.0",
+      "schema_ref": {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/contracts/wave-d/RealResearchSandboxInput.schema.json",
+        "sha256": "sha256:5d7dfc4c3bac378d641fb46520aff11e2a93b64d5dbf01cbd1f7dff526697d72",
+        "bytes": 41708
+      },
+      "additionalProperties": false,
+      "required": [
+        "contract_name",
+        "contract_version",
+        "object_version",
+        "object_id",
+        "trace_id",
+        "symbol",
+        "strategy_id",
+        "namespace",
+        "trust_tier",
+        "purpose",
+        "source_admission",
+        "formal_source_admission",
+        "provider_identity_verified",
+        "license_verified",
+        "transport_integrity_verified",
+        "historical_visibility_proven",
+        "current_observed",
+        "decision_cutoff",
+        "retrieval_cutoff",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity",
+        "local_only",
+        "cloud_transfer",
+        "tradeable",
+        "validation_status",
+        "can_produce_order",
+        "production_eligible",
+        "productionGate",
+        "real_account_settings",
+        "reason_codes",
+        "invalidation_conditions",
+        "content_hash",
+        "body"
+      ],
+      "timezone": "UTC actual source clocks; Asia/Shanghai source dates/calendar",
+      "numbers": "Source/Decimal finite strings; missing null. No JSON floats; HALF_EVEN50/q6 diagnostics, no CNY ledger/production defaults",
+      "hash_trace": [
+        "object_id",
+        "object_version",
+        "trace_id",
+        "content_hash",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity"
+      ],
+      "reason_codes": {
+        "const": [
+          "UNVERIFIED_GATEWAY",
+          "CURRENT_OBSERVED_ONLY",
+          "NON_TRADEABLE",
+          "UNCALIBRATED",
+          "NO_HISTORICAL_PIT"
+        ]
+      },
+      "invalidation_conditions": {
+        "const": [
+          "RAW_SOURCE_CHANGED",
+          "RULE_CODE_SCHEMA_CHANGED",
+          "CUTOFF_NAMESPACE_CHANGED",
+          "PARENT_VERSION_CHANGED",
+          "CALLER_COPY_RESEAL"
+        ]
+      },
+      "authority": "Closed in-process registered factory. JSON/Ajv display validation alone does not confer live authority; native formal/packet/approval/order reject sandbox.",
+      "optional": [],
+      "body_required": [
+        "observations",
+        "excluded",
+        "announcements",
+        "wave_c_input_ref",
+        "wave_c_assessment_ref",
+        "wave_c_report_ref"
+      ],
+      "closed_body": false,
+      "enum_const_rules": {
+        "contract_name": {
+          "const": "RealResearchSandboxInput"
+        },
+        "contract_version": {
+          "const": "2.0.0"
+        },
+        "object_version": {
+          "const": 2
+        },
+        "symbol": {
+          "enum": [
+            "603993.SH",
+            "600312.SH",
+            "603228.SH"
+          ]
+        },
+        "strategy_id": {
+          "const": "CORE_40"
+        },
+        "namespace": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH:CORE_40"
+        },
+        "trust_tier": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH"
+        },
+        "purpose": {
+          "const": "LOCAL_EXPERIMENTAL_RESEARCH"
+        },
+        "source_admission": {
+          "const": "UNVERIFIED_GATEWAY"
+        },
+        "formal_source_admission": {
+          "const": "BLOCKED"
+        },
+        "provider_identity_verified": {
+          "const": false
+        },
+        "license_verified": {
+          "const": false
+        },
+        "transport_integrity_verified": {
+          "const": false
+        },
+        "historical_visibility_proven": {
+          "const": false
+        },
+        "current_observed": {
+          "const": true
+        },
+        "code_version": {
+          "const": "2.0.0-wave-d-local-loop"
+        },
+        "local_only": {
+          "const": true
+        },
+        "cloud_transfer": {
+          "const": false
+        },
+        "tradeable": {
+          "const": false
+        },
+        "validation_status": {
+          "const": "NON_TRADEABLE"
+        },
+        "can_produce_order": {
+          "const": false
+        },
+        "production_eligible": {
+          "const": false
+        },
+        "productionGate": {
+          "const": false
+        },
+        "real_account_settings": {
+          "const": "UNSET_REQUIRED"
+        },
+        "reason_codes": {
+          "const": [
+            "UNVERIFIED_GATEWAY",
+            "CURRENT_OBSERVED_ONLY",
+            "NON_TRADEABLE",
+            "UNCALIBRATED",
+            "NO_HISTORICAL_PIT"
+          ]
+        },
+        "invalidation_conditions": {
+          "const": [
+            "RAW_SOURCE_CHANGED",
+            "RULE_CODE_SCHEMA_CHANGED",
+            "CUTOFF_NAMESPACE_CHANGED",
+            "PARENT_VERSION_CHANGED",
+            "CALLER_COPY_RESEAL"
+          ]
+        }
+      }
+    },
+    {
+      "name": "RealResearchSandboxReport",
+      "version": "2.0.0",
+      "schema_ref": {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/contracts/wave-d/RealResearchSandboxReport.schema.json",
+        "sha256": "sha256:08904f8f22e5b3bcf33a84dd7f111784df5994f8f05e98b4af37cd1c3d0f6d01",
+        "bytes": 22310
+      },
+      "additionalProperties": false,
+      "required": [
+        "contract_name",
+        "contract_version",
+        "object_version",
+        "object_id",
+        "trace_id",
+        "symbol",
+        "strategy_id",
+        "namespace",
+        "trust_tier",
+        "purpose",
+        "source_admission",
+        "formal_source_admission",
+        "provider_identity_verified",
+        "license_verified",
+        "transport_integrity_verified",
+        "historical_visibility_proven",
+        "current_observed",
+        "decision_cutoff",
+        "retrieval_cutoff",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity",
+        "local_only",
+        "cloud_transfer",
+        "tradeable",
+        "validation_status",
+        "can_produce_order",
+        "production_eligible",
+        "productionGate",
+        "real_account_settings",
+        "reason_codes",
+        "invalidation_conditions",
+        "content_hash",
+        "body"
+      ],
+      "timezone": "UTC actual source clocks; Asia/Shanghai source dates/calendar",
+      "numbers": "Source/Decimal finite strings; missing null. No JSON floats; HALF_EVEN50/q6 diagnostics, no CNY ledger/production defaults",
+      "hash_trace": [
+        "object_id",
+        "object_version",
+        "trace_id",
+        "content_hash",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity"
+      ],
+      "reason_codes": {
+        "const": [
+          "UNVERIFIED_GATEWAY",
+          "CURRENT_OBSERVED_ONLY",
+          "NON_TRADEABLE",
+          "UNCALIBRATED",
+          "NO_HISTORICAL_PIT"
+        ]
+      },
+      "invalidation_conditions": {
+        "const": [
+          "RAW_SOURCE_CHANGED",
+          "RULE_CODE_SCHEMA_CHANGED",
+          "CUTOFF_NAMESPACE_CHANGED",
+          "PARENT_VERSION_CHANGED",
+          "CALLER_COPY_RESEAL"
+        ]
+      },
+      "authority": "Closed in-process registered factory. JSON/Ajv display validation alone does not confer live authority; native formal/packet/approval/order reject sandbox.",
+      "optional": [],
+      "body_required": [
+        "input_ref",
+        "wave_c_report_ref",
+        "features",
+        "dimensions",
+        "wave_c_quality",
+        "wave_c_timing",
+        "coordinates_cutoff",
+        "coordinates_policy",
+        "coverage",
+        "unknowns",
+        "unknown_delta",
+        "conflicts",
+        "warnings",
+        "status_evidence",
+        "announcements",
+        "adjustment",
+        "grade",
+        "probability",
+        "win_rate",
+        "net_edge",
+        "cost",
+        "account_suitability",
+        "tradeability",
+        "snapshot_B",
+        "assessment_ref"
+      ],
+      "closed_body": false,
+      "enum_const_rules": {
+        "contract_name": {
+          "const": "RealResearchSandboxReport"
+        },
+        "contract_version": {
+          "const": "2.0.0"
+        },
+        "object_version": {
+          "const": 2
+        },
+        "symbol": {
+          "enum": [
+            "603993.SH",
+            "600312.SH",
+            "603228.SH"
+          ]
+        },
+        "strategy_id": {
+          "const": "CORE_40"
+        },
+        "namespace": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH:CORE_40"
+        },
+        "trust_tier": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH"
+        },
+        "purpose": {
+          "const": "LOCAL_EXPERIMENTAL_RESEARCH"
+        },
+        "source_admission": {
+          "const": "UNVERIFIED_GATEWAY"
+        },
+        "formal_source_admission": {
+          "const": "BLOCKED"
+        },
+        "provider_identity_verified": {
+          "const": false
+        },
+        "license_verified": {
+          "const": false
+        },
+        "transport_integrity_verified": {
+          "const": false
+        },
+        "historical_visibility_proven": {
+          "const": false
+        },
+        "current_observed": {
+          "const": true
+        },
+        "code_version": {
+          "const": "2.0.0-wave-d-local-loop"
+        },
+        "local_only": {
+          "const": true
+        },
+        "cloud_transfer": {
+          "const": false
+        },
+        "tradeable": {
+          "const": false
+        },
+        "validation_status": {
+          "const": "NON_TRADEABLE"
+        },
+        "can_produce_order": {
+          "const": false
+        },
+        "production_eligible": {
+          "const": false
+        },
+        "productionGate": {
+          "const": false
+        },
+        "real_account_settings": {
+          "const": "UNSET_REQUIRED"
+        },
+        "reason_codes": {
+          "const": [
+            "UNVERIFIED_GATEWAY",
+            "CURRENT_OBSERVED_ONLY",
+            "NON_TRADEABLE",
+            "UNCALIBRATED",
+            "NO_HISTORICAL_PIT"
+          ]
+        },
+        "invalidation_conditions": {
+          "const": [
+            "RAW_SOURCE_CHANGED",
+            "RULE_CODE_SCHEMA_CHANGED",
+            "CUTOFF_NAMESPACE_CHANGED",
+            "PARENT_VERSION_CHANGED",
+            "CALLER_COPY_RESEAL"
+          ]
+        }
+      }
+    },
+    {
+      "name": "ResearchComparison",
+      "version": "1.0.0",
+      "schema_ref": {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/contracts/wave-d/ResearchComparison.schema.json",
+        "sha256": "sha256:414fb6de787b3a96d37f634808a8549727841e6f4745d05e3f8047efcbac6d0b",
+        "bytes": 15391
+      },
+      "additionalProperties": false,
+      "required": [
+        "contract_name",
+        "contract_version",
+        "object_version",
+        "object_id",
+        "trace_id",
+        "symbol",
+        "strategy_id",
+        "namespace",
+        "trust_tier",
+        "purpose",
+        "source_admission",
+        "formal_source_admission",
+        "provider_identity_verified",
+        "license_verified",
+        "transport_integrity_verified",
+        "historical_visibility_proven",
+        "current_observed",
+        "decision_cutoff",
+        "retrieval_cutoff",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity",
+        "local_only",
+        "cloud_transfer",
+        "tradeable",
+        "validation_status",
+        "can_produce_order",
+        "production_eligible",
+        "productionGate",
+        "real_account_settings",
+        "reason_codes",
+        "invalidation_conditions",
+        "content_hash",
+        "body"
+      ],
+      "timezone": "UTC actual source clocks; Asia/Shanghai source dates/calendar",
+      "numbers": "Source/Decimal finite strings; missing null. No JSON floats; HALF_EVEN50/q6 diagnostics, no CNY ledger/production defaults",
+      "hash_trace": [
+        "object_id",
+        "object_version",
+        "trace_id",
+        "content_hash",
+        "rules_hash",
+        "code_hash",
+        "code_version",
+        "source_identity"
+      ],
+      "reason_codes": {
+        "const": [
+          "UNVERIFIED_GATEWAY",
+          "CURRENT_OBSERVED_ONLY",
+          "NON_TRADEABLE",
+          "UNCALIBRATED",
+          "NO_HISTORICAL_PIT"
+        ]
+      },
+      "invalidation_conditions": {
+        "const": [
+          "RAW_SOURCE_CHANGED",
+          "RULE_CODE_SCHEMA_CHANGED",
+          "CUTOFF_NAMESPACE_CHANGED",
+          "PARENT_VERSION_CHANGED",
+          "CALLER_COPY_RESEAL"
+        ]
+      },
+      "authority": "Closed in-process registered factory. JSON/Ajv display validation alone does not confer live authority; native formal/packet/approval/order reject sandbox.",
+      "optional": [],
+      "body_required": [
+        "reports",
+        "comparison_method",
+        "total_score",
+        "grade",
+        "buy_sell"
+      ],
+      "closed_body": false,
+      "enum_const_rules": {
+        "contract_name": {
+          "const": "ResearchComparison"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "object_version": {
+          "const": 1
+        },
+        "symbol": {
+          "const": "COHORT:THREE"
+        },
+        "strategy_id": {
+          "const": "CORE_40"
+        },
+        "namespace": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH:CORE_40"
+        },
+        "trust_tier": {
+          "const": "LOCAL_EXPERIMENTAL_REAL_RESEARCH"
+        },
+        "purpose": {
+          "const": "LOCAL_EXPERIMENTAL_RESEARCH"
+        },
+        "source_admission": {
+          "const": "UNVERIFIED_GATEWAY"
+        },
+        "formal_source_admission": {
+          "const": "BLOCKED"
+        },
+        "provider_identity_verified": {
+          "const": false
+        },
+        "license_verified": {
+          "const": false
+        },
+        "transport_integrity_verified": {
+          "const": false
+        },
+        "historical_visibility_proven": {
+          "const": false
+        },
+        "current_observed": {
+          "const": true
+        },
+        "code_version": {
+          "const": "2.0.0-wave-d-local-loop"
+        },
+        "local_only": {
+          "const": true
+        },
+        "cloud_transfer": {
+          "const": false
+        },
+        "tradeable": {
+          "const": false
+        },
+        "validation_status": {
+          "const": "NON_TRADEABLE"
+        },
+        "can_produce_order": {
+          "const": false
+        },
+        "production_eligible": {
+          "const": false
+        },
+        "productionGate": {
+          "const": false
+        },
+        "real_account_settings": {
+          "const": "UNSET_REQUIRED"
+        },
+        "reason_codes": {
+          "const": [
+            "UNVERIFIED_GATEWAY",
+            "CURRENT_OBSERVED_ONLY",
+            "NON_TRADEABLE",
+            "UNCALIBRATED",
+            "NO_HISTORICAL_PIT"
+          ]
+        },
+        "invalidation_conditions": {
+          "const": [
+            "RAW_SOURCE_CHANGED",
+            "RULE_CODE_SCHEMA_CHANGED",
+            "CUTOFF_NAMESPACE_CHANGED",
+            "PARENT_VERSION_CHANGED",
+            "CALLER_COPY_RESEAL"
+          ]
+        }
+      }
+    }
+  ],
+  "old_contracts_unchanged": true,
+  "new_migrations": [],
+  "schema_version": 6,
+  "productionGate": false
+}

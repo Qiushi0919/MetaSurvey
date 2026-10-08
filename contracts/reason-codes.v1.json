@@ -1,0 +1,656 @@
+{
+  "registry_version": "1.0.0",
+  "policy_defaults": false,
+  "entries": [
+    {
+      "code": "ACCOUNT_MISMATCH",
+      "meaning": "account mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "ACTION_ORDERING_INVALID",
+      "meaning": "action ordering invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "ADJUSTMENT_VERSION_REQUIRED",
+      "meaning": "adjustment version required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "APPROVAL_EXPIRED",
+      "meaning": "approval expired",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "APPROVAL_NOT_AUTHENTICATED",
+      "meaning": "approval not authenticated",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "BASELINE_CONFIG_ONLY",
+      "meaning": "baseline config only",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "CALENDAR_INCOMPLETE",
+      "meaning": "calendar incomplete",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "CALENDAR_REQUIRED",
+      "meaning": "calendar required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "CARD_VERSION_INVALIDATED",
+      "meaning": "card version invalidated",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "CASH_DELTA_MISMATCH",
+      "meaning": "cash delta mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "CONTRACT_SCHEMA_INVALID",
+      "meaning": "contract schema invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "COST_CONFIG_INVALID",
+      "meaning": "cost config invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "COST_CONFIG_REQUIRED",
+      "meaning": "cost config required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "COST_CONFIG_UNSET",
+      "meaning": "cost config unset",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "COST_VERSION_NOT_EFFECTIVE",
+      "meaning": "cost version not effective",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "COST_VERSION_REQUIRED",
+      "meaning": "cost version required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DATA_QUALITY_FAILED",
+      "meaning": "data quality failed",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DECIMAL_PRECISION_EXCEEDED",
+      "meaning": "decimal precision exceeded",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_DECISION",
+      "meaning": "duplicate decision",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_EVIDENCE",
+      "meaning": "duplicate evidence",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_EXECUTION_HISTORY",
+      "meaning": "duplicate execution history",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_FILL",
+      "meaning": "duplicate fill",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_LOT",
+      "meaning": "duplicate lot",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_LOT_ALLOCATION",
+      "meaning": "duplicate lot allocation",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_ORDER",
+      "meaning": "duplicate order",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_ORDER_APPLICATION",
+      "meaning": "duplicate order application",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "DUPLICATE_POSITION",
+      "meaning": "duplicate position",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "EDGE_NOT_VERIFIED",
+      "meaning": "edge not verified",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "EVENT_TIME_REQUIRED",
+      "meaning": "event time required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "EXPECTED_LOTS_REQUIRED",
+      "meaning": "expected lots required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "EXPECTED_NAMESPACE_MISMATCH",
+      "meaning": "expected namespace mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FEE_INCLUSION_UNRESOLVED",
+      "meaning": "fee inclusion unresolved",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FINAL_CONFIRMATION_REQUIRED",
+      "meaning": "final confirmation required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FIXTURE_KIND_REQUIRED",
+      "meaning": "fixture kind required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FREEZE_BEFORE_REVEAL_REQUIRED",
+      "meaning": "freeze before reveal required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FUTURE_DATA",
+      "meaning": "future data",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FUTURE_MARKET_DATA",
+      "meaning": "future market data",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "FUTURE_OPENING_POSITION",
+      "meaning": "future opening position",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "GROSS_NOTIONAL_MISMATCH",
+      "meaning": "gross notional mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "HASH_MISMATCH",
+      "meaning": "hash mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "IDENTITY_REQUIRED",
+      "meaning": "identity required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INSUFFICIENT_CASH",
+      "meaning": "insufficient cash",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INSUFFICIENT_CASH_AT_EVENT",
+      "meaning": "insufficient cash at event",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INSUFFICIENT_POSITION",
+      "meaning": "insufficient position",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INSUFFICIENT_QUANTITY",
+      "meaning": "insufficient quantity",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INTEGER_JSON_NUMBER_REQUIRED",
+      "meaning": "integer json number required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALIDATION_REASON_REQUIRED",
+      "meaning": "invalidation reason required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALIDATION_STATE_INVALID",
+      "meaning": "invalidation state invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_CLOCK",
+      "meaning": "invalid clock",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_COST_VALIDITY",
+      "meaning": "invalid cost validity",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_DECIMAL",
+      "meaning": "invalid decimal",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_EVENT_TIME",
+      "meaning": "invalid event time",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_FEE_RATE",
+      "meaning": "invalid fee rate",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_MONEY",
+      "meaning": "invalid money",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_QUANTITY",
+      "meaning": "invalid quantity",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_SIDE",
+      "meaning": "invalid side",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_T1_AVAILABILITY",
+      "meaning": "invalid t1 availability",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_TRADE_DATE",
+      "meaning": "invalid trade date",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "INVALID_TRADING_CALENDAR",
+      "meaning": "invalid trading calendar",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "JSON_OBJECT_REQUIRED",
+      "meaning": "json object required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "KILL_SWITCH_ACTIVE",
+      "meaning": "kill switch active",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEDGER_CASH_MISMATCH",
+      "meaning": "ledger cash mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEDGER_INPUT_REQUIRED",
+      "meaning": "ledger input required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEDGER_POSITION_MISMATCH",
+      "meaning": "ledger position mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEDGER_STATE_REQUIRED",
+      "meaning": "ledger state required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_CASH_ACTION_MISMATCH",
+      "meaning": "legacy cash action mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_CASH_DELTA_MISMATCH",
+      "meaning": "legacy cash delta mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_CASH_MISMATCH",
+      "meaning": "legacy cash mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_CLI_HASH_MISMATCH",
+      "meaning": "legacy cli hash mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_EXPERIMENT_ONLY",
+      "meaning": "legacy experiment only",
+      "category": "PROVENANCE_TAG"
+    },
+    {
+      "code": "LEGACY_GROSS_MISMATCH",
+      "meaning": "legacy gross mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_INPUT_REQUIRED",
+      "meaning": "legacy input required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_ITEMIZED_FEES_REQUIRED",
+      "meaning": "legacy itemized fees required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_NAV_MISMATCH",
+      "meaning": "legacy nav mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_NEGATIVE_CASH",
+      "meaning": "legacy negative cash",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_NEGATIVE_POSITION",
+      "meaning": "legacy negative position",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_POSITION_MISMATCH",
+      "meaning": "legacy position mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_SNAPSHOT_POSITIONS_REQUIRED",
+      "meaning": "legacy snapshot positions required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LEGACY_UNSUPPORTED_ENTRY",
+      "meaning": "legacy unsupported entry",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LLM_APPROVAL_NOT_AUTHORIZATION",
+      "meaning": "llm approval not authorization",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LOT_NOT_FOUND",
+      "meaning": "lot not found",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "LOT_QUANTITY_MISMATCH",
+      "meaning": "lot quantity mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "MATERIAL_HARD_NEGATIVE",
+      "meaning": "material hard negative",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "MISSING_EVIDENCE",
+      "meaning": "missing evidence",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "MODE_MISMATCH",
+      "meaning": "mode mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "NEGATIVE_MONEY",
+      "meaning": "negative money",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "NONCANONICAL_DECIMAL",
+      "meaning": "noncanonical decimal",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "NONPOSITIVE_PRICE",
+      "meaning": "nonpositive price",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "NOT_APPLICABLE",
+      "meaning": "not applicable",
+      "category": "PROVENANCE_TAG"
+    },
+    {
+      "code": "OFFICIAL_STATUS_UNKNOWN",
+      "meaning": "official status unknown",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "ORDER_TERMS_CHANGED",
+      "meaning": "order terms changed",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "PRICE_INVALID",
+      "meaning": "price invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "PROBABILITY_RANGE_INVALID",
+      "meaning": "probability range invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "PROBABILITY_SUM_INVALID",
+      "meaning": "probability sum invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "PRODUCTION_DISABLED_P0",
+      "meaning": "production disabled p0",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "RAW_ADJUSTMENT_VERSION_REQUIRED",
+      "meaning": "raw adjustment version required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "RECONCILIATION_FAILED",
+      "meaning": "reconciliation failed",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "RISK_CONFIG_INVALID",
+      "meaning": "risk config invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "RISK_CONFIG_UNSET",
+      "meaning": "risk config unset",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SCORE_RANGE_INVALID",
+      "meaning": "score range invalid",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SECURITY_IDENTITY_MISMATCH",
+      "meaning": "security identity mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SECURITY_MISMATCH",
+      "meaning": "security mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SELL_LOT_ALLOCATION_REQUIRED",
+      "meaning": "sell lot allocation required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SENSITIVE_FIXTURE_REJECTED",
+      "meaning": "sensitive fixture rejected",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SIGNAL_VERSION_INVALIDATED",
+      "meaning": "signal version invalidated",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SIMULATION_ONLY",
+      "meaning": "simulation only",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SLIPPAGE_DOUBLE_COUNT",
+      "meaning": "slippage double count",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SLIPPAGE_DOUBLE_COUNT_OR_UNRESOLVED",
+      "meaning": "slippage double count or unresolved",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SNAPSHOT_BINDING_MISMATCH",
+      "meaning": "snapshot binding mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "STALE_MARKET_DATA",
+      "meaning": "stale market data",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "STRATEGY_HORIZON_MISMATCH",
+      "meaning": "strategy horizon mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "STRATEGY_NAMESPACE_BLOCKED",
+      "meaning": "strategy namespace blocked",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "STRATEGY_NAMESPACE_MISMATCH",
+      "meaning": "strategy namespace mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "SYNTHETIC_FIXTURE_ONLY",
+      "meaning": "synthetic fixture only",
+      "category": "PROVENANCE_TAG"
+    },
+    {
+      "code": "T1_BLOCKED",
+      "meaning": "t1 blocked",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "THESIS_INVALIDATED",
+      "meaning": "thesis invalidated",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "TRADE_DATE_TIME_MISMATCH",
+      "meaning": "trade date time mismatch",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "TRIGGER_TIME_REQUIRED",
+      "meaning": "trigger time required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "T_PLUS_ONE",
+      "meaning": "t plus one",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNCALIBRATED_PROBABILITY",
+      "meaning": "uncalibrated probability",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNKNOWN_PUBLICATION",
+      "meaning": "unknown publication",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNRESOLVED_BUSINESS_POLICY",
+      "meaning": "unresolved business policy",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSET_REQUIRED",
+      "meaning": "unset required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSET_REQUIRED_CONFIG",
+      "meaning": "unset required config",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSUPPORTED_COMMISSION_SCOPE",
+      "meaning": "unsupported commission scope",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSUPPORTED_CORPORATE_ACTION",
+      "meaning": "unsupported corporate action",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSUPPORTED_CURRENCY",
+      "meaning": "unsupported currency",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSUPPORTED_ROUNDING",
+      "meaning": "unsupported rounding",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "UNSUPPORTED_VERSION",
+      "meaning": "unsupported version",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    },
+    {
+      "code": "USER_APPROVAL_REQUIRED",
+      "meaning": "user approval required",
+      "category": "VALIDATION_OR_ADMISSION_BLOCK"
+    }
+  ]
+}

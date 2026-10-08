@@ -1,0 +1,1999 @@
+{
+  "actual_independent_review_broker_calls": 0,
+  "actual_independent_review_model_calls": 0,
+  "actual_independent_review_network_calls": 0,
+  "artifact_epoch": "CANDIDATE-G4",
+  "candidate_commit": "a2abc62d641388dd8298e7e31c8ee916fdb9c546",
+  "candidate_counts_observed": {
+    "admitted_clock_evidence": 0,
+    "admitted_source_observations": 0,
+    "broker_calls": 0,
+    "execution_writes": 0,
+    "model_calls": 0,
+    "real_approvals": 0,
+    "real_assessments": 0,
+    "real_candidates": 0,
+    "real_cards": 0,
+    "real_orders": 0,
+    "real_packets": 0,
+    "real_receipts": 0,
+    "real_signals": 0,
+    "real_snapshots": 0,
+    "source_policies": 0
+  },
+  "candidate_higher_gates_observed": {
+    "BROKER_GATE": "BLOCKED",
+    "CLOUD_MODEL_GATE": "BLOCKED",
+    "CLOUD_RESEARCH_EXPORT_GATE": "BLOCKED",
+    "HISTORICAL_BACKTEST_GATE": "BLOCKED",
+    "LOCAL_REAL_RESEARCH_GATE": "BLOCKED",
+    "P1B_RESEARCH_PILOT_GATE": "BLOCKED",
+    "PRODUCTION_DATA_GATE": "BLOCKED",
+    "REAL_DATA_ADMISSION_GATE": "BLOCKED",
+    "REDISTRIBUTION_GATE": "BLOCKED",
+    "SIGNAL_ORDER_GATE": "BLOCKED"
+  },
+  "case_record_policy": "One expected/actual check is one case record; multiple checks of the same response are not independent market events, new network requests, or extra regression tests.",
+  "categories": [
+    {
+      "actual_assertion_count": 3,
+      "actual_case_record_count": 3,
+      "cases": [
+        {
+          "actual": "RAW_BYTES_MUTATED",
+          "category": 1,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:RAW_BYTES_MUTATED",
+          "name": "one-byte actual raw changed",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 1,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "registered result stale after actual raw changed",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 1,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "source manifest changed",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 1,
+      "name": "Raw 单字节与来源变更",
+      "pass_count": 3
+    },
+    {
+      "actual_assertion_count": 6,
+      "actual_case_record_count": 6,
+      "cases": [
+        {
+          "actual": 55,
+          "category": 2,
+          "critical_false_acceptance": false,
+          "expected": 55,
+          "name": "HTTP200/code0 actually observed",
+          "passed": true
+        },
+        {
+          "actual": "BLOCKED",
+          "category": 2,
+          "critical_false_acceptance": false,
+          "expected": "BLOCKED",
+          "name": "all success rows still blocked source",
+          "passed": true
+        },
+        {
+          "actual": "TECHNICAL_ACCESS_ONLY_NOT_VERIFIED_PRODUCT_OR_ACCOUNT_TIER",
+          "category": 2,
+          "critical_false_acceptance": false,
+          "expected": "TECHNICAL_ACCESS_ONLY_NOT_VERIFIED_PRODUCT_OR_ACCOUNT_TIER",
+          "name": "Owner tier is only technical access",
+          "passed": true
+        },
+        {
+          "actual": "NOT_READY",
+          "category": 2,
+          "critical_false_acceptance": false,
+          "expected": "NOT_READY",
+          "name": "no supplier proof recommendation",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 2,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "actual quarantined G3 candidate validates diagnostic schema",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 2,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "extra Owner 15000 is no admission evidence",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 2,
+      "name": "HTTP200/code0、Owner15000 不等于准入",
+      "pass_count": 6
+    },
+    {
+      "actual_assertion_count": 9,
+      "actual_case_record_count": 9,
+      "cases": [
+        {
+          "actual": "REPORT_PERMISSION_ESCALATION",
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_PERMISSION_ESCALATION",
+          "name": "self assert provider_identity_verified",
+          "passed": true
+        },
+        {
+          "actual": "REPORT_PERMISSION_ESCALATION",
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_PERMISSION_ESCALATION",
+          "name": "self assert license_verified",
+          "passed": true
+        },
+        {
+          "actual": "REPORT_PERMISSION_ESCALATION",
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_PERMISSION_ESCALATION",
+          "name": "self assert transport_integrity_verified",
+          "passed": true
+        },
+        {
+          "actual": "PROVIDER_SELF_ASSERTION_FORBIDDEN",
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:PROVIDER_SELF_ASSERTION_FORBIDDEN",
+          "name": "result resealed provider selfassert provider_identity_verified",
+          "passed": true
+        },
+        {
+          "actual": "PROVIDER_SELF_ASSERTION_FORBIDDEN",
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:PROVIDER_SELF_ASSERTION_FORBIDDEN",
+          "name": "result resealed provider selfassert license_verified",
+          "passed": true
+        },
+        {
+          "actual": "PROVIDER_SELF_ASSERTION_FORBIDDEN",
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:PROVIDER_SELF_ASSERTION_FORBIDDEN",
+          "name": "result resealed provider selfassert transport_integrity_verified",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "schema selfassert provider_identity_verified",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "schema selfassert license_verified",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 3,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "schema selfassert transport_integrity_verified",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 3,
+      "name": "provider/license/transport 自报 true",
+      "pass_count": 9
+    },
+    {
+      "actual_assertion_count": 5,
+      "actual_case_record_count": 5,
+      "cases": [
+        {
+          "actual": "REPORT_SCOPE_INVALID",
+          "category": 4,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_SCOPE_INVALID",
+          "name": "official alias provider_id",
+          "passed": true
+        },
+        {
+          "actual": "REPORT_SCOPE_INVALID",
+          "category": 4,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_SCOPE_INVALID",
+          "name": "official alias source_classification",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "category": 4,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "name": "resealed provider_id cannot upgrade",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 4,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "official provider alias",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 4,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "official source class alias",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 4,
+      "name": "OFFICIAL 别名",
+      "pass_count": 5
+    },
+    {
+      "actual_assertion_count": 13,
+      "actual_case_record_count": 13,
+      "cases": [
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "ROW_SYMBOL_OUT_OF_SCOPE response blocked",
+          "passed": true
+        },
+        {
+          "actual": 2,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": 2,
+          "name": "ROW_SYMBOL_OUT_OF_SCOPE all rows retained",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "ROW_SYMBOL_OUT_OF_SCOPE reason retained",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "ROW_DATE_OUT_OF_SCOPE_OR_UNKNOWN response blocked",
+          "passed": true
+        },
+        {
+          "actual": 2,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": 2,
+          "name": "ROW_DATE_OUT_OF_SCOPE_OR_UNKNOWN all rows retained",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "ROW_DATE_OUT_OF_SCOPE_OR_UNKNOWN reason retained",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "ROW_DATE_OUT_OF_SCOPE_OR_UNKNOWN response blocked",
+          "passed": true
+        },
+        {
+          "actual": 2,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": 2,
+          "name": "ROW_DATE_OUT_OF_SCOPE_OR_UNKNOWN all rows retained",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "ROW_DATE_OUT_OF_SCOPE_OR_UNKNOWN reason retained",
+          "passed": true
+        },
+        {
+          "actual": 2,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": 2,
+          "name": "namechange unknown ann keeps all rows",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "unknown ann blocks complete namechange",
+          "passed": true
+        },
+        {
+          "actual": null,
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": null,
+          "name": "unknown ann never invented",
+          "passed": true
+        },
+        {
+          "actual": "UNKNOWN_BOUNDARY_NO_INFINITE_OR_CURRENT_NAME_SUBSTITUTION",
+          "category": 5,
+          "critical_false_acceptance": false,
+          "expected": "UNKNOWN_BOUNDARY_NO_INFINITE_OR_CURRENT_NAME_SUBSTITUTION",
+          "name": "unknown effective boundary remains unknown",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 5,
+      "name": "响应 symbol/date 越界、未知 ann 整体阻断并保留",
+      "pass_count": 13
+    },
+    {
+      "actual_assertion_count": 2,
+      "actual_case_record_count": 2,
+      "cases": [
+        {
+          "actual": "CLOCK_BACKFILL_FORBIDDEN",
+          "category": 6,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOCK_BACKFILL_FORBIDDEN",
+          "name": "available backfill real report",
+          "passed": true
+        },
+        {
+          "actual": "CLOCK_BACKFILL_FORBIDDEN",
+          "category": 6,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOCK_BACKFILL_FORBIDDEN",
+          "name": "new fixture available backfill",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 6,
+      "name": "available_at 历史回填",
+      "pass_count": 2
+    },
+    {
+      "actual_assertion_count": 1,
+      "actual_case_record_count": 1,
+      "cases": [
+        {
+          "actual": "CLOCK_BACKFILL_FORBIDDEN",
+          "category": 7,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOCK_BACKFILL_FORBIDDEN",
+          "name": "DATE_ONLY fabricated midnight",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 7,
+      "name": "DATE_ONLY 虚构午夜",
+      "pass_count": 1
+    },
+    {
+      "actual_assertion_count": 4,
+      "actual_case_record_count": 4,
+      "cases": [
+        {
+          "actual": "REPORT_PERMISSION_ESCALATION",
+          "category": 8,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_PERMISSION_ESCALATION",
+          "name": "report historical proof true",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 8,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "candidate historical proof fixed false",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "category": 8,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "name": "resealed historical_visibility_proven cannot upgrade",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 8,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "historical true strict schema",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 8,
+      "name": "historical_visibility true",
+      "pass_count": 4
+    },
+    {
+      "actual_assertion_count": 3,
+      "actual_case_record_count": 3,
+      "cases": [
+        {
+          "actual": [
+            "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS"
+          ],
+          "category": 9,
+          "critical_false_acceptance": false,
+          "expected": [
+            "RAW_UNADJUSTED_OHLC_PROVIDER_PRE_CLOSE_EX_RIGHTS"
+          ],
+          "name": "all actual bars are raw unadjusted",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 9,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "analysis publishes adjusted source false",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 9,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "adjusted bar basis rejected",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 9,
+      "name": "daily adjusted 污染",
+      "pass_count": 3
+    },
+    {
+      "actual_assertion_count": 6,
+      "actual_case_record_count": 6,
+      "cases": [
+        {
+          "actual": "HAND_DOCUMENTATION_ONLY",
+          "category": 10,
+          "critical_false_acceptance": false,
+          "expected": "HAND_DOCUMENTATION_ONLY",
+          "name": "quantity uses documented hand only",
+          "passed": true
+        },
+        {
+          "actual": "THOUSAND_CNY_DOCUMENTATION_ONLY",
+          "category": 10,
+          "critical_false_acceptance": false,
+          "expected": "THOUSAND_CNY_DOCUMENTATION_ONLY",
+          "name": "amount uses documented thousand CNY only",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 10,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "calibration is not guessed",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 10,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "volume cannot be guessed shares",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 10,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "amount cannot be guessed CNY",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 10,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "numerical calibration selfassert refused",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 10,
+      "name": "股/元单位猜测与校准",
+      "pass_count": 6
+    },
+    {
+      "actual_assertion_count": 3,
+      "actual_case_record_count": 3,
+      "cases": [
+        {
+          "actual": "EMPTY_RESPONSE_UNKNOWN",
+          "category": 11,
+          "critical_false_acceptance": false,
+          "expected": "EMPTY_RESPONSE_UNKNOWN",
+          "name": "synthetic suspend_d empty is UNKNOWN",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 11,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "synthetic suspend_d no negative proof",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 11,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "real suspend_d empty block retained",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 11,
+      "name": "空停牌 UNKNOWN",
+      "pass_count": 3
+    },
+    {
+      "actual_assertion_count": 5,
+      "actual_case_record_count": 5,
+      "cases": [
+        {
+          "actual": "EMPTY_RESPONSE_UNKNOWN",
+          "category": 12,
+          "critical_false_acceptance": false,
+          "expected": "EMPTY_RESPONSE_UNKNOWN",
+          "name": "synthetic stock_st empty is UNKNOWN",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 12,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "synthetic stock_st no negative proof",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 12,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "real stock_st empty block retained",
+          "passed": true
+        },
+        {
+          "actual": 1,
+          "category": 12,
+          "critical_false_acceptance": false,
+          "expected": 1,
+          "name": "positive ST observation retained",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 12,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "positive ST is no history entitlement",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 12,
+      "name": "空 ST UNKNOWN、合法 ST 观察保留",
+      "pass_count": 5
+    },
+    {
+      "actual_assertion_count": 3,
+      "actual_case_record_count": 3,
+      "cases": [
+        {
+          "actual": 2,
+          "category": 13,
+          "critical_false_acceptance": false,
+          "expected": 2,
+          "name": "multiple originals retained",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 13,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "cash never aggregated",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 13,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "multiple originals never resolved",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 13,
+      "name": "多 dividend 原件合并",
+      "pass_count": 3
+    },
+    {
+      "actual_assertion_count": 3,
+      "actual_case_record_count": 3,
+      "cases": [
+        {
+          "actual": "UNKNOWN",
+          "category": 14,
+          "critical_false_acceptance": false,
+          "expected": "UNKNOWN",
+          "name": "factor change with no action is unknown",
+          "passed": true
+        },
+        {
+          "actual": 0,
+          "category": 14,
+          "critical_false_acceptance": false,
+          "expected": 0,
+          "name": "factor never creates action",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 14,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "factor never reconstructs entitlement",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 14,
+      "name": "factor 推导 action/权益账",
+      "pass_count": 3
+    },
+    {
+      "actual_assertion_count": 8,
+      "actual_case_record_count": 8,
+      "cases": [
+        {
+          "actual": "OBSERVATION_NOT_AVAILABLE_AT_CUTOFF",
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:OBSERVATION_NOT_AVAILABLE_AT_CUTOFF",
+          "name": "exdate historical cutoff",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "collector equality cutoff accepted",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_OR_MUTATED_OBSERVATION",
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_OR_MUTATED_OBSERVATION",
+          "name": "unmodified copied observation",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_OR_MUTATED_OBSERVATION",
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_OR_MUTATED_OBSERVATION",
+          "name": "copied fake old clock",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_OR_MUTATED_OBSERVATION",
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_OR_MUTATED_OBSERVATION",
+          "name": "original mutated fake old clock",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "current name never backfilled",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "current listing date does not prove history",
+          "passed": true
+        },
+        {
+          "actual": "OBSERVATION_NOT_AVAILABLE_AT_CUTOFF",
+          "category": 15,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:OBSERVATION_NOT_AVAILABLE_AT_CUTOFF",
+          "name": "current identity cannot satisfy historical cutoff",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 15,
+      "name": "exdate 后捕获回填 cutoff、复制对象与当前名称历史",
+      "pass_count": 8
+    },
+    {
+      "actual_assertion_count": 4,
+      "actual_case_record_count": 4,
+      "cases": [
+        {
+          "actual": true,
+          "category": 16,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "old ann date does not reject in-scope report period",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 16,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "in-window ann does not rescue out-of-scope report period",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 16,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "financial scope outlier blocks complete response",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 16,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "source ann date never exact midnight",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 16,
+      "name": "REPORT_PERIOD 不替代 ann_date",
+      "pass_count": 4
+    },
+    {
+      "actual_assertion_count": 2,
+      "actual_case_record_count": 2,
+      "cases": [
+        {
+          "actual": false,
+          "category": 17,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "is_new no historical label",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 17,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "is_new is not historical visibility",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 17,
+      "name": "is_new 历史回填",
+      "pass_count": 2
+    },
+    {
+      "actual_assertion_count": 2,
+      "actual_case_record_count": 2,
+      "cases": [
+        {
+          "actual": "2026-10-06T01:00:00Z",
+          "category": 18,
+          "critical_false_acceptance": false,
+          "expected": "2026-10-06T01:00:00Z",
+          "name": "in_date no available clock backfill",
+          "passed": true
+        },
+        {
+          "actual": "OBSERVATION_NOT_AVAILABLE_AT_CUTOFF",
+          "category": 18,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:OBSERVATION_NOT_AVAILABLE_AT_CUTOFF",
+          "name": "in_date cutoff denied",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 18,
+      "name": "in_date 作为 available_at",
+      "pass_count": 2
+    },
+    {
+      "actual_assertion_count": 6,
+      "actual_case_record_count": 6,
+      "cases": [
+        {
+          "actual": "P1B_CLOUD_EVIDENCE_UNTRUSTED",
+          "category": 19,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native assessment rejects quarantine ref in SYNTHETIC_SEMANTIC_TEST_ONLY",
+          "passed": true
+        },
+        {
+          "actual": "P1B_SEMANTICS_SCOPE",
+          "category": 19,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native assessment rejects quarantine ref in REAL_OBSERVED",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_SNAPSHOT_INVALID",
+          "category": 19,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native signed packet rejects actual candidate as snapshot",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_PURPOSE_MISMATCH",
+          "category": 19,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native signed packet rejects actual candidate as receipt",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_SNAPSHOT_INVALID",
+          "category": 19,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native signed packet rejects missing quarantine root ref",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_IMPORT_INVALID",
+          "category": 19,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_IMPORT_INVALID",
+          "name": "native import denies quarantine evidence ref",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 19,
+      "name": "quarantine 注入原生 Packet/Assessment/import",
+      "pass_count": 6
+    },
+    {
+      "actual_assertion_count": 13,
+      "actual_case_record_count": 13,
+      "cases": [
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native ResearchCard rejects candidate-shaped object",
+          "passed": true
+        },
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native CandidateEligibility rejects candidate-shaped object",
+          "passed": true
+        },
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native SignalEvent rejects candidate-shaped object",
+          "passed": true
+        },
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native Approval rejects candidate-shaped object",
+          "passed": true
+        },
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native OrderIntent rejects candidate-shaped object",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_IMPORT_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_IMPORT_INVALID",
+          "name": "native import refuses actual candidate as model result",
+          "passed": true
+        },
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native ResearchCard stage rejects real quarantine",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_DRAFT_NON_EXECUTABLE",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_DRAFT_NON_EXECUTABLE",
+          "name": "native draft cannot become ResearchCard",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_DRAFT_NON_EXECUTABLE",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_DRAFT_NON_EXECUTABLE",
+          "name": "native draft cannot become CandidateEligibility",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_DRAFT_NON_EXECUTABLE",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_DRAFT_NON_EXECUTABLE",
+          "name": "native draft cannot become SignalEvent",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_DRAFT_NON_EXECUTABLE",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_DRAFT_NON_EXECUTABLE",
+          "name": "native draft cannot become Approval",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_DRAFT_NON_EXECUTABLE",
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_DRAFT_NON_EXECUTABLE",
+          "name": "native draft cannot become OrderIntent",
+          "passed": true
+        },
+        {
+          "actual": 0,
+          "category": 20,
+          "critical_false_acceptance": false,
+          "expected": 0,
+          "name": "native real ResearchCard persisted write delta",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 20,
+      "name": "原生 Card/Candidate/Signal/transition、真实写入零",
+      "pass_count": 13
+    },
+    {
+      "actual_assertion_count": 5,
+      "actual_case_record_count": 5,
+      "cases": [
+        {
+          "actual": "REPORT_SCOPE_INVALID",
+          "category": 21,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_SCOPE_INVALID",
+          "name": "real report fixture crossed",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_OR_MUTATED_INPUT",
+          "category": 21,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_OR_MUTATED_INPUT",
+          "name": "copied registered input fixture",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 21,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "extra real/synthetic blend refused",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+          "category": 21,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+          "name": "native packet rejects mixed real/synthetic snapshot",
+          "passed": true
+        },
+        {
+          "actual": "OVERNIGHT_REAL_INPUT_FORBIDDEN",
+          "category": 21,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:OVERNIGHT_REAL_INPUT_FORBIDDEN",
+          "name": "existing fixture chain real input denied before model work",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 21,
+      "name": "real/synthetic 混合 scope",
+      "pass_count": 5
+    },
+    {
+      "actual_assertion_count": 6,
+      "actual_case_record_count": 6,
+      "cases": [
+        {
+          "actual": "REPORT_SCOPE_INVALID",
+          "category": 22,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:REPORT_SCOPE_INVALID",
+          "name": "real report namespace crossed",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_OR_MUTATED_INPUT",
+          "category": 22,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_OR_MUTATED_INPUT",
+          "name": "copied registered input namespace",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "category": 22,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "name": "resealed namespace cannot upgrade",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 22,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "EVENT_3 rejected",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 22,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "RESEARCH namespace rejected",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_NAMESPACE_MISMATCH",
+          "category": 22,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_NAMESPACE_MISMATCH",
+          "name": "native result EVENT_3 crossover denied",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 22,
+      "name": "EVENT_3/Research namespace 越界",
+      "pass_count": 6
+    },
+    {
+      "actual_assertion_count": 10,
+      "actual_case_record_count": 10,
+      "cases": [
+        {
+          "actual": "SECRET_REFERENCE_IN_REPORT",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:SECRET_REFERENCE_IN_REPORT",
+          "name": "extra Keychain reference in report",
+          "passed": true
+        },
+        {
+          "actual": "SECRET_FIELD_FORBIDDEN",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "private reference output refused keychain_service",
+          "passed": true
+        },
+        {
+          "actual": "SECRET_FIELD_FORBIDDEN",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "private reference output refused keychain_account",
+          "passed": true
+        },
+        {
+          "actual": "SECRET_REFERENCE_FORBIDDEN",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "private reference output refused credential_ref",
+          "passed": true
+        },
+        {
+          "actual": "INTERNAL_PATH_IN_ROW",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "private reference output refused secret_path",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "Keychain field refused in strict report object",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_SECRET_OR_PATH_LEAKAGE",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native import injection Bearer SYNTHETIC_REVIEW_CREDENTIAL",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_IMPORT_INVALID",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_IMPORT_INVALID",
+          "name": "native import extra Keychain account",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_IMPORT_INVALID",
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native export rejects private ref before artifact write",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 23,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "rejected native export wrote zero directories",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 23,
+      "name": "敏感引用字段/伪凭证标记及原生导出",
+      "pass_count": 10
+    },
+    {
+      "actual_assertion_count": 5,
+      "actual_case_record_count": 5,
+      "cases": [
+        {
+          "actual": "AUTH_REDIRECT_BLOCKED",
+          "category": 24,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:AUTH_REDIRECT_BLOCKED",
+          "name": "pure redirect handler denial",
+          "passed": true
+        },
+        {
+          "actual": "UNAPPROVED_REQUEST_SCOPE",
+          "category": 24,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNAPPROVED_REQUEST_SCOPE",
+          "name": "spec proxy forbidden",
+          "passed": true
+        },
+        {
+          "actual": "UNAPPROVED_REQUEST_SCOPE",
+          "category": 24,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNAPPROVED_REQUEST_SCOPE",
+          "name": "spec fallback forbidden",
+          "passed": true
+        },
+        {
+          "actual": "UNAPPROVED_REQUEST_SCOPE",
+          "category": 24,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNAPPROVED_REQUEST_SCOPE",
+          "name": "spec ts_type_name forbidden",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 24,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "empty ProxyHandler used in frozen send source",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 24,
+      "name": "redirect/proxy/fallback 的无发送模拟",
+      "pass_count": 5
+    },
+    {
+      "actual_assertion_count": 3,
+      "actual_case_record_count": 3,
+      "cases": [
+        {
+          "actual": "UNAPPROVED_REQUEST_SCOPE",
+          "category": 25,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNAPPROVED_REQUEST_SCOPE",
+          "name": "non allowlisted disclosure_date",
+          "passed": true
+        },
+        {
+          "actual": "UNAPPROVED_REQUEST_SCOPE",
+          "category": 25,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNAPPROVED_REQUEST_SCOPE",
+          "name": "non allowlisted MCP_EXPLORE",
+          "passed": true
+        },
+        {
+          "actual": "UNAPPROVED_REQUEST_SCOPE",
+          "category": 25,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNAPPROVED_REQUEST_SCOPE",
+          "name": "non allowlisted get_secret",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 25,
+      "name": "非 allowlist/MCP 探索请求的纯拒绝",
+      "pass_count": 3
+    },
+    {
+      "actual_assertion_count": 14,
+      "actual_case_record_count": 14,
+      "cases": [
+        {
+          "actual": "BUSINESS_AUTHORITY_FORBIDDEN",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:BUSINESS_AUTHORITY_FORBIDDEN",
+          "name": "diagnostic claim REAL_NET_EDGE",
+          "passed": true
+        },
+        {
+          "actual": "BUSINESS_AUTHORITY_FORBIDDEN",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:BUSINESS_AUTHORITY_FORBIDDEN",
+          "name": "diagnostic claim REAL_SIZING",
+          "passed": true
+        },
+        {
+          "actual": "UNSET_REQUIRED",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "UNSET_REQUIRED",
+          "name": "actual net edge remains unset",
+          "passed": true
+        },
+        {
+          "actual": "UNSET_REQUIRED",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "UNSET_REQUIRED",
+          "name": "actual sizing remains unset",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "unknown real claim REAL_NET_EDGE",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "unknown real claim REAL_SIZING",
+          "passed": true
+        },
+        {
+          "actual": "UNSET_REQUIRED",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "UNSET_REQUIRED",
+          "name": "valid native synthetic draft net edge remains unset",
+          "passed": true
+        },
+        {
+          "actual": "UNSET_REQUIRED",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "UNSET_REQUIRED",
+          "name": "valid native synthetic draft sizing remains unset",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "valid native draft stays nontradeable",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_LLM_EXECUTION_INJECTION",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native import injection REAL_NET_EDGE",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_LLM_EXECUTION_INJECTION",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native import injection REAL_SIZING",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_COST_REQUIRED_FIRST",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:CLOSURE_COST_REQUIRED_FIRST",
+          "name": "native import missing cost refused",
+          "passed": true
+        },
+        {
+          "actual": "EXACT_RATE_REQUIRED",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:EXACT_RATE_REQUIRED",
+          "name": "native actual cost engine unknown fee denied",
+          "passed": true
+        },
+        {
+          "actual": "EXACT_RATE_REQUIRED",
+          "category": 26,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:EXACT_RATE_REQUIRED",
+          "name": "native import unknown fee denied",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 26,
+      "name": "未知费用、REAL_NET_EDGE/SIZING",
+      "pass_count": 14
+    },
+    {
+      "actual_assertion_count": 5,
+      "actual_case_record_count": 5,
+      "cases": [
+        {
+          "actual": "CLOSURE_LLM_EXECUTION_INJECTION",
+          "category": 27,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native import injection HUMAN_USER APPROVED",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 27,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "known fixture native chain positive structural baseline",
+          "passed": true
+        },
+        {
+          "actual": "APPROVAL_NOT_AUTHENTICATED",
+          "category": 27,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:APPROVAL_NOT_AUTHENTICATED",
+          "name": "LLM actor claiming approval denied",
+          "passed": true
+        },
+        {
+          "actual": "APPROVAL_NOT_AUTHENTICATED",
+          "category": 27,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:APPROVAL_NOT_AUTHENTICATED",
+          "name": "self-labelled HUMAN_USER without authenticated hashes denied",
+          "passed": true
+        },
+        {
+          "actual": "APPROVAL_NOT_AUTHENTICATED",
+          "category": 27,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:APPROVAL_NOT_AUTHENTICATED",
+          "name": "HUMAN_USER other actor denied",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 27,
+      "name": "LLM/HUMAN_USER 伪审批",
+      "pass_count": 5
+    },
+    {
+      "actual_assertion_count": 11,
+      "actual_case_record_count": 11,
+      "cases": [
+        {
+          "actual": "BUSINESS_AUTHORITY_FORBIDDEN",
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:BUSINESS_AUTHORITY_FORBIDDEN",
+          "name": "diagnostic productionGate true",
+          "passed": true
+        },
+        {
+          "actual": "BUSINESS_AUTHORITY_FORBIDDEN",
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:BUSINESS_AUTHORITY_FORBIDDEN",
+          "name": "diagnostic broker_capability_verified true",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_PERMISSION_OR_NAMESPACE_INVALID",
+          "name": "resealed productionGate cannot upgrade",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "schema productionGate true",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "schema broker_capability_verified true",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_LLM_EXECUTION_INJECTION",
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native import injection productionGate true broker APPROVE",
+          "passed": true
+        },
+        {
+          "actual": "CLOSURE_SYNTHETIC_SCOPE_ESCALATION",
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native policy production/real admission denied",
+          "passed": true
+        },
+        {
+          "actual": {
+            "p1a_paper.accounts": "0",
+            "p1a_paper.fills": "0",
+            "p1a_paper.ledger": "0",
+            "p1a_paper.lot_reservations": "0",
+            "p1a_paper.lots": "0",
+            "p1a_paper.orders": "0",
+            "p1a_paper.requests": "0",
+            "public.approvals": "0",
+            "public.fills_real": "0",
+            "public.fills_sim": "0",
+            "public.ledger_real": "0",
+            "public.ledger_sim": "0",
+            "public.order_claims_real": "0",
+            "public.order_claims_sim": "0",
+            "public.order_drafts": "0",
+            "public.orderbook_l2": "0",
+            "public.orders_real": "0",
+            "public.orders_sim": "0",
+            "public.positions_real": "0",
+            "public.positions_sim": "0",
+            "public.research_cards": "0",
+            "public.signal_events": "0"
+          },
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": {
+            "p1a_paper.accounts": "0",
+            "p1a_paper.fills": "0",
+            "p1a_paper.ledger": "0",
+            "p1a_paper.lot_reservations": "0",
+            "p1a_paper.lots": "0",
+            "p1a_paper.orders": "0",
+            "p1a_paper.requests": "0",
+            "public.approvals": "0",
+            "public.fills_real": "0",
+            "public.fills_sim": "0",
+            "public.ledger_real": "0",
+            "public.ledger_sim": "0",
+            "public.order_claims_real": "0",
+            "public.order_claims_sim": "0",
+            "public.order_drafts": "0",
+            "public.orderbook_l2": "0",
+            "public.orders_real": "0",
+            "public.orders_sim": "0",
+            "public.positions_real": "0",
+            "public.positions_sim": "0",
+            "public.research_cards": "0",
+            "public.signal_events": "0"
+          },
+          "name": "native execution tables unchanged",
+          "passed": true
+        },
+        {
+          "actual": "CONTRACT_SCHEMA_INVALID",
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": "REJECT",
+          "name": "native order production execution true denied",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "native production remains false after capability claims",
+          "passed": true
+        },
+        {
+          "actual": false,
+          "category": 28,
+          "critical_false_acceptance": false,
+          "expected": false,
+          "name": "native production remains false after capability claims",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 28,
+      "name": "production/broker true、执行状态零变化",
+      "pass_count": 11
+    },
+    {
+      "actual_assertion_count": 5,
+      "actual_case_record_count": 5,
+      "cases": [
+        {
+          "actual": "sha256:bcf19e1b357e78970a2fd253769508100a214d348409ebb80b534c3d93b5e3e7",
+          "category": 29,
+          "critical_false_acceptance": false,
+          "expected": "sha256:bcf19e1b357e78970a2fd253769508100a214d348409ebb80b534c3d93b5e3e7",
+          "name": "status canonical repeat",
+          "passed": true
+        },
+        {
+          "actual": "sha256:62e597ecb91418ada1d7a540af8d4cb3ac9da30e9243f92e831ba35380eb8c3f",
+          "category": 29,
+          "critical_false_acceptance": false,
+          "expected": "sha256:62e597ecb91418ada1d7a540af8d4cb3ac9da30e9243f92e831ba35380eb8c3f",
+          "name": "action canonical repeat",
+          "passed": true
+        },
+        {
+          "actual": "sha256:ec1eaa728de7e2e610e94a2455c5accda8888bfa4de69325619c5d405a7ecdd4",
+          "category": 29,
+          "critical_false_acceptance": false,
+          "expected": "sha256:ec1eaa728de7e2e610e94a2455c5accda8888bfa4de69325619c5d405a7ecdd4",
+          "name": "financial canonical repeat",
+          "passed": true
+        },
+        {
+          "actual": "sha256:d9233311910f76dc452431b9d02356db40e1994062cb012e885c21a9609b1f06",
+          "category": 29,
+          "critical_false_acceptance": false,
+          "expected": "sha256:d9233311910f76dc452431b9d02356db40e1994062cb012e885c21a9609b1f06",
+          "name": "industry canonical repeat",
+          "passed": true
+        },
+        {
+          "actual": "sha256:c239c32f6b3ac7fd669c7e2fca172ec32d8611d19375238af93ab533078eb8f5",
+          "category": 29,
+          "critical_false_acceptance": false,
+          "expected": "sha256:c239c32f6b3ac7fd669c7e2fca172ec32d8611d19375238af93ab533078eb8f5",
+          "name": "candidate canonical repeat",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 29,
+      "name": "同 inputs/rules/code 双 replay hash",
+      "pass_count": 5
+    },
+    {
+      "actual_assertion_count": 26,
+      "actual_case_record_count": 26,
+      "cases": [
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "producer source invalidates old candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "raw source invalidates old candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "rule source invalidates old candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "analysis code invalidates old candidate",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_OR_MUTATED_INPUT",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_OR_MUTATED_INPUT",
+          "name": "input identity changes invalidate result",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "condition baseline rule bytes invalidate old candidate",
+          "passed": true
+        },
+        {
+          "actual": "EVIDENCE_ROOT_OR_REF_INVALID",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:EVIDENCE_ROOT_OR_REF_INVALID",
+          "name": "fixed archive escaping ref /tmp/SYNTHETIC/report.json",
+          "passed": true
+        },
+        {
+          "actual": "EVIDENCE_ROOT_OR_REF_INVALID",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:EVIDENCE_ROOT_OR_REF_INVALID",
+          "name": "fixed archive escaping ref /Users/qiushi/投资研究/.p1b-archives/wave-b-20261006/captures/OTHER/report.json",
+          "passed": true
+        },
+        {
+          "actual": "EVIDENCE_ROOT_OR_REF_INVALID",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:EVIDENCE_ROOT_OR_REF_INVALID",
+          "name": "fixed archive extra key rejected",
+          "passed": true
+        },
+        {
+          "actual": "EVIDENCE_ROOT_INVALID",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:EVIDENCE_ROOT_INVALID",
+          "name": "altered archive constant rejected",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "binding code bytes changed invalidates registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_CANDIDATE",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_CANDIDATE",
+          "name": "status result copy cannot register",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_CANDIDATE",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_CANDIDATE",
+          "name": "action result copy cannot register",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_CANDIDATE",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_CANDIDATE",
+          "name": "financial result copy cannot register",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_CANDIDATE",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_CANDIDATE",
+          "name": "industry result copy cannot register",
+          "passed": true
+        },
+        {
+          "actual": "UNREGISTERED_CANDIDATE",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:UNREGISTERED_CANDIDATE",
+          "name": "candidate result copy cannot register",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "old AccountProfile schema bytes invalidate registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "new diagnostic schema bytes invalidate registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "baseline binding file bytes invalidate registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "release registry bytes invalidate registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "original start checkpoint bytes invalidate registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "INPUT_SOURCE_OR_CODE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:INPUT_SOURCE_OR_CODE_CHANGED",
+          "name": "old namespace rule bytes invalidate registered candidate",
+          "passed": true
+        },
+        {
+          "actual": "SOURCE_RULE_BASELINE_OR_RELEASE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:SOURCE_RULE_BASELINE_OR_RELEASE_CHANGED",
+          "name": "condition before load source change cannot load new input",
+          "passed": true
+        },
+        {
+          "actual": "SOURCE_RULE_BASELINE_OR_RELEASE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:SOURCE_RULE_BASELINE_OR_RELEASE_CHANGED",
+          "name": "old schema before load source change cannot load new input",
+          "passed": true
+        },
+        {
+          "actual": "SOURCE_RULE_BASELINE_OR_RELEASE_CHANGED",
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": "REJECT:SOURCE_RULE_BASELINE_OR_RELEASE_CHANGED",
+          "name": "new schema before load source change cannot load new input",
+          "passed": true
+        },
+        {
+          "actual": true,
+          "category": 30,
+          "critical_false_acceptance": false,
+          "expected": true,
+          "name": "all original source/raw bytes unchanged",
+          "passed": true
+        }
+      ],
+      "fail_count": 0,
+      "id": 30,
+      "name": "source/raw/rule/code/schema/归档绑定失效",
+      "pass_count": 26
+    }
+  ],
+  "counting_policy": "191 independent assertions and 135 regression tests are separate evidence; never add to the parent aggregate 669 or earlier epochs.",
+  "earlier_epoch": {
+    "artifact_epoch": "CANDIDATE-G3",
+    "commit": "77abd49f4d1dbb8bf253ce5e9854c97ded086562",
+    "confirmed_failure": "conditions.json source bytes were not a registered runtime dependency; changed bytes still allowed old candidate.",
+    "final_recheck": "G4 original conditions counterexample and expanded schema/rule/source/checkpoint/release changes now rejected.",
+    "gate": "FAIL",
+    "initial_native": {
+      "assertions": 65,
+      "fail": 1,
+      "pass": 64
+    },
+    "initial_python": {
+      "assertions": 98,
+      "fail": 1,
+      "pass": 97
+    },
+    "oracle_correction": "Purely synthetic descriptive text keychain_service=PRIVATE_REF was overbroadly expected to reject. No actual configured Keychain ref, credential, Packet or report leaked. v1 script/log/matrix retained; corrected native v2 separately reran 65/65, while G3 remained FAIL.",
+    "release": "1.9.1-wave-b-candidate"
+  },
+  "historical_visibility_proven": false,
+  "independent_assertions": {
+    "critical_false_acceptance": 0,
+    "fail": 0,
+    "native": 65,
+    "pass": 191,
+    "python": 126,
+    "total": 191
+  },
+  "independent_regression": {
+    "command": "node wave_b/check.mjs --new-only",
+    "exit_code": 0,
+    "fail": 0,
+    "node_tests": 11,
+    "pass": 135,
+    "python_tests": 124,
+    "total_tests": 135
+  },
+  "limitations": [
+    "No arbitrary malicious Python monkeypatch or operating-system filesystem/race proof",
+    "Transport attacks are pure callbacks/spec simulations; independent harness never calls _send/capture or network",
+    "No vendor/license/product/account entitlement verification",
+    "No historical first-visibility/revision chronology proof",
+    "Generic synthetic descriptive prose is not globally forbidden",
+    "Native fixture DB is memory-backed; no actual research/account/approval/order writes",
+    "Old534 tests were not independently rerun here; old immutable bytes rechecked; parent aggregate separate"
+  ],
+  "native_apis_used": [
+    "buildBrainPacket",
+    "service.registerPolicy",
+    "importResearchResult",
+    "stageContractFixture",
+    "assessSemantics",
+    "assertDraftTransition",
+    "validateOrderChain",
+    "productionGate",
+    "writeManualExport",
+    "estimateCost",
+    "validateContract"
+  ],
+  "native_execution_tables_delta": 0,
+  "pin_checks": {
+    "after_native_and_regression_equal_at_initial_recheck": true,
+    "attack_before_after_equal": true,
+    "final_immutable_pins_unchanged": true,
+    "final_immutable_source_raw_code_rule_artifact_paths": 635,
+    "observed_paths": 636,
+    "parent_authorized_metadata_update": [
+      {
+        "before_sha256": "sha256:8e32f955e8c3b54ff2e4ae27edff34ac02711c9c6e4d1377170529d94624f809",
+        "final_sha256": "sha256:ed0ec79706194f54a760e1e2f6c3bf6b545869d36c60974fdb8ee6da254b4882",
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/wave-b/known-failures.json",
+        "reason": "Parent subsequently integrated reviewer finding into known-failures metadata; file is not a release code/schema/rule pin."
+      }
+    ]
+  },
+  "productionGate": false,
+  "real_native_research_card_write_delta": 0,
+  "release": "1.9.2-wave-b-candidate",
+  "review_gate": "PASS_WITH_CONDITIONS_ENGINEERING_ONLY",
+  "source_admission": "BLOCKED",
+  "version": "1.0.0-independent-readonly-review"
+}

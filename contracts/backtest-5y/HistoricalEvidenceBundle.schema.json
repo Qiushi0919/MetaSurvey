@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"metasurvey:backtest-5y:HistoricalEvidenceBundle:1.0.1-candidate",
+  "type":"object","required":["kind","version","labels","records","historical_visibility_proven","productionGate"],
+  "properties":{
+    "kind":{"const":"HistoricalEvidenceBundle"},"version":{"const":"1.0.1-candidate"},
+    "labels":{"type":"array","contains":{"const":"NON_PIT_DIAGNOSTIC"}},
+    "productionGate":{"const":false},"historical_visibility_proven":{"const":false},
+    "records":{"type":"array","items":{"type":"object","required":["symbol","domain","identity","event","published","available","retrieved","first_visible","original_disclosure_fields","effective_interval","knowledge_interval","source","units","fields","reason_codes","invalidation","formal_admitted"],
+      "properties":{"event":{"$ref":"#/$defs/clock"},"published":{"$ref":"#/$defs/clock"},"available":{"$ref":"#/$defs/clock"},"retrieved":{"$ref":"#/$defs/clock"},"first_visible":{"$ref":"#/$defs/clock"},"formal_admitted":{"const":false},
+      "source":{"type":"object","required":["id","url","raw_ref","raw_sha256","record_hash","row_ordinal","row_selector","version","version_semantics","revision_id","revision_chain","license_state","technical_access"],"properties":{"raw_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},"record_hash":{"type":"string","pattern":"^[a-f0-9]{64}$"},"revision_id":{"type":["string","null"]}}}}}}
+  },
+  "$defs":{"clock":{"type":"object","required":["value","precision","timezone"],"properties":{"value":{"type":["string","null"]},"precision":{"enum":["UNKNOWN","DATE_ONLY","EXACT_SOURCE_RECORDED","UNINTERPRETED_SOURCE_LITERAL"]},"timezone":{"type":["string","null"]}},"allOf":[{"if":{"properties":{"precision":{"const":"DATE_ONLY"}}},"then":{"properties":{"timezone":{"const":null},"value":{"type":"string","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}}}}]}}
+}

@@ -1,0 +1,44 @@
+{
+  "fixture_scope": "SYNTHETIC_TEST_ONLY",
+  "provenance": "Hand-authored P1-A engineering fixture; no legacy parameter inheritance and no actual account or broker rates.",
+  "opening_cash_cents": "2000000",
+  "event_time": "2025-04-10T02:00:00Z",
+  "cost_profile": {
+    "contract_name": "CostProfile",
+    "contract_version": "1.0.0",
+    "object_id": "SYNTHETIC_P1A_COST",
+    "object_version": 1,
+    "profile_scope": "SYNTHETIC_TEST_ONLY",
+    "production_enabled": false,
+    "currency": "CNY",
+    "money_unit": "INTEGER_CENTS_STRING",
+    "rounding_mode": "HALF_UP",
+    "commission_scope": "PER_ORDER",
+    "commission_rate": "0.001",
+    "minimum_commission_cents": "150",
+    "stamp_tax_sell_rate": "0.0015",
+    "exchange_fee": { "rate": "0.00002", "included_in": "EXCLUDED" },
+    "other_fee": { "rate": "0.00003", "included_in": "EXCLUDED" },
+    "slippage": { "treatment": "SEPARATE_ESTIMATE", "rate": "0.0004" },
+    "effective_from": "2025-01-01",
+    "effective_to": "2025-12-31",
+    "source": { "kind": "SYNTHETIC_FIXTURE", "description": "Explicit arithmetic stress fixture, uncalibrated and never a production default." }
+  },
+  "calendar": {
+    "version": "SYNTHETIC_CALENDAR_1",
+    "sessions": ["2025-04-10", "2025-04-11", "2025-04-14", "2025-04-15", "2025-04-16"],
+    "available_at": "2025-04-01T00:00:00Z",
+    "source": { "kind": "SYNTHETIC_FIXTURE", "description": "Explicit test sessions; real T+1 must use the admitted official calendar adapter." }
+  },
+  "security": {
+    "security_id": "SYNTHETIC_SECURITY_600000",
+    "canonical_symbol": "SSE:600000",
+    "original_symbol": "sh.600000",
+    "lot_size": 100,
+    "status": "ACTIVE",
+    "suspended": false,
+    "tradeable": true,
+    "version": "SYNTHETIC_SECURITY_1",
+    "available_at": "2025-04-01T00:00:00Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "stage": "P1B0",
+  "dimensions": [
+    "company_quality",
+    "sector_quality",
+    "catalyst",
+    "evidence_quality",
+    "valuation",
+    "timing",
+    "risk",
+    "cost",
+    "account_suitability",
+    "tradeability"
+  ],
+  "grade_semantics": {
+    "S": "All research/timing/admitted-evidence/edge/hard-block checks pass; request human review only.",
+    "A": "High research quality; price/timing/trigger/edge gate remains unmet; watch/wait.",
+    "B": "Logic/catalyst exists, but evidence/odds/risk/trend gaps remain; no active trade.",
+    "C": "Research/observation value only.",
+    "X": "Admitted hard block or explicit unmet strategy requirement."
+  },
+  "thresholds": {
+    "status": "EXPERIMENTAL_DEFAULT_ONLY",
+    "handoff_reference_values": [
+      "85",
+      "80",
+      "78"
+    ],
+    "mapping_to_grades": "UNSET_REQUIRED",
+    "calibrated": false,
+    "probability_interpretation_allowed": false
+  },
+  "real_account_suitability": "BLOCKED",
+  "production_enabled": false
+}

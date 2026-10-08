@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "provider_id": "TUSHARE_MONTHLY_GATEWAY",
+  "source_classification": "OWNER_PROVIDED_MONTHLY_GATEWAY",
+  "endpoint": "http://118.89.117.77:8030/",
+  "credential_reference": {
+    "storage": "MACOS_KEYCHAIN",
+    "service": "ashare-trading-v1/tushare-monthly-gateway",
+    "account": "stock_api"
+  },
+  "credential_rotation_required": false,
+  "owner_accepts_exposure": true,
+  "owner_accepts_http_read_only_probe": true,
+  "trusted_transport": false,
+  "supplier_identity_verified": false,
+  "license_verified": false,
+  "actual_account_tier": 15000,
+  "account_tier_evidence": "OWNER_ASSERTED",
+  "validity": {
+    "start_date": "2026-10-05",
+    "end_date": "2026-11-05",
+    "precision": "DATE_ONLY",
+    "provenance": "OWNER_ASSERTED_ONE_CALENDAR_MONTH",
+    "expires_at": "UNSET_REQUIRED"
+  },
+  "scope": {
+    "symbols": [
+      "603993.SH",
+      "600312.SH",
+      "603228.SH"
+    ],
+    "namespace": "CORE_40",
+    "purpose": "LOCAL_REAL_RESEARCH_ADMISSION_PROBE"
+  },
+  "productionGate": false
+}

@@ -1,0 +1,190 @@
+{
+  "version": "1.0.1-final-limited-functional-review",
+  "generated_at": "2026-10-05T16:55:19.752619+00:00",
+  "candidate_commit_provided_by_parent": "55cb3916262fc6f236a92d156028561248ae2f09",
+  "verdict": "PASS_WITH_CONDITIONS",
+  "scope": "Only final candidate bounded functional re-review of overnight/data/dataset.py, overnight/fixture/chain.mjs, related new tests, overnight/verify.py and overnight/check.mjs. This does not replace the first independent full review.",
+  "new_independent_counts": {
+    "python": 76,
+    "node": 28,
+    "deduplicated_primary_assertions": 104,
+    "pass": 104,
+    "fail": 0,
+    "skip": 0,
+    "id_uniqueness_checked": true,
+    "hash_assertions_included": {
+      "release_file_hashes": 22,
+      "private_artifact_hash_and_size": 7
+    },
+    "focused_project_tests_excluded": {
+      "python": 2,
+      "node": 5
+    },
+    "first_reviewer_134_excluded": true,
+    "full_project_suite_excluded": true
+  },
+  "p2_findings": [
+    {
+      "id": "P2-SOURCE-TEXT",
+      "state": "CLOSED_FOR_LIMITED_FINAL_CANDIDATE",
+      "code": "overnight/data/dataset.py:89-107; normalization uses it at :117-135",
+      "evidence_ids": [
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P16",
+        "P17",
+        "P18",
+        "P19",
+        "P20",
+        "P21",
+        "P22",
+        "P23",
+        "P24"
+      ],
+      "result": "Historical synthetic Bearer/sk/embedded-prefix-path counterexamples rejected with fixed DataError reasons; encoded paths, generic credential assignments, encoding-depth/shape guards pass; permitted original text preserved without trimming."
+    },
+    {
+      "id": "P2-DIRECTORY-ACCESSOR",
+      "state": "CLOSED_FOR_LIMITED_FINAL_CANDIDATE",
+      "code": "overnight/fixture/chain.mjs:14-30",
+      "evidence_ids": [
+        "J01",
+        "J02",
+        "J09",
+        "J10",
+        "J11",
+        "J12",
+        "J13",
+        "J24",
+        "J25"
+      ],
+      "result": "Accessors rejected without execution; own directory and fixture_case descriptors each observed once; primitive snapshot feeds all directory checks and producer. Mutation of caller options during await did not change output inputs."
+    }
+  ],
+  "functional_results": {
+    "all_four_frozen_cases_succeed": true,
+    "base_chain_and_replay_deterministic": true,
+    "registered_result_copy_and_mutation_rejected": true,
+    "typed_loader_has_no_caller_parameters": true,
+    "typed_registry_copy_and_mutation_rejected": "Tested with an explicitly SYNTHETIC test object temporarily registered in process; no actual dataset was issued or loaded.",
+    "actual_loader_calls_in_this_review": 0,
+    "raw_capture_reads_in_this_review": 0,
+    "all_eight_readiness_permissions_strictly_false": true,
+    "all_nine_actual_issuance_or_call_counters_zero": true,
+    "closed_business_conditions": [],
+    "source_admission": "BLOCKED",
+    "productionGate": false,
+    "release_files_verified": 22,
+    "private_artifacts_hash_and_size_verified": 7,
+    "scope_files_before_after_unchanged": 13,
+    "source_scope_file_hashes": {
+      "AGENTS.md": "sha256:2869639fa6d8a2c4cce12abf630e36b30ad4b6315165ef57ee8c32bb4fb7a658",
+      "docs/overnight/Interface-Freeze.md": "sha256:51800a21b67c0aaf3cfba04881b4fc277ce5171a8e247c7e84f740c56dd2d19e",
+      "docs/overnight/Data-Design.md": "sha256:08e219253673c1e6d28d2cf8994887a3d5ca51b8f36a5ef9f2a95f93575bb73d",
+      "docs/overnight/conditions.json": "sha256:aa9d6eba66a4875d4d5cacc8cdd04d96b1260d735f68a7be58455f6f84073bb1",
+      "docs/overnight/evidence.json": "sha256:79d9ad0a23498516319efc91c4508d23ea497b06bd5b31c93238eb6105f37da9",
+      "contracts/release.overnight.1_8_2.json": "sha256:22e650dcbbb5a2b20d6d2cd19f68b3918a548e3fdb90bc512e33c2348d643fc8",
+      "overnight/data/dataset.py": "sha256:32445b5e78fde29bde3d91d47368d9a01d0fdc64d12953b5684ddafd9c579562",
+      "overnight/fixture/chain.mjs": "sha256:2cc972e831cee52de3f06b0114a3d0513f854fb9691d0930247908bb6d71e2aa",
+      "overnight/verify.py": "sha256:264ea6eb50f0fc5a9f4c0d054cc39b843354387a36aeee916987585a45895b82",
+      "overnight/check.mjs": "sha256:cb35fb350f30dfaf831f94bcef6ce65d87b772d5c89a1c3b78cebc51a49fac44",
+      "overnight/tests/test_data.py": "sha256:596d9adf29e4ff7f277c90ee79e1571e502703b6b6e7b1639608da3255b7f2df",
+      "overnight/tests/fixture-boundary.test.mjs": "sha256:9c30bb12869c4cf89d1aac86565867ee1c8ac3d4ca48b82d7d4f1b99a885a92b",
+      "overnight/tests/test_verification.py": "sha256:3fff3903999fcd55ed428ae07b9ad1687b122eb17952327bf4a4de25030445a0"
+    }
+  },
+  "historical_evidence_preserved": {
+    "source": "Metadata supplied by parent; no first-review harness, report or log was read or modified by this reviewer.",
+    "first_full_independent_primary_assertions": "134 PASS = Python70 + Node61 + strict-parent3, backed by that reviewer actual logs; not new evidence from this review.",
+    "four_historical_failed_counterexamples": [
+      {
+        "id": "F1",
+        "name": "generic Bearer-style text accepted in synthetic stock_basic.name",
+        "current_retest": "P07 PASS_REJECTED"
+      },
+      {
+        "id": "F2",
+        "name": "sk-style synthetic text accepted",
+        "current_retest": "P08 PASS_REJECTED"
+      },
+      {
+        "id": "F3",
+        "name": "embedded-prefix internal path text accepted",
+        "current_retest": "P09 PASS_REJECTED"
+      },
+      {
+        "id": "F4",
+        "name": "options.directory accessor changed guarded directory before producer consumption",
+        "current_retest": "J09/J10 PASS_REJECTED_WITH_ZERO_GETTER_CALLS"
+      }
+    ],
+    "references_relative_to_archive": [
+      "reviewer/fresh-G1-20261006/python-results.json",
+      "reviewer/fresh-G1-20261006/python-run.log",
+      "reviewer/fresh-G1-20261006/accessor-probe-results.json",
+      "reviewer/fresh-G1-20261006/accessor-run.log",
+      "reviewer/fresh-G1-20261006/node-results.json",
+      "reviewer/fresh-G1-20261006/parent-future-results.json",
+      "reviewer/fresh-G1-20261006/parent-future-run.log"
+    ],
+    "reference_filename_caveat": "References are supplied metadata. Parent owns the final historical index verification, including node-results.json name."
+  },
+  "conditions_and_limits": [
+    "This reviewer only owns the final limited functional scope. Original full independent scope is supported by the first reviewer 134 actual assertion logs; this report makes no replacement claim.",
+    "Full fresh-clone/fresh-cache aggregate, 430 immutable baseline bytes, actual 44-request/2786-row diagnostic replay, Git binding and final Gate remain parent-owned. The parent reports 534 unique = 533 PASS/0 FAIL/1 existing optional V5 SKIP; that suite was not rerun or counted here.",
+    "An actual loader registry object was not freshly issued in this review. Identity and canonical-byte failure behavior was isolated using a temporary synthetic registration; actual data authenticity and issuer provenance remain under existing pinned verifier evidence.",
+    "Private artifact checks bind exact current serialized bytes; this review did not regenerate the seven artifacts or assert archive-independent machine portability.",
+    "This is functional hardening, not a general credential detector, arbitrary hostile JavaScript security proof, persistent issuance/revocation service or filesystem adversarial-race audit. Hidden extra keys were tested; no blanket claim is made that known non-enumerable data keys are forbidden.",
+    "All real data licensing/admission, historical visibility, model/Pilot/cloud/broker/production and funds execution remain BLOCKED. No business condition is closed.",
+    "Candidate SHA55cb3916262fc6f236a92d156028561248ae2f09 and clean worktree independently confirmed with /opt/homebrew/bin/git. Earlier system Git Xcode-license error remains preserved; no system license or permissions changed. Parent retains final Git/checkpoint ownership."
+  ],
+  "operation_boundaries": {
+    "repository_or_raw_writes": 0,
+    "git_mutations": 0,
+    "keychain_calls": 0,
+    "environment_value_inspection": 0,
+    "system_account_queries": 0,
+    "network_or_external_service_calls": 0,
+    "system_permission_changes": 0,
+    "subprocess_environment": "Empty environment explicitly supplied by runner; no inherited value inspection.",
+    "outputs": "Only new files in the assigned private external review directory; ordinary synthetic fixture temporary directories were removed."
+  },
+  "reproducibility": {
+    "runner": "run-review.py",
+    "python_harness": "python-functional.py",
+    "node_harness": "node-functional.mjs",
+    "result_files": [
+      "python-results.json",
+      "node-results.json",
+      "run-metadata.json"
+    ],
+    "logs": [
+      "independent-python.log",
+      "independent-node.log",
+      "focused-project-python.log",
+      "focused-project-node.log"
+    ],
+    "rerun": "Preserve this append-only directory. Copy the three harness files to a fresh private external directory and execute run-review.py with the listed Python -B runtime from the repository working directory. The runner records exact commands, exits, and before/after file hashes."
+  },
+  "finalized_at": "2026-10-05T16:56:45.720725+00:00",
+  "git_binding": {
+    "independently_confirmed_head": "55cb3916262fc6f236a92d156028561248ae2f09",
+    "worktree_clean": true,
+    "readonly_executable": "/opt/homebrew/bin/git",
+    "evidence": "git-check.json",
+    "original_system_git_failure_preserved": "run-metadata.json",
+    "git_check_not_added_to_104_functional_assertions": true
+  },
+  "append_only_history": [
+    "final-functional-report.json",
+    "final-functional-report.txt",
+    "index.json"
+  ]
+}

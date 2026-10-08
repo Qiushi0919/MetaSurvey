@@ -1,0 +1,493 @@
+{
+  "version": "1.0.0",
+  "previous_taxonomy": "Wave C31 features/10 UNKNOWN features",
+  "current_taxonomy": "Wave D58 features/7 UNKNOWN features; nine axes, Business Quality also explicitly UNKNOWN",
+  "raw_count_subtraction_is_closure": false,
+  "reports": [
+    {
+      "symbol": "603993.SH",
+      "previous_unknown": 10,
+      "mapping": [
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "cash_generation",
+          "wave_d_feature": "source_operating_cashflow"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "company_announcement_catalyst",
+          "wave_d_feature": "body_verified_catalyst_documents"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "current_observed_industry",
+          "wave_d_feature": "current_observed_industry"
+        },
+        {
+          "state": "DERIVED",
+          "wave_c_feature": "earnings_quality",
+          "wave_d_feature": "cash_conversion_ratio"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "historical_industry_membership",
+          "wave_d_feature": "historical_industry_membership"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "st_status",
+          "wave_d_feature": "st_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "suspension_status",
+          "wave_d_feature": "suspension_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "valuation_ev_ebitda",
+          "wave_d_feature": "valuation_ev_ebitda"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "valuation_ttm_pe",
+          "wave_d_feature": "source_pe_ttm"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "verified_action_reconciliation",
+          "wave_d_feature": "independently_verified_action_reconciliation"
+        }
+      ],
+      "mapped_now_observed": [
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "cash_generation",
+          "wave_d_feature": "source_operating_cashflow"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "current_observed_industry",
+          "wave_d_feature": "current_observed_industry"
+        },
+        {
+          "state": "DERIVED",
+          "wave_c_feature": "earnings_quality",
+          "wave_d_feature": "cash_conversion_ratio"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "valuation_ttm_pe",
+          "wave_d_feature": "source_pe_ttm"
+        }
+      ],
+      "mapped_remaining": [
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "company_announcement_catalyst",
+          "wave_d_feature": "body_verified_catalyst_documents"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "historical_industry_membership",
+          "wave_d_feature": "historical_industry_membership"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "st_status",
+          "wave_d_feature": "st_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "suspension_status",
+          "wave_d_feature": "suspension_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "valuation_ev_ebitda",
+          "wave_d_feature": "valuation_ev_ebitda"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "verified_action_reconciliation",
+          "wave_d_feature": "independently_verified_action_reconciliation"
+        }
+      ],
+      "newly_explicit_unknown": [
+        "historical_as_of_visibility"
+      ],
+      "current_unknowns": [
+        "historical_industry_membership",
+        "st_status",
+        "suspension_status",
+        "independently_verified_action_reconciliation",
+        "body_verified_catalyst_documents",
+        "valuation_ev_ebitda",
+        "historical_as_of_visibility"
+      ],
+      "preserved_conflict_count": 0,
+      "dimensions": [
+        {
+          "name": "Business Quality",
+          "state": "UNKNOWN"
+        },
+        {
+          "name": "Earnings/Cash Quality",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Valuation",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Sector",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Catalyst",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Timing",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Risk",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Evidence Quality",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Unknowns",
+          "state": "OBSERVED_PARTIAL"
+        }
+      ]
+    },
+    {
+      "symbol": "600312.SH",
+      "previous_unknown": 10,
+      "mapping": [
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "cash_generation",
+          "wave_d_feature": "source_operating_cashflow"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "company_announcement_catalyst",
+          "wave_d_feature": "body_verified_catalyst_documents"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "current_observed_industry",
+          "wave_d_feature": "current_observed_industry"
+        },
+        {
+          "state": "DERIVED",
+          "wave_c_feature": "earnings_quality",
+          "wave_d_feature": "cash_conversion_ratio"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "historical_industry_membership",
+          "wave_d_feature": "historical_industry_membership"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "st_status",
+          "wave_d_feature": "st_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "suspension_status",
+          "wave_d_feature": "suspension_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "valuation_ev_ebitda",
+          "wave_d_feature": "valuation_ev_ebitda"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "valuation_ttm_pe",
+          "wave_d_feature": "source_pe_ttm"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "verified_action_reconciliation",
+          "wave_d_feature": "independently_verified_action_reconciliation"
+        }
+      ],
+      "mapped_now_observed": [
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "cash_generation",
+          "wave_d_feature": "source_operating_cashflow"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "current_observed_industry",
+          "wave_d_feature": "current_observed_industry"
+        },
+        {
+          "state": "DERIVED",
+          "wave_c_feature": "earnings_quality",
+          "wave_d_feature": "cash_conversion_ratio"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "valuation_ttm_pe",
+          "wave_d_feature": "source_pe_ttm"
+        }
+      ],
+      "mapped_remaining": [
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "company_announcement_catalyst",
+          "wave_d_feature": "body_verified_catalyst_documents"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "historical_industry_membership",
+          "wave_d_feature": "historical_industry_membership"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "st_status",
+          "wave_d_feature": "st_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "suspension_status",
+          "wave_d_feature": "suspension_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "valuation_ev_ebitda",
+          "wave_d_feature": "valuation_ev_ebitda"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "verified_action_reconciliation",
+          "wave_d_feature": "independently_verified_action_reconciliation"
+        }
+      ],
+      "newly_explicit_unknown": [
+        "historical_as_of_visibility"
+      ],
+      "current_unknowns": [
+        "historical_industry_membership",
+        "st_status",
+        "suspension_status",
+        "independently_verified_action_reconciliation",
+        "body_verified_catalyst_documents",
+        "valuation_ev_ebitda",
+        "historical_as_of_visibility"
+      ],
+      "preserved_conflict_count": 0,
+      "dimensions": [
+        {
+          "name": "Business Quality",
+          "state": "UNKNOWN"
+        },
+        {
+          "name": "Earnings/Cash Quality",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Valuation",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Sector",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Catalyst",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Timing",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Risk",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Evidence Quality",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Unknowns",
+          "state": "OBSERVED_PARTIAL"
+        }
+      ]
+    },
+    {
+      "symbol": "603228.SH",
+      "previous_unknown": 10,
+      "mapping": [
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "cash_generation",
+          "wave_d_feature": "source_operating_cashflow"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "company_announcement_catalyst",
+          "wave_d_feature": "body_verified_catalyst_documents"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "current_observed_industry",
+          "wave_d_feature": "current_observed_industry"
+        },
+        {
+          "state": "DERIVED",
+          "wave_c_feature": "earnings_quality",
+          "wave_d_feature": "cash_conversion_ratio"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "historical_industry_membership",
+          "wave_d_feature": "historical_industry_membership"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "st_status",
+          "wave_d_feature": "st_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "suspension_status",
+          "wave_d_feature": "suspension_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "valuation_ev_ebitda",
+          "wave_d_feature": "valuation_ev_ebitda"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "valuation_ttm_pe",
+          "wave_d_feature": "source_pe_ttm"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "verified_action_reconciliation",
+          "wave_d_feature": "independently_verified_action_reconciliation"
+        }
+      ],
+      "mapped_now_observed": [
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "cash_generation",
+          "wave_d_feature": "source_operating_cashflow"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "current_observed_industry",
+          "wave_d_feature": "current_observed_industry"
+        },
+        {
+          "state": "DERIVED",
+          "wave_c_feature": "earnings_quality",
+          "wave_d_feature": "cash_conversion_ratio"
+        },
+        {
+          "state": "OBSERVED",
+          "wave_c_feature": "valuation_ttm_pe",
+          "wave_d_feature": "source_pe_ttm"
+        }
+      ],
+      "mapped_remaining": [
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "company_announcement_catalyst",
+          "wave_d_feature": "body_verified_catalyst_documents"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "historical_industry_membership",
+          "wave_d_feature": "historical_industry_membership"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "st_status",
+          "wave_d_feature": "st_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "suspension_status",
+          "wave_d_feature": "suspension_status"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "valuation_ev_ebitda",
+          "wave_d_feature": "valuation_ev_ebitda"
+        },
+        {
+          "state": "UNKNOWN",
+          "wave_c_feature": "verified_action_reconciliation",
+          "wave_d_feature": "independently_verified_action_reconciliation"
+        }
+      ],
+      "newly_explicit_unknown": [
+        "historical_as_of_visibility"
+      ],
+      "current_unknowns": [
+        "historical_industry_membership",
+        "st_status",
+        "suspension_status",
+        "independently_verified_action_reconciliation",
+        "body_verified_catalyst_documents",
+        "valuation_ev_ebitda",
+        "historical_as_of_visibility"
+      ],
+      "preserved_conflict_count": 1,
+      "dimensions": [
+        {
+          "name": "Business Quality",
+          "state": "UNKNOWN"
+        },
+        {
+          "name": "Earnings/Cash Quality",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Valuation",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Sector",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Catalyst",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Timing",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Risk",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Evidence Quality",
+          "state": "OBSERVED_PARTIAL"
+        },
+        {
+          "name": "Unknowns",
+          "state": "OBSERVED_PARTIAL"
+        }
+      ]
+    }
+  ],
+  "scope": "LOCAL_CURRENT_OBSERVED_FACTS_ONLY_NO_FORMAL_ADMISSION",
+  "productionGate": false
+}

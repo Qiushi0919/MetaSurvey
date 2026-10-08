@@ -1,0 +1,175 @@
+{
+  "version": "1.0.0",
+  "review_kind": "READ_ONLY_DELIVERY_ADDENDUM",
+  "checked_at": "2026-10-05T15:22:09.052302+00:00",
+  "reviewed_candidate_commit": "55cfa442ea85cddbfdd860865e5490902be38c9f",
+  "capture_code_commit": "8f8cc0d8a7b32fcc77479f1f265068ca87e6b684",
+  "verification_code_commit": "42e1e4c457edc8a30316aec560c9d444f2406517",
+  "source_tree_hash": "sha256:4dcc9bd86cc87ef4c7032a124a69ed4d0e62c957b1243c453e388ecde63aaf9a",
+  "gate_content_hash": "sha256:43d27e322c95bf0161a48beab066e8a6eb967fef0b0a9245330cc3ae50f61b7f",
+  "engineering": "PASS_WITH_CONDITIONS",
+  "engineering_scope": "OWNER_AUTHORIZED_BOUNDED_LOCAL_QUARANTINE_CAPTURE_AND_MANDATORY_CURRENT_PARENT_VERIFICATION_ONLY",
+  "general_checkout_portability": "FAIL_UNRESOLVED_HISTORICAL_PATH_PORTABILITY",
+  "source_admission": "BLOCKED",
+  "research_pilot": "BLOCKED",
+  "historical_backtest": "BLOCKED",
+  "cloud_export": "BLOCKED",
+  "productionGate": false,
+  "counting": {
+    "canonical_project_unique_tests": {
+      "tests": 463,
+      "pass": 462,
+      "fail": 0,
+      "skip": 1
+    },
+    "clean_clone_base_tests": {
+      "tests": 258,
+      "pass": 257,
+      "fail": 0,
+      "skip": 1,
+      "exit_code": 0
+    },
+    "clean_clone_dependency_install": {
+      "exit_code": 0,
+      "fresh_dependency_cache": true
+    },
+    "clean_clone_aggregate_entry": {
+      "exit_code": 1,
+      "result": "FAIL_UNRESOLVED_HISTORICAL_PATH_PORTABILITY"
+    },
+    "clean_clone_current_new_only": {
+      "tests": 65,
+      "pass": 65,
+      "fail": 0,
+      "skip": 0,
+      "exit_code": 0
+    },
+    "original_independent_unique_checks_unchanged": {
+      "checks": 906,
+      "pass": 906,
+      "fail": 0
+    },
+    "delivery_checks_separate": {
+      "checks": 23,
+      "pass": 23,
+      "fail": 0
+    },
+    "do_not_sum_overlapping_reruns_or_project_tests": true
+  },
+  "independent_reproduction": {
+    "canonical_frozen_validator_exit": 0,
+    "clone_frozen_validator_exit": 1,
+    "clone_frozen_validator_reason": "DIAGNOSTIC_EVIDENCE_PATH_UNAPPROVED",
+    "frozen_validator_and_gate_equal_old_baseline_and_clone": true,
+    "actual_evidence_hash_mismatch": false,
+    "clone_current_verifier_exit": 0,
+    "clone_current_raw_original_replay": {
+      "requests": 44,
+      "raw_captures": 44,
+      "physical_row_observations": 2786,
+      "source": "BLOCKED",
+      "productionGate": false
+    },
+    "all_nine_source_pins_equal_clone_and_canonical": true,
+    "unchanged_absolute_refs_outside_clone_allowlist": 7,
+    "logs": [
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-canonical-frozen-verifier.log",
+        "sha256": "sha256:fd2ea4f40fd9ce3ff9f4e4e99a5752456ad2684f12db0dd94b72fbe62e9507f8",
+        "exit_code": 0
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-clone-frozen-verifier.log",
+        "sha256": "sha256:5394f8e8830ad26c4e11557a1f03af9362fb78f3a412bce89209d42dc9e436a2",
+        "exit_code": 1
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-clone-current-verifier.log",
+        "sha256": "sha256:c138396da3b38c3e3a359d7012ff4c3acfdfabe1b9120707005a7c7e83be0657",
+        "exit_code": 0
+      }
+    ]
+  },
+  "portability_debt": {
+    "status": "UNRESOLVED",
+    "boundary": "UNCHANGED_FROZEN_tushare-admission/parent/verify.mjs",
+    "cause": "Historical Gate preserves absolute canonical authorization/archive paths; legacy verifier derives its allowlist from its relocated checkout root.",
+    "current_new_epoch_skips_only_old_aggregate_dependency": "The separately run --new-only entry still validates the current release, current Gate, all nine source pins and original external capture/report bytes; it does not establish a PASS for the old aggregate entry.",
+    "full_clean_clone_aggregate_pass_claim_allowed": false,
+    "no_old_gate_seal_path_or_validator_relaxed": true,
+    "future_resolution_requires": "A separately reviewed verification epoch with explicit external evidence-root contract and preserved historical records; no change or approval is made by this review."
+  },
+  "review_boundary_conditions_retained": [
+    "Bare frozen fe632 collector still omits future imp_ann_date blocking; closed only at mandatory current parent verification boundary42e, not collector or upstream PIT proof.",
+    "Exact earliest failed58615 candidate source bytes remain unavailable; preserved failure/harness/fullSHA must not be relabelled as an original source reconstruction.",
+    "Supplier identity/channel/license/retention/transfer and historical first-visibility remain unverified.",
+    "Financial out-of-window periods and blank industry out_date remain quarantined; no scope reinterpretation or silent normalization.",
+    "Full factor/action numerical reconstruction and admitted independent numeric bar/action cross-source references remain unavailable.",
+    "No new policy, admitted SourceObservation/ClockEvidence, snapshot, receipt, real Card producer, model call or trade execution is authorized.",
+    "All30 real account/capital/fee/risk values remain UNSET_REQUIRED."
+  ],
+  "preservation": {
+    "original_three_artifacts_unchanged": {
+      "Independent-Review.json": "sha256:e804f226d118194df69b8d8e4d2d1e042e33da2c64b63791e0d94226e5dbddd0",
+      "Independent-Review.md": "sha256:37c077c1a253c1b642ab4b5b21a4cdfbe1c986551de4d2eff2edf9f8d16354cb",
+      "Attack-Matrix.json": "sha256:c05037a222d407f42e2ecef810d5e9423bd8376fc422176bc0adac2c0109ec3e"
+    },
+    "repo_review_copies_byte_identical": true,
+    "owner_gate_original_checkpoint": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/delivery-checkpoint/Owner-Gate-Review-reviewed-55cfa442.md",
+      "sha256": "sha256:0237ae0da33201d839fc2769159815aac60e68508e7ee2525b59b6b652aaa411"
+    },
+    "reviewed_delivery_metadata_files": [
+      {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/Gate-Review.md",
+        "sha256": "sha256:fdc56f6f838ca2963b7a37b167e9789145f27dea4883d339c35387b516845517"
+      },
+      {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/validation.json",
+        "sha256": "sha256:b31b9c4e50fec22de66a02a1b2602f43c85fc302f6ab137bb7ed503b4c821e26"
+      },
+      {
+        "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/p1b-real-admission/known-failures.json",
+        "sha256": "sha256:3daa0cbc4a2ade0a45460adbfe373f1e6683d04b92dbffb2b5e0f782d407c7b2"
+      }
+    ],
+    "delivery_append_changes_only_new_metadata": true,
+    "old_baseline": {
+      "tracked_files": 392,
+      "unchanged": 389,
+      "allowed_navigation_only": [
+        "AGENTS.md",
+        "README.md",
+        "docs/source-of-truth.json"
+      ]
+    },
+    "parent_final_secret_and_preservation_scan": {
+      "evidence": {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-secret-and-preservation-scan.json",
+        "sha256": "sha256:370a38ad71a9fee57252e8047e809387eb0b4624cff1f7ccc38969f9efa5d888"
+      },
+      "parent_reported_files_scanned": 1090,
+      "parent_reported_secret_leaks": 0,
+      "independent_reviewer_read_real_secret": false,
+      "not_claimed_as_independent_exact_secret_match": true
+    }
+  },
+  "evidence": {
+    "delivery_checks": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/Delivery-Checks.json",
+      "sha256": "sha256:50359ade3485187bff1e8b80ac7582d7d7635fb785b9253023e395c287658296"
+    },
+    "harness": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/reviewer/delivery-check.py",
+      "sha256": "sha256:63151cc2fdb4a5606844654e5d04f34b7f774db3c32546e9da05b295b6170155"
+    },
+    "parent_final_clean_validation": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-validation.json",
+      "sha256": "sha256:cbd63eb240334e61a06557a38d3dab125dbd322cf5642a1be4b1a2b84d6cc468"
+    }
+  },
+  "reviewer_provider_network_requests": 0,
+  "reviewer_real_credential_lookups": 0,
+  "reviewer_repo_writes": 0,
+  "stop_after_report": true
+}

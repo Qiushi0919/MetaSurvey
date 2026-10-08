@@ -1,0 +1,200 @@
+{
+  "evidence_version": "1.0.0",
+  "observed_at": "2026-10-05T04:48:11.123Z",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "contract_version": "1.0.0",
+  "schema_version": 2,
+  "release_sha256": "eee1c485838212210f646f755c0ce4c61b38b46dfd6fa1b8708a6ced1bb9b770",
+  "preflight": {
+    "exit_code": 0
+  },
+  "portable": {
+    "command": "npm run check equivalent on Node 24",
+    "exit_code": 0,
+    "tests": 98,
+    "pass": 97,
+    "fail": 0,
+    "skipped": 1,
+    "duration_ms": 3932.064416
+  },
+  "external_legacy": {
+    "command": "RUN_LEGACY_EXTERNAL_TESTS=1 node --test tests/legacy.test.mjs",
+    "exit_code": 0,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0,
+    "duration_ms": 391.163958
+  },
+  "native_legacy_verifier": {
+    "command": "npm run legacy:verify",
+    "exit_code": 2,
+    "status": "FAIL_KNOWN_COMPATIBILITY",
+    "anchor_status": "PASS",
+    "selected_anchor_count": 85,
+    "fingerprint": "e4b6e8a9d9eb2d28128940804be51b915e64b36a3501ab47b3588dfbcfc47d2a",
+    "legacy_assets_unchanged": true,
+    "compatibility": {
+      "status": "FAIL",
+      "known_issue": "LEGACY_CODEX_CLI_HASH_MISMATCH",
+      "original_verifier_error": "PINNED_CONTEXT_OR_CLI_CHANGED",
+      "binding_fields": {
+        "tool_schema_sha256": {
+          "expected": "bd1b63a0ec86c253614d4c95c8579f0934989d62391224877f50943ed49f43dc",
+          "observed": "bd1b63a0ec86c253614d4c95c8579f0934989d62391224877f50943ed49f43dc",
+          "matches": true
+        },
+        "builtin_sha256": {
+          "expected": "513dee9703e0871ab6ff3e7d8d415d961e9d624491bd4ff8faba011168329be3",
+          "observed": "513dee9703e0871ab6ff3e7d8d415d961e9d624491bd4ff8faba011168329be3",
+          "matches": true
+        },
+        "static_context_sha256": {
+          "expected": "252b952d8fd648aa6151ce0baa3ead8916874eccd920e8ea7bb299a8118d3ed5",
+          "observed": "252b952d8fd648aa6151ce0baa3ead8916874eccd920e8ea7bb299a8118d3ed5",
+          "matches": true
+        },
+        "environment_template_sha256": {
+          "expected": "5cbc2327ab978dcc45fca4e39b8155329bcf15cd97a5e5b32a30bdb051c2e5ec",
+          "observed": "5cbc2327ab978dcc45fca4e39b8155329bcf15cd97a5e5b32a30bdb051c2e5ec",
+          "matches": true
+        },
+        "command_sha256": {
+          "expected": "64e1842b9c3f33cff8678752189cb9d8a41296ac0c187a24187af80f5d731545",
+          "observed": "64e1842b9c3f33cff8678752189cb9d8a41296ac0c187a24187af80f5d731545",
+          "matches": true
+        },
+        "cli_sha256": {
+          "expected": "3e11ccc743e8198a5ef84fb57c89941d845b0ea0302485ed1fbac2f0821aca5a",
+          "observed": "6b582e8813ce7e8ed4c52814ee5cf230dba647bf2292df747a4003f2657ef201",
+          "matches": false
+        }
+      },
+      "mismatching_fields": [
+        "cli_sha256"
+      ],
+      "seal_modified": false,
+      "repaired": false,
+      "scope": "Original native seal compatibility; raw-derived bindings are diagnostics only, not a substitute PASS."
+    }
+  },
+  "production_gate": {
+    "allowed": false,
+    "reason_codes": [
+      "PRODUCTION_DISABLED_P0",
+      "UNSET_REQUIRED_CONFIG",
+      "SYNTHETIC_FIXTURE_ONLY",
+      "UNRESOLVED_BUSINESS_POLICY"
+    ],
+    "missing_paths": [
+      "/account_id",
+      "/settings/capital_cents",
+      "/settings/target_order_cents",
+      "/settings/max_positions",
+      "/settings/max_single_trade_loss_bps",
+      "/settings/max_sector_exposure_bps",
+      "/settings/daily_loss_limit_cents",
+      "/settings/max_portfolio_drawdown_bps",
+      "/settings/margin_allowed",
+      "/settings/monthly_trade_frequency",
+      "/settings/strategy_budget_cents/CORE_40",
+      "/settings/strategy_budget_cents/EVENT_3",
+      "/broker_costs/broker_id",
+      "/broker_costs/commission_rate",
+      "/broker_costs/minimum_commission_cents",
+      "/broker_costs/commission_scope",
+      "/broker_costs/exchange_fee_rate",
+      "/broker_costs/exchange_fee_included",
+      "/broker_costs/other_fee_rate",
+      "/broker_costs/other_fee_included",
+      "/broker_costs/stamp_tax_sell_rate",
+      "/broker_costs/statutory_rate_source",
+      "/broker_costs/statutory_rate_verified_at",
+      "/broker_costs/effective_from",
+      "/broker_costs/effective_to",
+      "/broker_costs/slippage_base_bps",
+      "/broker_costs/slippage_stress_bps",
+      "/broker_costs/rounding_mode",
+      "/broker_costs/configuration_source",
+      "/user_risk_policy_version"
+    ]
+  },
+  "ci": {
+    "configured": true,
+    "platform": "ubuntu-latest",
+    "node_major": 24,
+    "remote_run_performed": false
+  },
+  "post_test_change": {
+    "kind": "UNCONFIGURED_TEMPLATE_PROVENANCE_HASH_ONLY",
+    "reason": "Bind source hash to exact UNSET template values, not a synthetic fixture marker",
+    "targeted_verification": "scripts/check.mjs + validateContract(AccountProfile); no runtime logic/test expectation changed; final exact npm run check rerun after template update"
+  },
+  "database": {
+    "dialect": "PostgreSQL",
+    "test_engine": "PGlite 0.5.8",
+    "empty_to_latest": 2,
+    "public_table_count": 47,
+    "tables": [
+      "account_profiles",
+      "account_snapshots",
+      "accounts",
+      "adjustment_actions",
+      "adjustment_versions",
+      "announcements",
+      "approvals",
+      "audit_log",
+      "backtest_runs",
+      "bars_1d",
+      "bars_1m",
+      "brain_packets",
+      "brain_reviews",
+      "candidate_eligibility",
+      "card_evidence",
+      "config_versions",
+      "contract_records",
+      "corp_actions",
+      "cost_estimates",
+      "data_sources",
+      "features_eod",
+      "fills_real",
+      "fills_sim",
+      "financials",
+      "ledger_real",
+      "ledger_sim",
+      "legacy_asset_registry",
+      "news_events",
+      "order_claims_real",
+      "order_claims_sim",
+      "order_drafts",
+      "orderbook_l2",
+      "orders_real",
+      "orders_sim",
+      "positions_real",
+      "positions_sim",
+      "research_cards",
+      "research_evidence",
+      "schema_migrations",
+      "sector_membership",
+      "securities",
+      "security_master",
+      "signal_events",
+      "snapshot_entries",
+      "snapshot_manifests",
+      "staging_imports",
+      "strategy_metrics"
+    ]
+  },
+  "final_entry_point": {
+    "command": "npm run check",
+    "node": "v24.19.0",
+    "exit_code": 0,
+    "observed_at": "2026-10-05T04:51:48.333Z",
+    "expected_tests": 98,
+    "external_default_skip": 1
+  }
+}

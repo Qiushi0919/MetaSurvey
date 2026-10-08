@@ -1,0 +1,143 @@
+{
+  "kind": "PublicEngineeringPublicationChecks",
+  "version": "1.0.0",
+  "recorded_on": "2026-10-08",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_WITH_EXPLICIT_LOCAL_ONLY_EXCLUSIONS",
+  "tested_source_commit": "221fbb058523ceec2852289d54ce517bd82c2318",
+  "test_location": "ISOLATED_PUBLIC_EXPORT_WITH_LOCAL_ONLY_FIXTURES_ABSENT",
+  "productionGate": false,
+  "native_contracts": {
+    "count": 16,
+    "version": "1.0.0",
+    "frozen_release_bytes": "PASS",
+    "required_config_gaps_preserved": 30
+  },
+  "local_complete_native_suite": {
+    "tests": 258,
+    "pass": 257,
+    "fail": 0,
+    "optional_external_legacy_skip": 1,
+    "not_public_clone_result": true
+  },
+  "public_node_raw_runner": {
+    "tests": 250,
+    "pass": 249,
+    "fail": 0,
+    "skipped": 1
+  },
+  "public_node_case_counts": {
+    "registered_cases_in_scope": 249,
+    "pass": 248,
+    "fail": 0,
+    "skip": 1,
+    "additional_file_load_only_pass": 1,
+    "file_load_only_pass_not_added_to_business_cases": true
+  },
+  "public_excluded_cases": [
+    {
+      "name": "P1A data: real SSE raw->staging->normalized->DQ remains explicit non-tradeable; official holiday adapters prove reference dates",
+      "reason": "REFERENCE_FIXTURES_HAVE_UNVERIFIED_REDISTRIBUTION_LICENSE"
+    },
+    {
+      "name": "P1A data: public fixtures have original byte hashes and explicit unknown license/time provenance",
+      "reason": "REFERENCE_FIXTURES_HAVE_UNVERIFIED_REDISTRIBUTION_LICENSE"
+    },
+    {
+      "name": "R01-R12 closure: actual isolated manual roundtrip repeats exact identities; zero execution writes",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    },
+    {
+      "name": "R05 R06 R08 R09 R10: hostile model returns and missing Cost do not write any execution state",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    },
+    {
+      "name": "Experiment A: actual committed source + immutable snapshot replay twice, trace/wall time do not change economics",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    },
+    {
+      "name": "Experiment A mutations: cost version only/rule version only/source byte only change identity and invalidate old approval/result",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    },
+    {
+      "name": "Experiment B: fixed fills/gross, strict friction/net ordering; Edge counts monotonic and all rejections coded",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    },
+    {
+      "name": "code provenance rejects valid-looking historical SHA and unbound source tree",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    },
+    {
+      "name": "actual split-fill gross reconciliation and fixture cash/session binding reject hidden input changes",
+      "reason": "ORIGINAL_CODE_PROVENANCE_REQUIRES_UNPUBLISHED_SOURCE_GIT_HISTORY"
+    }
+  ],
+  "public_python": {
+    "actual_data_or_accounts_used": false,
+    "actual_network_attempts_blocked": 0,
+    "business_rules_or_assertions_changed": false,
+    "counts": {
+      "backtest_sidecar": 123,
+      "unapproved_method_math": 75,
+      "workspace_boundary": 11
+    },
+    "errors": 0,
+    "failures": 0,
+    "git_executable_remapped": true,
+    "local_day1_original_archive_tests_in_scope": false,
+    "passed": true,
+    "productionGate": false,
+    "scope": "PUBLIC_SYNTHETIC_ENGINEERING_ONLY",
+    "skips": 0,
+    "temporary_fixture_path_remaps": 6,
+    "tests_run": 209
+  },
+  "prior_portability_failures_preserved": {
+    "node_R1": {
+      "tested": 256,
+      "pass": 248,
+      "fail": 7,
+      "skip": 1,
+      "cause": "UNPUBLISHED_ORIGINAL_GIT_PROVENANCE_REQUIRED",
+      "resolution": "EXCLUDED_FROM_PUBLIC_SCOPE_ONLY_ORIGINAL_ASSERTIONS_AND_PINS_UNCHANGED"
+    },
+    "python_R1": {
+      "tested": 209,
+      "errors": 2,
+      "cause": "MACOS_TEMP_PATH_SYMLINK_ALIAS",
+      "resolution": "RUNNER_TEMP_ROOT_RESOLVE_NO_BUSINESS_RULE_CHANGE"
+    }
+  },
+  "original_logs_retained_locally": [
+    {
+      "local_evidence_filename": "Portable-Core-Tests.log",
+      "bytes": 28617,
+      "sha256": "sha256:b90ed209e0d236c94fd92ce0df5692c4d2ef0c5b58df206b8778239092c93139"
+    },
+    {
+      "local_evidence_filename": "Public-Node-Tests.log",
+      "bytes": 35564,
+      "sha256": "sha256:f3d17da3d63f295197f7419c753f295c62cae4dd5c7a5bd902fe9797a87316a1"
+    },
+    {
+      "local_evidence_filename": "Public-Node-Tests-R2.log",
+      "bytes": 29385,
+      "sha256": "sha256:98ec46a9eb4b94c36b61b0601d97d55c54676f996597a48d86f013e13d4b0ea9"
+    },
+    {
+      "local_evidence_filename": "Public-Python-Tests.log",
+      "bytes": 2425,
+      "sha256": "sha256:f0e77d570395ae9d2e4f9bfc6f24e49007ee6a0b0cf5a42a395bd2b60ccaadf7"
+    },
+    {
+      "local_evidence_filename": "Public-Python-Tests-R2.log",
+      "bytes": 794,
+      "sha256": "sha256:0ecaa7e30f2964eeae880f24f1caddacc46b834de1cc56f04128b466e35e9068"
+    }
+  ],
+  "github_repository": "https://github.com/Qiushi0919/MetaSurvey",
+  "github_visibility": "PUBLIC",
+  "github_actions": "https://github.com/Qiushi0919/MetaSurvey/actions/workflows/review.yml",
+  "github_actions_result_at_report_creation": "PENDING_FIRST_PUSH",
+  "source_and_child_preservation": "Preservation.json"
+}

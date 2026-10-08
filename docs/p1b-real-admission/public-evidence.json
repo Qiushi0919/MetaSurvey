@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "account_entitlement_evidence": false,
+  "gateway_identity_evidence": false,
+  "monthly_purchase_evidence": false,
+  "prior_official_product_terms_index": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-admission-20261005/terms/public-document-captures.json",
+    "sha256": "sha256:90a5b1f441dccc9e2421ff0f3633890ec4a894c122b10d8623bb6faa684a4af1"
+  },
+  "current_HTTP_SDK_docs_index": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/public-docs/capture-index.json",
+    "sha256": "sha256:ad4a46b67398de6a13439ece0d95bfa35548e10dd99bc73e3dedf759bd87e473"
+  },
+  "public_doc_count": 19,
+  "REST_URL": "https://tushare.pro/document/1?doc_id=130",
+  "SDK_URL": "https://tushare.pro/document/1?doc_id=131",
+  "service_agreement_URL": "https://tushare.pro/document/1?doc_id=405",
+  "scope": "OFFICIAL_PUBLIC_REFERENCE_ONLY_NOT_THIS_GATEWAY_LICENSE",
+  "installed_SDK_wire_behavior": {
+    "version": "1.4.29",
+    "client_path": "/Users/qiushi/投资研究/.local/provider-tests/tushare-connectivity-20261005/venv/lib/python3.12/site-packages/tushare/pro/client.py",
+    "client_sha256": "sha256:42323c7e7acff1b0ffce0fe5232452b70cc276c17a3f449f7f43544fd82edd3f",
+    "note": "Observed local package behavior appends //api and ts_type_name. Public GitHub master/official REST docs use root endpoint. Adapter fixes observed Owner-provided gateway compatibility; does not assert package provenance or official upstream identity."
+  }
+}

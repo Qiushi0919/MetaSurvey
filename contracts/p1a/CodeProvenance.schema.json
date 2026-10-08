@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:CodeProvenance",
+  "title": "CodeProvenance",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "CodeProvenance"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "code_version": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "source_tree_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "files": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^sha256:[a-f0-9]{64}$"
+      }
+    },
+    "scope": {
+      "const": "P1A_OFFLINE_IMPLEMENTATION"
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "code_version",
+    "source_tree_hash",
+    "files",
+    "scope",
+    "production_enabled",
+    "content_hash"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:metasurvey:historical-pit:HistoricalBacktestPrerequisiteAttempt:1.0.0",
+  "title": "HistoricalBacktestPrerequisiteAttempt audit metadata, not admitted native contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "kind",
+    "namespace",
+    "state",
+    "owner_scope",
+    "protocol",
+    "economic_and_execution_policy",
+    "reason_codes",
+    "engine_called",
+    "real_strategy_complete_trades",
+    "sealed_windows_executed",
+    "metrics",
+    "ledger_ref",
+    "untouched_oos",
+    "historical_visibility_proven",
+    "productionGate",
+    "native_orders",
+    "actual_forward_days_increment",
+    "failures_preserved",
+    "parameter_optimization",
+    "recorded_at",
+    "closure_matrix_ref",
+    "strategy_spec_ref",
+    "current_coverage"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "kind": {
+      "const": "HistoricalBacktestPrerequisiteAttempt"
+    },
+    "namespace": {
+      "const": "HISTORICAL_PIT_PREPARATION:CORE_40"
+    },
+    "state": {
+      "const": "BLOCKED_BEFORE_ENGINE"
+    },
+    "owner_scope": {
+      "const": "CONDITIONALLY_AUTHORIZED_AFTER_PIT_AND_ECONOMIC_POLICIES"
+    },
+    "protocol": {
+      "const": {
+        "training": "EXPANDING_FROM_36_MONTH_INITIAL_IS",
+        "validation_months": 12,
+        "sealed_test_months": 6,
+        "step_months": 6,
+        "purge_sessions": 40,
+        "embargo_sessions": 40,
+        "minimum_sessions": 1260,
+        "minimum_complete_trades": 100,
+        "family_ids": [
+          "CORE40_Q_PULLBACK_V1",
+          "CORE40_Q_BREAKOUT_V1"
+        ],
+        "exact_anchor_and_boundary_implementation": "UNSET_REQUIRED",
+        "label": "FROZEN_PROTOCOL_PARAMETERS_OWNER_ACCEPTED_IN_THIS_SCOPE_NOT_NEW_POLICY_DEFAULTS"
+      }
+    },
+    "economic_and_execution_policy": {
+      "const": {
+        "family_selection": "UNSET_REQUIRED",
+        "cost_of_capital_estimation": "UNSET_REQUIRED",
+        "normalized_cycle_earnings_method": "UNSET_REQUIRED",
+        "scenario_probabilities_and_uncertainty_buffer": "UNSET_REQUIRED",
+        "benchmark_identifier_and_total_return_method": "UNSET_REQUIRED",
+        "simulation_capital_cost_slippage": "UNSET_REQUIRED",
+        "risk_and_position_proposal_acceptance": "UNSET_REQUIRED",
+        "OOS_calendar_sample_multiplicity_acceptance": "UNSET_REQUIRED"
+      }
+    },
+    "reason_codes": {
+      "const": [
+        "PIT_DOMAINS_NOT_CLOSED",
+        "INSUFFICIENT_1260_SESSION_HISTORY",
+        "CURRENT_SAMPLE_EXPOSED_NOT_UNTOUCHED_OOS",
+        "DATED_ACCOUNT_COST_SLIPPAGE_RISK_UNSET",
+        "BENCHMARK_TOTAL_RETURN_AND_INDEPENDENT_REVIEW_UNPROVEN",
+        "SEALED_WINDOW_BOUNDARY_IMPLEMENTATION_UNREVIEWED"
+      ]
+    },
+    "engine_called": {
+      "const": false
+    },
+    "real_strategy_complete_trades": {
+      "const": 0
+    },
+    "sealed_windows_executed": {
+      "const": 0
+    },
+    "metrics": {
+      "const": {
+        "gross": null,
+        "net": null,
+        "fees": null,
+        "slippage": null,
+        "turnover": null,
+        "MDD": null,
+        "benchmark_excess": null,
+        "MAE": null,
+        "MFE": null
+      }
+    },
+    "ledger_ref": {
+      "const": null
+    },
+    "untouched_oos": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    },
+    "native_orders": {
+      "const": 0
+    },
+    "actual_forward_days_increment": {
+      "const": 0
+    },
+    "failures_preserved": {
+      "const": true
+    },
+    "parameter_optimization": {
+      "const": false
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "closure_matrix_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "strategy_spec_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "current_coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ],
+      "properties": {
+        "603993.SH": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "distinct_observed_bar_dates",
+            "identical_duplicate_dates",
+            "first",
+            "last"
+          ],
+          "properties": {
+            "distinct_observed_bar_dates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "identical_duplicate_dates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "first": {
+              "type": "string",
+              "format": "date"
+            },
+            "last": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "600312.SH": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "distinct_observed_bar_dates",
+            "identical_duplicate_dates",
+            "first",
+            "last"
+          ],
+          "properties": {
+            "distinct_observed_bar_dates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "identical_duplicate_dates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "first": {
+              "type": "string",
+              "format": "date"
+            },
+            "last": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "603228.SH": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "distinct_observed_bar_dates",
+            "identical_duplicate_dates",
+            "first",
+            "last"
+          ],
+          "properties": {
+            "distinct_observed_bar_dates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "identical_duplicate_dates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "first": {
+              "type": "string",
+              "format": "date"
+            },
+            "last": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-10-05T15:23:47.315563+00:00",
+  "scope": "LOCAL_ONLY_METADATA_NO_RAW_NO_SECRET_NO_LICENSE_AUTHORITY",
+  "source_tree_hash": "sha256:4dcc9bd86cc87ef4c7032a124a69ed4d0e62c957b1243c453e388ecde63aaf9a",
+  "Gate_content_hash": "sha256:43d27e322c95bf0161a48beab066e8a6eb967fef0b0a9245330cc3ae50f61b7f",
+  "reviewed_code_candidate": "55cfa442ea85cddbfdd860865e5490902be38c9f",
+  "capture_code_commit": "8f8cc0d8a7b32fcc77479f1f265068ca87e6b684",
+  "verification_code_commit": "42e1e4c457edc8a30316aec560c9d444f2406517",
+  "engineering": "PASS_WITH_CONDITIONS",
+  "source_admission": "BLOCKED",
+  "full_clone_aggregate": "FAIL_UNRESOLVED_HISTORICAL_PATH_PORTABILITY",
+  "stop_after_delivery": true,
+  "files": [
+    {
+      "path": "docs/p1b-real-admission/Attack-Matrix.json",
+      "sha256": "sha256:c05037a222d407f42e2ecef810d5e9423bd8376fc422176bc0adac2c0109ec3e",
+      "bytes": 14220
+    },
+    {
+      "path": "docs/p1b-real-admission/Delivery-Addendum.json",
+      "sha256": "sha256:2df53e56f59beebaf418943de1fb1c82dd49ef7385b2b07cddc8339955931ea0",
+      "bytes": 8327
+    },
+    {
+      "path": "docs/p1b-real-admission/Delivery-Addendum.md",
+      "sha256": "sha256:7d82cf897fd55aed5db8311991df40d1fa7d040c5c0b83dedba86ef71e8be79b",
+      "bytes": 3767
+    },
+    {
+      "path": "docs/p1b-real-admission/Delivery-Checks.json",
+      "sha256": "sha256:50359ade3485187bff1e8b80ac7582d7d7635fb785b9253023e395c287658296",
+      "bytes": 8306
+    },
+    {
+      "path": "docs/p1b-real-admission/Gate-Review.md",
+      "sha256": "sha256:fdc56f6f838ca2963b7a37b167e9789145f27dea4883d339c35387b516845517",
+      "bytes": 9843
+    },
+    {
+      "path": "docs/p1b-real-admission/Gate.json",
+      "sha256": "sha256:9bbaf33c0c69e7dcf8e572110a59684d621b60d8677f235ec463e22276113917",
+      "bytes": 22977
+    },
+    {
+      "path": "docs/p1b-real-admission/Independent-Review.json",
+      "sha256": "sha256:e804f226d118194df69b8d8e4d2d1e042e33da2c64b63791e0d94226e5dbddd0",
+      "bytes": 14795
+    },
+    {
+      "path": "docs/p1b-real-admission/Independent-Review.md",
+      "sha256": "sha256:37c077c1a253c1b642ab4b5b21a4cdfbe1c986551de4d2eff2edf9f8d16354cb",
+      "bytes": 3691
+    },
+    {
+      "path": "docs/p1b-real-admission/Interface-Freeze.md",
+      "sha256": "sha256:3956bd1b639e4bb9a88a3d90c765c4ac93901a04c68a76b239cc5f4ecc2b66bb",
+      "bytes": 3507
+    },
+    {
+      "path": "docs/p1b-real-admission/blocked-decisions.json",
+      "sha256": "sha256:c8fc3fd70a1e960e63dff22aff84a1a0117a6db311db85f635e441d6e5f57938",
+      "bytes": 1744
+    },
+    {
+      "path": "docs/p1b-real-admission/clock-matrix.json",
+      "sha256": "sha256:ba909978054e34b82e04eff30248fdfa13a61ea2b0039eefb1d0bd07dec9885e",
+      "bytes": 175920
+    },
+    {
+      "path": "docs/p1b-real-admission/code-provenance.json",
+      "sha256": "sha256:a2014a579f5df70745bf4e47fb0bbb0df1a1becde875c9a2767cb76df0ade359",
+      "bytes": 2113
+    },
+    {
+      "path": "docs/p1b-real-admission/conditions.json",
+      "sha256": "sha256:14df691cd492a1a313353db7b05df1006723474e8c80707c7332012f79b48ee9",
+      "bytes": 4234
+    },
+    {
+      "path": "docs/p1b-real-admission/cross-source-comparison.json",
+      "sha256": "sha256:9c17312b4c5463f26601458c87025ae68ed9bceb0299ef57d306ffbad2cb2a86",
+      "bytes": 3640
+    },
+    {
+      "path": "docs/p1b-real-admission/data-pit-matrix.json",
+      "sha256": "sha256:829c024cc6a45d740dae557a3fd7b4172422afef2e4ce96b6cf1084692a0f4b5",
+      "bytes": 6813
+    },
+    {
+      "path": "docs/p1b-real-admission/delivery-canonical-frozen-verifier.log",
+      "sha256": "sha256:fd2ea4f40fd9ce3ff9f4e4e99a5752456ad2684f12db0dd94b72fbe62e9507f8",
+      "bytes": 172
+    },
+    {
+      "path": "docs/p1b-real-admission/delivery-clone-current-verifier.log",
+      "sha256": "sha256:c138396da3b38c3e3a359d7012ff4c3acfdfabe1b9120707005a7c7e83be0657",
+      "bytes": 136
+    },
+    {
+      "path": "docs/p1b-real-admission/delivery-clone-frozen-verifier.log",
+      "sha256": "sha256:5394f8e8830ad26c4e11557a1f03af9362fb78f3a412bce89209d42dc9e436a2",
+      "bytes": 1070
+    },
+    {
+      "path": "docs/p1b-real-admission/deterministic-replay.json",
+      "sha256": "sha256:447b658ee705eede6417c767ebee0ab9c84a9c583b377b93620984f8923da3c8",
+      "bytes": 1181
+    },
+    {
+      "path": "docs/p1b-real-admission/dq-results.json",
+      "sha256": "sha256:7614176973c0a2625c26d94c3b36e81532b2c5d9bf4e395157aa23579823f547",
+      "bytes": 33553
+    },
+    {
+      "path": "docs/p1b-real-admission/entitlement-matrix.json",
+      "sha256": "sha256:18fd9e2ad6a39504e67775dd3432191b3004a33439db176840797e93c34dbacd",
+      "bytes": 1497
+    },
+    {
+      "path": "docs/p1b-real-admission/known-failures.json",
+      "sha256": "sha256:3daa0cbc4a2ade0a45460adbfe373f1e6683d04b92dbffb2b5e0f782d407c7b2",
+      "bytes": 3306
+    },
+    {
+      "path": "docs/p1b-real-admission/preservation.json",
+      "sha256": "sha256:a163df06567cc9dd1dfcfed46b7fc49aad25e802d57b0bd3744321491110a78e",
+      "bytes": 558
+    },
+    {
+      "path": "docs/p1b-real-admission/provider-evidence.json",
+      "sha256": "sha256:78b1c45e4618ac4c875f80fb6ef30d75eedd60fba2044b7cc1f45b0a83fee35a",
+      "bytes": 1751
+    },
+    {
+      "path": "docs/p1b-real-admission/public-evidence.json",
+      "sha256": "sha256:1f2ee2961317a04cc668238ebbefc505507ef20737e1f2eaf74e2532d1f28f6b",
+      "bytes": 1510
+    },
+    {
+      "path": "docs/p1b-real-admission/raw-inventory.json",
+      "sha256": "sha256:f01a5063798f1ee0fdf66629f9002855b2abe3caf901bf74c724d559d61bbb56",
+      "bytes": 13456
+    },
+    {
+      "path": "docs/p1b-real-admission/three-symbol-coverage.json",
+      "sha256": "sha256:42d9f836b1dd2cf7067840ec16e7a633ff5d14dbf09aa89f89a82da67b789d0f",
+      "bytes": 12271
+    },
+    {
+      "path": "docs/p1b-real-admission/validation.json",
+      "sha256": "sha256:ec1d308a68290637142dca9b685adca67fd8459c7780e9177f4f30d0ee6d020c",
+      "bytes": 4735
+    }
+  ],
+  "external_delivery_evidence": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-clean-validation.json",
+      "sha256": "sha256:cbd63eb240334e61a06557a38d3dab125dbd322cf5642a1be4b1a2b84d6cc468"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/validation/final-secret-and-preservation-scan.json",
+      "sha256": "sha256:370a38ad71a9fee57252e8047e809387eb0b4624cff1f7ccc38969f9efa5d888"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/delivery-checkpoint/Owner-Gate-Review-reviewed-55cfa442.md",
+      "sha256": "sha256:0237ae0da33201d839fc2769159815aac60e68508e7ee2525b59b6b652aaa411"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/delivery-checkpoint/Delivery-Reviewed-validation.json",
+      "sha256": "sha256:b31b9c4e50fec22de66a02a1b2602f43c85fc302f6ab137bb7ed503b4c821e26"
+    }
+  ],
+  "external_final_commit_checkpoint": "/Users/qiushi/投资研究/.p1b-archives/tushare-real-admission-20261005/delivery-checkpoint/Delivery-Checkpoint.json",
+  "final_commit_ref_excluded_to_avoid_self_reference": true
+}

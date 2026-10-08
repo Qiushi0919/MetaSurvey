@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:contracts:p1a:CostProfile",
+  "title": "CostProfile",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "CostProfile"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "profile_scope": {
+      "const": "SYNTHETIC_TEST_ONLY"
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "currency": {
+      "const": "CNY"
+    },
+    "money_unit": {
+      "const": "INTEGER_CENTS_STRING"
+    },
+    "rounding_mode": {
+      "const": "HALF_UP"
+    },
+    "commission_scope": {
+      "const": "PER_ORDER"
+    },
+    "commission_rate": {
+      "type": "string",
+      "pattern": "^(0|1)(\\.[0-9]{1,10})?$"
+    },
+    "minimum_commission_cents": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,37})$",
+      "x-unit": "CNY_CENTS"
+    },
+    "stamp_tax_sell_rate": {
+      "type": "string",
+      "pattern": "^(0|1)(\\.[0-9]{1,10})?$"
+    },
+    "exchange_fee": {
+      "type": "object",
+      "properties": {
+        "rate": {
+          "type": "string",
+          "pattern": "^(0|1)(\\.[0-9]{1,10})?$"
+        },
+        "included_in": {
+          "enum": [
+            "COMMISSION",
+            "EXCLUDED"
+          ]
+        }
+      },
+      "required": [
+        "rate",
+        "included_in"
+      ],
+      "additionalProperties": false
+    },
+    "other_fee": {
+      "type": "object",
+      "properties": {
+        "rate": {
+          "type": "string",
+          "pattern": "^(0|1)(\\.[0-9]{1,10})?$"
+        },
+        "included_in": {
+          "enum": [
+            "COMMISSION",
+            "EXCLUDED"
+          ]
+        }
+      },
+      "required": [
+        "rate",
+        "included_in"
+      ],
+      "additionalProperties": false
+    },
+    "slippage": {
+      "type": "object",
+      "properties": {
+        "treatment": {
+          "enum": [
+            "INCLUDED_IN_EXECUTION_PRICE",
+            "SEPARATE_ESTIMATE"
+          ]
+        },
+        "rate": {
+          "type": "string",
+          "pattern": "^(0|1)(\\.[0-9]{1,10})?$"
+        }
+      },
+      "required": [
+        "treatment",
+        "rate"
+      ],
+      "additionalProperties": false
+    },
+    "effective_from": {
+      "type": "string",
+      "format": "date"
+    },
+    "effective_to": {
+      "type": "string",
+      "format": "date"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "SYNTHETIC_FIXTURE"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20000
+        }
+      },
+      "required": [
+        "kind",
+        "description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "profile_scope",
+    "production_enabled",
+    "currency",
+    "money_unit",
+    "rounding_mode",
+    "commission_scope",
+    "commission_rate",
+    "minimum_commission_cents",
+    "stamp_tax_sell_rate",
+    "exchange_fee",
+    "other_fee",
+    "slippage",
+    "effective_from",
+    "effective_to",
+    "source"
+  ],
+  "additionalProperties": false,
+  "x-contract": {
+    "version": "1.0.0",
+    "required_optional": "required array is authoritative; null means explicit unknown",
+    "timezone": "Offset required, Asia/Shanghai business dates",
+    "money": "BigInt integer cents; private Decimal100 HALF_UP; minimum commission effect is subset",
+    "hash": "SHA256 canonical JSON; contract-specific projection in validator",
+    "invalidated_by": [
+      "input version/hash/time/policy change"
+    ],
+    "production_enabled": false
+  }
+}

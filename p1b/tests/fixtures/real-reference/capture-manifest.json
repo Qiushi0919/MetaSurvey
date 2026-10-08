@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "acquisition": "ACTUAL_HTTP_TLS_DOWNLOAD",
+  "scope": "REAL_CAPTURE_LOCAL_REFERENCE_ONLY",
+  "items": [
+    {
+      "id": "sse-terms",
+      "original_uri": "https://www.sse.com.cn/home/legal/",
+      "response_uri": "https://www.sse.com.cn/home/legal/",
+      "status": 200,
+      "response_headers": {
+        "Content-Type": "text/html",
+        "Date": "Mon, 05 Oct 2026 10:08:22 GMT",
+        "Last-Modified": null,
+        "ETag": null
+      },
+      "started_at": "2026-10-05T10:08:22.185378+00:00",
+      "retrieved_at": "2026-10-05T10:08:22.572813+00:00",
+      "byte_length": 30155,
+      "raw_sha256": "sha256:26733c0c6cd93428d1ec5d62401b6ad269a26990a9181c5f5d63237c35431f69",
+      "filename": "sse-terms.html",
+      "capture_method": "ACTUAL_HTTP_TLS_DOWNLOAD",
+      "provenance": "REAL_PUBLIC_CAPTURE_NOT_SYNTHETIC",
+      "permitted_intended_use": "NONCOMMERCIAL_LOCAL_BROWSE_DOWNLOAD_REFERENCE_ONLY",
+      "not_historical_availability_proof": true
+    },
+    {
+      "id": "sse-calendar",
+      "original_uri": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "response_uri": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "status": 200,
+      "response_headers": {
+        "Content-Type": "text/html",
+        "Date": "Mon, 05 Oct 2026 10:08:22 GMT",
+        "Last-Modified": null,
+        "ETag": null
+      },
+      "started_at": "2026-10-05T10:08:22.573186+00:00",
+      "retrieved_at": "2026-10-05T10:08:22.746222+00:00",
+      "byte_length": 28093,
+      "raw_sha256": "sha256:779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "filename": "sse-calendar.html",
+      "capture_method": "ACTUAL_HTTP_TLS_DOWNLOAD",
+      "provenance": "REAL_PUBLIC_CAPTURE_NOT_SYNTHETIC",
+      "permitted_intended_use": "NONCOMMERCIAL_LOCAL_BROWSE_DOWNLOAD_REFERENCE_ONLY",
+      "not_historical_availability_proof": true
+    }
+  ],
+  "no_cloud_or_redistribution_permission_inferred": true,
+  "server_Date_not_used_as_historical_publication_clock": true
+}

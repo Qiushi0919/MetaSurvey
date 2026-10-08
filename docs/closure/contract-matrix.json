@@ -1,0 +1,291 @@
+{
+  "frozen_preserved": true,
+  "v1_contracts": 16,
+  "p1a_contracts": 13,
+  "shared_definition_files": 1,
+  "releases": [
+    {
+      "path": "contracts/release.v1.json",
+      "sha256": "sha256:eee1c485838212210f646f755c0ce4c61b38b46dfd6fa1b8708a6ced1bb9b770",
+      "version": "1.0.0"
+    },
+    {
+      "path": "contracts/release.p1a.json",
+      "sha256": "sha256:6e593b06f0b09f58ecf5f50e121f338cd7f73d752ce348330207e5c062e3a876",
+      "version": "1.1.0"
+    }
+  ],
+  "contracts": [
+    {
+      "group": "v1",
+      "name": "AccountProfile",
+      "schema_id": "urn:ashare:contracts:v1:AccountProfile",
+      "version": "1.0.0",
+      "path": "contracts/v1/AccountProfile.schema.json",
+      "sha256": "sha256:039296fae33ad694bd77c35c8c2774b2741f9cd0a03082dd6c83f1fa874ded1a",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "Approval",
+      "schema_id": "urn:ashare:contracts:v1:Approval",
+      "version": "1.0.0",
+      "path": "contracts/v1/Approval.schema.json",
+      "sha256": "sha256:55ca29a826bbf29b5d074619edc8a9e6dae8c4bd63b5e26f6864fd2e031df56e",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "AuditEvent",
+      "schema_id": "urn:ashare:contracts:v1:AuditEvent",
+      "version": "1.0.0",
+      "path": "contracts/v1/AuditEvent.schema.json",
+      "sha256": "sha256:2ae7f67344be7c1c6f45d83b7445d65120cd4c48bc03dfa54c509399fb38031d",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "BacktestResult",
+      "schema_id": "urn:ashare:contracts:v1:BacktestResult",
+      "version": "1.0.0",
+      "path": "contracts/v1/BacktestResult.schema.json",
+      "sha256": "sha256:d1eb254faa802d28be328272dc323d03f67a0a6f807aaf2626f520f0cc887688",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "BrainPacket",
+      "schema_id": "urn:ashare:contracts:v1:BrainPacket",
+      "version": "1.0.0",
+      "path": "contracts/v1/BrainPacket.schema.json",
+      "sha256": "sha256:f57359752088bc9788840f96711c7dfca4b598ff1d1ee88e07808ea93b3eedc0",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "CandidateEligibility",
+      "schema_id": "urn:ashare:contracts:v1:CandidateEligibility",
+      "version": "1.0.0",
+      "path": "contracts/v1/CandidateEligibility.schema.json",
+      "sha256": "sha256:f0699554418579367d14d1ac16c40cc16fe033ac2fb76c9217dce850657e474a",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "CostEstimate",
+      "schema_id": "urn:ashare:contracts:v1:CostEstimate",
+      "version": "1.0.0",
+      "path": "contracts/v1/CostEstimate.schema.json",
+      "sha256": "sha256:aca2e56876ecaa5a381f00e352c124ade1f416afbff7e37fb14511b6e3a3564b",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "DataEnvelope",
+      "schema_id": "urn:ashare:contracts:v1:DataEnvelope",
+      "version": "1.0.0",
+      "path": "contracts/v1/DataEnvelope.schema.json",
+      "sha256": "sha256:45bb7495479ea41e4b796f91bb299c97ca03442a1c5228f28489addc90990760",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "FeatureSet",
+      "schema_id": "urn:ashare:contracts:v1:FeatureSet",
+      "version": "1.0.0",
+      "path": "contracts/v1/FeatureSet.schema.json",
+      "sha256": "sha256:e3792a384b61d88cdce9c02fe119687a56c10f1207fefd24e9ac10dca7dc5831",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "Fill",
+      "schema_id": "urn:ashare:contracts:v1:Fill",
+      "version": "1.0.0",
+      "path": "contracts/v1/Fill.schema.json",
+      "sha256": "sha256:803eefa1372ff7bba5f8ca6ada3cff61401cb7791a2cb85917e55554e07337b3",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "LedgerEntry",
+      "schema_id": "urn:ashare:contracts:v1:LedgerEntry",
+      "version": "1.0.0",
+      "path": "contracts/v1/LedgerEntry.schema.json",
+      "sha256": "sha256:7dc318676c984f3ea45531651dccde5cfa4a8d71246edc84fec78ef95de8aeb5",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "OrderIntent",
+      "schema_id": "urn:ashare:contracts:v1:OrderIntent",
+      "version": "1.0.0",
+      "path": "contracts/v1/OrderIntent.schema.json",
+      "sha256": "sha256:4e2c22852f5dda94cc06c66e6e50d5f5e39410960669546e4072d920beeee683",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "ResearchCard",
+      "schema_id": "urn:ashare:contracts:v1:ResearchCard",
+      "version": "1.0.0",
+      "path": "contracts/v1/ResearchCard.schema.json",
+      "sha256": "sha256:efa9422bc5f79a7b81b9758df703a025dc9682297000648d37eb468bb0df56c5",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "SecurityIdentity",
+      "schema_id": "urn:ashare:contracts:v1:SecurityIdentity",
+      "version": "1.0.0",
+      "path": "contracts/v1/SecurityIdentity.schema.json",
+      "sha256": "sha256:76d497ead91b8970009ee4f6abeb8b5273846e6c0db030b3736efcfad3aa4c15",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "SignalEvent",
+      "schema_id": "urn:ashare:contracts:v1:SignalEvent",
+      "version": "1.0.0",
+      "path": "contracts/v1/SignalEvent.schema.json",
+      "sha256": "sha256:a5da23d5f59c8cf7a02ef1cfb4ffc243a04c0e4468006b61529f7ffada639470",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "SnapshotManifest",
+      "schema_id": "urn:ashare:contracts:v1:SnapshotManifest",
+      "version": "1.0.0",
+      "path": "contracts/v1/SnapshotManifest.schema.json",
+      "sha256": "sha256:72e701091ca06095a564bc13151abd5e45d67eaa6482c6788748ddd277147e91",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "v1",
+      "name": "common.schema",
+      "schema_id": "urn:ashare:contracts:v1:common",
+      "version": "1.0.0",
+      "path": "contracts/v1/common.schema.json",
+      "sha256": "sha256:36605dc6b4090fc4d92f87cbafaf16ea0f5fb5756f0706c57be1ba5ff21f3de6",
+      "kind": "SHARED_DEFINITIONS"
+    },
+    {
+      "group": "p1a",
+      "name": "AuditChainEvent",
+      "schema_id": "urn:ashare:contracts:p1a:AuditChainEvent",
+      "version": "1.0.0",
+      "path": "contracts/p1a/AuditChainEvent.schema.json",
+      "sha256": "sha256:4ab95b95018e6a4613831c6fc0eb25df3bf05ca934a7858b6f55c2d392a54997",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "CodeProvenance",
+      "schema_id": "urn:ashare:contracts:p1a:CodeProvenance",
+      "version": "1.0.0",
+      "path": "contracts/p1a/CodeProvenance.schema.json",
+      "sha256": "sha256:8610a576717012d57ad2455254989b1a18e38fa8a2d5a1f508d941456b67caf8",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "CostAttribution",
+      "schema_id": "urn:ashare:contracts:p1a:CostAttribution",
+      "version": "1.0.0",
+      "path": "contracts/p1a/CostAttribution.schema.json",
+      "sha256": "sha256:387bd9f2eb1a9ccb8886c994abafbfd2bc582e9e74ad8f4acb04238120806d0e",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "CostProfile",
+      "schema_id": "urn:ashare:contracts:p1a:CostProfile",
+      "version": "1.0.0",
+      "path": "contracts/p1a/CostProfile.schema.json",
+      "sha256": "sha256:e9d70b944c284711fe19a04d01a3411c4a3e7e9db376f978f879fcd61e5bce5f",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "DeterministicReplayResult",
+      "schema_id": "urn:ashare:contracts:p1a:DeterministicReplayResult",
+      "version": "1.0.0",
+      "path": "contracts/p1a/DeterministicReplayResult.schema.json",
+      "sha256": "sha256:60ce29f0e2543c7a1e24fce284682aa533335a9b5f797690eceea15fdc05d539",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "P1ACostEstimate",
+      "schema_id": "urn:ashare:contracts:p1a:P1ACostEstimate",
+      "version": "1.0.0",
+      "path": "contracts/p1a/P1ACostEstimate.schema.json",
+      "sha256": "sha256:ae534c6a9abd2db063b9ad0f0074f4b2fd77adcb001d596383b208aab636687c",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "PaperCalendarProjection",
+      "schema_id": "urn:ashare:contracts:p1a:PaperCalendarProjection",
+      "version": "1.0.0",
+      "path": "contracts/p1a/PaperCalendarProjection.schema.json",
+      "sha256": "sha256:dd8b536a1fee9fe78d9c0d4e4ed4eae167656201c4cc3809af355ecf023ce850",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "PaperReplayOrderIntent",
+      "schema_id": "urn:ashare:contracts:p1a:PaperReplayOrderIntent",
+      "version": "1.0.0",
+      "path": "contracts/p1a/PaperReplayOrderIntent.schema.json",
+      "sha256": "sha256:ef590899177b81df4a73ed954f4b9dade87e35a7a0918d01ce526a9c76980797",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "PaperSecurityProjection",
+      "schema_id": "urn:ashare:contracts:p1a:PaperSecurityProjection",
+      "version": "1.0.0",
+      "path": "contracts/p1a/PaperSecurityProjection.schema.json",
+      "sha256": "sha256:2ebd31a4a7a528a44d11844872f9787f58d365a60738c53645599e46d830497a",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "PathMetrics",
+      "schema_id": "urn:ashare:contracts:p1a:PathMetrics",
+      "version": "1.0.0",
+      "path": "contracts/p1a/PathMetrics.schema.json",
+      "sha256": "sha256:f722328bfa72674668ef8f262f24ec0ca36ad885d4a8d90824327bc472087a1c",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "ReplayInputManifest",
+      "schema_id": "urn:ashare:contracts:p1a:ReplayInputManifest",
+      "version": "1.0.0",
+      "path": "contracts/p1a/ReplayInputManifest.schema.json",
+      "sha256": "sha256:b5d84f3767955b24235af59309b28b6c54cfcc3388ab21667651dca37f85ac13",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "SnapshotLineageBundle",
+      "schema_id": "urn:ashare:contracts:p1a:SnapshotLineageBundle",
+      "version": "1.0.0",
+      "path": "contracts/p1a/SnapshotLineageBundle.schema.json",
+      "sha256": "sha256:600ea6d57c3102c1ed4d5e3987fb904f9bbf60f1e297bb1b1824598e2cec28ef",
+      "kind": "MODULE_CONTRACT"
+    },
+    {
+      "group": "p1a",
+      "name": "SourceObservation",
+      "schema_id": "urn:ashare:contracts:p1a:SourceObservation",
+      "version": "1.0.0",
+      "path": "contracts/p1a/SourceObservation.schema.json",
+      "sha256": "sha256:94f793494be44b83a065c5f8894502d8916d3870fb05eac480be8b072c20ddbb",
+      "kind": "MODULE_CONTRACT"
+    }
+  ],
+  "new_closure_contracts": "PROPOSED_ONLY_NOT_CREATED"
+}

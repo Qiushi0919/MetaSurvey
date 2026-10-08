@@ -1,0 +1,20 @@
+{
+  "schema_version": 6,
+  "migrations": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006"
+  ],
+  "new_migrations": [],
+  "old_migration_bytes_unchanged": true,
+  "empty_to_latest_and_idempotency": "PASS_CURRENT_FULL_CHECK",
+  "tables": 64,
+  "database_backend_tested": "TEMPORARY_PGLITE_ONLY",
+  "new_real_admission_registry": "PRIVATE_IN_PROCESS_DEV_AUTHORITY",
+  "new_evidence_store": "EXTERNAL_FILES_NO_DURABLE_LIVE_RESTORE",
+  "production_db_deployment_claimed": false,
+  "staging_legacy_only_policies_unchanged": true
+}

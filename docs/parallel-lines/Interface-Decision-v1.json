@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "kind": "ParentSharedInterfaceReview",
+  "state": "APPROVE_WITH_CONDITIONS_FOR_SIDECAR_IMPLEMENTATION",
+  "recorded_at": "2026-10-08T09:45:40.336218+00:00",
+  "baseline_commit": "0ea206a834cf4f68a94b536b26377d390f02ec18",
+  "parent_root": "/Users/qiushi/投资研究/ashare-trading-v1",
+  "child_root": "/Users/qiushi/投资研究/ashare-backtest-5y",
+  "child_thread_id": "01a11a90-55cc-7212-b90c-c118c17e69c1",
+  "parent_owned_new_paths": [
+    "integration_review/",
+    "docs/parallel-lines/"
+  ],
+  "child_owned_new_paths": [
+    "backtest_5y/",
+    "contracts/backtest-5y/",
+    "docs/backtest-5y/",
+    "tests/backtest-5y/"
+  ],
+  "proposal_ref": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-initial-review-20261008/Shared-Interface-Proposals.md",
+    "bytes": 7241,
+    "sha256": "sha256:77109d1a1c658b537393f2848a27bb9ee1345bed24c6658e79d3ecc17d15a902"
+  },
+  "review_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/parallel-lines/Interface-Review.md",
+    "bytes": 6258,
+    "sha256": "sha256:c78f9df7d6a080ec6193c457d91868695fc6535c43d374582c09e0b901765c7d"
+  },
+  "strategy_ref": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/wave-f/Frozen-StrategySpec-v1.json",
+    "bytes": 11343,
+    "sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da"
+  },
+  "authority_instruction_ref": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/parallel-lines-20261008/Owner-Coordination-Instruction.txt",
+    "bytes": 412,
+    "sha256": "sha256:1b6b03af7e0048681eb9e80e3626b11b6c90a4569b472e597d180a2e8964d725"
+  },
+  "interfaces": [
+    {
+      "name": "HistoricalEvidenceBundle",
+      "semantics": "CONDITIONALLY_ACCEPTED",
+      "field_schema_review": "PENDING_EXACT_FIELDS_AND_CONSUMER_TESTS",
+      "native_contract_replacement": false
+    },
+    {
+      "name": "AdmittedHistoricalSnapshot",
+      "semantics": "CONDITIONALLY_ACCEPTED",
+      "field_schema_review": "PENDING_EXACT_FIELDS_AND_CONSUMER_TESTS",
+      "native_contract_replacement": false
+    },
+    {
+      "name": "StrategyFeatureDecision",
+      "semantics": "CONDITIONALLY_ACCEPTED",
+      "field_schema_review": "PENDING_EXACT_FIELDS_AND_CONSUMER_TESTS",
+      "native_contract_replacement": false
+    },
+    {
+      "name": "DatedExecutionEconomics",
+      "semantics": "CONDITIONALLY_ACCEPTED",
+      "field_schema_review": "PENDING_EXACT_FIELDS_AND_CONSUMER_TESTS",
+      "native_contract_replacement": false
+    },
+    {
+      "name": "WalkForwardWindowPlan",
+      "semantics": "CONDITIONALLY_ACCEPTED",
+      "field_schema_review": "PENDING_EXACT_FIELDS_AND_CONSUMER_TESTS",
+      "native_contract_replacement": false
+    },
+    {
+      "name": "AuditableSimulationRun",
+      "semantics": "CONDITIONALLY_ACCEPTED",
+      "field_schema_review": "PENDING_EXACT_FIELDS_AND_CONSUMER_TESTS",
+      "native_contract_replacement": false
+    }
+  ],
+  "reserved_ADRs": [],
+  "reserved_migrations": [],
+  "strategy_changes_approved": false,
+  "new_price_ablation_experiment_approved": false,
+  "auto_merge": false,
+  "formal_PIT_approval": false,
+  "actual_forward_approval": false,
+  "productionGate": false
+}

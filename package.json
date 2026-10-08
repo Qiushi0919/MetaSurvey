@@ -1,0 +1,30 @@
+{
+  "name": "ashare-trading-v1",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "P1-A data/PIT, paper settlement and deterministic economic acceptance; production disabled",
+  "engines": {
+    "node": ">=24 <26"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "check": "node scripts/check.mjs && node scripts/verify-closure.mjs && npm test",
+    "test:schema": "node --test tests/schema.test.mjs",
+    "legacy:verify": "node adapters/verify-legacy.mjs",
+    "legacy:replay": "node adapters/replay-legacy.mjs",
+    "contracts:verify": "node scripts/verify-contracts.mjs",
+    "p1a:experiments": "node scripts/run-p1a-experiments.mjs",
+    "p1a:verify": "node scripts/verify-p1a.mjs",
+    "closure:verify": "node scripts/verify-closure.mjs",
+    "closure:e2e": "node scripts/run-closure-e2e.mjs"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "decimal.js": "10.6.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8"
+  }
+}

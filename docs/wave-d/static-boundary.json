@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "scanned_new_source_schema_metadata_files": 48,
+  "high_confidence_credential_pattern_hits": 0,
+  "actual_secret_value_equality_scan": "NOT_PERFORMED_IN_STATIC_FINAL_AUDIT_NO_CREDENTIAL_REREAD",
+  "capture_secret_echo_check": "PERFORMED_IN_MEMORY_DURING33_GATEWAY_CAPTURES_ONLY",
+  "new_numerical_reports_raws_in_git": false,
+  "policy": "Private numerical evidence stays outside Git; artifacts use paths/hash/bytes/counts only. Historical unchanged Git baseline not reclassified or deleted.",
+  "immutable_baseline_files_verified": 563,
+  "frozen_code_pins": 28,
+  "legacy_external_state_databases": "NOT_OPENED_OR_EXHAUSTIVELY_AUDITED",
+  "model_calls": 0,
+  "broker_calls": 0,
+  "credential_lookup_count": 2,
+  "credential_prompts": 0,
+  "productionGate": false,
+  "frozen_code_pins_verified": 28,
+  "actual_numeric_data_forbidden_in_git": "Verified construction boundary: only code/synthetic methods/schemas/metadata/hash refs committed; raw and factual numerical reports private. No semantic universal string scanner claimed",
+  "remote_CI": "NOT_EXECUTED"
+}

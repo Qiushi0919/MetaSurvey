@@ -1,0 +1,1868 @@
+{
+  "registry_version": "1.1.0",
+  "extends": "reason-codes.v1.json",
+  "policy_defaults": false,
+  "production_enabled": false,
+  "entries": [
+    {
+      "code": "ACCOUNT_EVENT_ORDER_VIOLATION",
+      "meaning": "account event order violation",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACCOUNT_FIXTURE_PROVENANCE_REQUIRED",
+      "meaning": "account fixture provenance required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACCOUNT_MISMATCH",
+      "meaning": "account mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACCOUNT_NOT_FOUND",
+      "meaning": "account not found",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACCOUNT_OPENING_CONFLICT",
+      "meaning": "account opening conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACTION_LINEAGE_BINDING_MISMATCH",
+      "meaning": "action lineage binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACTION_LINEAGE_REQUIRED",
+      "meaning": "action lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACTION_ORDERING_INVALID",
+      "meaning": "action ordering invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACTION_TYPE_INVALID",
+      "meaning": "action type invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ACTUAL_CODE_VERSION_REQUIRED",
+      "meaning": "actual code version required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_ACTIONS_REQUIRED",
+      "meaning": "adjustment actions required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_FACTOR_INVALID",
+      "meaning": "adjustment factor invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_LINEAGE_REQUIRED",
+      "meaning": "adjustment lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_METHOD_REQUIRED",
+      "meaning": "adjustment method required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_NOT_EFFECTIVE",
+      "meaning": "adjustment not effective",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_PRE_EX_DATE_FORBIDDEN",
+      "meaning": "adjustment pre ex date forbidden",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_SECURITY_MISMATCH",
+      "meaning": "adjustment security mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ADJUSTMENT_VERSION_REQUIRED",
+      "meaning": "adjustment version required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AFFORDABILITY_BUY_ONLY",
+      "meaning": "affordability buy only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "APPROVAL_EXPIRED",
+      "meaning": "approval expired",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "APPROVAL_INPUT_INVALIDATED",
+      "meaning": "approval input invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "APPROVAL_NOT_AUTHENTICATED",
+      "meaning": "approval not authenticated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "APPROVAL_TERMS_MISMATCH",
+      "meaning": "approval terms mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ARCHIVE_CLOCK_UNPROVEN",
+      "meaning": "archive clock unproven",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AUDIT_CHAIN_MISMATCH",
+      "meaning": "audit chain mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AUDIT_HASH_REQUIRED",
+      "meaning": "audit hash required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AUDIT_MARKET_DATA_MISSING",
+      "meaning": "audit market data missing",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AUDIT_REASON_INVALID",
+      "meaning": "audit reason invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AUDIT_REF_INVALID",
+      "meaning": "audit ref invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AVAILABILITY_UNKNOWN",
+      "meaning": "availability unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AVAILABLE_AT_FALSIFIED",
+      "meaning": "available at falsified",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "AVAILABLE_AT_UNPROVEN",
+      "meaning": "available at unproven",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "BAR_IDENTITY_CALENDAR_MISMATCH",
+      "meaning": "bar identity calendar mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "BAR_INTEGER_REQUIRED",
+      "meaning": "bar integer required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "BAR_LINEAGE_BINDING_MISMATCH",
+      "meaning": "bar lineage binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "BASELINE_CONFIG_ONLY",
+      "meaning": "baseline config only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_COVERAGE_INVALID",
+      "meaning": "calendar coverage invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_COVERAGE_UNKNOWN",
+      "meaning": "calendar coverage unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_DATE_INVALID",
+      "meaning": "calendar date invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_DAYS_REQUIRED",
+      "meaning": "calendar days required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_DAY_STATUS_INVALID",
+      "meaning": "calendar day status invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_HASH_MISMATCH",
+      "meaning": "calendar hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_IDENTITY_REQUIRED",
+      "meaning": "calendar identity required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_INCOMPLETE",
+      "meaning": "calendar incomplete",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_LINEAGE_REQUIRED",
+      "meaning": "calendar lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_NEXT_SESSION_UNKNOWN",
+      "meaning": "calendar next session unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_NOT_VISIBLE",
+      "meaning": "calendar not visible",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_REFERENCE_ONLY",
+      "meaning": "calendar reference only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_REQUIRED",
+      "meaning": "calendar required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_SESSIONS_REQUIRED",
+      "meaning": "calendar sessions required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_SESSION_INVALID",
+      "meaning": "calendar session invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CALENDAR_SOURCE_REQUIRED",
+      "meaning": "calendar source required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CAPTURE_CLOCK_OVERRIDE_FORBIDDEN",
+      "meaning": "capture clock override forbidden",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CAPTURE_LIMIT_REQUIRED",
+      "meaning": "capture limit required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CARD_VERSION_INVALIDATED",
+      "meaning": "card version invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CASH_DELTA_MISMATCH",
+      "meaning": "cash delta mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CLOCK_POLICY_MISMATCH",
+      "meaning": "clock policy mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CLOSE_REASON_REQUIRED",
+      "meaning": "close reason required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CODE_BINDING_MISMATCH",
+      "meaning": "code binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CONTRACT_SCHEMA_INVALID",
+      "meaning": "contract schema invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CORE_EXIT_INVALID",
+      "meaning": "core exit invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CORE_EXIT_REASON_INVALID",
+      "meaning": "core exit reason invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "CORE_LIFECYCLE_INPUT_INVALID",
+      "meaning": "core lifecycle input invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_ATTRIBUTION_DOUBLE_COUNT",
+      "meaning": "cost attribution double count",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_CONFIG_INVALID",
+      "meaning": "cost config invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_CONFIG_REQUIRED",
+      "meaning": "cost config required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_CONFIG_UNSET",
+      "meaning": "cost config unset",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_PROFILE_DATE_INVALID",
+      "meaning": "cost profile date invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_PROFILE_HASH_MISMATCH",
+      "meaning": "cost profile hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_PROFILE_ID_INVALID",
+      "meaning": "cost profile id invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_PROFILE_SCOPE_INVALID",
+      "meaning": "cost profile scope invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_PROFILE_VERSION_INVALID",
+      "meaning": "cost profile version invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_PROVENANCE_REQUIRED",
+      "meaning": "cost provenance required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_SETTLEMENT_POLICY_UNSUPPORTED",
+      "meaning": "cost settlement policy unsupported",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_VERSION_BINDING_MISMATCH",
+      "meaning": "cost version binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_VERSION_NOT_EFFECTIVE",
+      "meaning": "cost version not effective",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "COST_VERSION_REQUIRED",
+      "meaning": "cost version required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATABASE_ADAPTER_REQUIRED",
+      "meaning": "database adapter required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATA_CONTENT_HASH_MISMATCH",
+      "meaning": "data content hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATA_ENVELOPE_KIND_UNSUPPORTED",
+      "meaning": "data envelope kind unsupported",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATA_QUALITY_FAILED",
+      "meaning": "data quality failed",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATA_QUARANTINED",
+      "meaning": "data quarantined",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATE_ONLY",
+      "meaning": "date only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DATE_ONLY_PROJECTION_POLICY_REQUIRED",
+      "meaning": "date only projection policy required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DECIMAL_PRECISION_EXCEEDED",
+      "meaning": "decimal precision exceeded",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DERIVED_PROVENANCE_MISMATCH",
+      "meaning": "derived provenance mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_DECISION",
+      "meaning": "duplicate decision",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_EVIDENCE",
+      "meaning": "duplicate evidence",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_EXECUTION_HISTORY",
+      "meaning": "duplicate execution history",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_FILL",
+      "meaning": "duplicate fill",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_LOT",
+      "meaning": "duplicate lot",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_LOT_ALLOCATION",
+      "meaning": "duplicate lot allocation",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_ORDER",
+      "meaning": "duplicate order",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_ORDER_APPLICATION",
+      "meaning": "duplicate order application",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "DUPLICATE_POSITION",
+      "meaning": "duplicate position",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EDGE_INTEGER_MONEY_REQUIRED",
+      "meaning": "edge integer money required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EDGE_NOT_VERIFIED",
+      "meaning": "edge not verified",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EDGE_POLICY_UNSET_REQUIRED",
+      "meaning": "edge policy unset required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EFFECTIVE_RANGE_INVALID",
+      "meaning": "effective range invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ENTRY_TIMING_REQUIRED",
+      "meaning": "entry timing required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EVENT_TIME_REQUIRED",
+      "meaning": "event time required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EVENT_TIME_SOURCE_MISMATCH",
+      "meaning": "event time source mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EXACT_PRICE_REQUIRED",
+      "meaning": "exact price required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EXACT_RATE_REQUIRED",
+      "meaning": "exact rate required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EXIT_ELIGIBLE",
+      "meaning": "exit eligible",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EXPECTED_LOTS_REQUIRED",
+      "meaning": "expected lots required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "EXPECTED_NAMESPACE_MISMATCH",
+      "meaning": "expected namespace mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FEATURE_SNAPSHOT_BINDING_MISMATCH",
+      "meaning": "feature snapshot binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FEE_INCLUSION_REQUIRED",
+      "meaning": "fee inclusion required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FEE_INCLUSION_UNRESOLVED",
+      "meaning": "fee inclusion unresolved",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FILLS_REQUIRED",
+      "meaning": "fills required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FILL_ID_REQUIRED",
+      "meaning": "fill id required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FILL_QUANTITY_EXCEEDED",
+      "meaning": "fill quantity exceeded",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINAL_CONFIRMATION_REQUIRED",
+      "meaning": "final confirmation required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINANCIAL_CENTS_REQUIRED",
+      "meaning": "financial cents required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINANCIAL_PREDECESSOR_REQUIRED",
+      "meaning": "financial predecessor required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINANCIAL_REVISION_CHAIN_MISMATCH",
+      "meaning": "financial revision chain mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINANCIAL_REVISION_CONFLICT",
+      "meaning": "financial revision conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINANCIAL_REVISION_KIND_INVALID",
+      "meaning": "financial revision kind invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FINANCIAL_REVISION_LINEAGE_REQUIRED",
+      "meaning": "financial revision lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FIXTURE_KIND_REQUIRED",
+      "meaning": "fixture kind required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FREEZE_BEFORE_REVEAL_REQUIRED",
+      "meaning": "freeze before reveal required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FUTURE_DATA",
+      "meaning": "future data",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FUTURE_MARKET_DATA",
+      "meaning": "future market data",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "FUTURE_OPENING_POSITION",
+      "meaning": "future opening position",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "GROSS_NOTIONAL_MISMATCH",
+      "meaning": "gross notional mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "HASH_MISMATCH",
+      "meaning": "hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "HUMAN_CONFIRMATION_REQUIRED",
+      "meaning": "human confirmation required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "IDEMPOTENCY_PAYLOAD_CONFLICT",
+      "meaning": "idempotency payload conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "IDEMPOTENCY_SCOPE_REQUIRED",
+      "meaning": "idempotency scope required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "IDENTITY_REQUIRED",
+      "meaning": "identity required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "IMPLEMENTATION_SOURCE_CHANGED",
+      "meaning": "implementation source changed",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INSUFFICIENT_CASH",
+      "meaning": "insufficient cash",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INSUFFICIENT_CASH_AT_EVENT",
+      "meaning": "insufficient cash at event",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INSUFFICIENT_POSITION",
+      "meaning": "insufficient position",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INSUFFICIENT_QUANTITY",
+      "meaning": "insufficient quantity",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INTEGER_CENTS_REQUIRED",
+      "meaning": "integer cents required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INTEGER_JSON_NUMBER_REQUIRED",
+      "meaning": "integer json number required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INTRADAY_UNKNOWN",
+      "meaning": "intraday unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALIDATION_REASON_REQUIRED",
+      "meaning": "invalidation reason required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALIDATION_STATE_INVALID",
+      "meaning": "invalidation state invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_CLOCK",
+      "meaning": "invalid clock",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_COST_VALIDITY",
+      "meaning": "invalid cost validity",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_DECIMAL",
+      "meaning": "invalid decimal",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_EVENT_TIME",
+      "meaning": "invalid event time",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_FEE_RATE",
+      "meaning": "invalid fee rate",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_MONEY",
+      "meaning": "invalid money",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_QUANTITY",
+      "meaning": "invalid quantity",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_SIDE",
+      "meaning": "invalid side",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_T1_AVAILABILITY",
+      "meaning": "invalid t1 availability",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_TRADE_DATE",
+      "meaning": "invalid trade date",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "INVALID_TRADING_CALENDAR",
+      "meaning": "invalid trading calendar",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "JSON_OBJECT_REQUIRED",
+      "meaning": "json object required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "KILL_SWITCH_ACTIVE",
+      "meaning": "kill switch active",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEDGER_CASH_MISMATCH",
+      "meaning": "ledger cash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEDGER_CHAIN_MISMATCH",
+      "meaning": "ledger chain mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEDGER_HASH_MISMATCH",
+      "meaning": "ledger hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEDGER_INPUT_REQUIRED",
+      "meaning": "ledger input required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEDGER_POSITION_MISMATCH",
+      "meaning": "ledger position mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEDGER_STATE_REQUIRED",
+      "meaning": "ledger state required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_CASH_ACTION_MISMATCH",
+      "meaning": "legacy cash action mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_CASH_DELTA_MISMATCH",
+      "meaning": "legacy cash delta mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_CASH_MISMATCH",
+      "meaning": "legacy cash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_CLI_HASH_MISMATCH",
+      "meaning": "legacy cli hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_EXPERIMENT_ONLY",
+      "meaning": "legacy experiment only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_GROSS_MISMATCH",
+      "meaning": "legacy gross mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_INPUT_REQUIRED",
+      "meaning": "legacy input required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_ITEMIZED_FEES_REQUIRED",
+      "meaning": "legacy itemized fees required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_NAV_MISMATCH",
+      "meaning": "legacy nav mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_NEGATIVE_CASH",
+      "meaning": "legacy negative cash",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_NEGATIVE_POSITION",
+      "meaning": "legacy negative position",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_POSITION_MISMATCH",
+      "meaning": "legacy position mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_SNAPSHOT_POSITIONS_REQUIRED",
+      "meaning": "legacy snapshot positions required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LEGACY_UNSUPPORTED_ENTRY",
+      "meaning": "legacy unsupported entry",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LIMIT_PRICE_VIOLATION",
+      "meaning": "limit price violation",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LINEAGE_CLOSURE_MISMATCH",
+      "meaning": "lineage closure mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LINEAGE_CYCLE",
+      "meaning": "lineage cycle",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LINEAGE_MISSING",
+      "meaning": "lineage missing",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LINEAGE_REF_HASH_MISMATCH",
+      "meaning": "lineage ref hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LINEAGE_REF_INVALID",
+      "meaning": "lineage ref invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LLM_APPROVAL_NOT_AUTHORIZATION",
+      "meaning": "llm approval not authorization",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LOT_NOT_FOUND",
+      "meaning": "lot not found",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LOT_QUANTITY_MISMATCH",
+      "meaning": "lot quantity mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LOT_SIZE_INVALID",
+      "meaning": "lot size invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "LOT_SIZE_VIOLATION",
+      "meaning": "lot size violation",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "MATERIAL_EVENT",
+      "meaning": "material event",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "MATERIAL_HARD_NEGATIVE",
+      "meaning": "material hard negative",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "METRIC_BARS_REQUIRED",
+      "meaning": "metric bars required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "METRIC_CALENDAR_REQUIRED",
+      "meaning": "metric calendar required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "METRIC_OHLC_INVALID",
+      "meaning": "metric ohlc invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "METRIC_PRICE_INVALID",
+      "meaning": "metric price invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "MISSING_EVIDENCE",
+      "meaning": "missing evidence",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "MODE_MISMATCH",
+      "meaning": "mode mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "MONEY_OVERFLOW",
+      "meaning": "money overflow",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "NEGATIVE_MONEY",
+      "meaning": "negative money",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "NEXT_TRADING_SESSION_UNKNOWN",
+      "meaning": "next trading session unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "NONCANONICAL_DECIMAL",
+      "meaning": "noncanonical decimal",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "NONPOSITIVE_PRICE",
+      "meaning": "nonpositive price",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "NORMALIZED_FACT_SOURCE_MISMATCH",
+      "meaning": "normalized fact source mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "NOT_APPLICABLE",
+      "meaning": "not applicable",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OBJECT_VERSION_CONFLICT",
+      "meaning": "object version conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OBJECT_VERSION_INVALID",
+      "meaning": "object version invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OFFICIAL_SOURCE_HOST_MISMATCH",
+      "meaning": "official source host mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OFFICIAL_SOURCE_REQUIRED",
+      "meaning": "official source required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OFFICIAL_STATUS_UNKNOWN",
+      "meaning": "official status unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OFFICIAL_WEEK_RULE_REQUIRED",
+      "meaning": "official week rule required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OFFLINE_ELIGIBLE",
+      "meaning": "offline eligible",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "OHLC_INVALID",
+      "meaning": "ohlc invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_CALENDAR_NEXT_UNKNOWN",
+      "meaning": "oracle calendar next unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_CASH_RECONCILIATION",
+      "meaning": "oracle cash reconciliation",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_CROSS_NAMESPACE_POSITION",
+      "meaning": "oracle cross namespace position",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_DECIMAL_INVALID",
+      "meaning": "oracle decimal invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_DUPLICATE_ORDER",
+      "meaning": "oracle duplicate order",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_EVENT_UNKNOWN",
+      "meaning": "oracle event unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_FINAL_CHAIN",
+      "meaning": "oracle final chain",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_LEDGER_DELTA_MISMATCH",
+      "meaning": "oracle ledger delta mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_LOT_COUNT",
+      "meaning": "oracle lot count",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_LOT_RECONCILIATION",
+      "meaning": "oracle lot reconciliation",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_LOT_SHORTFALL",
+      "meaning": "oracle lot shortfall",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_NAMESPACE_MISMATCH",
+      "meaning": "oracle namespace mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_ORDER_SCOPE_MISMATCH",
+      "meaning": "oracle order scope mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_OVERFILL",
+      "meaning": "oracle overfill",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_OVERSPEND",
+      "meaning": "oracle overspend",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_PRECISION_INVALID",
+      "meaning": "oracle precision invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_QUANTITY_INVALID",
+      "meaning": "oracle quantity invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_RESERVATION_SUM",
+      "meaning": "oracle reservation sum",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_SELL_RESERVE_SHORTFALL",
+      "meaning": "oracle sell reserve shortfall",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_SIDE_INVALID",
+      "meaning": "oracle side invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_SIGN_INVALID",
+      "meaning": "oracle sign invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_T1_BYPASS",
+      "meaning": "oracle t1 bypass",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORACLE_UNRESERVED_FILL",
+      "meaning": "oracle unreserved fill",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_ACCOUNT_MISMATCH",
+      "meaning": "order account mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_ALREADY_TERMINAL",
+      "meaning": "order already terminal",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_BINDING_REQUIRED",
+      "meaning": "order binding required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_NOT_FILLABLE",
+      "meaning": "order not fillable",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_NOT_FOUND",
+      "meaning": "order not found",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_NOT_RESERVED",
+      "meaning": "order not reserved",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_SCOPE_MISMATCH",
+      "meaning": "order scope mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_SIDE_INVALID",
+      "meaning": "order side invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "ORDER_TERMS_CHANGED",
+      "meaning": "order terms changed",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "P1A_CONTRACT_HASH_MISMATCH",
+      "meaning": "p1a contract hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "P1A_CONTRACT_SCHEMA_INVALID",
+      "meaning": "p1a contract schema invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PAPER_INTENT_SCOPE_INVALID",
+      "meaning": "paper intent scope invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PAYLOAD_HASH_MISMATCH",
+      "meaning": "payload hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "POSITIVE_SAFE_QUANTITY_REQUIRED",
+      "meaning": "positive safe quantity required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PRECLOSE_UNAVAILABLE",
+      "meaning": "preclose unavailable",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PRICE_DECIMAL_REQUIRED",
+      "meaning": "price decimal required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PRICE_INVALID",
+      "meaning": "price invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PRICE_STRUCTURE_INVALIDATED",
+      "meaning": "price structure invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PROBABILITY_RANGE_INVALID",
+      "meaning": "probability range invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PROBABILITY_SUM_INVALID",
+      "meaning": "probability sum invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PRODUCTION_DISABLED_P0",
+      "meaning": "production disabled p0",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PRODUCTION_DISABLED_P1A",
+      "meaning": "production disabled p1a",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PUBLICATION_DATE_INVALID",
+      "meaning": "publication date invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PUBLICATION_UNKNOWN",
+      "meaning": "publication unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PUBLIC_SOURCE_URL_REJECTED",
+      "meaning": "public source url rejected",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "PUBLISHED_AT_FALSIFIED",
+      "meaning": "published at falsified",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "QUANTITY_OVERFLOW",
+      "meaning": "quantity overflow",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_ADJUSTMENT_VERSION_REQUIRED",
+      "meaning": "raw adjustment version required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_BYTES_REQUIRED",
+      "meaning": "raw bytes required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_EXISTING_FILE_MISMATCH",
+      "meaning": "raw existing file mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_HASH_MISMATCH",
+      "meaning": "raw hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_MISSING",
+      "meaning": "raw missing",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_SIZE_INVALID",
+      "meaning": "raw size invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RAW_TOO_LARGE",
+      "meaning": "raw too large",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REAL_CAPTURE_REQUIRED",
+      "meaning": "real capture required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REAL_FETCH_OVERRIDE_FORBIDDEN",
+      "meaning": "real fetch override forbidden",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RECONCILIATION_FAILED",
+      "meaning": "reconciliation failed",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REFERENCE_ONLY_NOT_TRADING_LICENSE",
+      "meaning": "reference only not trading license",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REJECT_FEE_INCLUSIVE_AFFORDABILITY",
+      "meaning": "reject fee inclusive affordability",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REJECT_INSUFFICIENT_EDGE_COST_RATIO",
+      "meaning": "reject insufficient edge cost ratio",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REJECT_INSUFFICIENT_INCREMENTAL_EDGE",
+      "meaning": "reject insufficient incremental edge",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REJECT_INSUFFICIENT_NET_EDGE",
+      "meaning": "reject insufficient net edge",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REMAINING_QUANTITY_INVALID",
+      "meaning": "remaining quantity invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_ACCOUNT_FIXTURE_MISMATCH",
+      "meaning": "replay account fixture mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_BAR_ROOT_REQUIRED",
+      "meaning": "replay bar root required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_CALENDAR_FEATURE_FIXTURE_MISMATCH",
+      "meaning": "replay calendar feature fixture mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_CALENDAR_PROJECTION_MISMATCH",
+      "meaning": "replay calendar projection mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_FEATURE_DERIVATION_MISMATCH",
+      "meaning": "replay feature derivation mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_INPUT_INVALIDATED",
+      "meaning": "replay input invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_MARK_PATH_REQUIRED",
+      "meaning": "replay mark path required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_PARTIAL_QUANTITY_INVALID",
+      "meaning": "replay partial quantity invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_RESULT_HASH_MISMATCH",
+      "meaning": "replay result hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_SECURITY_PROJECTION_MISMATCH",
+      "meaning": "replay security projection mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_SOURCE_ADMISSION_REQUIRED",
+      "meaning": "replay source admission required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "REPLAY_SYNTHETIC_ONLY",
+      "meaning": "replay synthetic only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RESERVATION_CASH_EXCEEDED",
+      "meaning": "reservation cash exceeded",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RESERVATION_NEGATIVE",
+      "meaning": "reservation negative",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RESERVED_LOT_UNAVAILABLE",
+      "meaning": "reserved lot unavailable",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RETROSPECTIVE_OUTCOME_ONLY",
+      "meaning": "retrospective outcome only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RISK_CONFIG_INVALID",
+      "meaning": "risk config invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RISK_CONFIG_UNSET",
+      "meaning": "risk config unset",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "RISK_INVALIDATED",
+      "meaning": "risk invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SCORE_RANGE_INVALID",
+      "meaning": "score range invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_EXCHANGE_CONFLICT",
+      "meaning": "security exchange conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_FIELDS_REQUIRED",
+      "meaning": "security fields required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_HASH_MISMATCH",
+      "meaning": "security hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_IDENTITY_CONFLICT",
+      "meaning": "security identity conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_IDENTITY_MISMATCH",
+      "meaning": "security identity mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_IDENTITY_QUARANTINED",
+      "meaning": "security identity quarantined",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_LINEAGE_REQUIRED",
+      "meaning": "security lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_MISMATCH",
+      "meaning": "security mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_QUARANTINED",
+      "meaning": "security quarantined",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_RESOLUTION_QUARANTINED",
+      "meaning": "security resolution quarantined",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_SOURCE_IDENTITY_MISMATCH",
+      "meaning": "security source identity mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_STATUS_CONFLICT",
+      "meaning": "security status conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_STATUS_INVALID",
+      "meaning": "security status invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_STATUS_LINEAGE_REQUIRED",
+      "meaning": "security status lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_STATUS_NOT_EFFECTIVE",
+      "meaning": "security status not effective",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_STATUS_UNKNOWN",
+      "meaning": "security status unknown",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_SYMBOL_INVALID",
+      "meaning": "security symbol invalid",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SECURITY_VERSION_REQUIRED",
+      "meaning": "security version required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SELL_LOT_ALLOCATION_REQUIRED",
+      "meaning": "sell lot allocation required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SENSITIVE_DATA_REJECTED",
+      "meaning": "sensitive data rejected",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SENSITIVE_FIELD_FORBIDDEN",
+      "meaning": "sensitive field forbidden",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SENSITIVE_FIXTURE_REJECTED",
+      "meaning": "sensitive fixture rejected",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SEQUENCE_OVERFLOW",
+      "meaning": "sequence overflow",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SIGNAL_VERSION_INVALIDATED",
+      "meaning": "signal version invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SIMULATION_ONLY",
+      "meaning": "simulation only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SLIPPAGE_DOUBLE_COUNT",
+      "meaning": "slippage double count",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SLIPPAGE_DOUBLE_COUNTING",
+      "meaning": "slippage double counting",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SLIPPAGE_DOUBLE_COUNT_OR_UNRESOLVED",
+      "meaning": "slippage double count or unresolved",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SLIPPAGE_TREATMENT_REQUIRED",
+      "meaning": "slippage treatment required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_BINDING_MISMATCH",
+      "meaning": "snapshot binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_BLOCKED",
+      "meaning": "snapshot blocked",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_DATA_HASH_MISMATCH",
+      "meaning": "snapshot data hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_IDENTITY_CONFLICT",
+      "meaning": "snapshot identity conflict",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_INPUT_EMPTY",
+      "meaning": "snapshot input empty",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_REQUIRED",
+      "meaning": "snapshot required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_SCOPE_MISMATCH",
+      "meaning": "snapshot scope mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SNAPSHOT_VERSION_REQUIRED",
+      "meaning": "snapshot version required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_CLASS_REQUIRED",
+      "meaning": "source class required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_LINEAGE_REQUIRED",
+      "meaning": "source lineage required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_OBSERVATION_REQUIRED",
+      "meaning": "source observation required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_PAYLOAD_PARSER_MISMATCH",
+      "meaning": "source payload parser mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_PAYLOAD_RAW_MISMATCH",
+      "meaning": "source payload raw mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_POLICY_HASH_MISMATCH",
+      "meaning": "source policy hash mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_POLICY_REQUIRED",
+      "meaning": "source policy required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SOURCE_VERSION_BINDING_MISMATCH",
+      "meaning": "source version binding mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SSE_DAYK_FORMAT_CHANGED",
+      "meaning": "sse dayk format changed",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SSE_DAYK_IDENTITY_MISMATCH",
+      "meaning": "sse dayk identity mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SSE_DAYK_INTEGER_OVERFLOW",
+      "meaning": "sse dayk integer overflow",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SSE_DAYK_SOURCE_REQUIRED",
+      "meaning": "sse dayk source required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "STALE_MARKET_DATA",
+      "meaning": "stale market data",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "STATUS_SECURITY_MISMATCH",
+      "meaning": "status security mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "STRATEGY_HORIZON_MISMATCH",
+      "meaning": "strategy horizon mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "STRATEGY_NAMESPACE_BLOCKED",
+      "meaning": "strategy namespace blocked",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "STRATEGY_NAMESPACE_MISMATCH",
+      "meaning": "strategy namespace mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "STRESS_PROFILE_REQUIRED",
+      "meaning": "stress profile required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SYNTHETIC_FIXTURE_ONLY",
+      "meaning": "synthetic fixture only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "SYNTHETIC_TEST_ONLY",
+      "meaning": "synthetic test only",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "T1_BLOCKED",
+      "meaning": "t1 blocked",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "T1_OR_NAMESPACE_POSITION_UNAVAILABLE",
+      "meaning": "t1 or namespace position unavailable",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "THESIS_INVALIDATED",
+      "meaning": "thesis invalidated",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "TRACE_REQUIRED",
+      "meaning": "trace required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "TRADE_DATE_CLOCK_MISMATCH",
+      "meaning": "trade date clock mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "TRADE_DATE_TIME_MISMATCH",
+      "meaning": "trade date time mismatch",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "TRIGGER_TIME_REQUIRED",
+      "meaning": "trigger time required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "TWO_PHASE_APPROVAL_REQUIRED",
+      "meaning": "two phase approval required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "T_PLUS_ONE",
+      "meaning": "t plus one",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNCALIBRATED_PROBABILITY",
+      "meaning": "uncalibrated probability",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNKNOWN_PUBLICATION",
+      "meaning": "unknown publication",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNKNOWN_SOURCE_ADMISSION_FORBIDDEN",
+      "meaning": "unknown source admission forbidden",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNRESOLVED_BUSINESS_POLICY",
+      "meaning": "unresolved business policy",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSET_REQUIRED",
+      "meaning": "unset required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSET_REQUIRED_CONFIG",
+      "meaning": "unset required config",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSUPPORTED_COMMISSION_SCOPE",
+      "meaning": "unsupported commission scope",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSUPPORTED_CORPORATE_ACTION",
+      "meaning": "unsupported corporate action",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSUPPORTED_CURRENCY",
+      "meaning": "unsupported currency",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSUPPORTED_ROUNDING",
+      "meaning": "unsupported rounding",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "UNSUPPORTED_VERSION",
+      "meaning": "unsupported version",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    },
+    {
+      "code": "USER_APPROVAL_REQUIRED",
+      "meaning": "user approval required",
+      "category": "PROVENANCE_OR_ENGINEERING_GATE"
+    }
+  ]
+}

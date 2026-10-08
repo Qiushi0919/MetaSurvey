@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "state": "NOT_ENROLLED",
+  "roles": {
+    "HUMAN_USER": "UNSET_REQUIRED",
+    "INDEPENDENT_REVIEWER": "UNSET_REQUIRED"
+  },
+  "enrollment_requires": "FRESH_H_B_OWNER_AUTHORIZATION_AND_OUTSIDE_PRODUCER_PUBLIC_KEY_PIN_INSTALLATION",
+  "signature_algorithm": "ED25519",
+  "fixture_keys_authorize_actual": false,
+  "signing_keys_in_product": false,
+  "native_order_authority": false
+}

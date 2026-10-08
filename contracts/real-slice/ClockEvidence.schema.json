@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:real-slice:ClockEvidence:1.0.0",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "ClockEvidence"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "business_timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "scope": {
+      "enum": [
+        "CURRENT_OBSERVED",
+        "SYNTHETIC_TEST_ONLY"
+      ]
+    },
+    "event_time": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "event_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "business_effective_at": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_precision": {
+      "enum": [
+        "EXACT",
+        "MINUTE",
+        "DATE_ONLY",
+        "UNKNOWN"
+      ]
+    },
+    "available_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "observation_event_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "effective_from": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "effective_to": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "availability_basis": {
+      "const": "ACTUAL_RETRIEVAL_BOUNDARY"
+    },
+    "historical_visibility_proven": {
+      "const": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "business_timezone",
+    "scope",
+    "event_time",
+    "event_date",
+    "business_effective_at",
+    "published_at",
+    "published_date",
+    "published_precision",
+    "available_at",
+    "retrieved_at",
+    "observation_event_at",
+    "effective_from",
+    "effective_to",
+    "availability_basis",
+    "historical_visibility_proven"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "published_precision": {
+            "const": "DATE_ONLY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "published_at": {
+            "type": "null"
+          },
+          "published_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "published_precision": {
+            "enum": [
+              "EXACT",
+              "MINUTE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "published_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "published_precision": {
+            "const": "UNKNOWN"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "published_at": {
+            "type": "null"
+          },
+          "published_date": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:post-wave-e:ProviderLicenseTransportGap:1.0.0",
+  "title": "ProviderLicenseTransportGap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_version",
+    "object_id",
+    "trace_id",
+    "namespace",
+    "symbols",
+    "labels",
+    "decision_cutoff",
+    "retrieval_cutoff",
+    "timezone",
+    "formal_source_admission",
+    "actual_forward_days",
+    "reason_codes",
+    "invalidation_conditions",
+    "body",
+    "source_identity",
+    "rules_hash",
+    "code_hash",
+    "schema_hash",
+    "predecessor_hash",
+    "content_hash",
+    "provider_identity_verified",
+    "license_verified",
+    "transport_integrity_verified",
+    "historical_visibility_proven",
+    "cloud_transfer",
+    "live_authority",
+    "tradeable",
+    "production_eligible",
+    "can_produce_order",
+    "productionGate"
+  ],
+  "properties": {
+    "contract_name": {
+      "const": "ProviderLicenseTransportGap"
+    },
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "object_version": {
+      "const": 1
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^post-e:ProviderLicenseTransportGap:[0-9a-f]{16}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^post-e:[0-9a-f]{64}$"
+    },
+    "namespace": {
+      "const": "LOCAL_PREPARATION_ONLY:CORE_40"
+    },
+    "symbols": {
+      "const": [
+        "603993.SH",
+        "600312.SH",
+        "603228.SH"
+      ]
+    },
+    "labels": {
+      "const": [
+        "LOCAL_ONLY",
+        "NON_TRADEABLE",
+        "NOT_STRATEGY_EVIDENCE",
+        "NO_HISTORICAL_PIT",
+        "PREPARATION_ONLY"
+      ]
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "retrieval_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,9})?(?:Z|[+-]\\d\\d:\\d\\d)$"
+    },
+    "timezone": {
+      "const": "Asia/Shanghai"
+    },
+    "formal_source_admission": {
+      "const": "BLOCKED"
+    },
+    "actual_forward_days": {
+      "const": 0
+    },
+    "reason_codes": {
+      "const": [
+        "NO_HISTORICAL_PIT",
+        "UNKNOWN_STATUS",
+        "UNSET_REQUIRED",
+        "NO_EXECUTION_AUTHORITY",
+        "SOURCE_QUARANTINED",
+        "LICENSE_UNVERIFIED",
+        "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+        "PREPARATION_ONLY",
+        "NOT_STRATEGY_EVIDENCE"
+      ]
+    },
+    "invalidation_conditions": {
+      "const": [
+        "ADOPTED_RAW_SOURCE_CHANGED",
+        "PREDECESSOR_BYTES_CHANGED",
+        "RULE_CODE_SCHEMA_CHANGED",
+        "CUTOFF_NAMESPACE_CHANGED",
+        "PRIVATE_PATH_SUBSTITUTION",
+        "CALLER_COPY_RESEAL",
+        "AUTHORITY_PROMOTION"
+      ]
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "actual_account_tier",
+        "independently_verified_tier",
+        "product_name",
+        "seller_identity",
+        "exact_expiry",
+        "actual_materials_ingested",
+        "evidence_dimensions",
+        "api_success_is_license",
+        "public_docs_are_account_entitlement",
+        "legal_conclusion",
+        "source_admission",
+        "historical_visibility_proven",
+        "cloud_transfer_permitted",
+        "live_authority"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "actual_account_tier": {
+          "type": "string",
+          "const": "OWNER_DECLARED_15000_MONTHLY"
+        },
+        "independently_verified_tier": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "product_name": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "seller_identity": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "exact_expiry": {
+          "type": "string",
+          "const": "UNSET_REQUIRED"
+        },
+        "actual_materials_ingested": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidence_dimensions": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "provider_identity"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "order_product_expiry"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "entitlement_per_api"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "local_research_license"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "retention_storage"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "cloud_transfer_redistribution"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "endpoint_ownership"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "state",
+                  "evidence_present"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "const": "transport_integrity"
+                  },
+                  "state": {
+                    "type": "string",
+                    "const": "UNVERIFIED"
+                  },
+                  "evidence_present": {
+                    "type": "boolean",
+                    "const": false
+                  }
+                }
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "api_success_is_license": {
+          "type": "boolean",
+          "const": false
+        },
+        "public_docs_are_account_entitlement": {
+          "type": "boolean",
+          "const": false
+        },
+        "legal_conclusion": {
+          "type": "string",
+          "const": "NOT_DETERMINED"
+        },
+        "source_admission": {
+          "type": "string",
+          "const": "BLOCKED"
+        },
+        "historical_visibility_proven": {
+          "type": "boolean",
+          "const": false
+        },
+        "cloud_transfer_permitted": {
+          "type": "boolean",
+          "const": false
+        },
+        "live_authority": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "source_identity": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "rules_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "schema_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "provider_identity_verified": {
+      "const": false
+    },
+    "license_verified": {
+      "const": false
+    },
+    "transport_integrity_verified": {
+      "const": false
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "cloud_transfer": {
+      "const": false
+    },
+    "live_authority": {
+      "const": false
+    },
+    "tradeable": {
+      "const": false
+    },
+    "production_eligible": {
+      "const": false
+    },
+    "can_produce_order": {
+      "const": false
+    },
+    "productionGate": {
+      "const": false
+    }
+  },
+  "x-contract": {
+    "version": "1.0.0",
+    "authority": "DISPLAY_ONLY_NEVER_NATIVE_AUTHORITY",
+    "required": "ALL_LISTED_FIELDS",
+    "optional": "NONE_IN_V1",
+    "timezone": "EXPLICIT_INSTANT_AND_Asia/Shanghai",
+    "money": "CNY_MINOR_INTEGER_STRING_OR_EXACT_DECIMAL_STRING_NO_FLOAT; actual settings UNSET_REQUIRED",
+    "units": "EXPLICIT_PER_REQUIREMENT; no production fee inherited",
+    "hash": "SHA256_CANONICAL_STRICT_JSON",
+    "trace": "object_id + object_version + predecessor_hash + source_identity",
+    "reason_codes": [
+      "NO_HISTORICAL_PIT",
+      "UNKNOWN_STATUS",
+      "UNSET_REQUIRED",
+      "NO_EXECUTION_AUTHORITY",
+      "SOURCE_QUARANTINED",
+      "LICENSE_UNVERIFIED",
+      "SEPARATE_HUMAN_OWNER_AUTHORIZATION_REQUIRED",
+      "PREPARATION_ONLY",
+      "NOT_STRATEGY_EVIDENCE"
+    ],
+    "invalidation": "SOURCE_CODE_SCHEMA_RULE_CUTOFF_VERSION_OR_AUTHORITY_DRIFT"
+  }
+}

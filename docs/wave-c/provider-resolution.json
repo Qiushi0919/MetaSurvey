@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "state": "OPEN",
+  "provider_id": "TUSHARE_MONTHLY_GATEWAY",
+  "classification": "OWNER_PROVIDED_MONTHLY_GATEWAY",
+  "provider_identity_verified": false,
+  "license_verified": false,
+  "transport_integrity_verified": false,
+  "gateway_requests": 0,
+  "credential_lookups": 0,
+  "public_reference_gets": 2,
+  "references": [
+    {
+      "url": "https://tushare.pro/document/1?doc_id=405",
+      "status": 200,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/public-reference/405.html",
+      "bytes": 23076,
+      "sha256": "sha256:4d26a245e5a80eaef815830a2bd944cbaea8a1d9600e82b0ba91c083721155c5",
+      "retrieved_at": "2026-10-06T05:35:56.310215+00:00",
+      "authority": "PUBLIC_PRODUCT_REFERENCE_NOT_GATEWAY_ENTITLEMENT_OR_LICENSE"
+    },
+    {
+      "url": "https://tushare.pro/document/1?doc_id=463",
+      "status": 200,
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-c-20261006/public-reference/463.html",
+      "bytes": 14036,
+      "sha256": "sha256:6b25437bae300b8433e2028d8aa442a155ec240687e6ee354a53114151f1cfef",
+      "retrieved_at": "2026-10-06T05:35:56.459357+00:00",
+      "authority": "PUBLIC_PRODUCT_REFERENCE_NOT_GATEWAY_ENTITLEMENT_OR_LICENSE"
+    }
+  ],
+  "official_mcp_example_endpoint": "https://api.tushare.pro/mcp/token=OWNER_TOKEN_PLACEHOLDER",
+  "configured_gateway": "HTTP_CUSTOM_IP_GATEWAY_FIXED_BY_PRIOR_AUTHORIZATION",
+  "official_direct_equivalence": false,
+  "owner_evidence": "ABSENT_NO_INDEPENDENT_SALES_PRODUCT_VALIDITY_PURPOSE_PROOF",
+  "formal_admission": "BLOCKED"
+}

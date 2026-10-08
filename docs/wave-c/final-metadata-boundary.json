@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "completed_at": "2026-10-06T06:01:52.331263+00:00",
+  "scope": "FINAL_NEW_PHASE_CODE_SCHEMA_METADATA_AND_THREE_NAVIGATION_FILES",
+  "files_scanned": 37,
+  "high_confidence_secret_pattern_matches": 0,
+  "actual_secret_equality_scan_performed": false,
+  "credential_lookup_performed": false,
+  "password_prompts": 0,
+  "immutable_baseline_files_verified": 527,
+  "frozen_release_pins_verified": 21,
+  "current_G3_artifacts_verified": 13,
+  "raw_or_report_numeric_values_in_git": false,
+  "scope_limitation": "STATIC_PATTERN_AND_HASH_BOUNDARY_CHECK_ONLY; NO NEW SECRET_LOOKUP_OR_LICENSE_ATTESTATION",
+  "formal_source_admission": "BLOCKED",
+  "productionGate": false
+}

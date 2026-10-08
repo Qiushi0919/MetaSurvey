@@ -1,0 +1,68 @@
+{
+  "kind": "RootRemainingContractFreezeConditions",
+  "version": "1.0.0",
+  "reviewed_candidate_version": "1.0.1-candidate",
+  "native_contracts_replaced": false,
+  "final_shared_contract_freeze": "HOLD",
+  "entries": [
+    {
+      "name": "HistoricalEvidenceBundle",
+      "candidate_version": "1.0.1-candidate",
+      "future_final_freeze_requires": [
+        "Explicit required/optional fields and closed enums/types including precision/null consistency",
+        "Reviewed mapping to shared evidence/clock identity, namespace/mode and immutable lineage; positive PIT requires independent original visibility/revision/license evidence"
+      ],
+      "final_shared_contract_approved": false
+    },
+    {
+      "name": "AdmittedHistoricalSnapshot",
+      "candidate_version": "1.0.1-candidate",
+      "future_final_freeze_requires": [
+        "Versioned price-only versus full-family coverage and immutable manifest/proof IDs",
+        "Exact clocks, admitted issuer/license/policy/receipt dependencies and invalidation; explicit rejection consumers"
+      ],
+      "final_shared_contract_approved": false
+    },
+    {
+      "name": "StrategyFeatureDecision",
+      "candidate_version": "1.0.1-candidate",
+      "future_final_freeze_requires": [
+        "Per-security/as-of/version lineage, explicit quality/valuation/timing/edge unknowns and full-family completeness semantics",
+        "No implicit methods v1.0.1 adoption or price-only substitute; Owner-approved method/policy separately versioned"
+      ],
+      "final_shared_contract_approved": false
+    },
+    {
+      "name": "DatedExecutionEconomics",
+      "candidate_version": "1.0.1-candidate",
+      "future_final_freeze_requires": [
+        "Reviewed HALF_EVEN/HALF_UP bridge with money representation, CNY units and no float",
+        "Minimum commission per-order/partial-fill/cancel-and-replace policies, inclusive/exclusive fee dates, slippage already-in-price binding and source/profile/policy hashes",
+        "No actual net-edge result before benefit/calibration and actual profile evidence"
+      ],
+      "final_shared_contract_approved": false
+    },
+    {
+      "name": "WalkForwardWindowPlan",
+      "candidate_version": "1.0.1-candidate",
+      "future_final_freeze_requires": [
+        "Owner-reviewed anchor/session/time boundary and purge/embargo/event-span policies",
+        "Versioned window IDs, spec/data/policy/fee hashes, cross-window holdings/cash/censoring, failure retention and OOS exposure semantics"
+      ],
+      "final_shared_contract_approved": false
+    },
+    {
+      "name": "AuditableSimulationRun",
+      "candidate_version": "1.0.1-candidate",
+      "future_final_freeze_requires": [
+        "Enumerated run-state distinctions and required metric keys/units/nullability",
+        "Per-order/fill/fee/cash/position/NAV lineage, money rounding, rejected orders/failed windows/incomplete-trade retention",
+        "Full-trade count definition and simulated result must not be promoted to source PIT or actual permission"
+      ],
+      "final_shared_contract_approved": false
+    }
+  ],
+  "real_parameters": "UNSET_REQUIRED",
+  "Owner_methods_M01_M08": "PENDING",
+  "productionGate": false
+}

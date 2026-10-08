@@ -1,0 +1,181 @@
+{
+  "version": "1.0.0-engineering-gate",
+  "generated_at": "2026-10-05T16:59:25.535328+00:00",
+  "scope": "T1_T9_OFFLINE_ENGINEERING_ONLY",
+  "baseline_commit": "456242752ec0a78c26b945d04bbc117a4fba6e20",
+  "code_candidate_commit": "55cb3916262fc6f236a92d156028561248ae2f09",
+  "branch": "overnight/p1b-data-engineering-20261005",
+  "start_tag": "overnight-start-20261005-4562427",
+  "engineering_gate": "PASS_WITH_CONDITIONS",
+  "owner_acceptance": "PENDING",
+  "tasks": [
+    {
+      "id": "T1",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T2",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T3",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T4",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T5",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T6",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T7",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T8",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    },
+    {
+      "id": "T9",
+      "state": "COMPLETED_ENGINEERING_ONLY"
+    }
+  ],
+  "release_versions": {
+    "verification": "1.7.0-verification",
+    "quarantine_diagnostics": "1.8.2-offline"
+  },
+  "contract_versions": {
+    "EvidenceRootBinding": "1.0.0",
+    "TypedQuarantineDataset": "1.0.1-diagnostic",
+    "AdmissionReadinessDryRun": "1.0.0-diagnostic",
+    "native_business_contracts": "UNCHANGED"
+  },
+  "schema_version": 6,
+  "new_migrations": [],
+  "tests": {
+    "unique": 534,
+    "pass": 533,
+    "fail": 0,
+    "skip": 1,
+    "counting_rule": "477 portable carried baseline +57 new; repeated epochs and independent assertions excluded"
+  },
+  "independent_review": {
+    "first_main_assertions": 134,
+    "first_main_pass": 134,
+    "first_historical_accepted_counterexamples": 4,
+    "first_final_report": "NOT_ISSUED_TOOL_INTERRUPTION_TWICE",
+    "limited_final_new_assertions": 104,
+    "limited_final_pass": 104,
+    "limited_final_fail": 0,
+    "limited_final_verdict": "PASS_WITH_CONDITIONS",
+    "p2_findings_closed": 2,
+    "scope_limit": "Final limited re-review confirms two modified input boundaries, not a re-run of original full independent scope",
+    "final_report": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/reviewer/final-functional-G2-20261006/final-functional-report-final.json",
+      "sha256": "sha256:5cf3fd782818726da6929951e958f33ddbc189f1b4af63f56dfff641889d6483",
+      "bytes": 9756
+    },
+    "first_evidence_inventory": {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/reviewer/fresh-G1-20261006/parent-evidence-inventory.json",
+      "sha256": "sha256:82dade6b492e24786f4577136be2047ece9b2527549f7ae3f4fa932b70c512e0",
+      "bytes": 4780
+    }
+  },
+  "data": {
+    "existing_raw_captures_verified": 44,
+    "physical_observations": 2786,
+    "unique_raw_bars": 981,
+    "observed_sessions_per_stock": 327,
+    "calendar_civil_days": 492,
+    "observed_factor_change_points": 8,
+    "ambiguous_action_required_gaps": 5,
+    "nonzero_preclose_factor_reference_deltas": 8,
+    "financial_observations": 63,
+    "financial_symbol_period_groups": 45,
+    "financial_out_of_scope_observations": 6,
+    "financial_whole_coverage_responses_blocked": 3,
+    "industry_blank_end_date_observations": 6,
+    "all_rows": "QUARANTINED"
+  },
+  "issued_real_objects": {
+    "source_policies": 0,
+    "source_observations": 0,
+    "admitted_clock_evidence": 0,
+    "snapshots": 0,
+    "receipts": 0,
+    "packets": 0,
+    "cards": 0,
+    "signals": 0,
+    "approvals": 0,
+    "orders": 0,
+    "fills": 0
+  },
+  "network_activity": {
+    "authenticated_source_api_requests_this_overnight": 0,
+    "model_calls": 0,
+    "broker_calls": 0,
+    "fixture_network_probes": "ATTEMPTED_AND_DENIED_BY_NATIVE_OS_AND_NODE",
+    "credential_lookup": "PARENT_RAM_ONLY_AUDITS_ONLY_NO_DIAGNOSTIC_OR_REVIEWER_LOOKUP"
+  },
+  "historical_visibility_proven": false,
+  "permissions": {
+    "REAL_DATA_ADMISSION_GATE": "BLOCKED",
+    "TUSHARE_LOCAL_REAL_RESEARCH": "BLOCKED",
+    "RESEARCH_PILOT": "BLOCKED",
+    "CLOUD_RESEARCH_EXPORT_GATE": "BLOCKED",
+    "CLOUD_MODEL": "BLOCKED",
+    "HISTORICAL_BACKTEST_GATE": "BLOCKED",
+    "PRODUCTION_DATA_GATE": "BLOCKED",
+    "REDISTRIBUTION": "BLOCKED",
+    "REAL_SIGNAL_ORDER": "BLOCKED",
+    "BROKER": "BLOCKED",
+    "PRODUCTION_EXECUTION": "BLOCKED"
+  },
+  "existing_SSE_LOCAL_reference": "PARTIAL_UNCHANGED",
+  "productionGate": false,
+  "actual_account_parameters": {
+    "unset_required_fields": 30,
+    "status": "UNSET_REQUIRED"
+  },
+  "business_condition_closed_ids": [],
+  "C30": "AT_LEAST_20_ACTUAL_FORWARD_PAPER_TRADING_DAYS_NOT_SATISFIED_BY_FIXTURES",
+  "real_snapshot_B_ready": false,
+  "portable_scope": "RELOCATED_CHECKOUT_ONLY_WITH_ALL_PRIVATE_ARCHIVES_UNMOVED_NO_UNIVERSAL_OR_REMOTE_CI_CLAIM",
+  "preservation": {
+    "baseline_tracked": 433,
+    "immutable_bytes_verified": 430,
+    "allowed_navigation_updates": [
+      "AGENTS.md",
+      "README.md",
+      "docs/source-of-truth.json"
+    ],
+    "raw_hashes_and_capture_clocks_unchanged": true,
+    "legacy_seal_ledger_db_runs_read_only": true,
+    "v5_namespace": "LEGACY_EXPERIMENT_NOT_CORE_40_OR_EVENT_3"
+  },
+  "validation": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/final-validation-G3.json",
+    "sha256": "sha256:6d6fb14eec2b9ae91658700bc636da89b77a64c90cab13b4b8c11468c413a333",
+    "bytes": 2496
+  },
+  "diagnostic_evidence_manifest": {
+    "path": "/Users/qiushi/投资研究/ashare-trading-v1/docs/overnight/evidence.json",
+    "sha256": "sha256:79d9ad0a23498516319efc91c4508d23ea497b06bd5b31c93238eb6105f37da9",
+    "bytes": 2135
+  },
+  "secret_boundary": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/validation/secret-boundary-final-G3.json",
+    "sha256": "sha256:32cc2eb82f8c35417c9cb1a3515614533ad634ba431597ce030ed60772d37750",
+    "bytes": 759
+  },
+  "git_delivery_checkpoint": "/Users/qiushi/投资研究/.p1b-archives/overnight-20261005/delivery/Delivery-Checkpoint.json",
+  "stop_after_gate": true,
+  "next_phase_authorized": false,
+  "content_hash": "sha256:3d7fbe80226440fd5b13ae7eac60e78865f0d5be81dde43ff68eed8568854bef"
+}

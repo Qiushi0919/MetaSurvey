@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "scope": "FINITE_OFFICIAL_PUBLIC_WEBSITE_REFERENCES_ONLY",
+  "namespace": "CORE_40",
+  "specs": [
+    {
+      "id": "sse-terms",
+      "source_id": "official:sse-website-legal",
+      "product": "SSE_PUBLIC_WEBSITE_LEGAL",
+      "data_type": "CALENDAR_RULES",
+      "symbols": [],
+      "uri": "https://www.sse.com.cn/home/legal/"
+    },
+    {
+      "id": "sse-holiday",
+      "source_id": "official:sse-calendar-reference-v2",
+      "product": "SSE_PUBLIC_WEBSITE_HOLIDAY_DOCUMENT",
+      "data_type": "CALENDAR_RULES",
+      "symbols": [],
+      "uri": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml"
+    },
+    {
+      "id": "sse-announcements-603993",
+      "source_id": "official:sse-disclosure-reference",
+      "product": "SSE_PUBLIC_WEBSITE_DISCLOSURE_INDEX",
+      "data_type": "ANNOUNCEMENTS",
+      "symbols": [
+        "SSE:603993"
+      ],
+      "uri": "https://query.sse.com.cn/security/stock/queryCompanyBulletin.do?isPagination=true&productId=603993&keyWord=&securityType=0101%2C120100%2C020100%2C020200%2C120200&reportType2=&reportType=ALL&beginDate=2026-04-08&endDate=2026-10-05&pageHelp.pageSize=5&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1"
+    },
+    {
+      "id": "sse-announcements-600312",
+      "source_id": "official:sse-disclosure-reference",
+      "product": "SSE_PUBLIC_WEBSITE_DISCLOSURE_INDEX",
+      "data_type": "ANNOUNCEMENTS",
+      "symbols": [
+        "SSE:600312"
+      ],
+      "uri": "https://query.sse.com.cn/security/stock/queryCompanyBulletin.do?isPagination=true&productId=600312&keyWord=&securityType=0101%2C120100%2C020100%2C020200%2C120200&reportType2=&reportType=ALL&beginDate=2026-04-08&endDate=2026-10-05&pageHelp.pageSize=5&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1"
+    },
+    {
+      "id": "sse-announcements-603228",
+      "source_id": "official:sse-disclosure-reference",
+      "product": "SSE_PUBLIC_WEBSITE_DISCLOSURE_INDEX",
+      "data_type": "ANNOUNCEMENTS",
+      "symbols": [
+        "SSE:603228"
+      ],
+      "uri": "https://query.sse.com.cn/security/stock/queryCompanyBulletin.do?isPagination=true&productId=603228&keyWord=&securityType=0101%2C120100%2C020100%2C020200%2C120200&reportType2=&reportType=ALL&beginDate=2026-04-08&endDate=2026-10-05&pageHelp.pageSize=5&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1"
+    }
+  ],
+  "announcement_projection_limit_per_symbol": 5,
+  "metadata_response_cache_is_full_coverage": false,
+  "rights": {
+    "local_noncommercial_reference": true,
+    "cloud_raw_export": false,
+    "redistribution": false,
+    "historical_pit": false,
+    "market_feed_entitlement": false
+  },
+  "tushare": {
+    "role": "CANDIDATE_LOCAL_STRUCTURED_PROVIDER",
+    "admission": "BLOCKED",
+    "reason": "SLICE_ENTITLEMENT_UNKNOWN",
+    "network_called": false,
+    "secret_store_read": false
+  }
+}

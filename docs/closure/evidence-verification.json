@@ -1,0 +1,123 @@
+{
+  "run_id": "P1ACC-ARTIFACT-AUDIT-202610050719507322910000",
+  "started_at": "2026-10-05T07:19:50.732291+00:00",
+  "finished_at": "2026-10-05T07:41:36.965921+00:00",
+  "command": "parent inline Python artifact audit (hash/tag/bundle/log/source/experiment checks); no source code edits",
+  "branch": "p1a/conditional-closure-analysis",
+  "reviewed_baseline_commit": "86cf7cba13478f548d72b4bd1d1a2240fbc9bf2c",
+  "tags": {
+    "p0-v1.0.0-20261005": {
+      "object": "d90cf8dd576bff5998f5238f689ba364949ccbfb",
+      "commit": "433a2e96482e5db6e2a0ea452727baf61f4c4426",
+      "type": "tag"
+    },
+    "p1a-review-20261005": {
+      "object": "19c1eddbe64949e17771abe1d6b98ae046badc62",
+      "commit": "86cf7cba13478f548d72b4bd1d1a2240fbc9bf2c",
+      "type": "tag"
+    }
+  },
+  "code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "source_tree_hash": "sha256:aa8902654fdec40134b862f9abff91330caadddcff7c8ac82bde494d4abff46a",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "contracts/release.v1.json_frozen_file_bytes",
+      "status": "PASS",
+      "files": 29
+    },
+    {
+      "check": "contracts/release.p1a.json_frozen_file_bytes",
+      "status": "PASS",
+      "files": 20
+    },
+    {
+      "check": "all_committed_implementation_bytes",
+      "status": "PASS",
+      "files": 88
+    },
+    {
+      "check": "bundle_integrity",
+      "status": "PASS",
+      "path": "/Users/qiushi/投资研究/.p1a-archives/p0-20261005/p0-v1.0.0.bundle",
+      "sha256": "sha256:f61c4d26173e2d1f6cd2e5462c4c1a6d8aeb625cd0d5df5a7055e03681867c23",
+      "verify_exit_code": 0
+    },
+    {
+      "check": "bundle_integrity",
+      "status": "PASS",
+      "path": "/Users/qiushi/投资研究/.p1a-archives/p1a-review-20261005/p1a-review-20261005.bundle",
+      "sha256": "sha256:4573025bb66ebf8fd3eb7c7a04cb27c9cccfa9ea3a34a18eb5e6aa773d6f412a",
+      "verify_exit_code": 0
+    },
+    {
+      "check": "historical_clean_log_integrity",
+      "status": "PASS",
+      "command": "npm ci",
+      "path": "/Users/qiushi/投资研究/.p1a-archives/p1a-candidate-20261005-060acfe/ci.txt",
+      "sha256": "sha256:c89e711d7a2f1845c683f4b0f66e57c718dacbfc9c5958d92b712bafd4a3be8b"
+    },
+    {
+      "check": "historical_clean_log_integrity",
+      "status": "PASS",
+      "command": "npm run check",
+      "path": "/Users/qiushi/投资研究/.p1a-archives/p1a-candidate-20261005-060acfe/run-check.txt",
+      "sha256": "sha256:5f5e0b01b8b77f3ab5519d8bfeb242e6ab1c38c141aa3fa3cb31ee80da216216"
+    },
+    {
+      "check": "stored_experiment_A_eight_fields_and_mutation_hashes",
+      "status": "PASS",
+      "artifact": "docs/experiments/P1A-results.json",
+      "sha256": "sha256:916eb603e08f8948fb3b0664015964a477ec45a10b99866c660036e5249fae46"
+    },
+    {
+      "check": "existing_source_of_truth_three_fingerprints",
+      "status": "PASS"
+    },
+    {
+      "check": "P1A_delivery_artifacts_and_legacy_manifest_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "saved_experiment_B_fixed_gross_signals_prefill_and_friction_net_edge_counts",
+      "status": "PASS",
+      "artifact": "docs/experiments/P1A-results.json",
+      "sha256": "sha256:916eb603e08f8948fb3b0664015964a477ec45a10b99866c660036e5249fae46",
+      "gross_pnl_cents": [
+        60000,
+        60000,
+        60000
+      ],
+      "friction_cents": [
+        537,
+        2070,
+        7788
+      ],
+      "net_cents": [
+        59463,
+        57930,
+        52212
+      ],
+      "edge_on_orders": [
+        6,
+        4,
+        2
+      ],
+      "comparison_to_frozen_delivery": "BYTE_IDENTICAL"
+    },
+    {
+      "check": "all_four_current_source_fingerprints",
+      "status": "PASS",
+      "sources": 4
+    }
+  ],
+  "limitations": [
+    "Does not rerun the 210 tests; counts reference verified historical clean logs.",
+    "No new independent Reviewer or closure implementation exists.",
+    "No V5 strategy experiment, old ledger or old seal was run/changed."
+  ],
+  "attachment_sha256": "sha256:f7eb4a3a96dd253383f715411ffd71b0bece20dbed149abea70b520dc3558886",
+  "readiness_gate": "FAIL_NOT_ESTABLISHED",
+  "boundary_inspection_run_id": "P1ACC-BOUNDARY-INSPECTION-20261005071454207",
+  "source_of_truth_update": "Metadata-only append of this explicit human GAP authorization; primary handoff/current baseline/prior authorization hashes remain unchanged."
+}

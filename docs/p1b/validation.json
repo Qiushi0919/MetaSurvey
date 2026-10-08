@@ -1,0 +1,57 @@
+{
+  "run_id": "P1B-CLEAN-fb39c13",
+  "candidate_commit": "fb39c13b18854a068b2beb1deaee54cad593a66d",
+  "code_version": "42197c99be5177ad50ac08402bf2203282e51f70",
+  "source_tree_hash": "sha256:6e9b73d5b31ead6d6422b0ca47276533f770512a5d3d5eab0f184a125aed2ad8",
+  "environment": {
+    "checkout": "external clone --no-local --no-hardlinks, detached actual candidate",
+    "dependency_install": "npm ci --ignore-scripts",
+    "cache": "separate initially empty",
+    "configs": "two empty user/global config files",
+    "environment": "env -i; only PATH",
+    "runtime": "v24.19.0",
+    "remote_ci_run": false,
+    "new_production_db_created": false
+  },
+  "commands": [
+    "node p1b/scripts/check.mjs"
+  ],
+  "exit_code": 0,
+  "groups": {
+    "frozen_old": {
+      "tests": 258,
+      "pass": 257,
+      "fail": 0,
+      "skipped": 1
+    },
+    "p1b_new": {
+      "tests": 42,
+      "pass": 42,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "counts": {
+    "tests": 300,
+    "pass": 299,
+    "fail": 0,
+    "skipped": 1
+  },
+  "logs": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/clone.log",
+      "sha256": "sha256:6b314e136e1bc2a66bc5e37f4fdd47dafa45ff14e3fe6db26e7e1b7af433d501"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/npm-ci.log",
+      "sha256": "sha256:2a48207aa79feee4615590723cff10e6ed5fae63bf54894cc8968a9b534e3fa7"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/data-semantics-20261005/clean-check.log",
+      "sha256": "sha256:5303eced99a672156786221f2c85e099747ca5dd2fe8474828944f09474e4d81"
+    }
+  ],
+  "skip_reason": "Only optional external V5 environment replay; no V5 restored/run; portable 14-day legacy ledger regression passed",
+  "actual_e2e": "real-reference-results.json",
+  "test_scope": "old synthetic/legacy and new semantic synthetic + REAL_PUBLIC_CAPTURE_TEST_REFERENCE; no investment efficacy or live broker claims"
+}

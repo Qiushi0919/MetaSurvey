@@ -1,0 +1,1108 @@
+{
+  "account_profile_sha256": "sha256:755f4ca81f06881c51343d0dd7f48a5d5112124c6eca1ba1366e33033013d201",
+  "account_original_inventory": {
+    "inventory_version": "1.0.0",
+    "account_contract_version": "1.0.0",
+    "production_execution": "BLOCKED",
+    "fields": [
+      {
+        "pointer": "/account_id",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/capital_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/target_order_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_positions",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_single_trade_loss_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_sector_exposure_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/daily_loss_limit_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_portfolio_drawdown_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/margin_allowed",
+        "required": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/monthly_trade_frequency",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/strategy_budget_cents/CORE_40",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/strategy_budget_cents/EVENT_3",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/broker_id",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/commission_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/minimum_commission_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/commission_scope",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "PER_ORDER",
+            "BROKER_STATEMENT_POLICY"
+          ]
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/exchange_fee_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/exchange_fee_included",
+        "required": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/other_fee_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/other_fee_included",
+        "required": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/stamp_tax_sell_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/statutory_rate_source",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/statutory_rate_verified_at",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/effective_from",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/effective_to",
+        "required": true,
+        "schema": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/slippage_base_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/slippage_stress_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/rounding_mode",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "HALF_UP"
+          ]
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/configuration_source",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/user_risk_policy_version",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      }
+    ]
+  },
+  "unresolved_business_policies": {
+    "status": "ANALYSIS_INVENTORY_NOT_RUNTIME_CONFIGURATION",
+    "frozen_account_inventory": "config/p1a/unset-required.inventory.json",
+    "existing_account_unknown_fields": [
+      {
+        "pointer": "/account_id",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/capital_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/target_order_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_positions",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_single_trade_loss_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_sector_exposure_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/daily_loss_limit_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/max_portfolio_drawdown_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/margin_allowed",
+        "required": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/monthly_trade_frequency",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/strategy_budget_cents/CORE_40",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/settings/strategy_budget_cents/EVENT_3",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/broker_id",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/commission_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/minimum_commission_cents",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/NonnegativeCents"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/commission_scope",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "PER_ORDER",
+            "BROKER_STATEMENT_POLICY"
+          ]
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/exchange_fee_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/exchange_fee_included",
+        "required": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/other_fee_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/other_fee_included",
+        "required": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/stamp_tax_sell_rate",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/statutory_rate_source",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/statutory_rate_verified_at",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/effective_from",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/effective_to",
+        "required": true,
+        "schema": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/slippage_base_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/slippage_stress_bps",
+        "required": true,
+        "schema": {
+          "$ref": "urn:ashare:contracts:v1:common#/$defs/Decimal"
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/rounding_mode",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "HALF_UP"
+          ]
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/broker_costs/configuration_source",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      },
+      {
+        "pointer": "/user_risk_policy_version",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "status": "UNSET_REQUIRED",
+        "blocks": [
+          "REAL_SIZING",
+          "REAL_ACCOUNT_RISK",
+          "REAL_BROKER_EXECUTION",
+          "PRODUCTION"
+        ],
+        "offline_engineering_blocked": false
+      }
+    ],
+    "existing_count": 30,
+    "additional_unresolved_policies": [
+      {
+        "name": "production_micro_ladder_safety_multiple",
+        "group": "EDGE_POLICY",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "production_minimum_net_edge",
+        "group": "EDGE_POLICY",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "production_minimum_edge_cost_ratio",
+        "group": "EDGE_POLICY",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "production_sizing_policy",
+        "group": "SIZING",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "production_probability_calibration_policy",
+        "group": "CALIBRATION",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "quality_timing_grade_scoring_policy",
+        "group": "RESEARCH_POLICY",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "candidate_admission_policy",
+        "group": "CANDIDATE_POLICY",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_market_data_licensing_admission_policy",
+        "group": "DATA_ADMISSION",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_source_historical_available_at_proof_policy",
+        "group": "PIT",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_date_only_reconstruction_policy",
+        "group": "PIT",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "source_cloud_model_export_allowed_use",
+        "group": "EXPORT_PERMISSION",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_security_status_coverage_policy",
+        "group": "COVERAGE",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_calendar_session_coverage_policy",
+        "group": "COVERAGE",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_corporate_action_adjustment_entitlement_policy",
+        "group": "CORPORATE_ACTION",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "real_financial_revision_mapping_policy",
+        "group": "FINANCIAL",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "research_consumption_freshness_policy_by_purpose",
+        "group": "FRESHNESS",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      },
+      {
+        "name": "p1b_allowed_input_scope",
+        "group": "HUMAN_GATE_SCOPE",
+        "status": "UNSET_REQUIRED",
+        "authority": "EXPLICIT_USER_DECISION_OR_AUTHENTIC_SOURCE_PROOF_REQUIRED",
+        "default": null
+      }
+    ],
+    "legacy_values_auto_inherited": false,
+    "request_real_account_values_now": false,
+    "offline_gap_analysis_blocked": false,
+    "production_execution": "BLOCKED"
+  },
+  "production_enabled": false,
+  "synthetic_values_never_real_defaults": true
+}

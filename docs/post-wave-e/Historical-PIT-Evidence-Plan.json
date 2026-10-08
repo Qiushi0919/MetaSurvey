@@ -1,0 +1,290 @@
+{
+  "version": "1.0.0",
+  "role": "ENGINEERING_EVIDENCE_REQUIREMENTS_SUPPLEMENT_NOT_BUSINESS_RULE",
+  "all_domains": "BLOCKED",
+  "current_c12_c22_closed": 0,
+  "requirements": [
+    {
+      "domain": "source_admission",
+      "evidence_needed": [
+        "Observation/ClockEvidence/source policy lineage",
+        "Independent formal producer/receipt authority; current registry has no stock receipt"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "provider_identity",
+      "evidence_needed": [
+        "Independent seller/channel identity",
+        "Seller-to-product-to-endpoint association"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "license",
+      "evidence_needed": [
+        "Product/purpose/local retention/storage permissions",
+        "Explicit transfer/redistribution limitations and expiry"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "transport_integrity",
+      "evidence_needed": [
+        "Endpoint control evidence",
+        "Transport integrity evidence; original HTTP observation alone insufficient"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "raw_bar_readiness",
+      "evidence_needed": [
+        "Complete raw daily/calendar history and missing-session classification",
+        "Historical source/version/available_at proof;327 current-observed sessions not PIT"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "adjustment_readiness",
+      "evidence_needed": [
+        "Independent factor/version/action validation",
+        "Documented raw/adjusted price treatment and source rounding"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "corporate_action_readiness",
+      "evidence_needed": [
+        "Resolve5ambiguous actions from original identity-verified bodies",
+        "Explain8pre_close discrepancies with explicit UNSET tolerance/rounding decision; no double credit"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "security_status_history",
+      "evidence_needed": [
+        "Dated ST/listing/delisting intervals",
+        "Per-cutoff independent visibility and completeness"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "suspension_history",
+      "evidence_needed": [
+        "Dated halt/resume intervals and daily completeness",
+        "Absence does not imply active"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "limit_tradability_history",
+      "evidence_needed": [
+        "Dated exchange/board/ST limit regimes and per-day bands",
+        "Order-price/execution conditions; known band alone not fill proof"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "universe_history",
+      "evidence_needed": [
+        "Historical entry/exit/member availability",
+        "No current-three-stock survivorship backfill"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "historical_visibility",
+      "evidence_needed": [
+        "Independently proven availability before historical decision cutoff",
+        "Separate observed then versus posthoc reconstructed history"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "financial_publication_timing",
+      "evidence_needed": [
+        "Original ann_date/f_ann_date retained as DATE_ONLY",
+        "Independent exact first-usable timestamp or documented product precision; no midnight"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "revision_chronology",
+      "evidence_needed": [
+        "Original revision identity/link/coverage evidence",
+        "Each revision first visibility, conflicts and append-only versions"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "industry_history",
+      "evidence_needed": [
+        "Classification/version plus member effective intervals",
+        "Available-at proof and no current membership backfill"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "transaction_cost_policy",
+      "evidence_needed": [
+        "Owner/account dated commission/minimum/tax/slippage policies",
+        "Units/inclusions/scope/rounding/affordability; synthetic DPU not actual fees"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "account_policy",
+      "evidence_needed": [
+        "Owner account/mode/capital/strategy budget policy versions",
+        "All30 current account settings remain UNSET_REQUIRED"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "strategy_parameter_freeze",
+      "evidence_needed": [
+        "Owner entry/exit/features/position/risk decisions",
+        "Frozen fair evaluation/OOS protocol before actual outcome reveal"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "listing_delisting_history",
+      "evidence_needed": [
+        "Original security identity/board/list and terminal status versions",
+        "Effective intervals plus visibility; terminal-schema failure preserved"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "revision_first_visibility",
+      "evidence_needed": [
+        "Each original/version publication and available clocks",
+        "No latest version backfill or update_flag inference"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "historical_universe_completeness",
+      "evidence_needed": [
+        "Historical namespace cohort and inclusion/exclusion coverage",
+        "Independent selection evidence; no assumed all-market completeness"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "dated_fee_rounding_units",
+      "evidence_needed": [
+        "Private Owner dated fee source",
+        "Exact Decimal/minor integer and rounding/reconciliation evidence"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "owner_risk_kill_policy",
+      "evidence_needed": [
+        "Owner exposure/loss/kill/flat policies",
+        "Version/hash plus activation/approval provenance; all unknown currently"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "benchmark_total_return_policy",
+      "evidence_needed": [
+        "Owner benchmark and raw/total-return treatment",
+        "Comparable historical source/PIT and action lineage"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "evaluation_oos_freeze",
+      "evidence_needed": [
+        "Owner economic/history/frequency/drawdown objectives",
+        "Chronological split, OOS and multiple-test policy frozen before reveal"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "UNSET_REQUIRED"
+    },
+    {
+      "domain": "announcement_body_identity",
+      "evidence_needed": [
+        "Verified body security-code/title/date linkage",
+        "Existing6HTML failures cannot become PDF/body financial facts"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "snapshot_b_fresh_session",
+      "evidence_needed": [
+        "Separate NEW HUMAN Owner authorization",
+        "Actual reopening and EOD fresh evidence; no scheduler, actualdays0"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    },
+    {
+      "domain": "independent_entitlement_per_api",
+      "evidence_needed": [
+        "Actual product/API grant and effective expiry proof",
+        "No public tier/code0/HTTP200 inference"
+      ],
+      "current_state": "BLOCKED",
+      "acceptance_requires_independent_review": true,
+      "policy_values": "NOT_FABRICATED"
+    }
+  ],
+  "no_auto_upgrade_from_tests": true,
+  "productionGate": false
+}

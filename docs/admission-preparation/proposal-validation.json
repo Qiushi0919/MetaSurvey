@@ -1,0 +1,125 @@
+{
+  "run_id": "PROPOSAL-SCHEMA-2026-10-05T11:38:55.235Z",
+  "scope": "OWNER_REVIEW_PREPARATION_SHAPE_CHECK_ONLY",
+  "compiled_schemas": 2,
+  "cases": [
+    {
+      "name": "unknown clocks remain nullable and unverified BLOCKED",
+      "result": "PASS",
+      "expected_schema_valid": true,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "observed proposal preserves source/pilot/order blocked and exact CORE namespace",
+      "result": "PASS",
+      "expected_schema_valid": true,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "historical proposal preserves separate route and all critical evidence UNKNOWN",
+      "result": "PASS",
+      "expected_schema_valid": true,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "real source ADMITTED label rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "cloud ALLOWED label rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "production true rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "pilot pass rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "EVENT crossover rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "missing financial revision requirements rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "arbitrary order/path payload rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "synthetic DATE_ONLY publication retains null instant",
+      "result": "PASS",
+      "expected_schema_valid": true,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "DATE_ONLY cannot acquire midnight publication instant",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "instant without timezone rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "fake historical visibility true rejected",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "SECOND precision cannot carry a null publication instant",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "UNKNOWN precision cannot carry a guessed event instant",
+      "result": "PASS",
+      "expected_schema_valid": false,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    },
+    {
+      "name": "valid-shaped invented availability remains unverified BLOCKED; no chronology runtime",
+      "result": "PASS",
+      "expected_schema_valid": true,
+      "assertion": "STRUCTURE_ONLY_NOT_SOURCE_OR_CLOCK_VERIFICATION"
+    }
+  ],
+  "counts": {
+    "cases": 17,
+    "pass": 17,
+    "fail": 0
+  },
+  "captured_provider_documents_verified": 9,
+  "external_raw_check": "RUN",
+  "real_source_admission_created": false,
+  "source_clock_facts_verified": false,
+  "research_pilot": false,
+  "productionGate": false,
+  "notes": [
+    "No runtime adapter or business decision engine built.",
+    "Schema-valid timestamps do not establish facts, historic availability or licence.",
+    "Live source/PIT/permission guard remains a future owner-reviewed versioned adapter prerequisite."
+  ]
+}

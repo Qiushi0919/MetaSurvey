@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ashare:real-slice:AdmissionReceipt:2.0.0",
+  "type": "object",
+  "properties": {
+    "contract_name": {
+      "const": "AdmissionReceipt"
+    },
+    "contract_version": {
+      "const": "2.0.0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "object_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "object_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "observation_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "object_version": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "object_id",
+          "object_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "policy_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "object_version": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "object_id",
+          "object_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "namespace": {
+      "const": "CORE_40"
+    },
+    "purpose": {
+      "const": "LOCAL_CURRENT_OBSERVED_REFERENCE"
+    },
+    "use_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "code_epoch": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "local_reference": {
+          "const": true
+        },
+        "cloud_export": {
+          "const": false
+        },
+        "raw_export": {
+          "const": false
+        },
+        "redistribution": {
+          "const": false
+        },
+        "historical_backtest": {
+          "const": false
+        },
+        "production": {
+          "const": false
+        }
+      },
+      "required": [
+        "local_reference",
+        "cloud_export",
+        "raw_export",
+        "redistribution",
+        "historical_backtest",
+        "production"
+      ],
+      "additionalProperties": false
+    },
+    "admission": {
+      "const": "ADMITTED_EXACT_REFERENCE_SCOPE"
+    },
+    "historical_visibility_proven": {
+      "const": false
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "proof": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "const": "ED25519"
+        },
+        "public_key_der_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "signature": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "algorithm",
+        "public_key_der_sha256",
+        "signature"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_name",
+    "contract_version",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "snapshot_ref",
+    "observation_refs",
+    "policy_refs",
+    "namespace",
+    "purpose",
+    "use_at",
+    "code_epoch",
+    "permissions",
+    "admission",
+    "historical_visibility_proven",
+    "production_enabled",
+    "proof"
+  ],
+  "additionalProperties": false
+}

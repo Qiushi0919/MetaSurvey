@@ -1,0 +1,73 @@
+{
+  "contract_name": "OrderIntent",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-OrderIntent",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:e303085b60c7db9fff4d5ee724af77de51e6819af9fb472d2335406b27c0f687",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "strategy_id": "CORE_40",
+  "symbol": "SSE:600000",
+  "side": "BUY",
+  "quantity": 100,
+  "order_type": "LIMIT",
+  "limit_price": "10",
+  "trade_date": "2026-10-05",
+  "card_ref": {
+    "object_id": "synthetic-ResearchCard",
+    "object_version": 1,
+    "content_hash": "sha256:daf00b9d38eed9915261fda20fc98809c73e0d6075c4e75b270f8df30da4d286"
+  },
+  "signal_ref": {
+    "object_id": "synthetic-SignalEvent",
+    "object_version": 1,
+    "content_hash": "sha256:ce8d758ba4e97224366fdf5316550be76df877bd794d5337d0c16b3d915e04e2"
+  },
+  "decision_approval_ref": {
+    "object_id": "synthetic-decision-approval",
+    "object_version": 1,
+    "content_hash": "sha256:7dfe77470981b00483c20bfd1ed61d56ec182b7b32d7a825302e2997974b7583"
+  },
+  "final_confirmation_ref": {
+    "object_id": "synthetic-final-confirmation",
+    "object_version": 1,
+    "content_hash": "sha256:4f4802e180847c724b0d2f679c7514bce7df1badbb472bc9fe6e91074332cf65"
+  },
+  "cost_ref": {
+    "object_id": "synthetic-CostEstimate",
+    "object_version": 1,
+    "content_hash": "sha256:7d073e26e0e0a5a4959b20b60fc294ebe3fd39b0164cc05ad2cc0dfee674283a"
+  },
+  "account_snapshot_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+  "client_order_id": "synthetic-order",
+  "prepared_at": "2026-10-05T02:00:00Z",
+  "expires_at": "2026-10-05T03:00:00Z",
+  "status": "CONFIRMED",
+  "production_execution_enabled": false
+}

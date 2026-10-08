@@ -1,0 +1,39 @@
+{
+  "evidence_version": "1.0.0",
+  "phase": "P1A",
+  "baseline_commit": "060acfe11728ccee8022974d4794f5a262803afa",
+  "code_version": "8cca36056bde7cf55bf84bb699d59905994cb724",
+  "source_tree_hash": "sha256:aa8902654fdec40134b862f9abff91330caadddcff7c8ac82bde494d4abff46a",
+  "clone": "FULL_INDEPENDENT_NO_LOCAL_OBJECT_LINKS",
+  "node": "v24.19.0",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "dependencies_preexisting": false,
+  "npm_cache_preexisting": false,
+  "inherited_environment": "MINIMAL_ALLOWLIST_NO_LEGACY_ENV_OR_CREDS",
+  "user_npm_config": "EMPTY_DEDICATED_FILE",
+  "global_npm_config": "EMPTY_DISTINCT_FILE",
+  "legacy_external_assets_required": false,
+  "network_required_for_npm_ci": true,
+  "network_required_for_tests": false,
+  "results": [
+    {
+      "command": "npm ci",
+      "exit_code": 0,
+      "started_at": "2026-10-05T06:39:00.302Z",
+      "finished_at": "2026-10-05T06:39:15.290Z",
+      "output_sha256": "sha256:c89e711d7a2f1845c683f4b0f66e57c718dacbfc9c5958d92b712bafd4a3be8b",
+      "output_file": "ci.txt",
+      "tail": "2 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\nnpm notice\nnpm notice New major version of npm available! 11.12.1 -> 12.2.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0\nnpm notice To update run: npm install -g npm@12.2.0\nnpm notice\n"
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 0,
+      "started_at": "2026-10-05T06:39:15.290Z",
+      "finished_at": "2026-10-05T06:39:54.188Z",
+      "output_sha256": "sha256:5f5e0b01b8b77f3ab5519d8bfeb242e6ab1c38c141aa3fa3cb31ee80da216216",
+      "output_file": "run-check.txt",
+      "tail": "✔ DATE_ONLY packet fixture reads require the same explicit calendar context as writes (489.554541ms)\nℹ tests 210\nℹ suites 0\nℹ pass 209\nℹ fail 0\nℹ cancelled 0\nℹ skipped 1\nℹ todo 0\nℹ duration_ms 38070.999083\n"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-05T11:10:00.258513+00:00",
+  "effective_branch_of_new_request": "LATEST_P1B_GATE_EXISTS_PROCEED_WITH_STOCK_SOURCE_PREPARATION_ONLY",
+  "legacy_closure_stop_point_instruction": "SUPERSEDED_BY_EXPLICIT_LATEST_STATE_BRANCH_IN_SAME_REQUEST; do not force HEAD back or rewrite gates",
+  "baseline_commit": "1fffea964ad3fed5c47d7955b9121b31f8ceff74",
+  "baseline_tag": "p1b-data-semantics-20261005",
+  "closure_commit": "1b8b4dc5c4b5b8f86741b3b4352e69d605adc691",
+  "closure_tag_object": "4551495c8883f6a57b67a69ac0d6d102a1f9a497",
+  "p1b_tag_object": "5ba902e983d8fefdfd99478fc257cc3c6e0f4787",
+  "initial_worktree_clean": true,
+  "baseline_index_artifacts_verified": 291,
+  "baseline_code_pins_verified_by_actual_node": {
+    "closure": 140,
+    "p1b": 34
+  },
+  "known_full_baseline": "300=299PASS/0FAIL/1optionallegacySKIP; historical run not falsely relabelled current",
+  "current_readiness": "PASS_FIXTURE_MANUAL_EXPORT_ONLY",
+  "global_real_stock_data": "BLOCKED",
+  "last_calendar_reference": "Historical exact-scope proof only; no persistent live receipt; no stock or cloud rights",
+  "productionGate": false,
+  "real_account_fields_unset": 30,
+  "no_db_raw_broker_capability_in_research_consumer": true,
+  "authorization_sha256": "sha256:6d1c57bfbadb0fdb4b27839b3db9642c14bfd39dba6e627dab1eb4e9d3e0d324",
+  "real_source_status_upgrade_authorized": false,
+  "source_and_contract_proposals_require_owner_review": true,
+  "old_gates_and_release_bytes_rewrite": false
+}

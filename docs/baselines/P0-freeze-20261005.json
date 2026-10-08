@@ -1,0 +1,42 @@
+{
+  "manifest_version": "1.0.0",
+  "created_at": "2026-10-05T05:48:18.144Z",
+  "baseline_commit": "433a2e96482e5db6e2a0ea452727baf61f4c4426",
+  "annotated_tag": "p0-v1.0.0-20261005",
+  "tag_object": "d90cf8dd576bff5998f5238f689ba364949ccbfb",
+  "contract_version": "1.0.0",
+  "schema_version": 2,
+  "bundle": {
+    "workspace_relative_path": ".p1a-archives/p0-20261005/p0-v1.0.0.bundle",
+    "sha256": "sha256:f61c4d26173e2d1f6cd2e5462c4c1a6d8aeb625cd0d5df5a7055e03681867c23",
+    "bytes": 169819,
+    "verify_status": "PASS"
+  },
+  "files": [
+    {
+      "path": "contracts/release.v1.json",
+      "sha256": "sha256:eee1c485838212210f646f755c0ce4c61b38b46dfd6fa1b8708a6ced1bb9b770"
+    },
+    {
+      "path": "migrations/001_schema_v1.sql",
+      "sha256": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a"
+    },
+    {
+      "path": "migrations/002_contract_registry.sql",
+      "sha256": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84"
+    }
+  ],
+  "legacy": {
+    "native_compatibility": "FAIL_KNOWN_COMPATIBILITY",
+    "data_replay": "PASS",
+    "ledger_reconciliation": "PASS"
+  },
+  "restore": {
+    "commands": [
+      "git clone <bundle_path> restored-p0",
+      "git -C restored-p0 checkout p0-v1.0.0-20261005",
+      "npm ci",
+      "npm run check"
+    ]
+  }
+}

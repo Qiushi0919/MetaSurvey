@@ -1,0 +1,61 @@
+{
+  "contract_name": "CostEstimate",
+  "contract_version": "1.0.0",
+  "object_id": "synthetic-CostEstimate",
+  "object_version": 1,
+  "trace_id": "synthetic-trace",
+  "content_hash": "sha256:7d073e26e0e0a5a4959b20b60fc294ebe3fd39b0164cc05ad2cc0dfee674283a",
+  "recorded_at": "2026-10-05T02:00:00Z",
+  "business_timezone": "Asia/Shanghai",
+  "provenance": {
+    "event_time": "2026-10-05T02:00:00Z",
+    "published_at": null,
+    "available_at": "2026-10-05T02:00:00Z",
+    "retrieved_at": "2026-10-05T02:00:00Z",
+    "publication_precision": "NOT_APPLICABLE",
+    "source_id": "synthetic",
+    "source_version": "fixture-v1",
+    "source_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+    "visibility_basis": "SYNTHETIC"
+  },
+  "reason_codes": [
+    "SYNTHETIC_FIXTURE_ONLY"
+  ],
+  "invalidation": {
+    "status": "ACTIVE",
+    "valid_until": "2026-10-05T03:00:00Z",
+    "invalidated_at": null,
+    "conditions": [
+      "upstream version/hash changes invalidate"
+    ],
+    "reason_code": null
+  },
+  "mode": "DEV",
+  "account_id": "synthetic-account",
+  "strategy_id": "CORE_40",
+  "symbol": "SSE:600000",
+  "side": "BUY",
+  "quantity": 100,
+  "price": "10",
+  "notional_cents": "100000",
+  "fees": {
+    "commission_cents": "123",
+    "exchange_cents": "0",
+    "other_cents": "0",
+    "stamp_cents": "0",
+    "slippage_cents": "0"
+  },
+  "total_cost_cents": "123",
+  "round_trip_cost_bps": "UNSET_REQUIRED",
+  "cost_model_version": "synthetic-only",
+  "account_profile_ref": {
+    "object_id": "synthetic-AccountProfile",
+    "object_version": 1,
+    "content_hash": "sha256:d48f29d951a4cc48b940304d10ce2cd783cacb68629b18235390cf1b29ccce13"
+  },
+  "cost_config_hash": "sha256:84ad53f246eb870dba610ababc5deab5819f4c2a32f25b3c6bccbb711852fa5a",
+  "config_provenance": "SYNTHETIC_NOT_PRODUCTION",
+  "slippage_treatment": "INCLUDED_IN_EXECUTION_PRICE",
+  "estimated_at": "2026-10-05T02:00:00Z",
+  "expires_at": "2026-10-05T03:00:00Z"
+}

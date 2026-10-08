@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "baseline_commit": "60b9c4441db195418775a3b89f701137ebb9279d",
+  "candidate_scope": "OFFLINE_PREPARATION_ONLY_NO_ENABLED_AUTHENTICATED_SENDER",
+  "files": {
+    "contracts/tushare-admission/AdmissionVerification.schema.json": "sha256:a136eddc29f53fed8b0c7e4417bd7f67964aaeee68768ed822b15cd9fe9e0bb2",
+    "contracts/tushare-admission/reason-codes.v1.json": "sha256:cf0f246a34cd6e8635663c7ba85dd436fa01b33731dba65e7395293bc0f63721",
+    "contracts/release.tushare-admission.json": "sha256:a011685f0f911b0b48009239eb9891ef9614355038bbf7ada898012809231b97",
+    "docs/authorizations/TUSHARE15000-local-admission-20261005.md": "sha256:40e36e6a4a56509fafecf72a0c7168fc18c1996834737d26c8f38844a29139d3",
+    "docs/authorizations/TUSHARE-monthly-gateway-probe-20261005.md": "sha256:cad82664f0ae694da60e19cf7e00eea2390257d2ac8f5488762dfd30139baee1",
+    "docs/adr/ADR-017-tushare-probe-admission-separation.md": "sha256:90d6827be2c7c2a29a14e69df7468f3f7aac40735d0454f6948b62e5b1e92303",
+    "docs/tushare-admission/Interface-Freeze.md": "sha256:ad1bc1225fe008e27d02de9e41c3e7977aba9a388aae08cf49a7472461ab9d62",
+    "tushare-admission/parent/verify.mjs": "sha256:48ce0d4d9c72aa29f6ce0106e8a05061168ae5dd1bd9f5303a0e99660e919bca",
+    "tushare-admission/parent/contracts.test.mjs": "sha256:e49c21a64e92c4c52b10e8564260271b49b56abb3674c8a1d263f26ef70123cf",
+    "tushare-admission/check.mjs": "sha256:42cf96ee1e26ea147236d5e35d7ddc464346f0c5d9ab7a1bf22e5e09362488e2",
+    "tushare-admission/probe.py": "sha256:abb2fb787b197a8048c5b4a8d54ab6e2a68f356006f0794c7daf25b942e4487e",
+    "tushare-admission/tests/test_probe.py": "sha256:c5628efb75d7da81ec0094138ee9fe6eb0d303d37181cc5883f47d98af8dfc62"
+  },
+  "source_tree_hash": "sha256:4c9bf3c184687284a6e86c232269031e74b5b029cb4dc11b14ca6170ad56cdb6",
+  "approved_tushare_policies": 0,
+  "credential_storage_accesses": 0,
+  "actual_authenticated_requests": 0,
+  "schema_version": 6
+}

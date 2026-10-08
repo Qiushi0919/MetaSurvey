@@ -1,0 +1,155 @@
+{
+  "version": "1.0.1-post-wave-e-preparation",
+  "productionGate": false,
+  "formal_source_admission": "BLOCKED",
+  "code_pins": [
+    {
+      "path": "contracts/post-wave-e/ActionAdjustmentReconciliation.schema.json",
+      "sha256": "sha256:89d91acc749e2e0c522662bd47498e7e3feabf0a84ad338e159858193200b938"
+    },
+    {
+      "path": "contracts/post-wave-e/FinancialRevisionReadiness.schema.json",
+      "sha256": "sha256:5bb8cc5128782d4a3d3e04b75d68a3a68d3493f36876fa63ec331de9f378c773"
+    },
+    {
+      "path": "contracts/post-wave-e/ForwardPaperRealAdapterReadiness.schema.json",
+      "sha256": "sha256:1f2b2666161e3c41d03ed492213b0d7fe64e943a34ccd2a0b3a22efd15ffa0a0"
+    },
+    {
+      "path": "contracts/post-wave-e/FrozenStrategySpec.schema.json",
+      "sha256": "sha256:1b07dba521979786362a23698c85e4c9709866c0a1d006c719bac489da3f618e"
+    },
+    {
+      "path": "contracts/post-wave-e/HistoricalPITGap.schema.json",
+      "sha256": "sha256:6652af48d428523b904aefb43f17917a9bb669c3f9408b5227903d10a2e62f7c"
+    },
+    {
+      "path": "contracts/post-wave-e/ProviderLicenseTransportGap.schema.json",
+      "sha256": "sha256:00c8cfec053bed506cfd283b3d1e2c68cd1e2c1b1f363fb03a34860f7834caea"
+    },
+    {
+      "path": "contracts/post-wave-e/SnapshotBPreparation.schema.json",
+      "sha256": "sha256:475025c3f775d4f5143066e43f5ddf753f95b1b7b4db8d6be875a98852c2abe9"
+    },
+    {
+      "path": "contracts/post-wave-e/TradeabilityHistoryReadiness.schema.json",
+      "sha256": "sha256:10bdfa03272b9ea613e387f173a5ace3e92d7008fb386a05d9b9811e113f48b2"
+    },
+    {
+      "path": "docs/adr/ADR-029-historical-pit-preparation.md",
+      "sha256": "sha256:46916b1f442a7cf8243d8f9a8b3a4ca5afb864784fdc955f2ca00cea87816c78"
+    },
+    {
+      "path": "docs/adr/ADR-030-strategy-evaluation-freeze.md",
+      "sha256": "sha256:81f8f8d729d9ab09a45f1fc877363065c200d65961ed71f6d1cd2b144d191769"
+    },
+    {
+      "path": "docs/adr/ADR-031-durable-forward-and-provider-boundary.md",
+      "sha256": "sha256:ef0d5180b13fee92de65c8e82077473d81ce16018c8ecd6dbad0bcd8936c6e3d"
+    },
+    {
+      "path": "docs/authorizations/P1B-POST-WAVE-E-20261006.md",
+      "sha256": "sha256:67b08ae336813e3cab8ccf9d0d1ce2eedf45ad031ab22fb974ee11c99bf5b672"
+    },
+    {
+      "path": "docs/post-wave-e/Interface-Freeze.md",
+      "sha256": "sha256:d382b16b3fc08d9805e87a16f5f89cdd386ba1d88b664c77ff238ab5eeea3ecb"
+    },
+    {
+      "path": "docs/post-wave-e/Snapshot-B-Runbook.md",
+      "sha256": "sha256:644b996726d8ad68cc1eb8fd09a6adf4719646ad6f3c5ae62fa8d6b7f6d8e350"
+    },
+    {
+      "path": "docs/post-wave-e/adopted-private-pins.json",
+      "sha256": "sha256:de5ba8bafe920fabbbe67513393d4fb5b1c865e09a3d6f299c015782126aca9d"
+    },
+    {
+      "path": "docs/post-wave-e/baseline-acceptance.json",
+      "sha256": "sha256:45b2a8362a068376f8efc69360c92b5f2f6656d448f9b17f6086395d8882e910"
+    },
+    {
+      "path": "docs/post-wave-e/baseline-pins.json",
+      "sha256": "sha256:5fbd0ac60b3157301547e0ad12fd98f47c166f12f1a8889782c2cf93b0b65f8b"
+    },
+    {
+      "path": "docs/post-wave-e/contract-matrix.json",
+      "sha256": "sha256:b00f6ac67ef781f254b64cdc42cf2107388a84dd490b8d80fbae8be72d1b9925"
+    },
+    {
+      "path": "docs/post-wave-e/observation-original-map.json",
+      "sha256": "sha256:9e31fbd36065ea10a196bf62c2601b686e5d3df083c130d17b79d6ba573bf3e9"
+    },
+    {
+      "path": "docs/post-wave-e/rules.json",
+      "sha256": "sha256:8be78b0eab2529c95c919cc145b8d50a27265db3d12490b3d69d6f1f8857b9c5"
+    },
+    {
+      "path": "post_wave_e/__init__.py",
+      "sha256": "sha256:a63c73c83598a4934522c952047c83b3e648f59b49842acc86595976b4aec2a0"
+    },
+    {
+      "path": "post_wave_e/action.py",
+      "sha256": "sha256:0f417a4442c6cb1e656a06c885d04cff6db96c0c3f702e6fc4c1765f9cda2774"
+    },
+    {
+      "path": "post_wave_e/check.mjs",
+      "sha256": "sha256:14387a21613f8b00f369a247d72b4e528a6f1875cde1c5c7fc0e41bd460f4576"
+    },
+    {
+      "path": "post_wave_e/common.py",
+      "sha256": "sha256:e5044bf1a6027b8ee5e2f3fc0862f6bf21bc1a5d726eb5a8466499b78e7ef987"
+    },
+    {
+      "path": "post_wave_e/contracts.mjs",
+      "sha256": "sha256:155071d7c1a7484ae4126844a83554d68b92283faae8c305bc0c114bdf5ef5af"
+    },
+    {
+      "path": "post_wave_e/core.py",
+      "sha256": "sha256:ae58b15682c1bafde21c5ea2e0d8085405151e927dbb36cb02c203e5f1e1b2f5"
+    },
+    {
+      "path": "post_wave_e/forward.py",
+      "sha256": "sha256:b0cbaea60858f3146db94bf1ca460142cc02d10b61822b09107b644194cd0877"
+    },
+    {
+      "path": "post_wave_e/pit.py",
+      "sha256": "sha256:5f9cd6af0524e7b2d69654d3bedacdb71e9373343c76db90407f9c2b8805d22a"
+    },
+    {
+      "path": "post_wave_e/preflight.py",
+      "sha256": "sha256:e14e388cf14a267d9b78c3479c9fc3286c8d1bbeb9ecd4e2e4632539d8ced366"
+    },
+    {
+      "path": "post_wave_e/provider.py",
+      "sha256": "sha256:9c62fc146d6c9bc8bad8e1df218b03bd21017261bae2f57a22ea6e96d8a12a6e"
+    },
+    {
+      "path": "post_wave_e/real_adapter.py",
+      "sha256": "sha256:7a25cab34da17cb9b4d04b70c02d5d92d50c55fbdf28e5d358da21b1e62da28c"
+    },
+    {
+      "path": "post_wave_e/run.py",
+      "sha256": "sha256:9f5214f3715bafb7d22efebbabf5c8b1618ff4fad7c7ee427ecb215862b19430"
+    },
+    {
+      "path": "post_wave_e/strategy.py",
+      "sha256": "sha256:78093a3dc57d011d0f259ca1f04156ca4fd6a058f088d29cef5be88f3c52c2d5"
+    },
+    {
+      "path": "post_wave_e/tests/boundaries.test.mjs",
+      "sha256": "sha256:e2e7cdb889b7c8d1a4cf014d68e713bcd16f5def17c8dd706b54f8d5e9a03536"
+    },
+    {
+      "path": "post_wave_e/tests/test_boundaries.py",
+      "sha256": "sha256:474a4fe2762e4bc0a9664a5ea57e2f0ed8ce932c8a3990b851453d756fdd71f2"
+    },
+    {
+      "path": "post_wave_e/tests/test_forward.py",
+      "sha256": "sha256:c9ca01197f32a4df29ea261496169fd274952bc058b020ee31bd9cd5f940296d"
+    },
+    {
+      "path": "post_wave_e/tests/test_pit.py",
+      "sha256": "sha256:41dea87bce5e250c069dbda8e850728e4646d3984ce3e7d920bd58d4763726e2"
+    }
+  ]
+}
