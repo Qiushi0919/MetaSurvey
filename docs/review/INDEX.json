@@ -26,5 +26,7 @@
   ],
   "source_snapshot": "docs/review/Source-Snapshot.json",
   "local_only_manifest": "docs/review/Local-Only-Manifest.json",
-  "productionGate": false
+  "productionGate": false,
+  "current_handoff": "docs/handoff/MetaSurvey-Handoff.md",
+  "handoff_readback": "docs/handoff/Evidence-Index-20261008.json"
 }

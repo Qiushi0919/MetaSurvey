@@ -4,6 +4,7 @@
 
 | 内容 | 位置 | 状态 |
 |---|---|---|
+| 当前交接入口 | [执行卡与背景报告](../handoff/MetaSurvey-Handoff.md) · [只读核对与预期哈希](../handoff/Evidence-Index-20261008.json) | 保留正文；记录当前分支旧研究复跑的依赖哈希阻断，无新 Gate |
 | 本轮 GitHub 公开发布 | [公开发布验收报告](releases/2026-10-08-github-publication/REPORT.md) | 工程发布检查；不改变业务准入 |
 | 五年回测专项 P1 主控集成 | [Acceptance-Report](../backtest-5y-integration/Acceptance-Report.md) · [Status](../backtest-5y-integration/Status.json) | PASS_WITH_CONDITIONS |
 | 共享接口与六 DTO | [Remaining-Contract-Gaps](../backtest-5y-integration/Remaining-Contract-Gaps-v1.json) | 1.0.1-candidate；最终字段冻结 HOLD |

@@ -1,0 +1,359 @@
+{
+  "kind": "MetaSurveyHandoffReadOnlyEvidenceIndex",
+  "version": "1.0.0",
+  "checked_at": "2026-10-08T22:10:01+08:00",
+  "scope": "DOCUMENTATION_HANDOFF_ONLY_NO_NEW_GATE",
+  "workspace_snapshot_timing": "BEFORE_THIS_DOCUMENTATION_COMMIT",
+  "workspaces": [
+    {
+      "role": "main",
+      "path": "/Users/qiushi/投资研究/ashare-trading-v1",
+      "branch": "publication/github-20261008",
+      "commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "porcelain": ""
+    },
+    {
+      "role": "historical_specialist",
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y",
+      "branch": "backtest/5y-initial-review-20261008",
+      "commit": "4252876e23224df5d29c20492a08da9436dccf4a",
+      "porcelain": ""
+    },
+    {
+      "role": "public_mirror",
+      "path": "/Users/qiushi/投资研究/metasurvey-github",
+      "branch": "main",
+      "commit": "0115865b30e9887847d2c92158d4f2e34de77721",
+      "porcelain": ""
+    }
+  ],
+  "source_report": {
+    "path": "/Users/qiushi/Downloads/deep-research-report.md",
+    "bytes": 40527,
+    "sha256": "sha256:74f09c791eec73143c33d8b3bb86895bbe30ef304dd38a0dcfe670ea4f10c2db",
+    "authority": "USER_SUPPLIED_BACKGROUND_REPORT_NOT_A_NEW_EXECUTION_AUTHORIZATION"
+  },
+  "evidence": [
+    {
+      "claim": "integrated_code_and_business_state",
+      "path": "docs/backtest-5y-integration/Status.json",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:87a162eb0e5a5e0bdb5c1c19a51b9ade93e1ea750fc93d26f0c39c47b67928d7",
+      "actual_sha256": "sha256:87a162eb0e5a5e0bdb5c1c19a51b9ade93e1ea750fc93d26f0c39c47b67928d7",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/backtest-5y-integration/Status.json"
+    },
+    {
+      "claim": "historical_data_counts_and_limitations",
+      "path": "docs/backtest-5y-integration/Acceptance-Report.md",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:1e8c3e97ef0e9741562cbb74407de2d6b1a077342eca9903f9b94ae2bba3144a",
+      "actual_sha256": "sha256:1e8c3e97ef0e9741562cbb74407de2d6b1a077342eca9903f9b94ae2bba3144a",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/backtest-5y-integration/Acceptance-Report.md"
+    },
+    {
+      "claim": "six_candidate_contract_gaps",
+      "path": "docs/backtest-5y-integration/Remaining-Contract-Gaps-v1.json",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:919fef9e30d29e45426ce4a9bf2b314c7cab7701d402b193986b601324cc0f3a",
+      "actual_sha256": "sha256:919fef9e30d29e45426ce4a9bf2b314c7cab7701d402b193986b601324cc0f3a",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/backtest-5y-integration/Remaining-Contract-Gaps-v1.json"
+    },
+    {
+      "claim": "unapproved_methods",
+      "path": "docs/core40-method-proposal/Owner-Decisions.md",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:7a5a904108b5d1b56f655f2e8540a346dde5307d68c645f7bb395f5249451a52",
+      "actual_sha256": "sha256:7a5a904108b5d1b56f655f2e8540a346dde5307d68c645f7bb395f5249451a52",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/core40-method-proposal/Owner-Decisions.md"
+    },
+    {
+      "claim": "frozen_strategy",
+      "path": "docs/wave-f/Frozen-StrategySpec-v1.json",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+      "actual_sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/wave-f/Frozen-StrategySpec-v1.json"
+    },
+    {
+      "claim": "saved_research_manifest",
+      "path": "docs/wave-d/evidence.json",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:38b7d6044676f4424f65fa091665809b9eeb34a408f5e58d97d339cc7daf5069",
+      "actual_sha256": "sha256:38b7d6044676f4424f65fa091665809b9eeb34a408f5e58d97d339cc7daf5069",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/wave-d/evidence.json"
+    },
+    {
+      "claim": "forward_frozen_readback",
+      "path": "docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:58d494c949f56c61f1354f4649e3241737018fa34fa6a18c922559e81abc18f0",
+      "actual_sha256": "sha256:58d494c949f56c61f1354f4649e3241737018fa34fa6a18c922559e81abc18f0",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json"
+    },
+    {
+      "claim": "day1_scope_and_missing_evidence",
+      "path": "docs/day1-reveal/Status.json",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:83ddff27397e5839f6a6c288ad741981d6c0c5a0941c7edb3043ea92afbecd82",
+      "actual_sha256": "sha256:83ddff27397e5839f6a6c288ad741981d6c0c5a0941c7edb3043ea92afbecd82",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/day1-reveal/Status.json"
+    },
+    {
+      "claim": "public_reproduction_limits",
+      "path": "docs/review/TESTING.md",
+      "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "expected_sha256": "sha256:8ed2e7ab3aa5cf112934bd5a0608a2c1a59c80d2bdcfc136c3a584e98836f0b8",
+      "actual_sha256": "sha256:8ed2e7ab3aa5cf112934bd5a0608a2c1a59c80d2bdcfc136c3a584e98836f0b8",
+      "match": true,
+      "expected_from": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/Source-Snapshot.json",
+      "public_version_url": "https://github.com/Qiushi0919/MetaSurvey/blob/0115865b30e9887847d2c92158d4f2e34de77721/docs/review/TESTING.md"
+    }
+  ],
+  "protected_forward": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/ForwardPrediction-v1-OWNER_TEXT_IMPORT.json",
+      "expected_sha256": "sha256:954569db8402e2e50e66841c1a449523c72f20ff1ce364d6183c4d3c7a018039",
+      "actual_sha256": "sha256:954569db8402e2e50e66841c1a449523c72f20ff1ce364d6183c4d3c7a018039",
+      "bytes": 4146,
+      "match": true,
+      "expected_from": "docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/Owner-Provided-Text.txt",
+      "expected_sha256": "sha256:f990215f49d5b572f17c7b4eacbf203243268783b324b7dadd02637f48f95b60",
+      "actual_sha256": "sha256:f990215f49d5b572f17c7b4eacbf203243268783b324b7dadd02637f48f95b60",
+      "bytes": 24864,
+      "match": true,
+      "expected_from": "docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/Freeze-Receipt.json",
+      "expected_sha256": "sha256:09146f50cafadd4b0e2298589ab3b045148ae4aa3f207e58edda7929cfdccd81",
+      "actual_sha256": "sha256:09146f50cafadd4b0e2298589ab3b045148ae4aa3f207e58edda7929cfdccd81",
+      "bytes": 763,
+      "match": true,
+      "expected_from": "docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/ForwardOutcome-D1.jsonl",
+      "expected_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "match": true,
+      "expected_from": "docs/review/releases/2026-10-08-p1-integration/Forward-Readback.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    }
+  ],
+  "saved_research_artifacts": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.input.json",
+      "expected_sha256": "sha256:94bb00c11dd632d8386ee618fb50bff8c50ba31bd65bd686b96c9dec5809a28f",
+      "actual_sha256": "sha256:94bb00c11dd632d8386ee618fb50bff8c50ba31bd65bd686b96c9dec5809a28f",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.assessment.json",
+      "expected_sha256": "sha256:f1d8866488b90748d56c0e7f76b029e04aee7508253e2aed7716a859c7f0a6f0",
+      "actual_sha256": "sha256:f1d8866488b90748d56c0e7f76b029e04aee7508253e2aed7716a859c7f0a6f0",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.report.json",
+      "expected_sha256": "sha256:8dd85d5131411d105c72cae04c47a7774a8398ea5020a6d412979e3638ad1a14",
+      "actual_sha256": "sha256:8dd85d5131411d105c72cae04c47a7774a8398ea5020a6d412979e3638ad1a14",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.report.md",
+      "expected_sha256": "sha256:b501343418d0f2ac87245825fbb2c92bce5d44c324a4d7fb18b3c1fbc4ae2e86",
+      "actual_sha256": "sha256:b501343418d0f2ac87245825fbb2c92bce5d44c324a4d7fb18b3c1fbc4ae2e86",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.input.json",
+      "expected_sha256": "sha256:dabd40e7346cba16c5efda0f7a7587b46661df3fc2e3ee140030794b333d6a7e",
+      "actual_sha256": "sha256:dabd40e7346cba16c5efda0f7a7587b46661df3fc2e3ee140030794b333d6a7e",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.assessment.json",
+      "expected_sha256": "sha256:23a0bbb58abe258621137e16682324176939584d20afe82c901552a6f825295c",
+      "actual_sha256": "sha256:23a0bbb58abe258621137e16682324176939584d20afe82c901552a6f825295c",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.report.json",
+      "expected_sha256": "sha256:3f2d7d9ca6f293010d3bbf0317ad58318e02eb73762e44333b2abbef6a68d3ae",
+      "actual_sha256": "sha256:3f2d7d9ca6f293010d3bbf0317ad58318e02eb73762e44333b2abbef6a68d3ae",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.report.md",
+      "expected_sha256": "sha256:391f02ade9bea40a8d13b98202b499ab8c09e4382a62ec4f7778685770f7429f",
+      "actual_sha256": "sha256:391f02ade9bea40a8d13b98202b499ab8c09e4382a62ec4f7778685770f7429f",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.input.json",
+      "expected_sha256": "sha256:fe999830b06de205f7bef5f20b7e3bfe95154cf9ad1082f6ad372882f0956fd2",
+      "actual_sha256": "sha256:fe999830b06de205f7bef5f20b7e3bfe95154cf9ad1082f6ad372882f0956fd2",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.assessment.json",
+      "expected_sha256": "sha256:ae79b58852cec9b6c9de07f2a9d4d68115c7229f86ba04435d012899389ac74a",
+      "actual_sha256": "sha256:ae79b58852cec9b6c9de07f2a9d4d68115c7229f86ba04435d012899389ac74a",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.report.json",
+      "expected_sha256": "sha256:55bd5d575893df4c92b1c2b24170ce0c8a95bde10e41fa2f57b137bfaf3b938b",
+      "actual_sha256": "sha256:55bd5d575893df4c92b1c2b24170ce0c8a95bde10e41fa2f57b137bfaf3b938b",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.report.md",
+      "expected_sha256": "sha256:a208c2caf00d5169bd688a00fe0bdc7dfb6b586231971e48b51c876c629cb940",
+      "actual_sha256": "sha256:a208c2caf00d5169bd688a00fe0bdc7dfb6b586231971e48b51c876c629cb940",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/ResearchComparison.json",
+      "expected_sha256": "sha256:afa1d72641158533d6ea4f5da976b7edde3310fda5deb34d1b963a9de2963166",
+      "actual_sha256": "sha256:afa1d72641158533d6ea4f5da976b7edde3310fda5deb34d1b963a9de2963166",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/ResearchComparison.md",
+      "expected_sha256": "sha256:00e35f2d8cd086fbcf176fb9b3b3580f4131d1e4f810c946c3bd3ba859cb57fc",
+      "actual_sha256": "sha256:00e35f2d8cd086fbcf176fb9b3b3580f4131d1e4f810c946c3bd3ba859cb57fc",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/replay-proof.json",
+      "expected_sha256": "sha256:90acd843a7957464e50536d7d5ba94fdf98c37d13722792a0e676d856a290c1e",
+      "actual_sha256": "sha256:90acd843a7957464e50536d7d5ba94fdf98c37d13722792a0e676d856a290c1e",
+      "match": true,
+      "expected_from": "docs/wave-d/evidence.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e"
+    }
+  ],
+  "historical_database": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/backtest-5y-p1-20261008/evidence.sqlite",
+    "expected_from": "docs/backtest-5y-integration/Acceptance-Report.md @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+    "expected_sha256": "sha256:0f894cc5752689ec6f3c597469fc7b92729b1f0e8033e6b1a002e1490db706db",
+    "actual_sha256": "sha256:0f894cc5752689ec6f3c597469fc7b92729b1f0e8033e6b1a002e1490db706db",
+    "match": true,
+    "read_mode": "BYTE_HASH_ONLY_NO_DATABASE_CONNECTION"
+  },
+  "read_only_replay": {
+    "entry": "wave_d.run.verify_saved",
+    "cli_equivalent": "python3 -B -m wave_d.verify",
+    "runtime": {
+      "executable": "/Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "python": "3.12.14",
+      "pypdf": "6.10.0"
+    },
+    "main": {
+      "commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+      "status": "BLOCKED",
+      "error": "WAVE_C_DEPENDENCY_INVALIDATED",
+      "network_attempts": 0
+    },
+    "preserved_worktree": {
+      "path": "/Users/qiushi/投资研究/ashare-backtest-5y",
+      "commit": "4252876e23224df5d29c20492a08da9436dccf4a",
+      "status": "PASS",
+      "objects": 10,
+      "human_reports": 4,
+      "deterministic": true,
+      "productionGate": false,
+      "network_attempts": 0
+    },
+    "method": "Direct verify_saved call; socket connections denied; -B; no produce/refresh/import invocation",
+    "old_pin_differences": [
+      {
+        "expected_from": "docs/wave-c/baseline-pins.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+        "mismatches": [
+          {
+            "path": ".github/workflows/p0.yml",
+            "expected_sha256": "sha256:0787d16821ad83d2a4d30998ae0038a1d6896f59c6868ff14cc456504a14e55f",
+            "actual_sha256": "sha256:5b39a006384362558421084617c136d56bf842732eb6355ac4ac2698dfde0823"
+          },
+          {
+            "path": ".github/workflows/real-slice.yml",
+            "expected_sha256": "sha256:f93d5c21baa451d463a913a94748767625a1b1f0bc77d89023810f97d0460580",
+            "actual_sha256": "sha256:430a6767d3e8f6338bae0a36b297c098957439e54f9cb35769cca7e5da3c9611"
+          }
+        ]
+      },
+      {
+        "expected_from": "docs/wave-d/baseline-pins.json @ a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+        "mismatches": [
+          {
+            "path": ".github/workflows/p0.yml",
+            "expected_sha256": "sha256:0787d16821ad83d2a4d30998ae0038a1d6896f59c6868ff14cc456504a14e55f",
+            "actual_sha256": "sha256:5b39a006384362558421084617c136d56bf842732eb6355ac4ac2698dfde0823"
+          },
+          {
+            "path": ".github/workflows/real-slice.yml",
+            "expected_sha256": "sha256:f93d5c21baa451d463a913a94748767625a1b1f0bc77d89023810f97d0460580",
+            "actual_sha256": "sha256:430a6767d3e8f6338bae0a36b297c098957439e54f9cb35769cca7e5da3c9611"
+          }
+        ]
+      }
+    ],
+    "old_seals_modified": false
+  },
+  "previous_public_ci": {
+    "id": 37787826613,
+    "head": "0115865b30e9887847d2c92158d4f2e34de77721",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/37787826613",
+    "new_documentation_commit_tested_by_this_run": false
+  },
+  "previous_engineering_test_counts": "Read existing reports; no full-suite rerun in this documentation task",
+  "live_other_chat_status": "NOT_VERIFIED",
+  "new_market_requests": 0,
+  "credential_lookups": 0,
+  "private_key_reads": 0,
+  "business_changes": 0,
+  "frozen_asset_writes": 0,
+  "productionGate": false,
+  "preserved_body": {
+    "path": "docs/handoff/MetaSurvey-Handoff.md",
+    "original_body_byte_offset": 6049,
+    "sha256": "sha256:74f09c791eec73143c33d8b3bb86895bbe30ef304dd38a0dcfe670ea4f10c2db",
+    "bytes": 40527,
+    "suffix_equals_original": true
+  }
+}

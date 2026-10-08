@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
-  "captured_at": "2026-10-08T13:51:11.121545+00:00",
+  "source_commit": "176e2de1a42c1d4e186213770fe84aa307ce155f",
+  "captured_at": "2026-10-08T14:11:50.104873+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1040,
+  "included_source_files": 1042,
   "files": [
     {
       "path": ".env.example",
@@ -48,8 +48,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3024,
-      "sha256": "sha256:2479ea4723dc8365a5680152da20ff145edeed7d8af89ab8ea083457db654ff6"
+      "bytes": 3186,
+      "sha256": "sha256:1e90b6000b04b06a4cd156224d3ee095ab56ebd93e4669323616efee8a4e4d54"
     },
     {
       "path": "adapters/legacy-common.mjs",
@@ -1612,6 +1612,16 @@
       "sha256": "sha256:916eb603e08f8948fb3b0664015964a477ec45a10b99866c660036e5249fae46"
     },
     {
+      "path": "docs/handoff/Evidence-Index-20261008.json",
+      "bytes": 20185,
+      "sha256": "sha256:91a063c6be57c82cba6b3c9acad73605c61d93f594b44e12199b037c31fa7520"
+    },
+    {
+      "path": "docs/handoff/MetaSurvey-Handoff.md",
+      "bytes": 46576,
+      "sha256": "sha256:2422cba166c62c2f6564aa85e9e73a0b2f8edb5bf7d5fbfdca8929fdca402d5b"
+    },
+    {
       "path": "docs/historical-pit/Contracts.md",
       "bytes": 4472,
       "sha256": "sha256:248de892a32299df4b123cac503b062fd7c82d0cfe164f73856f0bad7b87fffe"
@@ -2293,13 +2303,13 @@
     },
     {
       "path": "docs/review/INDEX.json",
-      "bytes": 1152,
-      "sha256": "sha256:e8c9a7ba43c625555877446c067766854c55fa57584d6d861582af95ff3e499f"
+      "bytes": 1278,
+      "sha256": "sha256:30888137cd8db506ca8890744d3454d9899c420ae8e27ed3369e0862dc9b1ffe"
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 2172,
-      "sha256": "sha256:614120b84740083e3b95ca4fbe27251022c2e8e847dc125f37ca250e1484efad"
+      "bytes": 2418,
+      "sha256": "sha256:071e2a93bd49f9186179cf6ad8b513892b74e7f8b2530940e05b4f7ed07da5e1"
     },
     {
       "path": "docs/review/PUBLISHING.md",

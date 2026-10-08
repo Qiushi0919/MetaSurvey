@@ -3,6 +3,7 @@
 这是 MetaSurvey 的公开工程与审查仓库。审核人可以从这里阅读目标架构、当前代码、跨模块合同、数据库迁移、冻结策略、测试和历次 Gate 报告。
 
 - **[最新验收入口](docs/review/LATEST.md)**：每轮报告和待确认事项从这里进入。
+- **[当前交接入口：执行卡 + 背景报告](docs/handoff/MetaSurvey-Handoff.md)**：实际版本、只读运行入口、证据校验和下一步边界。
 - **[系统架构与模块地图](docs/review/ARCHITECTURE.md)**：区分目标架构、已实现工程和仍被阻断的真实执行链。
 - **[正式 V1 工程交接文档](docs/specifications/V1-Engineering-Handoff.md)**：原文保全副本；[来源与哈希](docs/specifications/Source.json)。
 - **[五年回测专项集成验收](docs/backtest-5y-integration/Acceptance-Report.md)** / [状态](docs/backtest-5y-integration/Status.json) / [共享合同缺口](docs/backtest-5y-integration/Remaining-Contract-Gaps-v1.json)。
