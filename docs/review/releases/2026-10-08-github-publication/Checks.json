@@ -138,6 +138,26 @@
   "github_repository": "https://github.com/Qiushi0919/MetaSurvey",
   "github_visibility": "PUBLIC",
   "github_actions": "https://github.com/Qiushi0919/MetaSurvey/actions/workflows/review.yml",
-  "github_actions_result_at_report_creation": "PENDING_FIRST_PUSH",
-  "source_and_child_preservation": "Preservation.json"
+  "source_and_child_preservation": "Preservation.json",
+  "github_actions_verified_run": {
+    "head_sha": "bd9bcaaf7d4eb68b200e690d91be910db9cbc165",
+    "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/37786760012",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "name": "portable-review (ubuntu-latest)",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable-review (macos-latest)",
+        "status": "completed"
+      }
+    ],
+    "receipt": "GitHub-CI-Receipt.json",
+    "later_publication_documentation_commits_do_not_rewrite_this_receipt": true
+  },
+  "unauthenticated_latest_review_page_http": 200,
+  "initial_complete_remote_tree_verified_files": 1040
 }

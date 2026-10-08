@@ -16,3 +16,5 @@ Python runner 原样运行 backtest sidecar 123、未批准方法合成算术 75
 公开 CI 不覆盖：实际 Provider/License 证明、真实历史 PIT、真实 Day1 原件揭晓、真实签名审批链、原件重分发授权，以及本机私有档案依赖的历次阶段总 Gate。原有 `npm run check` 和历次 `wave_*/check` 保持原逻辑，需要相应本机证据；旧 P0 入口还含阶段性 1 MiB 文件限制，当前大型 PIT 元数据超出该旧规则。旧 workflow 改为手工触发并明确其依赖，不能把其未运行解释为通过。
 
 本轮公开检查的实际数量、失败/跳过和运行位置记录在 [发布报告](releases/2026-10-08-github-publication/REPORT.md)。合成检查成功不关闭任何真实数据或交易 Gate。
+
+仓库文件完整性可用 `python3 -B tools/github_publication/verify.py` 校验。此检查逐一核对当前 Git HEAD 的公开文件集合、源文件字节哈希和六项 local-only 排除，不需要本机历史原件。

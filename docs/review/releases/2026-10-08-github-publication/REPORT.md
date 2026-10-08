@@ -23,3 +23,9 @@
 六 DTO 最终字段冻结 HOLD，CORE40 方法提案待 Owner 决策；真实历史 PIT admitted=0，正式 family NOT_COMPUTABLE / ENGINE_NOT_RUN，OOS windows=0。真实账户、费用、风险参数 UNSET_REQUIRED；Provider/License 未核验。Forward Day0 保持冻结，Snapshot B NOT_YET_RUN，actual days=0。生产数据、历史正式回测、云端研究数据导出、券商和真实资金执行继续 BLOCKED。
 
 公开上传、架构展示与 CI 成功不授予真实数据转移、独立审核替代、策略优化或实际交易权限。完成公开发布后本轮停止，不自动进入研究或交易下一阶段。
+
+## 上传核验
+
+首次命令行上传因 GitHub workflow scope 不足被拒绝，代码当时未进入默认分支。随后通过已连接且具备写入权限的 GitHub 应用发布自动检查文件，工程通过 Git 上传。另补齐了被新仓库通用 ignore 规则忽略的三份既有软件验收日志。发布后的 Git 文件集合必须与 Source-Snapshot 完全匹配，检查入口为 `tools/github_publication/verify.py`。这些上传兼容处理没有修改原始业务断言或冻结配置。
+
+GitHub 首轮完整公开检查已通过：Ubuntu 与 macOS 两组均 SUCCESS，所测公开 commit 为 `bd9bcaaf7d4eb68b200e690d91be910db9cbc165`。见 [运行记录](https://github.com/Qiushi0919/MetaSurvey/actions/runs/37786760012) 和 [GitHub-CI-Receipt.json](GitHub-CI-Receipt.json)。验收入口匿名 HTTP 200；首轮远端 1,040 个文件与 Source-Snapshot 一致。后续仅补充发布核验工具、回执与文档，最后一次上传仍以当次 Source-Snapshot 与 Git HEAD 的完整性核验为准。

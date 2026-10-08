@@ -23,8 +23,8 @@ method_proposals/       未批准方法的合成算术验证
 integration_review/     分支边界与冻结文件保全检查
 docs/                   ADR、授权范围、Gate、审查与验收
 legacy/ + adapters/     历史资产 manifest / 兼容适配
- tests/                 合成与标明来源的工程回归夹具
- tools/github_publication/  可公开复现检查与单向发布工具
+tests/                 合成与标明来源的工程回归夹具
+tools/github_publication/  可公开复现检查与单向发布工具
 ```
 
 公开仓库是由主控工程生成的**单向发布快照**，不是原始工作区的所有磁盘内容。运行数据库、credentials、私钥、历史原始证据、大型验收 ZIP 和许可未核验的行情/页面原件留在本机。首次公开提交没有携带含原件的本地 Git 历史。

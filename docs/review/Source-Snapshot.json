@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "c9071832f6c8a941a8b62b20b4b6afdcac24a02b",
-  "captured_at": "2026-10-08T13:39:10.159829+00:00",
+  "source_commit": "a4120e0bff1dff696c2542086cb16f41cdfa7d5e",
+  "captured_at": "2026-10-08T13:51:11.121545+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1038,
+  "included_source_files": 1040,
   "files": [
     {
       "path": ".env.example",
@@ -48,8 +48,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3026,
-      "sha256": "sha256:9e9cb5783df2851a915f118c1f2662bf06f372d488baef310a39c3d7f126be54"
+      "bytes": 3024,
+      "sha256": "sha256:2479ea4723dc8365a5680152da20ff145edeed7d8af89ab8ea083457db654ff6"
     },
     {
       "path": "adapters/legacy-common.mjs",
@@ -2303,18 +2303,23 @@
     },
     {
       "path": "docs/review/PUBLISHING.md",
-      "bytes": 2447,
-      "sha256": "sha256:32396fe349e5c90acb69ff79ff905e97e7285204de9df769403260c14111bc7a"
+      "bytes": 3344,
+      "sha256": "sha256:9469a5afa36a9ea92f1c93b1477fbd921416f034053310625922f81f386593f9"
     },
     {
       "path": "docs/review/TESTING.md",
-      "bytes": 2241,
-      "sha256": "sha256:193627f1be10e7b76c860661d3a0a5f1a8179bd503a952bf724b7dc4f9d75a61"
+      "bytes": 2470,
+      "sha256": "sha256:8ed2e7ab3aa5cf112934bd5a0608a2c1a59c80d2bdcfc136c3a584e98836f0b8"
     },
     {
       "path": "docs/review/releases/2026-10-08-github-publication/Checks.json",
-      "bytes": 5341,
-      "sha256": "sha256:ca52664ccbb9012d614102cc1ed405d2af9c0d1c25dd005de454e7e3ca74ed5c"
+      "bytes": 5989,
+      "sha256": "sha256:4a9bcac53cc848570ed4755f8fdc804b54b5c3c7879e27bc3f83a945ebff461a"
+    },
+    {
+      "path": "docs/review/releases/2026-10-08-github-publication/GitHub-CI-Receipt.json",
+      "bytes": 355,
+      "sha256": "sha256:dac0a8c62084e812ee10780340b8b00a8aeb7bcfeea12e5d74a98aa8cd6189c9"
     },
     {
       "path": "docs/review/releases/2026-10-08-github-publication/Preservation.json",
@@ -2323,8 +2328,8 @@
     },
     {
       "path": "docs/review/releases/2026-10-08-github-publication/REPORT.md",
-      "bytes": 3866,
-      "sha256": "sha256:42a02a6a8b0ebabb8cc7cd5d7f5fb60fef7fd6895121ec1ad1c2e3ab134d6264"
+      "bytes": 4901,
+      "sha256": "sha256:74d933e831821639dccc33ad4a8c74d786f4e4149afb4fc2b2b7a10e8360bc98"
     },
     {
       "path": "docs/review/releases/2026-10-08-p1-integration/Child-Final-Readback.json",
@@ -4495,6 +4500,11 @@
       "path": "tools/github_publication/test_python.py",
       "bytes": 2796,
       "sha256": "sha256:35a2c5228e676ffaead69f16f90ffe8f2d4500aa27ef3d533ae967a7c8178773"
+    },
+    {
+      "path": "tools/github_publication/verify.py",
+      "bytes": 1929,
+      "sha256": "sha256:65b265ad30451ad6cdd7dd49b7e86a9fe4f2e6807e0c741da8ff7ce53977a086"
     },
     {
       "path": "tushare-admission/check.mjs",

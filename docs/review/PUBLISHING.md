@@ -22,3 +22,7 @@ printf '
 每轮给 Owner 的最终通知通常只需：**“验收文件：仓库中的 `docs/review/LATEST.md` → 本轮报告。”** 需要 Owner 决定的事项或新出现的重要失败可另用一句说明。验收应记录具体 commit 固定链接，不能只记录会随时间变化的 main 分支入口。不会因发送对话消息而自动生成虚假验收、修改冻结结果或启动下一阶段。
 
 旧主页原字节保全为根目录 `README-Historical-20261008.md`，因此其历史相对链接仍以原来的仓库根目录解析。当前入口以 `README.md` 和 `docs/review/LATEST.md` 为准。
+
+公开工作区提交前运行 `python3 -B tools/github_publication/verify.py --git /opt/homebrew/bin/git --index`，提交后去掉 `--index` 再检查一次。它校验 Git 内实际文件集合和字节，而非只检查磁盘；旧源工程已经跟踪的三份 `docs/p1b-real-admission/delivery-*-verifier.log` 需要首次按 Source-Snapshot 清单明确 `git add -f`，因为通用 `.gitignore` 会忽略新仓库里的 log 文件。不得为上传这三份已审核软件日志而放开所有本机日志。
+
+2026-10-08 首次上传时命令行 OAuth 缺少 workflow scope，GitHub 拒绝写入 `.github/workflows/`。现有已连接 GitHub 应用具备相应权限，已用该应用发布三份 workflow，再通过普通 Git 上传工程；没有扩充账户登录权限。后续 workflow 更新同样使用具备相应权限的连接，普通代码和文档提交可正常 Git push。
