@@ -1,0 +1,21 @@
+name: Historical P0 entry (local evidence required)
+on: [workflow_dispatch]
+# Preserved local gate; its phase-specific file-size rules are not the public CI gate.
+permissions:
+  contents: read
+jobs:
+  check:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run check
