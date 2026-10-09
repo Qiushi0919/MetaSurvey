@@ -45,7 +45,7 @@ flowchart TD
 | watcher | `wave_h/`、`wave_hb/` | 有界准备/门禁；未启用自动行情监控或调度 |
 | brain-adapter | `src/closure/export.mjs`、`src/closure/import.mjs`、`src/closure/consumer.mjs` | fixture 手工导入导出；云端真实研究导出仍 BLOCKED |
 | execution-gateway | `src/paper/index.mjs`、`src/baseline/gates.mjs` | 纸面交易与生产阻断；没有真实券商执行 |
-| gui-api | 目标规格与合同 | 本轮没有大规模 GUI 或 live API 服务 |
+| gui-api | `workbench/server.py` 与 `workbench/static/` | 六页本地只读界面、固定文件GET接口；无任务执行/审批/订单。见[界面验收](../workbench-v0/Acceptance-Report.md) |
 | audit | `src/p1a/audit.mjs`、`dual_track/audit.py`、`integration_review/` | hash/trace、保全、失败保留、Gate/报告索引 |
 
 ## 跨模块合同与数据库

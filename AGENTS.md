@@ -1,3 +1,7 @@
+# Current local read-only workbench v0 — 2026-10-09
+
+Owner explicitly authorized the six-page local read-only workbench implementation. Read docs/workbench-v0/Authorization.md and Acceptance-Report.md. New code under workbench/; only presentation documents/navigation may change. This supersedes earlier GUI prohibition solely for the authorized read-only viewer. No task execution, scheduling, secret/database access, raw export, broker/order, new business contracts or migration. Three local sealed research Markdown files may be viewed on loopback after manifest/hash checks; no raw data publication. Keep source locks, freezes, old pins/seals and specialist workspace unchanged. Workbench acceptance does not freeze six DTOs or approve M01–M08. Stop after this software delivery.
+
 # Current public engineering publication — 2026-10-08
 
 Owner explicitly authorized public GitHub publication of the integrated MetaSurvey software, contracts and review documents. This supersedes historical no-push wording ONLY for that publication scope. Read docs/review/LATEST.md, ARCHITECTURE.md, PUBLISHING.md and docs/backtest-5y-integration/Status.json. Root owns shared contracts, review index, publication and final integration; do not overwrite the independent backtest worktree or frozen Forward predictions. Six DTO 1.0.1-candidate final freeze HOLD; methods proposal Owner PENDING; actual PIT 0, actual Forward days 0, real configuration UNSET_REQUIRED, higher gates BLOCKED.

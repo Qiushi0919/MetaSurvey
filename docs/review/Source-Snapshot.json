@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "176e2de1a42c1d4e186213770fe84aa307ce155f",
-  "captured_at": "2026-10-08T14:11:50.104873+00:00",
+  "source_commit": "f23c0b260bc82c49712e7725a9b750b34125f85b",
+  "captured_at": "2026-10-09T02:57:47.382599+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1042,
+  "included_source_files": 1052,
   "files": [
     {
       "path": ".env.example",
@@ -38,8 +38,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 32473,
-      "sha256": "sha256:e94474a6ea550366d210a94902f51f15a482e172c31928229419abcf45aea415"
+      "bytes": 33262,
+      "sha256": "sha256:3adfdf45b13191472b170109433439c71613d9684eaed9088f150637226f2a9a"
     },
     {
       "path": "README-Historical-20261008.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3186,
-      "sha256": "sha256:1e90b6000b04b06a4cd156224d3ee095ab56ebd93e4669323616efee8a4e4d54"
+      "bytes": 3422,
+      "sha256": "sha256:8744d9cab39b665a2d5ba98ac7ed17b0d32873f6aa69d879a1a12bf1bb16b1cf"
     },
     {
       "path": "adapters/legacy-common.mjs",
@@ -2298,18 +2298,18 @@
     },
     {
       "path": "docs/review/ARCHITECTURE.md",
-      "bytes": 5613,
-      "sha256": "sha256:6a3314f6de3d20d74f95570dcfd9180632b3440d095f5c26dfa701bf83707158"
+      "bytes": 5730,
+      "sha256": "sha256:78ea570ff4eb630d697329d73d73886d001b65de9851859218d14bf1b22e0ba3"
     },
     {
       "path": "docs/review/INDEX.json",
-      "bytes": 1278,
-      "sha256": "sha256:30888137cd8db506ca8890744d3454d9899c420ae8e27ed3369e0862dc9b1ffe"
+      "bytes": 1575,
+      "sha256": "sha256:aaef542f91701a7c41c96513435f7f05c610e6cd4b9344b6412e9872cc4edcc9"
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 2418,
-      "sha256": "sha256:071e2a93bd49f9186179cf6ad8b513892b74e7f8b2530940e05b4f7ed07da5e1"
+      "bytes": 2621,
+      "sha256": "sha256:bd3738c4781a12ebd0ee627de38feafa46f7e5ca13251940e286419940b45a15"
     },
     {
       "path": "docs/review/PUBLISHING.md",
@@ -3495,6 +3495,21 @@
       "path": "docs/wave-hb/release.json",
       "bytes": 27248,
       "sha256": "sha256:18deedd27e907dfaccfd13dfd33883324b291d0cda9b2a290f67fb16861015ad"
+    },
+    {
+      "path": "docs/workbench-v0/Acceptance-Report.md",
+      "bytes": 5534,
+      "sha256": "sha256:9d2d646929b90e38feded8cda6fab86f2dab366fb7f09ae50b73ccf5c1a43153"
+    },
+    {
+      "path": "docs/workbench-v0/Authorization.md",
+      "bytes": 1089,
+      "sha256": "sha256:64dcf7c95d9c7faeb83161f5f9ac2276fca10cce1061ab186871f7ddf1f4a2f6"
+    },
+    {
+      "path": "docs/workbench-v0/Checks.json",
+      "bytes": 14272,
+      "sha256": "sha256:a1e918bbd8a464c0c503dfbdd625534087d3035fa099b40fe05c3445f334bea6"
     },
     {
       "path": "dual_track/__init__.py",
@@ -5215,6 +5230,41 @@
       "path": "wave_hb/tests/test_preparation.py",
       "bytes": 12255,
       "sha256": "sha256:84e671d7119d05fff4e93bee33662ebe0e23b85b468d9b28193a966faee1d9be"
+    },
+    {
+      "path": "workbench/README.md",
+      "bytes": 3690,
+      "sha256": "sha256:64580eef0402173ed8577880f6c5407d3122f894258d690c77745bcc9ed9ae37"
+    },
+    {
+      "path": "workbench/__init__.py",
+      "bytes": 75,
+      "sha256": "sha256:0df3b280d15f89943b32357efc861d90f17f564d1445351e3fe69d04ca45a257"
+    },
+    {
+      "path": "workbench/server.py",
+      "bytes": 11987,
+      "sha256": "sha256:9be537ca73b5924b364a37d9fb2d210d51073dfb225adb4070546680c43cfbe0"
+    },
+    {
+      "path": "workbench/static/app.js",
+      "bytes": 12973,
+      "sha256": "sha256:adfbe46abd41948833f17ddc8961aa0015a1c22ebea76830161164c2f933638b"
+    },
+    {
+      "path": "workbench/static/index.html",
+      "bytes": 1386,
+      "sha256": "sha256:d91535a8866d53f89a6381fba00c4e541554cfbda22d7092c9b124bc476872e0"
+    },
+    {
+      "path": "workbench/static/style.css",
+      "bytes": 5573,
+      "sha256": "sha256:874911befc3a553c9a53d053dd0821a1d2ed02183051f1b3ee87c325b9801fe1"
+    },
+    {
+      "path": "workbench/tests/test_readonly.py",
+      "bytes": 8822,
+      "sha256": "sha256:b5d1310113aa0e82a377037fce63230b00a6a13e1d8b0c722e5f339995ab8374"
     }
   ],
   "local_only_manifest": "docs/review/Local-Only-Manifest.json",

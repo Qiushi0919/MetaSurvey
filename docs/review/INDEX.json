@@ -1,12 +1,17 @@
 {
   "kind": "MetaSurveyPublicReviewIndex",
   "version": "1.0.0",
-  "updated_on": "2026-10-08",
+  "updated_on": "2026-10-09",
   "timezone": "Asia/Shanghai",
   "latest_entry": "docs/review/LATEST.md",
   "architecture": "docs/review/ARCHITECTURE.md",
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
+    {
+      "phase": "LOCAL_READ_ONLY_WORKBENCH_V0",
+      "report": "docs/workbench-v0/Acceptance-Report.md",
+      "checks": "docs/workbench-v0/Checks.json"
+    },
     {
       "phase": "GITHUB_PUBLICATION",
       "report": "docs/review/releases/2026-10-08-github-publication/REPORT.md",
@@ -28,5 +33,10 @@
   "local_only_manifest": "docs/review/Local-Only-Manifest.json",
   "productionGate": false,
   "current_handoff": "docs/handoff/MetaSurvey-Handoff.md",
-  "handoff_readback": "docs/handoff/Evidence-Index-20261008.json"
+  "handoff_readback": "docs/handoff/Evidence-Index-20261008.json",
+  "workbench": {
+    "entry": "workbench/README.md",
+    "local_url": "http://127.0.0.1:8765/",
+    "mode": "LOCAL_READ_ONLY"
+  }
 }

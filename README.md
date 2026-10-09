@@ -2,6 +2,7 @@
 
 这是 MetaSurvey 的公开工程与审查仓库。审核人可以从这里阅读目标架构、当前代码、跨模块合同、数据库迁移、冻结策略、测试和历次 Gate 报告。
 
+- **[本地只读工作台 v0](workbench/README.md)**：启动后打开 http://127.0.0.1:8765/；[本轮界面验收](docs/workbench-v0/Acceptance-Report.md)。
 - **[最新验收入口](docs/review/LATEST.md)**：每轮报告和待确认事项从这里进入。
 - **[当前交接入口：执行卡 + 背景报告](docs/handoff/MetaSurvey-Handoff.md)**：实际版本、只读运行入口、证据校验和下一步边界。
 - **[系统架构与模块地图](docs/review/ARCHITECTURE.md)**：区分目标架构、已实现工程和仍被阻断的真实执行链。
@@ -22,6 +23,7 @@ dual_track/             历史诊断与未来盲测协议
 day1_reveal/            冻结与揭晓检查
 method_proposals/       未批准方法的合成算术验证
 integration_review/     分支边界与冻结文件保全检查
+workbench/              六页本地只读 GUI 与固定文件读取接口
 docs/                   ADR、授权范围、Gate、审查与验收
 legacy/ + adapters/     历史资产 manifest / 兼容适配
 tests/                 合成与标明来源的工程回归夹具
