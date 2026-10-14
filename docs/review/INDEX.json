@@ -8,6 +8,13 @@
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
     {
+      "phase": "CORE40_E2E_PILOT_V1",
+      "report": "docs/e2e-pilot-v1/Acceptance-Report.md",
+      "method": "experiments/e2e_pilot_v1/method.json",
+      "registry": "docs/e2e-pilot-v1/Registry.json",
+      "business_state": "PARTIAL_REAL_RESEARCH_HISTORICAL_EXECUTION_BLOCKED"
+    },
+    {
       "phase": "V0_REVIEW_CORRECTION",
       "report": "docs/score-review-v01/Acceptance-Report.md",
       "rules": "experiments/sector_stock_v01/config.json",

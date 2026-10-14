@@ -1,0 +1,155 @@
+{
+  "kind": "E2EPilotActualBrowserEvidence",
+  "recorded_at": "2026-10-14T06:55:43.856105+00:00",
+  "url": "http://127.0.0.1:8768/",
+  "run_id": "E2E-PILOT-V1-20261014-RESEARCH-01",
+  "run_sha256": "86fbd15607f8fc59da64700b87d0179a1a798875998977e1feec8c8655b6cd58",
+  "actions": [
+    "dashboard -> sectors -> candidates -> company financial components -> validation -> source modal",
+    "final official-source button opens allowlisted Data-Feasibility.md"
+  ],
+  "rendered_field_checks": [
+    {
+      "kind": "companies",
+      "id": "603228.SH",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "002463.SZ",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "002916.SZ",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "600312.SH",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "601179.SH",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "002028.SZ",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "603993.SH",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "601899.SH",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "companies",
+      "id": "600362.SH",
+      "field": "fundamental_factor_score",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "sectors",
+      "id": "PCB_SAMPLE",
+      "field": "financial_proxy_subtotal",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "sectors",
+      "id": "HV_EQUIPMENT_SAMPLE",
+      "field": "financial_proxy_subtotal",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    },
+    {
+      "kind": "sectors",
+      "id": "COPPER_PRODUCERS_SAMPLE",
+      "field": "financial_proxy_subtotal",
+      "matches_rendered_text": true,
+      "total_is_null": true
+    }
+  ],
+  "diagnostic_rendered": {
+    "engine_called": false,
+    "status": "DATA_BLOCKED",
+    "net_return": null,
+    "maximum_drawdown": null
+  },
+  "files": [
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Companies-final.jpg",
+      "sha256": "47806dc926faccfd1fd18861f342dfcee2f8cf3c3ad1a859fb4c2cf08e5c99cd"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Companies-final.txt",
+      "sha256": "625f8d1611addd5acfe074a0684cd9e420acaf6b71df07db2b3af770f35c1c57"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Companies.jpg",
+      "sha256": "f5c8f89fb07fda03d053bc3fbd81758e4cc4078db05aacaacb1c3fa16f37993e"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Companies.txt",
+      "sha256": "7916c3d8589f017fea3e130341388c29b2a2ea1008cf54a53bfd3a9a1eb4fbb7"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Diagnostic.jpg",
+      "sha256": "34ea2861d7f9aeb7d104f691ec4c031907b743ae0fb696491f3b77ce4fd58cc8"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Diagnostic.txt",
+      "sha256": "e98ada627b8b4d6e871f51628b1844b3f138e6f576c1d27ce4a8e9c78061c992"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Evidence.jpg",
+      "sha256": "2fd206b7fb62f2a01dd1fc39cb527ea3f0f084c574f9dcfd968ce7be048e9a04"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Evidence.txt",
+      "sha256": "787198b1faccf808f66063156ea7607454dbc2aa382bac3f45ca600a635e173e"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Official-Source.txt",
+      "sha256": "737e0fda79a3cf3a51b3df9aa5693f059633ae8ff9d8618bb18a69081964b4ff"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Sectors.jpg",
+      "sha256": "cff4dc5bff5f90f66cc9f75b02b8cd43dbd4e8f750183afea9fdd92c906bd992"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Sectors.txt",
+      "sha256": "f7d1ebd226107ac6b46f46a913945818bc09cd2069fbfa26a2f84976a6d4b860"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/UI-Source-Modal.txt",
+      "sha256": "2d648c2e67826a5d901d52e5b4411b4881948e95dc6a1f199ab18e650aeaf2ed"
+    }
+  ],
+  "screenshots_public": false,
+  "private_artifact_not_copied": true
+}

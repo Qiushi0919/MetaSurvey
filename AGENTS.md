@@ -1,3 +1,7 @@
+# Current E2E pilot V1 — 2026-10-14
+
+Owner now authorizes isolated CORE40_E2E_PILOT_V1 / EXPERIMENT:CORE40:E2E_PILOT_V1: preregister candidate methods before scores/results, bounded lawfully sourced real research, virtual100000CNY portfolio and limited historical diagnostic, read-only workbench. No formal OOS/production/broker/real account/optimization/old Forward reveal. Prior V01 real-score block remains on V01 only. Root owns contracts/config/final integration; delegates have bounded new paths. Preserve all V0/V01 artifacts, frozen strategy, Forward, old ledgers/evidence/pins/seals/migrations and specialist worktree. Unknown source license or missing execution data still block those runs. Complete whole acceptance before STOP; intermediate tasks are not separate gates. See docs/e2e-pilot-v1/Authorization.md.
+
 # Current V0 review correction — 2026-10-14
 
 Owner approved D01–D07 as candidate engineering rules ONLY; real economic scoring remains BLOCKED. Preserve all sector_stock_v0/contracts/sector-stock-v0/docs/sector-stock-v0 bytes. New V01 applicability and bounded pinned archive review under experiments/sector_stock_v01 and docs/score-review-v01; reuse read-only workbench. Independent Ubuntu/macOS scoring and workbench CI uses only synthetic temporary fixtures and loopback HTTP. No expanded universe, collector, credentials, optimizer, formal backtest, trading or native/frozen changes. Complete evidence/CI/publication then STOP.

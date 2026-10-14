@@ -1,0 +1,87 @@
+{
+  "kind": "E2EPilotRegistry",
+  "version": "1.0.0",
+  "package_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/Run.json",
+  "package_sha256": "sha256:86fbd15607f8fc59da64700b87d0179a1a798875998977e1feec8c8655b6cd58",
+  "package_content_hash": "sha256:d35e1a98a26fd3abc699f76e5b9f00e480c14aa791ee56c3ef8afc9f9aa995f7",
+  "code_pins": {
+    "experiments/e2e_pilot_v1/research.py": "sha256:12f5e70cb1d2623f2c4ac82b093b365435433c955f506ea4cbc041f674e0ab7c",
+    "experiments/e2e_pilot_v1/method.json": "sha256:b58784a57ce12a9979c583b5808f48d182bd509bed90d472e3ffd88a5bd0cd5e",
+    "experiments/e2e_pilot_v1/protocol.json": "sha256:7c90acf7d65f1056507b629627d46316d7612f82d1b2204db7231cfccce5778a",
+    "experiments/e2e_pilot_v1/execution.py": "sha256:f1ae1d39452ae69024a92bb223f8b5e747c3b3bd3c42bf2b7c9789e4246b9655",
+    "backtest_5y/economics.py": "sha256:61a7ddcf49aa49d065da494e664c286b1b15b076465f1a020b32775d77215190",
+    "wave_f/backtest.py": "sha256:2e12711a89ce40398e76dd85c57c5dd4e3b43b8534e4f95a163be02bc4fafd0e",
+    "contracts/e2e-pilot-v1/Run.schema.json": "sha256:055a3205b95ecc0ba20157a3f2abd1f8883291f9266d84fcf02183fc5d237814"
+  },
+  "source_pins": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/Financial-Inputs.json",
+      "sha256": "sha256:3c86cd12ecb59c8c390b7ef4a8cbe28cd77ccd3f36ff06686ff32111e52f127b",
+      "bytes": 57462
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/Official-Disclosure-Captures.json",
+      "sha256": "sha256:6f3e2cec43fe84e51314c60131199530c79cffcf4935bfb22afbdc8ef2169426",
+      "bytes": 9692
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/603228-2025.pdf",
+      "sha256": "sha256:216ad1f6dbcc2c9bee2fcf40e460eaa111c855c7ff255b29479a4e35f2ab409a",
+      "bytes": 1630772
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/002463-2025.pdf",
+      "sha256": "sha256:9810736ee50d0fa7f4d8e8370e3965bde8e24c6dbafb86593ae2206b0e2f2f15",
+      "bytes": 4997019
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/002916-2025.pdf",
+      "sha256": "sha256:80c2d67323e64875eb80d7f13603930bc0a5087631ebbd66f14c109bada627d9",
+      "bytes": 4491025
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/600312-2025.pdf",
+      "sha256": "sha256:bcb9800bc6f23d9505b417549c8ab3e1959358f6e8999fd20e1ff70ae5b29961",
+      "bytes": 3195932
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/601179-2025.pdf",
+      "sha256": "sha256:3e99e4105dde74de870e5a776a2cb607526fe6364ce0407338f2e7dabafce1ed",
+      "bytes": 1573121
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/002028-2025.pdf",
+      "sha256": "sha256:ba7058e704759a6e59b21f5d4340dd8082eeec24839354bfece02c2ed4558ecd",
+      "bytes": 12340393
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/603993-2025.pdf",
+      "sha256": "sha256:3384b52c31e87bc7081941a9d3ca776aaa6579ff33e7528c3c5326172952ac6d",
+      "bytes": 21862179
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/601899-2025.pdf",
+      "sha256": "sha256:a2c094d6e828decedb6ca7687fd7fd241ad6829a1a7d9f9102b31407a21bde04",
+      "bytes": 315157
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/600362-2025.pdf",
+      "sha256": "sha256:034233ef8b8b392497ed6ad592ca04219eb71c4d4c93aa13a9ed3272e14b2caa",
+      "bytes": 3593578
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/data/Historical-Coverage-Audit.json",
+      "sha256": "sha256:0d07d5a066e37c4a7545719f0d14d3b0d65e14405ed3b84c88e3f38229d388d6",
+      "bytes": 3672
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/Diagnostic-Case.json",
+      "sha256": "sha256:61f130e6f4eb0ff62a33f7c721234d6e21f5ec6f1dd50d85b183dfb99b0dbf08",
+      "bytes": 5310
+    }
+  ],
+  "recorded_at": "2026-10-14T06:37:52.987992+00:00",
+  "result_type": "CURRENT_OBSERVED_EXPERIMENTAL_RESEARCH",
+  "run_id": "E2E-PILOT-V1-20261014-RESEARCH-01",
+  "productionGate": false
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "E2EPilotProtocol",
+  "version": "1.0.0",
+  "frozen_at": "2026-10-14T06:26:21.095205+00:00",
+  "namespace": "EXPERIMENT:CORE40:E2E_PILOT_V1",
+  "full_strategy_id": "CORE40_E2E_PILOT_V1_FULL_RESEARCH",
+  "diagnostic_strategy_id": "CORE40_E2E_PRICE_VOLUME_DIAGNOSTIC_V1",
+  "historical_label": "HISTORICAL_DIAGNOSTIC",
+  "untouched_oos": false,
+  "target_window": {
+    "start": "2025-10-01",
+    "end": "2026-09-30",
+    "warmup_start": "2025-06-03",
+    "tail": "NO_NEW_ENTRIES_LAST40_SESSIONS; retain any unexecutable exit at end with marked exposure"
+  },
+  "virtual_account": {
+    "initial_cash_cents": 10000000,
+    "max_positions": 3,
+    "entry_weight_cap": "0.20",
+    "invested_cap": "0.60",
+    "new_sector_cap": "0.40",
+    "risk_per_entry_cap": "0.01",
+    "stop_atr_multiple": "2",
+    "passive_breach": "HOLD_AND_BLOCK_NEW_BUYS; no discretionary cap-triggered liquidation",
+    "no_leverage": true,
+    "no_average_down": true
+  },
+  "rules": {
+    "sector_ranking": "fixed member equalweight mean20session return; complete membership prices required; select top2 strictly positive sectors; tie sector_id",
+    "stock_ranking": "within selected sector descending20session return relative to same fixed basket; ties symbol",
+    "timing": "close>prior20high breakout OR close>SMA20 and low<=SMA20 pullback, close>previousclose; nextsession open only expiry1session",
+    "entry": "20session simple ATR true-range average, stopentryfill-2ATR; positive stop required; <=1%NAV loss+buy/sell costs/slippage; validlot floor. Volume<=1% prior20median sharevolume and <=1% current sessionvolume; latter is conservative execution feasibility, never decision feature.",
+    "exits": "close<=fixedentryStop OR close<SMA20 OR held20sessions and close<=entryprice OR held40sessions; next executableopen. T+1.",
+    "same_day_cash": "SELL_FIRST_THEN_BUY; same-day sales fund buys, not bankwithdrawals; no same-symbol rebuy",
+    "daily_ambiguity": "No intraday stop. Reject limit-bound/locked or invalidslipped executions; halt/missingbar cannotfill; failedsell carriesposition+pendingexit",
+    "actions": "NONE only when evidenced; any unsupported action blocks run, never silentlyignore",
+    "calendar": "explicitcomplete exchange sessions; no synthesized weekdays",
+    "historical_input": "require per-cutoff source/version/available_at proof and licensedhistoricalpurpose; todayfinancials forbidden"
+  },
+  "cost_label": "SIMULATED_COSTS",
+  "fee_schedule": [
+    {
+      "version": "E2E_SIM_COST_BASE_V1",
+      "effective_from": "2023-08-28",
+      "effective_until": "2026-10-14",
+      "commission_rate": "0.0003",
+      "minimum_commission_cents": 500,
+      "exchange_rate": "0.0000341",
+      "exchange_included": true,
+      "other_buy_rate": "0.00001",
+      "other_sell_rate": "0.00001",
+      "other_included": false,
+      "sell_tax_rate": "0.0005",
+      "slippage_bps": "10",
+      "currency": "CNY",
+      "rate_unit": "FRACTION_OF_NOTIONAL",
+      "money_rounding": "HALF_EVEN",
+      "commission_scope": "PER_ORDER",
+      "slippage_treatment": "INCLUDED_IN_EXECUTION_PRICE",
+      "profile_scope": "HYPOTHETICAL_DIAGNOSTIC"
+    }
+  ],
+  "stress_scenarios": [
+    {
+      "id": "HIGH_FRICTION",
+      "commission_rate": "0.001",
+      "minimum_commission_cents": 500,
+      "slippage_bps": "30"
+    }
+  ],
+  "cost_limitations": "Commission all-in includes exchange/regulatory fees; transfer and stamp separate. Rates not actualaccount. HALF_EVEN deliberately reuses pure WaveF arithmetic, not native ledger rounding change. Transfer reviewed against official government reproduction; specific effective-period evidence still required by admission.",
+  "optimizer": "NOT_IMPLEMENTED_NOT_AUTHORIZED",
+  "result_states": [
+    "ENGINE_NOT_RUN",
+    "DATA_BLOCKED",
+    "RUN_NO_TRADES",
+    "SIMULATED_TRADES",
+    "ENGINE_FAILED"
+  ]
+}

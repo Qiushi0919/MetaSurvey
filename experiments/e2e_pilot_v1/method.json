@@ -1,0 +1,183 @@
+{
+  "kind": "E2EPilotMethod",
+  "version": "1.0.0",
+  "experiment_id": "CORE40_E2E_PILOT_V1",
+  "namespace": "EXPERIMENT:CORE40:E2E_PILOT_V1",
+  "frozen_at": "2026-10-14T06:26:21.095205+00:00",
+  "authority": "OWNER_AUTHORIZED_CANDIDATE_RESEARCH_EXPERIMENT_ONLY",
+  "productionGate": false,
+  "period": "FY2025",
+  "comparative_period": "FY2024",
+  "scope": "CURRENT_OBSERVED_NOT_HISTORICAL_PIT",
+  "sector_method": "SAMPLE_FINANCIAL_HEALTH_V1",
+  "sector_definition": "Three fixed issuer samples, equal member and dimension weight. Not a whole-industry nine-dimensional score. No financial/business gate replacement by prices.",
+  "sector_dimensions": [
+    "revenue_growth",
+    "cash_conversion",
+    "net_margin"
+  ],
+  "anchors": {
+    "revenue_growth": [
+      "-0.20",
+      "0.20"
+    ],
+    "cash_conversion": [
+      "0",
+      "1.5"
+    ],
+    "net_margin": [
+      "0",
+      "0.20"
+    ],
+    "catalyst": [
+      "-2",
+      "2"
+    ],
+    "trend": [
+      "-0.20",
+      "0.20"
+    ],
+    "valuation": [
+      "1",
+      "0"
+    ],
+    "liquidity": [
+      "0",
+      "100000000"
+    ],
+    "evidence": [
+      "0",
+      "1"
+    ]
+  },
+  "normalization": "100*clamp((value-low)/(high-low),0,1); reversed anchors intentionally inverse; Decimal 40 significant digits, HALF_EVEN, score display 4 decimals; no missing fill or weight renormalization",
+  "financial_inputs": [
+    "revenue",
+    "prior_revenue",
+    "net_profit",
+    "operating_cashflow"
+  ],
+  "financial_definition": "Consolidated FY2025 revenue/FY2024 revenue-1; consolidated FY2025 CFO/consolidated net profit (profit must be positive); consolidated net profit/revenue. All numerator/denominator same currency/units/consolidation and period; restated comparator from same current report, not historical original.",
+  "stock_weights": {
+    "fundamental": 25,
+    "sector_benefit": 20,
+    "catalyst": 15,
+    "trend": 15,
+    "valuation": 10,
+    "liquidity": 10,
+    "evidence": 5
+  },
+  "stock_rules": {
+    "fundamental": "mean of three financial component scores; all three required",
+    "sector_benefit": "sector total * disclosed same-sector operating revenue share; require exact business mapping and upstream hash",
+    "catalyst": "signed verified distinct issuer events over 60 exchange sessions; count only, not effect or probability; require complete searched scope and calendar",
+    "trend": "20-session corporate-action-consistent stock return less fixed same-sector equal-member basket return; not an entry signal",
+    "valuation": "PE percentile in1260 cutoff-visible sessions, same profit/pricebasis; positive earnings required",
+    "liquidity": "median20 sessions turnover CNY; verified unit",
+    "evidence": "verified required metric fact count / fixed required fact count; gaps not silently excluded"
+  },
+  "risk": {
+    "stock_hard": [
+      "issuer_identity_and_business_verified",
+      "source_and_units_verified",
+      "no_verified_thesis_invalidation"
+    ],
+    "stock_deduction": {
+      "largest_customer_share_above_0.50": 10,
+      "net_debt_over_positive_EBITDA_above_3": 10,
+      "material_audit_or_litigation_uncertainty": 5
+    },
+    "sector_hard": [
+      "all_three_members_classified",
+      "all_three_financial_sets_complete",
+      "no_verified_sector_thesis_invalidation"
+    ],
+    "sector_deduction": {
+      "two_or_more_members_adverse_audit_or_negative_equity": 10
+    },
+    "unknown": "Total remains NULL; do not interpret UNKNOWN or not-applicable as absence. Financial proxy subtotal separately computed; full risk-screened total requires gates.",
+    "sector_company_risks": "No customer or leverage gate on sector; evaluate applicable member breadth instead."
+  },
+  "universe": [
+    {
+      "id": "PCB_SAMPLE",
+      "name": "PCB制造商样本",
+      "members": [
+        {
+          "symbol": "603228.SH",
+          "name": "景旺电子",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        },
+        {
+          "symbol": "002463.SZ",
+          "name": "沪电股份",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        },
+        {
+          "symbol": "002916.SZ",
+          "name": "深南电路",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        }
+      ]
+    },
+    {
+      "id": "HV_EQUIPMENT_SAMPLE",
+      "name": "高压输变电设备样本",
+      "members": [
+        {
+          "symbol": "600312.SH",
+          "name": "平高电气",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        },
+        {
+          "symbol": "601179.SH",
+          "name": "中国西电",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        },
+        {
+          "symbol": "002028.SZ",
+          "name": "思源电气",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        }
+      ]
+    },
+    {
+      "id": "COPPER_PRODUCERS_SAMPLE",
+      "name": "铜业务综合生产商样本",
+      "members": [
+        {
+          "symbol": "603993.SH",
+          "name": "洛阳钼业",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        },
+        {
+          "symbol": "601899.SH",
+          "name": "紫金矿业",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        },
+        {
+          "symbol": "600362.SH",
+          "name": "江西铜业",
+          "eligibility": "PENDING_OFFICIAL_BUSINESS_VERIFICATION"
+        }
+      ]
+    }
+  ],
+  "selection_basis": "Three original engineering anchors + publicly identifiable business peers, before strategy outcomes. Copper basket includes integrated/trading exposure; differences disclosed. Expensive peers retained. No replacements after score/result inspection.",
+  "excluded": [
+    {
+      "symbol": "600406.SH",
+      "reason": "Automation/software exposure differs from selected HV equipment boundary"
+    },
+    {
+      "symbol": "000878.SZ",
+      "reason": "Copper smelting oriented alternative not chosen; fixed three-member initial scope avoids post-outcome replacement"
+    }
+  ],
+  "limitations": [
+    "FY2025 group financials lag current events",
+    "sector proxy does not implement original demand/supply/orders/policy/global/competition/valuation/RS/risk nine dimensions",
+    "gross margin is not competition; no subjective probability",
+    "company full scores require all7factors and applicable risk evidence"
+  ]
+}

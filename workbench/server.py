@@ -10,6 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path('/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4')
 SYMBOLS = ('603993.SH', '600312.SH', '603228.SH')
 FILES = {
+ 'e2e-config':'experiments/e2e_pilot_v1/method.json',
+ 'e2e-protocol':'experiments/e2e_pilot_v1/protocol.json',
+ 'e2e-registry':'docs/e2e-pilot-v1/Registry.json',
+ 'e2e-report':'docs/e2e-pilot-v1/Acceptance-Report.md',
+ 'e2e-data':'docs/e2e-pilot-v1/Data-Feasibility.md',
+ 'e2e-fields':'docs/e2e-pilot-v1/Field-Matrix.md',
  'integration': 'docs/backtest-5y-integration/Status.json',
  'integration-report': 'docs/backtest-5y-integration/Acceptance-Report.md',
  'contract-gaps': 'docs/backtest-5y-integration/Remaining-Contract-Gaps-v1.json',
@@ -145,6 +151,10 @@ class Reader:
    from workbench.score_reader import load
    state['score_review']=load(self)
   except (ReadError,ValueError,KeyError,TypeError) as e: state['errors'].append({'panel':'score-review','code':getattr(e,'code','INVALID_SCORE_PACKAGE'),'source':getattr(e,'source','score-review-registry')})
+  try:
+   from workbench.e2e_reader import load as load_e2e
+   state['e2e']=load_e2e(self)
+  except (ReadError,ValueError,KeyError,TypeError) as e: state['errors'].append({'panel':'e2e','code':getattr(e,'code','INVALID_E2E_PACKAGE'),'source':getattr(e,'source','e2e-registry')})
   state['task_records']=[]
   for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
    try:
