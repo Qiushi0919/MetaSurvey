@@ -1,0 +1,40 @@
+{
+  "kind": "GatewayCapturedExecutionInputPolicy",
+  "version": "3.0.0",
+  "source_epoch": "GATEWAY_V3",
+  "strategy_semantics": "UNCHANGED_E2E_HISTORY_V2",
+  "daily": {
+    "price_kind": "RAW",
+    "volume_unit": "HANDS_TIMES_100_SHARES",
+    "amount_unit": "THOUSAND_CNY_TIMES_1000",
+    "tick_CNY": "0.01",
+    "mainboard_buy_lot": 100
+  },
+  "limits": "ACTUAL_STK_LIMIT_REQUIRED_NO_DERIVED_DEFAULT; zero/null/missing/inverted blocked",
+  "suspension": "missing daily bar requires explicit all-day S event; intraday or conflicting records block",
+  "corporate_actions": "Implemented dividend; mandatory gross cash_div_tax and total stk_div; nullable components NOT_REPORTED, reported components nonnegative and compatible with total (both known must sum exactly); actual event dates required by economic entitlement",
+  "factor_check": "complete adj_factor series; changes must correspond one-to-one with implemented in-scope actions; factors never used for full-history back-adjustment",
+  "preclose_check": "causal gross cash/share ex-right bridge rounded HALF_UP to source 0.01-CNY tick",
+  "proof": "Manifest + exact original response bytes + fields/items wrapper + request + actual clocks + Owner source policy; deterministic rebuild",
+  "provider_license_independently_verified": false,
+  "historical_visibility_proven": false,
+  "public_raw_distribution": false,
+  "cloud_transfer": false,
+  "response_schema": "Required product fields must be present even on a zero-row response; empty fields/items are not accepted as absence evidence",
+  "namechange": {
+    "purpose": "REFERENCE_ONLY_NOT_HISTORY_STATUS_CERTIFICATION",
+    "checks": [
+      "symbol identity",
+      "nonempty name",
+      "date syntax/order",
+      "exact duplicates retain original row hashes and form unique reference view; conflicting records block",
+      "local 1000-row cap requires pagination investigation"
+    ],
+    "completeness": "UNVERIFIED_REFERENCE_ONLY",
+    "row_cap_is_supplier_documented_limit": false
+  },
+  "identity_scope": "Current basic identity only; no historical ST, relisting or complete exchange exception certification",
+  "null_action_amounts": "Missing total stock entitlement or gross cash blocks. Component null remains NOT_REPORTED, never zero; a known total is executable without classifying bonus/transfer components.",
+  "duplicate_disclosures": "Identical economic execution fields, reporting period, implementation announcement and component disclosure values merge once per ex-date; original row hashes/announcement dates retained. Conflicting values/dates block.",
+  "unimplemented_events": "预案 / 股东大会通过 / 不分配 / 停止实施 excluded from execution with process and source row hash retained; unknown process blocks"
+}

@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-14T09:11:10.860351+00:00",
+  "owner_reply": "没有其他已知调用；允许按原地址间隔重试多次",
+  "scope": "FIXED_NINE_EXISTING_GATEWAY_SAME_HOST_SAME_ENDPOINT",
+  "original_error": "IP_CONCURRENCY_LIMIT",
+  "cause": "SUPPLIER_REPORTED; actual cause not independently established",
+  "retry_policy": "Sequential requests, bounded fresh capture epochs resuming pinned successes; no parallel API requests, endpoint/IP/provider/account rotation or purchase; preserve every failed response and actual clocks",
+  "ongoing_capture": "capture-04",
+  "other_callers_stopped_by_agent": false,
+  "license_promoted": false,
+  "token_recorded": false,
+  "capture04_interval_seconds": 30,
+  "early_intervals_note": "Use actual capture clocks; earlier manifests did not all record interval configuration"
+}
