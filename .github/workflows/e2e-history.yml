@@ -1,0 +1,29 @@
+name: E2E reconstructed history V2 isolated synthetic checks
+on:
+  push:
+    paths: ['experiments/e2e_history_v2/**', 'docs/e2e-history-v2/**', 'tools/e2e_history/**', 'workbench/**']
+  pull_request:
+    paths: ['experiments/e2e_history_v2/**', 'docs/e2e-history-v2/**', 'tools/e2e_history/**', 'workbench/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pilot:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -B tools/e2e_history/check.py ci-results/e2e-history
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-history-${{ matrix.os }}
+          path: ci-results/e2e-history
+      - if: always()
+        run: cat ci-results/e2e-history/result.json >> "$GITHUB_STEP_SUMMARY"
