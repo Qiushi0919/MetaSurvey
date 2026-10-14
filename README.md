@@ -33,3 +33,5 @@ tools/github_publication/  可公开复现检查与单向发布工具
 公开仓库是由主控工程生成的**单向发布快照**，不是原始工作区的所有磁盘内容。运行数据库、credentials、私钥、历史原始证据、大型验收 ZIP 和许可未核验的行情/页面原件留在本机。首次公开提交没有携带含原件的本地 Git 历史。
 
 发布快照的逐文件 SHA-256 与源工程 commit 见 `docs/review/Source-Snapshot.json`；排除项见 `docs/review/Local-Only-Manifest.json`。这两份文件由发布工具生成。旧报告中的本机绝对路径仍按原文保留，公开可读的独立审查副本见 [报告索引](docs/review/LATEST.md)。没有发布仓库许可证或授予第三方数据再分发权。
+
+本轮：[双层评分实验与七页工作台验收](docs/sector-stock-v0/Acceptance-Report.md) · [可复算规则](docs/sector-stock-v0/Scoring-Rules.md)。真实评分待完整证据包，合成测试不代表投资有效性。

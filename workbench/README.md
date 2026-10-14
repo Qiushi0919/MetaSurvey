@@ -41,3 +41,7 @@ node --check workbench/static/app.js
 ```
 
 适配层合成夹具与HTTP读取边界测试分别标记；浏览器真实操作、页面字段一致性与保全证据见 [本轮验收](../docs/workbench-v0/Acceptance-Report.md)。原有全系统Gate不因这些测试升级。任务执行、采集、签名审批、Forward追加、优化、券商和订单没有UI入口。
+
+## 2026-10-14 扩展
+
+导航扩展为七页：仪表盘、板块评分、股票候选池、单股卡、回测/Forward、Agent归档记录、配置。旧 `#watch` 只读页面仍兼容访问，任务页保留未启用盯盘状态。新评分页面读取独立候选规则与真实空状态，不调用评分引擎、不混入合成分数。见[本轮验收](../docs/sector-stock-v0/Acceptance-Report.md)。

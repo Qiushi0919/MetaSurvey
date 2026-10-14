@@ -1,0 +1,23 @@
+{
+  "kind": "SectorStockWorkbenchStatus",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-14T12:15:22.438715+08:00",
+  "timestamp_basis": "actual_document_write_time_Asia_Shanghai",
+  "experiment_id": "CORE40_SECTOR_STOCK_BASELINE_V0",
+  "experiment_version": "0.1.0-candidate",
+  "engineering_state": "IMPLEMENTED_SYNTHETIC_CHECKS_PASS",
+  "method_state": "CANDIDATE_RULES_OWNER_PENDING",
+  "real_sector_scores": [],
+  "real_stock_scores": [],
+  "formal_candidates": [],
+  "scoring_state": "BLOCKED_MISSING_ADMITTED_INPUT_BUNDLES",
+  "reasons": [
+    "尚无完整且可追溯的板块评分输入，缺失字段不会自动补值",
+    "现有三股封存报告可阅读，但尚未整理成本实验要求的完整评分证据包",
+    "资本成本等研究方法、历史板块成员和PIT证据、真实费用政策仍待确定"
+  ],
+  "synthetic_results_displayed_as_real": false,
+  "optimization_state": "PREREGISTRATION_ONLY_NOT_RUN",
+  "agent_runtime": "NOT_CONNECTED_NO_LIVE_HEARTBEAT",
+  "productionGate": false
+}

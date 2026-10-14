@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:metasurvey:sector-stock-v0:ValidationResult",
+  "title": "ValidationResult",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "ValidationResult"
+    },
+    "contract_version": {
+      "const": "0.1.0-candidate"
+    },
+    "experiment_id": {
+      "const": "CORE40_SECTOR_STOCK_BASELINE_V0"
+    },
+    "namespace": {
+      "const": "EXPERIMENT:CORE_40:SECTOR_STOCK_V0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "object_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "result_type": {
+      "enum": [
+        "SYNTHETIC",
+        "CURRENT_OBSERVED_RESEARCH_ONLY"
+      ]
+    },
+    "config_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "productionGate": {
+      "const": false
+    },
+    "native_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "ResearchCard",
+              "BrainPacket"
+            ]
+          },
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "object_version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "contract_version": {
+            "const": "1.0.0"
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "kind",
+          "object_id",
+          "object_version",
+          "contract_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 10000
+    },
+    "scope": {
+      "enum": [
+        "SYNTHETIC_ENGINEERING_ONLY",
+        "NOT_RUN"
+      ]
+    },
+    "candidate_set_ref": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "object_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "object_version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "content_hash": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "kind",
+            "object_id",
+            "object_version",
+            "content_hash"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "checks_passed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "checks_failed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "investment_effectiveness": {
+      "const": "NOT_ESTABLISHED"
+    },
+    "economic_metrics": {
+      "type": "null"
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "CODING_RECORD_REQUIRED",
+          "EVIDENCE_TYPE_MISMATCH",
+          "FUTURE_EVIDENCE",
+          "HARD_GATE_CRITICAL_EVIDENCE_COMPLETE_FAIL",
+          "HARD_GATE_CRITICAL_EVIDENCE_COMPLETE_UNKNOWN",
+          "HARD_GATE_SOURCE_INTEGRITY_FAIL",
+          "HARD_GATE_SOURCE_INTEGRITY_UNKNOWN",
+          "HARD_GATE_STATUS_VERIFIED_FAIL",
+          "HARD_GATE_STATUS_VERIFIED_UNKNOWN",
+          "HARD_GATE_THESIS_INTACT_FAIL",
+          "HARD_GATE_THESIS_INTACT_UNKNOWN",
+          "INVALID_CLOCK_ORDER",
+          "METRIC_EVIDENCE_MISMATCH",
+          "METRIC_OUT_OF_DOMAIN",
+          "MISSING_ADMITTED_INPUT_BUNDLES",
+          "MISSING_CASH_CONVERSION",
+          "MISSING_CATALYST_BALANCE",
+          "MISSING_DEMAND_CAPACITY_GAP_BPS",
+          "MISSING_DEMAND_GROWTH_BPS",
+          "MISSING_GLOBAL_DEMAND_BPS",
+          "MISSING_MARGIN_CHANGE_BPS",
+          "MISSING_MEDIAN_TURNOVER_CNY",
+          "MISSING_POLICY_BALANCE",
+          "MISSING_PRICE_ORDERS_GROWTH_BPS",
+          "MISSING_REVENUE_GROWTH_BPS",
+          "MISSING_ROIC_SPREAD_BPS",
+          "MISSING_SECTOR_ADVERSE_SHARE",
+          "MISSING_SECTOR_REVENUE_SHARE",
+          "MISSING_SECTOR_RS20_BPS",
+          "MISSING_SECTOR_VALUATION_PERCENTILE",
+          "MISSING_STOCK_RS20_BPS",
+          "MISSING_STOCK_VALUATION_PERCENTILE",
+          "MISSING_VERIFIED_FACT_SHARE",
+          "NOT_RUN",
+          "OWNER_METHOD_PENDING",
+          "RISK_EVIDENCE_MISSING",
+          "RISK_UNKNOWN",
+          "SECTOR_BLOCKED",
+          "SECTOR_RESULT_REQUIRED",
+          "STALE_EVIDENCE",
+          "SYNTHETIC_ONLY",
+          "UNIT_MISMATCH"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 10000,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "kind",
+    "contract_version",
+    "experiment_id",
+    "namespace",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "recorded_at",
+    "decision_cutoff",
+    "result_type",
+    "config_hash",
+    "productionGate",
+    "native_refs",
+    "scope",
+    "candidate_set_ref",
+    "checks_passed",
+    "checks_failed",
+    "investment_effectiveness",
+    "economic_metrics",
+    "reason_codes"
+  ],
+  "additionalProperties": false
+}

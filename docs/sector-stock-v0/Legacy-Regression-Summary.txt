@@ -1,0 +1,12 @@
+Command: node scripts/check.mjs && node scripts/verify-closure.mjs && node --test --test-concurrency=1 tests/*.test.mjs
+Node: bundled Node 24; run date 2026-10-14 Asia/Shanghai
+P0 preflight, 16 contracts, immutable releases and schema6 check: PASS
+Closure 1.2.0 frozen checks: PASS
+Node test executions: 258
+Pass: 257
+Fail: 0
+Skipped: 1 (existing optional external V5 audit)
+Duration: 94887.220333 ms
+Exit code: 0
+This is a summary of the actual run, not a complete terminal transcript. Earlier tool output was truncated.
+These engineering regressions do not establish market-data admission, strategy profitability or production authority.

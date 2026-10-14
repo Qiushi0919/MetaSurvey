@@ -1,9 +1,10 @@
 # 最新验收入口
 
-更新：2026-10-09（Asia/Shanghai）。审核人先读当前集成报告，再读需要自己复核的合同与独立审查。
+更新：2026-10-14（Asia/Shanghai）。审核人先读当前集成报告，再读需要自己复核的合同与独立审查。
 
 | 内容 | 位置 | 状态 |
 |---|---|---|
+| 双层评分实验与七页工作台 | [本轮验收报告](../sector-stock-v0/Acceptance-Report.md) · [规则](../sector-stock-v0/Scoring-Rules.md) · [预注册](../sector-stock-v0/Preregistration.json) | 计算/Schema/界面工程通过；真实评分0，正式回测未运行；候选方法待审批 |
 | 本轮本地只读工作台 v0 | [界面验收与启动](../workbench-v0/Acceptance-Report.md) · [Checks](../workbench-v0/Checks.json) | 已实际启动；六页真实产物；不改变业务准入 |
 | 当前交接入口 | [执行卡与背景报告](../handoff/MetaSurvey-Handoff.md) · [只读核对与预期哈希](../handoff/Evidence-Index-20261008.json) | 保留正文；记录当前分支旧研究复跑的依赖哈希阻断，无新 Gate |
 | 本轮 GitHub 公开发布 | [公开发布验收报告](releases/2026-10-08-github-publication/REPORT.md) | 工程发布检查；不改变业务准入 |

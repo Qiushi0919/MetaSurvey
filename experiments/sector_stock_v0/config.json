@@ -1,0 +1,363 @@
+{
+  "kind": "SectorStockExperimentConfig",
+  "version": "0.1.0-candidate",
+  "experiment_id": "CORE40_SECTOR_STOCK_BASELINE_V0",
+  "namespace": "EXPERIMENT:CORE_40:SECTOR_STOCK_V0",
+  "state": "ENGINEERING_EXPERIMENT_OWNER_REVIEW_PENDING",
+  "productionGate": false,
+  "probability_calibrated": false,
+  "formal_candidate_enabled": false,
+  "stock_weights_authority": "OWNER_EXPLICIT_2026-10-14",
+  "anchors_authority": "CANDIDATE_NOT_CALIBRATED",
+  "numeric_policy": "Decimal 40 significant digits; ROUND_HALF_UP final components and totals to 0.01; aggregation uses unrounded components; no float money",
+  "normalization": "clamp(100*(x-score_zero)/(score_hundred-score_zero),0,100); reversed anchors supported",
+  "sector_aggregation": "equal_weight_nine_arithmetic_mean; candidate choice, not Owner-approved sector weights",
+  "metrics": {
+    "demand_growth_bps": {
+      "label": "需求",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "同口径行业实际销量/消费量同比增长 × 10000；前期量必须>0",
+      "evidence_source": "官方行业统计原表，记录口径和修订",
+      "window": "最新可见完整季度 vs 上年同期",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "demand_capacity_gap_bps": {
+      "label": "供给",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "行业需求同比增长bps − 可比有效产能同比增长bps；正值表示供给约束",
+      "evidence_source": "官方需求与产能两张可比原表",
+      "window": "同一季度/范围",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "price_orders_growth_bps": {
+      "label": "价格及订单",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "(行业成交价格同比bps + 已确认新订单同比bps)/2；两者缺一即缺失",
+      "evidence_source": "官方价格指数及有金额/量的订单披露；标题不足",
+      "window": "最新完整季度 vs 上年同期",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "policy_balance": {
+      "label": "政策",
+      "unit": "SIGNED_COUNT",
+      "score_zero": "-2",
+      "score_hundred": "2",
+      "definition": "固定90日内独立且仍有效政策，支持条款计+1、限制条款计−1；同一政策去重；双人证据编码；冲突未知阻断",
+      "evidence_source": "生效政策原文+条款定位+两名编码人记录",
+      "window": "cutoff前90个自然日；有效期覆盖cutoff",
+      "domain": [
+        -20,
+        20
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "global_demand_bps": {
+      "label": "全球趋势",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "同范围全球行业实际需求同比bps；不得用今日预测代历史实际",
+      "evidence_source": "可核验国际行业统计原表",
+      "window": "最新完整季度 vs 上年同期",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "margin_change_bps": {
+      "label": "竞争格局",
+      "unit": "BPS",
+      "score_zero": "-1000",
+      "score_hundred": "1000",
+      "definition": "当时行业成员按收入加权毛利率同比变化bps；亏损成员保留，缺失成员不得静默移除",
+      "evidence_source": "PIT行业成员+成员财报修订链",
+      "window": "最新四季度 vs 前四季度",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "sector_valuation_percentile": {
+      "label": "估值",
+      "unit": "RATIO",
+      "score_zero": "1",
+      "score_hundred": "0",
+      "definition": "正行业估值倍数在过去1260完整交易日弱排名 count(x<=current)/1260；方法/成员冻结",
+      "evidence_source": "历史可见行业成员、财报与总市值，估值方法版本",
+      "window": "1260完整交易日",
+      "domain": [
+        0,
+        1
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "sector_rs20_bps": {
+      "label": "相对强弱",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "行业20交易日总回报 − 同期冻结基准总回报，×10000",
+      "evidence_source": "同币种总回报序列+公司行动+基准身份",
+      "window": "20完整交易日，均<=cutoff",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "sector_adverse_share": {
+      "label": "风险",
+      "unit": "RATIO",
+      "score_zero": "1",
+      "score_hundred": "0",
+      "definition": "行业成员中经核验有效重大不利事件公司的收入权重占比；明确全体覆盖才能填0",
+      "evidence_source": "PIT成员收入权重+重大事件逐项核对",
+      "window": "当时仍有效不利事件",
+      "domain": [
+        0,
+        1
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "revenue_growth_bps": {
+      "label": "收入增长",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "最新可见TTM收入/前TTM收入−1 ×10000；前收入>0",
+      "evidence_source": "发行人修订版财报与累计转单季桥",
+      "window": "8完整可比季度",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "cash_conversion": {
+      "label": "现金含量",
+      "unit": "RATIO",
+      "score_zero": "0",
+      "score_hundred": "1.5",
+      "definition": "TTM经营现金流/TTM净利润；净利润<=0记缺失",
+      "evidence_source": "发行人现金流、利润表版本",
+      "window": "4完整季度",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "roic_spread_bps": {
+      "label": "资本回报差",
+      "unit": "BPS",
+      "score_zero": "-1000",
+      "score_hundred": "1000",
+      "definition": "(ROIC−资本成本)×10000；需独立冻结资本成本方法，M01未批准不自动采用",
+      "evidence_source": "财报+明确版本的资本成本估计",
+      "window": "最新TTM，资本成本有效至cutoff",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "sector_revenue_share": {
+      "label": "板块收入暴露",
+      "unit": "RATIO",
+      "score_zero": "0",
+      "score_hundred": "1",
+      "definition": "公司归属该板块业务收入/总收入；必须绑定下方sector结果同一板块身份",
+      "evidence_source": "分部收入披露与行业映射",
+      "window": "最新完整可见财年",
+      "domain": [
+        0,
+        1
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "catalyst_balance": {
+      "label": "催化剂",
+      "unit": "SIGNED_COUNT",
+      "score_zero": "-2",
+      "score_hundred": "2",
+      "definition": "固定60交易日内仍有效已核实订单/投产/业绩指引事件：正向+1、撤销/负向−1；去重、正文定位、双人编码",
+      "evidence_source": "交易所/发行人原文及编码记录",
+      "window": "60实际交易日；不得只根据标题",
+      "domain": [
+        -20,
+        20
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "stock_rs20_bps": {
+      "label": "趋势",
+      "unit": "BPS",
+      "score_zero": "-2000",
+      "score_hundred": "2000",
+      "definition": "个股20交易日总回报 − 对应行业总回报，×10000",
+      "evidence_source": "个股与行业总回报及公司行动",
+      "window": "20完整交易日",
+      "domain": null,
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "stock_valuation_percentile": {
+      "label": "个股估值",
+      "unit": "RATIO",
+      "score_zero": "1",
+      "score_hundred": "0",
+      "definition": "正选定倍数过去1260交易日弱排名；负盈利不可映射成低估值",
+      "evidence_source": "PIT财报、价格及版本化估值方法",
+      "window": "1260完整交易日",
+      "domain": [
+        0,
+        1
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "median_turnover_cny": {
+      "label": "流动性",
+      "unit": "CNY_YUAN",
+      "score_zero": "0",
+      "score_hundred": "100000000",
+      "definition": "最近20实际交易日成交金额中位数（偶数取中间两项平均）；不是账户可成交容量",
+      "evidence_source": "交易所日成交金额及单位桥",
+      "window": "20完整交易日",
+      "domain": [
+        0,
+        1000000000000
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    },
+    "verified_fact_share": {
+      "label": "证据质量",
+      "unit": "RATIO",
+      "score_zero": "0",
+      "score_hundred": "1",
+      "definition": "预先登记的必需事实中经原文、单位、修订和时钟核对的比例；分母不许删掉缺失事实",
+      "evidence_source": "固定事实清单+审核记录；不能单凭声明PIT通过",
+      "window": "该次研究固定事实清单",
+      "domain": [
+        0,
+        1
+      ],
+      "missing": "BLOCKED_NO_IMPUTATION",
+      "version": "0.1.0-candidate"
+    }
+  },
+  "sector_metrics": [
+    "demand_growth_bps",
+    "demand_capacity_gap_bps",
+    "price_orders_growth_bps",
+    "policy_balance",
+    "global_demand_bps",
+    "margin_change_bps",
+    "sector_valuation_percentile",
+    "sector_rs20_bps",
+    "sector_adverse_share"
+  ],
+  "stock_factors": [
+    {
+      "id": "fundamental",
+      "label": "基本面",
+      "weight_percent": 25,
+      "inputs": [
+        "revenue_growth_bps",
+        "cash_conversion",
+        "roic_spread_bps"
+      ]
+    },
+    {
+      "id": "sector_benefit",
+      "label": "板块受益",
+      "weight_percent": 20,
+      "inputs": [
+        "sector_revenue_share"
+      ]
+    },
+    {
+      "id": "catalyst",
+      "label": "催化剂",
+      "weight_percent": 15,
+      "inputs": [
+        "catalyst_balance"
+      ]
+    },
+    {
+      "id": "trend",
+      "label": "趋势",
+      "weight_percent": 15,
+      "inputs": [
+        "stock_rs20_bps"
+      ]
+    },
+    {
+      "id": "valuation",
+      "label": "估值",
+      "weight_percent": 10,
+      "inputs": [
+        "stock_valuation_percentile"
+      ]
+    },
+    {
+      "id": "liquidity",
+      "label": "流动性",
+      "weight_percent": 10,
+      "inputs": [
+        "median_turnover_cny"
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "证据质量",
+      "weight_percent": 5,
+      "inputs": [
+        "verified_fact_share"
+      ]
+    }
+  ],
+  "hard_gates": [
+    "source_integrity",
+    "critical_evidence_complete",
+    "status_verified",
+    "thesis_intact"
+  ],
+  "risk_penalties": {
+    "concentration": "10",
+    "high_leverage": "10",
+    "material_uncertainty": "5"
+  },
+  "risk_rule": "hard gates require PASS, any FAIL or UNKNOWN blocks both raw/final aggregates; all penalty flags require PRESENT or ABSENT, UNKNOWN blocks; each PRESENT charged once; final=max(0,raw-sum(penalties))",
+  "supported_result_types": [
+    "SYNTHETIC",
+    "CURRENT_OBSERVED_RESEARCH_ONLY"
+  ],
+  "historical_pit_admission": false,
+  "invalidation": [
+    "config_or_input_or_evidence_hash_change",
+    "cutoff_or_subject_or_sector_membership_change",
+    "source_revision_or_expiry",
+    "hard_negative_or_thesis_change"
+  ],
+  "native_reuse": "Hash-bound references to existing ResearchCard/BrainPacket 1.0.0 only; no native object emitted or altered",
+  "risk_definitions": {
+    "concentration": "Largest disclosed customer share of comparable latest fiscal-year revenue >0.50: PRESENT; <=0.50: ABSENT; incomplete/anonymous-range-straddling evidence: UNKNOWN.",
+    "high_leverage": "Latest comparable TTM net debt / EBITDA >3: PRESENT; <=3 with positive EBITDA and complete bridge: ABSENT; EBITDA<=0 or missing bridge: UNKNOWN (not zero).",
+    "material_uncertainty": "Two independently named coders record at least one unresolved noncritical adverse scenario with exact issuer/exchange source locator: PRESENT; signed complete review with none: ABSENT; no complete review: UNKNOWN. Critical thesis invalidation belongs to hard gate and cannot be softened."
+  },
+  "hard_gate_definitions": {
+    "source_integrity": "All required original hashes/revisions/units/time sources checked by admitted input adapter; conflicting originals FAIL; absent checks UNKNOWN. Pure evaluator checks metadata binding only, cannot certify source honesty.",
+    "critical_evidence_complete": "Every registered mandatory feature and window available, reconciled, source-scope allowed and exact source clocks supplied; critical missing UNKNOWN; known contradiction FAIL.",
+    "status_verified": "Subject identity/current sector membership and security status known at cutoff; delisted/ST/suspended subject FAIL for this screening experiment; missing historical issuer/status facts UNKNOWN. Sector uses dated membership universe and coverage audit. This is not execution tradability approval.",
+    "thesis_intact": "No verified thesis-killing event or unresolved hard negative after two-coder review; such event FAIL; incomplete review UNKNOWN."
+  }
+}

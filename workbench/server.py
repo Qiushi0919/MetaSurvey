@@ -22,6 +22,13 @@ FILES = {
  'account-template': 'config/account-profile.unconfigured.v1.json',
  'latest': 'docs/review/LATEST.md',
  'architecture': 'docs/review/ARCHITECTURE.md',
+ 'scoring-config': 'experiments/sector_stock_v0/config.json',
+ 'scoring-status': 'docs/sector-stock-v0/Status.json',
+ 'scoring-rules': 'docs/sector-stock-v0/Scoring-Rules.md',
+ 'preregistration': 'docs/sector-stock-v0/Preregistration.json',
+ 'scoring-acceptance': 'docs/sector-stock-v0/Acceptance-Report.md',
+ 'previous-ui-checks': 'docs/workbench-v0/Checks.json',
+ 'research-gate': 'docs/wave-d/Gate.json',
 }
 SECRET = re.compile(r'-----BEGIN (?:ENCRYPTED |RSA |EC |OPENSSH )?PRIVATE KEY-----|\b(?:ghp_|github_pat_|sk-proj-)[\w-]{20,}|[?&](?:token|api_key)=[\w-]{20,}|pro_api\([\"\x27][\w-]{20,}', re.I)
 
@@ -77,7 +84,7 @@ class Reader:
   observation=re.search(r'本轮观察截止：([^；\n]+)',text)
   return {'id':'research:'+symbol,'symbol':symbol,'title':title,'source':str(path),'manifest_source':meta,'sha256':digest(raw),'expected_sha256':row['sha256'],'integrity':'MATCH','bytes':len(raw),'read_at':now(),'data_cutoff':observation.group(1) if observation else None,'code_version':'Wave D report 2.0 / sealed manifest 1.0.0','result_type':'LOCAL_EXPERIMENTAL_REAL_RESEARCH','scope':'LOCAL_ONLY / NON_TRADEABLE / UNVERIFIED_GATEWAY','formal_grade':None,'formal_candidate':False,'content':text}
  def state(self):
-  state={'adapter_version':'1.0.0-workbench-readonly','read_at':now(),'mode':'LOCAL_READ_ONLY','task_runtime':'NOT_CONNECTED_NO_LIVE_HEARTBEAT','errors':[],'panels':{},'studies':[],'formal_candidates':{'state':'NOT_AVAILABLE','reason':'No admitted formal candidate producer is connected. Research objects are not recommendations.'}}
+  state={'adapter_version':'1.1.0-workbench-readonly','read_at':now(),'mode':'LOCAL_READ_ONLY','task_runtime':'NOT_CONNECTED_NO_LIVE_HEARTBEAT','errors':[],'panels':{},'studies':[],'formal_candidates':{'state':'NOT_AVAILABLE','reason':'No admitted formal candidate producer is connected. Research objects are not recommendations.'}}
   for key,kind in [('integration','RootP1HistoricalIntegrationGate'),('forward','Day1RevealStatus')]:
    try:
     data,meta=self.json(key,kind)
@@ -114,6 +121,29 @@ class Reader:
    git='/opt/homebrew/bin/git' if Path('/opt/homebrew/bin/git').exists() else 'git'
    state['code']={k:subprocess.check_output([git,'-C',str(self.root),*args],text=True,stderr=subprocess.DEVNULL,timeout=3).strip() for k,args in [('head',['rev-parse','HEAD']),('branch',['branch','--show-current']),('changes',['status','--porcelain'])]}
   except (OSError,subprocess.SubprocessError): state['code']={'error':'GIT_METADATA_UNAVAILABLE'}
+  try:
+   experiment,emeta=self.json('scoring-status','SectorStockWorkbenchStatus')
+   cfg,cmeta=self.json('scoring-config','SectorStockExperimentConfig','0.1.0-candidate')
+   if experiment.get('scoring_state')!='BLOCKED_MISSING_ADMITTED_INPUT_BUNDLES' or experiment.get('optimization_state')!='PREREGISTRATION_ONLY_NOT_RUN': raise ReadError('UNKNOWN_STATUS','scoring-status')
+   if any(experiment.get(k)!=[] for k in ('real_sector_scores','real_stock_scores','formal_candidates')): raise ReadError('UNADMITTED_SCORE_PAYLOAD','scoring-status')
+   if cfg.get('experiment_id')!='CORE40_SECTOR_STOCK_BASELINE_V0' or cfg.get('productionGate') is not False or len(cfg.get('sector_metrics',[]))!=9 or [f.get('weight_percent') for f in cfg.get('stock_factors',[])]!=[25,20,15,15,10,10,5]: raise ReadError('INVALID_EXPERIMENT_CONFIG','scoring-config')
+   if any(k not in cfg.get('metrics',{}) for k in cfg['sector_metrics']): raise ReadError('INVALID_EXPERIMENT_CONFIG','scoring-config')
+   for metric in cfg['metrics'].values():
+    if type(metric) is not dict or any(type(metric.get(k)) is not str for k in ('label','definition','evidence_source','window','score_zero','score_hundred','unit')): raise ReadError('INVALID_EXPERIMENT_CONFIG','scoring-config')
+   for factor in cfg['stock_factors']:
+    if type(factor.get('label')) is not str or type(factor.get('id')) is not str or type(factor.get('inputs')) is not list or any(k not in cfg['metrics'] for k in factor['inputs']): raise ReadError('INVALID_EXPERIMENT_CONFIG','scoring-config')
+   if type(experiment.get('reasons')) is not list or any(type(x) is not str for x in experiment['reasons']) or experiment.get('method_state')!='CANDIDATE_RULES_OWNER_PENDING': raise ReadError('INVALID_SHAPE','scoring-status')
+   state['experiment']={'data':experiment,'config':cfg,'provenance':emeta,'config_provenance':cmeta,'result_type':'EXPERIMENT_SPEC_NOT_REAL_SCORE'}
+  except (ReadError,KeyError,TypeError) as e: state['errors'].append({'panel':'experiment','code':getattr(e,'code','INVALID_SHAPE'),'source':getattr(e,'source','scoring-config')})
+  state['task_records']=[]
+  for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
+   try:
+    doc=self.document(key)
+    data=json.loads(doc['content'])
+    if type(data) is not dict: raise ReadError('INVALID_SHAPE',key)
+    code=data.get('integrated_code_commit') or data.get('release') or ('baseline:'+data['baseline_commit'] if data.get('baseline_commit') else None)
+    state['task_records'].append({'label':label,'evidence_id':key,'provenance':{k:v for k,v in doc.items() if k!='content'},'status':'ARCHIVED_RECORD_NOT_LIVE_TASK','recorded_at':data.get('recorded_at',data.get('checked_at')),'code_version':code})
+   except (ReadError,ValueError) as e: state['errors'].append({'panel':'task-records','code':getattr(e,'code','INVALID_JSON'),'source':getattr(e,'source',key)})
   return state
 
 class Handler(BaseHTTPRequestHandler):

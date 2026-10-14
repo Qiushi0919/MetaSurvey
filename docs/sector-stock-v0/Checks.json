@@ -1,0 +1,380 @@
+{
+  "kind": "SectorStockWorkbenchAcceptance",
+  "version": "1.0.0",
+  "checked_at": "2026-10-14T12:20:17.961940+08:00",
+  "source_baseline": "f23c0b260bc82c49712e7725a9b750b34125f85b",
+  "experiment_id": "CORE40_SECTOR_STOCK_BASELINE_V0",
+  "method_state": "CANDIDATE_OWNER_PENDING",
+  "tests": {
+    "scoring_schema": {
+      "unique": 45,
+      "pass": 45,
+      "fail": 0
+    },
+    "workbench": {
+      "unique": 41,
+      "pass": 41,
+      "fail": 0
+    },
+    "legacy": {
+      "total": 258,
+      "pass": 257,
+      "fail": 0,
+      "skip": 1,
+      "skip_reason": "existing optional external V5 replay"
+    }
+  },
+  "browser": {
+    "pages": [
+      {
+        "page": "Dashboard",
+        "url": "http://127.0.0.1:8765/#dashboard",
+        "visible": true
+      },
+      {
+        "page": "Sectors",
+        "url": "http://127.0.0.1:8765/#sectors",
+        "visible": true
+      },
+      {
+        "page": "Candidates",
+        "url": "http://127.0.0.1:8765/#candidates",
+        "visible": true
+      },
+      {
+        "page": "Stock",
+        "url": "http://127.0.0.1:8765/#stock/603993.SH",
+        "visible": true
+      },
+      {
+        "page": "Validation",
+        "url": "http://127.0.0.1:8765/#validation",
+        "visible": true
+      },
+      {
+        "page": "Tasks",
+        "url": "http://127.0.0.1:8765/#tasks",
+        "visible": true
+      },
+      {
+        "page": "Config",
+        "url": "http://127.0.0.1:8765/#config",
+        "visible": true
+      }
+    ],
+    "source_hash_dialog": true,
+    "preregistration_dialog": true,
+    "acceptance_link": true,
+    "isolated_error_types": [
+      "FILE_MISSING",
+      "UNSUPPORTED_VERSION",
+      "UNKNOWN_STATUS"
+    ],
+    "fixture_server_stopped": true,
+    "harness_notes": [
+      "Initial41case suite imported22old cases twice; unique41 used, initial63 not counted",
+      "Selector expected MATCH but UI localized 原件一致; corrected locator, hash unchanged",
+      "Browser temporary tab expired; reopened same local server for final evidence"
+    ]
+  },
+  "field_consistency": {
+    "read_at": "2026-10-14T12:15:22.450462+08:00",
+    "config_equals_file": true,
+    "score_status_equals_file": true,
+    "integration_equals_file": true,
+    "forward_equals_file": true,
+    "three_private_reports_equal_bytes": true,
+    "state_errors": [],
+    "no_real_scores": true
+  },
+  "preservation": {
+    "manifest": "docs/sector-stock-v0/Preservation.json",
+    "baseline_files": 1058,
+    "unchanged": 1049,
+    "authorized_ui_navigation_changes": 9,
+    "private_pinned_unchanged": 19,
+    "specialist_unchanged": true
+  },
+  "source_hashes": [
+    {
+      "path": "contracts/sector-stock-v0/CandidateSet.schema.json",
+      "sha256": "sha256:3465de30f7bda2e7bece370f0afa301d1e8196af41d5adc0d575e04594b3a9a3"
+    },
+    {
+      "path": "contracts/sector-stock-v0/EvidenceBundle.schema.json",
+      "sha256": "sha256:798de086e13a2750cfe7716159c537cbc3b933f73e6ae7f64eaefc2aaf10dd98"
+    },
+    {
+      "path": "contracts/sector-stock-v0/ReasonCodes.json",
+      "sha256": "sha256:fdcdfbc68e888d239caf21dcc691063450533dbf133be7568064abd9434ca7de"
+    },
+    {
+      "path": "contracts/sector-stock-v0/ResearchHypothesis.schema.json",
+      "sha256": "sha256:3eef55f60ae5b1e317608bd1102747e5cd784030b289efa7cf83cb7ad1eb8f05"
+    },
+    {
+      "path": "contracts/sector-stock-v0/ScoreInput.schema.json",
+      "sha256": "sha256:c3a2958cd933eb93d55f2ef854b76fd64a2f3d4778fe1faa0e33384bb6598459"
+    },
+    {
+      "path": "contracts/sector-stock-v0/ScoreResult.schema.json",
+      "sha256": "sha256:f556103fd9c4963d20b2ac8ea0ae802959f1ebf311bbb0e42de883ca9eff98e4"
+    },
+    {
+      "path": "contracts/sector-stock-v0/ValidationResult.schema.json",
+      "sha256": "sha256:eea8f070fdb010714a533a3278b5b27567e1fbb5ada0138011174a86af9b9952"
+    },
+    {
+      "path": "experiments/sector_stock_v0/README.md",
+      "sha256": "sha256:70866c41dfafddcd68a22ac20a7c7121f25b371c37792c14f5327f751b9a04ba"
+    },
+    {
+      "path": "experiments/sector_stock_v0/config.json",
+      "sha256": "sha256:d0391b5b10a4e6b294ee3800f83ce9f8d37b5e9c3d830ded09580e7cc9f70ae1"
+    },
+    {
+      "path": "experiments/sector_stock_v0/engine.mjs",
+      "sha256": "sha256:6e3bc2973f06b957eb1b9f9cd9988a7b1ec17048b60ad169953e1777e1a78e25"
+    },
+    {
+      "path": "experiments/sector_stock_v0/tests/engine.test.mjs",
+      "sha256": "sha256:6a05582da139b52df228709f4931bc5999fe354fae569de0c2c4e056de1b2a19"
+    },
+    {
+      "path": "experiments/sector_stock_v0/tests/fixtures.mjs",
+      "sha256": "sha256:59c5a7fd757d0c23fc248516f73e997c1df03b78273afe6bbc34674bf6365ca4"
+    },
+    {
+      "path": "workbench/README.md",
+      "sha256": "sha256:6d6581f4297014d0d7e80c018fd379264988f869c12e142031a137a9be5ce615"
+    },
+    {
+      "path": "workbench/__init__.py",
+      "sha256": "sha256:0df3b280d15f89943b32357efc861d90f17f564d1445351e3fe69d04ca45a257"
+    },
+    {
+      "path": "workbench/server.py",
+      "sha256": "sha256:2632d02d6868c48795499efafbfe8c98aaa582bed837a3a73fee5359a460c92e"
+    },
+    {
+      "path": "workbench/static/app.js",
+      "sha256": "sha256:187256ff8f514eafdf3e062a30f2edb49f79096523a923bd173d59773e127bab"
+    },
+    {
+      "path": "workbench/static/index.html",
+      "sha256": "sha256:ae66ea25c5f0138fc23920c908a6ea3c7ac8af16c5c7a49ad816c88ca897b619"
+    },
+    {
+      "path": "workbench/static/style.css",
+      "sha256": "sha256:874911befc3a553c9a53d053dd0821a1d2ed02183051f1b3ee87c325b9801fe1"
+    },
+    {
+      "path": "workbench/tests/test_experiment.py",
+      "sha256": "sha256:2e7c9d3c84f42f426e5248514872804c7b0aaee0d68393fd419cefecb09f7af3"
+    },
+    {
+      "path": "workbench/tests/test_readonly.py",
+      "sha256": "sha256:b5d1310113aa0e82a377037fce63230b00a6a13e1d8b0c722e5f339995ab8374"
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Acceptance-Link.ax.txt",
+      "sha256": "sha256:ff223e94b64da6376f5f4383403d139e8fbc4c7518a4a5631796f0e27bad32e3",
+      "bytes": 12153,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Browser-Steps.json",
+      "sha256": "sha256:43c5840616ad804ca3edad209e004e5b4cd15cd575750238392833ee14594eae",
+      "bytes": 697,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Candidates.ax.txt",
+      "sha256": "sha256:acee4f6f996ad1f9e36ab05491e078f0ccf3c830cd44e109899225fe2a3a8ce1",
+      "bytes": 5517,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Candidates.jpg",
+      "sha256": "sha256:03f006625d9eb79de066db3ec4c9348ce78463611f04554cbdb41ad01b5b802b",
+      "bytes": 123321,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Config.ax.txt",
+      "sha256": "sha256:97d2d154cc1ecdae417f1a19424896002a19ed6dd33cba118189e741f51815ba",
+      "bytes": 5598,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Config.jpg",
+      "sha256": "sha256:b4139ba2a55db3fb7220b256d49d37a6570cc137d422c063f72dfcf15eb4c9fd",
+      "bytes": 200040,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Dashboard.ax.txt",
+      "sha256": "sha256:792d13df122b935357e99158ea017cfe250a2220b7f905066cca4b776b1b4392",
+      "bytes": 4790,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Dashboard.jpg",
+      "sha256": "sha256:972b16ec4651e3b2b34fda27f03e6421726b17f8715fdcd464ff9dd2d1de6fac",
+      "bytes": 108367,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Errors.ax.txt",
+      "sha256": "sha256:8977692937948cf11c422f14d8f6c9e97e6c3ede2cccf190b150c0a46f07fbd6",
+      "bytes": 2169,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Errors.jpg",
+      "sha256": "sha256:0c8aa444eaf69a5aff50a50eee02ec7f64b6c254813c721b9dd5c2052fee5dbb",
+      "bytes": 75898,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Evidence.ax.txt",
+      "sha256": "sha256:0d4faa5487bc97981e204a52365e4e73341cf4738ef3a9d5cd74dec813f59a56",
+      "bytes": 33371,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Evidence.jpg",
+      "sha256": "sha256:1f386e61506015c81151a3763dbdc2aa99436ddbd7442ba474a9496e81a38e10",
+      "bytes": 45880,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Field-Consistency.json",
+      "sha256": "sha256:80b3087aa361e923918c7dc1817e838f3a776a12e4e02bae7ab7a5ee9677df9b",
+      "bytes": 277,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Preregistration.ax.txt",
+      "sha256": "sha256:93d3fedcf401b4a2f8166ed2e367f511d0596ee39109de3223e7faf07205b8f6",
+      "bytes": 12617,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Preregistration.jpg",
+      "sha256": "sha256:961e8338563d1b79d5eff3d90ceb44b322ffade294e7d192e747efce1d81e5de",
+      "bytes": 44065,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Scoring-Tests-45.txt",
+      "sha256": "sha256:ba77c6d0509a84493f0e5962353299d7e6f8a40972bd0db836d38bddda9309e1",
+      "bytes": 2930,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Scoring-Tests-Final.txt",
+      "sha256": "sha256:bb9fa3a9197f901dd37f1593e68fdfe222a14d407e47646fa34de9dd9809b4ff",
+      "bytes": 2732,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Scoring-Tests-Initial.txt",
+      "sha256": "sha256:01119c80baed80b6a5d70608ce61b18a3a5a78036874ae7abf26f9a6ece6121e",
+      "bytes": 2717,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Sectors.ax.txt",
+      "sha256": "sha256:6657daa662a8e87a4d622903b40f5f39b83d247308d4b61435a4a702d2427796",
+      "bytes": 7259,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Sectors.jpg",
+      "sha256": "sha256:8cc537c8c61cd4ecb7e30552b25bc10eee328f89fdb7b58e34ebf43ce2ac0a2d",
+      "bytes": 154748,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Stock.ax.txt",
+      "sha256": "sha256:8faf5df6b5e50a9ad653754a29f5b0d44bffd9d8c0f397e4e711eebf1df7641b",
+      "bytes": 3647,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Stock.jpg",
+      "sha256": "sha256:ac096cfcadfe0e4139b2efa51dde7d6c759a7a0c803929412cad0147a35ffc86",
+      "bytes": 131029,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Tasks.ax.txt",
+      "sha256": "sha256:3d45b6cdbd1d743281fbfe9cf5a6e76c1fbd085bedccc191b92681434329096b",
+      "bytes": 3069,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Tasks.jpg",
+      "sha256": "sha256:8e5cdf33c7da81e7ba99e2e6dd1df11a4ad3b80d05c4f00aab57990ed55001b0",
+      "bytes": 97449,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/UI-Tests-Final-41.txt",
+      "sha256": "sha256:2399befa71fb5ef939071d472e11633d882e2d1f0621438edbfec50cd2f87f52",
+      "bytes": 4476,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/UI-Tests-Final.txt",
+      "sha256": "sha256:365d6be8e022ab804f241c39d1357778cb0ab079eb125a77dc6cf4437b7444d9",
+      "bytes": 6730,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/UI-Tests-Initial.txt",
+      "sha256": "sha256:865b57b9cc2353a1aea95bba5fac7c5bb2656d3f33617e931167c3345ac0a273",
+      "bytes": 3218,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/UI-Tests-Unique.txt",
+      "sha256": "sha256:cb707ffad2885e3741021a1125271fa55a4332dc2131e1350771947b1e6d9801",
+      "bytes": 4476,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Validation.ax.txt",
+      "sha256": "sha256:95685758aef966472a5fbd7f490ad16f39d250ed44a26dd9b7e00a303c74f7cc",
+      "bytes": 3435,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Validation.jpg",
+      "sha256": "sha256:95298bea377af0ba97a73e173b02358dbc5a716cc0b0b392bbf3f8b4384c54c2",
+      "bytes": 109971,
+      "local_only": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/sector-stock-v0-20261014/Workbench-Preview.jpg",
+      "sha256": "sha256:53d130b84a32bd84b430046c7786c72bc91be672969b0537a15a85380e121f6e",
+      "bytes": 45057,
+      "local_only": true
+    }
+  ],
+  "actual_sector_scores": 0,
+  "actual_stock_scores": 0,
+  "formal_candidates": 0,
+  "formal_backtest_runs": 0,
+  "optimization_runs": 0,
+  "market_requests": 0,
+  "secret_reads": 0,
+  "broker_requests": 0,
+  "productionGate": false,
+  "stop_after_delivery": true,
+  "preregistration_sha256": "sha256:ad4d2bb90264173a6728c5e8aa5bdc4b2770640d6333f2528935df68ec67c838",
+  "config_sha256": "sha256:d0391b5b10a4e6b294ee3800f83ce9f8d37b5e9c3d830ded09580e7cc9f70ae1"
+}

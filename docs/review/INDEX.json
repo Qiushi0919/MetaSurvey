@@ -1,12 +1,19 @@
 {
   "kind": "MetaSurveyPublicReviewIndex",
   "version": "1.0.0",
-  "updated_on": "2026-10-09",
+  "updated_on": "2026-10-14",
   "timezone": "Asia/Shanghai",
   "latest_entry": "docs/review/LATEST.md",
   "architecture": "docs/review/ARCHITECTURE.md",
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
+    {
+      "phase": "CORE40_SECTOR_STOCK_BASELINE_V0",
+      "report": "docs/sector-stock-v0/Acceptance-Report.md",
+      "checks": "docs/sector-stock-v0/Checks.json",
+      "rules": "docs/sector-stock-v0/Scoring-Rules.md",
+      "preregistration": "docs/sector-stock-v0/Preregistration.json"
+    },
     {
       "phase": "LOCAL_READ_ONLY_WORKBENCH_V0",
       "report": "docs/workbench-v0/Acceptance-Report.md",

@@ -45,7 +45,7 @@ flowchart TD
 | watcher | `wave_h/`、`wave_hb/` | 有界准备/门禁；未启用自动行情监控或调度 |
 | brain-adapter | `src/closure/export.mjs`、`src/closure/import.mjs`、`src/closure/consumer.mjs` | fixture 手工导入导出；云端真实研究导出仍 BLOCKED |
 | execution-gateway | `src/paper/index.mjs`、`src/baseline/gates.mjs` | 纸面交易与生产阻断；没有真实券商执行 |
-| gui-api | `workbench/server.py` 与 `workbench/static/` | 六页本地只读界面、固定文件GET接口；无任务执行/审批/订单。见[界面验收](../workbench-v0/Acceptance-Report.md) |
+| gui-api | `workbench/server.py` 与 `workbench/static/` | 七页本地只读界面、固定文件GET接口；无任务执行/审批/订单。新增实验评分规格/任务记录视图，见[本轮验收](../sector-stock-v0/Acceptance-Report.md) |
 | audit | `src/p1a/audit.mjs`、`dual_track/audit.py`、`integration_review/` | hash/trace、保全、失败保留、Gate/报告索引 |
 
 ## 跨模块合同与数据库
@@ -63,3 +63,7 @@ flowchart TD
 Frozen StrategySpec 的两 family 未改变：[冻结规格](../wave-f/Frozen-StrategySpec-v1.json)。五年/1260 sessions、100 complete trades 是预注册目标，不是达成统计。36m 训练、12m 验证、6m sealed test、6m 滚动、purge/embargo=40 的协议在 PIT、真实日期化费用和窗口证据不足时不执行正式回测。
 
 Forward Day0 原件保全，揭晓必须读取真实当日原件和单独签名授权；登记公钥或签名工具测试不能替代 Capture/Review/Forward 的实际授权链。实际天数仍为 0。公开仓库、合成 CI 绿灯和诊断命中率都不能开启真实资金执行。
+
+## 隔离评分实验（2026-10-14）
+
+`experiments/sector_stock_v0/engine.mjs` + `contracts/sector-stock-v0/` 为 CORE40_SECTOR_STOCK_BASELINE_V0：九维板块与七权重个股的纯函数研究分数。仅合成验证，真实评分0；不改变原生 ResearchCard、BrainPacket、冻结 StrategySpec 或六 DTO。原生对象仅被 hash 引用，候选方法不进入执行链。优化/消融仅预注册草案。

@@ -1,0 +1,473 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:metasurvey:sector-stock-v0:ScoreInput",
+  "title": "ScoreInput",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "ScoreInput"
+    },
+    "contract_version": {
+      "const": "0.1.0-candidate"
+    },
+    "experiment_id": {
+      "const": "CORE40_SECTOR_STOCK_BASELINE_V0"
+    },
+    "namespace": {
+      "const": "EXPERIMENT:CORE_40:SECTOR_STOCK_V0"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "object_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "decision_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "result_type": {
+      "enum": [
+        "SYNTHETIC",
+        "CURRENT_OBSERVED_RESEARCH_ONLY"
+      ]
+    },
+    "config_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "productionGate": {
+      "const": false
+    },
+    "native_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "ResearchCard",
+              "BrainPacket"
+            ]
+          },
+          "object_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "object_version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "contract_version": {
+            "const": "1.0.0"
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "kind",
+          "object_id",
+          "object_version",
+          "contract_version",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 10000
+    },
+    "level": {
+      "enum": [
+        "SECTOR",
+        "STOCK"
+      ]
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "sector_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sector_result_ref": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "object_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "object_version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "content_hash": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "kind",
+            "object_id",
+            "object_version",
+            "content_hash"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_bundle_ref": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "object_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "kind",
+        "object_id",
+        "object_version",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^-?(0|[1-9][0-9]{0,14})(\\.[0-9]{1,10})?$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "minItems": 0,
+            "maxItems": 10000,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "value",
+          "unit",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "hard_gates": {
+      "type": "object",
+      "properties": {
+        "source_integrity": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        },
+        "critical_evidence_complete": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        },
+        "status_verified": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        },
+        "thesis_intact": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "source_integrity",
+        "critical_evidence_complete",
+        "status_verified",
+        "thesis_intact"
+      ],
+      "additionalProperties": false
+    },
+    "risk_flags": {
+      "type": "object",
+      "properties": {
+        "concentration": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PRESENT",
+                "ABSENT",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        },
+        "high_leverage": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PRESENT",
+                "ABSENT",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        },
+        "material_uncertainty": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "PRESENT",
+                "ABSENT",
+                "UNKNOWN"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 10000
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "concentration",
+        "high_leverage",
+        "material_uncertainty"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "kind",
+    "contract_version",
+    "experiment_id",
+    "namespace",
+    "object_id",
+    "object_version",
+    "trace_id",
+    "content_hash",
+    "recorded_at",
+    "decision_cutoff",
+    "result_type",
+    "config_hash",
+    "productionGate",
+    "native_refs",
+    "level",
+    "subject_id",
+    "sector_id",
+    "sector_result_ref",
+    "evidence_bundle_ref",
+    "metrics",
+    "hard_gates",
+    "risk_flags"
+  ],
+  "additionalProperties": false
+}
