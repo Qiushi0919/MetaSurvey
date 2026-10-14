@@ -1,0 +1,432 @@
+{
+  "checked_at": "2026-10-14T05:38:14.463905+00:00",
+  "baseline_head": "574177653f962aae16e40ec02d303adde298e3a4",
+  "public_baseline_head": "7558a9360d635aea278f7e9e98f3745d76c63e17",
+  "baseline_tracked": 1081,
+  "allowed_changes": [
+    "AGENTS.md",
+    "workbench/README.md",
+    "workbench/server.py",
+    "workbench/static/app.js",
+    "workbench/tests/test_readonly.py",
+    "docs/review/LATEST.md",
+    "docs/review/INDEX.json"
+  ],
+  "actual_changed": [
+    "AGENTS.md",
+    "workbench/README.md",
+    "workbench/server.py",
+    "workbench/static/app.js",
+    "workbench/tests/test_readonly.py"
+  ],
+  "unexpected_changes": [],
+  "key_files": [
+    {
+      "path": "contracts/sector-stock-v0/CandidateSet.schema.json",
+      "before": "sha256:3465de30f7bda2e7bece370f0afa301d1e8196af41d5adc0d575e04594b3a9a3",
+      "after": "sha256:3465de30f7bda2e7bece370f0afa301d1e8196af41d5adc0d575e04594b3a9a3",
+      "match": true
+    },
+    {
+      "path": "contracts/sector-stock-v0/EvidenceBundle.schema.json",
+      "before": "sha256:798de086e13a2750cfe7716159c537cbc3b933f73e6ae7f64eaefc2aaf10dd98",
+      "after": "sha256:798de086e13a2750cfe7716159c537cbc3b933f73e6ae7f64eaefc2aaf10dd98",
+      "match": true
+    },
+    {
+      "path": "contracts/sector-stock-v0/ReasonCodes.json",
+      "before": "sha256:fdcdfbc68e888d239caf21dcc691063450533dbf133be7568064abd9434ca7de",
+      "after": "sha256:fdcdfbc68e888d239caf21dcc691063450533dbf133be7568064abd9434ca7de",
+      "match": true
+    },
+    {
+      "path": "contracts/sector-stock-v0/ResearchHypothesis.schema.json",
+      "before": "sha256:3eef55f60ae5b1e317608bd1102747e5cd784030b289efa7cf83cb7ad1eb8f05",
+      "after": "sha256:3eef55f60ae5b1e317608bd1102747e5cd784030b289efa7cf83cb7ad1eb8f05",
+      "match": true
+    },
+    {
+      "path": "contracts/sector-stock-v0/ScoreInput.schema.json",
+      "before": "sha256:c3a2958cd933eb93d55f2ef854b76fd64a2f3d4778fe1faa0e33384bb6598459",
+      "after": "sha256:c3a2958cd933eb93d55f2ef854b76fd64a2f3d4778fe1faa0e33384bb6598459",
+      "match": true
+    },
+    {
+      "path": "contracts/sector-stock-v0/ScoreResult.schema.json",
+      "before": "sha256:f556103fd9c4963d20b2ac8ea0ae802959f1ebf311bbb0e42de883ca9eff98e4",
+      "after": "sha256:f556103fd9c4963d20b2ac8ea0ae802959f1ebf311bbb0e42de883ca9eff98e4",
+      "match": true
+    },
+    {
+      "path": "contracts/sector-stock-v0/ValidationResult.schema.json",
+      "before": "sha256:eea8f070fdb010714a533a3278b5b27567e1fbb5ada0138011174a86af9b9952",
+      "after": "sha256:eea8f070fdb010714a533a3278b5b27567e1fbb5ada0138011174a86af9b9952",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/AccountProfile.schema.json",
+      "before": "sha256:039296fae33ad694bd77c35c8c2774b2741f9cd0a03082dd6c83f1fa874ded1a",
+      "after": "sha256:039296fae33ad694bd77c35c8c2774b2741f9cd0a03082dd6c83f1fa874ded1a",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/Approval.schema.json",
+      "before": "sha256:55ca29a826bbf29b5d074619edc8a9e6dae8c4bd63b5e26f6864fd2e031df56e",
+      "after": "sha256:55ca29a826bbf29b5d074619edc8a9e6dae8c4bd63b5e26f6864fd2e031df56e",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/AuditEvent.schema.json",
+      "before": "sha256:2ae7f67344be7c1c6f45d83b7445d65120cd4c48bc03dfa54c509399fb38031d",
+      "after": "sha256:2ae7f67344be7c1c6f45d83b7445d65120cd4c48bc03dfa54c509399fb38031d",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/BacktestResult.schema.json",
+      "before": "sha256:d1eb254faa802d28be328272dc323d03f67a0a6f807aaf2626f520f0cc887688",
+      "after": "sha256:d1eb254faa802d28be328272dc323d03f67a0a6f807aaf2626f520f0cc887688",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/BrainPacket.schema.json",
+      "before": "sha256:f57359752088bc9788840f96711c7dfca4b598ff1d1ee88e07808ea93b3eedc0",
+      "after": "sha256:f57359752088bc9788840f96711c7dfca4b598ff1d1ee88e07808ea93b3eedc0",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/CandidateEligibility.schema.json",
+      "before": "sha256:f0699554418579367d14d1ac16c40cc16fe033ac2fb76c9217dce850657e474a",
+      "after": "sha256:f0699554418579367d14d1ac16c40cc16fe033ac2fb76c9217dce850657e474a",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/CostEstimate.schema.json",
+      "before": "sha256:aca2e56876ecaa5a381f00e352c124ade1f416afbff7e37fb14511b6e3a3564b",
+      "after": "sha256:aca2e56876ecaa5a381f00e352c124ade1f416afbff7e37fb14511b6e3a3564b",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/DataEnvelope.schema.json",
+      "before": "sha256:45bb7495479ea41e4b796f91bb299c97ca03442a1c5228f28489addc90990760",
+      "after": "sha256:45bb7495479ea41e4b796f91bb299c97ca03442a1c5228f28489addc90990760",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/FeatureSet.schema.json",
+      "before": "sha256:e3792a384b61d88cdce9c02fe119687a56c10f1207fefd24e9ac10dca7dc5831",
+      "after": "sha256:e3792a384b61d88cdce9c02fe119687a56c10f1207fefd24e9ac10dca7dc5831",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/Fill.schema.json",
+      "before": "sha256:803eefa1372ff7bba5f8ca6ada3cff61401cb7791a2cb85917e55554e07337b3",
+      "after": "sha256:803eefa1372ff7bba5f8ca6ada3cff61401cb7791a2cb85917e55554e07337b3",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/LedgerEntry.schema.json",
+      "before": "sha256:7dc318676c984f3ea45531651dccde5cfa4a8d71246edc84fec78ef95de8aeb5",
+      "after": "sha256:7dc318676c984f3ea45531651dccde5cfa4a8d71246edc84fec78ef95de8aeb5",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/OrderIntent.schema.json",
+      "before": "sha256:4e2c22852f5dda94cc06c66e6e50d5f5e39410960669546e4072d920beeee683",
+      "after": "sha256:4e2c22852f5dda94cc06c66e6e50d5f5e39410960669546e4072d920beeee683",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/ResearchCard.schema.json",
+      "before": "sha256:efa9422bc5f79a7b81b9758df703a025dc9682297000648d37eb468bb0df56c5",
+      "after": "sha256:efa9422bc5f79a7b81b9758df703a025dc9682297000648d37eb468bb0df56c5",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/SecurityIdentity.schema.json",
+      "before": "sha256:76d497ead91b8970009ee4f6abeb8b5273846e6c0db030b3736efcfad3aa4c15",
+      "after": "sha256:76d497ead91b8970009ee4f6abeb8b5273846e6c0db030b3736efcfad3aa4c15",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/SignalEvent.schema.json",
+      "before": "sha256:a5da23d5f59c8cf7a02ef1cfb4ffc243a04c0e4468006b61529f7ffada639470",
+      "after": "sha256:a5da23d5f59c8cf7a02ef1cfb4ffc243a04c0e4468006b61529f7ffada639470",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/SnapshotManifest.schema.json",
+      "before": "sha256:72e701091ca06095a564bc13151abd5e45d67eaa6482c6788748ddd277147e91",
+      "after": "sha256:72e701091ca06095a564bc13151abd5e45d67eaa6482c6788748ddd277147e91",
+      "match": true
+    },
+    {
+      "path": "contracts/v1/common.schema.json",
+      "before": "sha256:36605dc6b4090fc4d92f87cbafaf16ea0f5fb5756f0706c57be1ba5ff21f3de6",
+      "after": "sha256:36605dc6b4090fc4d92f87cbafaf16ea0f5fb5756f0706c57be1ba5ff21f3de6",
+      "match": true
+    },
+    {
+      "path": "docs/core40-method-proposal/Owner-Decisions.md",
+      "before": "sha256:7a5a904108b5d1b56f655f2e8540a346dde5307d68c645f7bb395f5249451a52",
+      "after": "sha256:7a5a904108b5d1b56f655f2e8540a346dde5307d68c645f7bb395f5249451a52",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Acceptance-Report.md",
+      "before": "sha256:4ac66fa6f11d93fc65c0543a78ab5645e06842d317009478862d7823109606d8",
+      "after": "sha256:4ac66fa6f11d93fc65c0543a78ab5645e06842d317009478862d7823109606d8",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Authorization.md",
+      "before": "sha256:38518967bacec74abe808232b6fda03fc4be939bd574a07194090664203f4194",
+      "after": "sha256:38518967bacec74abe808232b6fda03fc4be939bd574a07194090664203f4194",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Checks.json",
+      "before": "sha256:8506f2e2345f0bfa262ce596b3b08c724b624e7eee339d8e56db283b913f0264",
+      "after": "sha256:8506f2e2345f0bfa262ce596b3b08c724b624e7eee339d8e56db283b913f0264",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Legacy-Regression-Summary.txt",
+      "before": "sha256:b22c089d1db10e728a22d097c437bed81a6e9539b083875f573776776bb67ade",
+      "after": "sha256:b22c089d1db10e728a22d097c437bed81a6e9539b083875f573776776bb67ade",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Preregistration.json",
+      "before": "sha256:ad4d2bb90264173a6728c5e8aa5bdc4b2770640d6333f2528935df68ec67c838",
+      "after": "sha256:ad4d2bb90264173a6728c5e8aa5bdc4b2770640d6333f2528935df68ec67c838",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Preservation.json",
+      "before": "sha256:e92fdff67ee16a100f9ad52d27ee0394ed763e1d390bcb8c81d75de0b3c77b66",
+      "after": "sha256:e92fdff67ee16a100f9ad52d27ee0394ed763e1d390bcb8c81d75de0b3c77b66",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Scoring-Rules.md",
+      "before": "sha256:60d96ffe4e475dc367ba704455e8b818ad507ff92bc7b5ca25edbc2a1ca8c0e8",
+      "after": "sha256:60d96ffe4e475dc367ba704455e8b818ad507ff92bc7b5ca25edbc2a1ca8c0e8",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Scoring-Tests.txt",
+      "before": "sha256:ba77c6d0509a84493f0e5962353299d7e6f8a40972bd0db836d38bddda9309e1",
+      "after": "sha256:ba77c6d0509a84493f0e5962353299d7e6f8a40972bd0db836d38bddda9309e1",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Status.json",
+      "before": "sha256:a763abdcfb55e3a9b3275a71c15cd2b0461e13c350784bf09c962794cd2f51d3",
+      "after": "sha256:a763abdcfb55e3a9b3275a71c15cd2b0461e13c350784bf09c962794cd2f51d3",
+      "match": true
+    },
+    {
+      "path": "docs/sector-stock-v0/Workbench-Tests.txt",
+      "before": "sha256:2399befa71fb5ef939071d472e11633d882e2d1f0621438edbfec50cd2f87f52",
+      "after": "sha256:2399befa71fb5ef939071d472e11633d882e2d1f0621438edbfec50cd2f87f52",
+      "match": true
+    },
+    {
+      "path": "docs/wave-f/Frozen-StrategySpec-v1.json",
+      "before": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+      "after": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+      "match": true
+    },
+    {
+      "path": "experiments/sector_stock_v0/README.md",
+      "before": "sha256:70866c41dfafddcd68a22ac20a7c7121f25b371c37792c14f5327f751b9a04ba",
+      "after": "sha256:70866c41dfafddcd68a22ac20a7c7121f25b371c37792c14f5327f751b9a04ba",
+      "match": true
+    },
+    {
+      "path": "experiments/sector_stock_v0/config.json",
+      "before": "sha256:d0391b5b10a4e6b294ee3800f83ce9f8d37b5e9c3d830ded09580e7cc9f70ae1",
+      "after": "sha256:d0391b5b10a4e6b294ee3800f83ce9f8d37b5e9c3d830ded09580e7cc9f70ae1",
+      "match": true
+    },
+    {
+      "path": "experiments/sector_stock_v0/engine.mjs",
+      "before": "sha256:6e3bc2973f06b957eb1b9f9cd9988a7b1ec17048b60ad169953e1777e1a78e25",
+      "after": "sha256:6e3bc2973f06b957eb1b9f9cd9988a7b1ec17048b60ad169953e1777e1a78e25",
+      "match": true
+    },
+    {
+      "path": "experiments/sector_stock_v0/tests/engine.test.mjs",
+      "before": "sha256:6a05582da139b52df228709f4931bc5999fe354fae569de0c2c4e056de1b2a19",
+      "after": "sha256:6a05582da139b52df228709f4931bc5999fe354fae569de0c2c4e056de1b2a19",
+      "match": true
+    },
+    {
+      "path": "experiments/sector_stock_v0/tests/fixtures.mjs",
+      "before": "sha256:59c5a7fd757d0c23fc248516f73e997c1df03b78273afe6bbc34674bf6365ca4",
+      "after": "sha256:59c5a7fd757d0c23fc248516f73e997c1df03b78273afe6bbc34674bf6365ca4",
+      "match": true
+    },
+    {
+      "path": "migrations/001_schema_v1.sql",
+      "before": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a",
+      "after": "sha256:ed626c0d79d1d1492e77e4c89d9324f62b6acd16753be19e6264dcfaf6bcff1a",
+      "match": true
+    },
+    {
+      "path": "migrations/002_contract_registry.sql",
+      "before": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84",
+      "after": "sha256:77e0e011e28ac6f8d8264d4263baed62cb6d6b7b3ea24a44292e4f43d4bf4f84",
+      "match": true
+    },
+    {
+      "path": "migrations/003_p1a_data.sql",
+      "before": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340",
+      "after": "sha256:5eb675742733eedba3ee3b3385517765e38c6bdb31d9f61bf873d7bc1b258340",
+      "match": true
+    },
+    {
+      "path": "migrations/004_p1a_paper.sql",
+      "before": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154",
+      "after": "sha256:d406ad7a493cb27503d9d4c460e3d5e10b1c589ee006c099dab391b1df253154",
+      "match": true
+    },
+    {
+      "path": "migrations/005_p1a_replay_audit.sql",
+      "before": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab",
+      "after": "sha256:e17bc7db16cc6f0177be12a3fa2de2dd8dd84b1d36ffc5510e71285e5dbb44ab",
+      "match": true
+    },
+    {
+      "path": "migrations/006_closure_admission.sql",
+      "before": "sha256:8ecf7fb64fa1ac4c2bcf8821753721daa2705e08ab36d858c48664a94e91fd47",
+      "after": "sha256:8ecf7fb64fa1ac4c2bcf8821753721daa2705e08ab36d858c48664a94e91fd47",
+      "match": true
+    },
+    {
+      "path": "package-lock.json",
+      "before": "sha256:a19551495aa1058726ae0dae3fb8831728c6a8a36689f6bed939c43158f7fe79",
+      "after": "sha256:a19551495aa1058726ae0dae3fb8831728c6a8a36689f6bed939c43158f7fe79",
+      "match": true
+    }
+  ],
+  "private_pins": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/ForwardPrediction-v1-OWNER_TEXT_IMPORT.json",
+      "before": "sha256:954569db8402e2e50e66841c1a449523c72f20ff1ce364d6183c4d3c7a018039",
+      "after": "sha256:954569db8402e2e50e66841c1a449523c72f20ff1ce364d6183c4d3c7a018039",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/Owner-Provided-Text.txt",
+      "before": "sha256:f990215f49d5b572f17c7b4eacbf203243268783b324b7dadd02637f48f95b60",
+      "after": "sha256:f990215f49d5b572f17c7b4eacbf203243268783b324b7dadd02637f48f95b60",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/dual-track-20261007/forward-freeze/Freeze-Receipt.json",
+      "before": "sha256:09146f50cafadd4b0e2298589ab3b045148ae4aa3f207e58edda7929cfdccd81",
+      "after": "sha256:09146f50cafadd4b0e2298589ab3b045148ae4aa3f207e58edda7929cfdccd81",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/day1-reveal-20261008/ForwardOutcome-D1.jsonl",
+      "before": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.input.json",
+      "before": "sha256:94bb00c11dd632d8386ee618fb50bff8c50ba31bd65bd686b96c9dec5809a28f",
+      "after": "sha256:94bb00c11dd632d8386ee618fb50bff8c50ba31bd65bd686b96c9dec5809a28f",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.assessment.json",
+      "before": "sha256:f1d8866488b90748d56c0e7f76b029e04aee7508253e2aed7716a859c7f0a6f0",
+      "after": "sha256:f1d8866488b90748d56c0e7f76b029e04aee7508253e2aed7716a859c7f0a6f0",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.report.json",
+      "before": "sha256:8dd85d5131411d105c72cae04c47a7774a8398ea5020a6d412979e3638ad1a14",
+      "after": "sha256:8dd85d5131411d105c72cae04c47a7774a8398ea5020a6d412979e3638ad1a14",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603993.SH.report.md",
+      "before": "sha256:b501343418d0f2ac87245825fbb2c92bce5d44c324a4d7fb18b3c1fbc4ae2e86",
+      "after": "sha256:b501343418d0f2ac87245825fbb2c92bce5d44c324a4d7fb18b3c1fbc4ae2e86",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.input.json",
+      "before": "sha256:dabd40e7346cba16c5efda0f7a7587b46661df3fc2e3ee140030794b333d6a7e",
+      "after": "sha256:dabd40e7346cba16c5efda0f7a7587b46661df3fc2e3ee140030794b333d6a7e",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.assessment.json",
+      "before": "sha256:23a0bbb58abe258621137e16682324176939584d20afe82c901552a6f825295c",
+      "after": "sha256:23a0bbb58abe258621137e16682324176939584d20afe82c901552a6f825295c",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.report.json",
+      "before": "sha256:3f2d7d9ca6f293010d3bbf0317ad58318e02eb73762e44333b2abbef6a68d3ae",
+      "after": "sha256:3f2d7d9ca6f293010d3bbf0317ad58318e02eb73762e44333b2abbef6a68d3ae",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/600312.SH.report.md",
+      "before": "sha256:391f02ade9bea40a8d13b98202b499ab8c09e4382a62ec4f7778685770f7429f",
+      "after": "sha256:391f02ade9bea40a8d13b98202b499ab8c09e4382a62ec4f7778685770f7429f",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.input.json",
+      "before": "sha256:fe999830b06de205f7bef5f20b7e3bfe95154cf9ad1082f6ad372882f0956fd2",
+      "after": "sha256:fe999830b06de205f7bef5f20b7e3bfe95154cf9ad1082f6ad372882f0956fd2",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.assessment.json",
+      "before": "sha256:ae79b58852cec9b6c9de07f2a9d4d68115c7229f86ba04435d012899389ac74a",
+      "after": "sha256:ae79b58852cec9b6c9de07f2a9d4d68115c7229f86ba04435d012899389ac74a",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.report.json",
+      "before": "sha256:55bd5d575893df4c92b1c2b24170ce0c8a95bde10e41fa2f57b137bfaf3b938b",
+      "after": "sha256:55bd5d575893df4c92b1c2b24170ce0c8a95bde10e41fa2f57b137bfaf3b938b",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/603228.SH.report.md",
+      "before": "sha256:a208c2caf00d5169bd688a00fe0bdc7dfb6b586231971e48b51c876c629cb940",
+      "after": "sha256:a208c2caf00d5169bd688a00fe0bdc7dfb6b586231971e48b51c876c629cb940",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/ResearchComparison.json",
+      "before": "sha256:afa1d72641158533d6ea4f5da976b7edde3310fda5deb34d1b963a9de2963166",
+      "after": "sha256:afa1d72641158533d6ea4f5da976b7edde3310fda5deb34d1b963a9de2963166",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/ResearchComparison.md",
+      "before": "sha256:00e35f2d8cd086fbcf176fb9b3b3580f4131d1e4f810c946c3bd3ba859cb57fc",
+      "after": "sha256:00e35f2d8cd086fbcf176fb9b3b3580f4131d1e4f810c946c3bd3ba859cb57fc",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4/replay-proof.json",
+      "before": "sha256:90acd843a7957464e50536d7d5ba94fdf98c37d13722792a0e676d856a290c1e",
+      "after": "sha256:90acd843a7957464e50536d7d5ba94fdf98c37d13722792a0e676d856a290c1e",
+      "match": true
+    }
+  ],
+  "specialist_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "specialist_status": "",
+  "scope": "All baseline tracked bytes and19 pinned private files; new5 source originals pinned by Sample Registry; no blanket filesystem audit"
+}

@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "scope": "INDEPENDENT_IMPLEMENTATION_READBACK_NOT_HUMAN_SIGNOFF",
+  "checked_at": "2026-10-14T05:34:06.489033+00:00",
+  "sample_sha256": "sha256:9a6416110a8d66a7bda9e66eff83a8df763b77fdc921f6f221bb3d36e5e3afb4",
+  "implementation_sha256": "sha256:c7ea6f0e157e557a6ece22c10274bc71e211f79b227c87c816bf8471143f1a81",
+  "producer_implementation": "Python Decimal / Node graph",
+  "independent_implementation": "Python Fraction exact rational / direct original row locators",
+  "original_rows_checked": 4,
+  "original_files_checked": 5,
+  "half_year_yoy_arithmetic_match": true,
+  "raw_values_exported": false,
+  "revision_variants_preserved": true,
+  "revision_chain_proven": false,
+  "score_input_rows_null": 18,
+  "score_results_blocked": 2,
+  "real_scores_computed": 0,
+  "upstream_graph": "Separately recomputed by Node validateGraph on workbench reads",
+  "economic_method_approval": false
+}

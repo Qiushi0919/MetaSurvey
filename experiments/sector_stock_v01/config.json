@@ -1,0 +1,97 @@
+{
+  "kind": "SectorStockApplicabilityCandidate",
+  "version": "0.2.0-candidate",
+  "experiment_id": "CORE40_SECTOR_STOCK_BASELINE_V01",
+  "namespace": "EXPERIMENT:CORE_40:SECTOR_STOCK_V01",
+  "parent_config_sha256": "sha256:d0391b5b10a4e6b294ee3800f83ce9f8d37b5e9c3d830ded09580e7cc9f70ae1",
+  "engineering_candidate_authorization": "OWNER_CONFIRMED_D01_D07",
+  "economic_method_approval": "PENDING",
+  "stock_weights": [
+    25,
+    20,
+    15,
+    15,
+    10,
+    10,
+    5
+  ],
+  "risk_by_level": {
+    "STOCK": {
+      "concentration": {
+        "applicability": "APPLICABLE",
+        "threshold": ">0.50 largest customer revenue share",
+        "candidate_deduction": "10"
+      },
+      "high_leverage": {
+        "applicability": "APPLICABLE",
+        "threshold": ">3 net debt / positive EBITDA",
+        "candidate_deduction": "10"
+      },
+      "material_uncertainty": {
+        "applicability": "APPLICABLE",
+        "threshold": "complete two-coder review",
+        "candidate_deduction": "5"
+      }
+    },
+    "SECTOR": {
+      "concentration": {
+        "applicability": "NOT_APPLICABLE",
+        "basis": "Company customer ratio has no approved sector aggregation",
+        "candidate_deduction": null
+      },
+      "high_leverage": {
+        "applicability": "NOT_APPLICABLE",
+        "basis": "Company leverage has no approved sector aggregation",
+        "candidate_deduction": null
+      },
+      "material_uncertainty": {
+        "applicability": "APPLICABLE",
+        "threshold": "complete two-coder sector review",
+        "candidate_deduction": "5"
+      }
+    }
+  },
+  "sector_risk_method": "PENDING",
+  "price_orders": {
+    "required": [
+      "comparable_price_index",
+      "comparable_order_quantity_index"
+    ],
+    "candidate_mix": [
+      "0.5",
+      "0.5"
+    ],
+    "missing_or_not_applicable": "BLOCK_TOTAL_NO_SUBSTITUTION",
+    "sales_not_order_quantity": true
+  },
+  "competition": {
+    "old_metric": "margin_change_bps",
+    "new_display_name": "盈利能力变化代理",
+    "competition_measure_defined": false,
+    "candidate_anchors_bps": [
+      "-1000",
+      "1000"
+    ],
+    "total_blocked": true
+  },
+  "policy_catalyst": {
+    "meaning": "coded net event count only; no impact magnitude or calibrated probability",
+    "candidate_anchors": [
+      "-2",
+      "2"
+    ],
+    "complete_body_search_and_two_coders_required": true,
+    "policy_window_calendar_days": 90,
+    "catalyst_window_sessions": 60
+  },
+  "relative_strength": {
+    "window_sessions": 20,
+    "candidate_anchors_bps": [
+      "-2000",
+      "2000"
+    ],
+    "entry_timing": "NOT_DEFINED"
+  },
+  "aggregate_enabled": false,
+  "productionGate": false
+}

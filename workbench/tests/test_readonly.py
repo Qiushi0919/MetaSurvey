@@ -66,9 +66,10 @@ class AdapterTests(unittest.TestCase):
 class HttpTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
-  cls.server=ThreadingHTTPServer(('127.0.0.1',0),Handler);cls.server.reader=Reader();cls.thread=threading.Thread(target=cls.server.serve_forever,daemon=True);cls.thread.start()
+  cls.fixture=AdapterTests();cls.fixture.setUp()
+  cls.server=ThreadingHTTPServer(('127.0.0.1',0),Handler);cls.server.reader=cls.fixture.reader;cls.thread=threading.Thread(target=cls.server.serve_forever,daemon=True);cls.thread.start()
  @classmethod
- def tearDownClass(cls): cls.server.shutdown();cls.server.server_close();cls.thread.join()
+ def tearDownClass(cls): cls.server.shutdown();cls.server.server_close();cls.thread.join();cls.fixture.doCleanups()
  def request(self,path,method='GET',headers=None):
   c=http.client.HTTPConnection('127.0.0.1',self.server.server_port);c.request(method,path,headers=headers or {});r=c.getresponse();body=r.read();headers=dict(r.getheaders());c.close();return r.status,headers,body
  def test_index_runs_with_local_assets(self):
@@ -84,6 +85,6 @@ class HttpTests(unittest.TestCase):
    self.assertIn(self.request(path)[0],(404,422))
  def test_queries_not_logged_or_accepted(self): self.assertEqual(self.request('/api/state?token=example')[0],400)
  def test_encoded_research_evidence_id(self):
-  status,_,body=self.request('/api/evidence/research%3A603993.SH');self.assertIn(status,(200,422));self.assertNotEqual(json.loads(body).get('error'),'NOT_ALLOWLISTED')
+  status,_,body=self.request('/api/evidence/research%3A603993.SH');self.assertEqual(status,200);self.assertIn("SYNTHETIC",json.loads(body)["content"]);self.assertNotEqual(json.loads(body).get('error'),'NOT_ALLOWLISTED')
 
 if __name__=='__main__': unittest.main()

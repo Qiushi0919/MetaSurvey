@@ -8,6 +8,12 @@
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
     {
+      "phase": "V0_REVIEW_CORRECTION",
+      "report": "docs/score-review-v01/Acceptance-Report.md",
+      "rules": "experiments/sector_stock_v01/config.json",
+      "source_registry": "docs/score-review-v01/Sample-Registry.json"
+    },
+    {
       "phase": "CORE40_SECTOR_STOCK_BASELINE_V0",
       "report": "docs/sector-stock-v0/Acceptance-Report.md",
       "checks": "docs/sector-stock-v0/Checks.json",

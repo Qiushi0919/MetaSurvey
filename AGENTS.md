@@ -1,3 +1,7 @@
+# Current V0 review correction — 2026-10-14
+
+Owner approved D01–D07 as candidate engineering rules ONLY; real economic scoring remains BLOCKED. Preserve all sector_stock_v0/contracts/sector-stock-v0/docs/sector-stock-v0 bytes. New V01 applicability and bounded pinned archive review under experiments/sector_stock_v01 and docs/score-review-v01; reuse read-only workbench. Independent Ubuntu/macOS scoring and workbench CI uses only synthetic temporary fixtures and loopback HTTP. No expanded universe, collector, credentials, optimizer, formal backtest, trading or native/frozen changes. Complete evidence/CI/publication then STOP.
+
 # Current sector/stock experimental scoring and workbench — 2026-10-14
 
 Owner authorizes CORE40_SECTOR_STOCK_BASELINE_V0 isolated deterministic scoring, experimental schemas, synthetic tests, seven-page local read-only workbench and optimization/ablation preregistration ONLY. See docs/sector-stock-v0/Authorization.md. Reuse workbench/; new code experiments/sector_stock_v0 and contracts/sector-stock-v0. Root owns integration/publication. Preserve frozen native contracts, StrategySpec, Forward, old pins/seals/ledgers/raw evidence and specialist worktree. No actual market requests, real scoring from incomplete reports, optimizer, formal backtest, broker/trading or cloud export. New anchors/risk rules are candidate methods, not approved M01–M08 or probabilities. Complete evidence/report/publication then STOP.

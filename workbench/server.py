@@ -29,6 +29,12 @@ FILES = {
  'scoring-acceptance': 'docs/sector-stock-v0/Acceptance-Report.md',
  'previous-ui-checks': 'docs/workbench-v0/Checks.json',
  'research-gate': 'docs/wave-d/Gate.json',
+ 'score-review-registry':'docs/score-review-v01/Sample-Registry.json',
+ 'score-review-decisions':'docs/score-review-v01/Owner-Decisions.md',
+ 'score-review-config':'experiments/sector_stock_v01/config.json',
+ 'score-review-fields':'docs/score-review-v01/Field-Matrix.md',
+ 'score-review-acceptance':'docs/score-review-v01/Acceptance-Report.md',
+ 'score-review-preregistration':'docs/score-review-v01/Preregistration.json',
 }
 SECRET = re.compile(r'-----BEGIN (?:ENCRYPTED |RSA |EC |OPENSSH )?PRIVATE KEY-----|\b(?:ghp_|github_pat_|sk-proj-)[\w-]{20,}|[?&](?:token|api_key)=[\w-]{20,}|pro_api\([\"\x27][\w-]{20,}', re.I)
 
@@ -135,6 +141,10 @@ class Reader:
    if type(experiment.get('reasons')) is not list or any(type(x) is not str for x in experiment['reasons']) or experiment.get('method_state')!='CANDIDATE_RULES_OWNER_PENDING': raise ReadError('INVALID_SHAPE','scoring-status')
    state['experiment']={'data':experiment,'config':cfg,'provenance':emeta,'config_provenance':cmeta,'result_type':'EXPERIMENT_SPEC_NOT_REAL_SCORE'}
   except (ReadError,KeyError,TypeError) as e: state['errors'].append({'panel':'experiment','code':getattr(e,'code','INVALID_SHAPE'),'source':getattr(e,'source','scoring-config')})
+  try:
+   from workbench.score_reader import load
+   state['score_review']=load(self)
+  except (ReadError,ValueError,KeyError,TypeError) as e: state['errors'].append({'panel':'score-review','code':getattr(e,'code','INVALID_SCORE_PACKAGE'),'source':getattr(e,'source','score-review-registry')})
   state['task_records']=[]
   for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
    try:

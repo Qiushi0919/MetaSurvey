@@ -45,3 +45,7 @@ node --check workbench/static/app.js
 ## 2026-10-14 扩展
 
 导航扩展为七页：仪表盘、板块评分、股票候选池、单股卡、回测/Forward、Agent归档记录、配置。旧 `#watch` 只读页面仍兼容访问，任务页保留未启用盯盘状态。新评分页面读取独立候选规则与真实空状态，不调用评分引擎、不混入合成分数。见[本轮验收](../docs/sector-stock-v0/Acceptance-Report.md)。
+
+V0 审查修正入口：`docs/score-review-v01/Acceptance-Report.md`。运行环境仍为 Python3.12 + Node24（`npm ci --ignore-scripts`），本地 `python3 -B -m workbench.server --port 8767`。V01私有样本存在且原件/代码校验一致时显示阻断链；公开克隆没有该私有档案，会显示 FILE_MISSING，不能通过补空文件消除。
+
+隔离CI入口：`python3 -B tools/score_review/check.py scoring --out /tmp/ms-check/scoring` 与 `python3 -B tools/score_review/check.py workbench --out /tmp/ms-check/workbench`；输出目录不要放私有档案目录，因为HTTP测试审计钩子禁止访问它。

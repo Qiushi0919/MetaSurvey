@@ -1,0 +1,136 @@
+{
+  "kind": "SectorStockPreregistration",
+  "version": "0.2.0-candidate",
+  "experiment_id": "CORE40_SECTOR_STOCK_BASELINE_V01",
+  "recorded_on": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "state": "PRE_REGISTERED_DRAFT_OWNER_PENDING_NO_RUN",
+  "execution_authorized": false,
+  "strategy_spec_mutated": false,
+  "optimization_performed": false,
+  "results_observed_this_round": 0,
+  "scope": "RESEARCH_METHOD_EXPERIMENT_NOT_FROZEN_CORE40_STRATEGY",
+  "data_requirements": {
+    "target_sessions": 1260,
+    "minimum_complete_trades": 100,
+    "historical_candidate_reconstruction": "At each cutoff reconstruct delisted/listed universe, dated sector taxonomy/membership, financial revisions, source/available/retrieved clocks, raw/action-adjusted series and benchmarks. No current candidates backfill. Save excluded and unknown members with reasons.",
+    "selection_scope": "Three engineering symbols remain diagnostic pilot; whole-market reconstruction requires explicit scope/license approval.",
+    "historical_pit_admitted": false,
+    "sample_exposure_register_required": true,
+    "unseen_test_dates": "UNSET_REQUIRED",
+    "calendar_anchor": "UNSET_REQUIRED"
+  },
+  "protocol": {
+    "train_months": 36,
+    "validation_months": 12,
+    "sealed_test_months": 6,
+    "roll_months": 6,
+    "training": "Expanding from first36months; validation/test each advance6months. Exact dates require admitted exchange calendar.",
+    "purge_sessions": 40,
+    "embargo_sessions": 40,
+    "boundary_rule": "Drop training/validation labels crossing next interval; exclude40 actual sessions adjacent to next fold; embargo40 after holdout before reusing observations. Split by session across all stocks, never random row split.",
+    "effective_sample_warning": "Five calendar years alone may not leave enough usable windows after warmup1260/labels40/purge/embargo. Publish feasible windows before any run, never shrink requirements to force a result.",
+    "freeze": "Freeze input snapshots, config+code hashes, universe+membership, windows, fees, objective, all variant IDs and exposure registry before computing outcomes.",
+    "sealed_test_custody": "Independent custodian; evidence that labels were inaccessible; previously exposed interval remains retrospective regardless of new PIT."
+  },
+  "baseline": {
+    "id": "BASELINE_V01_CANDIDATE",
+    "weights": "Owner fixed25/20/15/15/10/10/5; not optimized",
+    "score_anchors": "V0 anchors preserved as candidate; V01 applicability config pending economic approval",
+    "sector_threshold_proposal": "60",
+    "stock_threshold_proposal": "70",
+    "entry_exit_portfolio_adapter": "UNSET_REQUIRED; new experimental StrategySpec reference, never mutate Frozen v1"
+  },
+  "optimization_candidate": {
+    "id": "TUNE_THRESHOLDS_ONLY_V0",
+    "grid": {
+      "sector_threshold": [
+        "50",
+        "60",
+        "70"
+      ],
+      "stock_threshold": [
+        "60",
+        "70",
+        "80"
+      ]
+    },
+    "grid_size": 9,
+    "fit_scope": "train data for feature policies; validation12months selects thresholdpair, then seal for next6months; no selecting from sealedtest or existing revealed Lite data",
+    "objective": "Highest validation mean session net benchmark excess under PESSIMISTIC dated cost; ties lower MDD, then lower turnover, then numeric sector threshold ascending, stock threshold ascending. Negative scores remain negative; no deleting failures.",
+    "weights_or_anchors_search": false,
+    "economic_policy": "UNSET_REQUIRED; no real fees/slippage/capital assumed"
+  },
+  "ablations": [
+    {
+      "id": "NO_SECTOR_FILTER",
+      "change": "Remove sector screening threshold only; keep stock sector-benefit weight and evidence; measures filter contribution."
+    },
+    {
+      "id": "FUNDAMENTAL_FACTOR_NEUTRAL_50",
+      "change": "Set only the fundamental factor to50. Preserve complete research collection, thesis, counterevidence, gates and required inputs; no reweight. Does not measure removal of company deep research."
+    },
+    {
+      "id": "NO_CATALYST",
+      "change": "Neutralize catalyst factor at50; preserve negative-event hard gates and counterevidence."
+    },
+    {
+      "id": "NO_COUNTEREVIDENCE_RANKING",
+      "change": "Suppress counterevidence soft ranking contribution only via material_uncertainty penalty; hard negatives, invalidation and missing evidence STILL BLOCK. Evidence is still collected, not hidden."
+    },
+    {
+      "id": "NO_TIMING_FILTER",
+      "change": "Remove extra entry-timing filter in future experimental adapter; retain next-session execution, T+1, halt/limit/lot/cash/fee rules; timing factor still recorded."
+    },
+    {
+      "id": "FIXED_TIME_EXIT",
+      "change": "40-session time exit proposal; retain hard-risk exits and untradeable blocked-exit exposure; no retroactive fills."
+    },
+    {
+      "id": "EQUAL_WEIGHT_PORTFOLIO",
+      "change": "Equal-weight eligible symbols within the same Owner-approved gross/sector/position caps; never relax caps or shared cash."
+    }
+  ],
+  "comparison_design": "Nine threshold candidates validation-only; baseline+selected thresholds+7one-at-a-time ablations =>9reported test arms per window. Ablations compare to baseline, not optimized winner; paired session samples. No undisclosed combinations.",
+  "metrics": [
+    "gross/net_return",
+    "dated_fees_and_slippage",
+    "turnover",
+    "max_drawdown",
+    "benchmark_excess",
+    "MAE",
+    "MFE",
+    "complete_trades",
+    "blocked_and_missing_decisions",
+    "window_and_sector_stability",
+    "parameter_sensitivity_grid",
+    "coverage_and_independent_time_blocks"
+  ],
+  "statistics": {
+    "unit": "joint exchange sessions; overlapping labels/trades never IID",
+    "block_length_sessions_proposal": 40,
+    "bootstrap_replicates_proposal": 2000,
+    "seed_proposal": 20261014,
+    "family_wise_alpha_proposal": "0.05",
+    "multiplicity": "9testarms Bonferroni alpha0.05/9; report simultaneous intervals plus all9validation grid cells, no isolated winner pvalue",
+    "insufficient_sample": "INCONCLUSIVE; freeze minimum effective blocks before run; currently UNSET_REQUIRED",
+    "primary_result": "No success declaration until Owner approves economic criteria, sample adequacy and uncertainty estimator; statistical implementation not included this round"
+  },
+  "required_owner_decisions": [
+    "metric anchors and sector equalweights",
+    "risk penalty definitions and evidence coding",
+    "M01–M08 or independently versioned replacements",
+    "historical universe/license and candidate mapping",
+    "actual costs/slippage/capital/position/risk/benchmark",
+    "experimental execution adapter and actual window dates",
+    "custodian and untouched OOS evidence",
+    "sample/multiplicity and acceptance policies"
+  ],
+  "stop_rule": "No formal backtest, optimizer, Forward reveal or real capital execution in this round. Save failed windows and registrations append-only.",
+  "scoring_config_sha256": "sha256:0815e51409e8f6fbef609499463cccc6128c48686047b7a328d343e29c5c44de",
+  "unchanged_frozen_strategy_sha256": "sha256:d4eb866d6675e52f4b5158374f94a3152e4ae406c62add22a8c807762b0215da",
+  "supersedes_draft_only": "docs/sector-stock-v0/Preregistration.json",
+  "deferred_experiments": [
+    "Formal company-deep-research incremental-value experiment: separate preregistration, inputs, workflow intervention, approvals and independent evaluation required."
+  ]
+}

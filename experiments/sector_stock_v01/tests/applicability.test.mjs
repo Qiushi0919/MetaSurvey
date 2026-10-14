@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {assess,unknownRisks,candidate} from '../applicability.mjs';
+test('sector company risk NA is explicit and deduction stays null',()=>{const x=assess('SECTOR',unknownRisks('SECTOR'));assert.equal(x.risks.concentration.state,'NOT_APPLICABLE');assert.equal(x.risk_deduction,null);assert(x.reason_codes.includes('SECTOR_RISK_METHOD_PENDING'));});
+test('stock unknown never silently absent',()=>{const x=assess('STOCK',unknownRisks('STOCK'));assert.equal(x.risks.high_leverage.state,'UNKNOWN');assert.equal(x.final_score,null);});
+for(const state of ['PRESENT','ABSENT','UNKNOWN'])test('sector forbids unaggregated company risk '+state,()=>{const r=unknownRisks('SECTOR');r.concentration.state=state;assert.throws(()=>assess('SECTOR',r));});
+test('stock applicable risk cannot be NA',()=>{const r=unknownRisks('STOCK');r.concentration.state='NOT_APPLICABLE';assert.throws(()=>assess('STOCK',r));});
+test('NA requires explicit layer basis',()=>{const r=unknownRisks('SECTOR');r.concentration.basis='';assert.throws(()=>assess('SECTOR',r));});
+test('absent risk requires evidence and no economic approval is inferred',()=>{const r=unknownRisks('STOCK');r.concentration.state='ABSENT';const x=assess('STOCK',r);assert(x.reason_codes.includes('RISK_EVIDENCE_REQUIRED:concentration'));assert.equal(x.final_score,null);});
+for(const state of ['UNKNOWN','NOT_APPLICABLE'])test('price orders '+state+' blocks without substitution',()=>assert(assess('SECTOR',unknownRisks('SECTOR'),state).reason_codes.includes('PRICE_ORDERS_'+state)));
+test('gross margin is proxy and relative strength is not entry',()=>{assert.equal(candidate.competition.competition_measure_defined,false);assert.equal(candidate.relative_strength.entry_timing,'NOT_DEFINED');});
+test('candidate keeps Owner stock weights and aggregate disabled',()=>{assert.deepEqual(candidate.stock_weights,[25,20,15,15,10,10,5]);assert.equal(candidate.aggregate_enabled,false);});

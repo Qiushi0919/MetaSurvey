@@ -1,0 +1,2 @@
+Verified 16 contracts + shared definitions at 1.0.0
+Verified 16 contracts at 1.0.0, immutable release bytes and 30 explicit required configuration gaps.

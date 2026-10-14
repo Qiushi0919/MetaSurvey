@@ -1,0 +1,37 @@
+{
+  "scope": "ACTUAL_LOCAL_UI_VS_PINNED_ARTIFACT",
+  "sample_sha256": "sha256:9a6416110a8d66a7bda9e66eff83a8df763b77fdc921f6f221bb3d36e5e3afb4",
+  "registry_sha256": "sha256:487b87d64e583960df2e34e8efc6f2c3ecd62646b3ccf2b5c01529d0c0abfc0b",
+  "checks": {
+    "603228.SH": true,
+    "PROPOSED:PCB_MANUFACTURING": true,
+    "2026-10-14T05:34:06.276674+00:00": true,
+    "2026-10-06T07:50:49.627682Z": true,
+    "concentration: NOT_APPLICABLE": true,
+    "SECTOR_RISK_METHOD_PENDING": true,
+    "BLOCKED": true,
+    "stock_risk_unknown": true,
+    "matrix_metrics_all_visible": true
+  },
+  "screenshots": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/score-review-20261014/UI-Sector.jpg",
+      "sha256": "sha256:a8e59c74201daf8d16f24f9a8dc8d735729d5a4d7d5136cc6d08475eda826e07"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/score-review-20261014/UI-Stock.jpg",
+      "sha256": "sha256:c4ea42fdd8104fffdc0f86ef2e6cbabc3f23b3d4c52bf276fe129ff6f97610c6"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/score-review-20261014/UI-Evidence.jpg",
+      "sha256": "sha256:b8d5dfe87b805f3eba783d03de4afa4e74f5c80d4c7f04bef19d11453fe669ed"
+    }
+  ],
+  "operation_record": [
+    "Open loopback workbench /#sectors",
+    "Read BLOCKED and NOT_APPLICABLE values",
+    "Click field evidence, compare18 metric names",
+    "Navigate candidates, verify stock UNKNOWN and empty formal candidates"
+  ],
+  "public_raw_data": false
+}

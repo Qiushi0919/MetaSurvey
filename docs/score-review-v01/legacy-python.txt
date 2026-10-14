@@ -1,0 +1,6 @@
+.................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 209 tests in 1.042s
+
+OK
+{"actual_data_or_accounts_used": false, "actual_network_attempts_blocked": 0, "business_rules_or_assertions_changed": false, "counts": {"backtest_sidecar": 123, "unapproved_method_math": 75, "workspace_boundary": 11}, "errors": 0, "failures": 0, "git_executable_remapped": true, "local_day1_original_archive_tests_in_scope": false, "passed": true, "productionGate": false, "scope": "PUBLIC_SYNTHETIC_ENGINEERING_ONLY", "skips": 0, "temporary_fixture_path_remaps": 6, "tests_run": 209}
