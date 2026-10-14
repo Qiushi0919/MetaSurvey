@@ -58,3 +58,13 @@ cd /Users/qiushi/投资研究/ashare-trading-v1
 6. 下一步先取得用途明确、具备日历/交易状态/公司行动/历史可见证据的有限诊断数据，再运行冻结基线。五年正式回测还需历史候选重建、完整PIT与修订链、样本外封存及足够交易。新增买数据须另获Owner批准。
 
 本轮整体验收结论为PARTIAL / REAL_HISTORICAL_ENGINE_NOT_RUN，未达到用户“至少一次真实历史行情运行”目标。收尾后STOP；不自动启动下一阶段。
+
+## 版本与远端检查
+
+实现源提交 `91a48757b2b1048b8371102cba95de0e2b80484e`，公开受测提交 `583ea894e01ce286e09a31061a7ef33878ae4b82`。本报告后续收尾提交仅补证据/文档，不改变上述受测代码。公开发布扫描核对1135个源文件，6个既有本地限制产物继续排除。
+
+- [新实验 Ubuntu/macOS CI](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228337)：每平台64个唯一用例通过。
+- [评分及工作台 Ubuntu/macOS CI](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228347)：每平台评分72、工作台74个唯一用例通过。
+- [逐平台结果与提交绑定](CI-Results.json)，原始测试日志见ci-checks；不把两个平台相同用例累加成独立覆盖。
+
+既有[公开工程回归](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228339)也在Ubuntu/macOS通过；其原有本地证据/未公开源历史排除保持不变，不能把公开CI称为私有业务证据验收。全部8个跨平台job通过。GitHub报告旧actions的Node20运行时迁移提示；这是后续维护事项，本轮未改旧workflow。

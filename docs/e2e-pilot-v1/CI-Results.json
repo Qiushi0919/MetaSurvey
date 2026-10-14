@@ -1,0 +1,129 @@
+{
+  "kind": "E2EPilotCIResults",
+  "recorded_at": "2026-10-14T06:58:57.137186+00:00",
+  "source_code_commit": "91a48757b2b1048b8371102cba95de0e2b80484e",
+  "public_tested_commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+  "results": [
+    {
+      "suite": "E2E_PILOT",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228337",
+      "unique_cases": 64,
+      "executions": 64,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true
+    },
+    {
+      "suite": "E2E_PILOT",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228337",
+      "unique_cases": 64,
+      "executions": 64,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true
+    },
+    {
+      "suite": "scoring",
+      "commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228347",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct"
+    },
+    {
+      "suite": "scoring",
+      "commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228347",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "linux",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct"
+    },
+    {
+      "suite": "workbench",
+      "commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228347",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 74,
+      "executions": 74,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    },
+    {
+      "suite": "workbench",
+      "commit": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228347",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "linux",
+      "unique_cases": 74,
+      "executions": 74,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    }
+  ],
+  "unique_case_counts_not_summed_across_platforms": {
+    "e2e": 64,
+    "scoring": 72,
+    "workbench": 74
+  },
+  "business_acceptance": "PARTIAL_REAL_HISTORICAL_ENGINE_NOT_RUN",
+  "local_runtime_failure_preservation": [
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/legacy-node-initial-fail.txt",
+      "sha256": "df36cc8489736ed1071e9e98bb1f883d731f30b9100f483604bc7546c0458393"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/legacy-node-rerun-pass.txt",
+      "sha256": "322738dff4c06d1c546128fbdecde6f813c5ad9adc4617a9c745f83a94a7d95c"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/legacy-python-initial-fail.txt",
+      "sha256": "7255e08918b6daab9db8e40c8ab1611efed6a1e8b8867dae363cf28dfeeebaad"
+    },
+    {
+      "local_only_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-pilot-v1-20261014/legacy-python-rerun-pass.txt",
+      "sha256": "abe60807f0980f26caef132c47a1d0e6b3eb6b255fa5fea3292d24519d6849c6"
+    }
+  ],
+  "existing_public_regression": {
+    "headSha": "583ea894e01ce286e09a31061a7ef33878ae4b82",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228339",
+    "jobs": [
+      {
+        "name": "portable-review (ubuntu-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228339/job/115723907252"
+      },
+      {
+        "name": "portable-review (macos-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38525228339/job/115723907859"
+      }
+    ],
+    "scope": "PUBLIC_SYNTHETIC_ONLY; existing local-only exclusions preserved"
+  }
+}

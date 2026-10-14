@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "91a48757b2b1048b8371102cba95de0e2b80484e",
-  "captured_at": "2026-10-14T06:56:21.584326+00:00",
+  "source_commit": "21fd58b9f52c3c85d37292180057c3644323934d",
+  "captured_at": "2026-10-14T07:00:58.627867+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1135,
+  "included_source_files": 1148,
   "files": [
     {
       "path": ".env.example",
@@ -48,8 +48,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 35547,
-      "sha256": "sha256:0dcb67c75c4bc0371fd30f56f75afda162e07d7d31ea49bae17c070df1b04a83"
+      "bytes": 35840,
+      "sha256": "sha256:f48adb538fa37974842cf736a45053c712e7ae238f0d34a2d787f1bd2d95b5e9"
     },
     {
       "path": "README-Historical-20261008.md",
@@ -1653,13 +1653,18 @@
     },
     {
       "path": "docs/e2e-pilot-v1/Acceptance-Report.md",
-      "bytes": 7222,
-      "sha256": "sha256:b77884bcf013b7005eb9cd76fa2b2adbd3e87f058014635973d8ea7361d2f072"
+      "bytes": 8354,
+      "sha256": "sha256:508ecd450877278637eb9711ade57bcf5908c032dd14a3d15ded32f47d76540b"
     },
     {
       "path": "docs/e2e-pilot-v1/Authorization.md",
       "bytes": 1628,
       "sha256": "sha256:c9b12adae87363caee30bc9f746447983c45a37b44612829314e9690d9861026"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/CI-Results.json",
+      "bytes": 4779,
+      "sha256": "sha256:cf92afdfb5b1435e0a07f78e9aa5ea9b9d094b8589a23c14bb7d78d2570f4c95"
     },
     {
       "path": "docs/e2e-pilot-v1/Costs.md",
@@ -1693,8 +1698,8 @@
     },
     {
       "path": "docs/e2e-pilot-v1/Preservation.json",
-      "bytes": 9893,
-      "sha256": "sha256:55f90cdaadf62837082f1af79fd514ae14de9333443f562fe2e83cad76f14db0"
+      "bytes": 9961,
+      "sha256": "sha256:9018061ef1b9f4b2f812e32f66aae0cc40e983d65be7134e6c459c333168549e"
     },
     {
       "path": "docs/e2e-pilot-v1/Registry.json",
@@ -1703,8 +1708,68 @@
     },
     {
       "path": "docs/e2e-pilot-v1/UI-Evidence.json",
-      "bytes": 5287,
-      "sha256": "sha256:e027cdf8493f4349c3502ddd69e4c4eab3dcf2e0c4f15b11c35335c4be5b83cc"
+      "bytes": 5496,
+      "sha256": "sha256:28d2d3924ae64ed92f82f994ab61e60a7257dab3938df516b5be3c643b566b84"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/e2e-pilot-macos-latest/result.json",
+      "bytes": 4997,
+      "sha256": "sha256:dd514cc4e105960c903d6aed8bf9412ab5c4bdfdaa5e74d9c776b024ddd9eacd"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/e2e-pilot-macos-latest/tests.txt",
+      "bytes": 7214,
+      "sha256": "sha256:e8c2483c2ab9336aced2ade5e6e82d01c0de409dce36474713dd681e0ae34737"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/e2e-pilot-ubuntu-latest/result.json",
+      "bytes": 4996,
+      "sha256": "sha256:a870538048e80cee954d0dc0ff479c976545a88bae0ba5672b6f28088c7deec4"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/e2e-pilot-ubuntu-latest/tests.txt",
+      "bytes": 7214,
+      "sha256": "sha256:1794b353a2a6444086a12c89e774ac590872cb105cd8d0f12d16abc86139ffe8"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/scoring-macos-latest/result.json",
+      "bytes": 9234,
+      "sha256": "sha256:ec4d5d3d9c95cb2790bc5b0ae0c87a19167d24b6739d9201e7e902f1b874375b"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/scoring-macos-latest/tests.txt",
+      "bytes": 31944,
+      "sha256": "sha256:1d84d47a71de33f720907e19eaa4fd7c9aeb6683ba9d73ee8451718967e66545"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/scoring-ubuntu-latest/result.json",
+      "bytes": 9233,
+      "sha256": "sha256:230600bcec50134680700d30f5f90925d2fc7ee617e6c0ac463ad142961c840b"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/scoring-ubuntu-latest/tests.txt",
+      "bytes": 31817,
+      "sha256": "sha256:67c0bae12980e48bb5e6d2f6f2ac446995be40cb05e486e8b1f4536240b11be1"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/workbench-macos-latest/result.json",
+      "bytes": 5730,
+      "sha256": "sha256:98c02ce100afbd7350c5f7346a0e0eec6a1e6b662d0b61e186c53287eccf2120"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/workbench-macos-latest/tests.txt",
+      "bytes": 8210,
+      "sha256": "sha256:50e040cf2b3aead56b5cb47aec678c0726a520e608c687ccbdcc0b7bc59a6955"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/workbench-ubuntu-latest/result.json",
+      "bytes": 5729,
+      "sha256": "sha256:6dafa39a088c936de21c940b3e282c6a21eda33d7d05b9622803ddd94fdaed37"
+    },
+    {
+      "path": "docs/e2e-pilot-v1/ci-checks/workbench-ubuntu-latest/tests.txt",
+      "bytes": 8209,
+      "sha256": "sha256:6af07fce008807948e53e23efa3f4e0ee8bbefc414be1f31a5f9d88aa59b8824"
     },
     {
       "path": "docs/e2e-pilot-v1/local-checks/e2e/result.json",
@@ -2443,8 +2508,8 @@
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 3538,
-      "sha256": "sha256:661144e2382a875bcc50d7e8a7ced57d56d6c83e885c34976f70376939a3fe25"
+      "bytes": 3588,
+      "sha256": "sha256:9575953abc52c0d71d731a1446c7ca0ec529bf666e5ec7e07f39507538b62ab9"
     },
     {
       "path": "docs/review/PUBLISHING.md",

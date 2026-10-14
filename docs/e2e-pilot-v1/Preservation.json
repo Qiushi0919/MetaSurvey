@@ -1,6 +1,6 @@
 {
   "kind": "E2EPilotPreservation",
-  "recorded_at": "2026-10-14T06:48:48.746672+00:00",
+  "recorded_at": "2026-10-14T06:57:55.012073+00:00",
   "baseline_head": "34d7bfc822d9ba4b2a94e07b77cf2b023f63ac38",
   "baseline_tracked_count": 1110,
   "changed": [
@@ -189,5 +189,6 @@
   },
   "method_still_matches": true,
   "protocol_still_matches": true,
-  "scope": "All baseline tracked files,25 fixed old private files includingV01sample; actual UI reads did not mutate them. New PDFs pinned separately; no blanketfilesystemclaim."
+  "scope": "All baseline tracked files,25 fixed old private files includingV01sample; actual UI reads did not mutate them. New PDFs pinned separately; no blanketfilesystemclaim.",
+  "source_code_commit": "91a48757b2b1048b8371102cba95de0e2b80484e"
 }

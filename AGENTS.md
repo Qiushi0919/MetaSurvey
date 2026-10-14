@@ -1,6 +1,8 @@
-# Current E2E pilot V1 — 2026-10-14
+# Current E2E pilot V1 — 2026-10-14 / STOP after acceptance
 
 Owner now authorizes isolated CORE40_E2E_PILOT_V1 / EXPERIMENT:CORE40:E2E_PILOT_V1: preregister candidate methods before scores/results, bounded lawfully sourced real research, virtual100000CNY portfolio and limited historical diagnostic, read-only workbench. No formal OOS/production/broker/real account/optimization/old Forward reveal. Prior V01 real-score block remains on V01 only. Root owns contracts/config/final integration; delegates have bounded new paths. Preserve all V0/V01 artifacts, frozen strategy, Forward, old ledgers/evidence/pins/seals/migrations and specialist worktree. Unknown source license or missing execution data still block those runs. Complete whole acceptance before STOP; intermediate tasks are not separate gates. See docs/e2e-pilot-v1/Authorization.md.
+
+Current delivery is BUSINESS PARTIAL: nine current-document financial comparisons, zero complete company totals, virtual cash retained, actual diagnostic DATA_BLOCKED / engine_called=false. Review entry docs/e2e-pilot-v1/Acceptance-Report.md. No automatic next phase.
 
 # Current V0 review correction — 2026-10-14
 

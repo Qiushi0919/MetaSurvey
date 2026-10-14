@@ -4,7 +4,7 @@
 
 | 内容 | 位置 | 状态 |
 |---|---|---|
-| 端到端研究试点与基础组合诊断 V1 | [本轮验收](../e2e-pilot-v1/Acceptance-Report.md) · [真实资料](../e2e-pilot-v1/Data-Feasibility.md) · [独立复核](../e2e-pilot-v1/Independent-Review.md) | 9家公司/27真实财务分项已接工作台；完整总分及真实历史运行尚未完成 |
+| 端到端研究试点与基础组合诊断 V1 | [本轮验收](../e2e-pilot-v1/Acceptance-Report.md) · [真实资料](../e2e-pilot-v1/Data-Feasibility.md) · [独立复核](../e2e-pilot-v1/Independent-Review.md) · [双平台CI](../e2e-pilot-v1/CI-Results.json) | 9家公司/27真实财务分项已接工作台；完整总分及真实历史运行尚未完成 |
 | V0审查修正与真实输入核对 | [本轮验收](../score-review-v01/Acceptance-Report.md) · [差异](../score-review-v01/Changes.md) · [字段缺口](../score-review-v01/Field-Matrix.md) | Ubuntu/macOS评分72+工作台51均通过；真实总分BLOCKED；候选工程规则已确认 |
 | 双层评分实验与七页工作台 | [本轮验收报告](../sector-stock-v0/Acceptance-Report.md) · [规则](../sector-stock-v0/Scoring-Rules.md) · [预注册](../sector-stock-v0/Preregistration.json) | 计算/Schema/界面工程通过；真实评分0，正式回测未运行；候选方法待审批 |
 | 本轮本地只读工作台 v0 | [界面验收与启动](../workbench-v0/Acceptance-Report.md) · [Checks](../workbench-v0/Checks.json) | 已实际启动；六页真实产物；不改变业务准入 |
