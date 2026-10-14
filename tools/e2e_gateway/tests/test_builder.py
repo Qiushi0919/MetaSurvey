@@ -243,6 +243,15 @@ class BuilderTests(unittest.TestCase):
         self.mutate('dividend',lambda rows:[{'ts_code':self.symbols[0],'div_proc':'预披露','ann_date':'20260820','ex_date':'20260821'}]);self.blocked('PREDISCLOSURE_WITH_EXECUTION_DATES_CONFLICT')
     def test_predisclosure_with_implementation_announcement_conflicts(self):
         self.mutate('dividend',lambda rows:[{'ts_code':self.symbols[0],'div_proc':'预披露','ann_date':'20260820','imp_ann_date':'20260821'}]);self.blocked('PREDISCLOSURE_WITH_EXECUTION_DATES_CONFLICT')
+    def test_rejected_proposals_are_audited_not_executed(self):
+        self.mutate('dividend',lambda rows:[{'ts_code':self.symbols[0],'div_proc':state,'end_date':'20111231','ann_date':'20120329','ex_date':None} for state in ('股东大会未通过','未通过')]);report,case=self.build();self.assertIsNotNone(case,report);self.assertEqual(case['actions'],[])
+        self.assertEqual({r['div_proc'] for r in report['action_inventory']},{'股东大会未通过','未通过'})
+        for row in report['action_inventory']:self.assertEqual(row['disclosure_times']['end_date'],'2011-12-31');self.assertTrue(row['source_row_hash'].startswith('sha256:'))
+    def test_rejected_proposals_with_execution_dates_conflict(self):
+        for state in ('股东大会未通过','未通过'):
+            for field in ('record_date','ex_date','pay_date','div_listdate','imp_ann_date'):
+                with self.subTest(state=state,field=field):
+                    self.mutate('dividend',lambda rows:[{'ts_code':self.symbols[0],'div_proc':state,'ann_date':'20120329',field:'20120529'}]);self.blocked('NONIMPLEMENTED_WITH_EXECUTION_DATES_CONFLICT')
     def test_run_id_rejects_path(self):self.assertIsNone(b.build_case(self.folder,'../escape',RUN)[1])
 
 if __name__=='__main__':unittest.main()

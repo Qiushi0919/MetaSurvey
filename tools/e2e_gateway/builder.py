@@ -271,12 +271,14 @@ def build_case(folder, run_id, run_at):
             for row_number, row in enumerate(rows):
                 if row.get('ts_code') != symbol: raise InputError('ACTION_IDENTITY_CONFLICT')
                 ex = day(row['ex_date']) if row.get('ex_date') else None
-                if row.get('div_proc') not in ('实施','预案','股东大会通过','不分配','停止实施','预披露'):
+                if row.get('div_proc') not in ('实施','预案','股东大会通过','不分配','停止实施','预披露','股东大会未通过','未通过'):
                     raise InputError('ACTION_PROCESS_UNKNOWN')
                 if row.get('div_proc') != '实施':
                     execution_dates = ('record_date','ex_date','pay_date','div_listdate','imp_ann_date')
                     if row['div_proc'] == '预披露' and any(row.get(k) not in (None,'') for k in execution_dates):
                         raise InputError('PREDISCLOSURE_WITH_EXECUTION_DATES_CONFLICT')
+                    if row['div_proc'] in ('股东大会未通过','未通过') and any(row.get(k) not in (None,'') for k in execution_dates):
+                        raise InputError('NONIMPLEMENTED_WITH_EXECUTION_DATES_CONFLICT')
                     disclosure_times = {k:day(row[k]) if row.get(k) else None for k in ('end_date','ann_date',*execution_dates)}
                     action_audit.append({'symbol': symbol, 'ex_date': ex, 'status': 'EXCLUDED_UNIMPLEMENTED', 'div_proc':row.get('div_proc'),'source_row_hash':digest(row),'row_index':row_number,'source_ref': divref,'disclosure_times':disclosure_times}); continue
                 if ex is None: raise InputError('IMPLEMENTED_ACTION_EX_DATE_MISSING')

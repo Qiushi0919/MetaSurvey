@@ -84,3 +84,10 @@ Source-Policy现固定`kind=GatewayLocalResearchPolicy`、`version=3.0.0`，新�
 - `tools/e2e_gateway/tests/test_builder.py`：`sha256:989f27353a6640cb7023c2e9a38868dbef9076fd9e1fcca2bf54aa2982faffb7`
 - `experiments/e2e_gateway_v3/input-policy.json`：`sha256:864c8b6b7375c5bcb242690a3d64579726fb0ac51c2df2c2ad42d66ff522cef1`
 - `docs/e2e-gateway-v3/Input-Policy-3.0.0.json`：`sha256:277255bc25ad7ec699323b9081a17f15e0bedbb4a303daff7075c37239c21b22`
+
+
+### 预披露与最终冻结补核
+
+随后实际源表出现`预披露`，新代码将它明确列为非实施状态，保留原行hash、报告期、披露与执行日期字段；不生成现金/股票权益。该行若携登记、除权、支付、红股上市或实施公告日期，直接报PREDISCLOSURE_WITH_EXECUTION_DATES_CONFLICT，不静默排除。未知进度仍报ACTION_PROCESS_UNKNOWN。新增3例覆盖正常预披露、带除权日期、带实施公告日期。
+
+独立复跑最终便携入口108个唯一测试（engine32、gateway76），全部通过，0失败/错误/跳过；另上一复核Reader22通过未发生相关代码变更，合计130个注册用例，不把重复执行加数。Freeze.json登记时间2026-10-14T09:15:03.216086+00:00，其16个代码/配置pin独立计算全部一致。前段记录的代码hash为此前复核时点，最终依据以本Freeze为准；不倒改旧记录。日志与逐项pin结果在Git外checks/reviewer-prefreeze108/。本阶段静态签核完成，仍未由审核人运行真实策略，等待完整实际Case与运行算术复核。

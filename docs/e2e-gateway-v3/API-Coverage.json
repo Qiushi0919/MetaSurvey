@@ -1,0 +1,950 @@
+{
+  "recorded_at": "2026-10-14T09:26:52.907272+00:00",
+  "source": "EXISTING_COMPATIBLE_GATEWAY_NOT_VERIFIED_OFFICIAL",
+  "entitlement_claim": "ONLY_ACTUAL_QUERIES_OBSERVED; NOT_COMPLETE_ACCOUNT_ENTITLEMENTS",
+  "account_tier": "15000_OWNER_ASSERTED",
+  "state": "CAPTURE_COMPLETE",
+  "capture_manifest_hash": "sha256:09911e53519f87048785aca52c164a7126d9c35677c27870785267dd342cf54b",
+  "capture_directory": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/capture-04",
+  "total_products": 65,
+  "states": {
+    "SUCCESS": 56,
+    "EMPTY_RESPONSE": 9
+  },
+  "rows_by_api": {
+    "stock_basic": 9,
+    "daily": 2943,
+    "stk_limit": 2943,
+    "suspend_d": 0,
+    "adj_factor": 2943,
+    "trade_cal": 970,
+    "dividend": 695,
+    "namechange": 30
+  },
+  "historical_visibility_proven": false,
+  "provider_license_independently_verified": false,
+  "public_raw_distribution": false,
+  "matrix": [
+    {
+      "api_name": "trade_cal",
+      "params": {
+        "exchange": "SSE",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 485,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:9048d32e9a3bb283053490785313a6ffe4d19ace95d19d10f1975da71ff8966a",
+      "retrieved_at": "2026-10-14T08:46:05.838278+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "trade_cal",
+      "params": {
+        "exchange": "SZSE",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 485,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:c2906656e3741a64fb2dc3ca596d013ad184fc7dbe3dbf2b67b26b4efb41524b",
+      "retrieved_at": "2026-10-14T08:46:08.956995+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "603228.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:f81dc03c8423acaacf2f36136b75084721ba7ec73276924541769afa189894b0",
+      "retrieved_at": "2026-10-14T08:46:12.272929+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "603228.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:24dc053156e6e01f8328edc3ac144591454427af513c7910e86c7130fe4cf523",
+      "retrieved_at": "2026-10-14T08:46:16.465580+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "603228.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:62a2b158867061dacf579c23a3309e677e2cfc6dbef23c95fb5ac66acc52e90e",
+      "retrieved_at": "2026-10-14T08:50:47.435555+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "603228.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T08:50:50.599862+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "603228.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:34ec2e7bfea8cfbeb8f6e1aa41731b595c1996c2c99963c37cea891a4e0ab2de",
+      "retrieved_at": "2026-10-14T08:55:18.736912+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "603228.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 58,
+      "min_date": "20170606",
+      "max_date": "20260518",
+      "raw_sha256": "sha256:eabfeaa5acafeab3d373979cf8715c736f74a63cc3d2f0fe62e8c4151b28e1cf",
+      "retrieved_at": "2026-10-14T08:55:33.941347+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "603228.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:ffc010003ae10504ac13008c225008457a07813681bc433c70117343bd552f43",
+      "retrieved_at": "2026-10-14T08:55:49.122359+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "002463.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:418a2af05e1b260ab293d4c0e6b1d0059428e06c048f7d40021a34674dfd99a6",
+      "retrieved_at": "2026-10-14T08:56:04.228828+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "002463.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:7ea9b25941670f8b3539c132268f2c363084b008b82de736eaf5acb386bfbe31",
+      "retrieved_at": "2026-10-14T08:56:20.784277+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "002463.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:9ed44d8a6d69e0ac41a52ee1c83e7322e2ad267c40561a0501ff2176b2dc71b0",
+      "retrieved_at": "2026-10-14T08:56:36.310786+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "002463.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T08:59:55.055471+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "002463.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:6e494654e863c600d66f12682ad766bfc0323e6181712dbbeefec6f51c41f5df",
+      "retrieved_at": "2026-10-14T09:00:25.426772+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "002463.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 71,
+      "min_date": "20110520",
+      "max_date": "20260508",
+      "raw_sha256": "sha256:f15e54b5ef0319f7e9693ff38c25f1e5c0ef693872b5b472bce7d35f07f0a0c0",
+      "retrieved_at": "2026-10-14T09:00:55.630820+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "002463.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:f0532e1237698c6b07b5b206f30c80579a61440224ca8f919f2a2ab2fb0dd0d2",
+      "retrieved_at": "2026-10-14T09:01:25.814133+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "002916.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:62b880162d3711998120ffe1abf3a48879eac0674079423f96296e2a5e57ea42",
+      "retrieved_at": "2026-10-14T09:01:55.905801+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "002916.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:9abaad2cc00d5b00fa516d58b0669946f15eb402bd26ae4675793ea5e487d923",
+      "retrieved_at": "2026-10-14T09:02:26.309837+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "002916.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:a12f20ec27143d7cfcdf256edc1ec0a00456435a9d4fba273909c9cfdb989da6",
+      "retrieved_at": "2026-10-14T09:02:56.696751+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "002916.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:03:26.821641+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "002916.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:db923dee7e2719ecba51bea919f8645c3b9f287b6fca604d861642f670d3184e",
+      "retrieved_at": "2026-10-14T09:03:57.119738+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "002916.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 52,
+      "min_date": "20180528",
+      "max_date": "20260529",
+      "raw_sha256": "sha256:a35a5c98ea035a9d88c96ff3163c63970bad68624d0964d8592dd295b5619186",
+      "retrieved_at": "2026-10-14T09:04:27.344017+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "002916.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:f2108122a2878523714aa684aa33471fe27df5f703f863e1c8623f6352bc51bc",
+      "retrieved_at": "2026-10-14T09:04:57.492995+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "600312.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:8a718e87568a1bc1d161ff035bf55ec6383fc016fa62a412b8e0299bbe14c742",
+      "retrieved_at": "2026-10-14T09:05:27.595019+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "600312.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:cecf3450e8627d0bac1b9cd5798e28d27980430188026b6a2a414d9f63ee8d0e",
+      "retrieved_at": "2026-10-14T09:05:58.653826+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "600312.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:98719aead4b490e0f98c9d6ad5402b2b6916d121030f021d89e456d2ddb98b47",
+      "retrieved_at": "2026-10-14T09:06:29.173270+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "600312.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:06:59.297336+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "600312.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:3d729cda3c4eea15ba5a0902089c7bd33a6dd2bff2aa20666d3009efa2bd3c4c",
+      "retrieved_at": "2026-10-14T09:07:29.647677+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "600312.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 98,
+      "min_date": "20020628",
+      "max_date": "20260625",
+      "raw_sha256": "sha256:0e2ba14c0187da7611cf1f9ecfc63e793bc95e73d87d607483dc7111bfba1e5e",
+      "retrieved_at": "2026-10-14T09:07:59.947163+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "600312.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 6,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1af3d01cdea2aa11d43e50deb5bff8ca2b018c486fb25a9a4536886014f4601b",
+      "retrieved_at": "2026-10-14T09:08:30.057816+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "601179.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:86682b2a526581edc089c7362d5588fe2b11fe0999eae50f44ceddec557f9a7e",
+      "retrieved_at": "2026-10-14T09:09:00.189108+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "601179.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:4be07d9756794eec064bad8eb9059d1a852ca79da976b8a784da2896cbe4c86f",
+      "retrieved_at": "2026-10-14T09:09:30.459329+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "601179.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:a54c53f3405d13009917ade6b968e355e13d70881aa79f4d04d740926f4d2d48",
+      "retrieved_at": "2026-10-14T09:10:01.203995+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "601179.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:10:31.308873+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "601179.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:30ad133739381c1a7efb09b2d7f729854c1ce4130d4a0bf8054ef975a4bae88e",
+      "retrieved_at": "2026-10-14T09:11:01.571482+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "601179.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 79,
+      "min_date": "20110616",
+      "max_date": "20260923",
+      "raw_sha256": "sha256:0cb84bb88e5b98ac73d80d1ac6a08fba1d07970175007dc77d7fdd56fd116209",
+      "retrieved_at": "2026-10-14T09:11:31.872855+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "601179.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:c61bda2616350fe9a7595ae4094773d4328fd89e47b1120760d507dee1c6b494",
+      "retrieved_at": "2026-10-14T09:12:02.037032+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "002028.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:fd745fd651d0a23c3ea2b8384ba513a0146f19a4f2067e31a57a8c1359d180de",
+      "retrieved_at": "2026-10-14T09:12:32.162600+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "002028.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:842db749042f0c790d321ea7123fae031afbef140a04d1cf17b8939afab877a9",
+      "retrieved_at": "2026-10-14T09:13:03.052066+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "002028.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:ad6a950d475d0158f9a2e200d08fab0d070e14fd3f501f02d4fd745a207b50d5",
+      "retrieved_at": "2026-10-14T09:13:33.510951+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "002028.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:14:03.643766+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "002028.SZ",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:f5d5d71f7742896d621d8fcaddf30e6e8c3d506609fd7775c46bb29f8a4af610",
+      "retrieved_at": "2026-10-14T09:14:34.264898+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "002028.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 86,
+      "min_date": "20050428",
+      "max_date": "20260708",
+      "raw_sha256": "sha256:70774129ca61783b6798cff7c970fe0ff7ce4ed6dee6e4cc388596aee768a37f",
+      "retrieved_at": "2026-10-14T09:15:04.762204+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "002028.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 6,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:2137ae8a35b9f947abde5a634cb9c99ab80a4891ca23909f571fd6b6cc948720",
+      "retrieved_at": "2026-10-14T09:15:34.943108+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "603993.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:da79c8fc10a2602591d0846a5d4e803aa5648bc11f884620eabf31772304d927",
+      "retrieved_at": "2026-10-14T09:16:05.055129+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "603993.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:f5ebc8379f190eacbb5bc868c26e755e0dc6deab2e1f2010bcd06be0d3869ed3",
+      "retrieved_at": "2026-10-14T09:16:35.432736+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "603993.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:c2dc69089705642bc21dee146f641929a906cac5ecff579471be59a0dc1a4632",
+      "retrieved_at": "2026-10-14T09:17:06.254370+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "603993.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:17:36.389149+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "603993.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:8358609c5133aecfc4e9ec355feff11b6c6af52e89261d7a8a604cfea0a6c064",
+      "retrieved_at": "2026-10-14T09:18:06.672653+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "603993.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 71,
+      "min_date": "20121228",
+      "max_date": "20260909",
+      "raw_sha256": "sha256:2543196cd2e1dd430560d8d05406ac69c94ac919a7eea032c3b8cda4b8d4a917",
+      "retrieved_at": "2026-10-14T09:18:37.827851+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "603993.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:2db0237a85521ca30ec7f7f59fe53287481aaf0b3fc048266d4a249fff917d17",
+      "retrieved_at": "2026-10-14T09:19:08.029198+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "601899.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:13c31a0f9ea630df7e0f68c2e43cd5db68a9f8b7bb3a3bf02686ef9445297983",
+      "retrieved_at": "2026-10-14T09:19:38.137053+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "601899.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:50e093f53a9be1c8928dffb46c614be8e3acfb5a109d6862e3d592a244404196",
+      "retrieved_at": "2026-10-14T09:20:09.043847+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "601899.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:92a4ab73035f1e897234aac8021eb481577186923cd8eb0e3aed27cfe87e043c",
+      "retrieved_at": "2026-10-14T09:20:40.794268+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "601899.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:21:10.978133+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "601899.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:68bb63feef2f2fe5f3b41bbc94475efeff8426086a6b154003136db3771a7c4e",
+      "retrieved_at": "2026-10-14T09:21:41.364339+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "601899.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 85,
+      "min_date": "20080718",
+      "max_date": "20260821",
+      "raw_sha256": "sha256:d9616a1f3fb31826bc08dad05dcc0ce18b37fa62b9fa9678e600ae489c9a154b",
+      "retrieved_at": "2026-10-14T09:22:11.588960+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "601899.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:36189e21fdbc1e50d82c70f2937f5ac2af61237a86405bd233842e7e1b2f2376",
+      "retrieved_at": "2026-10-14T09:22:41.820178+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stock_basic",
+      "params": {
+        "ts_code": "600362.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:03b58ce0628ff26c8ebe4bd507dbd814a8af4e67b0bd8a5e2bcd9c4cf434500d",
+      "retrieved_at": "2026-10-14T09:23:11.928842+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "daily",
+      "params": {
+        "ts_code": "600362.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:9c2d6c48018504df0dbd2030d59691744fea9971509e8c95ed2db78dace59e88",
+      "retrieved_at": "2026-10-14T09:23:43.012716+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "stk_limit",
+      "params": {
+        "ts_code": "600362.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:2fc4d4f1ad779e9f23916106f6064305c6e0e65d56a79f9a74e62e05262f43b9",
+      "retrieved_at": "2026-10-14T09:24:13.474513+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "suspend_d",
+      "params": {
+        "ts_code": "600362.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:1240dfd02f0f59268e5c71d146a3f2ad30931c6d45824d83bffaa9d168c13a40",
+      "retrieved_at": "2026-10-14T09:24:43.618100+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "adj_factor",
+      "params": {
+        "ts_code": "600362.SH",
+        "start_date": "20250603",
+        "end_date": "20260930"
+      },
+      "state": "SUCCESS",
+      "row_count": 327,
+      "min_date": "20250603",
+      "max_date": "20260930",
+      "raw_sha256": "sha256:2e0437cccea5d7f888ea8c720cd52ed56512b6987cdb30cc35a23f59020d0199",
+      "retrieved_at": "2026-10-14T09:25:14.225804+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "dividend",
+      "params": {
+        "ts_code": "600362.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 95,
+      "min_date": "20020701",
+      "max_date": "20260717",
+      "raw_sha256": "sha256:66b63c593f6e490b3c5bb95a9fdbbd1a16d46d88bed7665bd55e1424078604cd",
+      "retrieved_at": "2026-10-14T09:25:44.398376+00:00",
+      "error_code": 0
+    },
+    {
+      "api_name": "namechange",
+      "params": {
+        "ts_code": "600362.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 6,
+      "min_date": null,
+      "max_date": null,
+      "raw_sha256": "sha256:d46a0a4c298a17c5925607db894d7079323594f8d296d2b0887d71be24200ce6",
+      "retrieved_at": "2026-10-14T09:26:14.555415+00:00",
+      "error_code": 0
+    }
+  ]
+}

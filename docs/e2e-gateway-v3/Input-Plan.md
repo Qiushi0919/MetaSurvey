@@ -66,3 +66,9 @@ The compatibility branch additionally requires positive-volume actual daily bars
 ### 3.0.1 non-implementation enum addendum — 2026-10-14T09:14:10.255206+00:00
 
 Read-only capture-04 review found `预披露` in two 600312.SH disclosure rows and one 601179.SH row. Their record/ex/pay/bonus-listing/implementation-announcement dates are all null. Root approved explicit non-implementation classification before code freeze or strategy execution: preserve process label, source-row hash and all date fields in audit, exclude from executable actions. A `预披露` row carrying any record/ex/pay/bonus-listing/implementation-announcement date is a conflict and must block, not silently exclude. Prior 3.0.0 snapshot is unchanged. Private evidence review hash: `0c4d482753838dbf6624fa062554742ee4ea03b9754810805344644f70275255`.
+
+## Input policy 3.0.2 — explicit rejected dividend proposals
+
+Registered before any strategy run at 2026-10-14T09:26:54.542622+00:00. Prior 3.0.1 code/policy remain preserved by commit `247da84`; old Freeze is unchanged. Previous policy hash: `sha256:09a17bef6ff4d345b5c8f846e46a5fef8ea994c342e651a2d6313a676884e74f`. Root will produce a separate Freeze-R2 rather than overwrite the earlier freeze.
+
+Capture-04 紫金 601899.SH contains `股东大会未通过` and `未通过`, one historical 2011-period disclosure each, with all record/ex/pay/share-listing/implementation-announcement dates null. Final 江铜 600362.SH dividend capture was checked before this single combined revision; it adds no unknown process enum. These two exact rejected-proposal states are explicit non-implementation exclusions, with process, all date fields and original row hashes retained. Any such row carrying an execution-related date blocks as `NONIMPLEMENTED_WITH_EXECUTION_DATES_CONFLICT`. Unknown states remain blocked. This does not alter strategy, universe, clocks, portfolio, fees or prices.
