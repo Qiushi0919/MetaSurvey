@@ -1,0 +1,27 @@
+{
+  "kind": "E2EHistoryRegistry",
+  "version": "1.0.0",
+  "run_directory": "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/runs/E2EH2-20261014-ANONYMOUS-SOURCE-FAILURE-01",
+  "run_sha256": "sha256:9076e1f60016430cf76f3902e6e633b40a5946e0220905baa07f93c6ee97e9f2",
+  "code_pins": {
+    "tools/e2e_history/run.py": "sha256:a927741481f3d4b306b04847683070214a17b9d6ad9fcb2dac4a9b4aa672410e",
+    "tools/e2e_history/builder.py": "sha256:a5ed3308cb62bba9be0ec34200a5eec6ef8e89ceec5fee985bef53792629ace4",
+    "tools/e2e_history/capture.py": "sha256:8b7fa4c00c522a4f650c287a894e8123b2ee2c13bdf04049ca1951051fc4ab75",
+    "experiments/e2e_history_v2/engine.py": "sha256:d7e1782267e60ce42de742409256e73eb6ad86e0f938577b6aab62869048f0db",
+    "experiments/e2e_history_v2/protocol.json": "sha256:95120d8082f2c15bfdb218416baa80ba91e9206a88a5128ee153204c7045fed5",
+    "experiments/e2e_history_v2/input-policy.json": "sha256:12956a89a67e9612d078cca1f51efc756ce753fe34a4d6ae59e14c5a55283581",
+    "docs/e2e-history-v2/Source-Policy.json": "sha256:501baa59ff1b383806a274ec5f1c8f651ad98306e91dbee37091151dff35b40d",
+    "experiments/e2e_pilot_v1/method.json": "sha256:b58784a57ce12a9979c583b5808f48d182bd509bed90d472e3ffd88a5bd0cd5e",
+    "experiments/e2e_pilot_v1/execution.py": "sha256:f1ae1d39452ae69024a92bb223f8b5e747c3b3bd3c42bf2b7c9789e4246b9655",
+    "backtest_5y/economics.py": "sha256:61a7ddcf49aa49d065da494e664c286b1b15b076465f1a020b32775d77215190",
+    "wave_f/backtest.py": "sha256:2e12711a89ce40398e76dd85c57c5dd4e3b43b8534e4f95a163be02bc4fafd0e"
+  },
+  "research": {
+    "input_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/research/Research-Factor-Inputs.json",
+    "input_sha256": "sha256:8f98a108726db2a1ce5c271a6986c4a1799410229fbd2a8a8cbd676f2e8d6a71",
+    "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/research/Research-Factors.json",
+    "result_sha256": "sha256:3f440b7b5b3e123f012aa13cab447a081696dfdc60d6d68703e59aa064eed011",
+    "code_sha256": "sha256:28431b0b14be1c5f0be1fa581e37eab74880383ce72aee4e05cac2fd28b76f33",
+    "method_sha256": "sha256:fedb39b95bfdee4bc1bf4068824cb80da633bcc5c465399c4baf7d49fcfb6dd9"
+  }
+}

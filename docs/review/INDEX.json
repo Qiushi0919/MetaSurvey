@@ -8,6 +8,12 @@
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
     {
+      "phase": "E2E_HISTORY_V2",
+      "report": "docs/e2e-history-v2/Acceptance-Report.md",
+      "registry": "docs/e2e-history-v2/Registry.json",
+      "business_state": "MAIN_OBJECTIVE_NOT_ACHIEVED_SOURCE_FAILED_EXCEPTION_DECODER_MISSING"
+    },
+    {
       "phase": "CORE40_E2E_PILOT_V1",
       "report": "docs/e2e-pilot-v1/Acceptance-Report.md",
       "method": "experiments/e2e_pilot_v1/method.json",

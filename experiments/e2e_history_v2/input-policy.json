@@ -1,0 +1,35 @@
+{
+  "kind": "DerivedExecutionRulePolicy",
+  "version": "1.0.0",
+  "registered_before_results": true,
+  "registered_at": "2026-10-14T08:22:17.174095+00:00",
+  "window": "2025-06-03..2026-09-30",
+  "normal_mainboard": {
+    "buy_lot": 100,
+    "tick_CNY": "0.01",
+    "limit_ratio": "0.10",
+    "rounding": "ROUND_HALF_UP",
+    "basis": "BaoStock per-session preclose, documented ex-right reference on action days",
+    "derivation_label": "DERIVED_FROM_RECONSTRUCTED_PRECLOSE_NOT_EXCHANGE_LIMIT_ORIGINAL"
+  },
+  "unsupported": [
+    "isST !=0 at any session",
+    "IPO/relisting/no-limit exception",
+    "prices outside derived range",
+    "unknown preclose, missing status, incomplete action/factor coverage"
+  ],
+  "source_policy_ref": "docs/e2e-history-v2/Source-Policy.json",
+  "historical_exchange_rule_exception_coverage": {
+    "required": true,
+    "scope": "each fixed member; complete warmup_start..end",
+    "domains": [
+      "IPO",
+      "RELISTING_FIRST_DAY",
+      "DELISTING_FIRST_DAY",
+      "OTHER_EXCHANGE_NO_LIMIT"
+    ],
+    "proof": "official scoped event originals, hashes, dates and source decoder; no caller boolean",
+    "implementation": "MISSING_OFFICIAL_EVENT_DECODER_BLOCKS_REAL_CASE",
+    "reason": "RULE_EXCEPTION_COVERAGE_UNPROVEN"
+  }
+}

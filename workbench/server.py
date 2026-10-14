@@ -10,6 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path('/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4')
 SYMBOLS = ('603993.SH', '600312.SH', '603228.SH')
 FILES = {
+ 'history-registry':'docs/e2e-history-v2/Registry.json',
+ 'history-report':'docs/e2e-history-v2/Acceptance-Report.md',
+ 'history-protocol':'experiments/e2e_history_v2/protocol.json',
+ 'history-source':'docs/e2e-history-v2/Source-Review.md',
+ 'history-inputs':'docs/e2e-history-v2/Research-Factors.md',
+ 'history-method':'experiments/e2e_history_v2/research-method.json',
  'e2e-config':'experiments/e2e_pilot_v1/method.json',
  'e2e-protocol':'experiments/e2e_pilot_v1/protocol.json',
  'e2e-registry':'docs/e2e-pilot-v1/Registry.json',
@@ -155,6 +161,10 @@ class Reader:
    from workbench.e2e_reader import load as load_e2e
    state['e2e']=load_e2e(self)
   except (ReadError,ValueError,KeyError,TypeError) as e: state['errors'].append({'panel':'e2e','code':getattr(e,'code','INVALID_E2E_PACKAGE'),'source':getattr(e,'source','e2e-registry')})
+  try:
+   from workbench.history_reader import load as load_history
+   state['history_v2']=load_history(self)
+  except (ReadError,ValueError,KeyError,TypeError) as e: state['errors'].append({'panel':'history-v2','code':getattr(e,'code','INVALID_HISTORY_PACKAGE'),'source':getattr(e,'source','history-registry')})
   state['task_records']=[]
   for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
    try:

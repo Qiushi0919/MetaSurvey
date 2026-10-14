@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-10-14T08:40:56.428925+00:00",
+  "baseline_hash": "sha256:1aa2fb5893f683c5c497df14e44acaf13746d6cb9315d048c3e31296d069a18a",
+  "baseline_source_commit": "21fd58b9f52c3c85d37292180057c3644323934d",
+  "tracked_files_checked": 1154,
+  "private_files_checked": 96,
+  "permitted_existing_changes": [
+    {
+      "path": "AGENTS.md",
+      "before": "sha256:f48adb538fa37974842cf736a45053c712e7ae238f0d34a2d787f1bd2d95b5e9",
+      "after": "sha256:eb19fb0c2bb19e1757db6ad2d16eb2150f8dace3690db5fd79610ba7d4278512",
+      "allowed": true
+    },
+    {
+      "path": "docs/review/INDEX.json",
+      "before": "sha256:34d58da73a6398312a7ecd7fab3795dac9c031ee3befc1bf3fc5cfddc0563f3d",
+      "after": "sha256:b43d71a24397c5ff5835fcfbe2c424b08982c0ed55d18fdd87deba22f37b2023",
+      "allowed": true
+    },
+    {
+      "path": "docs/review/LATEST.md",
+      "before": "sha256:9575953abc52c0d71d731a1446c7ca0ec529bf666e5ec7e07f39507538b62ab9",
+      "after": "sha256:c859921957288d848d366e5cc6c3953b6c2a933392e3aa4331c02d6fe3cc0cca",
+      "allowed": true
+    },
+    {
+      "path": "workbench/server.py",
+      "before": "sha256:e274e41f9be5772a0b1e3092434e21eab485423999b149e53cf9c05b3bb66822",
+      "after": "sha256:2fb90609640cb00b35e3939e00917fdf28d9a1a95750fab324b53431397694f0",
+      "allowed": true
+    },
+    {
+      "path": "workbench/static/app.js",
+      "before": "sha256:620fbf1ebbd62f388ce8d44860572d123ae1946dbf8263a9af8a320cc65bf348",
+      "after": "sha256:ebeecbb12f2c399028c2167bc7403d0c753201844a605012721a3d2d9f0ff0e2",
+      "allowed": true
+    }
+  ],
+  "unauthorized_tracked_changes": [],
+  "private_mismatch_count": 0,
+  "specialist_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "specialist_status_unchanged": true,
+  "new_freeze_hashes_match": true,
+  "passed": true
+}

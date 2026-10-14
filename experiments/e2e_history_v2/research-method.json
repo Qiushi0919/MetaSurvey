@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "method_id": "REPORTED_BUSINESS_EXPOSURE_AND_CONCENTRATION_V1",
+  "frozen_at": "2026-10-14T08:14:24.916161+00:00",
+  "prior_method_ref": "sha256:b58784a57ce12a9979c583b5808f48d182bd509bed90d472e3ffd88a5bd0cd5e",
+  "business_share": {
+    "formula": "compatible reported segment revenue / consolidated revenue; Decimal string, same period/currency; intersegment eliminations unresolved => UNKNOWN",
+    "PCB_SAMPLE": "printed circuit board manufacturing only; packaging/assembly not silently included",
+    "HV_EQUIPMENT_SAMPLE": "explicit high-voltage business only; mixed-voltage switch/transformer groups without split UNKNOWN",
+    "COPPER_PRODUCERS_SAMPLE": "copper related business including trading only when compatible external segment revenue denominator is evidenced; unresolved eliminations UNKNOWN",
+    "score": "share*100 on [0,1] only; business exposure subfactor, not full sector benefit or seven-factor total"
+  },
+  "concentration": {
+    "threshold": "0.50",
+    "penalty_when_above": "10",
+    "allowed_evidence": [
+      "exact largest customer ratio",
+      "top-five total <=0.50 proves largest <=0.50 but exact value remains unknown",
+      "explicit report statement no single customer above0.50"
+    ],
+    "unknown": "no numeric or sufficiently bounded evidence =>UNKNOWN; no neutral filling"
+  },
+  "audit_opinion": "observed text only; does not clear all legal/leverage/other risk gates",
+  "catalyst": "no complete recent event search =>NOT_ASSESSED, no score",
+  "scores_are_probabilities": false,
+  "historical_inputs": false
+}

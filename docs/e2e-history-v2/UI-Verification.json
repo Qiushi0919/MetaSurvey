@@ -1,0 +1,51 @@
+{
+  "kind": "E2EHistoryWorkbenchVerification",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-14T08:40:30.478090+00:00",
+  "base_url": "http://127.0.0.1:8769",
+  "run_id": "E2EH2-20261014-ANONYMOUS-SOURCE-FAILURE-01",
+  "real_engine_called": false,
+  "case_exists": false,
+  "diagnostic_result": null,
+  "research_business_subfactors": 4,
+  "concentration_judgements": 7,
+  "preserved_v1_financial_components": 27,
+  "http_run_matches_saved_run": true,
+  "http_research_matches_saved_result": true,
+  "fixed_evidence_documents": {
+    "history-registry": "CONTENT_AND_HASH_MATCH",
+    "history-protocol": "CONTENT_AND_HASH_MATCH",
+    "history-source": "CONTENT_AND_HASH_MATCH",
+    "history-inputs": "CONTENT_AND_HASH_MATCH",
+    "history-method": "CONTENT_AND_HASH_MATCH"
+  },
+  "post_405": true,
+  "private_input_and_case_endpoint_rejected": true,
+  "read_only_files_checked": 81,
+  "read_only_hashes_unchanged": true,
+  "browser": "Safari via CUA",
+  "browser_routes_observed": [
+    "dashboard",
+    "candidates",
+    "validation",
+    "history-source evidence modal"
+  ],
+  "screenshot_paths": [
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/01-dashboard.png",
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/02-research-factors.png",
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/03-history-source-failure.png",
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/04-source-evidence.png"
+  ],
+  "limitations": [
+    "No successful real market history execution: anonymous source login failed.",
+    "UI renders recorded artifacts; not a live task monitor.",
+    "Current factor increments do not fill complete company/sector scores."
+  ],
+  "screenshot_hashes": {
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/01-dashboard.png": "sha256:3173f10fa25315211a9757dc307d363faea5ccc6cf3763ef1cd5caab3bf85e07",
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/02-research-factors.png": "sha256:a3a35a7805288e1b57ecd3d5fb4193224eb96ed497aac2ab1826898dfd58bfb4",
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/03-history-source-failure.png": "sha256:3ecda0e43e8bc72a8d5e074877d773bdc77e823d6ce0d04c8abd833067abb572",
+    "/Users/qiushi/投资研究/.p1b-archives/e2e-history-v2-20261014/screenshots/04-source-evidence.png": "sha256:ee102876cfa61eaafe90f9b51de6099c4cb54f125ce7074fc9e21336b055fbac"
+  },
+  "screenshot_storage": "LOCAL_ARTIFACTS_OUTSIDE_TEXT_ONLY_PUBLICATION"
+}

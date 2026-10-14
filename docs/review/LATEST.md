@@ -4,6 +4,7 @@
 
 | 内容 | 位置 | 状态 |
 |---|---|---|
+| 真实历史输入与首次引擎运行 V2 | [本轮验收](../e2e-history-v2/Acceptance-Report.md) · [来源核验](../e2e-history-v2/Source-Review.md) · [独立审查](../e2e-history-v2/Independent-Review.md) · [CI](../e2e-history-v2/CI-Results.json) | 主目标未达成：匿名源两次连接失败，engine_called=false；历史例外事件decoder仍缺；新增4业务子分项/7集中判断 |
 | 端到端研究试点与基础组合诊断 V1 | [本轮验收](../e2e-pilot-v1/Acceptance-Report.md) · [真实资料](../e2e-pilot-v1/Data-Feasibility.md) · [独立复核](../e2e-pilot-v1/Independent-Review.md) · [双平台CI](../e2e-pilot-v1/CI-Results.json) | 9家公司/27真实财务分项已接工作台；完整总分及真实历史运行尚未完成 |
 | V0审查修正与真实输入核对 | [本轮验收](../score-review-v01/Acceptance-Report.md) · [差异](../score-review-v01/Changes.md) · [字段缺口](../score-review-v01/Field-Matrix.md) | Ubuntu/macOS评分72+工作台51均通过；真实总分BLOCKED；候选工程规则已确认 |
 | 双层评分实验与七页工作台 | [本轮验收报告](../sector-stock-v0/Acceptance-Report.md) · [规则](../sector-stock-v0/Scoring-Rules.md) · [预注册](../sector-stock-v0/Preregistration.json) | 计算/Schema/界面工程通过；真实评分0，正式回测未运行；候选方法待审批 |

@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-14T08:14:24.916161+00:00",
+  "before_strategy_results": true,
+  "before_new_research_scores": true,
+  "files": {
+    "experiments/e2e_history_v2/protocol.json": "sha256:95120d8082f2c15bfdb218416baa80ba91e9206a88a5128ee153204c7045fed5",
+    "experiments/e2e_history_v2/research-method.json": "sha256:fedb39b95bfdee4bc1bf4068824cb80da633bcc5c465399c4baf7d49fcfb6dd9"
+  },
+  "prior_files_immutable": true
+}
