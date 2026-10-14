@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901",
+  "public_tested_commit": "47449bc57572a90cc9908d40ff725ab5ae0a0399",
+  "source_code_commit": "085ee4e2efd3d56ef14468ea4c91c3b7873f87a2",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "suite": "scoring",
+      "os": "macos-latest",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "commit": "47449bc57572a90cc9908d40ff725ab5ae0a0399",
+      "job_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700291222",
+      "result_sha256": "sha256:68c3be42f8147f93600b1af8b5c7f93b7ada615c838794b335d66be46be14178"
+    },
+    {
+      "suite": "scoring",
+      "os": "ubuntu-latest",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "commit": "47449bc57572a90cc9908d40ff725ab5ae0a0399",
+      "job_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700290840",
+      "result_sha256": "sha256:3b996cfa2d629ba07dd3db0e2d172d9d418736db7e1c8dd92ecb5b6a3bff5461"
+    },
+    {
+      "suite": "workbench",
+      "os": "macos-latest",
+      "unique_cases": 51,
+      "executions": 51,
+      "passed": true,
+      "commit": "47449bc57572a90cc9908d40ff725ab5ae0a0399",
+      "job_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700291755",
+      "result_sha256": "sha256:dd4a8438509574c8d3b55512e7b5e3bce6a4bfe241a748d517df2fdb6d9a8548"
+    },
+    {
+      "suite": "workbench",
+      "os": "ubuntu-latest",
+      "unique_cases": 51,
+      "executions": 51,
+      "passed": true,
+      "commit": "47449bc57572a90cc9908d40ff725ab5ae0a0399",
+      "job_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700291206",
+      "result_sha256": "sha256:8e7a3858557444a6abf5d7103b26c62c2e1cdf599d97aa6a252ecdc1d1e18ca5"
+    }
+  ],
+  "counting": "72 scoring +51 workbench distinct cases; repeated on2 OS, not246 different cases",
+  "downloaded_artifact_directory": "/Users/qiushi/\u6295\u8d44\u7814\u7a76/.p1b-archives/score-review-20261014/github-ci",
+  "scope": "SYNTHETIC_ENGINEERING_ONLY",
+  "preserved_regression": {
+    "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756966",
+    "headSha": "47449bc57572a90cc9908d40ff725ab5ae0a0399",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "portable-review (ubuntu-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756966/job/115700291083"
+      },
+      {
+        "name": "portable-review (macos-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756966/job/115700291255"
+      }
+    ]
+  }
+}

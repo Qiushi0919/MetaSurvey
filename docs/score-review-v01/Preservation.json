@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-14T05:38:14.463905+00:00",
+  "checked_at": "2026-10-14T05:43:03.367811+00:00",
   "baseline_head": "574177653f962aae16e40ec02d303adde298e3a4",
   "public_baseline_head": "7558a9360d635aea278f7e9e98f3745d76c63e17",
   "baseline_tracked": 1081,
@@ -14,6 +14,8 @@
   ],
   "actual_changed": [
     "AGENTS.md",
+    "docs/review/INDEX.json",
+    "docs/review/LATEST.md",
     "workbench/README.md",
     "workbench/server.py",
     "workbench/static/app.js",
@@ -428,5 +430,38 @@
   ],
   "specialist_head": "4252876e23224df5d29c20492a08da9436dccf4a",
   "specialist_status": "",
-  "scope": "All baseline tracked bytes and19 pinned private files; new5 source originals pinned by Sample Registry; no blanket filesystem audit"
+  "scope": "All baseline tracked bytes and19 pinned private files; new5 source originals pinned by Sample Registry; no blanket filesystem audit",
+  "unchanged_baseline_tracked": 1074,
+  "sample_originals": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/captures/G1/report.json",
+      "expected": "sha256:1c0c5f9d35829bc18f89270228c53adb3f73878323571f46006f910437178af1",
+      "actual": "sha256:1c0c5f9d35829bc18f89270228c53adb3f73878323571f46006f910437178af1",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/captures/FULL-G1/report.json",
+      "expected": "sha256:16f4b0398520eff35d6e805e4c8c21c3200b623e5eea6bb4027108a465a8f1fb",
+      "actual": "sha256:16f4b0398520eff35d6e805e4c8c21c3200b623e5eea6bb4027108a465a8f1fb",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/captures/G1/stock_basic-603228.SH.response.json",
+      "expected": "sha256:a7334eaf9a053a51246bed92c9fbc5d961bfa2ff03c1036b89c096a704167dca",
+      "actual": "sha256:a7334eaf9a053a51246bed92c9fbc5d961bfa2ff03c1036b89c096a704167dca",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/captures/G1/fina_indicator-603228.SH.response.json",
+      "expected": "sha256:85a93cb06fe600d33dab98180b835a791dc0b07a1100ae55bf85ec13263f9522",
+      "actual": "sha256:85a93cb06fe600d33dab98180b835a791dc0b07a1100ae55bf85ec13263f9522",
+      "match": true
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/captures/FULL-G1/FULL-income-603228.SH.response.json",
+      "expected": "sha256:62efd4db1a65ebdb73a910757c7055abad12e8e6849e08546b66ec882143c216",
+      "actual": "sha256:62efd4db1a65ebdb73a910757c7055abad12e8e6849e08546b66ec882143c216",
+      "match": true
+    }
+  ]
 }

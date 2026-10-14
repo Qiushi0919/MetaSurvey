@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "085ee4e2efd3d56ef14468ea4c91c3b7873f87a2",
-  "captured_at": "2026-10-14T05:38:39.163334+00:00",
+  "source_commit": "34d7bfc822d9ba4b2a94e07b77cf2b023f63ac38",
+  "captured_at": "2026-10-14T05:45:10.201994+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1103,
+  "included_source_files": 1104,
   "files": [
     {
       "path": ".env.example",
@@ -2348,8 +2348,8 @@
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 3200,
-      "sha256": "sha256:629ddaea2624ed28d028c8c93576a47606b9614cc691396d15811aa723ab8911"
+      "bytes": 3224,
+      "sha256": "sha256:88cc255cb4d70b8e0f1425513917258ae1c5b88f3ac778cd79927d50d37b4a8b"
     },
     {
       "path": "docs/review/PUBLISHING.md",
@@ -2448,8 +2448,13 @@
     },
     {
       "path": "docs/score-review-v01/Acceptance-Report.md",
-      "bytes": 4349,
-      "sha256": "sha256:ae35a18e09135f6994220d99056d7f38c8fed5d1cf18588537eadda40d233e1a"
+      "bytes": 5930,
+      "sha256": "sha256:d2414e5c4e6da5618d201905c198dab7b390f99981a4c72d2fc1f513d820a4ed"
+    },
+    {
+      "path": "docs/score-review-v01/CI-Results.json",
+      "bytes": 2773,
+      "sha256": "sha256:a5d03195cea78e6c5e560ee3203ad452d1a03299ab1e21806cfcc01611fcce92"
     },
     {
       "path": "docs/score-review-v01/Changes.md",
@@ -2478,8 +2483,8 @@
     },
     {
       "path": "docs/score-review-v01/Preservation.json",
-      "bytes": 20182,
-      "sha256": "sha256:1709fbeb6c3e848b6febaa6349550ceca70b09ca7b4cd5a9a1012b97858e655f"
+      "bytes": 21967,
+      "sha256": "sha256:f155eb779a9553f69c19402966d7831b897ebc8a2e60bde1101c44a1eb199b03"
     },
     {
       "path": "docs/score-review-v01/Sample-Registry.json",

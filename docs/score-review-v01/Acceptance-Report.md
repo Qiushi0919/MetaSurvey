@@ -21,7 +21,7 @@
 
 现有公开回归保持：Node250执行=249通过/1原有可选SKIP；Python209通过。16个原生合同与30个真实配置缺口核对通过。没有通过改旧pin/seal修复历史复跑；WAVE_C_DEPENDENCY_INVALIDATED仍如实显示。
 
-独立Ubuntu/macOS CI：工作流 `.github/workflows/score-workbench.yml`，评分与工作台独立job，唯一用例清单、commit、运行链接及日志作为artifact保存。最终实际运行结果见本页随后补入的CI记录；当前本地工程检查已经通过，远程检查待发布运行。原 `review.yml` 回归保留，原 `p0.yml/real-slice.yml` 不变。
+独立Ubuntu/macOS CI：工作流 `.github/workflows/score-workbench.yml`，评分与工作台独立job，唯一用例清单、commit、运行链接及日志作为artifact保存。[CI结果](CI-Results.json)已实际核验，公开代码提交 `47449bc57572a90cc9908d40ff725ab5ae0a0399`（源码 `085ee4e2efd3d56ef14468ea4c91c3b7873f87a2`）。Ubuntu/macOS 各评分72、工作台51全部通过；这是123个不同用例重复跨平台执行，不是246个不同用例。原回归另见下表。原 `review.yml` 回归保留，原 `p0.yml/real-slice.yml` 不变。
 
 HTTP测试只启动临时loopback服务并使用临时合成档案；审计钩子拒绝私有档案/钥匙串访问，外部连接拒绝。真实页面操作证据单独记录，读取Owner允许的固定本地研究档案，不进入公共CI。
 
@@ -38,3 +38,18 @@ python3 -B -m workbench.server --port 8767
 现有同板块真实完整分数0、归一化分项0；仅半年同比算术1项可独立核对。九维板块风险/竞争格局/价格订单、TTM与资本成本、完整事件窗口、成员与分部收入等仍需审批/证据。旧原件有效期与修订链不因本次核对变得完整。下轮优先补这张字段表和具体方法，不启动全市场选股或正式五年回测。
 
 首轮准备遇到财报同期间多个update_flag，保留各行并只在收入完全相同时做纯算术比较，不选版本。政策窗口候选文字误把90自然日概括成60交易日，已恢复V0政策90自然日/催化60交易日，保留初版私有包Sample.json，最终采用Sample-r2.json；不改封存V0。工程验收不代表数据许可、历史PIT或投资有效性。完成后STOP。
+
+## 双平台独立CI实测
+
+| 检查 | 平台 | 唯一用例 | 结果 | 运行链接 |
+|---|---|---|---|---|
+| scoring | macos-latest | 72 | PASS | [job](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700291222) |
+| scoring | ubuntu-latest | 72 | PASS | [job](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700290840) |
+| workbench | macos-latest | 51 | PASS | [job](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700291755) |
+| workbench | ubuntu-latest | 51 | PASS | [job](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756901/job/115700291206) |
+
+已下载实际CI artifacts并逐一比对commit及唯一用例数量；汇总hash在CI-Results.json，日志可从对应运行下载。后续验收记录提交仅改文档，不改变上述受测代码。
+
+“缺口”表示尚未建立可准入的完整计算依据，不等于所有原始字段均不存在。本轮逐行核验的财务量为半年收入，其余TTM/行业序列的桥接仍待做；不能用这次半年度算术检查替代TTM。
+
+原有公开回归也在同一代码提交双平台通过：[Ubuntu](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756966/job/115700291083)、[macOS](https://github.com/Qiushi0919/MetaSurvey/actions/runs/38517756966/job/115700291255)。四项新功能job加两项原回归job均PASS。
