@@ -8,6 +8,13 @@
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
     {
+      "phase": "E2E_COMPATIBLE_GATEWAY_V3",
+      "report": "docs/e2e-gateway-v3/Acceptance-Report.md",
+      "registry": "docs/e2e-gateway-v3/Registry.json",
+      "result": "docs/e2e-gateway-v3/Result-Summary.json",
+      "business_state": "REAL_DIAGNOSTIC_ENGINE_COMPLETED_FULL_RESEARCH_UNVALIDATED_BROWSER_ACCEPTANCE_PENDING"
+    },
+    {
       "phase": "E2E_HISTORY_V2",
       "report": "docs/e2e-history-v2/Acceptance-Report.md",
       "registry": "docs/e2e-history-v2/Registry.json",

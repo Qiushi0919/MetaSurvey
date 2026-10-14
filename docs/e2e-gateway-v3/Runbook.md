@@ -29,3 +29,11 @@ CI只用明确合成的临时fixture，禁止市场网络/私有档案/凭证；
 ## 证据等级
 
 供应商身份和许可证独立核实仍未完成。Owner本轮批准个人本地重建诊断，不把API成功升级为许可/PIT认证。真实retrieved_at保留；18:00是模拟决策可见性假设，不是倒填的历史available_at。当前选定九股有选择偏差，不能代表全市场。旧Forward、正式五年验证、云端导出、生产和券商均未解锁。
+
+## 本轮已存在产物的只读复核
+
+```sh
+python3 -B tools/e2e_gateway/run.py --verify-existing /Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/runs/E2EG3-20261014-FIXED-NINE-01
+```
+
+该命令不采行情、不读取凭证；校验原件/版本绑定并确定性复算已登记结果，不生成新的策略选择或交易。

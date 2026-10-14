@@ -1,7 +1,7 @@
 {
   "kind": "LocalOnlyPublicationManifest",
   "version": "1.0.0",
-  "source_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
+  "source_commit": "0fc16ddca99a8d211a7ac45900d8a35997724655",
   "files": [
     {
       "path": "tests/fixtures/p1a-data/public-capture.json",

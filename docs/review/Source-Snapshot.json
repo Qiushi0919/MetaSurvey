@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
-  "captured_at": "2026-10-14T09:34:08.872652+00:00",
+  "source_commit": "0fc16ddca99a8d211a7ac45900d8a35997724655",
+  "captured_at": "2026-10-14T09:42:54.216073+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1206,
+  "included_source_files": 1211,
   "files": [
     {
       "path": ".env.example",
@@ -58,8 +58,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 37535,
-      "sha256": "sha256:af100ac6b71d224b920e9662d4df1fa35e4ba137ac0c95221c5210673e1cee86"
+      "bytes": 38114,
+      "sha256": "sha256:cb3df43bb4cb207e00755d8bfae3d333a5acb976bd27c9aba06d5cb47e343b2f"
     },
     {
       "path": "README-Historical-20261008.md",
@@ -1667,14 +1667,19 @@
       "sha256": "sha256:952b0a920e1e1f45f73c82059f402734c69e7607bd11fd40449a03d5bd4807b2"
     },
     {
+      "path": "docs/e2e-gateway-v3/Acceptance-Report.md",
+      "bytes": 9583,
+      "sha256": "sha256:e8b77157f4cfb7bd8fce8c7b1ea31cbec1b9812dfd42d4b3f851e8b6eddbbe9d"
+    },
+    {
       "path": "docs/e2e-gateway-v3/Actual-Input-Review.md",
       "bytes": 10707,
       "sha256": "sha256:a2d183c18d9e8679c7211cea650ebdb7f5be64e3992bb3aea962f5138b75733b"
     },
     {
       "path": "docs/e2e-gateway-v3/CI-Results.json",
-      "bytes": 8911,
-      "sha256": "sha256:4fab4dbd11732f79a99da4645efdeaf5abe46fd58527b1ea6665d68123d0bbd8"
+      "bytes": 9316,
+      "sha256": "sha256:b65f88a4465f29d69be216bfbe49c0c75a8941d99522d68058611e2023667eb0"
     },
     {
       "path": "docs/e2e-gateway-v3/Freeze-R2.json",
@@ -1692,9 +1697,14 @@
       "sha256": "sha256:44141e89b3d38aebb10567ebb0ead8255679b24961dfbe5032595f5021dbafe9"
     },
     {
+      "path": "docs/e2e-gateway-v3/Independent-Arithmetic.json",
+      "bytes": 5055,
+      "sha256": "sha256:cadd589e2c8883a0d6adbbb5e18d2f6a640ca01e376366b4d196b199cb1aaf32"
+    },
+    {
       "path": "docs/e2e-gateway-v3/Independent-Review.md",
-      "bytes": 14357,
-      "sha256": "sha256:6cf4892b3f4080c1be22a0c4a7726fa86c894c901eeed0b769ae3ea657d777be"
+      "bytes": 17726,
+      "sha256": "sha256:1abf1a256fbb573c5ca139ef48c919db6986bc7a9ce1f82c279fa55a1108513b"
     },
     {
       "path": "docs/e2e-gateway-v3/Input-Plan.md",
@@ -1713,8 +1723,18 @@
     },
     {
       "path": "docs/e2e-gateway-v3/Preservation.json",
-      "bytes": 2790,
-      "sha256": "sha256:f7ad820cd6a5ac5a925bcb139287190423f28387db8106ff55948abf44e3ffac"
+      "bytes": 4029,
+      "sha256": "sha256:50642392f9e229df6a6ca8203021d6264a27ce9320069dd27d289b2162afadbe"
+    },
+    {
+      "path": "docs/e2e-gateway-v3/Registry.json",
+      "bytes": 2136,
+      "sha256": "sha256:733aeef0d85550c949e4e3a3ce3016ac3c76c56760e9d21a6b534480ab967174"
+    },
+    {
+      "path": "docs/e2e-gateway-v3/Result-Summary.json",
+      "bytes": 2878,
+      "sha256": "sha256:e47a1a7abf36e8b61067da2f0023514880bb375bf47f6b51c4ebbad287225e5d"
     },
     {
       "path": "docs/e2e-gateway-v3/Retry-Decision.json",
@@ -1723,8 +1743,8 @@
     },
     {
       "path": "docs/e2e-gateway-v3/Runbook.md",
-      "bytes": 2748,
-      "sha256": "sha256:f21910f9f8068fc14962ff9e549e583552ceb3f7c318b3b07c796517f50712a3"
+      "bytes": 3097,
+      "sha256": "sha256:c7e9ff06bf73b273f73ef3438eb1c7ecfff1f43c09f8cf976564e5e755e73ee3"
     },
     {
       "path": "docs/e2e-gateway-v3/Source-Policy.json",
@@ -1735,6 +1755,11 @@
       "path": "docs/e2e-gateway-v3/Source-Review.md",
       "bytes": 8524,
       "sha256": "sha256:2d682c95e14c77f2f72f7124fbed67c6902c8327d0c1269bbfacd065c20b82d1"
+    },
+    {
+      "path": "docs/e2e-gateway-v3/UI-Verification.json",
+      "bytes": 3516,
+      "sha256": "sha256:88ec30a493ac448339b155d94f1d7569acafea91e783915c88b40b471f902800"
     },
     {
       "path": "docs/e2e-history-v2/Acceptance-Report.md",
@@ -2653,13 +2678,13 @@
     },
     {
       "path": "docs/review/INDEX.json",
-      "bytes": 2669,
-      "sha256": "sha256:b43d71a24397c5ff5835fcfbe2c424b08982c0ed55d18fdd87deba22f37b2023"
+      "bytes": 3012,
+      "sha256": "sha256:57dfb9aef9ecf00ba6a3ff52b0f55a839c19d5a5f7e0d9eb51cc01886a4913f5"
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 3994,
-      "sha256": "sha256:c859921957288d848d366e5cc6c3953b6c2a933392e3aa4331c02d6fe3cc0cca"
+      "bytes": 4406,
+      "sha256": "sha256:b9d6aa6c90e1af241a73dda9a83ec55148b1a094c06de87363b0737bda46a8e5"
     },
     {
       "path": "docs/review/PUBLISHING.md",

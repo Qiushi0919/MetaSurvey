@@ -1,0 +1,94 @@
+{
+  "kind": "GatewayWorkbenchVerification",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-14T09:36:45.134031+00:00",
+  "code_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
+  "base_url": "http://127.0.0.1:8769",
+  "verification_status": "HTTP_AND_ARTIFACT_MATCH_BROWSER_PENDING_MAC_LOCKED",
+  "result_type": "RECONSTRUCTED_HISTORY_DIAGNOSTIC",
+  "cost_label": "SIMULATED_COSTS",
+  "historical_visibility_proven": false,
+  "production_enabled": false,
+  "actual_artifact_summary": {
+    "run_id": "E2EG3-20261014-FIXED-NINE-01",
+    "status": "SIMULATED_TRADES",
+    "engine_called": true,
+    "daily": 241,
+    "decisions": 241,
+    "fills": 70,
+    "unfilled": 83,
+    "ledger": 95,
+    "complete_trades": 35,
+    "errors": 0,
+    "net_return": "0.0596976",
+    "maximum_drawdown": "0.10662748625532015046452222132146493279230532444007506860635235223767934853258624",
+    "api_matrix_count": 65,
+    "research_counts": {
+      "business": 4,
+      "concentration": 7
+    },
+    "run_exact_match": true,
+    "engine_result_exact_match": true,
+    "api_matrix_matches_capture_wrappers": true
+  },
+  "evidence_endpoint_checks": {
+    "gateway-registry": {
+      "http_status": 200,
+      "source": "docs/e2e-gateway-v3/Registry.json",
+      "sha256": "sha256:733aeef0d85550c949e4e3a3ce3016ac3c76c56760e9d21a6b534480ab967174",
+      "content_match": true
+    },
+    "gateway-source": {
+      "http_status": 200,
+      "source": "docs/e2e-gateway-v3/Source-Review.md",
+      "sha256": "sha256:2d682c95e14c77f2f72f7124fbed67c6902c8327d0c1269bbfacd065c20b82d1",
+      "content_match": true
+    },
+    "gateway-inputs": {
+      "http_status": 200,
+      "source": "docs/e2e-gateway-v3/Input-Plan.md",
+      "sha256": "sha256:e7349d10653fa15ee28e40fc801c52198ebc112f59a6151d76e6cfd9aca1d152",
+      "content_match": true
+    },
+    "gateway-policy": {
+      "http_status": 200,
+      "source": "docs/e2e-gateway-v3/Source-Policy.json",
+      "sha256": "sha256:063c3ef976db87792e39f3e625f7c70a312ddea61a7c13f27c0e9e28368e6c32",
+      "content_match": true
+    }
+  },
+  "static_assets_match": {
+    "/": {
+      "http_status": 200,
+      "sha256": "sha256:ae66ea25c5f0138fc23920c908a6ea3c7ac8af16c5c7a49ad816c88ca897b619",
+      "content_match": true
+    },
+    "/app.js": {
+      "http_status": 200,
+      "sha256": "sha256:3a9c907efb74a2bbd484913134edb467d7b6ecb37be5f631c4c059b09ffa520f",
+      "content_match": true
+    },
+    "/style.css": {
+      "http_status": 200,
+      "sha256": "sha256:874911befc3a553c9a53d053dd0821a1d2ed02183051f1b3ee87c325b9801fe1",
+      "content_match": true
+    }
+  },
+  "write_requests_rejected": true,
+  "unallowlisted_private_files_rejected": true,
+  "protected_files_checked": 156,
+  "protected_hashes_unchanged": true,
+  "browser_check": {
+    "status": "BLOCKED_MAC_LOCKED",
+    "attempted_action": "CUA getApp com.apple.Safari before UI navigation",
+    "observed_tool_error": "The Mac is locked and automatic unlock could not unlock it.",
+    "screenshots": [],
+    "screenshot_directory": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/screenshots",
+    "previous_screenshots_reused": false
+  },
+  "limitations": [
+    "HTTP equality verifies served content, not successful browser layout or click behavior in this run.",
+    "V3 actual screenshots and click tracing require an unlocked Mac; they are not complete.",
+    "Simulation performance does not establish investment validity, untouched OOS, original historical PIT, or production admission."
+  ]
+}

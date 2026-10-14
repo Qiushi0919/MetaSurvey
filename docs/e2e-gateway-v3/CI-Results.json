@@ -1,41 +1,73 @@
 {
-  "recorded_at": "2026-10-14T09:18:37.493969+00:00",
+  "recorded_at": "2026-10-14T09:40:14.034504+00:00",
   "scope": "ISOLATED_SYNTHETIC_ENGINEERING_NOT_MARKET_VALIDATION",
-  "public_code_commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-  "source_code_commit": "247da84e41b0e0cf082d555abdfb29369f57f2f7",
+  "public_code_commit": "6e05890905039c5df420c2dbac40cccae7174668",
+  "source_code_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
   "results": [
     {
+      "suite": "E2E_GATEWAY_V3",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "6e05890905039c5df420c2dbac40cccae7174668",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459655",
+      "unique_cases": 117,
+      "executions": 117,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38543459655/e2e-gateway-macos-latest/result.json",
+      "result_sha256": "sha256:b12bc7f1ef6c054f6c589646deb14cbbe6a4dce69a78f23602be5af9c64be0d5",
+      "log_sha256": "sha256:d613aee4c22bcccdc7a24c2b045c8b0d44ef846d4a872c163362ec2438d3f341"
+    },
+    {
+      "suite": "E2E_GATEWAY_V3",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "6e05890905039c5df420c2dbac40cccae7174668",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459655",
+      "unique_cases": 117,
+      "executions": 117,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38543459655/e2e-gateway-ubuntu-latest/result.json",
+      "result_sha256": "sha256:7d37a9470c9f434d09a3a5a107792f489853dcd5b620f8ac3d8f89c8ee9fdd01",
+      "log_sha256": "sha256:f876e69836e23cd69505a0b6c98ef30105fb58111039dd201f0eda59328a12ae"
+    },
+    {
       "suite": "scoring",
-      "commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169769",
+      "commit": "6e05890905039c5df420c2dbac40cccae7174668",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459640",
       "scope": "SYNTHETIC_ENGINEERING_ONLY",
       "platform": "darwin",
       "unique_cases": 72,
       "executions": 72,
       "passed": true,
       "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct",
-      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169769/scoring-macos-latest/result.json",
-      "result_sha256": "sha256:27ba754ff6ee7dee8ff6d271eb8c431de3554d0515df2aff28315d7db1ae0f49",
-      "log_sha256": "sha256:cb41af7fffadd34b18908b32c8c675225a6bc478f7762494d4e0527447c4d641"
+      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38543459640/scoring-macos-latest/result.json",
+      "result_sha256": "sha256:0cf62507efc552e1f58bca8f4822b32f3d0a234de9e48ed22ac898966c1db804",
+      "log_sha256": "sha256:c7d349efefaca324db5d77bc8d16ced38b80f22d7ed7857023cf02991fd4389d"
     },
     {
       "suite": "scoring",
-      "commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169769",
+      "commit": "6e05890905039c5df420c2dbac40cccae7174668",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459640",
       "scope": "SYNTHETIC_ENGINEERING_ONLY",
       "platform": "linux",
       "unique_cases": 72,
       "executions": 72,
       "passed": true,
       "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct",
-      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169769/scoring-ubuntu-latest/result.json",
-      "result_sha256": "sha256:1fbf728efed77614982406d11d97fd3e8734bd68b1a513dead5bc9c80709f159",
-      "log_sha256": "sha256:e98c25b04eb482a6e7528c11f6ad016c5aa9c1530e7083577fef7085208d7e6a"
+      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38543459640/scoring-ubuntu-latest/result.json",
+      "result_sha256": "sha256:9a6e948eea06f64e37cfe1a27556982b86d9ca6758fd0ec178dd3173bb686e83",
+      "log_sha256": "sha256:e5041db36b94fbeb78b2bc19d7d80a3bb170c1307d1a8b70eaa7c6dc3ff8b420"
     },
     {
       "suite": "workbench",
-      "commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169769",
+      "commit": "6e05890905039c5df420c2dbac40cccae7174668",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459640",
       "scope": "SYNTHETIC_ENGINEERING_ONLY",
       "platform": "darwin",
       "unique_cases": 118,
@@ -46,14 +78,14 @@
       "passed": true,
       "network_scope": "TEMPORARY_LOOPBACK_ONLY",
       "private_archive_access": "DENIED_BY_AUDIT_HOOK",
-      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169769/workbench-macos-latest/result.json",
-      "result_sha256": "sha256:781e0de3ccd824c3a03971d425fab6fddbfb89d91d233c73bac5f51f721f4314",
-      "log_sha256": "sha256:5f50069a97b9cf9a94f5c5754df250f2118c8cbce9670975991a7aa9fbadfd7c"
+      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38543459640/workbench-macos-latest/result.json",
+      "result_sha256": "sha256:30761d077279b8a43e4f190bad067ffd90b5a3b5b3dd3d8e753843141dfb69b5",
+      "log_sha256": "sha256:fe14112fba97c42485a7cc7b32c8c08d75585b402110cdfffef13577d7b91e55"
     },
     {
       "suite": "workbench",
-      "commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169769",
+      "commit": "6e05890905039c5df420c2dbac40cccae7174668",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459640",
       "scope": "SYNTHETIC_ENGINEERING_ONLY",
       "platform": "linux",
       "unique_cases": 118,
@@ -64,9 +96,9 @@
       "passed": true,
       "network_scope": "TEMPORARY_LOOPBACK_ONLY",
       "private_archive_access": "DENIED_BY_AUDIT_HOOK",
-      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169769/workbench-ubuntu-latest/result.json",
-      "result_sha256": "sha256:8cdc52b2850183a9891b2d0740d14d0fa3ba26259c60020758d6931dd0adb9ad",
-      "log_sha256": "sha256:f3f4b7d1d56c714540a669d1298adcddcb0e1851b29afc08c1b827762795678a"
+      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38543459640/workbench-ubuntu-latest/result.json",
+      "result_sha256": "sha256:f853ad307a489091259dacd4335a7accd58824c5cff054840cdcf4826f41d18a",
+      "log_sha256": "sha256:9315220cc70670be9f7f9fecadbca5cb5e86200a1a3ec820b39b116b3e838f41"
     },
     {
       "suite": "E2E_HISTORY_V2",
@@ -131,59 +163,36 @@
       "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169779/e2e-pilot-ubuntu-latest/result.json",
       "result_sha256": "sha256:4870c6fb1be80d144191804c53d1977d6eecfd07354c38f7b440b762861b7462",
       "log_sha256": "sha256:1c392ea12019350f251b55ae25dc2146150317275db29997989ddfdaa3d78b2b"
-    },
-    {
-      "suite": "E2E_GATEWAY_V3",
-      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
-      "commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-      "platform": "darwin",
-      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169950",
-      "unique_cases": 108,
-      "executions": 108,
-      "failures": 0,
-      "errors": 0,
-      "skips": 0,
-      "passed": true,
-      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169950/e2e-gateway-macos-latest/result.json",
-      "result_sha256": "sha256:a48930beffe267259c68ca814098195d7d3c472af7d722674c8f26c297077536",
-      "log_sha256": "sha256:183e5173f70d3f76503e66902c6d788d4d46cb316be9e092c650badde5830ab1"
-    },
-    {
-      "suite": "E2E_GATEWAY_V3",
-      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
-      "commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
-      "platform": "linux",
-      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169950",
-      "unique_cases": 108,
-      "executions": 108,
-      "failures": 0,
-      "errors": 0,
-      "skips": 0,
-      "passed": true,
-      "result_path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/ci/38541169950/e2e-gateway-ubuntu-latest/result.json",
-      "result_sha256": "sha256:9b81d38460ee658e9a26850f0b42b0160f19fd39dc320f25b5b3c387dc46cc85",
-      "log_sha256": "sha256:9e51ea5f9e6395bd8ffdefb58906158c8449d85396f697a3f8d417ec4fe85abf"
     }
   ],
   "cross_platform_pass": true,
   "case_count_note": "Counts are unique within each suite/platform; V2/V3 share32engine cases; do not sum execution counts as unique cases.",
   "general_public_regression": {
-    "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169738",
-    "head_sha": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
+    "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459665",
+    "head_sha": "6e05890905039c5df420c2dbac40cccae7174668",
     "state": "completed",
     "conclusion": "success",
     "jobs": [
       {
-        "name": "portable-review (macos-latest)",
-        "conclusion": "success",
-        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169738/job/115776001712"
-      },
-      {
         "name": "portable-review (ubuntu-latest)",
         "conclusion": "success",
-        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38541169738/job/115776002029"
+        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459665/job/115783611822"
+      },
+      {
+        "name": "portable-review (macos-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38543459665/job/115783612218"
       }
     ],
-    "receipt_sha256": "sha256:a6ae683ac9c222b026f9f6ee153bbc6169d8688054c686cae1f1d04fda3f9070"
-  }
+    "receipt_sha256": "sha256:f8d0d89cc83fb8f471fbc98d160acbe354bcccf0bb98e12bc9da4e3380bf91f6"
+  },
+  "earlier_checked_code_versions": [
+    {
+      "public_commit": "bb8ecb516b06596b7033e61104a708c9d2cc6c2d",
+      "source_commit": "247da84e41b0e0cf082d555abdfb29369f57f2f7",
+      "gateway_unique_cases": 108,
+      "scope": "PREDECESSOR_INPUT_3.0.1_CODE; preserved history"
+    }
+  ],
+  "old_regression_binding": "V2/Pilot code unchanged from bb8ecb5 checks; new V3 includes V2 engine32 checks again"
 }

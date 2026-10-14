@@ -1,0 +1,84 @@
+{
+  "kind": "PublicDiagnosticRunSummary",
+  "version": "3.0.3",
+  "recorded_at": "2026-10-14T09:35:50.794747+00:00",
+  "run_id": "E2EG3-20261014-FIXED-NINE-01",
+  "run_directory": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/runs/E2EG3-20261014-FIXED-NINE-01",
+  "strategy_id": "CORE40_RECONSTRUCTED_PRICE_VOLUME_DIAGNOSTIC_V2",
+  "namespace": "EXPERIMENT:CORE40:E2E_HISTORY_V2",
+  "input_policy_version": "3.0.3",
+  "code_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
+  "engine_called": true,
+  "status": "SIMULATED_TRADES",
+  "historical_visibility_proven": false,
+  "untouched_oos": false,
+  "formal_five_year_validation": false,
+  "full_research_method_validated": false,
+  "production_enabled": false,
+  "provider_license_independently_verified": false,
+  "cost_label": "SIMULATED_COSTS",
+  "actual_window": {
+    "first_session": "2025-10-09",
+    "last_session": "2026-09-30"
+  },
+  "target_window": {
+    "start": "2025-10-01",
+    "end": "2026-09-30"
+  },
+  "warmup_start": "2025-06-03",
+  "market_sessions": 327,
+  "target_sessions": 241,
+  "raw_price_rows": 2943,
+  "normalized_rows": 2943,
+  "economic_actions": 23,
+  "cash_actions": 23,
+  "stock_actions": 0,
+  "counts": {
+    "fills": 70,
+    "unfilled": 83,
+    "ledger": 95,
+    "decisions": 241,
+    "daily": 241,
+    "errors": 0
+  },
+  "fill_sides": {
+    "BUY": 35,
+    "SELL": 35
+  },
+  "complete_trades": 35,
+  "unfilled_reasons": {
+    "POSITION_COUNT_LIMIT": 26,
+    "RISK_CASH_LOT_OR_VOLUME_UNAFFORDABLE": 35,
+    "SLIPPAGE_OUTSIDE_DAILY_RANGE": 5,
+    "PASSIVE_POSITION_OR_SECTOR_CAP": 17
+  },
+  "initial_cash_cents": 10000000,
+  "final_cash_cents": 10596976,
+  "final_nav_cents": 10596976,
+  "final_positions": 0,
+  "final_receivables": 0,
+  "net_return": "0.0596976",
+  "maximum_drawdown": "0.10662748625532015046452222132146493279230532444007506860635235223767934853258624",
+  "explicit_fee_cents": 53424,
+  "slippage_cents_included_in_prices": 71100,
+  "fee_components_cents": {
+    "commission_cents": 35156,
+    "exchange_cents": 0,
+    "other_cents": 700,
+    "sell_tax_cents": 17568
+  },
+  "net_dividend_cash_cents": 8400,
+  "artifact_hashes": {
+    "Run.json": "sha256:383e14188543508faef39bf7f5b94d4e7c091cfa58e6bed05df22bc7c6496959",
+    "Case.json": "sha256:7b886422ce596e2f84ae6b370525e4d6cdf9d6a21e29fed45cecf46b36575b6e",
+    "BuildReport.json": "sha256:a9e862b7700463830240a63dcae76958064db9bb9c48b0be98eea416caaacc4e",
+    "EngineResult.json": "sha256:26ae4a84415a045b2732a95cf2793152d6406ee7c4d82ac399b3bb40fe637be1"
+  },
+  "derived_summary_only": true,
+  "raw_market_payload_published": false,
+  "limitations": [
+    "Owner-authorized local purpose; provider/license not independently certified",
+    "current fixed sample, reconstructed supplier history, NOT_ORIGINAL_PIT",
+    "actual supplier limits, simulated costs/tax and 18:00 decision clock"
+  ]
+}
