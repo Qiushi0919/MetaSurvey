@@ -1,0 +1,58 @@
+name: Scoring and workbench isolated checks
+on:
+  push:
+    paths: ['experiments/**', 'contracts/sector-stock-*/**', 'workbench/**', 'tools/score_review/**', 'package*.json']
+  pull_request:
+    paths: ['experiments/**', 'contracts/sector-stock-*/**', 'workbench/**', 'tools/score_review/**', 'package*.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scoring:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: python -B tools/score_review/check.py scoring --out ci-results/scoring
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scoring-${{ matrix.os }}
+          path: ci-results/scoring
+      - if: always()
+        run: cat ci-results/scoring/result.json >> "$GITHUB_STEP_SUMMARY"
+  workbench:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: python -B tools/score_review/check.py workbench --out ci-results/workbench
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: workbench-${{ matrix.os }}
+          path: ci-results/workbench
+      - if: always()
+        run: cat ci-results/workbench/result.json >> "$GITHUB_STEP_SUMMARY"
