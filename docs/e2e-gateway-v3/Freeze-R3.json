@@ -1,0 +1,30 @@
+{
+  "kind": "GatewayInputFreeze",
+  "version": "3.0.3",
+  "recorded_at": "2026-10-14T09:33:21.170353+00:00",
+  "before_real_strategy_results": true,
+  "strategy_unchanged": "CORE40_RECONSTRUCTED_PRICE_VOLUME_DIAGNOSTIC_V2",
+  "code_pins": {
+    "tools/e2e_gateway/run.py": "sha256:36316834460718c521020d900feb48d2cd74d12ddabcf7efef64ac51c3ed2cb3",
+    "tools/e2e_gateway/builder.py": "sha256:c7f18a86de6393ba3a5c8a62d99d01e462ee0ff0df29496dd59865831f39c6d1",
+    "tools/e2e_gateway/capture.py": "sha256:ba2c93558fe8faf501e8a447c28d34b1d54761ca9e1e6f30e22f48e11dde3777",
+    "experiments/e2e_gateway_v3/input-policy.json": "sha256:054220c9905270982c4122e428e35fd2bd5dadb433bf19f1dd1f278bb568486d",
+    "docs/e2e-gateway-v3/Source-Policy.json": "sha256:063c3ef976db87792e39f3e625f7c70a312ddea61a7c13f27c0e9e28368e6c32",
+    "docs/e2e-gateway-v3/Owner-Authorization.md": "sha256:98af2feb25b8301d25704914ac5e9c7edc698557f8c894f0b39ab8a82adf93a3",
+    "config/provider/tushare-monthly-gateway.json": "sha256:71d86c0590752d2f761e15f6b16026e09a9cc9fbb0a39e0fc9b5602f5396e419",
+    "tushare-real-admission/probe.py": "sha256:fe632bd17da6663a6fdad702b2d03ff1b2a702927914d333b7302aae0ee9bc26",
+    "tushare-admission/probe.py": "sha256:abb2fb787b197a8048c5b4a8d54ab6e2a68f356006f0794c7daf25b942e4487e",
+    "experiments/e2e_history_v2/engine.py": "sha256:d7e1782267e60ce42de742409256e73eb6ad86e0f938577b6aab62869048f0db",
+    "experiments/e2e_history_v2/protocol.json": "sha256:95120d8082f2c15bfdb218416baa80ba91e9206a88a5128ee153204c7045fed5",
+    "experiments/e2e_pilot_v1/method.json": "sha256:b58784a57ce12a9979c583b5808f48d182bd509bed90d472e3ffd88a5bd0cd5e",
+    "experiments/e2e_pilot_v1/execution.py": "sha256:f1ae1d39452ae69024a92bb223f8b5e747c3b3bd3c42bf2b7c9789e4246b9655",
+    "backtest_5y/gateway.py": "sha256:a7112910c2f399dbbc56b0f5ef4bed1fa4afaa34ebbbf6cb5360b142a5441c1c",
+    "backtest_5y/economics.py": "sha256:61a7ddcf49aa49d065da494e664c286b1b15b076465f1a020b32775d77215190",
+    "wave_f/backtest.py": "sha256:2e12711a89ce40398e76dd85c57c5dd4e3b43b8534e4f95a163be02bc4fafd0e"
+  },
+  "predecessor_freeze_sha256": "sha256:bde1530ea872aea2a40b4515c8ee6538aa1d1cc37e0eceffe22e80d427c03e04",
+  "predecessor_retained": true,
+  "reason": "Only confirmed ex-date dual pre-close interpretation; actual limits and causal cash/share bridge retained; null limit pre-close blocked; no strategy/fee/selection change",
+  "scope": "FIXED_NINE_20250603_20260930",
+  "capture_manifest_hash": "sha256:09911e53519f87048785aca52c164a7126d9c35677c27870785267dd342cf54b"
+}

@@ -1,6 +1,6 @@
 {
   "kind": "GatewayCapturedExecutionInputPolicy",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "source_epoch": "GATEWAY_V3",
   "strategy_semantics": "UNCHANGED_E2E_HISTORY_V2",
   "daily": {
@@ -37,8 +37,8 @@
   "null_action_amounts": "Missing total stock entitlement or gross cash blocks. Component null remains NOT_REPORTED, never zero; a known total is executable without classifying bonus/transfer components.",
   "duplicate_disclosures": "Identical economic execution fields, reporting period, implementation announcement and component disclosure values merge once per ex-date; original row hashes/announcement dates retained. Conflicting values/dates block.",
   "unimplemented_events": "预案 / 股东大会通过 / 不分配 / 停止实施 / 预披露 / 股东大会未通过 / 未通过 excluded from execution with process, original row hash and date fields retained; unknown process blocks",
-  "previous_policy_hash": "sha256:09a17bef6ff4d345b5c8f846e46a5fef8ea994c342e651a2d6313a676884e74f",
-  "registered_at": "2026-10-14T09:26:54.542622+00:00",
+  "previous_policy_hash": "sha256:626dccc9154c1300062a68f8019e73de038af5930f8b9a3ddf180e78022494a2",
+  "registered_at": "2026-10-14T09:29:15.912017+00:00",
   "empty_suspension_compatibility": {
     "api": "suspend_d",
     "http_status": 200,
@@ -57,7 +57,19 @@
     "does_not_allow": "missing-bar synthesis; other APIs/partial schemas/nonempty bad tables; explicit intraday suspension"
   },
   "predisclosure_conflict": "预披露 carrying record_date, ex_date, pay_date, div_listdate or imp_ann_date must block rather than silently exclude",
-  "previous_policy_version": "3.0.1",
-  "previous_code_policy_commit": "247da84",
-  "rejected_proposal_conflict": "股东大会未通过 or 未通过 carrying record_date, ex_date, pay_date, div_listdate or imp_ann_date must block rather than silently exclude"
+  "previous_policy_version": "3.0.2",
+  "previous_code_policy_commit": "a814cf7",
+  "rejected_proposal_conflict": "股东大会未通过 or 未通过 carrying record_date, ex_date, pay_date, div_listdate or imp_ann_date must block rather than silently exclude",
+  "limit_preclose_semantics": {
+    "unchanged": "actual supplied up_limit/down_limit and all RAW OHLC",
+    "equal": "DAILY_REFERENCE",
+    "differing": "only confirmed implemented ex-date with previous actual RAW close, exact match to that RAW close, daily causal ex-right bridge still required",
+    "optional_null": "REJECTED: LIMIT_PRECLOSE_MISSING; no missing/null source value admitted",
+    "preserve": [
+      "pre_close (daily)",
+      "limit_pre_close",
+      "limit_pre_close_kind"
+    ],
+    "otherwise": "LIMIT_DAILY_PRECLOSE_CONFLICT"
+  }
 }

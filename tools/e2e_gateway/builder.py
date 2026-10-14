@@ -334,7 +334,7 @@ def build_case(folder, run_id, run_at):
                 if d in suspension: raise InputError('DUPLICATE_OR_CONFLICTING_SUSPENSION')
                 suspension[d] = row['suspend_type']
             if set(daily)-set(opened) or set(limits)-set(opened): raise InputError('PRICE_OR_LIMIT_OUTSIDE_CALENDAR')
-            previous_close = None
+            previous_close = None; previous_raw_close = None
             for d in opened:
                 action = symbol_actions.get(d)
                 if action and previous_close is not None: previous_close = (previous_close-dec(action['cash_per_share']))/(1+dec(action['bonus_ratio']))
@@ -357,10 +357,19 @@ def build_case(folder, run_id, run_at):
                 if any(v <= 0 or v%D('.01') or not lo <= v <= hi for v in values.values()) or not values['low'] <= min(values['open'],values['close']) <= max(values['open'],values['close']) <= values['high']: raise InputError('RAW_OHLC_OR_LIMIT_CONFLICT')
                 pre = dec(row['pre_close'])
                 if pre <= 0: raise InputError('PRECLOSE_INVALID')
-                if limits[d].get('pre_close') is not None and dec(limits[d]['pre_close']) != pre: raise InputError('LIMIT_DAILY_PRECLOSE_CONFLICT')
+                if limits[d].get('pre_close') is None: raise InputError('LIMIT_PRECLOSE_MISSING')
+                limit_pre = dec(limits[d]['pre_close'])
+                limit_pre_kind = 'DAILY_REFERENCE'
+                if limit_pre != pre:
+                    if action is None or previous_raw_close is None or limit_pre != previous_raw_close:
+                        raise InputError('LIMIT_DAILY_PRECLOSE_CONFLICT')
+                    limit_pre_kind = 'PREVIOUS_RAW_CLOSE_ON_CONFIRMED_EX_DATE'
+                    report.setdefault('limit_pre_close_semantic_inventory', []).append({'symbol':symbol,'session':d,
+                        'kind':limit_pre_kind,'daily_pre_close':str(pre),'limit_pre_close':str(limit_pre),
+                        'action_id':action['id'],'daily_evidence_ref':ref,'limit_evidence_ref':limitref})
                 if previous_close is not None and pre.quantize(D('.01'),rounding=ROUND_HALF_UP) != previous_close.quantize(D('.01'),rounding=ROUND_HALF_UP): raise InputError('UNEXPLAINED_PRECLOSE_ACTION_OR_VERSION_CHANGE:' + symbol + ':' + d)
-                bars.append(dict(base, status='TRADABLE', **{k:str(v) for k,v in values.items()}, volume_shares=str(volume), amount_CNY=str(amount), lower_limit=str(lo), upper_limit=str(hi), pre_close=str(pre)))
-                previous_close = values['close']
+                bars.append(dict(base, status='TRADABLE', **{k:str(v) for k,v in values.items()}, volume_shares=str(volume), amount_CNY=str(amount), lower_limit=str(lo), upper_limit=str(hi), pre_close=str(pre), limit_pre_close=str(limit_pre), limit_pre_close_kind=limit_pre_kind))
+                previous_close = values['close']; previous_raw_close = values['close']
         active = [d for d in opened if target['start'] <= d <= target['end']]
         if not active or sum(d < active[0] for d in opened) < 20: raise InputError('TARGET_OR_WARMUP_INCOMPLETE')
         case = {'namespace': protocol['namespace'], 'strategy_id': protocol['strategy_id'], 'run_id': run_id,

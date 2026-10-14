@@ -252,6 +252,21 @@ class BuilderTests(unittest.TestCase):
             for field in ('record_date','ex_date','pay_date','div_listdate','imp_ann_date'):
                 with self.subTest(state=state,field=field):
                     self.mutate('dividend',lambda rows:[{'ts_code':self.symbols[0],'div_proc':state,'ann_date':'20120329',field:'20120529'}]);self.blocked('NONIMPLEMENTED_WITH_EXECUTION_DATES_CONFLICT')
+    def test_limit_preclose_equal_reference_preserved(self):
+        report,case=self.build();self.assertIsNotNone(case,report);bar=case['bars'][0];self.assertEqual(bar['pre_close'],'10');self.assertEqual(bar['limit_pre_close'],'10');self.assertEqual(bar['limit_pre_close_kind'],'DAILY_REFERENCE')
+    def test_limit_preclose_known_exdate_previous_raw_is_preserved(self):
+        ex=self.action();self.mutate('stk_limit',lambda rows:[dict(r,pre_close='10') if r['trade_date']==ex.replace('-','') else r for r in rows]);report,case=self.build();self.assertIsNotNone(case,report)
+        bar=next(r for r in case['bars'] if r['symbol']==self.symbols[0] and r['session']==ex);self.assertEqual(bar['pre_close'],'9.8');self.assertEqual(bar['limit_pre_close'],'10');self.assertEqual(bar['limit_pre_close_kind'],'PREVIOUS_RAW_CLOSE_ON_CONFIRMED_EX_DATE');self.assertEqual(len(report['limit_pre_close_semantic_inventory']),1)
+    def test_limit_preclose_exdate_other_value_blocks(self):
+        ex=self.action();self.mutate('stk_limit',lambda rows:[dict(r,pre_close='10.01') if r['trade_date']==ex.replace('-','') else r for r in rows]);self.blocked('LIMIT_DAILY_PRECLOSE_CONFLICT')
+    def test_limit_preclose_non_action_mismatch_blocks(self):
+        self.mutate('stk_limit',lambda rows:rows[1].update(pre_close='9.8'));self.blocked('LIMIT_DAILY_PRECLOSE_CONFLICT')
+    def test_limit_preclose_branch_cannot_bypass_daily_causal_bridge(self):
+        ex=self.action();self.mutate('stk_limit',lambda rows:[dict(r,pre_close='10') if r['trade_date']==ex.replace('-','') else r for r in rows]);self.mutate('daily',lambda rows:[dict(r,pre_close='9.7') if r['trade_date']==ex.replace('-','') else r for r in rows]);self.blocked('UNEXPLAINED_PRECLOSE_ACTION_OR_VERSION_CHANGE')
+    def test_limit_preclose_requires_actual_previous_raw_bar(self):
+        ex=self.action();self.mutate('daily',lambda rows:rows[40:]);self.mutate('suspend_d',lambda rows:[{'ts_code':self.symbols[0],'trade_date':d.replace('-',''),'suspend_type':'S','suspend_timing':None} for d in self.open[:40]]);self.mutate('stk_limit',lambda rows:[dict(r,pre_close='10') if r['trade_date']==ex.replace('-','') else r for r in rows]);self.blocked('LIMIT_DAILY_PRECLOSE_CONFLICT')
+    def test_missing_limit_preclose_blocks(self):
+        self.mutate('stk_limit',lambda rows:rows[0].update(pre_close=None));self.blocked('LIMIT_PRECLOSE_MISSING')
     def test_run_id_rejects_path(self):self.assertIsNone(b.build_case(self.folder,'../escape',RUN)[1])
 
 if __name__=='__main__':unittest.main()

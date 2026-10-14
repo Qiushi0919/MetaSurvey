@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "a814cf7649fa4015e7d195482c4afdc097a095d0",
-  "captured_at": "2026-10-14T09:27:55.687493+00:00",
+  "source_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
+  "captured_at": "2026-10-14T09:34:08.872652+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1205,
+  "included_source_files": 1206,
   "files": [
     {
       "path": ".env.example",
@@ -1668,8 +1668,8 @@
     },
     {
       "path": "docs/e2e-gateway-v3/Actual-Input-Review.md",
-      "bytes": 8099,
-      "sha256": "sha256:04f471f8e69a14cab70699e655915777de04f9ad2eb12b7e31b04d56e85c07e2"
+      "bytes": 10707,
+      "sha256": "sha256:a2d183c18d9e8679c7211cea650ebdb7f5be64e3992bb3aea962f5138b75733b"
     },
     {
       "path": "docs/e2e-gateway-v3/CI-Results.json",
@@ -1682,19 +1682,24 @@
       "sha256": "sha256:bde1530ea872aea2a40b4515c8ee6538aa1d1cc37e0eceffe22e80d427c03e04"
     },
     {
+      "path": "docs/e2e-gateway-v3/Freeze-R3.json",
+      "bytes": 2560,
+      "sha256": "sha256:5e5fa134149207f63af343715add9fa7576bb5bfc82a30d6bca254359269f657"
+    },
+    {
       "path": "docs/e2e-gateway-v3/Freeze.json",
       "bytes": 2340,
       "sha256": "sha256:44141e89b3d38aebb10567ebb0ead8255679b24961dfbe5032595f5021dbafe9"
     },
     {
       "path": "docs/e2e-gateway-v3/Independent-Review.md",
-      "bytes": 12621,
-      "sha256": "sha256:7c82d046856107eda7669f1c55ddb8b468c2306ea875f0faedc8686aa60f0572"
+      "bytes": 14357,
+      "sha256": "sha256:6cf4892b3f4080c1be22a0c4a7726fa86c894c901eeed0b769ae3ea657d777be"
     },
     {
       "path": "docs/e2e-gateway-v3/Input-Plan.md",
-      "bytes": 11806,
-      "sha256": "sha256:ff7a1d06610ba797be35b5b56ddecf510695552610fa4d712e1cea321c12e543"
+      "bytes": 14150,
+      "sha256": "sha256:e7349d10653fa15ee28e40fc801c52198ebc112f59a6151d76e6cfd9aca1d152"
     },
     {
       "path": "docs/e2e-gateway-v3/Input-Policy-3.0.0.json",
@@ -1713,8 +1718,8 @@
     },
     {
       "path": "docs/e2e-gateway-v3/Retry-Decision.json",
-      "bytes": 836,
-      "sha256": "sha256:19b2b5fc4979d74b15ae8ddb5172c1786be0a961b02aab0c79865d66f6832d35"
+      "bytes": 3169,
+      "sha256": "sha256:ec137ce80302d0f0a8ea69e92f31eb944ec7d46f56d573139410e18c5107e053"
     },
     {
       "path": "docs/e2e-gateway-v3/Runbook.md",
@@ -4053,8 +4058,8 @@
     },
     {
       "path": "experiments/e2e_gateway_v3/input-policy.json",
-      "bytes": 4160,
-      "sha256": "sha256:626dccc9154c1300062a68f8019e73de038af5930f8b9a3ddf180e78022494a2"
+      "bytes": 4715,
+      "sha256": "sha256:054220c9905270982c4122e428e35fd2bd5dadb433bf19f1dd1f278bb568486d"
     },
     {
       "path": "experiments/e2e_history_v2/engine.py",
@@ -5108,8 +5113,8 @@
     },
     {
       "path": "tools/e2e_gateway/builder.py",
-      "bytes": 30842,
-      "sha256": "sha256:7e81ce73c04a475395027a32e6535bb52e71371b2dac60df1ab19d15d9cb8222"
+      "bytes": 31657,
+      "sha256": "sha256:c7f18a86de6393ba3a5c8a62d99d01e462ee0ff0df29496dd59865831f39c6d1"
     },
     {
       "path": "tools/e2e_gateway/capture.py",
@@ -5133,8 +5138,8 @@
     },
     {
       "path": "tools/e2e_gateway/tests/test_builder.py",
-      "bytes": 26781,
-      "sha256": "sha256:57b411659db330652b16804638817c7117cf246259e1b50f4a9f31e4089f172b"
+      "bytes": 29177,
+      "sha256": "sha256:eb30ac97265f648dfb7fda12ae60a7d564ec5082ee4d1364a8be859a17c8291a"
     },
     {
       "path": "tools/e2e_gateway/tests/test_capture_plan.py",

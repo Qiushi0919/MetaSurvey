@@ -10,5 +10,77 @@
   "license_promoted": false,
   "token_recorded": false,
   "capture04_interval_seconds": 30,
-  "early_intervals_note": "Use actual capture clocks; earlier manifests did not all record interval configuration"
+  "early_intervals_note": "Use actual capture clocks; earlier manifests did not all record interval configuration",
+  "captures": [
+    {
+      "epoch": "capture-01",
+      "state": "CAPTURE_PARTIAL",
+      "started_at": "2026-10-14T08:46:04.804259+00:00",
+      "retrieved_at": "2026-10-14T08:46:19.560378+00:00",
+      "retained_product_count": 5,
+      "failed_products": [
+        {
+          "api": "stk_limit",
+          "params": {
+            "ts_code": "603228.SH",
+            "start_date": "20250603",
+            "end_date": "20260930"
+          },
+          "state": "IP_CONCURRENCY_LIMIT",
+          "error_code": 500
+        }
+      ],
+      "manifest_hash": "sha256:878de27d24a36fa7db488c770b1885677ffd44ea240282fcf305a584a66de555"
+    },
+    {
+      "epoch": "capture-02",
+      "state": "CAPTURE_PARTIAL",
+      "started_at": "2026-10-14T08:50:46.709025+00:00",
+      "retrieved_at": "2026-10-14T08:50:53.680627+00:00",
+      "retained_product_count": 7,
+      "failed_products": [
+        {
+          "api": "adj_factor",
+          "params": {
+            "ts_code": "603228.SH",
+            "start_date": "20250603",
+            "end_date": "20260930"
+          },
+          "state": "IP_CONCURRENCY_LIMIT",
+          "error_code": 500
+        }
+      ],
+      "manifest_hash": "sha256:0e281c6258c74bfe20644df3016ceb27b6a4403939f7cf25483f5d7f56bf66eb"
+    },
+    {
+      "epoch": "capture-03",
+      "state": "CAPTURE_PARTIAL",
+      "started_at": "2026-10-14T08:55:18.292679+00:00",
+      "retrieved_at": "2026-10-14T08:56:51.446317+00:00",
+      "retained_product_count": 13,
+      "failed_products": [
+        {
+          "api": "suspend_d",
+          "params": {
+            "ts_code": "002463.SZ",
+            "start_date": "20250603",
+            "end_date": "20260930"
+          },
+          "state": "IP_CONCURRENCY_LIMIT",
+          "error_code": 500
+        }
+      ],
+      "manifest_hash": "sha256:588bef51a6aad10a4f8284f9b09b8314ae0f0768b704d370beffbcc645a2506e"
+    },
+    {
+      "epoch": "capture-04",
+      "state": "CAPTURE_COMPLETE",
+      "started_at": "2026-10-14T08:59:54.908365+00:00",
+      "retrieved_at": "2026-10-14T09:26:14.555906+00:00",
+      "retained_product_count": 65,
+      "failed_products": [],
+      "manifest_hash": "sha256:09911e53519f87048785aca52c164a7126d9c35677c27870785267dd342cf54b"
+    }
+  ],
+  "outcome": "65_OF_65_FIXED_PRODUCTS_CAPTURED_AFTER_INTERVALLED_SAME_ENDPOINT_RETRIES"
 }
