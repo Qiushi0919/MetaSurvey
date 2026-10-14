@@ -12,7 +12,7 @@
       "report": "docs/e2e-gateway-v3/Acceptance-Report.md",
       "registry": "docs/e2e-gateway-v3/Registry.json",
       "result": "docs/e2e-gateway-v3/Result-Summary.json",
-      "business_state": "REAL_DIAGNOSTIC_ENGINE_COMPLETED_FULL_RESEARCH_UNVALIDATED_BROWSER_ACCEPTANCE_PENDING"
+      "business_state": "REAL_DIAGNOSTIC_ENGINE_AND_BROWSER_VERIFIED_FULL_RESEARCH_UNVALIDATED"
     },
     {
       "phase": "E2E_HISTORY_V2",

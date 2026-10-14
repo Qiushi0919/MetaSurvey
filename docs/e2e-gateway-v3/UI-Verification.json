@@ -4,7 +4,7 @@
   "recorded_at": "2026-10-14T09:36:45.134031+00:00",
   "code_commit": "9b11cfdd59bade35c78f262ee6af684aec20e3a7",
   "base_url": "http://127.0.0.1:8769",
-  "verification_status": "HTTP_AND_ARTIFACT_MATCH_BROWSER_PENDING_MAC_LOCKED",
+  "verification_status": "HTTP_ARTIFACT_AND_BROWSER_SMOKE_PASS",
   "result_type": "RECONSTRUCTED_HISTORY_DIAGNOSTIC",
   "cost_label": "SIMULATED_COSTS",
   "historical_visibility_proven": false,
@@ -79,6 +79,58 @@
   "protected_files_checked": 156,
   "protected_hashes_unchanged": true,
   "browser_check": {
+    "status": "PASS",
+    "tool": "cua_repl / Codex in-app browser",
+    "tested_source_commit": "0fc16ddca99a8d211a7ac45900d8a35997724655",
+    "actions": [
+      "Open dashboard",
+      "Click 回测与前瞻验证",
+      "Click V3 运行校验清单 and verify source/hash",
+      "Close evidence",
+      "Click V3 验收报告 and verify loaded body/hash"
+    ],
+    "display_checks": {
+      "E2EG3-20261014-FIXED-NINE-01": true,
+      "SIMULATED_TRADES": true,
+      "engine_called true": true,
+      "net_return 0.0596976": true,
+      "complete_trades 35": true,
+      "final_cash_cents 10596976": true,
+      "total_fee_cents 53424": true
+    },
+    "screenshots": [
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/screenshots/v3-dashboard.jpg",
+        "sha256": "sha256:9068ae890f073b7b78945020387cd5274888b6436930cb0d3356de92e381b8e3",
+        "bytes": 53897
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/screenshots/v3-validation.jpg",
+        "sha256": "sha256:a13bd639b884a0c829bb87a59efa386cf47ac578a2c3a0d6bedd349af12ab5e7",
+        "bytes": 56988
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/screenshots/v3-registry-evidence.jpg",
+        "sha256": "sha256:e57bb9b494104c3978fc42dc8743ec47eef380b0d0ebb920b5b53cd4f2781b7d",
+        "bytes": 52924
+      },
+      {
+        "path": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/screenshots/v3-report-loaded.jpg",
+        "sha256": "sha256:b694136da354cb0c0fa58f5af73224e62feead5e085ff4626660a8b5f0bb0e24",
+        "bytes": 54547
+      }
+    ],
+    "protected_files_checked": 156,
+    "protected_hashes_unchanged": true,
+    "previous_screenshots_reused": false,
+    "scope": "Targeted browser smoke and evidence navigation, not exhaustive responsive/usability audit"
+  },
+  "limitations": [
+    "Validation page exposes verbose build/ledger JSON; visual summary and compact tables remain a usability improvement, not completed in this evidence-only closure.",
+    "Screenshots and AX records remain local; only paths/hashes are public.",
+    "Simulation performance does not establish investment validity, untouched OOS, original historical PIT, or production admission."
+  ],
+  "previous_browser_attempt": {
     "status": "BLOCKED_MAC_LOCKED",
     "attempted_action": "CUA getApp com.apple.Safari before UI navigation",
     "observed_tool_error": "The Mac is locked and automatic unlock could not unlock it.",
@@ -86,9 +138,5 @@
     "screenshot_directory": "/Users/qiushi/投资研究/.p1b-archives/e2e-gateway-v3-20261014/screenshots",
     "previous_screenshots_reused": false
   },
-  "limitations": [
-    "HTTP equality verifies served content, not successful browser layout or click behavior in this run.",
-    "V3 actual screenshots and click tracing require an unlocked Mac; they are not complete.",
-    "Simulation performance does not establish investment validity, untouched OOS, original historical PIT, or production admission."
-  ]
+  "browser_checked_at": "2026-10-14T10:00:17.101414+00:00"
 }

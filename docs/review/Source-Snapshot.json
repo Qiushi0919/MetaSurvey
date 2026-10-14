@@ -1,8 +1,8 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "0fc16ddca99a8d211a7ac45900d8a35997724655",
-  "captured_at": "2026-10-14T09:42:54.216073+00:00",
+  "source_commit": "a7e6f05d884c3f7240a5377fd2f479875086af14",
+  "captured_at": "2026-10-14T10:01:07.436833+00:00",
   "source_git_history_uploaded": false,
   "included_source_files": 1211,
   "files": [
@@ -58,8 +58,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 38114,
-      "sha256": "sha256:cb3df43bb4cb207e00755d8bfae3d333a5acb976bd27c9aba06d5cb47e343b2f"
+      "bytes": 38176,
+      "sha256": "sha256:a9e0c6a0339ab69a95ba166306596e1259dec800fb73145e9adf3ed71c45e7be"
     },
     {
       "path": "README-Historical-20261008.md",
@@ -1668,8 +1668,8 @@
     },
     {
       "path": "docs/e2e-gateway-v3/Acceptance-Report.md",
-      "bytes": 9583,
-      "sha256": "sha256:e8b77157f4cfb7bd8fce8c7b1ea31cbec1b9812dfd42d4b3f851e8b6eddbbe9d"
+      "bytes": 9931,
+      "sha256": "sha256:1e899c8a8cedada0c74a9bbd630855f1d60c7beba9678342516cc8790b89e1ec"
     },
     {
       "path": "docs/e2e-gateway-v3/Actual-Input-Review.md",
@@ -1723,8 +1723,8 @@
     },
     {
       "path": "docs/e2e-gateway-v3/Preservation.json",
-      "bytes": 4029,
-      "sha256": "sha256:50642392f9e229df6a6ca8203021d6264a27ce9320069dd27d289b2162afadbe"
+      "bytes": 4238,
+      "sha256": "sha256:5d1e7694cb2223b07bef2dd289634bcde74f8151afb658a62af236bbe141db5b"
     },
     {
       "path": "docs/e2e-gateway-v3/Registry.json",
@@ -1758,8 +1758,8 @@
     },
     {
       "path": "docs/e2e-gateway-v3/UI-Verification.json",
-      "bytes": 3516,
-      "sha256": "sha256:88ec30a493ac448339b155d94f1d7569acafea91e783915c88b40b471f902800"
+      "bytes": 5547,
+      "sha256": "sha256:a7bcde1a93bd8f98c2056ba41316cc7b0be86f35139067d3f0f94cae7ccdfc05"
     },
     {
       "path": "docs/e2e-history-v2/Acceptance-Report.md",
@@ -2678,13 +2678,13 @@
     },
     {
       "path": "docs/review/INDEX.json",
-      "bytes": 3012,
-      "sha256": "sha256:57dfb9aef9ecf00ba6a3ff52b0f55a839c19d5a5f7e0d9eb51cc01886a4913f5"
+      "bytes": 2996,
+      "sha256": "sha256:d29392db6ec89f3005d53bfe5d57961cd60c33cee5b2de1b24fb58b9e8f9406c"
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 4406,
-      "sha256": "sha256:b9d6aa6c90e1af241a73dda9a83ec55148b1a094c06de87363b0737bda46a8e5"
+      "bytes": 4448,
+      "sha256": "sha256:5cce658cb3cb51f9a46ceb63aa3145addfe496ae2e709508553a9bcb34e45c7c"
     },
     {
       "path": "docs/review/PUBLISHING.md",
