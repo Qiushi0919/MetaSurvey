@@ -1,0 +1,29 @@
+name: V3 performance review isolated synthetic checks
+on:
+  push:
+    paths: ['tools/v3_review/**', 'docs/v3-performance/**', 'workbench/**']
+  pull_request:
+    paths: ['tools/v3_review/**', 'docs/v3-performance/**', 'workbench/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -B tools/v3_review/check.py ci-results/v3-performance
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v3-performance-${{ matrix.os }}
+          path: ci-results/v3-performance
+      - if: always()
+        run: cat ci-results/v3-performance/result.json >> "$GITHUB_STEP_SUMMARY"
