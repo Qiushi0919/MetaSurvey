@@ -36,7 +36,17 @@
 
 入口：`python -B -m unittest discover -s workbench/tests -p test_performance_ui.py`。JavaScript 语法检查：`node --check workbench/static/app.js`。
 
-这些合成测试不能替代真实浏览器验收。实际页面操作、最终独立绩效 payload、截图与来源字段一致性待主控集成后另记；不得仅凭本文件标记最终 UI 验收通过。
+这些合成测试不替代真实浏览器验收。本轮已在重启的本机 `http://127.0.0.1:8769/#validation` 上通过 CUA 操作 Safari，加载真实 `VERIFIED` 独立绩效 payload：
+
+1. 核对人民币净值 ¥105,969.76、收益 5.97%、回撤 10.66%、35 次完整交易 / 70 笔成交 / 83 条未成交。
+2. 实际渲染净值、回撤、暴露三幅 SVG，两个基准与原策略的 241 个日期一致后叠加。
+3. 点击成交下一页得到第 2/6 页，再筛选 `600362.SH`，得到 12 条、第 1/1 页。
+4. 从页面打开基准规则和本轮绩效报告，弹窗显示各自文件路径及 SHA-256；HTTP 内容与文件原文一致。
+5. 从验证页进入仪表盘再返回，确认费用、分红、贡献表与折叠技术记录正常；旧 V2 失败、正式历史验证和 Forward 状态仍独立展示。
+
+机器证据：`docs/v3-performance/UI-Verification.json`。HTTP 原诊断与封存 EngineResult 全等；归因、基准与 Analysis 全等；运行身份与结果 hash 一致。浏览前后对比 281 个已存在的私有原件及派生产物，变化 0。
+
+6 张实际 Safari 截图只保存在 Git 外：`/Users/qiushi/投资研究/.p1b-archives/v3-performance-20261015/screenshots/`。包括首屏、曲线/回撤、成交筛选、基准来源、验收报告来源和贡献表。最后尝试额外补拍独立基准表时，工具返回 `noWindowsAvailable`，该额外截图未生成；不计作成功，不影响此前已完成的操作记录和6张截图。没有使用其他工具绕过窗口限制。
 
 ## 解释边界
 

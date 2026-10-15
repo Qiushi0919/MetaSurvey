@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "89ebe144aee38d5e85d49e0be47d252b6ab534b8",
-  "captured_at": "2026-10-15T02:34:18.602147+00:00",
+  "source_commit": "362b958444d5ffc06ebf439cfe0936249809581c",
+  "captured_at": "2026-10-15T02:39:19.426180+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1236,
+  "included_source_files": 1238,
   "files": [
     {
       "path": ".env.example",
@@ -2688,8 +2688,8 @@
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 4901,
-      "sha256": "sha256:c8a1c5c82e22485817180f8998543be204f59a19cdc53b4cecf929e151d0cf27"
+      "bytes": 4965,
+      "sha256": "sha256:14e8546d487b6d81bd8806d9eff1f70f3bcffd41072471ca4636b83a9baf9d85"
     },
     {
       "path": "docs/review/PUBLISHING.md",
@@ -3003,8 +3003,8 @@
     },
     {
       "path": "docs/v3-performance/Acceptance-Report.md",
-      "bytes": 8755,
-      "sha256": "sha256:33820f1f2420a6ac6abb8065f3703c6d78180c597531023166e2bdb4974408ce"
+      "bytes": 11268,
+      "sha256": "sha256:69d749990056dd9049f8a4d4ae4a67d6cb5c79c67a16d62181362ae31405d9cd"
     },
     {
       "path": "docs/v3-performance/Authorization.md",
@@ -3015,6 +3015,11 @@
       "path": "docs/v3-performance/Benchmark-Protocol.json",
       "bytes": 3079,
       "sha256": "sha256:1061fa2d9fb25aeecd60ce26bc404801325882966ee4058994d7eede8dfc084f"
+    },
+    {
+      "path": "docs/v3-performance/CI-Results.json",
+      "bytes": 8124,
+      "sha256": "sha256:48fd9b6202eb4d2e1d57cfa8843a73dd865845f98a624f5b9ef0b6ebba95bdb1"
     },
     {
       "path": "docs/v3-performance/Independent-Decision-Review.json",
@@ -3033,8 +3038,8 @@
     },
     {
       "path": "docs/v3-performance/Preservation.json",
-      "bytes": 1720,
-      "sha256": "sha256:5d40298614da4b2948ac1f7ed849f5de9d2a7846e7fe950b0647c0954bc05d25"
+      "bytes": 1838,
+      "sha256": "sha256:73c2070f66e9bef42cad5a2abe31fb3eef87c3d57a97067144236c3bc9746660"
     },
     {
       "path": "docs/v3-performance/Registry.json",
@@ -3048,8 +3053,13 @@
     },
     {
       "path": "docs/v3-performance/UI-Review.md",
-      "bytes": 3469,
-      "sha256": "sha256:f299140ff84ae4bed44afea7d272a3131bc60a88ba961a525b942837d9b3de43"
+      "bytes": 4808,
+      "sha256": "sha256:a9837442d2d4ecb8fae210cfc9509ae23df78bb860c8d1a6d780db49d7c14734"
+    },
+    {
+      "path": "docs/v3-performance/UI-Verification.json",
+      "bytes": 2961,
+      "sha256": "sha256:af8bff393fe808f656ca1f122818c4a66e6d41244e799e8fd5336abb57c4c62d"
     },
     {
       "path": "docs/verification-portability/Interface-Freeze.md",

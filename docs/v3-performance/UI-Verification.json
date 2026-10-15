@@ -1,0 +1,69 @@
+{
+  "kind": "V3PerformanceUIVerification",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-15T02:35:20.664840+00:00",
+  "run_id": "E2EG3-20261014-FIXED-NINE-01",
+  "engine_result_hash": "sha256:26ae4a84415a045b2732a95cf2793152d6406ee7c4d82ac399b3bb40fe637be1",
+  "analysis_hash": "sha256:600378ff04590b039c3f93740fe4446c67ec5c7c3744e02ca69cc00655ad9cee",
+  "status": "PASS",
+  "http_checks": {
+    "http_diagnostic_equals_original": true,
+    "http_performance_equals_analysis": true,
+    "http_benchmarks_equal_analysis": true,
+    "run_and_hash_binding": true,
+    "protected_files_unchanged": true,
+    "241_dates_match": true,
+    "performance-benchmark_content_matches": true,
+    "performance-report_content_matches": true
+  },
+  "protected_file_count": 281,
+  "protected_changes": [],
+  "browser": "Safari native via cua_repl",
+  "url": "http://127.0.0.1:8769/#validation",
+  "actual_actions": [
+    "Reloaded fresh server and rendered three SVG charts with original strategy and two same-date benchmark series",
+    "Observed CNY NAV105969.76 / return5.97% / MDD10.66% /35 complete trades /70 fills /83 unfilled",
+    "Clicked fill next page:2/6; selected600362.SH:12 rows1/1",
+    "Opened Benchmark-Protocol source dialog with SHA256",
+    "Opened Acceptance-Report source dialog with SHA256",
+    "Navigated dashboard then validation",
+    "Confirmed technical JSON collapsed by default and separate old V2/formal/Forward states"
+  ],
+  "screenshot_directory_git_excluded": "/Users/qiushi/投资研究/.p1b-archives/v3-performance-20261015/screenshots",
+  "screenshots": [
+    {
+      "name": "01-performance-top.png",
+      "sha256": "f1e67a574579298fc073e0fc80125cd3058b45266d671665c9a7c1e9b30df20f",
+      "bytes": 373923
+    },
+    {
+      "name": "02-curves-drawdown.png",
+      "sha256": "21ae7183667773a052f54f688c8d662a9c8045e9c493c5f57e04ee917f2e68f8",
+      "bytes": 446419
+    },
+    {
+      "name": "03-filtered-trades.png",
+      "sha256": "ba27a3392eedae87e333bfd1d9aacef81ec35c64fe755f0c3ace759e7aaab7cf",
+      "bytes": 473456
+    },
+    {
+      "name": "04-benchmark-evidence.png",
+      "sha256": "8cb733cf69019274e32bcf4a9dff6b6b8cb87601b39a4e7449eb0c261a0e6957",
+      "bytes": 410230
+    },
+    {
+      "name": "05-report-evidence.png",
+      "sha256": "bca684ff29075de6713118f2189fc775a2270ffb106d16f54de265f92316f02d",
+      "bytes": 568565
+    },
+    {
+      "name": "06-contributions-benchmarks.png",
+      "sha256": "2fe8583ce54bebef2eded2dbb0cd94a6755151b1521cb777f7da17220923f0d4",
+      "bytes": 386259
+    }
+  ],
+  "extra_optional_screenshot_failure": "After six screenshots and completed navigation, final extra benchmark-table capture failed cua noWindowsAvailable; existing benchmark AX/readout and dialog screenshot retained. No bypass attempted.",
+  "synthetic_ui_unique_tests": 17,
+  "market_or_credentials_calls": 0,
+  "performance_interpretation": "EXPOSED_HISTORY_DIAGNOSTIC_ANALYSIS; not investment validity"
+}

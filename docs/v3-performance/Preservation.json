@@ -1,7 +1,7 @@
 {
   "kind": "V3PreservationReview",
   "version": "1.0.0",
-  "checked_at": "2026-10-15T02:33:24.152887+00:00",
+  "checked_at": "2026-10-15T02:39:11.444405+00:00",
   "baseline_source_commit": "a7e6f05d884c3f7240a5377fd2f479875086af14",
   "tracked_baseline_count": 1217,
   "unchanged_source_files": 1211,
@@ -19,7 +19,7 @@
     {
       "path": "docs/review/LATEST.md",
       "before": "5cce658cb3cb51f9a46ceb63aa3145addfe496ae2e709508553a9bcb34e45c7c",
-      "after": "c8a1c5c82e22485817180f8998543be204f59a19cdc53b4cecf929e151d0cf27"
+      "after": "14e8546d487b6d81bd8806d9eff1f70f3bcffd41072471ca4636b83a9baf9d85"
     },
     {
       "path": "workbench/server.py",
@@ -40,5 +40,7 @@
   "unexpected_changes": [],
   "original_private_files_checked": 271,
   "original_private_mismatches": [],
-  "passed": true
+  "passed": true,
+  "specialist_read_only_final_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "specialist_worktree_clean": true
 }
