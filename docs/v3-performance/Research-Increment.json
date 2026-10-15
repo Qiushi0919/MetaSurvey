@@ -1,0 +1,48 @@
+{
+  "kind": "ResearchIncrementPreregistration",
+  "version": "1.0.0",
+  "experiment_id": "V3_CASH_DISTRIBUTION_EVENT_FILTER_CANDIDATE_V1",
+  "registered_at": "2026-10-15T02:24:43.631692+00:00",
+  "status": "PREREGISTERED_NOT_RUN_HISTORICAL_VISIBILITY_UNPROVEN",
+  "module": "已公告现金分红临近除息的新增仓位过滤",
+  "hypothesis": "Remove new entries immediately before known cash ex-date to test event-exposure sensitivity; no presumption of improved return. Event research module, not fundamental quality or full Deep Research.",
+  "baseline": "Frozen V3 price-volume method untouched",
+  "candidate_rule": "Only at historical decision cutoff with independently supported public availability: exclude otherwise eligible new BUY if verified cash ex-date is among next2 exchange sessions. Re-rank remaining same-group eligible symbols using unchanged RS; do not change group selection, existing holdings/exits, size, costs or risk. UNKNOWN coverage blocks incremental run; no blanket zero event.",
+  "parameters": {
+    "next_sessions": 2,
+    "cash_dividend_per_share_min_exclusive": "0",
+    "reinvestment": false
+  },
+  "selection_reason": "Corporate-action evidence already required by execution; one binary event filter with no optimized thresholds. Next2 is a declared short event window, not a fitted optimum.",
+  "needed_fields": [
+    "symbol",
+    "original_implementation_notice_hash",
+    "publication_version",
+    "historical_available_at_supported",
+    "revision_chain",
+    "cash_per_share_CNY",
+    "ex_date",
+    "complete_search_scope_per_symbol_cutoff"
+  ],
+  "existing_evidence": {
+    "source_scope": "Original fixed-nine captured dividend rows and original23cash actions; today retrieved supplier reconstruction with ann_date/imp_ann_date, not original contemporaneous availability",
+    "official_gap_report": "docs/wave-h/Historical-PIT-Closure-Progress.json",
+    "official_gap_report_hash": "sha256:a07e7823ad406901d8e5617c9d5b46489f3ca5787291b43ef1371cc74244ac17",
+    "prior_original_inventory_hash": "sha256:bc8032ff49656f4a47ff6ed4e809540f0a63c6ebb5a9976499fa4a6776fe5e8a"
+  },
+  "gaps": [
+    "No complete original notice/version and historical availability chain for nine symbols across241 decisions",
+    "Date-only provider announcement fields do not prove exact historical cutoff visibility",
+    "Some prior official structural evidence exists but is not continuous per-issuer event coverage"
+  ],
+  "evaluation_plan": [
+    "Compare unchanged baseline with single registered filter only on same frozen complete coverage window; no tuning",
+    "Report removed candidates and downstream changes, turnover/fees/net return/MDD/company-group contributions, no winner selection",
+    "If historical evidence cannot be established, leave no incremental scores/return; do not backfill currentFY2025 reports"
+  ],
+  "run_attempted": false,
+  "historical_visibility_proven": false,
+  "untouched_oos": false,
+  "analysis_class": "EXPOSED_HISTORY_EXPLORATORY_PREREGISTRATION",
+  "production_enabled": false
+}

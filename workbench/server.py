@@ -10,6 +10,10 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path('/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4')
 SYMBOLS = ('603993.SH', '600312.SH', '603228.SH')
 FILES = {
+ 'performance-registry':'docs/v3-performance/Registry.json',
+ 'performance-report':'docs/v3-performance/Acceptance-Report.md',
+ 'performance-benchmark':'docs/v3-performance/Benchmark-Protocol.json',
+ 'performance-research':'docs/v3-performance/Research-Increment.json',
  'gateway-registry':'docs/e2e-gateway-v3/Registry.json',
  'gateway-report':'docs/e2e-gateway-v3/Acceptance-Report.md',
  'gateway-source':'docs/e2e-gateway-v3/Source-Review.md',
@@ -174,6 +178,13 @@ class Reader:
    from workbench.gateway_reader import load as load_gateway
    state['gateway_v3']=load_gateway(self)
   except (ReadError,ValueError,KeyError,TypeError,ImportError) as e: state['errors'].append({'panel':'gateway-v3','code':getattr(e,'code','INVALID_GATEWAY_PACKAGE'),'source':getattr(e,'source','gateway-registry')})
+  if state.get('gateway_v3',{}).get('status')=='VERIFIED':
+   try:
+    from workbench.performance_reader import load as load_performance
+    state['gateway_v3']['performance']=load_performance(self,state['gateway_v3'])
+   except (ReadError,ValueError,KeyError,TypeError,ImportError,ArithmeticError) as e:
+    state['gateway_v3']['performance']={'status':'BLOCKED','reason':getattr(e,'code','INVALID_PERFORMANCE_PACKAGE')}
+    state['errors'].append({'panel':'v3-performance','code':getattr(e,'code','INVALID_PERFORMANCE_PACKAGE'),'source':getattr(e,'source','performance-registry')})
   state['task_records']=[]
   for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
    try:

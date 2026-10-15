@@ -1,9 +1,10 @@
 # 最新验收入口
 
-更新：2026-10-14（Asia/Shanghai）。审核人先读当前集成报告，再读需要自己复核的合同与独立审查。
+更新：2026-10-15（Asia/Shanghai）。审核人先读当前集成报告，再读需要自己复核的合同与独立审查。
 
 | 内容 | 位置 | 状态 |
 |---|---|---|
+| V3基线复核与绩效解释 | [本轮验收](../v3-performance/Acceptance-Report.md) · [独立决策复核](../v3-performance/Independent-Decision-Review.md) · [对照登记](../v3-performance/Benchmark-Protocol.json) · [研究增量状态](../v3-performance/Research-Increment.json) | 241日/70成交/83未成交独立复现，差异0；可读绩效与两组同窗对照；原收益低于对照，未证明策略优势；研究增量未运行 |
 | 现有网关真实历史诊断 V3 | [本轮验收](../e2e-gateway-v3/Acceptance-Report.md) · [实际数据覆盖](../e2e-gateway-v3/API-Coverage.json) · [独立算术](../e2e-gateway-v3/Independent-Arithmetic.json) · [CI](../e2e-gateway-v3/CI-Results.json) | 引擎已实际运行：241日、70模拟成交、35完整买卖；完整研究策略未验证；实际页面跳转、证据追溯与截图已补齐；完整研究与正式PIT仍未验证 |
 | 真实历史输入与首次引擎运行 V2 | [本轮验收](../e2e-history-v2/Acceptance-Report.md) · [来源核验](../e2e-history-v2/Source-Review.md) · [独立审查](../e2e-history-v2/Independent-Review.md) · [CI](../e2e-history-v2/CI-Results.json) | 主目标未达成：匿名源两次连接失败，engine_called=false；历史例外事件decoder仍缺；新增4业务子分项/7集中判断 |
 | 端到端研究试点与基础组合诊断 V1 | [本轮验收](../e2e-pilot-v1/Acceptance-Report.md) · [真实资料](../e2e-pilot-v1/Data-Feasibility.md) · [独立复核](../e2e-pilot-v1/Independent-Review.md) · [双平台CI](../e2e-pilot-v1/CI-Results.json) | 9家公司/27真实财务分项已接工作台；完整总分及真实历史运行尚未完成 |

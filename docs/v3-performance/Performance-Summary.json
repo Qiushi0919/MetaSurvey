@@ -1,0 +1,198 @@
+{
+  "kind": "V3PerformancePackage",
+  "version": "1.0.0",
+  "run_id": "E2EG3-20261014-FIXED-NINE-01",
+  "case_hash": "sha256:7b886422ce596e2f84ae6b370525e4d6cdf9d6a21e29fed45cecf46b36575b6e",
+  "engine_result_hash": "sha256:26ae4a84415a045b2732a95cf2793152d6406ee7c4d82ac399b3bb40fe637be1",
+  "run_hash": "sha256:383e14188543508faef39bf7f5b94d4e7c091cfa58e6bed05df22bc7c6496959",
+  "code_pins": {
+    "tools/v3_review/performance.py": "sha256:82d3adef1e6c8a9b3ff7fbd22fa5debe103045e2713889c04efe300bb8681e8c",
+    "tools/v3_review/benchmarks.py": "sha256:eefda8e7175874e4a1e39ed91d00b080f56e72dc3ed2b780874795ee53ec137a",
+    "tools/v3_review/package.py": "sha256:4ca250cd1529047fd3d796e409bf68323cf66ae336ebb5cdd5f49759be44b019",
+    "docs/v3-performance/Benchmark-Protocol.json": "sha256:1061fa2d9fb25aeecd60ce26bc404801325882966ee4058994d7eede8dfc084f",
+    "docs/v3-performance/Research-Increment.json": "sha256:aba6cd2e8fe488bf1c9f41c2d883dc9346b89932bd014fc527eadfd4aac41ac5"
+  },
+  "result_type": "EXPOSED_HISTORY_DIAGNOSTIC_ANALYSIS",
+  "production_enabled": false,
+  "summary": {
+    "initial_cash_cents": 10000000,
+    "final_nav_cents": 10596976,
+    "final_nav_cny": "105969.76",
+    "net_profit_cents": 596976,
+    "net_return_fraction": "0.0596976",
+    "max_drawdown_fraction": "0.10662748625532015046452222132146493279230532444007506860635235223767934853258624",
+    "fees_cents": 53424,
+    "slippage_cents": 71100,
+    "dividend_net_cents": 8400,
+    "completed_sessions": 241,
+    "filled_orders": 70,
+    "complete_trades": 35,
+    "complete_trades_source": "ORIGINAL_ENGINE_NOT_REDEFINED",
+    "first_session": "2025-10-09",
+    "last_session": "2026-09-30"
+  },
+  "max_drawdown": {
+    "fraction": "0.10662748625532015046452222132146493279230532444007506860635235223767934853258624",
+    "peak_session": "2026-01-29",
+    "peak_source": "DAILY_CLOSE",
+    "trough_session": "2026-07-24",
+    "recovery_session": null,
+    "peak_nav_cents": 11854223,
+    "trough_nav_cents": 10590237,
+    "recovered": false,
+    "state": "DRAWDOWN",
+    "tie_policy": "earliest equal peak; earliest maximum-drawdown trough; first later close >= peak"
+  },
+  "fee_summary": {
+    "components_cents": {
+      "commission_cents": 35156,
+      "exchange_cents": 0,
+      "other_cents": 700,
+      "sell_tax_cents": 17568
+    },
+    "total_fee_cents": 53424,
+    "minimum_commission_uplift_cents": 14273,
+    "uplift_included_in_commission": true,
+    "slippage_cents": 71100,
+    "slippage_embedded_not_additional_cash_debit": true,
+    "total_friction_cents": 124524,
+    "recorded_all_fills_fee_cents": 53424,
+    "recorded_all_fills_slippage_cents": 71100
+  },
+  "group_contributions": [
+    {
+      "group": "PCB_SAMPLE",
+      "members": [
+        "603228.SH",
+        "002463.SZ",
+        "002916.SZ"
+      ],
+      "buy_cash_out_cents": 3807539,
+      "sell_cash_in_cents": 3831743,
+      "dividend_paid_cents": 8400,
+      "dividend_net_entitled_cents": 8400,
+      "dividend_gross_cents": 10500,
+      "dividend_simulated_tax_cents": 2100,
+      "fees_cents": 6996,
+      "slippage_cents": 7700,
+      "filled_buy_orders": 5,
+      "filled_sell_orders": 5,
+      "ending_market_value_cents": 0,
+      "ending_receivable_cents": 0,
+      "ending_quantity": 0,
+      "contribution_cents": 32604,
+      "contribution_cny": "326.04",
+      "contribution_fraction": "0.0032604"
+    },
+    {
+      "group": "HV_EQUIPMENT_SAMPLE",
+      "members": [
+        "600312.SH",
+        "601179.SH",
+        "002028.SZ"
+      ],
+      "buy_cash_out_cents": 8399085,
+      "sell_cash_in_cents": 8464178,
+      "dividend_paid_cents": 0,
+      "dividend_net_entitled_cents": 0,
+      "dividend_gross_cents": 0,
+      "dividend_simulated_tax_cents": 0,
+      "fees_cents": 12407,
+      "slippage_cents": 16400,
+      "filled_buy_orders": 8,
+      "filled_sell_orders": 8,
+      "ending_market_value_cents": 0,
+      "ending_receivable_cents": 0,
+      "ending_quantity": 0,
+      "contribution_cents": 65093,
+      "contribution_cny": "650.93",
+      "contribution_fraction": "0.0065093"
+    },
+    {
+      "group": "COPPER_PRODUCERS_SAMPLE",
+      "members": [
+        "603993.SH",
+        "601899.SH",
+        "600362.SH"
+      ],
+      "buy_cash_out_cents": 22302624,
+      "sell_cash_in_cents": 22801903,
+      "dividend_paid_cents": 0,
+      "dividend_net_entitled_cents": 0,
+      "dividend_gross_cents": 0,
+      "dividend_simulated_tax_cents": 0,
+      "fees_cents": 34021,
+      "slippage_cents": 47000,
+      "filled_buy_orders": 22,
+      "filled_sell_orders": 22,
+      "ending_market_value_cents": 0,
+      "ending_receivable_cents": 0,
+      "ending_quantity": 0,
+      "contribution_cents": 499279,
+      "contribution_cny": "4992.79",
+      "contribution_fraction": "0.0499279"
+    }
+  ],
+  "reconciliation": {
+    "status": "PASS",
+    "initial_capital_cents": 10000000,
+    "ledger_cash_final_cents": 10596976,
+    "valued_cash_final_cents": 10596976,
+    "contribution_sum_cents": 596976,
+    "nav_profit_cents": 596976,
+    "difference_cents": 0,
+    "validated_daily_rows": 241,
+    "validated_ledger_rows": 95,
+    "excluded_unvalued_tail_ledger_rows": 0,
+    "valuation_cutoff": "2026-09-30",
+    "initial_cash_is_not_company_income": true
+  },
+  "benchmark_summaries": [
+    {
+      "id": "NINE_BUY_HOLD_100",
+      "name": "固定九股等预算简单持有（100%目标）",
+      "net_return": "0.1920563",
+      "max_drawdown": "0.17188184897389918310420402470611675632596134688184897389918310420402470611675633",
+      "drawdown_dates": {
+        "peak": "2026-03-10",
+        "trough": "2026-09-28",
+        "recovery": null
+      },
+      "fees_cents": 3564,
+      "slippage_cents": 7300,
+      "dividend_cents": 81327,
+      "initial_invested_notional_cents": 6514700,
+      "average_exposure_fraction": "0.71316300540604250730883765735978681121138879353743469474294451503416137597518830",
+      "maximum_exposure_fraction": "0.75510244170742726933427622920227080755102441707427269334276229202270807551024417",
+      "hypothetical_terminal_sell_fees_cents": 7816,
+      "terminal_sell_fee_reserve_is_fill": false,
+      "last40_no_new_entry_effect": "NONE_SINGLE_INITIAL_PURCHASE_ONLY",
+      "filled_buys": 7,
+      "rejected_buys": 2,
+      "terminal_position_count": 7
+    },
+    {
+      "id": "NINE_BUY_HOLD_60_CASH40",
+      "name": "固定九股60%等预算＋40%现金",
+      "net_return": "0.0933654",
+      "max_drawdown": "0.10669002297260494264863851802055989308214390288033252722017496424333055192744947",
+      "drawdown_dates": {
+        "peak": "2026-03-10",
+        "trough": "2026-07-13",
+        "recovery": null
+      },
+      "fees_cents": 2530,
+      "slippage_cents": 3500,
+      "dividend_cents": 45184,
+      "initial_invested_notional_cents": 3045700,
+      "average_exposure_fraction": "0.35954007976254461550937373815353005611341086418469524369199722991254760609764873",
+      "maximum_exposure_fraction": "0.40685948238565156095533703357520138759922720914142894684649794395953165285939951",
+      "hypothetical_terminal_sell_fees_cents": 4506,
+      "terminal_sell_fee_reserve_is_fill": false,
+      "last40_no_new_entry_effect": "NONE_SINGLE_INITIAL_PURCHASE_ONLY",
+      "filled_buys": 5,
+      "rejected_buys": 4,
+      "terminal_position_count": 5
+    }
+  ]
+}

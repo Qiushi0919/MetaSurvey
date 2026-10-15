@@ -1,0 +1,44 @@
+{
+  "kind": "V3PreservationReview",
+  "version": "1.0.0",
+  "checked_at": "2026-10-15T02:33:24.152887+00:00",
+  "baseline_source_commit": "a7e6f05d884c3f7240a5377fd2f479875086af14",
+  "tracked_baseline_count": 1217,
+  "unchanged_source_files": 1211,
+  "authorized_presentation_changes": [
+    {
+      "path": "AGENTS.md",
+      "before": "a9e0c6a0339ab69a95ba166306596e1259dec800fb73145e9adf3ed71c45e7be",
+      "after": "972780d946e80a704dda75cc27261cb12bf76018fad2276925de08b80169cd4b"
+    },
+    {
+      "path": "docs/review/INDEX.json",
+      "before": "d29392db6ec89f3005d53bfe5d57961cd60c33cee5b2de1b24fb58b9e8f9406c",
+      "after": "ca449a11dfae2ae14c997d0d6994733015292b452f3d09c99764a1635b26b148"
+    },
+    {
+      "path": "docs/review/LATEST.md",
+      "before": "5cce658cb3cb51f9a46ceb63aa3145addfe496ae2e709508553a9bcb34e45c7c",
+      "after": "c8a1c5c82e22485817180f8998543be204f59a19cdc53b4cecf929e151d0cf27"
+    },
+    {
+      "path": "workbench/server.py",
+      "before": "a9ebae2afb4975e4da7daf7d9b7c56450c9e6f44501f87a9e1f7d1b99933cda5",
+      "after": "111a202200208406541cebbdf43748aa3235950d77e2367c3b37c89ca84208c6"
+    },
+    {
+      "path": "workbench/static/app.js",
+      "before": "3a9c907efb74a2bbd484913134edb467d7b6ecb37be5f631c4c059b09ffa520f",
+      "after": "61007f1ae866ec1aa6fd7a9b6eae3a8b2c343cb5e76b4786f80c8d7bba0f03b2"
+    },
+    {
+      "path": "workbench/static/style.css",
+      "before": "874911befc3a553c9a53d053dd0821a1d2ed02183051f1b3ee87c325b9801fe1",
+      "after": "ea9a2ef90ec661f30ad1c4888ab687de384beca2d369417c13737cbd5cc5d8d9"
+    }
+  ],
+  "unexpected_changes": [],
+  "original_private_files_checked": 271,
+  "original_private_mismatches": [],
+  "passed": true
+}

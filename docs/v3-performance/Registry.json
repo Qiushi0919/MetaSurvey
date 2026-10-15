@@ -1,0 +1,17 @@
+{
+  "kind": "V3PerformanceRegistry",
+  "version": "1.0.0",
+  "run_id": "E2EG3-20261014-FIXED-NINE-01",
+  "analysis_directory": "/Users/qiushi/投资研究/.p1b-archives/v3-performance-20261015/runs/V3-REVIEW-01",
+  "analysis_hash": "sha256:600378ff04590b039c3f93740fe4446c67ec5c7c3744e02ca69cc00655ad9cee",
+  "case_hash": "sha256:7b886422ce596e2f84ae6b370525e4d6cdf9d6a21e29fed45cecf46b36575b6e",
+  "engine_result_hash": "sha256:26ae4a84415a045b2732a95cf2793152d6406ee7c4d82ac399b3bb40fe637be1",
+  "run_hash": "sha256:383e14188543508faef39bf7f5b94d4e7c091cfa58e6bed05df22bc7c6496959",
+  "code_pins": {
+    "tools/v3_review/performance.py": "sha256:82d3adef1e6c8a9b3ff7fbd22fa5debe103045e2713889c04efe300bb8681e8c",
+    "tools/v3_review/benchmarks.py": "sha256:eefda8e7175874e4a1e39ed91d00b080f56e72dc3ed2b780874795ee53ec137a",
+    "tools/v3_review/package.py": "sha256:4ca250cd1529047fd3d796e409bf68323cf66ae336ebb5cdd5f49759be44b019",
+    "docs/v3-performance/Benchmark-Protocol.json": "sha256:1061fa2d9fb25aeecd60ce26bc404801325882966ee4058994d7eede8dfc084f",
+    "docs/v3-performance/Research-Increment.json": "sha256:aba6cd2e8fe488bf1c9f41c2d883dc9346b89932bd014fc527eadfd4aac41ac5"
+  }
+}

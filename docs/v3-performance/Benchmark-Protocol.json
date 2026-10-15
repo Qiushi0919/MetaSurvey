@@ -1,0 +1,37 @@
+{
+  "kind": "V3SameWindowBenchmarks",
+  "version": "1.0.0",
+  "registered_at": "2026-10-15T02:20:18.968536+00:00",
+  "registration_scope": "BEFORE_NEW_BENCHMARK_RESULTS_AFTER_ORIGINAL_STRATEGY_RESULTS_EXPOSED",
+  "baseline_run_id": "E2EG3-20261014-FIXED-NINE-01",
+  "window": "All 241 target sessions from original Case, not warmup",
+  "benchmarks": [
+    {
+      "id": "NINE_BUY_HOLD_100",
+      "name": "固定九股等预算简单持有（100%目标）",
+      "allocation_fraction": "1.00"
+    },
+    {
+      "id": "NINE_BUY_HOLD_60_CASH40",
+      "name": "固定九股60%等预算＋40%现金",
+      "allocation_fraction": "0.60"
+    }
+  ],
+  "initial_cash_cents": 10000000,
+  "members": "Exactly original nine symbols; no sample selection or exclusions",
+  "allocation": "Nine independent equal cash budgets including buy fees, FLOOR(initial_cash * fraction / 9). Unspent cents and all rejected slots remain cash, never reallocated. Independent per-stock maximum integer lot under slot budget.",
+  "entry": "First target session OPEN, known fixed contemporary universe; no signal/rank; one attempt per stock, lexicographic symbol order. No retry/rebalancing/reinvestment/additions. This predates first strategy signal by one session; disclose exposure advantage rather than hide.",
+  "execution": "Same original fee schedule, tick HALF_EVEN and 10bps buy slippage; actual open/slipped price strictly inside daily limits and within daily low/high, volume cap 1%. Suspended/missing execution data blocked. No stop/technical exits.",
+  "corporate_actions": "Cash-only control V1: original Case must have split_ratio=1 and bonus_ratio=0 for every action, otherwise block. record-close entitlement; ex-date net receivable with original20% simulated tax; payment first session on/after pay date; no reinvestment. No claim of bonus-share lock handling.",
+  "terminal": "Last-session RAW close marked NAV including unpaid net receivable; no fabricated sale. Report terminal exposure and estimated liquidation fees separately, fee reserve is hypothetical not a fill.",
+  "fee_schedule": "exact original Case schedule, SIMULATED_COSTS, no new real-account assumptions",
+  "comparison": "Same initial100000 and calendar. Report absolute net return/MDD, arithmetic difference vs V3, exposure days/average/max, fees/dividend/rounding residual. 100% long vs60% cash controls reported together. The60% initial allocation does not cap passive appreciation or match dynamic V3 timing; no claim matched risk.",
+  "last40_rule": "Buy-hold has no new entries after initial purchase, so a no-new-last40 rule makes zero difference to this benchmark. It still holds through final40 whereas V3 exits by rules; show exposure difference, do not call it alpha.",
+  "formal_oos": false,
+  "optimization": false,
+  "production_enabled": false,
+  "pre_result_review_addendum": {
+    "at": "2026-10-15T02:23:02.650209+00:00",
+    "reason": "Independent review identified absent locked-share accounting. Limit V1 to actual cash-only Case before any benchmark output; all noncash actions rejected."
+  }
+}

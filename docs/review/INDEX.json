@@ -1,12 +1,18 @@
 {
   "kind": "MetaSurveyPublicReviewIndex",
   "version": "1.0.0",
-  "updated_on": "2026-10-14",
+  "updated_on": "2026-10-15",
   "timezone": "Asia/Shanghai",
   "latest_entry": "docs/review/LATEST.md",
   "architecture": "docs/review/ARCHITECTURE.md",
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
+    {
+      "phase": "V3_BASELINE_PERFORMANCE_REVIEW",
+      "report": "docs/v3-performance/Acceptance-Report.md",
+      "registry": "docs/v3-performance/Registry.json",
+      "business_state": "DECISIONS_REPRODUCED_BASELINE_UNDERPERFORMS_CONTROLS_RESEARCH_INCREMENT_NOT_RUN"
+    },
     {
       "phase": "E2E_COMPATIBLE_GATEWAY_V3",
       "report": "docs/e2e-gateway-v3/Acceptance-Report.md",

@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "compared": {
+    "decisions": 241,
+    "fills": 70,
+    "unfilled": 83,
+    "daily": 241
+  },
+  "difference_count": 0,
+  "independent_attempts": 153,
+  "enumerated_lots": 317,
+  "unfilled_reason_counts": {
+    "POSITION_COUNT_LIMIT": 26,
+    "RISK_CASH_LOT_OR_VOLUME_UNAFFORDABLE": 35,
+    "SLIPPAGE_OUTSIDE_DAILY_RANGE": 5,
+    "PASSIVE_POSITION_OR_SECTOR_CAP": 17
+  },
+  "run_id": "E2EG3-20261014-FIXED-NINE-01",
+  "scope": "INDEPENDENT_RECONSTRUCTION_NOT_NEW_STRATEGY_OR_PIT_PROOF",
+  "case_hash": "sha256:7b886422ce596e2f84ae6b370525e4d6cdf9d6a21e29fed45cecf46b36575b6e",
+  "engine_result_hash": "sha256:26ae4a84415a045b2732a95cf2793152d6406ee7c4d82ac399b3bb40fe637be1",
+  "reviewer_source_hash": "sha256:23f302b2ad3be230dca2265aa63f9a88a5640e50ff58381f34b27f334af0d93b",
+  "kind": "V3IndependentDecisionReview",
+  "version": "1.0.0",
+  "reviewed_at": "2026-10-15T02:23:48.933658+00:00",
+  "review_source_head": "a7e6f05",
+  "checks": {
+    "frozen_original_code_pins": 16,
+    "all_match": true,
+    "protocol_method_refs_match": true,
+    "hand_synthetic_test_cases": 15,
+    "hand_synthetic_tests_passed": true,
+    "production_engine_imported": false,
+    "original_outcomes_used_as_reconstruction_inputs": false
+  },
+  "coverage": {
+    "sectors_per_session": 3,
+    "company_feature_rows": 2169,
+    "decisions": 241,
+    "fill_quantity_and_cost_rows": 70,
+    "all_unfilled_rows": 83,
+    "daily_nav_rows": 241,
+    "all_attempts": 153,
+    "ascending_lot_candidates_evaluated": 317
+  },
+  "tail_rule": {
+    "last_allowed_decision": "2026-08-03",
+    "last_allowed_execution": "2026-08-04",
+    "first_blocked_execution": "2026-08-05",
+    "last_execution_date": "2026-09-30",
+    "excluded_execution_session_count": 40,
+    "actual_last_buy": "2026-07-30",
+    "off_by_one_found": false
+  },
+  "exit_reason_counts": {
+    "CLOSE_STOP_2_ATR20": 2,
+    "CLOSE_LOGIC_INVALIDATION_SMA20": 31,
+    "MAXIMUM_40_EXCHANGE_SESSIONS": 2
+  },
+  "protected_input_hashes": {
+    "docs/e2e-gateway-v3/Freeze-R3.json": "sha256:5e5fa134149207f63af343715add9fa7576bb5bfc82a30d6bca254359269f657",
+    "experiments/e2e_history_v2/protocol.json": "sha256:95120d8082f2c15bfdb218416baa80ba91e9206a88a5128ee153204c7045fed5",
+    "experiments/e2e_pilot_v1/method.json": "sha256:b58784a57ce12a9979c583b5808f48d182bd509bed90d472e3ffd88a5bd0cd5e",
+    "Case.json": "sha256:7b886422ce596e2f84ae6b370525e4d6cdf9d6a21e29fed45cecf46b36575b6e",
+    "EngineResult.json": "sha256:26ae4a84415a045b2732a95cf2793152d6406ee7c4d82ac399b3bb40fe637be1",
+    "Run.json": "sha256:383e14188543508faef39bf7f5b94d4e7c091cfa58e6bed05df22bc7c6496959"
+  },
+  "private_trace_hash": "sha256:b380033214e5272b58cebdb64ac8ad92dbe018e1879e1e2d29b24e3700c092de",
+  "private_review_hash": "sha256:b00473e00850e042ed76ecc24ebbb96e75ac7e82099ac115c1401d77b3a30bc8",
+  "independent_test_source_hash": "sha256:4f2aa89ca9bd02dc330b489fb15cacfb67219774363997a2ee02ab71922061aa",
+  "limitations": [
+    "Independent software implementation from existing documented/frozen rules, not blind rule derivation or a human signature",
+    "Shared original Case source; not independent verification that market/provider history is complete",
+    "Exact decision reproduction does not establish economic suitability, original PIT, unbiased selection, OOS or profitability reliability",
+    "Strategy parameter/risk/fee values unchanged; no optimization or new strategy run"
+  ],
+  "semantic_findings": [
+    "No extra last40 execution-day suppression: decision at index L-41 executes L-40; indices L-39..L are excluded",
+    "20/40 thresholds are close decisions for next executable open; 20 is not a minimum holding period",
+    "Exit reason priority: close stop, SMA20, day20 nonpositive may supersede maximum40 on trigger day; already-pending sell retains first reason",
+    "Opening caps value previously held positions at adjusted last-known close, not simultaneous actual opening NAV; this is implementation semantics not a strict intraday risk guarantee"
+  ],
+  "benchmark_review": {
+    "passed": true,
+    "difference_count": 0,
+    "freeze_commit": "90fef1e269917edfc4b96325a0022eeb57359a50",
+    "freeze_commit_timestamp": "2026-10-15T10:23:02+08:00",
+    "benchmark_recorded_at": "2026-10-15T02:23:12.744136+00:00",
+    "freeze_protocol_code_hashes_match": true,
+    "benchmark_code_hash": "sha256:eefda8e7175874e4a1e39ed91d00b080f56e72dc3ed2b780874795ee53ec137a",
+    "protocol_sha256": "sha256:1061fa2d9fb25aeecd60ce26bc404801325882966ee4058994d7eede8dfc084f",
+    "results_sha256": "sha256:e6cd1cb27fef5c748f7d73add23db30736f7eb799c336d7364c7893562085cf1",
+    "independent_script_hash": "sha256:e2124a1ac32506c6bb0c0826f5dd85e0947cf5a9c3dddb096cfaace01fc1096f",
+    "private_review_hash": "sha256:0553bb1fb2dcc375b927e3061af0022fb0cd710d84877aa8928644122fdb744b",
+    "controls": [
+      {
+        "id": "NINE_BUY_HOLD_100",
+        "quantity_candidates": 36,
+        "first_purchase_notional_fraction": "0.65147",
+        "entry_day_close_exposure_fraction": "0.65776203831232633694260228304380152389025693973992660886646360187452892021928481",
+        "actual_first_entry_cost_cents": 6518264,
+        "first_entry_cash_cents": 3481736,
+        "mismatch_count": 0,
+        "trades": 7,
+        "daily_rows": 241,
+        "ledger_rows": 18,
+        "net_return": "0.1920563",
+        "max_drawdown": "0.17188184897389918310420402470611675632596134688184897389918310420402470611675633",
+        "terminal_nav_cents": 11920563,
+        "terminal_cash_cents": 3563063,
+        "terminal_position_count": 7,
+        "terminal_receivable_cents": 0,
+        "fees_cents": 3564,
+        "slippage_cents": 7300,
+        "dividend_cents": 81327,
+        "average_exposure_fraction": "0.71316300540604250730883765735978681121138879353743469474294451503416137597518830",
+        "maximum_exposure_fraction": "0.75510244170742726933427622920227080755102441707427269334276229202270807551024417",
+        "hypothetical_terminal_sell_fees_cents": 7816,
+        "drawdown_dates": {
+          "peak": "2026-03-10",
+          "trough": "2026-09-28",
+          "recovery": null
+        },
+        "rejection_count": 2,
+        "target_cash_events_reviewed": 14,
+        "arithmetic_return_difference_v3_minus_control_percentage_points": "-13.2358700"
+      },
+      {
+        "id": "NINE_BUY_HOLD_60_CASH40",
+        "quantity_candidates": 20,
+        "first_purchase_notional_fraction": "0.30457",
+        "entry_day_close_exposure_fraction": "0.31101490901270283958068835376471649287850091230114956882496999465800847780992223",
+        "actual_first_entry_cost_cents": 3048230,
+        "first_entry_cash_cents": 6951770,
+        "mismatch_count": 0,
+        "trades": 5,
+        "daily_rows": 241,
+        "ledger_rows": 14,
+        "net_return": "0.0933654",
+        "max_drawdown": "0.10669002297260494264863851802055989308214390288033252722017496424333055192744947",
+        "terminal_nav_cents": 10933654,
+        "terminal_cash_cents": 6996954,
+        "terminal_position_count": 5,
+        "terminal_receivable_cents": 0,
+        "fees_cents": 2530,
+        "slippage_cents": 3500,
+        "dividend_cents": 45184,
+        "average_exposure_fraction": "0.35954007976254461550937373815353005611341086418469524369199722991254760609764873",
+        "maximum_exposure_fraction": "0.40685948238565156095533703357520138759922720914142894684649794395953165285939951",
+        "hypothetical_terminal_sell_fees_cents": 4506,
+        "drawdown_dates": {
+          "peak": "2026-03-10",
+          "trough": "2026-07-13",
+          "recovery": null
+        },
+        "rejection_count": 4,
+        "target_cash_events_reviewed": 14,
+        "arithmetic_return_difference_v3_minus_control_percentage_points": "-3.3667800"
+      }
+    ],
+    "scope": "First-target-open cash-only buy-hold controls, independently calculated; not exposure/risk matched alpha",
+    "source_action_count": 23,
+    "pretarget_actions_no_entitlement": 9,
+    "target_actions_per_control": 14,
+    "unresolved_arithmetic_findings": []
+  }
+}
