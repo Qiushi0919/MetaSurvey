@@ -1,0 +1,29 @@
+name: Long forward isolated experiment checks
+on:
+  push:
+    paths: ['tools/long_forward/**', 'experiments/long_forward_v1/**', 'docs/long-forward/**', 'workbench/**']
+  pull_request:
+    paths: ['tools/long_forward/**', 'experiments/long_forward_v1/**', 'docs/long-forward/**', 'workbench/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  experiment:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -B tools/long_forward/check.py ci-results/long-forward
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: long-forward-${{ matrix.os }}
+          path: ci-results/long-forward
+      - if: always()
+        run: cat ci-results/long-forward/result.json >> "$GITHUB_STEP_SUMMARY"
