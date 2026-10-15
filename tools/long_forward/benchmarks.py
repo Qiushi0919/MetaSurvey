@@ -39,7 +39,12 @@ def yearly(series, initial):
 
 
 def build_benchmarks(case, protocol):
-    if (protocol.get('version')!='1.0.0' or case.get('mode')!='HISTORY'
+    supported = protocol.get('version')=='1.0.0' or (protocol.get('version')=='2.0.0'
+        and protocol.get('input_method_version')=='HISTORY_RAW_V2'
+        and protocol.get('forward',{}).get('enabled') is False
+        and case.get('input_policy_ref')==protocol.get('input_policy_ref')
+        and isinstance(protocol.get('input_policy_ref'),str))
+    if (not supported or case.get('mode')!='HISTORY'
         or case.get('protocol_ref')!=_digest(protocol)
         or case.get('namespace')!=protocol.get('namespace')
         or case.get('strategy_id')!=protocol.get('strategy_id')

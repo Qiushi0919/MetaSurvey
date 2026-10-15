@@ -8,6 +8,8 @@ from experiments.long_forward_v1 import engine
 ROOT=Path(__file__).resolve().parents[2]
 ARCHIVE=ROOT.parent/'.p1b-archives/long-forward-20261015'
 CODE_PATHS=(
+ 'tools/long_forward/history_raw_input.py','tools/long_forward/history_v2.py',
+ 'experiments/long_forward_v1/history-raw-input-policy.json','experiments/long_forward_v1/history-raw-protocol.json',
  'tools/long_forward/independent.py','tools/long_forward/verify_forward.py','tools/long_forward/builder.py','tools/long_forward/capture.py','tools/long_forward/forward.py',
  'tools/long_forward/run.py','tools/long_forward/reporting.py','tools/long_forward/runtime.py','tools/long_forward/benchmarks.py',
  'experiments/long_forward_v1/engine.py','experiments/long_forward_v1/protocol.json',

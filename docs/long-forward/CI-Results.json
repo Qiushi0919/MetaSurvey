@@ -1,0 +1,146 @@
+{
+  "kind": "LongForwardCIResults",
+  "version": "1.0.0",
+  "scope": "SYNTHETIC_ENGINEERING_ONLY_NOT_REAL_RUN",
+  "source_commit": "7daa41991cad2f35d894152f11c00c03e7b3271a",
+  "public_commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+  "checks": [
+    {
+      "suite": "LONG_FORWARD_V1",
+      "commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051774",
+      "unique_cases": 104,
+      "executions": 104,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "artifact": "long-forward-50295b2/long-forward-macos-latest/result.json",
+      "artifact_sha256": "sha256:148fe9fc327c79edde950e55a5ae7a94ae3db020b3fd3c909250d778bc459c0c"
+    },
+    {
+      "suite": "LONG_FORWARD_V1",
+      "commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051774",
+      "unique_cases": 104,
+      "executions": 104,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "artifact": "long-forward-50295b2/long-forward-ubuntu-latest/result.json",
+      "artifact_sha256": "sha256:773a3813e32468e8d6b37481254ae00fa12b79a2c32e377e7e45ee1f931aaf2e"
+    },
+    {
+      "suite": "scoring",
+      "commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051744",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "artifact": "workbench-50295b2/scoring-macos-latest/result.json",
+      "artifact_sha256": "sha256:4a7dce922103274eef6d09551f2fb28d4948ccfda5812a69ba3bed0cb3bcaa94"
+    },
+    {
+      "suite": "scoring",
+      "commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051744",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "artifact": "workbench-50295b2/scoring-ubuntu-latest/result.json",
+      "artifact_sha256": "sha256:7cb2a440dddd73f5a218f3097f6d31dabef459745e805486732fe03242ac5234"
+    },
+    {
+      "suite": "workbench",
+      "commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051744",
+      "unique_cases": 169,
+      "executions": 169,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "artifact": "workbench-50295b2/workbench-macos-latest/result.json",
+      "artifact_sha256": "sha256:4bc88c39d520400709b671ae4905f66529de00b51919e43449df36fc3a7398cc"
+    },
+    {
+      "suite": "workbench",
+      "commit": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051744",
+      "unique_cases": 169,
+      "executions": 169,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "artifact": "workbench-50295b2/workbench-ubuntu-latest/result.json",
+      "artifact_sha256": "sha256:e57aa8a02b709737401fcc4422034c75ed3d2a0f172ab6da31b3273b36563f23"
+    }
+  ],
+  "workflow_results": [
+    {
+      "conclusion": "success",
+      "databaseId": 38677051779,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "E2E compatible gateway input V3 isolated synthetic checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051779"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38677051747,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "E2E reconstructed history V2 isolated synthetic checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051747"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38677051774,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "Long forward isolated experiment checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051774"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38677051767,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "V3 performance review isolated synthetic checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051767"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38677051754,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "E2E pilot isolated synthetic checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051754"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38677051744,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "Scoring and workbench isolated checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051744"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38677051741,
+      "headSha": "50295b27dc8e5a8fc44f30916e4a0cccfd88e5f5",
+      "name": "Public synthetic engineering checks",
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/38677051741"
+    }
+  ],
+  "old_regression_retained": true
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "HistoryRawInputPolicy",
+  "version": "2.0.0",
+  "mode": "HISTORY",
+  "registered_at": "2026-10-15T04:20:40.520339+00:00",
+  "factor_policy": "QUARANTINED_AUXILIARY_NOT_USED_FOR_PRICES_SIGNALS_OR_ACCOUNTING",
+  "factor_anomaly_reason": "UNKNOWN_SUPPLIER_PRECISION_OR_VERSION; not certified",
+  "limit_pre_close_missing": "retain NULL; captured positive tick-valid up/down limits and raw OHLC still mandatory; daily pre_close must pass exact-to-cent previous raw/action bridge; missing auxiliary cross-check disclosed",
+  "first_capture_ex_action": "retain full event/disclosures in boundary_action_inventory; no engine application only when ex equals first captured session before target, record before coverage, cash/bonus settlement finished before target; initial positions and price history empty; no prior entitlement created",
+  "raw_bridge": "No tolerance: ROUND_HALF_UP to .01 equality; official differentiated cash reference only when exact action identity and pinned original verified",
+  "engine_price_comparison": "unchanged cumulative actual-gross-cash economic adjustment, not exchange ex-reference index; entitlement cash remains actual gross, flat20% simulated tax",
+  "formal_pit": false,
+  "official_reference_adjustments": [
+    {
+      "symbol": "603993.SH",
+      "ex_date": "2023-07-07",
+      "record_date": "2023-07-06",
+      "pay_date": "2023-07-07",
+      "cash_per_share": "0.08508",
+      "bonus_ratio": "0",
+      "reference_cash_per_share": "0.08409",
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0702/2023070200033_c.pdf",
+      "source_relative_path": "official-action/CMOC-2023-037.pdf",
+      "source_sha256": "sha256:2b36bc9b2862cc4267c65110f27d9159c6d11a5fd6e5ea44fc880f106ff7ec2b",
+      "receipt_relative_path": "official-action/Receipt.json",
+      "receipt_sha256": "sha256:33d708c8a0f7a4c3d769faf55497b95a525803daa612277257e155a3c2e31eea",
+      "source_page_1based": 4,
+      "printed_issuer_date": "2023-06-30",
+      "hkex_cover_date": "2023-07-02",
+      "historical_first_visibility_proven": false
+    }
+  ]
+}

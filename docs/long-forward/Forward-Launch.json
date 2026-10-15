@@ -1,0 +1,39 @@
+{
+  "kind": "ForwardLaunchSummary",
+  "version": "1.0.0",
+  "run_id": "FORWARD-A-20261015-BOOTSTRAP-01",
+  "mode": "VIRTUAL_ONLY_DAILY_OPEN_PROXY",
+  "status": "PLAN_FROZEN",
+  "source_session": "2026-10-14",
+  "frozen_at": "2026-10-15T03:40:40.410179+00:00",
+  "execution_session": "2026-10-16",
+  "bootstrap_skipped_sessions": [
+    "2026-10-15"
+  ],
+  "plan_hash": "sha256:e1e90610c93acc9b4499a6defb95c5c3e09b7e68d906098e68967f03bb97e75d",
+  "plan_file_hash": "sha256:48dac0820f7a81bbe83300425344e1cb60dfac2c0d07ff3e1b4fd7c9f76ef3c9",
+  "bundle_hash": "sha256:3fdb64716979c1e83533ea5a9eebebc51809799b34057a59a1cb0490acba8876",
+  "virtual_initial_cents": 10000000,
+  "pending_buy_count": 0,
+  "pending_sell_count": 0,
+  "selected_sectors": [],
+  "sample_rs20": {
+    "COPPER_PRODUCERS_SAMPLE": "-0.12823260811814428932126520377044078931976046916138153082280975414520098650883425",
+    "HV_EQUIPMENT_SAMPLE": "-0.07786917220097437159235111559243636229522769819269179141435079129369680505456147",
+    "PCB_SAMPLE": "-0.10443221773503140291053406713849106333556200088450574154976642261852863011451018"
+  },
+  "settled_sessions": 0,
+  "actual_broker_fills": 0,
+  "strategy_b": "NOT_READY",
+  "note": "No sample group meets frozen positive strength selection. No threshold reduced to create trades; no future settlement fabricated.",
+  "daily_task": {
+    "id": "metasurvey-a",
+    "state": "ACTIVE",
+    "local_schedule": "18:30 Asia/Shanghai",
+    "activation_hash": "sha256:9f6638d80c9e3c932e9e982db5b68c74c537e90b182309ab0d59f7d967e9af61",
+    "runtime_deployment_hash": "sha256:495a8021bcc5dedbbdd66f24d0f9ebb585aa70a6121c357730e443be1878f05f",
+    "actual_daily_scheduled_invocations_so_far": 0,
+    "execution_requires_host_app_available": true,
+    "source_expiry_stop_date": "2026-11-05"
+  }
+}

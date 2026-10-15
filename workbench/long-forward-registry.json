@@ -2,17 +2,21 @@
   "kind": "LongForwardRegistry",
   "version": "1.0.0",
   "status": "LOCAL_ONLY",
-  "archive_root": "/Users/qiushi/投资研究/.p1b-archives/long-forward-20261015",
+  "archive_root": "/Users/qiushi/\u6295\u8d44\u7814\u7a76/.p1b-archives/long-forward-20261015",
   "code_pins": {
+    "tools/long_forward/history_raw_input.py": "sha256:8181508d295174deac4d5e8884e83fac3bbadfecd7f412aa05052efffc6e8cf3",
+    "tools/long_forward/history_v2.py": "sha256:ef9d0977df8b032490c8262cd68c3afc4bdd2ef1648789b05da51bd98f821283",
+    "experiments/long_forward_v1/history-raw-input-policy.json": "sha256:22888e63d21131368639014409eea78d3994a8a19e9af9555fd2427c5d5c56b1",
+    "experiments/long_forward_v1/history-raw-protocol.json": "sha256:746c85d26c45b16dba66f76a7df037cc46c4bb0693d1f38de2b98a2ee1e85497",
     "tools/long_forward/independent.py": "sha256:f2719c83f511ee355ae39387d2a58574e099ce38b0e88932f7f0c2494317e4f0",
     "tools/long_forward/verify_forward.py": "sha256:59c709e0d217f64b2b9ee02398e876454430364c80fa1069864938f22dc48b85",
     "tools/long_forward/builder.py": "sha256:aa19e9b46671ccb42fa4733d8de7fe2c5be8e99170c90e4cbeeebc3b34b5b6f6",
     "tools/long_forward/capture.py": "sha256:b9d650984b5da51d3e36d1a12a1022a526b293681c639614e1236e0c27a71710",
     "tools/long_forward/forward.py": "sha256:65c483e2bfdb1f108e77ba709b73a71d4f96087b3306f21687685f4ddda5c8de",
-    "tools/long_forward/run.py": "sha256:f97a2ee201a3503ddc0e82445d45ded4e7a65f940f4bcab712f8263b067d6021",
-    "tools/long_forward/reporting.py": "sha256:b88493402a744c9233005020940e88d858ad7f3925fe7f0c96fd4b5bac36b3ed",
+    "tools/long_forward/run.py": "sha256:ee2812166560cd15e12f8fb75d4ebb4c0a5a3b0fc8fa46be2102e051d2bcfe31",
+    "tools/long_forward/reporting.py": "sha256:6433239a5a9c7087ed4e77493d91a088176b5a53ed0303ef021767bdb5bc6543",
     "tools/long_forward/runtime.py": "sha256:b951cb98902726a9032b2a39ddfadba2abee50e9e783a224bda806a6e681a61a",
-    "tools/long_forward/benchmarks.py": "sha256:74f59299f4478756dc60363793ae3fb3f5bd86d01a3acb1f97a80a20810a4e10",
+    "tools/long_forward/benchmarks.py": "sha256:b9a0c0a89c304cfb2f670521eaf8d8d823cd95bad468cbdc471dd747210612b2",
     "experiments/long_forward_v1/engine.py": "sha256:9c7eaeac4cd4f0a38a5573ab8856b272f71ddb2bc4538d56cd75bbe0804269a3",
     "experiments/long_forward_v1/protocol.json": "sha256:d83c89dd83a68a1edac80f9b7e3069457c4bf69ac50e31456b131834ad4d96d6",
     "tools/e2e_gateway/builder.py": "sha256:c7f18a86de6393ba3a5c8a62d99d01e462ee0ff0df29496dd59865831f39c6d1",
@@ -37,6 +41,7 @@
     "tushare-admission/probe.py": "sha256:abb2fb787b197a8048c5b4a8d54ab6e2a68f356006f0794c7daf25b942e4487e"
   },
   "protocol_ref": "sha256:d83c89dd83a68a1edac80f9b7e3069457c4bf69ac50e31456b131834ad4d96d6",
-  "history_run": null,
-  "forward_state": null
+  "history_run": "runs/LF5Y-20261015-RAW-V2-03",
+  "forward_state": "forward/ACTIVE",
+  "forward_runtime_manifest_ref": "sha256:495a8021bcc5dedbbdd66f24d0f9ebb585aa70a6121c357730e443be1878f05f"
 }

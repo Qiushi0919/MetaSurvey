@@ -1,0 +1,91 @@
+{
+  "kind": "SingleResearchIncrementReadiness",
+  "version": "1.0.0",
+  "module": "KNOWN_CASH_DIVIDEND_NEXT_TWO_SESSIONS_NO_NEW_BUY",
+  "state": "NOT_READY_NOT_STARTED",
+  "evaluated_at": "2026-10-15T03:46:54.815712+00:00",
+  "candidate_protocol_ref": "sha256:d83c89dd83a68a1edac80f9b7e3069457c4bf69ac50e31456b131834ad4d96d6",
+  "actual_current_product": "Existing compatible gateway dividend; nine successful current captures",
+  "observations": [
+    {
+      "symbol": "603228.SH",
+      "received_at": "2026-10-15T03:10:30.724744+00:00",
+      "row_count": 58,
+      "raw_hash": "sha256:eabfeaa5acafeab3d373979cf8715c736f74a63cc3d2f0fe62e8c4151b28e1cf",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "002463.SZ",
+      "received_at": "2026-10-15T03:14:02.884800+00:00",
+      "row_count": 71,
+      "raw_hash": "sha256:f15e54b5ef0319f7e9693ff38c25f1e5c0ef693872b5b472bce7d35f07f0a0c0",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "002916.SZ",
+      "received_at": "2026-10-15T03:17:35.642350+00:00",
+      "row_count": 52,
+      "raw_hash": "sha256:a35a5c98ea035a9d88c96ff3163c63970bad68624d0964d8592dd295b5619186",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "600312.SH",
+      "received_at": "2026-10-15T03:21:07.400748+00:00",
+      "row_count": 98,
+      "raw_hash": "sha256:0e2ba14c0187da7611cf1f9ecfc63e793bc95e73d87d607483dc7111bfba1e5e",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "601179.SH",
+      "received_at": "2026-10-15T03:24:40.585168+00:00",
+      "row_count": 79,
+      "raw_hash": "sha256:0cb84bb88e5b98ac73d80d1ac6a08fba1d07970175007dc77d7fdd56fd116209",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "002028.SZ",
+      "received_at": "2026-10-15T03:28:13.784825+00:00",
+      "row_count": 86,
+      "raw_hash": "sha256:70774129ca61783b6798cff7c970fe0ff7ce4ed6dee6e4cc388596aee768a37f",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "603993.SH",
+      "received_at": "2026-10-15T03:31:46.514586+00:00",
+      "row_count": 71,
+      "raw_hash": "sha256:2543196cd2e1dd430560d8d05406ac69c94ac919a7eea032c3b8cda4b8d4a917",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "601899.SH",
+      "received_at": "2026-10-15T03:35:18.551699+00:00",
+      "row_count": 85,
+      "raw_hash": "sha256:d9616a1f3fb31826bc08dad05dcc0ce18b37fa62b9fa9678e600ae489c9a154b",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    },
+    {
+      "symbol": "600362.SH",
+      "received_at": "2026-10-15T03:38:53.275836+00:00",
+      "row_count": 95,
+      "raw_hash": "sha256:66b63c593f6e490b3c5bb95a9fdbbd1a16d46d88bed7665bd55e1424078604cd",
+      "future_implemented_events": 0,
+      "future_events_with_announcement_date": 0
+    }
+  ],
+  "missing": [
+    "Current-time completeness and truncation/revision semantics of this product not yet independently validated; successful historical rows alone do not prove an exhaustive future-event feed.",
+    "Separate B state/plan/settlement path has not been instantiated or frozen; no B observations or B performance exist."
+  ],
+  "next_action": "Bind a bounded present-time event-coverage receipt and a separate immutable B runtime. If admitted, start at its actual freeze; compare only overlap with A. Do not ask for historical PIT as prerequisite to new current capture.",
+  "comparison_started": false,
+  "deep_research_validated": false,
+  "blocks_a": false
+}

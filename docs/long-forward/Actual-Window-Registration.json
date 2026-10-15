@@ -1,0 +1,28 @@
+{
+  "kind": "ActualCalendarWindowRegistration",
+  "version": "1.0.0",
+  "registered_at": "2026-10-15T03:57:36.848371+00:00",
+  "scope": "BEFORE_FIRST_LONG_HISTORY_STRATEGY_RESULT",
+  "protocol_ref": "sha256:d83c89dd83a68a1edac80f9b7e3069457c4bf69ac50e31456b131834ad4d96d6",
+  "calendar_raw_hashes": {
+    "SSE": "sha256:1303f359a83ac81c8384aaa4d28f6e42018e89703fa20703c7a8a1066db9b3a7",
+    "SZSE": "sha256:01bc2c0d7c8223b9807122de58875b7fa75a0b080f757658fec854905e29ec6c"
+  },
+  "warmup_first": "20210601",
+  "warmup_last": "20210930",
+  "warmup_sessions": 85,
+  "evaluation_first": "20211008",
+  "evaluation_last": "20260930",
+  "evaluation_sessions": 1211,
+  "total_calendar_sessions": 1296,
+  "market_performance_not_used_for_window_selection": true,
+  "formal_1260_session_requirement_met": false,
+  "data_use": "FIXED_CONTEMPORARY_NINE_RECONSTRUCTED_EXPLORATORY_DIAGNOSTIC_NOT_UNTOUCHED_OOS",
+  "exposure_clarified_at": "2026-10-15T03:58:43.666593+00:00",
+  "known_previously_exposed_prices": {
+    "start": "2025-06-03",
+    "end": "2026-09-30"
+  },
+  "conservative_exposure_policy": "All 2025–2026 data remain ineligible for independent blind-test claims.",
+  "partition_label_clarification": "Protocol NEW_LENGTH_STABILITY_DIAGNOSTIC denotes extending the evaluation length; it does not claim all 2021–2025 inputs are newly unseen. The 2025 warmup portion was already exposed. No segment is designated untouched OOS or parameter-search material."
+}

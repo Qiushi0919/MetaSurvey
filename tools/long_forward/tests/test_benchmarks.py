@@ -114,4 +114,19 @@ class BenchmarkTests(unittest.TestCase):
         self.assertIsNone(a['terminal_positions'][0]['hypothetical_sell_fee_cents'])
 
 
+
+    def test_history_raw_v2_changes_identity_not_economics(self):
+        c,p=fixture();before=build_benchmarks(c,p)
+        p.update(version='2.0.0',input_method_version='HISTORY_RAW_V2',forward={'enabled':False},input_policy_ref='sha256:'+'a'*64)
+        c['input_policy_ref']=p['input_policy_ref'];c['protocol_ref']=_digest(p)
+        after=build_benchmarks(c,p)
+        for a,b in zip(before,after):
+            a.pop('protocol_ref');b.pop('protocol_ref');self.assertEqual(a,b)
+    def test_unknown_history_version_rejected_even_if_rehashed(self):
+        c,p=fixture();p['version']='3.0.0';c['protocol_ref']=_digest(p)
+        self.assertRaisesRegex(ValueError,'PROTOCOL_BINDING',build_benchmarks,c,p)
+    def test_v2_missing_policy_binding_rejected(self):
+        c,p=fixture();p.update(version='2.0.0',input_method_version='HISTORY_RAW_V2',forward={'enabled':False},input_policy_ref='sha256:'+'a'*64);c['protocol_ref']=_digest(p)
+        self.assertRaisesRegex(ValueError,'PROTOCOL_BINDING',build_benchmarks,c,p)
+
 if __name__=='__main__':unittest.main()

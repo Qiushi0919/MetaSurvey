@@ -18,16 +18,20 @@ def bundle(folder):
 
 def history(folder):
  data=bundle(folder);record=data['Run.json'];report=data['BuildReport.json'];case=data.get('Case.json');result=data.get('EngineResult.json');capture=Path(record['capture_dir'])
- if record.get('kind')!='LongForwardHistoricalRun' or record.get('version')!='1.0.0' or record['run_id']!=folder.name or record['window']!=builder.protocol()['target_window']:raise ValueError('RUN_IDENTITY_WINDOW')
+ if record.get('version')=='2.0.0':
+  from tools.long_forward import history_v2 as adapter
+  if record.get('historical_protocol_ref')!=run.sha(adapter.PROTOCOL):raise ValueError('HISTORY_V2_PROTOCOL')
+ else:adapter=builder
+ if record.get('kind')!='LongForwardHistoricalRun' or record.get('version') not in ('1.0.0','2.0.0') or record['run_id']!=folder.name or record['window']!=adapter.protocol()['target_window']:raise ValueError('RUN_IDENTITY_WINDOW')
  if record['status']!=(result['status'] if result else 'SOURCE_OR_INPUT_BLOCKED'):raise ValueError('RUN_STATUS')
  if capture.parent!=ARCHIVE or capture.resolve()!=capture:raise ValueError('CAPTURE_SCOPE')
- again,c=builder.build_case(capture,record['run_id'],record['recorded_at'])
+ again,c=adapter.build_case(capture,record['run_id'],record['recorded_at'])
  if again!=report or c!=case:raise ValueError('INPUT_REBUILD_MISMATCH')
  if record['engine_called']!=bool(result and result['engine_called']):raise ValueError('ENGINE_STATUS_MISMATCH')
  perf=None
  if result:
   from experiments.long_forward_v1.engine import run_diagnostic
-  if run_diagnostic(case,lambda c:builder.verify_provenance(c,capture),builder.protocol())!=result:raise ValueError('ENGINE_REPLAY_MISMATCH')
+  if run_diagnostic(case,lambda c:adapter.verify_provenance(c,capture),adapter.protocol())!=result:raise ValueError('ENGINE_REPLAY_MISMATCH')
   if result['input_hash']!=builder.digest(case) or result['content_hash']!=builder.digest({k:v for k,v in result.items() if k!='content_hash'}):raise ValueError('ENGINE_CONTENT_MISMATCH')
   if 'Performance.json' in data:
    from tools.v3_review.performance import derive_performance
@@ -39,7 +43,7 @@ def history(folder):
    if audit(folder)!=data['Arithmetic.json']:raise ValueError('ARITHMETIC_RECALC_MISMATCH')
   if 'Controls.json' in data:
    from tools.long_forward.benchmarks import build_benchmarks
-   if build_benchmarks(case,builder.protocol())!=data['Controls.json']:raise ValueError('CONTROL_RECALC_MISMATCH')
+   if build_benchmarks(case,adapter.protocol())!=data['Controls.json']:raise ValueError('CONTROL_RECALC_MISMATCH')
  rows=perf['nav_series'] if perf else []
  exposure=dict(average_exposure_fraction=str(sum(D(r['exposure_fraction']) for r in rows)/len(rows)),maximum_exposure_fraction=str(max(D(r['exposure_fraction']) for r in rows)),exposed_sessions=sum(r['exposure_cents']>0 for r in rows),terminal_cash_cents=rows[-1]['cash_cents']) if rows else None
  overall=dict(perf['summary'],nav_series=rows) if perf and perf['summary'] else None

@@ -1,0 +1,713 @@
+{
+  "kind": "ActualCaptureCoverage",
+  "scope": "FORWARD_BOOTSTRAP",
+  "captured_at": "2026-10-15T03:40:23.553537+00:00",
+  "started_at": "2026-10-15T03:08:26.600002+00:00",
+  "manifest_hash": "sha256:dad231754e4c57734ae1aa189511f5dd69543a07418841f3d4dfab35a07fbe7f",
+  "connection_kind": "COMPATIBLE_GATEWAY_NOT_VERIFIED_OFFICIAL_TUSHARE",
+  "state": "CAPTURE_COMPLETE",
+  "reconstructed_warmup": true,
+  "historical_visibility_proven": false,
+  "provider_license_independently_verified": false,
+  "scope_dates": {
+    "symbols": [
+      "603228.SH",
+      "002463.SZ",
+      "002916.SZ",
+      "600312.SH",
+      "601179.SH",
+      "002028.SZ",
+      "603993.SH",
+      "601899.SH",
+      "600362.SH"
+    ],
+    "start_date": "20260601",
+    "end_date": "20261014"
+  },
+  "rows": [
+    {
+      "api": "trade_cal",
+      "request_scope": {
+        "exchange": "SSE",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 136,
+      "receipt_hash": "sha256:29bb61686c12584308a84da625187753f55a3d1aa2efd9df1fc3545cddff6a7a"
+    },
+    {
+      "api": "trade_cal",
+      "request_scope": {
+        "exchange": "SZSE",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 136,
+      "receipt_hash": "sha256:d259548c90fb4c33cfe6ab103c31e11a9cdcad33570605e5cac6b023eb6873f7"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "603228.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:4e47d133a862e39725b4da466b1ab960bca50c46697892a3fdb571b9920d4a06"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "603228.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:849183d765618d82606d520f982f0b68da2138858ada9a6664a9e50dd5b115d8"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "603228.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:c0881121027e798d8b39b467aba594b3b4fe22611863ea13d3c6d39197ca9a88"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "603228.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:05ce0f1e1a07a1135db703c63ba3db3bddf1436e2e9c38986cacddb0c31586b9"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "603228.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:fcbc6e9bf2d3cc448c280f053e47085d9caea5e45db0eaeb0106e39eaa89e08a"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "603228.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 58,
+      "receipt_hash": "sha256:2cbe223538a2d6bfc4f4045693171c2556c932707214825c06c7a37870d03970"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "603228.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "receipt_hash": "sha256:bdd41197d2683ba98d39901ac206beb8103302ab7d7f970fe060dfd3607fe8ba"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "002463.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:7279cf27ab9bd197fb95a9e126b409894c9768b89c78337a22c18c70a3b72783"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "002463.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:95378b3ae195ffa0f98ae3f69508561bdaf6d6f21690f0c07cc06b410d36556a"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "002463.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:f676cc4b2f85fd577b06f9133e135bd284b19d59f20e0cc84625ae3661b49e17"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "002463.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:6473248a929a41fd79ae5461baa2e50a7564352d4f5f04ef7d7a5843960ad9fc"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "002463.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:3ecdd4d317979f57fd21beb03f0a43d62bce93c36a08df16dec50aa0130db0fe"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "002463.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 71,
+      "receipt_hash": "sha256:db58ea9408c9c09d50272fb425d4ef9f6010b1d68e66a0091a47ffbe7fe3a469"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "002463.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "receipt_hash": "sha256:2fecd570ad93eec33c62a4168d7880439c2c679fe9ba5f07738b8272a2be81f4"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "002916.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:2a4a390e6737818f70b2a92ebe0a1675c72a5a466286a0a72c34b4c68661a81e"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "002916.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:b167533f4271c39f92c4d17c038b46c5c92443bf21e6ddbf47831bf00aef32f7"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "002916.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:39e5f53c3e08d2e6ee6ce949657f00a4d7bdaf312487fcab3f317cec1d0c8a2d"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "002916.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:64b008c2742e6e268b9e34583b0fd7a55034ae0cef62ff066842fb78296ae000"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "002916.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:d96099c892826dc97fa446744aa1606d6094e4fbef81189144ee146a32c85b27"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "002916.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 52,
+      "receipt_hash": "sha256:85c3ac51bbe3f5ddab38e30711efb15e64e4326f31a20c70e1de2e87cca59058"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "002916.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "receipt_hash": "sha256:5e99a14a0af411f4f4dde3cfb241932db7baf9a75a92cb848b34d875d65cf4db"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "600312.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:2132a80d4e6e54fc10ebc936ac9983aee5dcb4c3285baf7a51d2a0b60d3df3e4"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "600312.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:e4ede7456abd5a1d6410a501bf85cfd8791d27365c3441035b1e7f0aaa966bad"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "600312.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:c30ef228693242fe565017d9337c3710f1dbd133f22ee9075187a18bf03084ca"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "600312.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:10fd36e8061d7c01fe328a42e706be1ab1e14e99be91d3f0930ed7e32ad5d312"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "600312.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:0a9f019d5c6429ca953a771d19e87163dc686e0db574fafe8ed6cff0ab5ab947"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "600312.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 98,
+      "receipt_hash": "sha256:744c2b4702731f0387cacc0ef2fa128ff6bd80171b4412bf90f11469bb14d426"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "600312.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 6,
+      "receipt_hash": "sha256:f44bc64f2691ffff890e889b6a2f69063efb1d40524ccd820064d119f10beb50"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "601179.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:04300d3eac16ed23ecebe600b9537fbc86ae1c56f01be78d229975adfcbdf252"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "601179.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:00b7a6381e5268047fe9a36a61fbc0a5a4feda3c29cf05f5fbf83ccabf2cfab2"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "601179.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:c3504f1edc0c11f2b0b4a3ce5fcab60c45ddc99e64684c2945376527922801bc"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "601179.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:e40df3bf170a4baaf13b7b42b0ea07ba15a236dddcc66cb9f216df410010689b"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "601179.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:d9537354f2bbbe63342d7d009e81f95ef612b8658af3de99b52c817acd24b080"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "601179.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 79,
+      "receipt_hash": "sha256:23f20224578325cdb63c3c9e15766bfb610fbe86054a5fdb32c82e15eda078f3"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "601179.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "receipt_hash": "sha256:6d54e43c98b3fdf690615fa2492291e14a437a206907ea6b753db0d5ed2cf850"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "002028.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:71b56cdb285fc7c8e7b8f17d47d287c6d87b7cf9e357166d3a939a246e999636"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "002028.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:c18a871ba7d302187fd75c47879912fc15e107e5317b2d5e4668fa0d32a494b4"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "002028.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:ba4628c20800d231077277edf944b36abe0d2ffd839fa479dce00eeb4fc5b79b"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "002028.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:d880609f5d48aeb7730f354822b6caa4ae0063075596a74c5ceccd809a6e412f"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "002028.SZ",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:5049bdab9f8b72f2920dc1e1d18c0ae653d2f3119be9db3bdd7252d31df89225"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "002028.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 86,
+      "receipt_hash": "sha256:0b4d374cd9d57b659f654c002f243b02dae370be2e522020dbaf16075e69738a"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "002028.SZ"
+      },
+      "state": "SUCCESS",
+      "row_count": 6,
+      "receipt_hash": "sha256:5d49f5803fa9d98e182d9fbc5b66cfd18d4d66264c2be34d3d3ba43601515114"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "603993.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:d1d1a79bc08f11ae7290c3b8e02f7c6e721e3ce452afc2d64d699d1a5d6598e0"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "603993.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:306e4a7351cda217c6c06ff26a45048e006e76e7a319ce3521babee9fb8cd051"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "603993.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:ea8e8ef077ef0ac7407ab3afa7d8e013ab3c809aa1bb90e2b15b7d927f6e0044"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "603993.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:1c972c46e41130ec245b1674732aaab9f2c4015a1f6613285e3af9d3cbba4678"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "603993.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:8bb2aeffca8da1d217910e692100192694caa293384bc9df41a08c260923c962"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "603993.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 71,
+      "receipt_hash": "sha256:54b46c460fd828cc39247709457a56efc41ccdc3574a5b8a3634c79150915cb3"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "603993.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "receipt_hash": "sha256:7c6304af9727859d935221a1a5572c49e23956d7b55e84af1d54dc0027dabcd3"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "601899.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:fccd8d7adc76a3723ef127567597da3fdd1e3cc35c9911f4f15700c15e23688d"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "601899.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:fa6e3713c0e173e0641a1909da5324b8a77c8bc433fbce1ce6b127c9b5213c8c"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "601899.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:77cdfa9d0bc85cbbc87b3421a93a0458296f7340033bbfbcd871f83c14dd1531"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "601899.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:f6774733c8de18412adda6e709bd86221808c1083059c17ab5d800b38ab267e3"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "601899.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:287097a9a801586044d8bbc29bc816b7602b9745c67b3003239feee68ae9d309"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "601899.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 85,
+      "receipt_hash": "sha256:8d1d01fbe80a947e81ca10540bd92b019e031f69fe91726352842bcde724831b"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "601899.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 2,
+      "receipt_hash": "sha256:0fc5d7057d8e1e34b47a3c1da352cb7b5fbb143062666442cbe04ed6e0a842cd"
+    },
+    {
+      "api": "stock_basic",
+      "request_scope": {
+        "ts_code": "600362.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 1,
+      "receipt_hash": "sha256:b06f35a79a2a6591fe5ef4cd85adde97236025b4de3baf440552c93fc4cb2e3c"
+    },
+    {
+      "api": "daily",
+      "request_scope": {
+        "ts_code": "600362.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:9cc1c23f6649e351209bc0f24bbd1b3ba828daa2accf16fe6e8469228a2fa89b"
+    },
+    {
+      "api": "stk_limit",
+      "request_scope": {
+        "ts_code": "600362.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:8f1a2e54b896d29910b314c838732c6524a9307663de8bfec58465441e053822"
+    },
+    {
+      "api": "suspend_d",
+      "request_scope": {
+        "ts_code": "600362.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "EMPTY_RESPONSE",
+      "row_count": 0,
+      "receipt_hash": "sha256:ff13b3839046c07451c2bc7368b0be1477dd892981d5c1737c46459bab09087b"
+    },
+    {
+      "api": "adj_factor",
+      "request_scope": {
+        "ts_code": "600362.SH",
+        "start_date": "20260601",
+        "end_date": "20261014"
+      },
+      "state": "SUCCESS",
+      "row_count": 91,
+      "receipt_hash": "sha256:dcea57a6c065251f2ba89fe099d70276a0693f3cf6f06ea582c7e54bccf056a2"
+    },
+    {
+      "api": "dividend",
+      "request_scope": {
+        "ts_code": "600362.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 95,
+      "receipt_hash": "sha256:03f3875200e118a5922e46367dd795dcf54e0bb39e1e851aa68b20d65ac9e982"
+    },
+    {
+      "api": "namechange",
+      "request_scope": {
+        "ts_code": "600362.SH"
+      },
+      "state": "SUCCESS",
+      "row_count": 6,
+      "receipt_hash": "sha256:47686069cfef4ec269e67ab5fa048f993fef660871370ba00690da1e7b44cc48"
+    },
+    {
+      "api": "trade_cal",
+      "request_scope": {
+        "exchange": "SSE",
+        "start_date": "20261014",
+        "end_date": "20261106"
+      },
+      "state": "SUCCESS",
+      "row_count": 24,
+      "receipt_hash": "sha256:98f280147092c3f52f1617aaa9f08feccd7a1a45c1a93e6979dd9bc0486b4bfb"
+    },
+    {
+      "api": "trade_cal",
+      "request_scope": {
+        "exchange": "SZSE",
+        "start_date": "20261014",
+        "end_date": "20261106"
+      },
+      "state": "SUCCESS",
+      "row_count": 24,
+      "receipt_hash": "sha256:3849b9d1bfe96763167ae90988a2126664b530bc089a1ee585673fa7a7d47551"
+    }
+  ],
+  "capture_code_note": "Initial running capture02 predates the per-epoch Capture-Adapter snapshot enhancement. Original wrappers, raw hashes, predecessor and actual clocks are retained; final frozen parser independently rebuilt the Case. No retrospective claim of an unrecorded collector file hash."
+}
