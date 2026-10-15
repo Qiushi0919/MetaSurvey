@@ -1,0 +1,62 @@
+{
+  "kind": "LongForwardPreservation",
+  "recorded_at": "2026-10-15T04:31:55.484661+00:00",
+  "baseline_hash": "sha256:768dc9b706b1b4eb1d9e32b34df4031bf1dfc8afe30882e117051561e3dfaeb4",
+  "source_baseline": "362b958444d5ffc06ebf439cfe0936249809581c",
+  "old_tracked_files_checked": 1244,
+  "allowed_changed": [
+    {
+      "path": "AGENTS.md",
+      "before": "sha256:972780d946e80a704dda75cc27261cb12bf76018fad2276925de08b80169cd4b",
+      "after": "sha256:9873598d478a49b1b9fe29b116e5ce6a6ca96a416dab4eb4fec17c5918afc2db"
+    },
+    {
+      "path": "docs/review/INDEX.json",
+      "before": "sha256:ca449a11dfae2ae14c997d0d6994733015292b452f3d09c99764a1635b26b148",
+      "after": "sha256:35109f74b6a6e976f1ad5f8515a94d47faa5c914a6d3742656a716cbc1d5fcf6"
+    },
+    {
+      "path": "docs/review/LATEST.md",
+      "before": "sha256:14e8546d487b6d81bd8806d9eff1f70f3bcffd41072471ca4636b83a9baf9d85",
+      "after": "sha256:41c953841415e47a765dbe6148f1a5154392f08faeb2600963c0b6454f6a564a"
+    },
+    {
+      "path": "workbench/server.py",
+      "before": "sha256:111a202200208406541cebbdf43748aa3235950d77e2367c3b37c89ca84208c6",
+      "after": "sha256:6db14eabd032d7d052ea23f4e75aa924c303286c9583072292163e9145ad6e29"
+    },
+    {
+      "path": "workbench/static/app.js",
+      "before": "sha256:61007f1ae866ec1aa6fd7a9b6eae3a8b2c343cb5e76b4786f80c8d7bba0f03b2",
+      "after": "sha256:a65cec884ce9f9e27dd6b98f207be7e43c13057e3a0e14d2b50a5568d3b1da79"
+    }
+  ],
+  "unexpected_changes": [],
+  "old_private_files_checked": 322,
+  "old_private_changed": [],
+  "frozen_forward_files_checked": 1280,
+  "frozen_forward_changed": [],
+  "specialist_head": "4252876e23224df5d29c20492a08da9436dccf4a",
+  "specialist_clean": true,
+  "passed": true,
+  "new_runs_preserved": [
+    {
+      "run_id": "LF5Y-20261015-FIXED-NINE-01",
+      "bundle_hash": "sha256:177f3865531fc4f24e91c24150ad2837058937db756eb17143b0e349524c0434",
+      "files": 2,
+      "all_original_bundle_file_hashes_match": true
+    },
+    {
+      "run_id": "LF5Y-20261015-RAW-V2-02",
+      "bundle_hash": "sha256:1817854b0e0b4a989d804f4a2480eba927dcfe471780c9b553a628a8f05158b1",
+      "files": 8,
+      "all_original_bundle_file_hashes_match": true
+    },
+    {
+      "run_id": "LF5Y-20261015-RAW-V2-03",
+      "bundle_hash": "sha256:d284c94f6aae6ee4ae725213c31389d1153bb4439866882f18048d65e2ccd6e7",
+      "files": 8,
+      "all_original_bundle_file_hashes_match": true
+    }
+  ]
+}

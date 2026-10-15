@@ -11,7 +11,7 @@ cd /Users/qiushi/投资研究/metasurvey-forward-frozen-v1
 /Users/qiushi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -B -m tools.long_forward.runtime --daily
 ```
 
-每日任务拟设北京时间18:30。是否已启用、实际任务ID与首份计划时间以本轮验收报告和本地 Activation.json 为准；本文描述运行方式本身不构成“已启动”。Codex本地自动任务依赖电脑开机、应用运行及钥匙串可访问，不能保证睡眠或离线时准点运行。
+每日任务 metasurvey-a 已设ACTIVE，北京时间18:30；首份计划已冻结。具体运行身份见本轮验收报告及本地 Activation.json。尚未观察首次定时触发，配置ACTIVE不等于连续运行成功。Codex本地自动任务依赖电脑开机、应用运行及钥匙串可访问，不能保证睡眠或离线时准点运行。
 
 每日入口先验代码哈希、STOP、日期化费用/来源期限、时钟与重复运行；随后串行捕获资料，检查来源、完整日历、单位、历史前缀和公司行动。行情原件和运行状态仅保存在 `.p1b-archives/long-forward-20261015`。共享队列30秒间隔，Forward先于历史请求；每次请求最多三次原地址重试。
 

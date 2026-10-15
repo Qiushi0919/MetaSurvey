@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "5aa21a3dfa3fe90e30a01de9cffaa52ec4d63a30",
-  "captured_at": "2026-10-15T04:27:39.867744+00:00",
+  "source_commit": "029a7c5657e75ff7c61f2c61b3113661030a055e",
+  "captured_at": "2026-10-15T04:32:40.144402+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1288,
+  "included_source_files": 1291,
   "files": [
     {
       "path": ".env.example",
@@ -2043,8 +2043,8 @@
     },
     {
       "path": "docs/long-forward/Acceptance-Report.md",
-      "bytes": 1611,
-      "sha256": "sha256:e9ab3dfe248333d8b099badaaa70f0f5259d784b5c3863adbdd165ca876a6425"
+      "bytes": 9817,
+      "sha256": "sha256:ad64ac7e3d61b9afb5a2e0908e7ed672a6cf60215651aa3e24176fbc56e2b062"
     },
     {
       "path": "docs/long-forward/Actual-Window-Registration.json",
@@ -2063,8 +2063,8 @@
     },
     {
       "path": "docs/long-forward/CI-Results.json",
-      "bytes": 5502,
-      "sha256": "sha256:d35faebb536094af49e38136f8f651617d23bff6be48519b427058f4cf8b8c1c"
+      "bytes": 9382,
+      "sha256": "sha256:e6855251da07f960ef874691eb4ecbd10253682f216824512e037ea6e86a62c3"
     },
     {
       "path": "docs/long-forward/Code-Freeze.json",
@@ -2087,14 +2087,29 @@
       "sha256": "sha256:eeee5964458a832abaf4a8b0d6c1e6c625bd4bad30a6c80b9c9b38e6f3b9f60e"
     },
     {
+      "path": "docs/long-forward/History-Coverage.json",
+      "bytes": 17762,
+      "sha256": "sha256:75cfcf86f73080da052fd627bd574f02afb5e81af902905cb80ebebebd4b6d26"
+    },
+    {
       "path": "docs/long-forward/History-Input-V2.md",
       "bytes": 3070,
       "sha256": "sha256:e5eb9a573cb3607f8e4dd66f3e37bfe29eda2d9ed6c11e9f27b94c0cc81927dc"
     },
     {
+      "path": "docs/long-forward/History-Result.json",
+      "bytes": 23900,
+      "sha256": "sha256:68750737d645cae491943f4692a2be852a51446b3efa90848a84786c9b776667"
+    },
+    {
       "path": "docs/long-forward/Independent-Review.md",
-      "bytes": 26965,
-      "sha256": "sha256:ba5e56a5636cb37e3f1b3060ad290d5b06c328bf36075e233d77f721453af1d9"
+      "bytes": 29841,
+      "sha256": "sha256:a3d32ac4dd95c4842246d915008067fc88d7c498a03cfc4b62b5427f6c70e115"
+    },
+    {
+      "path": "docs/long-forward/Preservation.json",
+      "bytes": 2441,
+      "sha256": "sha256:786bb66bd49130b56af078fd43ba36afa9b82beea29945bca3c3c0486a7bbdf9"
     },
     {
       "path": "docs/long-forward/Research-Increment-Readiness.json",
@@ -2103,8 +2118,8 @@
     },
     {
       "path": "docs/long-forward/Runtime.md",
-      "bytes": 2940,
-      "sha256": "sha256:3fb274b13e1dfaf2ac0c24534412770f232af2456d2d7e8aad8a6276d07697c6"
+      "bytes": 2963,
+      "sha256": "sha256:3eb927e8794b4ffbcb69f8b706a0a81f93ff0ebae3028d70b6bca625070b2270"
     },
     {
       "path": "docs/long-forward/Source-Policy.json",
@@ -2113,8 +2128,8 @@
     },
     {
       "path": "docs/long-forward/UI-Evidence.md",
-      "bytes": 2572,
-      "sha256": "sha256:7af9d6bf573140678fda44c049501463e37e69f330ebff2f0d0139c80ccec8d6"
+      "bytes": 5279,
+      "sha256": "sha256:898d72b4f708668e1118c5376d23e2eb0e35c8fce899a4010217d4b56b0c3c78"
     },
     {
       "path": "docs/overnight/Data-Design.md",
@@ -2763,13 +2778,13 @@
     },
     {
       "path": "docs/review/INDEX.json",
-      "bytes": 3279,
-      "sha256": "sha256:ca449a11dfae2ae14c997d0d6994733015292b452f3d09c99764a1635b26b148"
+      "bytes": 3648,
+      "sha256": "sha256:35109f74b6a6e976f1ad5f8515a94d47faa5c914a6d3742656a716cbc1d5fcf6"
     },
     {
       "path": "docs/review/LATEST.md",
-      "bytes": 4965,
-      "sha256": "sha256:14e8546d487b6d81bd8806d9eff1f70f3bcffd41072471ca4636b83a9baf9d85"
+      "bytes": 5464,
+      "sha256": "sha256:41c953841415e47a765dbe6148f1a5154392f08faeb2600963c0b6454f6a564a"
     },
     {
       "path": "docs/review/PUBLISHING.md",

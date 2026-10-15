@@ -8,6 +8,13 @@
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
     {
+      "phase": "LONG_HISTORY_AND_NEW_FORWARD_LAUNCH",
+      "report": "docs/long-forward/Acceptance-Report.md",
+      "result": "docs/long-forward/History-Result.json",
+      "forward": "docs/long-forward/Forward-Launch.json",
+      "business_state": "FIVE_CALENDAR_YEAR_DIAGNOSTIC_COMPLETED_FORWARD_PLAN_FROZEN_AUTOMATION_ACTIVE_ZERO_SETTLED_B_NOT_READY"
+    },
+    {
       "phase": "V3_BASELINE_PERFORMANCE_REVIEW",
       "report": "docs/v3-performance/Acceptance-Report.md",
       "registry": "docs/v3-performance/Registry.json",

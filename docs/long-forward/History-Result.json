@@ -1,0 +1,591 @@
+{
+  "kind": "ActualLongHistoryDiagnosticSummary",
+  "version": "2.0.0",
+  "recorded_at": "2026-10-15T04:29:13.073435+00:00",
+  "run_id": "LF5Y-20261015-RAW-V2-03",
+  "source_code_commit": "739e81d",
+  "strategy_id": "CORE40_FIXED_NINE_LONG_HISTORY_RAW_V2",
+  "engine_called": true,
+  "status": "SIMULATED_TRADES",
+  "actual_window": {
+    "first_session": "2021-10-08",
+    "last_session": "2026-09-30"
+  },
+  "target_window": {
+    "start": "2021-10-01",
+    "end": "2026-09-30",
+    "warmup_start": "2021-06-01",
+    "tail": "NO_NEW_ENTRIES_LAST40_SESSIONS"
+  },
+  "warmup_sessions": 85,
+  "target_sessions": 1211,
+  "input_sessions": 1296,
+  "input_daily_rows": 11664,
+  "complete_trades": 223,
+  "filled_orders": 446,
+  "unfilled": 439,
+  "ledger_rows": 525,
+  "summary": {
+    "initial_cash_cents": 10000000,
+    "final_nav_cents": 13086735,
+    "final_nav_cny": "130867.35",
+    "net_profit_cents": 3086735,
+    "net_return_fraction": "0.3086735",
+    "max_drawdown_fraction": "0.16982844283471132135481278948351690471905870333843804678028575196549719819259548",
+    "fees_cents": 437844,
+    "slippage_cents": 589300,
+    "dividend_net_cents": 205979,
+    "completed_sessions": 1211,
+    "filled_orders": 446,
+    "complete_trades": 223,
+    "complete_trades_source": "ORIGINAL_ENGINE_NOT_REDEFINED",
+    "first_session": "2021-10-08",
+    "last_session": "2026-09-30"
+  },
+  "max_drawdown": {
+    "fraction": "0.16982844283471132135481278948351690471905870333843804678028575196549719819259548",
+    "peak_session": "2021-12-24",
+    "peak_source": "DAILY_CLOSE",
+    "trough_session": "2023-12-07",
+    "recovery_session": "2025-07-08",
+    "peak_nav_cents": 10775009,
+    "trough_nav_cents": 8945106,
+    "recovered": true,
+    "state": "DRAWDOWN",
+    "tie_policy": "earliest equal peak; earliest maximum-drawdown trough; first later close >= peak"
+  },
+  "fee_summary": {
+    "components_cents": {
+      "commission_cents": 228928,
+      "exchange_cents": 0,
+      "other_cents": 6331,
+      "sell_tax_cents": 202585
+    },
+    "total_fee_cents": 437844,
+    "minimum_commission_uplift_cents": 58823,
+    "uplift_included_in_commission": true,
+    "slippage_cents": 589300,
+    "slippage_embedded_not_additional_cash_debit": true,
+    "total_friction_cents": 1027144,
+    "recorded_all_fills_fee_cents": 437844,
+    "recorded_all_fills_slippage_cents": 589300
+  },
+  "paid_dividend_cents": 205979,
+  "yearly": [
+    {
+      "status": "COMPLETED",
+      "year": "2021",
+      "first_session": "2021-10-08",
+      "last_session": "2021-12-31",
+      "net_return_fraction": "0.0706209",
+      "max_drawdown_fraction": "0.02365895220958822458454192975",
+      "filled_orders": 15,
+      "fees_cents": 14291,
+      "complete_trades": 6,
+      "sessions": 61,
+      "average_exposure_fraction": "0.25587334187724407552925473",
+      "partial_calendar_year": true,
+      "controls": [
+        {
+          "id": "NINE_BUY_HOLD_100",
+          "year": "2021",
+          "first_session": "2021-10-08",
+          "last_session": "2021-12-31",
+          "sessions": 61,
+          "opening_nav_cents": 10000000,
+          "ending_nav_cents": 11038659,
+          "net_return": "0.1038659",
+          "within_year_max_drawdown": "0.0371541",
+          "account_reset": false
+        },
+        {
+          "id": "NINE_BUY_HOLD_60_CASH40",
+          "year": "2021",
+          "first_session": "2021-10-08",
+          "last_session": "2021-12-31",
+          "sessions": 61,
+          "opening_nav_cents": 10000000,
+          "ending_nav_cents": 10396635,
+          "net_return": "0.0396635",
+          "within_year_max_drawdown": "0.018460220031001388554378554221789615247400676558038295218156951773981540730057523",
+          "account_reset": false
+        }
+      ]
+    },
+    {
+      "status": "COMPLETED",
+      "year": "2022",
+      "first_session": "2022-01-04",
+      "last_session": "2022-12-30",
+      "net_return_fraction": "-0.06051777991630837768999278830",
+      "max_drawdown_fraction": "0.08387217174632028946940976026",
+      "filled_orders": 94,
+      "fees_cents": 108156,
+      "complete_trades": 48,
+      "sessions": 242,
+      "average_exposure_fraction": "0.2153311471559780245599268284",
+      "partial_calendar_year": false,
+      "controls": [
+        {
+          "id": "NINE_BUY_HOLD_100",
+          "year": "2022",
+          "first_session": "2022-01-04",
+          "last_session": "2022-12-30",
+          "sessions": 242,
+          "opening_nav_cents": 11038659,
+          "ending_nav_cents": 9103027,
+          "net_return": "-0.17535028484891144839241795584046939034895452427690718591814458622193148642421149",
+          "within_year_max_drawdown": "0.23994459173829258907328929367284010096752024992876323930379702018355465654469756",
+          "account_reset": false
+        },
+        {
+          "id": "NINE_BUY_HOLD_60_CASH40",
+          "year": "2022",
+          "first_session": "2022-01-04",
+          "last_session": "2022-12-30",
+          "sessions": 242,
+          "opening_nav_cents": 10396635,
+          "ending_nav_cents": 9639603,
+          "net_return": "-0.07281509834672468543908678144418843212250886945631928022865090483603589045878787",
+          "within_year_max_drawdown": "0.11539497510131689332654314429898047121942807107974962686513836598134349511482740",
+          "account_reset": false
+        }
+      ]
+    },
+    {
+      "status": "COMPLETED",
+      "year": "2023",
+      "first_session": "2023-01-03",
+      "last_session": "2023-12-29",
+      "net_return_fraction": "-0.09654063567247444471939721780",
+      "max_drawdown_fraction": "0.1388699855414662641753846423",
+      "filled_orders": 110,
+      "fees_cents": 124773,
+      "complete_trades": 55,
+      "sessions": 242,
+      "average_exposure_fraction": "0.3182515726417850404298094181",
+      "partial_calendar_year": false,
+      "controls": [
+        {
+          "id": "NINE_BUY_HOLD_100",
+          "year": "2023",
+          "first_session": "2023-01-03",
+          "last_session": "2023-12-29",
+          "sessions": 242,
+          "opening_nav_cents": 9103027,
+          "ending_nav_cents": 11345919,
+          "net_return": "0.2463896899350073332749644706096115061506463729043097422428825049074335383164303",
+          "within_year_max_drawdown": "0.13952112180071647723296383563939235023354460904051590591189975697413505125703276",
+          "account_reset": false
+        },
+        {
+          "id": "NINE_BUY_HOLD_60_CASH40",
+          "year": "2023",
+          "first_session": "2023-01-03",
+          "last_session": "2023-12-29",
+          "sessions": 242,
+          "opening_nav_cents": 9639603,
+          "ending_nav_cents": 10872449,
+          "net_return": "0.1278938562096385089717906432453701672153925841136818601346964185143309325083201",
+          "within_year_max_drawdown": "0.071885380223339821316302579863500301346312528462852148887593026490220081029372811",
+          "account_reset": false
+        }
+      ]
+    },
+    {
+      "status": "COMPLETED",
+      "year": "2024",
+      "first_session": "2024-01-02",
+      "last_session": "2024-12-31",
+      "net_return_fraction": "0.1341521134150572796483516097",
+      "max_drawdown_fraction": "0.08420878658264754308642893559",
+      "filled_orders": 93,
+      "fees_cents": 75925,
+      "complete_trades": 46,
+      "sessions": 242,
+      "average_exposure_fraction": "0.2485623278589813356341749034",
+      "partial_calendar_year": false,
+      "controls": [
+        {
+          "id": "NINE_BUY_HOLD_100",
+          "year": "2024",
+          "first_session": "2024-01-02",
+          "last_session": "2024-12-31",
+          "sessions": 242,
+          "opening_nav_cents": 11345919,
+          "ending_nav_cents": 15473830,
+          "net_return": "0.3638234152738090233149029179566679437778464662051615210720259857310809287462743",
+          "within_year_max_drawdown": "0.17028924988511286113964418501992484176976315435094654321054751496552178085029164",
+          "account_reset": false
+        },
+        {
+          "id": "NINE_BUY_HOLD_60_CASH40",
+          "year": "2024",
+          "first_session": "2024-01-02",
+          "last_session": "2024-12-31",
+          "sessions": 242,
+          "opening_nav_cents": 10872449,
+          "ending_nav_cents": 12831088,
+          "net_return": "0.1801469935614322035449418985547782288976476229044624628729001166158608791818660",
+          "within_year_max_drawdown": "0.10228931789560034134538539316779411646521197018615348576799884035435865732322473",
+          "account_reset": false
+        }
+      ]
+    },
+    {
+      "status": "COMPLETED",
+      "year": "2025",
+      "first_session": "2025-01-02",
+      "last_session": "2025-12-31",
+      "net_return_fraction": "0.2617551497942915492550503409",
+      "max_drawdown_fraction": "0.1028331395143954611128731015",
+      "filled_orders": 77,
+      "fees_cents": 66364,
+      "complete_trades": 38,
+      "sessions": 243,
+      "average_exposure_fraction": "0.2847087635523153114517576183",
+      "partial_calendar_year": false,
+      "controls": [
+        {
+          "id": "NINE_BUY_HOLD_100",
+          "year": "2025",
+          "first_session": "2025-01-02",
+          "last_session": "2025-12-31",
+          "sessions": 243,
+          "opening_nav_cents": 15473830,
+          "ending_nav_cents": 28021849,
+          "net_return": "0.8109187576702083453159301866441598492422367313069873457314704892066152982164080",
+          "within_year_max_drawdown": "0.17470997034099081467735749467789737918322402065607672857700658169378252520466341",
+          "account_reset": false
+        },
+        {
+          "id": "NINE_BUY_HOLD_60_CASH40",
+          "year": "2025",
+          "first_session": "2025-01-02",
+          "last_session": "2025-12-31",
+          "sessions": 243,
+          "opening_nav_cents": 12831088,
+          "ending_nav_cents": 18708459,
+          "net_return": "0.4580571031856378819941068130777374451800190287838412455748101797758693572984614",
+          "within_year_max_drawdown": "0.10423180223798378980341712373227568053644912130253276877542148297691148708603553",
+          "account_reset": false
+        }
+      ]
+    },
+    {
+      "status": "COMPLETED",
+      "year": "2026",
+      "first_session": "2026-01-05",
+      "last_session": "2026-09-30",
+      "net_return_fraction": "0.006356855968938955265543787445",
+      "max_drawdown_fraction": "0.09555636365346505482947389737",
+      "filled_orders": 57,
+      "fees_cents": 48335,
+      "complete_trades": 30,
+      "sessions": 181,
+      "average_exposure_fraction": "0.1534727578925474278750162720",
+      "partial_calendar_year": true,
+      "controls": [
+        {
+          "id": "NINE_BUY_HOLD_100",
+          "year": "2026",
+          "first_session": "2026-01-05",
+          "last_session": "2026-09-30",
+          "sessions": 181,
+          "opening_nav_cents": 28021849,
+          "ending_nav_cents": 33665815,
+          "net_return": "0.2014130473688584932421839829341739726025930694295012438329818992315603442156868",
+          "within_year_max_drawdown": "0.20893038989718817558052087947881643048999155696577686408305052425571156796363757",
+          "account_reset": false
+        },
+        {
+          "id": "NINE_BUY_HOLD_60_CASH40",
+          "year": "2026",
+          "first_session": "2026-01-05",
+          "last_session": "2026-09-30",
+          "sessions": 181,
+          "opening_nav_cents": 18708459,
+          "ending_nav_cents": 20766302,
+          "net_return": "0.1099953235058002372082061916483875021454198873354561164016769098940751881274668",
+          "within_year_max_drawdown": "0.13799800447548090018197359911733498489408599532942129396658291903018258077347737",
+          "account_reset": false
+        }
+      ]
+    }
+  ],
+  "average_exposure_fraction": "0.2492569563246967288905252548",
+  "controls": [
+    {
+      "id": "NINE_BUY_HOLD_100",
+      "name": "固定九股等预算简单持有（100%目标）",
+      "run_id": "LF5Y-20261015-RAW-V2-03",
+      "protocol_ref": "sha256:47ba93ee508aa99bc0a18b4b3f79833357d4a937b2bf5241086898fdf92f6cf8",
+      "status": "COMPLETED_DIAGNOSTIC_CONTROL",
+      "errors": [],
+      "net_return": "2.3665815",
+      "max_drawdown": "0.24394293626324165600355723292287903687223144411655376743831884187709125413413753",
+      "drawdown_dates": {
+        "peak": "2021-12-23",
+        "trough": "2022-10-10",
+        "recovery": "2023-03-23"
+      },
+      "yearly": [
+        {
+          "year": "2021",
+          "first_session": "2021-10-08",
+          "last_session": "2021-12-31",
+          "sessions": 61,
+          "opening_nav_cents": 10000000,
+          "ending_nav_cents": 11038659,
+          "net_return": "0.1038659",
+          "within_year_max_drawdown": "0.0371541",
+          "account_reset": false
+        },
+        {
+          "year": "2022",
+          "first_session": "2022-01-04",
+          "last_session": "2022-12-30",
+          "sessions": 242,
+          "opening_nav_cents": 11038659,
+          "ending_nav_cents": 9103027,
+          "net_return": "-0.17535028484891144839241795584046939034895452427690718591814458622193148642421149",
+          "within_year_max_drawdown": "0.23994459173829258907328929367284010096752024992876323930379702018355465654469756",
+          "account_reset": false
+        },
+        {
+          "year": "2023",
+          "first_session": "2023-01-03",
+          "last_session": "2023-12-29",
+          "sessions": 242,
+          "opening_nav_cents": 9103027,
+          "ending_nav_cents": 11345919,
+          "net_return": "0.2463896899350073332749644706096115061506463729043097422428825049074335383164303",
+          "within_year_max_drawdown": "0.13952112180071647723296383563939235023354460904051590591189975697413505125703276",
+          "account_reset": false
+        },
+        {
+          "year": "2024",
+          "first_session": "2024-01-02",
+          "last_session": "2024-12-31",
+          "sessions": 242,
+          "opening_nav_cents": 11345919,
+          "ending_nav_cents": 15473830,
+          "net_return": "0.3638234152738090233149029179566679437778464662051615210720259857310809287462743",
+          "within_year_max_drawdown": "0.17028924988511286113964418501992484176976315435094654321054751496552178085029164",
+          "account_reset": false
+        },
+        {
+          "year": "2025",
+          "first_session": "2025-01-02",
+          "last_session": "2025-12-31",
+          "sessions": 243,
+          "opening_nav_cents": 15473830,
+          "ending_nav_cents": 28021849,
+          "net_return": "0.8109187576702083453159301866441598492422367313069873457314704892066152982164080",
+          "within_year_max_drawdown": "0.17470997034099081467735749467789737918322402065607672857700658169378252520466341",
+          "account_reset": false
+        },
+        {
+          "year": "2026",
+          "first_session": "2026-01-05",
+          "last_session": "2026-09-30",
+          "sessions": 181,
+          "opening_nav_cents": 28021849,
+          "ending_nav_cents": 33665815,
+          "net_return": "0.2014130473688584932421839829341739726025930694295012438329818992315603442156868",
+          "within_year_max_drawdown": "0.20893038989718817558052087947881643048999155696577686408305052425571156796363757",
+          "account_reset": false
+        }
+      ],
+      "rejections": [
+        {
+          "session": "2021-10-08",
+          "symbol": "600362.SH",
+          "reason": "SLIPPAGE_OUTSIDE_DAILY_RANGE",
+          "slot_budget_cents": 1111111
+        },
+        {
+          "session": "2021-10-08",
+          "symbol": "601179.SH",
+          "reason": "SLIPPAGE_OUTSIDE_DAILY_RANGE",
+          "slot_budget_cents": 1111111
+        }
+      ],
+      "terminal_cash_cents": 3676085,
+      "terminal_receivable_cents": 0,
+      "fees_cents": 3641,
+      "slippage_cents": 7400,
+      "dividend_cents": 687526,
+      "initial_budget_per_symbol_cents": 1111111,
+      "initial_invested_notional_cents": 7007800,
+      "average_exposure_fraction": "0.76789772327019685765741111248550251002661891782631058510887442033168587093003002",
+      "maximum_exposure_fraction": "0.90772414368848020040454387906091114710005252405214117666009446998166653213191867",
+      "exposed_sessions": 1211,
+      "last40_no_new_entry_effect": "NONE_SINGLE_INITIAL_PURCHASE_ONLY",
+      "hypothetical_terminal_sell_fees_cents": 24263,
+      "terminal_fee_estimate_scope": "ONLY_SETTLEMENT_ELIGIBLE_QUANTITY_WITH_LAST_DAY_EXECUTION_BOUNDS; NOT_A_LIQUIDATION",
+      "terminal_fee_estimate_complete": true,
+      "terminal_sell_fee_reserve_is_fill": false,
+      "cost_label": "SIMULATED_COSTS",
+      "dividend_tax_label": "FLAT20_SIMULATION_NOT_ACTUAL_TAX",
+      "historical_visibility_proven": false,
+      "untouched_oos": false,
+      "production_enabled": false
+    },
+    {
+      "id": "NINE_BUY_HOLD_60_CASH40",
+      "name": "固定九股60%等预算＋40%现金",
+      "run_id": "LF5Y-20261015-RAW-V2-03",
+      "protocol_ref": "sha256:47ba93ee508aa99bc0a18b4b3f79833357d4a937b2bf5241086898fdf92f6cf8",
+      "status": "COMPLETED_DIAGNOSTIC_CONTROL",
+      "errors": [],
+      "net_return": "1.0766302",
+      "max_drawdown": "0.13799800447548090018197359911733498489408599532942129396658291903018258077347737",
+      "drawdown_dates": {
+        "peak": "2026-06-22",
+        "trough": "2026-07-30",
+        "recovery": null
+      },
+      "yearly": [
+        {
+          "year": "2021",
+          "first_session": "2021-10-08",
+          "last_session": "2021-12-31",
+          "sessions": 61,
+          "opening_nav_cents": 10000000,
+          "ending_nav_cents": 10396635,
+          "net_return": "0.0396635",
+          "within_year_max_drawdown": "0.018460220031001388554378554221789615247400676558038295218156951773981540730057523",
+          "account_reset": false
+        },
+        {
+          "year": "2022",
+          "first_session": "2022-01-04",
+          "last_session": "2022-12-30",
+          "sessions": 242,
+          "opening_nav_cents": 10396635,
+          "ending_nav_cents": 9639603,
+          "net_return": "-0.07281509834672468543908678144418843212250886945631928022865090483603589045878787",
+          "within_year_max_drawdown": "0.11539497510131689332654314429898047121942807107974962686513836598134349511482740",
+          "account_reset": false
+        },
+        {
+          "year": "2023",
+          "first_session": "2023-01-03",
+          "last_session": "2023-12-29",
+          "sessions": 242,
+          "opening_nav_cents": 9639603,
+          "ending_nav_cents": 10872449,
+          "net_return": "0.1278938562096385089717906432453701672153925841136818601346964185143309325083201",
+          "within_year_max_drawdown": "0.071885380223339821316302579863500301346312528462852148887593026490220081029372811",
+          "account_reset": false
+        },
+        {
+          "year": "2024",
+          "first_session": "2024-01-02",
+          "last_session": "2024-12-31",
+          "sessions": 242,
+          "opening_nav_cents": 10872449,
+          "ending_nav_cents": 12831088,
+          "net_return": "0.1801469935614322035449418985547782288976476229044624628729001166158608791818660",
+          "within_year_max_drawdown": "0.10228931789560034134538539316779411646521197018615348576799884035435865732322473",
+          "account_reset": false
+        },
+        {
+          "year": "2025",
+          "first_session": "2025-01-02",
+          "last_session": "2025-12-31",
+          "sessions": 243,
+          "opening_nav_cents": 12831088,
+          "ending_nav_cents": 18708459,
+          "net_return": "0.4580571031856378819941068130777374451800190287838412455748101797758693572984614",
+          "within_year_max_drawdown": "0.10423180223798378980341712373227568053644912130253276877542148297691148708603553",
+          "account_reset": false
+        },
+        {
+          "year": "2026",
+          "first_session": "2026-01-05",
+          "last_session": "2026-09-30",
+          "sessions": 181,
+          "opening_nav_cents": 18708459,
+          "ending_nav_cents": 20766302,
+          "net_return": "0.1099953235058002372082061916483875021454198873354561164016769098940751881274668",
+          "within_year_max_drawdown": "0.13799800447548090018197359911733498489408599532942129396658291903018258077347737",
+          "account_reset": false
+        }
+      ],
+      "rejections": [
+        {
+          "session": "2021-10-08",
+          "symbol": "002916.SZ",
+          "reason": "SLOT_CASH_LOT_OR_VOLUME_UNAFFORDABLE",
+          "slot_budget_cents": 666666
+        },
+        {
+          "session": "2021-10-08",
+          "symbol": "600362.SH",
+          "reason": "SLIPPAGE_OUTSIDE_DAILY_RANGE",
+          "slot_budget_cents": 666666
+        },
+        {
+          "session": "2021-10-08",
+          "symbol": "601179.SH",
+          "reason": "SLIPPAGE_OUTSIDE_DAILY_RANGE",
+          "slot_budget_cents": 666666
+        }
+      ],
+      "terminal_cash_cents": 7048202,
+      "terminal_receivable_cents": 0,
+      "fees_cents": 3065,
+      "slippage_cents": 3500,
+      "dividend_cents": 348667,
+      "initial_budget_per_symbol_cents": 666666,
+      "initial_invested_notional_cents": 3297400,
+      "average_exposure_fraction": "0.44574178341606073918635057737276199435453499010234858337992373361441023804633983",
+      "maximum_exposure_fraction": "0.69533450795928000192133853483727182306912996098610520923782008451710176543028154",
+      "exposed_sessions": 1211,
+      "last40_no_new_entry_effect": "NONE_SINGLE_INITIAL_PURCHASE_ONLY",
+      "hypothetical_terminal_sell_fees_cents": 11375,
+      "terminal_fee_estimate_scope": "ONLY_SETTLEMENT_ELIGIBLE_QUANTITY_WITH_LAST_DAY_EXECUTION_BOUNDS; NOT_A_LIQUIDATION",
+      "terminal_fee_estimate_complete": true,
+      "terminal_sell_fee_reserve_is_fill": false,
+      "cost_label": "SIMULATED_COSTS",
+      "dividend_tax_label": "FLAT20_SIMULATION_NOT_ACTUAL_TAX",
+      "historical_visibility_proven": false,
+      "untouched_oos": false,
+      "production_enabled": false
+    }
+  ],
+  "independent_arithmetic_assertions": 32818,
+  "independent_arithmetic_passed": true,
+  "artifact_hashes": {
+    "Arithmetic.json": "sha256:d6b9abdcc60a497fbd1e5dc636d50523d2c3b7f2d973eb4c55bd25f59968035d",
+    "BuildReport.json": "sha256:6e5c627447fd012b77ec78d65b6a80e36ef726394ad1a41a84eee9980ad01b15",
+    "Case.json": "sha256:4936565752a7c95b896b119c70b197da787a80a74451ce5a8e630f4f2e5b40e4",
+    "Controls.json": "sha256:353818f006ce463f9f333f86bace14306fc6725124e263ea21986e3e23346980",
+    "EngineResult.json": "sha256:c7ad7f4f3355da43333eb4de9bfbc3c168319ce5b9833e89490bee278e6b3e57",
+    "Performance.json": "sha256:eed425e4826b4665f2bea48c22b2150349d3d0832b5ea6096e5dcb2037679e7e",
+    "Run.json": "sha256:777edd0da44bd7ce168308af6befbd13c8afa44b1a372d1b195b703130bafcdf",
+    "Yearly.json": "sha256:3a1a136532d6ecc1e11107b17973f84d8d2c043ad91ac66d3be39b9a3648b966"
+  },
+  "bundle_hash": "sha256:d284c94f6aae6ee4ae725213c31389d1153bb4439866882f18048d65e2ccd6e7",
+  "formal_pit": false,
+  "untouched_oos": false,
+  "formal_1260_session_threshold_met": false,
+  "current_selection_bias": true,
+  "cost_label": "SIMULATED_COSTS",
+  "economic_result_equal_to_run02": true,
+  "limitations": [
+    "fixed contemporary nine, not historical universe selection",
+    "supplier reconstructed history, no original PIT",
+    "all factors quarantined;9 anomalies reason unknown",
+    "9 auxiliary limit references NULL; actual up/down bounds preserved",
+    "one first warmup prehistory action retained but zero entitlement",
+    "official differentiated ex reference used only in raw bridge",
+    "no intraday halt absence certification",
+    "simulated fees and flat20pct dividend tax",
+    "1211 sessions in five calendar years, not formal1260 threshold",
+    "all1211 signal rankings not independently reimplemented",
+    "control budgets differ from exposure; no risk-matched alpha claim"
+  ]
+}
