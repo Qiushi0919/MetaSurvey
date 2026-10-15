@@ -10,6 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path('/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4')
 SYMBOLS = ('603993.SH', '600312.SH', '603228.SH')
 FILES = {
+ 'long-forward-registry':'workbench/long-forward-registry.json',
+ 'long-forward-protocol':'experiments/long_forward_v1/protocol.json',
+ 'long-forward-report':'docs/long-forward/Acceptance-Report.md',
  'performance-registry':'docs/v3-performance/Registry.json',
  'performance-report':'docs/v3-performance/Acceptance-Report.md',
  'performance-benchmark':'docs/v3-performance/Benchmark-Protocol.json',
@@ -185,6 +188,12 @@ class Reader:
    except (ReadError,ValueError,KeyError,TypeError,ImportError,ArithmeticError) as e:
     state['gateway_v3']['performance']={'status':'BLOCKED','reason':getattr(e,'code','INVALID_PERFORMANCE_PACKAGE')}
     state['errors'].append({'panel':'v3-performance','code':getattr(e,'code','INVALID_PERFORMANCE_PACKAGE'),'source':getattr(e,'source','performance-registry')})
+  try:
+   from workbench.long_forward_reader import load as load_long_forward
+   state['long_forward']=load_long_forward(self)
+  except (ReadError,ValueError,KeyError,TypeError,ImportError,ArithmeticError,OSError) as e:
+   state['long_forward']={'status':'INTEGRITY_ERROR','reason':getattr(e,'code','LONG_FORWARD_INTEGRITY_ERROR')}
+   state['errors'].append({'panel':'long-forward','code':getattr(e,'code','LONG_FORWARD_INTEGRITY_ERROR'),'source':'long-forward-registry'})
   state['task_records']=[]
   for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
    try:

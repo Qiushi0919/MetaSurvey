@@ -1,3 +1,7 @@
+# Current long history / real-time virtual forward — 2026-10-15
+
+Owner authorizes actual five-year fixed-nine reconstructed diagnostic plus isolated ForwardA bootstrap and daily18:30 local simulation. See docs/long-forward/Authorization.md. Root owns capture/queue/config/integration; existing execution and UI delegates bounded to newfiles/sharedUI, reviewer readonly. Preserve oldV3/Forward/frozenmethod/code/pins/seals/raw/specialist. No realbroker/money/optimizer/newprovider/purchase/cloudraw. Freeze before newresults; exact dates and actual clocks, missing executions not backfilled. Afterdelivery STOP strategy edits; only explicitly enabled frozen daily runner continues.
+
 # Current V3 baseline review and performance interpretation — 2026-10-15
 
 Owner accepts previous limited real-input/execution/ledger/workbench scope. Current authorization: independently reconstruct241 decisions/all83 unfilled, preserve oldV3 run/code, derive readable performance in existing UI, preregister fixed-nine buy-hold and60%cash controls before new control results, preregister single historical research increment. No strategy search, real market/credential calls, oldForward reveal or specialist edits. Source baseline a7e6f05; oldrun unchanged. See docs/v3-performance/Acceptance-Report.md. Complete UI/CI/publication thenSTOP; research increment not run while historical availability evidence absent. All prior phase entries remain historical.

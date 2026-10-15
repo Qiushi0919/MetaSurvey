@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "strategy_id": "CORE40_FIXED_NINE_LONG_FORWARD_V1",
+  "namespace": "EXPERIMENT:CORE40:LONG_FORWARD_V1",
+  "frozen_at": "2026-10-15T03:26:58.793018+00:00",
+  "prior_protocol_ref": "sha256:7c90acf7d65f1056507b629627d46316d7612f82d1b2204db7231cfccce5778a",
+  "method_ref": "sha256:b58784a57ce12a9979c583b5808f48d182bd509bed90d472e3ffd88a5bd0cd5e",
+  "target_window": {
+    "start": "2021-10-01",
+    "end": "2026-09-30",
+    "warmup_start": "2021-06-01",
+    "tail": "NO_NEW_ENTRIES_LAST40_SESSIONS"
+  },
+  "fee_schedule": [
+    {
+      "version": "LF_SIM_2021-06-01",
+      "effective_from": "2021-06-01",
+      "effective_until": "2022-04-28",
+      "commission_rate": "0.0003",
+      "minimum_commission_cents": 500,
+      "exchange_rate": "0.0000487",
+      "exchange_included": true,
+      "other_buy_rate": "0.00002",
+      "other_sell_rate": "0.00002",
+      "other_included": false,
+      "sell_tax_rate": "0.001",
+      "slippage_bps": "10",
+      "currency": "CNY",
+      "rate_unit": "FRACTION_OF_NOTIONAL",
+      "money_rounding": "HALF_EVEN",
+      "commission_scope": "PER_ORDER",
+      "slippage_treatment": "INCLUDED_IN_EXECUTION_PRICE",
+      "profile_scope": "HYPOTHETICAL_DIAGNOSTIC"
+    },
+    {
+      "version": "LF_SIM_2022-04-29",
+      "effective_from": "2022-04-29",
+      "effective_until": "2023-08-27",
+      "commission_rate": "0.0003",
+      "minimum_commission_cents": 500,
+      "exchange_rate": "0.0000487",
+      "exchange_included": true,
+      "other_buy_rate": "0.00001",
+      "other_sell_rate": "0.00001",
+      "other_included": false,
+      "sell_tax_rate": "0.001",
+      "slippage_bps": "10",
+      "currency": "CNY",
+      "rate_unit": "FRACTION_OF_NOTIONAL",
+      "money_rounding": "HALF_EVEN",
+      "commission_scope": "PER_ORDER",
+      "slippage_treatment": "INCLUDED_IN_EXECUTION_PRICE",
+      "profile_scope": "HYPOTHETICAL_DIAGNOSTIC"
+    },
+    {
+      "version": "LF_SIM_2023-08-28",
+      "effective_from": "2023-08-28",
+      "effective_until": "2026-12-31",
+      "commission_rate": "0.0003",
+      "minimum_commission_cents": 500,
+      "exchange_rate": "0.0000341",
+      "exchange_included": true,
+      "other_buy_rate": "0.00001",
+      "other_sell_rate": "0.00001",
+      "other_included": false,
+      "sell_tax_rate": "0.0005",
+      "slippage_bps": "10",
+      "currency": "CNY",
+      "rate_unit": "FRACTION_OF_NOTIONAL",
+      "money_rounding": "HALF_EVEN",
+      "commission_scope": "PER_ORDER",
+      "slippage_treatment": "INCLUDED_IN_EXECUTION_PRICE",
+      "profile_scope": "HYPOTHETICAL_DIAGNOSTIC"
+    }
+  ],
+  "initial_cash_cents": 10000000,
+  "selection_and_risk": "V1 price-volume selection, caps, entry/exit/fee parameters retained; no optimization",
+  "evidence_grade": "RECONSTRUCTED_HISTORY_DIAGNOSTIC",
+  "historical_visibility_proven": false,
+  "decision_clock": {
+    "local_time": "18:00:00+08:00",
+    "semantics": "SIMULATED_POST_CLOSE_DECISION_TIME",
+    "source_available_at": "actual observation/retrieval, never simulated historical clock",
+    "assumption": "Supplier reconstructed end-of-day records assumed available by simulated post-close decision; not proof of original PIT. No same-day execution."
+  },
+  "suspension": {
+    "raw_ohlc": null,
+    "volume_shares": "0",
+    "mark": "LAST_REAL_RAW_CLOSE_STALE_MARK_ONLY",
+    "feature_bars": "skip suspension; require 21 consecutive observed tradable bars after suspension before new entry",
+    "holding_age": "EXCHANGE_SESSIONS"
+  },
+  "corporate_actions": {
+    "supported": [
+      "CASH_DIVIDEND",
+      "INTEGER_BONUS_OR_SPLIT"
+    ],
+    "record_to_ex": "ADJACENT_EXCHANGE_SESSIONS_REQUIRED",
+    "entitlement": "lock record-date closing shares",
+    "cash_per_share": "CNY gross per old share",
+    "split_ratio": "post split multiplier, no split=1",
+    "bonus_ratio": "extra shares per old share, no bonus=0",
+    "price_comparison": "on ex-date only transform all then-known prior prices/stop/entry comparison by (price-gross_cash)/(split+bonus); no future adjustment factors",
+    "tax_rate": "0.20",
+    "tax_label": "SIMULATED_CONSERVATIVE_FULL_WITHHOLD_NOT_ACTUAL_ACCOUNT_TAX",
+    "cash_receivable": "net after simulated tax, NAV from ex-date, spendable only pay_date",
+    "new_shares": "integer only, valued ex-date but locked until shares_available_date",
+    "unsupported": "rights issuance, merger, fractional entitlement, unknown dates or coverage block; never fill NONE"
+  },
+  "errors": "retain all preceding and current-day completed entries, mark partial invalid and failed_at",
+  "purpose": "LOCAL_HISTORICAL_DIAGNOSTIC",
+  "formal_oos": false,
+  "current_selection_bias": true,
+  "members": {
+    "603228.SH": "PCB_SAMPLE",
+    "002463.SZ": "PCB_SAMPLE",
+    "002916.SZ": "PCB_SAMPLE",
+    "600312.SH": "HV_EQUIPMENT_SAMPLE",
+    "601179.SH": "HV_EQUIPMENT_SAMPLE",
+    "002028.SZ": "HV_EQUIPMENT_SAMPLE",
+    "603993.SH": "COPPER_PRODUCERS_SAMPLE",
+    "601899.SH": "COPPER_PRODUCERS_SAMPLE",
+    "600362.SH": "COPPER_PRODUCERS_SAMPLE"
+  },
+  "forward": {
+    "warmup_start": "2026-06-01",
+    "first_decision_session": "2026-10-14",
+    "bootstrap_delayed_entry": true,
+    "plan_conflict": "FIRST_PLAN_WINS",
+    "rolling": true,
+    "history_tail_disabled": true,
+    "daily_local_time": "18:30",
+    "timezone": "Asia/Shanghai",
+    "review_sessions": [
+      5,
+      20,
+      40
+    ],
+    "fee_expiry": "2026-12-31",
+    "current_owner_asserted_source_validity_end": "2026-11-05",
+    "first_plan_selection": "latest completed market session; first unopened execution session strictly after actual freeze; bootstrap lag disclosed",
+    "b_module": "known cash dividend ex-date within next2sessions; NOT_READY until current capture coverage sufficient"
+  },
+  "data_use": {
+    "2021-10-01/2025-09-30": "NEW_LENGTH_STABILITY_DIAGNOSTIC_NOT_UNTOUCHED_OOS",
+    "2025-10-01/2026-09-30": "PREVIOUSLY_EXPOSED_DIAGNOSTIC",
+    "optimization_allowed": false,
+    "yearly": "calendar-year attribution of one continuous run; no annual account reset"
+  },
+  "benchmark": {
+    "rules_ref": "sha256:1061fa2d9fb25aeecd60ce26bc404801325882966ee4058994d7eede8dfc084f",
+    "method": "same nine equal cash slots first target open100%/60%; costs/lot bounds, no redistribution/reinvestment/rebalance; corporate action support required, terminal mark and fee reserve separated"
+  },
+  "rules_hash": "sha256:0475924c99643bf1ab839fdb545bd5a594c71336a65cb6c6a9639da9ea806666"
+}
