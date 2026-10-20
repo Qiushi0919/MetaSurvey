@@ -18,5 +18,22 @@
     "Forward rolling horizon and execution cutoffs require independent freeze before activation"
   ],
   "forward_A_modified": false,
-  "forward_B_started": false
+  "forward_B_started": false,
+  "strategy_id": "CORE40_FORWARD_C_PARAM_OPT_V1_CANDIDATE",
+  "namespace": "EXPERIMENT:CORE40:FORWARD_C_PARAM_OPT_V1_CANDIDATE",
+  "mode": "VIRTUAL_CANDIDATE_ONLY",
+  "initial_cash_cents": 10000000,
+  "fixed_rule_reference": {
+    "account": "100000CNY/max3/single20%/total60%/sector40%/risk1%",
+    "fees": "original dated profiles, only uniform10/30bps scenarios; SIMULATED_COSTS",
+    "no_search_on": "entry,stage20,max40,costtax,units,status,actions,availability,executionconstraints",
+    "forward_a": "untouched",
+    "forward_b": "unstarted",
+    "forward_c": "candidate preparation only, Owner activation required"
+  },
+  "parent_execution_protocol_hash": "sha256:746c85d26c45b16dba66f76a7df037cc46c4bb0693d1f38de2b98a2ee1e85497",
+  "daily_automation_enabled": false,
+  "ledger_created": false,
+  "decision_cutoff": "UNSET_REQUIRED_BEFORE_ACTIVATION",
+  "first_execution_session": "UNSET_REQUIRED_BEFORE_ACTIVATION"
 }

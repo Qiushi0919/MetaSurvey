@@ -92,7 +92,7 @@ python3 -B -m workbench.server --port 8770
 
 实际浏览器已打开、切换选择区30bps、回到检查区10bps、筛选两候选并打开Registry弹窗；4张截图和来源hash见[UI-Evidence](UI-Evidence.json)。截图在本机Git外，不将HTTP或Node渲染测试冒充截图。页面的28.94/37.06/52.01/88.62/49.04%与同run结果一致。
 
-本地独立优化40、工作台182、既有long-forward145个唯一用例通过；CI禁止真实市场/凭证/私有档案，HTTP限临时loopback；108配置的合成子断言仅计为1个唯一用例，不包装成108个测试。[CI-Results](CI-Results.json)记录Ubuntu/macOS实际数量和链接；合成检查不证明投资效用。
+Ubuntu/macOS分别通过优化40、工作台182、既有long-forward145、评分72个唯一用例；受测公开提交`0ed24aebc16996e7400de25f2901fd8175d44ba5`，之后收尾仅更新审查元数据，不修改搜索代码或经济结果。本地复核同样通过；CI禁止真实市场/凭证/私有档案，HTTP限临时loopback；108配置的合成子断言仅计为1个唯一用例，不包装成108个测试。[CI-Results](CI-Results.json)记录Ubuntu/macOS实际数量和链接；本次受测提交的8项GitHub工作流全部成功。合成检查不证明投资效用。
 
 [Preservation](Preservation.json)：原1297个跟踪文件仅6个授权导航/审查元数据变化，旧经济实现与封存结果未变；9个原五年文件、1280个冻结Forward运行文件及部署清单hash不变。独立专项worktree未写入。此次计算单worker、nice10、18:00—19:30让位、0市场请求，未更改Forward任务或运行一次额外日常采集。
 

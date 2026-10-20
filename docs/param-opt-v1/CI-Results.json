@@ -1,11 +1,179 @@
 {
   "kind": "ParameterOptimizationCI",
   "version": "1.0.0",
-  "status": "LOCAL_PASS_REMOTE_PENDING",
+  "recorded_at": "2026-10-20T04:44:25.094437+00:00",
+  "status": "PASS",
+  "public_tested_commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+  "source_snapshot_commit": "867b1f429754e1d9d19672a61dfd1a8174369c59",
   "local": {
     "optimization_unique": 40,
     "workbench_unique": 182,
-    "preserved_long_forward_unique": 145
+    "preserved_long_forward_unique": 145,
+    "working_tree_tests_before_commit": true
   },
-  "remote": []
+  "remote": [
+    {
+      "suite": "LONG_FORWARD_V1",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832081",
+      "unique_cases": 145,
+      "executions": 145,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true
+    },
+    {
+      "suite": "LONG_FORWARD_V1",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832081",
+      "unique_cases": 145,
+      "executions": 145,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true
+    },
+    {
+      "suite": "PARAM_OPT_V1",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "platform": "darwin",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832099",
+      "unique_cases": 40,
+      "executions": 40,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true
+    },
+    {
+      "suite": "PARAM_OPT_V1",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "platform": "linux",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832099",
+      "unique_cases": 40,
+      "executions": 40,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true
+    },
+    {
+      "suite": "scoring",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832102",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct"
+    },
+    {
+      "suite": "scoring",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832102",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "linux",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct"
+    },
+    {
+      "suite": "workbench",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832102",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 182,
+      "executions": 182,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    },
+    {
+      "suite": "workbench",
+      "commit": "0ed24aebc16996e7400de25f2901fd8175d44ba5",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832102",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "linux",
+      "unique_cases": 182,
+      "executions": 182,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    }
+  ],
+  "other_workflows": [
+    {
+      "conclusion": "success",
+      "databaseId": 39370832099,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832099",
+      "workflowName": "Parameter optimization isolated checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370832077,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832077",
+      "workflowName": "V3 performance review isolated synthetic checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370832059,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832059",
+      "workflowName": "E2E reconstructed history V2 isolated synthetic checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370832145,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832145",
+      "workflowName": "E2E compatible gateway input V3 isolated synthetic checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370832081,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832081",
+      "workflowName": "Long forward isolated experiment checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370832102,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832102",
+      "workflowName": "Scoring and workbench isolated checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370832004,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370832004",
+      "workflowName": "E2E pilot isolated synthetic checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39370831978,
+      "status": "completed",
+      "url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39370831978",
+      "workflowName": "Public synthetic engineering checks"
+    }
+  ],
+  "scope": "ENGINEERING_REGRESSION_NOT_INVESTMENT_VALIDITY"
 }

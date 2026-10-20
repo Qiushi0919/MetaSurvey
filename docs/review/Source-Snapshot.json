@@ -1,10 +1,10 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "867b1f429754e1d9d19672a61dfd1a8174369c59",
-  "captured_at": "2026-10-20T04:40:15.611464+00:00",
+  "source_commit": "d413c69d4c3e5ed965fb3019558b1cefb769fe7e",
+  "captured_at": "2026-10-20T04:45:31.836891+00:00",
   "source_git_history_uploaded": false,
-  "included_source_files": 1330,
+  "included_source_files": 1346,
   "files": [
     {
       "path": ".env.example",
@@ -2518,8 +2518,8 @@
     },
     {
       "path": "docs/param-opt-v1/Acceptance-Report.md",
-      "bytes": 11661,
-      "sha256": "sha256:ed2e7724a58df6661c0db4a5d3e1639d09672e56cb7c12a0d1c6c2071947350f"
+      "bytes": 11901,
+      "sha256": "sha256:5663e96a0b9ce0d53bab15a31ef90db24e80334688a7b29e4e52d3d40582a888"
     },
     {
       "path": "docs/param-opt-v1/All-108-Results.csv",
@@ -2533,8 +2533,8 @@
     },
     {
       "path": "docs/param-opt-v1/CI-Results.json",
-      "bytes": 238,
-      "sha256": "sha256:a694afeb53a5346cb4dcb33d1861f903b853186a4f76ccc5ad1b2d016a0aae7f"
+      "bytes": 6150,
+      "sha256": "sha256:c71ecf33e72ee56c95902ea819fe3abd9641d5fce7d6b4e49100f081d1f96dd5"
     },
     {
       "path": "docs/param-opt-v1/CandidateLock.json",
@@ -2558,8 +2558,8 @@
     },
     {
       "path": "docs/param-opt-v1/Forward-C-Candidate.json",
-      "bytes": 772,
-      "sha256": "sha256:d3760582070b4b4bbddec5c7b270f1551d7918244de2deb161a8b4803e78a504"
+      "bytes": 1697,
+      "sha256": "sha256:d63188ca638ff4d02bb51a4a29c449a3fb8b2705ce87075ed22db24540d1cff4"
     },
     {
       "path": "docs/param-opt-v1/Preregistration.md",
@@ -2615,6 +2615,86 @@
       "path": "docs/param-opt-v1/checks/param-opt/tests.txt",
       "bytes": 6084,
       "sha256": "sha256:cef22856af5f1927a280de15b7f1278b4c9611cccbe0ba25d45b3d404738ad71"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/long-forward-macos-latest/result.json",
+      "bytes": 17059,
+      "sha256": "sha256:49e4669025601b5f04cbfbbab3bb2be149bfb86d4b40556270a84a696815d041"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/long-forward-macos-latest/tests.txt",
+      "bytes": 24233,
+      "sha256": "sha256:9850dbeb0950c8d3600693e2dfa67f2c140786f786c630931f77030ad197bafd"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/long-forward-ubuntu-latest/result.json",
+      "bytes": 17058,
+      "sha256": "sha256:bb7e8937d6ef21ede5bac627ac335fc575d8f15bf60fbc6bbcf99752561d78a9"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/long-forward-ubuntu-latest/tests.txt",
+      "bytes": 24232,
+      "sha256": "sha256:fa97c8495ba37970654076b6e07ee0982141fb8cf3ff227dae6aa1fb2d7301f3"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/param-opt-macos-latest/result.json",
+      "bytes": 4521,
+      "sha256": "sha256:8af333b58a7b6fe63922264c114f60cb4450044613f667b6e8dacb56a48b72b8"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/param-opt-macos-latest/tests.txt",
+      "bytes": 6084,
+      "sha256": "sha256:6a09ec5da1f85fc22fc3f54bd20fe3dec6013fdc4ae38f3565c70b355779c801"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/param-opt-ubuntu-latest/result.json",
+      "bytes": 4520,
+      "sha256": "sha256:114609123e0c21594b8a747384b2a7a668ef2cb6568db0b3f3b8a68ea2466e3b"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/param-opt-ubuntu-latest/tests.txt",
+      "bytes": 6084,
+      "sha256": "sha256:0628b5acb01dae4d0cfe49730f88a56e2d35d344b9eef53d5322f561c24b455c"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/scoring-macos-latest/result.json",
+      "bytes": 9234,
+      "sha256": "sha256:ff1836e1f8303483e7274a020b5448bc7c80138a43fff3677ee4ae0f915701cf"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/scoring-macos-latest/tests.txt",
+      "bytes": 31942,
+      "sha256": "sha256:edcb6ab9f72053707557d2d435e0e0ded77ccd15947617e8e5f5077f4fdc47d5"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/scoring-ubuntu-latest/result.json",
+      "bytes": 9233,
+      "sha256": "sha256:e31372429a993c351a1b092586e1f9d7ed85d6b739f8cab2c35b54b8412ff803"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/scoring-ubuntu-latest/tests.txt",
+      "bytes": 31815,
+      "sha256": "sha256:a1f44a5a95bfd68604bf9eebd4d24cfa84a38b906c7a6a110897ac63a2735dcc"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/workbench-macos-latest/result.json",
+      "bytes": 13871,
+      "sha256": "sha256:656add76c5648584276962a0832d9f286e41497063b01e3305b11f393c741e20"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/workbench-macos-latest/tests.txt",
+      "bytes": 20088,
+      "sha256": "sha256:aa70de1586af9b756e738ed3393b91f21c13d00b76e8ff9d39a26c4cda17597d"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/workbench-ubuntu-latest/result.json",
+      "bytes": 13870,
+      "sha256": "sha256:ebdea9c887ca130442dc893b2e2081bffeb5f35e00c5c71f6bbd117e19303ad1"
+    },
+    {
+      "path": "docs/param-opt-v1/checks/remote/workbench-ubuntu-latest/tests.txt",
+      "bytes": 20087,
+      "sha256": "sha256:9fe86b0641b38e768b2304db35327a8f6f57b7fb0100be473fa9be95feef97fb"
     },
     {
       "path": "docs/param-opt-v1/checks/workbench/result.json",
