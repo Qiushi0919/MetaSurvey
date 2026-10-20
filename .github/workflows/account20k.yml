@@ -1,0 +1,25 @@
+name: Account 20k realtime and history checks
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -B -m tools.forward_c20k.ci ci-results/account20k
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: account20k-${{ matrix.os }}
+          path: ci-results/account20k
+      - if: always()
+        run: cat ci-results/account20k/result.json >> "$GITHUB_STEP_SUMMARY"
