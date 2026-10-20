@@ -1,0 +1,40 @@
+{
+  "kind": "IndependentParamOptStaticReview",
+  "recorded_at": "2026-10-20T03:29:46.181731+00:00",
+  "passed": true,
+  "files": {
+    "tools/param_opt/run.py": "sha256:cd810eda2391cebfea4f00c61c007bfdf859e8d18a88a2a859674b742bce5f0f",
+    "experiments/param_opt_v1/engine.py": "sha256:f43650177a2cf351dc4cd6a66d228da90db19d06923d97ade8c9aa1357232b0b",
+    "experiments/param_opt_v1/sizing.py": "sha256:a67455e353881c7ab66a9e233a2e9549f72f2f4e995e4629cffd09d0bdafa8b2",
+    "experiments/param_opt_v1/Registration.json": "sha256:7fbb61dca21197624f5dcf5f0d4c2d7618883cf92ebc7dbb58936551b2eb94fe"
+  },
+  "grid": {
+    "unique_configs": 108,
+    "expected_cartesian_product": true,
+    "config_hashes_valid": true,
+    "search_order_frozen": true
+  },
+  "conclusions": [
+    "Development and selection Case bars/calendar/actions truncated before their registered end; no post-end price indicators consumed",
+    "Each partition starts100000CNY independently; warmup has no trades; annual attribution does not reset within partition",
+    "No outcome-driven sample/date deletion; nine original securities preserved",
+    "Last40-session no-new-entry rule retained equally for parameter trials; buy-hold controls only buy atwindowstart and do not force exit",
+    "Only baseline and prelocked max3 enter check; selection uses development/selection only; exploratory references notrecommendations",
+    "New sizing uses actual candidate ATR multiplier for stop and riskbudget; original sizing/Forward preserved",
+    "Offline source/replay only; runner yields evening18:00–19:30 priority window"
+  ],
+  "nonblocking_notes": [
+    {
+      "field": "selection_rule.near_tie",
+      "issue": "Registration says one-way turnover, actual Summary explicitly sums buys+sells /meanNAV; same scalar definition for every trial does not change tieordering. Report should state actual two-sided calculation without editing preregistration."
+    },
+    {
+      "field": "engine.RULES.suspension",
+      "issue": "Inherited display string mentions21 consecutive bars; actual implementation and registration explicitly requiremax(21,rs_window+1) forentry. Treatactualparametersemantics as authoritative; no silent61bar bypass."
+    }
+  ],
+  "remaining": [
+    "Realcandidateaudit awaitingCandidateLock andcheckresults",
+    "Final recommendation must apply pre-registeredcheck10/check30guards; nofourthcandidate replacement"
+  ]
+}

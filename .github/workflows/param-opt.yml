@@ -1,0 +1,29 @@
+name: Parameter optimization isolated checks
+on:
+  push:
+    paths: ['tools/param_opt/**', 'experiments/param_opt_v1/**', 'docs/param-opt-v1/**', 'workbench/**']
+  pull_request:
+    paths: ['tools/param_opt/**', 'experiments/param_opt_v1/**', 'docs/param-opt-v1/**', 'workbench/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  experiment:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -B tools/param_opt/check.py ci-results/param-opt
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: param-opt-${{ matrix.os }}
+          path: ci-results/param-opt
+      - if: always()
+        run: cat ci-results/param-opt/result.json >> "$GITHUB_STEP_SUMMARY"

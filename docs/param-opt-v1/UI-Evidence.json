@@ -1,0 +1,36 @@
+{
+  "kind": "ParameterOptimizationUIEvidence",
+  "version": "1.0.0",
+  "observed_at": "2026-10-20T04:37:44.329162+00:00",
+  "url": "http://127.0.0.1:8770/#optimization",
+  "status": "ACTUAL_BROWSER_VERIFIED",
+  "reader_status": "LOCAL_ARTIFACTS_REVERIFIED",
+  "results_hash": "sha256:89631ffd7d49770b7012e33422ca7dfeb8cad1e00ccc2819a67b0c16f6b4c939",
+  "actions": [
+    "Opened real existing workbench optimization route",
+    "Read five same-window comparison rows including both buy-hold controls",
+    "Changed selection window and 30bps scenario; actual P009 20.14%, original6.79% visible",
+    "Returned check10bps and saw28.94/37.06/52.01/88.62/49.04percent",
+    "Opened registry evidence modal with exact file source and hash",
+    "Filtered108tableto2lockedcandidates"
+  ],
+  "screenshots": [
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/param-opt-20261020/screenshots/01-overview.jpg",
+      "sha256": "sha256:fd2947bd0baefae9b4f075a00d83ccb819406864819ba228d49343bb2394d59a"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/param-opt-20261020/screenshots/02-comparison.jpg",
+      "sha256": "sha256:bf106f74c6d3b091dfcb0928a0be04fdde174df9771767ced57b30517c2a5272"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/param-opt-20261020/screenshots/03-curves.jpg",
+      "sha256": "sha256:dc30ddca2f966c3a9ef6324949202085b777118f19706f04c32e881924a1e2e1"
+    },
+    {
+      "path": "/Users/qiushi/投资研究/.p1b-archives/param-opt-20261020/screenshots/04-evidence.jpg",
+      "sha256": "sha256:1745369bb2e890e256da509b00fc1da7276520444882fc7841871dc26c97a229"
+    }
+  ],
+  "screenshots_published": false
+}

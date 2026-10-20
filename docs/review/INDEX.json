@@ -1,12 +1,19 @@
 {
   "kind": "MetaSurveyPublicReviewIndex",
   "version": "1.0.0",
-  "updated_on": "2026-10-15",
+  "updated_on": "2026-10-20",
   "timezone": "Asia/Shanghai",
   "latest_entry": "docs/review/LATEST.md",
   "architecture": "docs/review/ARCHITECTURE.md",
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
+    {
+      "phase": "PARAM_OPT_V1",
+      "report": "docs/param-opt-v1/Acceptance-Report.md",
+      "registry": "docs/param-opt-v1/Registry.json",
+      "result": "docs/param-opt-v1/Results.json",
+      "business_state": "ACTUAL_108_GRID_EXPOSED_HISTORY_COMPLETED_P009_FORWARD_C_CANDIDATE_NOT_STARTED_A_UNCHANGED"
+    },
     {
       "phase": "LONG_HISTORY_AND_NEW_FORWARD_LAUNCH",
       "report": "docs/long-forward/Acceptance-Report.md",

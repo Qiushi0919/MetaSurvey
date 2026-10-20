@@ -1,0 +1,2154 @@
+{
+  "kind": "LockedOptimizationCandidates",
+  "locked_at": "2026-10-20T03:31:50.995188+00:00",
+  "registration_hash": "sha256:7fbb61dca21197624f5dcf5f0d4c2d7618883cf92ebc7dbb58936551b2eb94fe",
+  "selection_table_hash": "sha256:8afcce37f7381024c80a574bba38d1ad3abb719c42edb5f1cc27d37effca9edc",
+  "qualified": [
+    "P009",
+    "P006",
+    "P003",
+    "P015",
+    "P012",
+    "P062",
+    "P069",
+    "P063",
+    "P065",
+    "P042",
+    "P056",
+    "P060",
+    "P078",
+    "P081",
+    "P071",
+    "P068",
+    "P059",
+    "P072",
+    "P070",
+    "P066",
+    "P080",
+    "P074",
+    "P095",
+    "P077",
+    "P054",
+    "P057",
+    "P075",
+    "P038"
+  ],
+  "locked_ids": [
+    "P009",
+    "P006"
+  ],
+  "roles": {
+    "P009": "QUALIFIED_CANDIDATE",
+    "P006": "QUALIFIED_CANDIDATE"
+  },
+  "stability": [
+    {
+      "id": "P001",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P002",
+        "P004",
+        "P010",
+        "P028"
+      ],
+      "neighbor_median_return": "0.1696837",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P002",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P001",
+        "P003",
+        "P005",
+        "P011",
+        "P029"
+      ],
+      "neighbor_median_return": "0.1924256",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P003",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P002",
+        "P006",
+        "P012",
+        "P030"
+      ],
+      "neighbor_median_return": "0.19642035",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P004",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P001",
+        "P005",
+        "P007",
+        "P013",
+        "P031"
+      ],
+      "neighbor_median_return": "0.1865603",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P005",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P002",
+        "P004",
+        "P006",
+        "P008",
+        "P014",
+        "P032"
+      ],
+      "neighbor_median_return": "0.2146336",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P006",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P003",
+        "P005",
+        "P009",
+        "P015",
+        "P033"
+      ],
+      "neighbor_median_return": "0.2202361",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P007",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P004",
+        "P008",
+        "P016",
+        "P034"
+      ],
+      "neighbor_median_return": "0.16894105",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P008",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P005",
+        "P007",
+        "P009",
+        "P017",
+        "P035"
+      ],
+      "neighbor_median_return": "0.2258551",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P009",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P006",
+        "P008",
+        "P018",
+        "P036"
+      ],
+      "neighbor_median_return": "0.20472935",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P010",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P001",
+        "P011",
+        "P013",
+        "P019",
+        "P037"
+      ],
+      "neighbor_median_return": "0.1141248",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P011",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P002",
+        "P010",
+        "P012",
+        "P014",
+        "P020",
+        "P038"
+      ],
+      "neighbor_median_return": "0.1882100",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P012",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P003",
+        "P011",
+        "P015",
+        "P021",
+        "P039"
+      ],
+      "neighbor_median_return": "0.1924256",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P013",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P004",
+        "P010",
+        "P014",
+        "P016",
+        "P022",
+        "P040"
+      ],
+      "neighbor_median_return": "0.1696837",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P014",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P005",
+        "P011",
+        "P013",
+        "P015",
+        "P017",
+        "P023",
+        "P041"
+      ],
+      "neighbor_median_return": "0.1923075",
+      "neighbor_positive_excess_count": 7
+    },
+    {
+      "id": "P015",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P006",
+        "P012",
+        "P014",
+        "P018",
+        "P024",
+        "P042"
+      ],
+      "neighbor_median_return": "0.1948147",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P016",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P007",
+        "P013",
+        "P017",
+        "P025",
+        "P043"
+      ],
+      "neighbor_median_return": "0.1782241",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P017",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P008",
+        "P014",
+        "P016",
+        "P018",
+        "P026",
+        "P044"
+      ],
+      "neighbor_median_return": "0.2060232",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P018",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P009",
+        "P015",
+        "P017",
+        "P027",
+        "P045"
+      ],
+      "neighbor_median_return": "0.2258551",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P019",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P010",
+        "P020",
+        "P022",
+        "P046"
+      ],
+      "neighbor_median_return": "0.1149913",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P020",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P011",
+        "P019",
+        "P021",
+        "P023",
+        "P047"
+      ],
+      "neighbor_median_return": "0.1645577",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P021",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": false,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P012",
+        "P020",
+        "P024",
+        "P048"
+      ],
+      "neighbor_median_return": "0.1865057",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P022",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P013",
+        "P019",
+        "P023",
+        "P025",
+        "P049"
+      ],
+      "neighbor_median_return": "0.1141248",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P023",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P014",
+        "P020",
+        "P022",
+        "P024",
+        "P026",
+        "P050"
+      ],
+      "neighbor_median_return": "0.1958215",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P024",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P015",
+        "P021",
+        "P023",
+        "P027",
+        "P051"
+      ],
+      "neighbor_median_return": "0.1923075",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P025",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P016",
+        "P022",
+        "P026",
+        "P052"
+      ],
+      "neighbor_median_return": "0.13949955",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P026",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P017",
+        "P023",
+        "P025",
+        "P027",
+        "P053"
+      ],
+      "neighbor_median_return": "0.1645577",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P027",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P018",
+        "P024",
+        "P026",
+        "P054"
+      ],
+      "neighbor_median_return": "0.1948147",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P028",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P001",
+        "P029",
+        "P031",
+        "P037",
+        "P055"
+      ],
+      "neighbor_median_return": "0.1794457",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P029",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P002",
+        "P028",
+        "P030",
+        "P032",
+        "P038",
+        "P056"
+      ],
+      "neighbor_median_return": "0.12378745",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P030",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P003",
+        "P029",
+        "P033",
+        "P039",
+        "P057"
+      ],
+      "neighbor_median_return": "0.1108267",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P031",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P004",
+        "P028",
+        "P032",
+        "P034",
+        "P040",
+        "P058"
+      ],
+      "neighbor_median_return": "0.1905094",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P032",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P005",
+        "P029",
+        "P031",
+        "P033",
+        "P035",
+        "P041",
+        "P059"
+      ],
+      "neighbor_median_return": "0.1786593",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P033",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P006",
+        "P030",
+        "P032",
+        "P036",
+        "P042",
+        "P060"
+      ],
+      "neighbor_median_return": "0.14872185",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P034",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P007",
+        "P031",
+        "P035",
+        "P043",
+        "P061"
+      ],
+      "neighbor_median_return": "0.1782241",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P035",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P008",
+        "P032",
+        "P034",
+        "P036",
+        "P044",
+        "P062"
+      ],
+      "neighbor_median_return": "0.1494342",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P036",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P009",
+        "P033",
+        "P035",
+        "P045",
+        "P063"
+      ],
+      "neighbor_median_return": "0.1650234",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P037",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P010",
+        "P028",
+        "P038",
+        "P040",
+        "P046",
+        "P064"
+      ],
+      "neighbor_median_return": "0.11987465",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P038",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P011",
+        "P029",
+        "P037",
+        "P039",
+        "P041",
+        "P047",
+        "P065"
+      ],
+      "neighbor_median_return": "0.0997052",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P039",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P012",
+        "P030",
+        "P038",
+        "P042",
+        "P048",
+        "P066"
+      ],
+      "neighbor_median_return": "0.1145536",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P040",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P013",
+        "P031",
+        "P037",
+        "P041",
+        "P043",
+        "P049",
+        "P067"
+      ],
+      "neighbor_median_return": "0.1270828",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P041",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P014",
+        "P032",
+        "P038",
+        "P040",
+        "P042",
+        "P044",
+        "P050",
+        "P068"
+      ],
+      "neighbor_median_return": "0.14676035",
+      "neighbor_positive_excess_count": 7
+    },
+    {
+      "id": "P042",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P015",
+        "P033",
+        "P039",
+        "P041",
+        "P045",
+        "P051",
+        "P069"
+      ],
+      "neighbor_median_return": "0.1732704",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P043",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P016",
+        "P034",
+        "P040",
+        "P044",
+        "P052",
+        "P070"
+      ],
+      "neighbor_median_return": "0.13622305",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P044",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P017",
+        "P035",
+        "P041",
+        "P043",
+        "P045",
+        "P053",
+        "P071"
+      ],
+      "neighbor_median_return": "0.1447678",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P045",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P018",
+        "P036",
+        "P042",
+        "P044",
+        "P054",
+        "P072"
+      ],
+      "neighbor_median_return": "0.1262753",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P046",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P019",
+        "P037",
+        "P047",
+        "P049",
+        "P073"
+      ],
+      "neighbor_median_return": "0.0997052",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P047",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P020",
+        "P038",
+        "P046",
+        "P048",
+        "P050",
+        "P074"
+      ],
+      "neighbor_median_return": "0.11006945",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P048",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P021",
+        "P039",
+        "P047",
+        "P051",
+        "P075"
+      ],
+      "neighbor_median_return": "0.0997052",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P049",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P022",
+        "P040",
+        "P046",
+        "P050",
+        "P052",
+        "P076"
+      ],
+      "neighbor_median_return": "0.1051861",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P050",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P023",
+        "P041",
+        "P047",
+        "P049",
+        "P051",
+        "P053",
+        "P077"
+      ],
+      "neighbor_median_return": "0.1270828",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P051",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P024",
+        "P042",
+        "P048",
+        "P050",
+        "P054",
+        "P078"
+      ],
+      "neighbor_median_return": "0.13254455",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P052",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P025",
+        "P043",
+        "P049",
+        "P053",
+        "P079"
+      ],
+      "neighbor_median_return": "0.1270828",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P053",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P026",
+        "P044",
+        "P050",
+        "P052",
+        "P054",
+        "P080"
+      ],
+      "neighbor_median_return": "0.1226464",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P054",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P027",
+        "P045",
+        "P051",
+        "P053",
+        "P081"
+      ],
+      "neighbor_median_return": "0.1435431",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P055",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": false,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P028",
+        "P056",
+        "P058",
+        "P064",
+        "P082"
+      ],
+      "neighbor_median_return": "0.1554403",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P056",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P029",
+        "P055",
+        "P057",
+        "P059",
+        "P065",
+        "P083"
+      ],
+      "neighbor_median_return": "0.1244759",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P057",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P030",
+        "P056",
+        "P060",
+        "P066",
+        "P084"
+      ],
+      "neighbor_median_return": "0.1310379",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P058",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P031",
+        "P055",
+        "P059",
+        "P061",
+        "P067",
+        "P085"
+      ],
+      "neighbor_median_return": "0.1456215",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P059",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P032",
+        "P056",
+        "P058",
+        "P060",
+        "P062",
+        "P068",
+        "P086"
+      ],
+      "neighbor_median_return": "0.1495056",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P060",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P033",
+        "P057",
+        "P059",
+        "P063",
+        "P069",
+        "P087"
+      ],
+      "neighbor_median_return": "0.15157425",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P061",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P034",
+        "P058",
+        "P062",
+        "P070",
+        "P088"
+      ],
+      "neighbor_median_return": "0.1336417",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P062",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P035",
+        "P059",
+        "P061",
+        "P063",
+        "P071",
+        "P089"
+      ],
+      "neighbor_median_return": "0.14144645",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P063",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P036",
+        "P060",
+        "P062",
+        "P072",
+        "P090"
+      ],
+      "neighbor_median_return": "0.1311994",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P064",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": false,
+        "stress": true,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P037",
+        "P055",
+        "P065",
+        "P067",
+        "P073",
+        "P091"
+      ],
+      "neighbor_median_return": "0.1041348",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P065",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P038",
+        "P056",
+        "P064",
+        "P066",
+        "P068",
+        "P074",
+        "P092"
+      ],
+      "neighbor_median_return": "0.1310379",
+      "neighbor_positive_excess_count": 7
+    },
+    {
+      "id": "P066",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P039",
+        "P057",
+        "P065",
+        "P069",
+        "P075",
+        "P093"
+      ],
+      "neighbor_median_return": "0.10775005",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P067",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P040",
+        "P058",
+        "P064",
+        "P068",
+        "P070",
+        "P076",
+        "P094"
+      ],
+      "neighbor_median_return": "0.1546477",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P068",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P041",
+        "P059",
+        "P065",
+        "P067",
+        "P069",
+        "P071",
+        "P077",
+        "P095"
+      ],
+      "neighbor_median_return": "0.14144645",
+      "neighbor_positive_excess_count": 8
+    },
+    {
+      "id": "P069",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P042",
+        "P060",
+        "P066",
+        "P068",
+        "P072",
+        "P078",
+        "P096"
+      ],
+      "neighbor_median_return": "0.1412835",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P070",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P043",
+        "P061",
+        "P067",
+        "P071",
+        "P079",
+        "P097"
+      ],
+      "neighbor_median_return": "0.13281725",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P071",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P044",
+        "P062",
+        "P068",
+        "P070",
+        "P072",
+        "P080",
+        "P098"
+      ],
+      "neighbor_median_return": "0.1311994",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P072",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P045",
+        "P063",
+        "P069",
+        "P071",
+        "P081",
+        "P099"
+      ],
+      "neighbor_median_return": "0.14415545",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P073",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P046",
+        "P064",
+        "P074",
+        "P076",
+        "P100"
+      ],
+      "neighbor_median_return": "0.0883026",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P074",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P047",
+        "P065",
+        "P073",
+        "P075",
+        "P077",
+        "P101"
+      ],
+      "neighbor_median_return": "0.11157565",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P075",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P048",
+        "P066",
+        "P074",
+        "P078",
+        "P102"
+      ],
+      "neighbor_median_return": "0.1251163",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P076",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P049",
+        "P067",
+        "P073",
+        "P077",
+        "P079",
+        "P103"
+      ],
+      "neighbor_median_return": "0.1085774",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P077",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P050",
+        "P068",
+        "P074",
+        "P076",
+        "P078",
+        "P080",
+        "P104"
+      ],
+      "neighbor_median_return": "0.1232232",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P078",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P051",
+        "P069",
+        "P075",
+        "P077",
+        "P081",
+        "P105"
+      ],
+      "neighbor_median_return": "0.11275065",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P079",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P052",
+        "P070",
+        "P076",
+        "P080",
+        "P106"
+      ],
+      "neighbor_median_return": "0.1232232",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P080",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P053",
+        "P071",
+        "P077",
+        "P079",
+        "P081",
+        "P107"
+      ],
+      "neighbor_median_return": "0.1322049",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P081",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P054",
+        "P072",
+        "P078",
+        "P080",
+        "P108"
+      ],
+      "neighbor_median_return": "0.1232232",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P082",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P055",
+        "P083",
+        "P085",
+        "P091"
+      ],
+      "neighbor_median_return": "0.1147582",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P083",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P056",
+        "P082",
+        "P084",
+        "P086",
+        "P092"
+      ],
+      "neighbor_median_return": "0.1015295",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P084",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P057",
+        "P083",
+        "P087",
+        "P093"
+      ],
+      "neighbor_median_return": "0.0877297",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P085",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P058",
+        "P082",
+        "P086",
+        "P088",
+        "P094"
+      ],
+      "neighbor_median_return": "0.1546477",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P086",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P059",
+        "P083",
+        "P085",
+        "P087",
+        "P089",
+        "P095"
+      ],
+      "neighbor_median_return": "0.1113188",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P087",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": true,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P060",
+        "P084",
+        "P086",
+        "P090",
+        "P096"
+      ],
+      "neighbor_median_return": "0.0753786",
+      "neighbor_positive_excess_count": 1
+    },
+    {
+      "id": "P088",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P061",
+        "P085",
+        "P089",
+        "P097"
+      ],
+      "neighbor_median_return": "0.1036605",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P089",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P062",
+        "P086",
+        "P088",
+        "P090",
+        "P098"
+      ],
+      "neighbor_median_return": "0.089145",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P090",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P063",
+        "P087",
+        "P089",
+        "P099"
+      ],
+      "neighbor_median_return": "0.05215205",
+      "neighbor_positive_excess_count": 1
+    },
+    {
+      "id": "P091",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P064",
+        "P082",
+        "P092",
+        "P094",
+        "P100"
+      ],
+      "neighbor_median_return": "0.1546477",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P092",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": false,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P065",
+        "P083",
+        "P091",
+        "P093",
+        "P095",
+        "P101"
+      ],
+      "neighbor_median_return": "0.1169900",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P093",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P066",
+        "P084",
+        "P092",
+        "P096",
+        "P102"
+      ],
+      "neighbor_median_return": "0.0846761",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P094",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P067",
+        "P085",
+        "P091",
+        "P095",
+        "P097",
+        "P103"
+      ],
+      "neighbor_median_return": "0.1051706",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P095",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P068",
+        "P086",
+        "P092",
+        "P094",
+        "P096",
+        "P098",
+        "P104"
+      ],
+      "neighbor_median_return": "0.1150111",
+      "neighbor_positive_excess_count": 5
+    },
+    {
+      "id": "P096",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P069",
+        "P087",
+        "P093",
+        "P095",
+        "P099",
+        "P105"
+      ],
+      "neighbor_median_return": "0.07865545",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P097",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P070",
+        "P088",
+        "P094",
+        "P098",
+        "P106"
+      ],
+      "neighbor_median_return": "0.1153299",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P098",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P071",
+        "P089",
+        "P095",
+        "P097",
+        "P099",
+        "P107"
+      ],
+      "neighbor_median_return": "0.1011483",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P099",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P072",
+        "P090",
+        "P096",
+        "P098",
+        "P108"
+      ],
+      "neighbor_median_return": "0.0843308",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P100",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P073",
+        "P091",
+        "P101",
+        "P103"
+      ],
+      "neighbor_median_return": "0.1059145",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P101",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P074",
+        "P092",
+        "P100",
+        "P102",
+        "P104"
+      ],
+      "neighbor_median_return": "0.1015295",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P102",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P075",
+        "P093",
+        "P101",
+        "P105"
+      ],
+      "neighbor_median_return": "0.0975741",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P103",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P076",
+        "P094",
+        "P100",
+        "P104",
+        "P106"
+      ],
+      "neighbor_median_return": "0.0802324",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P104",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P077",
+        "P095",
+        "P101",
+        "P103",
+        "P105",
+        "P107"
+      ],
+      "neighbor_median_return": "0.1137339",
+      "neighbor_positive_excess_count": 6
+    },
+    {
+      "id": "P105",
+      "checks": {
+        "valid": true,
+        "selection": true,
+        "development": true,
+        "stress": true,
+        "stable": false
+      },
+      "neighbor_ids": [
+        "P078",
+        "P096",
+        "P102",
+        "P104",
+        "P108"
+      ],
+      "neighbor_median_return": "0.0846761",
+      "neighbor_positive_excess_count": 2
+    },
+    {
+      "id": "P106",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P079",
+        "P097",
+        "P103",
+        "P107"
+      ],
+      "neighbor_median_return": "0.1026584",
+      "neighbor_positive_excess_count": 4
+    },
+    {
+      "id": "P107",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P080",
+        "P098",
+        "P104",
+        "P106",
+        "P108"
+      ],
+      "neighbor_median_return": "0.1150111",
+      "neighbor_positive_excess_count": 3
+    },
+    {
+      "id": "P108",
+      "checks": {
+        "valid": true,
+        "selection": false,
+        "development": true,
+        "stress": false,
+        "stable": true
+      },
+      "neighbor_ids": [
+        "P081",
+        "P099",
+        "P105",
+        "P107"
+      ],
+      "neighbor_median_return": "0.09973235",
+      "neighbor_positive_excess_count": 3
+    }
+  ],
+  "check_results_seen": false,
+  "replacement_allowed": false
+}

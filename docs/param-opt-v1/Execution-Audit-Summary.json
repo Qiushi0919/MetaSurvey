@@ -1,0 +1,42 @@
+{
+  "kind": "IndependentExecutionAuditSummary",
+  "reviewed_at": "2026-10-20T03:33:41.129259+00:00",
+  "passed": true,
+  "unique_audited_runs": 19,
+  "totals": {
+    "decisions": 8477,
+    "fills": 2564,
+    "unfilled": 3408,
+    "daily": 8477
+  },
+  "arithmetic_assertions": 252729,
+  "independent_attempts": 5972,
+  "enumerated_lots": 19031,
+  "files": {
+    "Baseline-Full-Independent.json": "sha256:3a5710da68d0605cc2656a52ede5c94e6fe0bfcd1711d3b0a254b8176a8df95d",
+    "P006-check-S10-Independent.json": "sha256:53be81c59bab3c4c51e82b9e81f1ae9e05ce662baa0c00a48601f9c603fb2ae5",
+    "P006-check-S30-Independent.json": "sha256:7b9933079945e3ad2a5d01c8d02afce8da90e7c527c01da1a78719e4690e7815",
+    "P006-development-S10-Independent.json": "sha256:ee08a2a871c7fc6801c4e9d3e34c108923f3c5ed8b7ea5994019099fc4331931",
+    "P006-development-S30-Independent.json": "sha256:fe95bed5ff144e369f1b6c0e42b66aaafd83d3189067c618db33848e9dcbbbbc",
+    "P006-selection-S10-Independent.json": "sha256:9942d08528be71f23a28dc6453e91acd1dd97807820fbff38f6c16b5c7f119da",
+    "P006-selection-S30-Independent.json": "sha256:14a1d78be13a062f3d2311a12919fe4dd0665233e679578769f8585fd3781b3c",
+    "P009-check-S10-Independent.json": "sha256:7850f188c215e3fb9aec3045794cb3aa39e4603fada82981c95b35a7b25cdddf",
+    "P009-check-S30-Independent.json": "sha256:02f5c2532bfb2e1da1a75420464c274370cae32fd7a9228d534c3d59ecd4dc51",
+    "P009-development-S10-Independent.json": "sha256:7af71489ce277d79bfee56d07d5ae949982d7d8e0c438cf1bafe2ce3759ce684",
+    "P009-development-S30-Independent.json": "sha256:8a4313be9a0a930fea155a6c464f10035b7d21e4fdf25927f8bb313ddd730e56",
+    "P009-selection-S10-Independent.json": "sha256:231394073ae9ea866160f8d62ffcae72ffb3f703fc03eb6c6c8a6556857df333",
+    "P009-selection-S30-Independent.json": "sha256:287fb70e4d84047bc2c7fe36765c525ade27afd2d7d47df0914abf91c0e5169a",
+    "P029-check-S10-Independent.json": "sha256:5a9525d6519294f37ffe500023b078afb4293dd80e0b193341ae167e03be8185",
+    "P029-check-S30-Independent.json": "sha256:8cdbaf898205955eaee8c1d73a6836e25e4e705866c85d77783f047162cfd583",
+    "P029-development-S10-Independent.json": "sha256:5f5cafdddb32c6f2684d8a18c101e5e0ba5c9b2af0193b232c3266fd178ccaf2",
+    "P029-development-S30-Independent.json": "sha256:bc90cb8674051259f6b7193e7e63f25c07bd5301c765ba55a32d86d01c4a5c86",
+    "P029-selection-S10-Independent.json": "sha256:1b89233b1f1c108c3b7849b7cddcd8cf8c6e5a152ca313f64a4f4860e7c48262",
+    "P029-selection-S30-Independent.json": "sha256:c7c5f9a8babdd7881fab45fed54440909e759b5a06bce0621bb4cd692631c59a"
+  },
+  "failure_count": 0,
+  "scope": "onefullbaseline + baselineandtwofrozenlockedcandidates acrossdevelopment/selection/check and10/30bps",
+  "limits": [
+    "Remaining105configurationsnotfullyreconstructed; selectiontotals/chronologyandsummaryintegrityverifiedseparately",
+    "No untouchedOOS/PIT/sourceauthenticity certification"
+  ]
+}
