@@ -1,0 +1,44 @@
+{
+  "kind": "ForwardC20kLaunchMetadata",
+  "version": "1.0.0",
+  "receipt": {
+    "kind": "INTRADAY_TRIGGER_RECEIPT",
+    "at": "2026-10-20T06:46:05.385596+00:00",
+    "started_at": "2026-10-20T06:41:32.646395+00:00",
+    "finished_at": "2026-10-20T06:46:05.385583+00:00",
+    "session": "2026-10-20",
+    "symbols_received": [
+      "002028.SZ",
+      "002463.SZ",
+      "002916.SZ",
+      "600312.SH",
+      "600362.SH",
+      "601179.SH",
+      "601899.SH",
+      "603228.SH",
+      "603993.SH"
+    ],
+    "errors": [],
+    "valid_plan": false,
+    "account_state": "COLLECTING_REAL_QUOTES_NO_VALID_PLAN",
+    "filled_orders": 0,
+    "cash_cents": 2000000,
+    "effective_observation_days": 0
+  },
+  "receipt_hash": "sha256:0e86d5e35f1fa63ad1fdab1922070ffd1bb4d8b85d5ebe3bfd92d10608fff651",
+  "deployment_hash": "sha256:fa2a52207c695b49006b8de9ccb759cf2e9953843c5a0bf6207aec3bb90002b2",
+  "runtime_root": "/Users/qiushi/投资研究/metasurvey-forward-c20k-frozen-v1",
+  "plan_state": "WAITING_ACTUAL_SAME_DAY_EOD_INPUT",
+  "first_possible_execution_session": "2026-10-21_IF_ACTUAL_PLAN_FROZEN_AND_INPUTS_VALID",
+  "backfill": false,
+  "local_only_raw": true,
+  "monitor_id": "metasurvey-2-c",
+  "successor_deployment_hash": "sha256:cfabcbd360eee0e3887e2b34050f90b36351ed02c672f6d3bd9f65c8dec666c0",
+  "successor_runtime_root": "/Users/qiushi/投资研究/metasurvey-forward-c20k-frozen-v1.0.1",
+  "successor_deployed_at": "2026-10-20T06:59:01.032874+00:00",
+  "successor_actual_heartbeat": {
+    "at": "2026-10-20T06:59:01.503572+00:00",
+    "pid": 17330,
+    "status": "OUTSIDE_EXECUTION_WINDOW"
+  }
+}

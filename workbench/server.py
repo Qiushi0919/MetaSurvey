@@ -10,6 +10,11 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path('/Users/qiushi/投资研究/.p1b-archives/wave-d-20261006/results/REPORTS-G4')
 SYMBOLS = ('603993.SH', '600312.SH', '603228.SH')
 FILES = {
+ 'account20k-registry':'docs/forward-c20k/Registry.json',
+ 'account20k-history':'docs/account20k-history/Results.json',
+ 'account20k-status':'docs/forward-c20k/Status.json',
+ 'account20k-report':'docs/forward-c20k/Acceptance-Report.md',
+ 'account20k-method':'docs/forward-c20k/Method.md',
  'param-opt-registry':'docs/param-opt-v1/Registry.json',
  'param-opt-results':'docs/param-opt-v1/Results.json',
  'param-opt-report':'docs/param-opt-v1/Acceptance-Report.md',
@@ -203,6 +208,11 @@ class Reader:
    state['param_opt']=load_param_opt(self)
   except (ReadError,ValueError,KeyError,TypeError,ImportError,ArithmeticError,OSError) as e:
    state['param_opt']={'status':'INTEGRITY_ERROR','reason':getattr(e,'code','PARAM_OPT_INVALID')}
+  try:
+   from workbench.account20k_reader import load as load_account20k
+   state['account20k']=load_account20k(self)
+  except (ReadError,ValueError,KeyError,TypeError,ImportError,ArithmeticError,OSError) as e:
+   state['account20k']={'status':'INTEGRITY_ERROR','reason':getattr(e,'code','ACCOUNT20K_INVALID')}
   state['task_records']=[]
   for key,label in [('research-gate','三股封存研究交付'),('integration','五年专项主控集成记录'),('previous-ui-checks','上一轮工作台检查记录')]:
    try:

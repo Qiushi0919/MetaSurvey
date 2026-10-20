@@ -1,0 +1,95 @@
+{
+  "kind": "Account20kIndependentReviewIndex",
+  "version": "1.0.0",
+  "reviews": {
+    "Final-Independent-Review-Input-V2.json": {
+      "sha256": "sha256:5474990f0fea1e416391c5385d095ae170e1f6848728b67618de5f0bd4bd8dc8",
+      "summary": {
+        "kind": "IndependentC20kReviewAfterIssuerSupplement",
+        "at": "2026-10-20T06:34:53.621014+00:00",
+        "passed": true,
+        "unique_checks": 57
+      },
+      "counts": null,
+      "source_hashes": {
+        "experiments/account20k_v1/Config.json": "sha256:b3c90b567eb7c3b9a27a9c6f80f1dde40875c3dd99165fe2e53631a8510e64c3",
+        "experiments/account20k_v1/InputPolicy.json": "sha256:d93395e062b2fd4517e3d8d8fc3d77da236335dcb7fb304cea0db9c65b6c2b5d",
+        "experiments/account20k_v1/costs.py": "sha256:834a16f2d67c0245a83d93995751b6ba9d271ca38d441b9332f552bdc8a0ad2e",
+        "experiments/account20k_v1/matching.py": "sha256:cd1b91172ca5bf04337e2347efe49736c046677d62d3600649343cac465c5d62",
+        "tools/forward_c20k/account.py": "sha256:fd2e2ff6137ba83a66ec996938b1cafc8a55e2e4c39bb3432a010bb48b9ffe4e",
+        "tools/forward_c20k/plan.py": "sha256:c63ee7db5f19e592d0510e06d70e110b3b196d09d4e9738069fe278ac3e3a55f",
+        "tools/forward_c20k/runtime.py": "sha256:a36bbfce1037c6396f0e2617e872ee1d8e90ea9a70480369245b7823c60dbf60",
+        "tools/forward_c20k/store.py": "sha256:a32c124b4874b714988e4ed84dc5957d8929b21ea0f19ded34727e54781f7483",
+        "tools/forward_c20k/gateway.py": "sha256:47b61f1c79584cd3d71b88843e8771b4495e6a1f0e1a1d9b055d3ca70bc8f4fd",
+        "tools/forward_c20k/input.py": "sha256:f89213298af344631788257373efa10d062771919dafcaf499f19a86d24308a3"
+      }
+    },
+    "History-All-Independent-V2.json": {
+      "sha256": "sha256:3518f8a98a525ddccd01e1c762e9a5469faa4e035dac5b3ea46d23fcb2673d45",
+      "summary": {
+        "kind": "Independent20kHistoryExecutionReview",
+        "checked_at": "2026-10-20T06:25:27.304753+00:00",
+        "passed": true,
+        "actual_trials": 610,
+        "unique_run_ids": 610,
+        "arithmetic_assertions": 6354037,
+        "leave_one_out_trials": 162,
+        "failures": 0,
+        "scope": "Actual20k initialcash/risklot/cost recomputation; original restricted real inputs; no productionengine calls"
+      },
+      "counts": {
+        "decisions": 246892,
+        "fills": 54516,
+        "unfilled": 98569,
+        "daily": 246892
+      },
+      "source_hashes": null
+    },
+    "Hold-Controls-Independent.json": {
+      "sha256": "sha256:73c42e805274bbdf7442427f76364907ef1721ed8d1520c642c47c589c841077",
+      "summary": {
+        "kind": "Independent20kHoldControlReview",
+        "at": "2026-10-20T06:24:03.026263+00:00",
+        "passed": true,
+        "controls": 16,
+        "assertions": 39888,
+        "scope": "Independent ascendinglot purchases, fill/nonfill, datedfees, corporateactions, ledger anddailycash/exposure/NAV; terminal holdings areunrealized, noforcedsales"
+      },
+      "counts": null,
+      "source_hashes": null
+    }
+  },
+  "private_evidence_root": "/Users/qiushi/投资研究/.p1b-archives/forward-c20k-20261020/review",
+  "limitations": [
+    "Engineering and exposed-history arithmetic; not independent provider certification or investment validity",
+    "Realtime has no actual fills or effective days yet"
+  ],
+  "deployment_review": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/forward-c20k-20261020/review/Deployment-Independent-R1.json",
+    "sha256": "sha256:f636abd539d35a80ff64590882c8ba7751ecb0096f6623b43c434317cd2c9f64",
+    "passed": true
+  },
+  "execution_v2": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/forward-c20k-20261020/review/Final-Independent-Review-Execution-V2.json",
+    "sha256": "sha256:43d49b7fcf74a36aa7f6d54054d8b88190dd79b51f2d278b4648fc2343f64711",
+    "passed": true,
+    "unique_checks": 83,
+    "source_hashes": {
+      "experiments/account20k_v1/Config.json": "sha256:b3c90b567eb7c3b9a27a9c6f80f1dde40875c3dd99165fe2e53631a8510e64c3",
+      "experiments/account20k_v1/InputPolicy.json": "sha256:d93395e062b2fd4517e3d8d8fc3d77da236335dcb7fb304cea0db9c65b6c2b5d",
+      "experiments/account20k_v1/costs.py": "sha256:834a16f2d67c0245a83d93995751b6ba9d271ca38d441b9332f552bdc8a0ad2e",
+      "experiments/account20k_v1/matching.py": "sha256:cd1b91172ca5bf04337e2347efe49736c046677d62d3600649343cac465c5d62",
+      "tools/forward_c20k/account.py": "sha256:fd2e2ff6137ba83a66ec996938b1cafc8a55e2e4c39bb3432a010bb48b9ffe4e",
+      "tools/forward_c20k/plan.py": "sha256:23a5d87ae523f7ee36c59777e51bd59e118434c5612212439b505449d3ed525d",
+      "tools/forward_c20k/runtime.py": "sha256:a36bbfce1037c6396f0e2617e872ee1d8e90ea9a70480369245b7823c60dbf60",
+      "tools/forward_c20k/store.py": "sha256:a2a4230dc7ec34039fb958fae83d36c0b4dd5564b037cd4f20ab4f9e00d9f26a",
+      "tools/forward_c20k/gateway.py": "sha256:47b61f1c79584cd3d71b88843e8771b4495e6a1f0e1a1d9b055d3ca70bc8f4fd",
+      "tools/forward_c20k/input.py": "sha256:f89213298af344631788257373efa10d062771919dafcaf499f19a86d24308a3"
+    },
+    "supersedes_plan_readiness_of": "Deployment-Independent-R1.json"
+  },
+  "preserved_positive_flow_failure": {
+    "path": "/Users/qiushi/投资研究/.p1b-archives/forward-c20k-20261020/review/PlanFlow-Independent-R1.json",
+    "sha256": "sha256:06da994cdb66041352c03360dbb00edd3943826f845560760f52da4a55595663"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "kind": "RealtimeVirtualAccountConfig",
+  "version": "1.0.0",
+  "account_id": "FORWARD_C_20K_P009_RT_V1",
+  "namespace": "EXPERIMENT:CORE40:FORWARD_C_20K_P009_RT_V1",
+  "frozen_at": "2026-10-20T06:15:12.147880+00:00",
+  "initial_cash_cents": 2000000,
+  "currency": "CNY",
+  "members": {
+    "603228.SH": "PCB_SAMPLE",
+    "002463.SZ": "PCB_SAMPLE",
+    "002916.SZ": "PCB_SAMPLE",
+    "600312.SH": "HV_EQUIPMENT_SAMPLE",
+    "601179.SH": "HV_EQUIPMENT_SAMPLE",
+    "002028.SZ": "HV_EQUIPMENT_SAMPLE",
+    "603993.SH": "COPPER_PRODUCERS_SAMPLE",
+    "601899.SH": "COPPER_PRODUCERS_SAMPLE",
+    "600362.SH": "COPPER_PRODUCERS_SAMPLE"
+  },
+  "parameters": {
+    "rs_window": 10,
+    "exit_ma": 20,
+    "exit_min_age": 10,
+    "atr_multiple": "2.5"
+  },
+  "rules": {
+    "maximum_positions": 3,
+    "single_new_fraction": "0.20",
+    "total_new_fraction": "0.60",
+    "group_new_fraction": "0.40",
+    "planned_loss_with_fees": "0.01",
+    "entry": "PRIOR20_HIGH_BREAKOUT_OR_SMA20_PULLBACK_ABOVE_SMA20_AND_PREVIOUS_CLOSE",
+    "stage_exit_sessions": 20,
+    "maximum_hold_sessions": 40,
+    "signal": "DAILY_CLOSE_ONLY_NEXT_SESSION",
+    "passive_breach": "HOLD_BLOCK_NEW_BUYS",
+    "no_margin": true,
+    "no_averaging_down": true,
+    "rolling_forward_no_history_tail": true
+  },
+  "costs": {
+    "commission_rate": "0.00025",
+    "minimum_order_commission_cents": 500,
+    "commission_includes_handling_and_regulatory": true,
+    "inclusion_verified_by_contract_note": false,
+    "stamp_sell_rate": "0.0005",
+    "stamp_effective_from": "2023-08-28",
+    "transfer_both_rate": "0.00001",
+    "transfer_effective_from": "2022-04-29",
+    "rounding": "HALF_EVEN_PER_FEE_CUMULATIVE_PER_ORDER",
+    "partial_fills": "CHARGE_INCREMENTAL_CUMULATIVE_FEE_ONLY",
+    "slippage_bps": "10",
+    "label": "SIMULATED_COSTS",
+    "dividend_tax": "FIFO_CALENDAR_MONTH_20_10_0_AT_DISPOSAL_GROSS_CASH_AT_PAY_DATE",
+    "dividend_tax_cash_reserve": "RESERVE_MAX20_OF_UNSETTLED_ENTITLEMENTS",
+    "unsupported_action": "BLOCK_AFFECTED_ACCOUNT_TRANSITION_NO_FABRICATED_SHARES"
+  },
+  "execution": {
+    "api": "rt_k",
+    "request_mode": "SINGLE_SYMBOL_NO_BATCH_ENTITLEMENT",
+    "serial_queue": "EXISTING_FORWARD_A_PRIORITY_QUEUE",
+    "minimum_request_interval_seconds": 30,
+    "cycle_seconds_minimum": 300,
+    "windows": [
+      "09:35-11:30",
+      "13:00-14:50"
+    ],
+    "order_expiry": "SAME_EXECUTION_SESSION_14:50_ASIA_SHANGHAI",
+    "maximum_source_age_seconds": 90,
+    "maximum_price_deviation_from_plan_close": "0.02",
+    "quantity": "PRE_FREEZE_MAXIMUM_SHARES_NEVER_INCREASE_INTRADAY",
+    "capacity": "MIN_1PCT_INCREMENTAL_TRADED_VOLUME_10PCT_DISPLAYED_DEPTH_WHEN_PRESENT",
+    "matching": "TWO_STRICTLY_POST_ORDER_SOURCE_TIMESTAMPS;ONE_SNAPSHOT_CONSUMED_ONCE",
+    "fallback": "LATEST_PRICE_INCREMENTAL_VOLUME_PROXY_NOT_BROKER_FILL",
+    "first_execution": "FIRST_READY_SESSION_AFTER_EOD_FREEZE;NO_TODAY_BACKFILL",
+    "shortcomings": "NO_RT_MIN_OR_BATCH_RT_K_ENTITLEMENT;RT_K_LATEST_PRICE_SOURCE_TIME_ONLY_NO_BOOK"
+  },
+  "source_expiry": "2026-11-05",
+  "live_broker": false,
+  "real_money": false,
+  "production_enabled": false,
+  "forward_a_changed": false,
+  "historical_results_as_daily_inputs": false,
+  "milestones": [
+    5,
+    20,
+    40
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "ForwardC20kInputSupplementPolicy",
+  "version": "1.0.0",
+  "frozen_at": "2026-10-20T06:28:59.691359+00:00",
+  "purpose": "CURRENT_OBSERVED_FORWARD_C_ONLY",
+  "old_forward_a_modified": false,
+  "historical_visibility_proven": false,
+  "supplement": {
+    "symbol": "600312.SH",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-10-09/1225597190.PDF",
+    "pdf_sha256": "sha256:b941f77a1e61ed07b17027236c14a24fc8fbf1e223b23b8fe892c44a5903f128",
+    "receipt_sha256": "sha256:9d98b5982cf8afc695be5a1df7ae6fa2f5410ac958b8a9c552be4d065d8f3b7e",
+    "retrieved_at": "2026-10-20T06:28:11.019105+00:00",
+    "published_at": null,
+    "printed_announcement_date": "2026-10-09",
+    "page": 1,
+    "field_locations": {
+      "cash_per_share": "important terms and distribution plan",
+      "record_ex_pay_dates": "related dates table"
+    },
+    "record_date": "2026-10-14",
+    "ex_date": "2026-10-15",
+    "pay_date": "2026-10-15",
+    "cash_per_share": "0.242",
+    "bonus_ratio": "0",
+    "split_ratio": "1",
+    "rationale": "Provider dividend response omits this implemented event; issuer PDF directly documents economic fields. Keep original provider bytes, combine only in a new derived table with explicit two-source lineage. Conflicting provider event blocks."
+  }
+}

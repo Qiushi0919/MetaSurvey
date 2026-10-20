@@ -1,0 +1,19 @@
+{
+  "kind": "ForwardC20kExecutionPatch",
+  "version": "1.0.1",
+  "recorded_at": "2026-10-20T06:57:58.434983+00:00",
+  "account_id": "FORWARD_C_20K_P009_RT_V1",
+  "strategy_parameters_changed": false,
+  "account_config_hash": "sha256:b3c90b567eb7c3b9a27a9c6f80f1dde40875c3dd99165fe2e53631a8510e64c3",
+  "reason": "Non-fen close*1.02 sizing input was refused before a plan could freeze",
+  "rule": "HALF_EVEN to 0.01 CNY once, same protected buy price in sizing and submitted order; existing order rounding now also applied upstream",
+  "old_deployment_hash": "sha256:fa2a52207c695b49006b8de9ccb759cf2e9953843c5a0bf6207aec3bb90002b2",
+  "old_failed_test_hash": "sha256:06da994cdb66041352c03360dbb00edd3943826f845560760f52da4a55595663",
+  "no_actual_plan_or_fill_before_fix": true,
+  "old_state_preserved": true,
+  "old_a_changed": false,
+  "new_source_hashes": {
+    "tools/forward_c20k/plan.py": "sha256:23a5d87ae523f7ee36c59777e51bd59e118434c5612212439b505449d3ed525d",
+    "tools/forward_c20k/store.py": "sha256:a2a4230dc7ec34039fb958fae83d36c0b4dd5564b037cd4f20ab4f9e00d9f26a"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "Account20kActualUIReceipt",
+  "version": "1.0.0",
+  "at": "2026-10-20T06:52:37.489216+00:00",
+  "url": "http://127.0.0.1:8770/#account20k",
+  "reader_status": "LOCAL_STATE_HASH_CHAIN_VERIFIED",
+  "state_hash": "sha256:4c6badd050957c0571dafe1020e683e7ba90fe5ce3423fec2df997b9c0745043",
+  "observed_quote_count": 9,
+  "cash_cents": 2000000,
+  "effective_days": 0,
+  "history_projection_matches": true,
+  "actual_browser_actions": [
+    "Opened account page",
+    "Opened method evidence dialog and verified source hash",
+    "Changed history check window to full window; P009 42.46% visible"
+  ],
+  "screenshots": {
+    "Account-Page.png": "sha256:a553732aa5ed53871b54b1231668f37f8f0bbda2865ec102bd14760dbe1e6bb9",
+    "Evidence-Dialog.png": "sha256:b20f25b17f2139964a66095f1715ff7813c9548a50ccd90c9da90db998f76daf"
+  },
+  "raw_screenshots_local_only": true
+}

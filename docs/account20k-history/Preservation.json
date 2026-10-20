@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-20T06:20:24.753229+00:00",
+  "baseline_file_count": 9,
+  "prior_optimization_file_count": 9,
+  "passed": true,
+  "before_hash": "sha256:267c55c0c01d708a4d4ac0fe6bf5f82a631f2d8384fc05e859a3a52194b8988d",
+  "after_hash": "sha256:a02c371a60567b1f1388812fe96535b69071ed37f0b166915d3e2072eb9b020c"
+}

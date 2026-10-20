@@ -8,6 +8,13 @@
   "primary_handoff": "docs/specifications/V1-Engineering-Handoff.md",
   "reports": [
     {
+      "phase": "FORWARD_C20K_AND_ACCOUNT_ADAPTATION",
+      "report": "docs/forward-c20k/Acceptance-Report.md",
+      "result": "docs/account20k-history/Results.json",
+      "registry": "docs/forward-c20k/Registry.json",
+      "business_state": "ACTUAL_RT_CAPTURE_LAUNCHED_FIRST_PLAN_PENDING_610_HISTORY_RUNS_16_CONTROLS_NO_LIVE_MONEY"
+    },
+    {
       "phase": "PARAM_OPT_V1",
       "report": "docs/param-opt-v1/Acceptance-Report.md",
       "registry": "docs/param-opt-v1/Registry.json",

@@ -1,0 +1,36 @@
+{
+  "kind": "Account20kChecks",
+  "version": "1.0.0",
+  "local": {
+    "account20k": {
+      "suite": "ACCOUNT20K_REALTIME_AND_HISTORY",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "d413c69d4c3e5ed965fb3019558b1cefb769fe7e",
+      "platform": "darwin",
+      "unique_cases": 36,
+      "executions": 36,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "run_url": null
+    },
+    "workbench": {
+      "suite": "workbench",
+      "commit": "d413c69d4c3e5ed965fb3019558b1cefb769fe7e",
+      "run_url": null,
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 191,
+      "executions": 191,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    }
+  },
+  "remote_status": "PENDING_PUBLIC_COMMIT",
+  "remote": []
+}

@@ -1,0 +1,27 @@
+# FORWARD_C_20K_P009_RT_V1
+
+Owner on 2026-10-20 authorized this separate C account and a separate 20k historical adaptation. Virtual cash is 20,000.00 CNY; no transferred positions or performance. P009 is RS10 / exitMA20 / MA-wait10 / ATR20×2.5. The existing close-trigger entry, day20 exit and maximum40-session exit stay unchanged. Intraday quotes execute an earlier plan; they do not create intraday stop/MA signals.
+
+Config.json was recorded before new realtime decisions. Cash caps are 20% single / 60% aggregate / 40% sample group, maximum3 and planned loss including estimated fees≤1%. Price appreciation does not force liquidation; it blocks further purchases when over limits. Candidate quantities are frozen using fee-inclusive price protection and the actual20k cash/risk budget. Missing/expensive candidates leave cash.
+
+## Costs and dividends
+
+Owner's simulated commission is .00025, minimum5 yuan per independent order per side, with exchange handling/regulatory fees included. This inclusion is **not verified against a real broker contract note**. Stamp and transfer are separate; no duplicate exchange charge. No fill incurs no fee. Within an order, each partial fill pays the difference between cumulative rounded fees before and after the fill. Independent orders each have their own minimum. Values are integer fen and Decimal, ROUND_HALF_EVEN for each cumulative fee. Slippage is incorporated once into price, adverse10bps, rounded adversely to the cent in realtime matching.
+
+The [2023 stamp-duty announcement](https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211343/content.html) halves securities transaction stamp duty from2023-08-28; the ordinary A-share sell-side simulated rate here is .0005. [The2022 ChinaClear announcement as reproduced by Wuhan's financial authority](https://jrj.wuhan.gov.cn/ynzx_57/xwzx/202204/t20220429_1964160.shtml) specifies .01‰ each side from2022-04-29 (previous .02‰ SH/SZ). This official-government reproduction is identified as such, not an independently captured ChinaClear original.
+
+For ordinary unrestricted SH/SZ market-acquired shares, [2015 dividend policy](https://www.chinatax.gov.cn/chinatax/n810341/n810765/n1465977/n1466017/c1967339/content.html) exempts holdings over one year and defers tax collection for shorter holdings until disposal. [2012 operational rules](https://www.chinatax.gov.cn/chinatax/n810341/n810765/n812151/n812386/c1082457/content.html) specify FIFO, calendar months/years and holding up to the day before delivery. Simulation uses20% within/equal one month,10% through/equal one year,0% beyond; the superseded old5% long-term rule is not used. Gross cash is credited on evidenced pay date; tax is simulated at sale, with a conservative20% spending reserve on remaining entitlements. This is not an actual broker tax assessment. Unsupported share-distribution tax basis blocks the transition.
+
+The parallel historical adaptation separately retains the earlier explicit flat20% dividend-tax sensitivity assumption. It must not be represented as this realtime tax ledger or actual taxes.
+
+## Execution model and evidence
+
+Official [rt_k fields](https://tushare.pro/wctapi/documents/372.md) include optional time/depth; [rt_min](https://tushare.pro/document/2?doc_id=374) needs independent entitlement. Actual gateway tests, not the15000 tier label, determine capability. Single rt_k returns source trade_time and latest price, but no usable bid/ask. Batch rt_k is rejected for batch permission, and rt_min is rejected. No new purchase was made.
+
+This version uses single-security calls on the existing30-second shared queue, subordinated to Forward A. Nine-security cycles take at least270 seconds and target300 seconds; it is not tick-level trading. Execution windows are09:35–11:30 /13:00–14:50 Shanghai, known exchange sessions only. Orders expire14:50; unfilled exits must be regenerated from later valid close evidence. Freeze precedes next open; startup never buys at an already elapsed open.
+
+Matching requires two source-timestamped observations strictly after order submission, increasing source time and cumulative traded share volume, source age≤90s, known current status/limits and price protection2% from plan close. Capacity≤1% incremental observed traded volume, further capped at10% displayed depth when available. With latest price only this is a **simulation proxy, not exchange fill evidence**. No intraday high/low hindsight matching. Source trade time and receipt time are distinct.
+
+The process has single-instance lock, immutable state checkpoints, per-order consumed snapshot identities, cumulative fees, source expiry2026-11-05 and STOP. A wake/restart resumes future observations only; it never reconstructs a missed order at an old quote. A heartbeat older than10minutes is OFFLINE; a sleeping machine cannot send a live alert. launchd can restart crashes after login but cannot guarantee collection while asleep/offline. Daily18:30 attempts wait for the already authorized shared A capture, avoiding a second65-request competing harvest. Missing/invalid input produces a blocked plan, not a normal cash day.
+
+An effective observed session requires a valid earlier plan, actual morning and afternoon cycles, bounded within-session gaps and all nine symbols without data errors, followed by successful close reconciliation. Empty valid plans may settle; absent plans never count.5/20/40 days are reporting milestones, not evidence of investment validity.

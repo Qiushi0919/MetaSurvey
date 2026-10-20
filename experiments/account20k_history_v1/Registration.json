@@ -1,0 +1,1298 @@
+{
+  "kind": "ParameterOptimizationRegistration",
+  "version": "1.0.1",
+  "strategy_id": "CORE40_ACCOUNT20K_HISTORY_V1",
+  "namespace": "EXPERIMENT:CORE40:ACCOUNT20K_HISTORY_V1",
+  "frozen_at": "2026-10-20T06:11:52.706139+00:00",
+  "classification": "EXPOSED_HISTORY_EXPLORATORY_OPTIMIZATION",
+  "optimization_allowed": true,
+  "baseline_id": "P029",
+  "original_run": "LF5Y-20261015-RAW-V2-03",
+  "configs": [
+    {
+      "id": "P001",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:648df971b7d2171220995c162694ec26229434b59f2dc4d4332044bd1cfdaecd"
+    },
+    {
+      "id": "P002",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:cd2f9ed89fde341b2c1db17e6b5bb808706b0a857ff0f7c7d267a16fda0098b6"
+    },
+    {
+      "id": "P003",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:4c1203ea6019c936ae775adee9818d6dc879040ca6c9130c78e8d1c55b529654"
+    },
+    {
+      "id": "P004",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:6e2da6696bc322748c87a3bd00b9902551b590619a1fa37e10b3d5415412c669"
+    },
+    {
+      "id": "P005",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:b4caecbe9620222d1ad7bd674541ed1aaea049b58565ccdccbea87d082ecf6ab"
+    },
+    {
+      "id": "P006",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:621df48ef7396d9316ea67282524d958119d44d152045550e6216070165cfcc8"
+    },
+    {
+      "id": "P007",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:7c2b649e92e771da438e6729cc6845d657b061041af834d699da6fd626854f1d"
+    },
+    {
+      "id": "P008",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:d9fad6c47076909094878be7dc40f645469b3ccc5e0583d4cc284c894d87a6b0"
+    },
+    {
+      "id": "P009",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:87186b5b50cf433e5aa81099d6a982987793bbfe44737de738a3cb6892b92759"
+    },
+    {
+      "id": "P010",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:2e0c5e5183626a6a5b85d89ea135e47ad9d8b67a3b1a3fc34ea9e07e8406f689"
+    },
+    {
+      "id": "P011",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:a8364ac71c4fa4aa7a5b605ebae107129bd79c33887e8f5f0bb906545dc23ca2"
+    },
+    {
+      "id": "P012",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:0086ec06afbab72ca9a9559d1ae5ec87b072e3f352c398bb2fc0ada715de90ec"
+    },
+    {
+      "id": "P013",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:6887e17de6d8a3d280eaf84b443b3e82c7d01933271dde3d04d29a64e581ef5e"
+    },
+    {
+      "id": "P014",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:4cd258678f63935eba3199f761fc01133db82f12a8847594ebde326066dc3182"
+    },
+    {
+      "id": "P015",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:849c21648c52ab41eff923372c57d61201a53813153a8aab2aeea9536a3ce507"
+    },
+    {
+      "id": "P016",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:7b73aa7d5e998a0da81f09d1e03aa2990a7b6915aab5b32e34b4407ef27c4628"
+    },
+    {
+      "id": "P017",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:04731df969a615702fc6093d35f251cf407a20a43754f46006cdf3ed03da8d50"
+    },
+    {
+      "id": "P018",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:ae8c484a8b4232d2cd4c6e4b077a74d5a31e68457b3adca9fd098eea0c08b3b1"
+    },
+    {
+      "id": "P019",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:98cc44a5d56df92df96f441fea26879961813f31c0bf56f6617fb7e181ffb978"
+    },
+    {
+      "id": "P020",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:cf5eb339b1bb000e4b709551a86c54693982dcae08cd78b560c39dd6a1535872"
+    },
+    {
+      "id": "P021",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:8d326ee40acc73df29fc752e3355f2c27ea91058380e3b9ffa977abdcc613142"
+    },
+    {
+      "id": "P022",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:94aacfa8c17bfb0aa5cbd67d965744727f89e34a06c39595839f64f6565ffff2"
+    },
+    {
+      "id": "P023",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:b247f5c3cb400862665e8e644f024080cc8da01b47ce7dba2686b11584e02de4"
+    },
+    {
+      "id": "P024",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:18ec33e9ed9afde265ba5553b694f240db3626362db56ee44450ef1b46957628"
+    },
+    {
+      "id": "P025",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:e28fe2bb197e176a5ea3fbca761cbcbf981aa81075ac54284b4ff3282e576b5a"
+    },
+    {
+      "id": "P026",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:68acc792a50334df9f338401e54d9ee756a63a9368f6eb8552dfc6bb99f88eea"
+    },
+    {
+      "id": "P027",
+      "parameters": {
+        "rs_window": 10,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:d550c3ccddaf34392f6d5f3289c8c7ad5d42983cb374710453021117a7818537"
+    },
+    {
+      "id": "P028",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:a50c28f56d377331e134311a83c33f4cb0cbe5b4f9f0706213922d0d109dd0d1"
+    },
+    {
+      "id": "P029",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:a529a7a8312ef9761b7d231d1b1434aedefedbde68f516634f2d3386594bcd66"
+    },
+    {
+      "id": "P030",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:c10c16ce80395bdefe3fb25a064899cd7bf9f63a907e186e0b22cfbedf8220ac"
+    },
+    {
+      "id": "P031",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:8e6d104c01f434bd5d73b98099f16599bd4a669c0f731b3a0e33e93a45239195"
+    },
+    {
+      "id": "P032",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:d7b370b9d2ac067edb4725d3951e12bb96aa026077fd4c57dc69d7978669ac0f"
+    },
+    {
+      "id": "P033",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:2987424d3768ece71731a962d54333bca70e42ff91f2596b3608548b1e996182"
+    },
+    {
+      "id": "P034",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:a28a4456fd81dae590b3fcddd89f5885463477bbbd010c3de7251c24fd7d0d9d"
+    },
+    {
+      "id": "P035",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:4201c3d53fae3b8792b2a9ddbfb6da3b53256e3e9523676421b3d59287a53303"
+    },
+    {
+      "id": "P036",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:8d02006c1edaa3041efd84978f1657a033ae7d23f9d6ff23ab50cc0108367b56"
+    },
+    {
+      "id": "P037",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:476831b64d6ed796cc3ceeb74054d70e9cedcb3e970262847f44198c63d8423c"
+    },
+    {
+      "id": "P038",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:48f72f18c6a6c69ea8d56fba557c4881cccf1e3dca210e661ae61dec4dbbcf74"
+    },
+    {
+      "id": "P039",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:3db3c719503e5629b3612b61cebe73e600254249ea90ad36ee30995c1484a212"
+    },
+    {
+      "id": "P040",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:acef513520738c44e2d7ebbb19ed00469448a036ffa44b213459b2789327e8fc"
+    },
+    {
+      "id": "P041",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:48fe60c6c9e450df60dd66284565f92f83e25c99b3981c90a96014ceaedac93c"
+    },
+    {
+      "id": "P042",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:c667c31d0e422bdd9a7c064fe758c1c757b4ad1650267ffd028def7b2e123642"
+    },
+    {
+      "id": "P043",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:a4d0c019605a2e8e0f1f9348295d9f7e2369e2efef38881712a617b3d0a0d10d"
+    },
+    {
+      "id": "P044",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:060fca4ae60a986909d6a3d384f0878847384bf70755752faa65c9bf142a1334"
+    },
+    {
+      "id": "P045",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:6f109b523ff1be3c4ae1ec4d69b2b689bdbda03f352c9ffba13cb0404d648fbf"
+    },
+    {
+      "id": "P046",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:8cdc8e66169ff5036844c5c3fc7a82834d35f536093d1d79339e014771b3ada5"
+    },
+    {
+      "id": "P047",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:30bd49a12319a6cd06a0368773ea468eb4b637a3b4a8cdac98b09c8d60bc4030"
+    },
+    {
+      "id": "P048",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:fc4e2922ed29af9e2a26cd7efd68d7f3e2da3d231d0e6253e78cd23498fefee8"
+    },
+    {
+      "id": "P049",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:64d524036ade3261acef33e36028e32705136b3408807ceaed174d2d9f2842cc"
+    },
+    {
+      "id": "P050",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:c3eab39039e9e87e2121777e12a2c720a98beba17e7da40def60d515222e1035"
+    },
+    {
+      "id": "P051",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:371092460317c1cbd7cf45b6583530f4f93ca8fd36bd3adfd4282596e2552903"
+    },
+    {
+      "id": "P052",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:81715c269200e9da4804e46c7740319fa944f3610873f6312da2fa8aed5884a1"
+    },
+    {
+      "id": "P053",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:1098b868a0016c896f45504e8a7f45816b8b24ca8320dc6630beaab486cad486"
+    },
+    {
+      "id": "P054",
+      "parameters": {
+        "rs_window": 20,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:07d1c5ca340c851aa4843057c30a65e3168398781f8af5af6bd2b6493bc21daa"
+    },
+    {
+      "id": "P055",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:2ef5b973cb516846db8aba32ab204b21031f2bcc27a98e5188e3602a8400960d"
+    },
+    {
+      "id": "P056",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:351ccbfd6ef7532f131ffbd1d8457c9bafbc8bae02f4458eba95c5ee2aaf1cc3"
+    },
+    {
+      "id": "P057",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:981627a5481d812445eefc8b39c14354191c227561455524c38b4ca313a4f6c9"
+    },
+    {
+      "id": "P058",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:eae03d55823d2860efeec93d07d69e127c5992659f72201b7711008a9285d6b8"
+    },
+    {
+      "id": "P059",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:b5cb3342fdf97f95bc92900686080c37bbb3f4e1f79d97ea5f4271894bf6f88f"
+    },
+    {
+      "id": "P060",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:cc5af6fe4d7119f7e8f061af7ae61d909dea2e8d88e8868f92891e23612c6f98"
+    },
+    {
+      "id": "P061",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:0f0f44f9784f444b0038b012bfcc4ccc1fbf3728fec0b7c4198079df8b4caefa"
+    },
+    {
+      "id": "P062",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:6a694c8df2bf62b3344aa0e124b3db748b9648998cda34ae46aa4813a14d397f"
+    },
+    {
+      "id": "P063",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:8e6d241f21bf7e8f43e0e127fc421ebb3b858e90e50f87b9e7fa4fa2bdc1fedd"
+    },
+    {
+      "id": "P064",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:009cc98d52389f8bdb10502c6ca5408e5176462856e1dc08ceb3bdeaafd440c1"
+    },
+    {
+      "id": "P065",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:a799262d8f82b5ef59e6977ac21a4ccfaf358ac1ac3af2ebe569c2e51f5e75e6"
+    },
+    {
+      "id": "P066",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:6423a8cf38290241a1e52c0d48b9d663a33ac6740fd239241c503fb6e7f875dc"
+    },
+    {
+      "id": "P067",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:c2b881251884682b3bb1229e758041c266557170c641ac9b2265752931c1208c"
+    },
+    {
+      "id": "P068",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:1a6d2b2f32256b1488489c66c51a45e709385e16a33469a3cb7a454a16117b22"
+    },
+    {
+      "id": "P069",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:65ddb1afca6633a22420116f082615b39c66a397b962976cbda8a9d9da630439"
+    },
+    {
+      "id": "P070",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:fe21f2ca47988f623c0fa0cfc52a0ebd5264ff1ace627088bc2dd5630c96e197"
+    },
+    {
+      "id": "P071",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:d22db064ac7b801e8b92d82e60247f084cde1dbbb1dff0bfbc212f548354cd70"
+    },
+    {
+      "id": "P072",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:836924ad2a55c38931e52967421d4c8f7895a12d42e9389ba800e78fdcf1d71b"
+    },
+    {
+      "id": "P073",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:206e23b2c682e7260d17e0e0a83aaaadcc36f2ac43ed1421763f09476769609a"
+    },
+    {
+      "id": "P074",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:8b6faf508e161de572363628460f505f60caa14efae9824db8cbdb3cb7241ed0"
+    },
+    {
+      "id": "P075",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:2914d42e1bf0c011eef2da66adcbb003392b6904f39fdbb81b5117fda50117ed"
+    },
+    {
+      "id": "P076",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:f2fc2374ff253830970ae639ad52b1f74a46cf178b5c72863bea92dc8a0b8106"
+    },
+    {
+      "id": "P077",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:0ed543617c0f8a4c24602e82334a7524eb5759f48733ac87c4952006958194b0"
+    },
+    {
+      "id": "P078",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:a1365da2b91439ee6671c26db58131603196c7610b7731c2eeb997f4cd418c93"
+    },
+    {
+      "id": "P079",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:14dc67aee8752205839e8129634985f90f32588b5c496d8385df65fd246ce683"
+    },
+    {
+      "id": "P080",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:add6802cc7771c39db00d1864b73c0beee3d0beefcd98405d976b64a5dd20a17"
+    },
+    {
+      "id": "P081",
+      "parameters": {
+        "rs_window": 40,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:1218a3b8d8dfb0a3e9ba7222f4d0b5a7e467ef523aa0469c36fe1c39dbd88c17"
+    },
+    {
+      "id": "P082",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:f0e1cfff04f3531eff681e1a16dbad721021a6ec4d4d97650ff73129e49b9ce3"
+    },
+    {
+      "id": "P083",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:21fb14860d4c9f1c96d721bc60f99ec63b4c839becc82b8b2a79ac22466bdb89"
+    },
+    {
+      "id": "P084",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:33b5ef905b240439136895700f6cc8a678b68edbdbc1bf244425367a183feb32"
+    },
+    {
+      "id": "P085",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:34be8c38db80e54b9b46b835a014b375aba0cfa3273411a984951415dc2a4aed"
+    },
+    {
+      "id": "P086",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:2b2c5a8371b18702d54575ae0a4f1466233936e3c7a976d63d60289fc7d671ab"
+    },
+    {
+      "id": "P087",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:401f89365ebbb5a857a9ccb63b2a42eba9d9b21cd33823639409e713057874d2"
+    },
+    {
+      "id": "P088",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:74dd1d4d02ec550850f73b9797112c4030fab14082e6d197d041b44c1652067e"
+    },
+    {
+      "id": "P089",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:77d8d0ccc6b8ba29656b1be1f7fcc8dd8f1da756132268e53b57232a35eaaae9"
+    },
+    {
+      "id": "P090",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 20,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:0f00961beb5aea190ccc41fc2ff6ed813134df9b1c1caea9d86d4c1a455cddd6"
+    },
+    {
+      "id": "P091",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:34e5fec89934e2470de2a01b1f4b6cf395618d716bea72edbf6211a4c7c8dab3"
+    },
+    {
+      "id": "P092",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:2b900904e70b4e1cd22a2ace85a455234928c2ecf0ecde507f6c84b5004e9c5d"
+    },
+    {
+      "id": "P093",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:b918c1b3ae4f94cdbdb96e9df6bc47f6b68fbee0220019098116d5ed3ea4ae32"
+    },
+    {
+      "id": "P094",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:70aba6ad105b175125db1c697497d9b04a8b4a19f541e4f8277344affe041db9"
+    },
+    {
+      "id": "P095",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:3a06fcff47f776dbe22e22c84c47089eab1efa47b2ca305dd797709a8aa0b863"
+    },
+    {
+      "id": "P096",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:83cc61706e223b5f72e1193a739005a3c2bdc7a6b698eba705dc27d50fd8a119"
+    },
+    {
+      "id": "P097",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:a38d6505bf06f038cacda5f3dc09b1749bb8aa6ff76c2841d4dde57c8c8a7c0b"
+    },
+    {
+      "id": "P098",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:4f37be8e3f5057c8462bbe30cc5aad0a5aa1e061505bb914f07b67c666086e31"
+    },
+    {
+      "id": "P099",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 40,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:1f5467b504a9fad0ae846753985df9ab5b4cb1b6018ad61d822456982ce7c91d"
+    },
+    {
+      "id": "P100",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:7b5bc9a3a98bd6c7662b1918d4757457c2c3668fd0df152c08606c162c42a4a7"
+    },
+    {
+      "id": "P101",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:4cbc28bd654a42b50a81ef7496553cd3de1b8019bd1611894e7962ff68795e17"
+    },
+    {
+      "id": "P102",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 0,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:61755c94b2a6db5bd12890bb7e3fea07e953ef600058304071eac834322e2711"
+    },
+    {
+      "id": "P103",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:823ad1cd0d2f87756cd0930b1bde8ec3038ac6f5660290382b13167220ee1ebc"
+    },
+    {
+      "id": "P104",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:5248f0e9171782c0bbac91c9d55a6c3f762657eaa1dc9c29d289109d7e80f4a7"
+    },
+    {
+      "id": "P105",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 5,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:6bf59e7dea73213ba561c41d2fd1dc307595e90bf49afe41629e4cc6d4f8cfb0"
+    },
+    {
+      "id": "P106",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "1.5"
+      },
+      "hash": "sha256:a36278126fd828863bdb7ea22157770c4a4126f0051186ec63ac4e749a574c59"
+    },
+    {
+      "id": "P107",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.0"
+      },
+      "hash": "sha256:cb3a694f13080d4bbcceeaa2422a7a4258f1fb7db37fcf73235e3ba71ede9c6d"
+    },
+    {
+      "id": "P108",
+      "parameters": {
+        "rs_window": 60,
+        "exit_ma": 60,
+        "exit_min_age": 10,
+        "atr_multiple": "2.5"
+      },
+      "hash": "sha256:355cace777b76c576c64e7521e714f675d5043b687ffb2a3930afc2514ba3c84"
+    }
+  ],
+  "search_order": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P007",
+    "P008",
+    "P009",
+    "P010",
+    "P011",
+    "P012",
+    "P013",
+    "P014",
+    "P015",
+    "P016",
+    "P017",
+    "P018",
+    "P019",
+    "P020",
+    "P021",
+    "P022",
+    "P023",
+    "P024",
+    "P025",
+    "P026",
+    "P027",
+    "P028",
+    "P029",
+    "P030",
+    "P031",
+    "P032",
+    "P033",
+    "P034",
+    "P035",
+    "P036",
+    "P037",
+    "P038",
+    "P039",
+    "P040",
+    "P041",
+    "P042",
+    "P043",
+    "P044",
+    "P045",
+    "P046",
+    "P047",
+    "P048",
+    "P049",
+    "P050",
+    "P051",
+    "P052",
+    "P053",
+    "P054",
+    "P055",
+    "P056",
+    "P057",
+    "P058",
+    "P059",
+    "P060",
+    "P061",
+    "P062",
+    "P063",
+    "P064",
+    "P065",
+    "P066",
+    "P067",
+    "P068",
+    "P069",
+    "P070",
+    "P071",
+    "P072",
+    "P073",
+    "P074",
+    "P075",
+    "P076",
+    "P077",
+    "P078",
+    "P079",
+    "P080",
+    "P081",
+    "P082",
+    "P083",
+    "P084",
+    "P085",
+    "P086",
+    "P087",
+    "P088",
+    "P089",
+    "P090",
+    "P091",
+    "P092",
+    "P093",
+    "P094",
+    "P095",
+    "P096",
+    "P097",
+    "P098",
+    "P099",
+    "P100",
+    "P101",
+    "P102",
+    "P103",
+    "P104",
+    "P105",
+    "P106",
+    "P107",
+    "P108"
+  ],
+  "windows": {
+    "development": {
+      "start": "2021-10-08",
+      "end": "2023-12-29"
+    },
+    "selection": {
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    "check": {
+      "start": "2025-01-01",
+      "end": "2026-09-30"
+    }
+  },
+  "slippage_bps": [
+    "10",
+    "30"
+  ],
+  "execution_order": "freeze; fixedP029/P009/P006 all partitions10/30 and full10/30; controls;108 development/selection10/30; lock<=3 using training only; checks forlocked; symmetric leave-one-out9x3fixedx3partitionsx2slippage",
+  "window_accounting": {
+    "initial_cash_cents": 2000000,
+    "independent_accounts_per_partition": true,
+    "annual_reset": false,
+    "warmup": "all available sessions from2021-06-01 to window start, no trades before each start; no bars after window end",
+    "tail": "preserve last_index-index<=40 suppression of next-session new entries; no forced synthetic liquidation; remaining positions/receivables marked and disclosed",
+    "boundary": "No carry of holdings/cash or receivables across partitions; no trading during warmup; full original five-year kept separately, returns across reset windows not subtracted from full-run return"
+  },
+  "parameter_semantics": {
+    "rs": "N session close return, both group mean and stock excess, max(21,N+1) consecutive tradable observations for new entries",
+    "entry": "unchanged SMA20 pullback/prior20 breakout; ATR20 always",
+    "exit_ma": "last N observed tradable closes on current tradable close, no RS requirement; suspension skips and retains exposure as oldbaseline",
+    "exit_min_age": "exchange-session age inclusive entryday=1; age>=minimum gates ONLY MA exit; 0 no extra delay",
+    "atr_multiple": "rounded ATR20 times candidate multiplier defines stop AND risk/cash/lot sizing",
+    "decision_trace_compatibility": "sector_sample_rs20 legacy field name; actual window bound to case.parameters.rs_window"
+  },
+  "selection_rule": {
+    "validity": "complete engine, no errors and deterministic accounting",
+    "primary": "selection10 net_return > baseline10 AND mdd <= baseline10",
+    "development_guard": "development10 return>=baseline10-0.05 and mdd<=baseline10+0.05",
+    "stress_guard": "selection30 return>baseline30 AND mdd<=baseline30",
+    "adjacency": "one grid step along one axis; other parameters fixed",
+    "stability": "selection10 neighbors median excess return>0; >=half neighbors excess>0; candidate return-neighbor median<=0.05",
+    "near_tie": "within0.0025 absolute return of highest remaining choose lower mdd then lower BUY+SELL turnover then ID",
+    "candidate_lock": "up to2 qualified recommendations plus highest selection10 return reference if distinct; ifnonequalified lock up to3 highest selection10 exploratory references, no recommendation; no replacement after check",
+    "final_recommendation": "prelocked qualified only; check10 ANDcheck30 excessreturn>0 and mdd<=same-scenario baseline, otherwise no robust improvement",
+    "reference": "risk-return tradeoff only; never automaticForward"
+  },
+  "fixed_rules": {
+    "account": "20000CNY/max3/single20%/total60%/sector40%/risk1%",
+    "fees": "Owner hypothetical commission .00025/min500fen each BUY/SELL order, exchange/regulatory included unverified against contract note; dated stamp/transfer retained;10/30bps",
+    "no_search_on": "entry,stage20,max40,costtax,units,status,actions,availability,executionconstraints",
+    "forward_a": "untouched",
+    "forward_b": "unstarted",
+    "forward_c": "new account independently frozen by root; historical search cannot replace live P009",
+    "dividend_tax": "SIMULATED_FLAT_20_PERCENT historical sensitivity inherited; not actual differentiated tax; not used by realtime account"
+  },
+  "statistics": {
+    "trial_grid": 108,
+    "no_significance_claim": true,
+    "sample_bias": "fixed contemporary nine; supplier reconstruction; exposed history; not formalPIT/OOS"
+  },
+  "resource_policy": {
+    "capture_requests": 0,
+    "workers": 1,
+    "nice": 10,
+    "pause_local_clock": "18:00<=time<19:30 before each run; do not interfere with frozen Forward task"
+  },
+  "initial_cash_cents": 2000000,
+  "fixed_candidate_ids": [
+    "P029",
+    "P009",
+    "P006"
+  ],
+  "fixed_candidate_check_exposure": "P029/P009/P006 fixed before this task; these check results never used by lock_candidates; allhistoryalreadyexposed",
+  "leave_one_out": {
+    "symbols": "all nine sorted, each omitted in a separate actual rerun",
+    "fixed_candidates": [
+      "P029",
+      "P009",
+      "P006"
+    ],
+    "partitions": [
+      "development",
+      "selection",
+      "check"
+    ],
+    "bps": [
+      "10",
+      "30"
+    ],
+    "runs": 162,
+    "group_method": "same equal-member group RS with remaining members; no substitution; membership perturbation includes altered group signal",
+    "selection": "diagnostic only; never pick winning deletion or replace nine-stock scope"
+  },
+  "technical_correction": "Prior private epoch preserved INVALIDATED_METADATA_CAPITAL_CONFLICT; remove inherited 100k RULES metadata, bind capital only to explicit case/protocol; strategy params/order/selection unchanged"
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "Account20kRegistry",
+  "version": "1.0.0",
+  "history_hash": "sha256:3e81cfd896be8d025a30628d57405c5db061d64035f621bfc6358c2354c042ba",
+  "status_hash": "sha256:ecd5b7cbfa7a84ac6e6c481157510f0a2250a4d7abb0da735884ceb4470ba0fc",
+  "code_pins": {
+    "tools/forward_c20k/store.py": "sha256:a2a4230dc7ec34039fb958fae83d36c0b4dd5564b037cd4f20ab4f9e00d9f26a",
+    "tools/forward_c20k/plan.py": "sha256:23a5d87ae523f7ee36c59777e51bd59e118434c5612212439b505449d3ed525d",
+    "tools/forward_c20k/gateway.py": "sha256:47b61f1c79584cd3d71b88843e8771b4495e6a1f0e1a1d9b055d3ca70bc8f4fd",
+    "tools/forward_c20k/check.py": "sha256:d1eb30c41ee3f8b526d52991508b2ed7e2dfdc388259b442972c924135417b8f",
+    "tools/forward_c20k/ci.py": "sha256:5eebc0c36b7478758fc06674a410884f54087192ee3327387beb97c865bd94f5",
+    "tools/forward_c20k/runtime.py": "sha256:a36bbfce1037c6396f0e2617e872ee1d8e90ea9a70480369245b7823c60dbf60",
+    "tools/forward_c20k/input.py": "sha256:f89213298af344631788257373efa10d062771919dafcaf499f19a86d24308a3",
+    "tools/forward_c20k/probe.py": "sha256:3c72843686494cd0b63ed376b460572edcc78251ad6a1cbbcfdb10ca15fea6ae",
+    "tools/forward_c20k/account.py": "sha256:fd2e2ff6137ba83a66ec996938b1cafc8a55e2e4c39bb3432a010bb48b9ffe4e",
+    "experiments/account20k_v1/Config.json": "sha256:b3c90b567eb7c3b9a27a9c6f80f1dde40875c3dd99165fe2e53631a8510e64c3",
+    "experiments/account20k_v1/matching.py": "sha256:cd1b91172ca5bf04337e2347efe49736c046677d62d3600649343cac465c5d62",
+    "experiments/account20k_v1/costs.py": "sha256:834a16f2d67c0245a83d93995751b6ba9d271ca38d441b9332f552bdc8a0ad2e",
+    "experiments/account20k_v1/InputPolicy.json": "sha256:d93395e062b2fd4517e3d8d8fc3d77da236335dcb7fb304cea0db9c65b6c2b5d",
+    "workbench/account20k_reader.py": "sha256:7261fca58894e58177f17ba0d8b71e888f55d87dd225718eb25b472002378e99",
+    "experiments/account20k_v1/ExecutionPatch-V2.json": "sha256:a5236bf867be154413921c6c734e9bf6b87c3d1700399cd4b5b3b1957ccab6ed"
+  },
+  "runtime_deployment_hash": "sha256:cfabcbd360eee0e3887e2b34050f90b36351ed02c672f6d3bd9f65c8dec666c0",
+  "runtime_version": "1.0.1",
+  "previous_runtime_deployment_hash": "sha256:fa2a52207c695b49006b8de9ccb759cf2e9953843c5a0bf6207aec3bb90002b2"
+}

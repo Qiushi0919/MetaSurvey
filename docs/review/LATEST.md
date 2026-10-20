@@ -4,6 +4,7 @@
 
 | 内容 | 位置 | 状态 |
 |---|---|---|
+| 2万元实时C账户与账户适配历史实验 | [本轮验收](../forward-c20k/Acceptance-Report.md) · [实际触发](../forward-c20k/Launch-Receipt.json) · [20k历史结果](../account20k-history/Acceptance-Report.md) · [CI](../forward-c20k/CI-Results.json) | 独立20,000元；九股实时采集已触发，首份计划待实际日终，0成交/0有效日；610历史策略运行+16对照；旧A不变 |
 | PARAM_OPT_V1 实际108组优化 | [本轮验收](../param-opt-v1/Acceptance-Report.md) · [108组结果](../param-opt-v1/All-108-Results.csv) · [独立复核](../param-opt-v1/Execution-Audit-Summary.json) · [CI](../param-opt-v1/CI-Results.json) | 432训练+6后段+12持有对照；原版全窗等价；事前锁定P009/P006；主候选后段37.06%/回撤7.26%，仍落后两组持有收益；已见历史优化，C未启动，A不变 |
 | 五年扩展诊断与新Forward启动 | [本轮验收](../long-forward/Acceptance-Report.md) · [实际五年结果](../long-forward/History-Result.json) · [首份冻结计划](../long-forward/Forward-Launch.json) · [运行与停止](../long-forward/Runtime.md) | 1211日/446成交/223完整买卖；收益30.87%、回撤16.98%，低于持有对照；新Forward A真实事前计划已冻结，10月16日首个执行日，0日结算；每日18:30任务ACTIVE，B未启动；非正式PIT/OOS |
 | V3基线复核与绩效解释 | [本轮验收](../v3-performance/Acceptance-Report.md) · [独立决策复核](../v3-performance/Independent-Decision-Review.md) · [对照登记](../v3-performance/Benchmark-Protocol.json) · [研究增量状态](../v3-performance/Research-Increment.json) | 241日/70成交/83未成交独立复现，差异0；真实页面6张截图，双平台50复核+143工作台通过；可读绩效与两组同窗对照；原收益低于对照，未证明策略优势；研究增量未运行 |
