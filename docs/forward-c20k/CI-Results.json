@@ -31,6 +31,97 @@
       "private_archive_access": "DENIED_BY_AUDIT_HOOK"
     }
   },
-  "remote_status": "PENDING_PUBLIC_COMMIT",
-  "remote": []
+  "remote_status": "ACCOUNT36_AND_WORKBENCH191_BOTH_PLATFORMS_PASS",
+  "remote": [
+    {
+      "suite": "ACCOUNT20K_REALTIME_AND_HISTORY",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "b39ae292b4fd5975b3f2d86faf23a6fb91497f48",
+      "platform": "darwin",
+      "unique_cases": 36,
+      "executions": 36,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384111841"
+    },
+    {
+      "suite": "ACCOUNT20K_REALTIME_AND_HISTORY",
+      "scope": "SYNTHETIC_ENGINEERING_NOT_INVESTMENT_VALIDATION",
+      "commit": "b39ae292b4fd5975b3f2d86faf23a6fb91497f48",
+      "platform": "linux",
+      "unique_cases": 36,
+      "executions": 36,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384111841"
+    },
+    {
+      "suite": "scoring",
+      "commit": "845874dc6eb6646f10810845a3f52b599af0c319",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384026499",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct"
+    },
+    {
+      "suite": "scoring",
+      "commit": "845874dc6eb6646f10810845a3f52b599af0c319",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384026499",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "linux",
+      "unique_cases": 72,
+      "executions": 72,
+      "passed": true,
+      "identity_basis": "file + Node registered testNumber + name; parameterized cases with equal labels remain distinct"
+    },
+    {
+      "suite": "workbench",
+      "commit": "845874dc6eb6646f10810845a3f52b599af0c319",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384026499",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "darwin",
+      "unique_cases": 191,
+      "executions": 191,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    },
+    {
+      "suite": "workbench",
+      "commit": "845874dc6eb6646f10810845a3f52b599af0c319",
+      "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384026499",
+      "scope": "SYNTHETIC_ENGINEERING_ONLY",
+      "platform": "linux",
+      "unique_cases": 191,
+      "executions": 191,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "passed": true,
+      "network_scope": "TEMPORARY_LOOPBACK_ONLY",
+      "private_archive_access": "DENIED_BY_AUDIT_HOOK"
+    }
+  ],
+  "business_code_identical_commits": [
+    "845874dc6eb6646f10810845a3f52b599af0c319",
+    "b39ae292b4fd5975b3f2d86faf23a6fb91497f48"
+  ],
+  "difference": "Only account20k workflow push/PR trigger activation; business files identical",
+  "legacy_public_regression": {
+    "commit": "b39ae292b4fd5975b3f2d86faf23a6fb91497f48",
+    "run_url": "https://github.com/Qiushi0919/MetaSurvey/actions/runs/39384111775",
+    "ubuntu": "success",
+    "macos": "success"
+  },
+  "local_commit_note": "Local checks ran against then-uncommitted additions at baseline HEAD; resulting business code committed as d6c5d657019416e1a4ceb7b8d96fa406c1b88a2f and independently tested at the public commits above."
 }

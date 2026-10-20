@@ -1,8 +1,8 @@
 {
   "kind": "PublicSourceSnapshot",
   "version": "1.0.0",
-  "source_commit": "d6c5d657019416e1a4ceb7b8d96fa406c1b88a2f",
-  "captured_at": "2026-10-20T07:02:02.140658+00:00",
+  "source_commit": "b94dc96dd0512897ff028199e05b9a2ea2b06c80",
+  "captured_at": "2026-10-20T07:14:21.241081+00:00",
   "source_git_history_uploaded": false,
   "included_source_files": 1397,
   "files": [
@@ -78,8 +78,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 41484,
-      "sha256": "sha256:8d951afabd02bc2a544256bedf9ee1b46586627f9a593a64aebc593063640969"
+      "bytes": 41488,
+      "sha256": "sha256:9a9c0f9cd65e0582ad247779949f801500b6fd3d157f16a43f270d52b9e08d9c"
     },
     {
       "path": "README-Historical-20261008.md",
@@ -2033,18 +2033,18 @@
     },
     {
       "path": "docs/forward-c20k/Acceptance-Report.md",
-      "bytes": 7900,
-      "sha256": "sha256:d6f7b74a3ac9bcbbde700f65b4fed30998080f492b23c9ec35a7a624798dc129"
+      "bytes": 8073,
+      "sha256": "sha256:9f01ddc60deefc447f9b60125f70fe3b9ed770f02a2a558dfcb493f8c77bfbcb"
     },
     {
       "path": "docs/forward-c20k/CI-Results.json",
-      "bytes": 962,
-      "sha256": "sha256:4b484a63c34d90b6d29f5f9c35c29b7a392019af2516151c9bd523161d6746f3"
+      "bytes": 4439,
+      "sha256": "sha256:25915a92694e419de7690a2004bfb6cf014aa917904a2d780afd5bbc5c7190c2"
     },
     {
       "path": "docs/forward-c20k/Independent-Review.json",
-      "bytes": 5343,
-      "sha256": "sha256:36ce7a4ed9bad59fe8c9db6a37eb34b141ad92b8318bf858a9aaac6f1d49f9f8"
+      "bytes": 5731,
+      "sha256": "sha256:56dc93cd6aced361bb7a0139863fca05de862750d207220de42afde2294b2f80"
     },
     {
       "path": "docs/forward-c20k/Launch-Receipt.json",
@@ -2058,8 +2058,8 @@
     },
     {
       "path": "docs/forward-c20k/Preservation.json",
-      "bytes": 1027,
-      "sha256": "sha256:8031a822735fd1db6921077a22baf93bb96d9132bd3a76b133cf0957f56db6fe"
+      "bytes": 1323,
+      "sha256": "sha256:04e8cffce6394d5e2878de490c6c01cdee3bb2a282babbedfaaca1e965072dac"
     },
     {
       "path": "docs/forward-c20k/Registry.json",
@@ -2073,8 +2073,8 @@
     },
     {
       "path": "docs/forward-c20k/UI-Receipt.json",
-      "bytes": 871,
-      "sha256": "sha256:3bf4cc9f4dd23baf4a091605f4f6be7b8655e33ca8c2269ffe594513a83e42e4"
+      "bytes": 1606,
+      "sha256": "sha256:3bbd71f085a7ac65f9f18689f5642f7a301d67f4c9f0f8bd7b135a52c51150cc"
     },
     {
       "path": "docs/handoff/Evidence-Index-20261008.json",

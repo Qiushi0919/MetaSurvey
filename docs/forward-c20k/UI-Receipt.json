@@ -18,5 +18,22 @@
     "Account-Page.png": "sha256:a553732aa5ed53871b54b1231668f37f8f0bbda2865ec102bd14760dbe1e6bb9",
     "Evidence-Dialog.png": "sha256:b20f25b17f2139964a66095f1715ff7813c9548a50ccd90c9da90db998f76daf"
   },
-  "raw_screenshots_local_only": true
+  "raw_screenshots_local_only": true,
+  "successor_browser_check": {
+    "at": "2026-10-20T07:13:45.937654+00:00",
+    "version": "1.0.1",
+    "deployment_hash": "sha256:cfabcbd360eee0e3887e2b34050f90b36351ed02c672f6d3bd9f65c8dec666c0",
+    "cash_cents": 2000000,
+    "effective_days": 0,
+    "plan_status": "NO_VALID_PLAN",
+    "actual_browser_actions": [
+      "Refreshed existing account page",
+      "Read visible 1.0.1 deployment binding and live heartbeat",
+      "Scrolled to funds and zero effective observation days"
+    ],
+    "screenshots": {
+      "Account-Page-V2.png": "sha256:280c295e9da72b731593d335834269e952ad83f36457733244a076b4336a0c97",
+      "Account-Funds-V2.png": "sha256:0201ebc1f6310dea7aae26b7fc4b67679a4dc4e7cdbe09bb54289d05c18aee8b"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "kind": "Account20kPreservation",
   "version": "1.0.0",
-  "checked_at": "2026-10-20T06:51:54.319230+00:00",
+  "checked_at": "2026-10-20T07:13:45.937654+00:00",
   "baseline_head": "d413c69d4c3e5ed965fb3019558b1cefb769fe7e",
   "source_files": 1352,
   "allowed_changes": [
@@ -22,5 +22,15 @@
   "normalization_note": "Before manifest uses bare SHA256; normalized prefix for comparison only, original not changed",
   "successor_runtime_pins": 1373,
   "successor_runtime_hash": "sha256:cfabcbd360eee0e3887e2b34050f90b36351ed02c672f6d3bd9f65c8dec666c0",
-  "successor_mismatches": []
+  "successor_mismatches": [],
+  "task_status": {
+    "metasurvey-a": {
+      "status": "ACTIVE",
+      "rrule": "FREQ=DAILY;BYHOUR=18;BYMINUTE=30;BYSECOND=0"
+    },
+    "metasurvey-2-c": {
+      "status": "ACTIVE",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9,10,11,13,14,19,20;BYMINUTE=45;BYSECOND=0"
+    }
+  }
 }
