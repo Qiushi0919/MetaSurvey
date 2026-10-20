@@ -1,5 +1,9 @@
 name: Account 20k realtime and history checks
 on:
+  push:
+    paths: ['tools/forward_c20k/**', 'tools/account20k_history/**', 'experiments/account20k_v1/**', 'experiments/account20k_history_v1/**', 'workbench/**', '.github/workflows/account20k.yml']
+  pull_request:
+    paths: ['tools/forward_c20k/**', 'tools/account20k_history/**', 'experiments/account20k_v1/**', 'experiments/account20k_history_v1/**', 'workbench/**']
   workflow_dispatch:
 permissions:
   contents: read
